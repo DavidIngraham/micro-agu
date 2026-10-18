@@ -1,0 +1,166 @@
+{
+  "pages_commit": "8d0560951b149fdd13cbb8287d22f4acbb3a2f64",
+  "source_release_commit": "c60007a",
+  "browser": {
+    "passed": true,
+    "base": "https://davidingraham.github.io/assets/microagu-viewer/",
+    "checks": [
+      "mobile controls",
+      "Dryden default",
+      "parameter application",
+      "LQI flight",
+      "legacy switch",
+      "no page errors"
+    ]
+  },
+  "assets": {
+    "url": "https://davidingraham.github.io/assets/microagu-viewer/simulator.html",
+    "passed": true,
+    "checks": [
+      {
+        "path": "assets/OrbitControls-B4dY6xS1.js",
+        "expected": "e5546386e36839cb9520364c4b53404ec3a3c4e74c307019f5e8cff24f2ea4dd",
+        "actual": "e5546386e36839cb9520364c4b53404ec3a3c4e74c307019f5e8cff24f2ea4dd",
+        "matched": true
+      },
+      {
+        "path": "assets/flight-view-C5eubH_G.js",
+        "expected": "c2a3109f7e2612183cb07141b8ff63227c271bd068ebc17a7493d07c0a84c868",
+        "actual": "c2a3109f7e2612183cb07141b8ff63227c271bd068ebc17a7493d07c0a84c868",
+        "matched": true
+      },
+      {
+        "path": "assets/index-CJvmQ1Im.js",
+        "expected": "1a3885c7e12b5692c5f204824a26acb1dc1aa56100813a2c039ab4f529e4de52",
+        "actual": "1a3885c7e12b5692c5f204824a26acb1dc1aa56100813a2c039ab4f529e4de52",
+        "matched": true
+      },
+      {
+        "path": "assets/index-CP7ewW92.css",
+        "expected": "88569bbc45e2ebd2706e425e12133feb602409fc20792acda1728a7a6dc505d9",
+        "actual": "88569bbc45e2ebd2706e425e12133feb602409fc20792acda1728a7a6dc505d9",
+        "matched": true
+      },
+      {
+        "path": "assets/math-P8kuyxM6.js",
+        "expected": "d100be9f007bc6a51c0c1e5f5103c99ae0db235c409fab011832894d05bd517b",
+        "actual": "d100be9f007bc6a51c0c1e5f5103c99ae0db235c409fab011832894d05bd517b",
+        "matched": true
+      },
+      {
+        "path": "assets/mechanisms-CTptIDgI.js",
+        "expected": "18d2dccfeeebe3a170c70ae84d27ca2c1d6c1a4fb3118eb0bcd25bfe71c43d23",
+        "actual": "18d2dccfeeebe3a170c70ae84d27ca2c1d6c1a4fb3118eb0bcd25bfe71c43d23",
+        "matched": true
+      },
+      {
+        "path": "assets/models-BzsGqJb2.js",
+        "expected": "34cad1a1ae745f58a7953f5e2254544b4ce4bf7c73888757644df6a2b2aba328",
+        "actual": "34cad1a1ae745f58a7953f5e2254544b4ce4bf7c73888757644df6a2b2aba328",
+        "matched": true
+      },
+      {
+        "path": "assets/paraglider-pg2JfDie.js",
+        "expected": "5dcbb8b6c9de0742621755e56a5f3ffc8a25cfdaf25dfce915ec5925d209910f",
+        "actual": "5dcbb8b6c9de0742621755e56a5f3ffc8a25cfdaf25dfce915ec5925d209910f",
+        "matched": true
+      },
+      {
+        "path": "assets/recordings-DzXGklQC.js",
+        "expected": "f699abfd38963c856b25bef3a4719123d782d5425c683ecb17ad33a1854c17c1",
+        "actual": "f699abfd38963c856b25bef3a4719123d782d5425c683ecb17ad33a1854c17c1",
+        "matched": true
+      },
+      {
+        "path": "assets/three-v_9BgMnl.js",
+        "expected": "7c33ee3c9be52829db1549b58813ff45316dfaedadf4f940c5cf224cc6da587a",
+        "actual": "7c33ee3c9be52829db1549b58813ff45316dfaedadf4f940c5cf224cc6da587a",
+        "matched": true
+      },
+      {
+        "path": "assets/worker-WNApuFvu.js",
+        "expected": "e021cb7d91f339c89987eaebf1b89d22ced91cc46aabce98464e1d4a78d28aee",
+        "actual": "e021cb7d91f339c89987eaebf1b89d22ced91cc46aabce98464e1d4a78d28aee",
+        "matched": true
+      },
+      {
+        "path": "models/microagu-payload-tl.glb",
+        "expected": "10cd498d78de60020ad97f4febc46010a585496b124575c25bc9ec6998596288",
+        "actual": "10cd498d78de60020ad97f4febc46010a585496b124575c25bc9ec6998596288",
+        "matched": true
+      },
+      {
+        "path": "simulator-sw.js",
+        "expected": "330dad7e7098d68a7ceaed89cb5543e0d8511205b4a160a8e60dcc85e025672a",
+        "actual": "330dad7e7098d68a7ceaed89cb5543e0d8511205b4a160a8e60dcc85e025672a",
+        "matched": true
+      },
+      {
+        "path": "simulator.html",
+        "expected": "e431bca06ef1e87b474e70bdddb27c40d7ce84b4e9b376492ce1eef14a319c12",
+        "actual": "e431bca06ef1e87b474e70bdddb27c40d7ce84b4e9b376492ce1eef14a319c12",
+        "matched": true
+      },
+      {
+        "path": "wasm/COPYING.txt",
+        "expected": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903",
+        "actual": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903",
+        "matched": true
+      },
+      {
+        "path": "wasm/RUST-NOTICES.txt",
+        "expected": "f5e9c70192d8e79a97ca305a2fbf637f7fb9471f42e10e23e74404edefdebfb7",
+        "actual": "f5e9c70192d8e79a97ca305a2fbf637f7fb9471f42e10e23e74404edefdebfb7",
+        "matched": true
+      },
+      {
+        "path": "wasm/arduplane.js",
+        "expected": "893b28e3cbea410e48736d7f7426928cbe8b56f22c1813914aa290172f1e8565",
+        "actual": "893b28e3cbea410e48736d7f7426928cbe8b56f22c1813914aa290172f1e8565",
+        "matched": true
+      },
+      {
+        "path": "wasm/arduplane.wasm",
+        "expected": "fb61d7d40def58d5a4757ff7135299749436e8cdfcbb8865182820f34055f82c",
+        "actual": "fb61d7d40def58d5a4757ff7135299749436e8cdfcbb8865182820f34055f82c",
+        "matched": true
+      },
+      {
+        "path": "wasm/build.json",
+        "expected": "1c506e406b198ac22b8d98447d2d3dc95c6fb87712fae9c653ec1e6dc0675f86",
+        "actual": "1c506e406b198ac22b8d98447d2d3dc95c6fb87712fae9c653ec1e6dc0675f86",
+        "matched": true
+      },
+      {
+        "path": "wasm/highdof.json",
+        "expected": "51120b5f2d21f0e5d00b0d009c6bb25c7e082a6bdb76d49a05524fec92ec34e4",
+        "actual": "51120b5f2d21f0e5d00b0d009c6bb25c7e082a6bdb76d49a05524fec92ec34e4",
+        "matched": true
+      },
+      {
+        "path": "wasm/lqi-longitudinal-validation.json",
+        "expected": "862cd5c3da436321556b2c92563178093310649890999389376b6dd44d3986c7",
+        "actual": "862cd5c3da436321556b2c92563178093310649890999389376b6dd44d3986c7",
+        "matched": true
+      },
+      {
+        "path": "wasm/lqi-longitudinal.patch",
+        "expected": "a5b037c74a3f9694708c32e5701f37d9ca14e073ecd85c5c17312c33a23a1722",
+        "actual": "a5b037c74a3f9694708c32e5701f37d9ca14e073ecd85c5c17312c33a23a1722",
+        "matched": true
+      },
+      {
+        "path": "wasm/sim_wasm.js",
+        "expected": "65ffd575810f57b5793b1a61477d215e316267e40ced1eb29dfe7a59e5ce4f60",
+        "actual": "65ffd575810f57b5793b1a61477d215e316267e40ced1eb29dfe7a59e5ce4f60",
+        "matched": true
+      },
+      {
+        "path": "wasm/sim_wasm_bg.wasm",
+        "expected": "ceae58a55b4585e85b86a142a15c1f5b9bcfbf3e51f21cddbdf741ac4a75c158",
+        "actual": "ceae58a55b4585e85b86a142a15c1f5b9bcfbf3e51f21cddbdf741ac4a75c158",
+        "matched": true
+      }
+    ]
+  }
+}

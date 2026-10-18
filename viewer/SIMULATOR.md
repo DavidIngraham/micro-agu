@@ -251,7 +251,7 @@ FBWA-to-LQI brake transient. PG + TECS remains the default. See
 
 To reproduce the published controller, use ArduPilot base
 `010ada6a4f0b26910fc18ecca176d2e65c5ed9d7` plus
-`assets/runtime/lqi-feasible-turns.patch`; validation details and firmware hashes are in
+`assets/runtime/lqi-longitudinal.patch`; validation details and firmware hashes are in
 `assets/runtime/lqi-feasible-turns-validation.json` and `assets/runtime/build.json`.
 This complete patch replaces the older filter-tune patch; do not apply both.
 Apply that patch in a clean checkout before running the firmware build command
@@ -275,3 +275,12 @@ Dryden binding is available to Python experiments as well as the browser.
 The autopilot firmware and 35 deg/s controller tune are unchanged by this weather
 update; earlier controller qualification results describe the legacy gust model.
 
+
+## Current longitudinal envelope
+
+The optional LQI uses 0.75 m/s climb and 1.0 m/s descent limits, with the existing
+0.7 s reference filter and unchanged gains and sensing. The firmware also fixes
+voltage-compensated throttle feedback to prevent false anti-windup at reduced
+battery voltage. PG + TECS remains the default. See [qualification results and
+reproduction](LQI-LONGITUDINAL.md); the current complete source patch is
+assets/runtime/lqi-longitudinal.patch, replacing the earlier patch recipe.

@@ -1,0 +1,3055 @@
+{
+  "protocol": {
+    "objective": "Expand longitudinal authority from +/-0.5 toward +/-1 m/s with current sensing, 132 mm geometry, 3.8-4.4 m/s speed target and up to 35 deg/s turns",
+    "stages": [
+      "physical trim screen",
+      "fixed-gain nominal 0.5/0.75/1.0",
+      "conditional trim compensation or retune",
+      "paired held-out Dryden and uncertainty",
+      "final deployed configuration transitions"
+    ],
+    "initial_candidate": "Packaged firmware 4995915df52e4977185e2f7e1e4616118576a9883923a7398679edcf6876a49e; change HUP/HDN only, HRTC=.7",
+    "screen_gates": {
+      "min_airspeed_mps": 2,
+      "max_abs_roll_deg": 60,
+      "max_abs_pitch_deg": 45,
+      "min_height_m": 15,
+      "calm_vertical_bias_mps": 0.15,
+      "calm_vertical_rms_mps": 0.25,
+      "disturbed_vertical_bias_mps": 0.35,
+      "disturbed_vertical_rms_mps": 0.55,
+      "quiet_relative_pitch_rate_rms_deg_s": 3,
+      "quiet_height_rms_m": 1.5,
+      "quiet_vertical_rms_mps": 0.2
+    },
+    "comparison_gates": "At matched commands, candidate pitch-rate RMS and peak <=1.2*PG+TECS+2 deg/s; preserve quiet recovery; report saturation and power separately. No aggregate score can override a stability/recovery failure.",
+    "reporting": "Per-case outcomes, median/p90/worst; power is modeled shaft power. Failure screens are operational regression criteria, not calibrated collapse/stall or structural boundaries. Freeze held-out cases before running them.",
+    "release": "Only proven bounds; do not silently loosen gates after failures. Retain failed candidates and narrow envelope if needed. Dryden is synthetic and canopy collapse is not modeled."
+  },
+  "selection": {
+    "candidate": {
+      "CP3_HUP": 0.75,
+      "CP3_HDN": 1.0,
+      "CP3_HRTC": 0.7
+    },
+    "decision_before_heldout": "All 12 nominal screens passed. The 1 m/s LQI climb uses mean throttle 0.596 straight and 0.599 at 35 deg/s reference, against a 0.6 nominal ceiling. Prefer 0.75 climb for disturbance headroom; retain 1 m/s descent. No gain, observer, sensing, trim-map or throttle-ceiling change.",
+    "trim_interpretation": "A failed constrained least-squares solve is not proof of physical infeasibility. Finite trajectory tests achieve near 1 m/s at the ceiling, with true speed outside some grid cells. Keep initial and flight-seeded solves. Do not infer a hard aerodynamic limit from this grid.",
+    "heldout": "Six paired new model/weather cases plus two paired unchanged-demand regression cases, frozen in heldout-specs.json before execution. Apply original protocol gates."
+  },
+  "runtime": {
+    "original_microagu_commit": "058a8df",
+    "fixed_ardupilot_commit": "20a8fb59c8",
+    "base_ardupilot_commit": "010ada6a4f0b26910fc18ecca176d2e65c5ed9d7",
+    "runtime_sha256": {
+      "runtime-original": {
+        "arduplane.js": "893b28e3cbea410e48736d7f7426928cbe8b56f22c1813914aa290172f1e8565",
+        "arduplane.wasm": "4995915df52e4977185e2f7e1e4616118576a9883923a7398679edcf6876a49e"
+      },
+      "runtime-fixed": {
+        "arduplane.js": "893b28e3cbea410e48736d7f7426928cbe8b56f22c1813914aa290172f1e8565",
+        "arduplane.wasm": "fb61d7d40def58d5a4757ff7135299749436e8cdfcbb8865182820f34055f82c"
+      }
+    },
+    "physics_wasm_sha256": "ceae58a55b4585e85b86a142a15c1f5b9bcfbf3e51f21cddbdf741ac4a75c158",
+    "physics_config_sha256": "01c7127e4f83adcaf385aa02dc44f8b5fc601c6dd2f0f4ab1602dc3412fc72f6",
+    "propeller_data_sha256": "1897a098858e69611bea1cdcb184fc7e8f6337a60eddf7eb9b4fd7e849530af9"
+  },
+  "summary": {
+    "candidate_cases": 14,
+    "all_candidate_pass": true,
+    "fixed_cases": 18,
+    "all_fixed_pass": false,
+    "rows": [
+      {
+        "spec": {
+          "id": "bug-original-limit",
+          "scheme": "lqi",
+          "limit": 0.5,
+          "demand": 0.5,
+          "turn": 0,
+          "voltage": 20.4,
+          "runtime": "/home/david/repos/micro-agu/research/lqi-longitudinal-2026-10-17/runtime-original"
+        },
+        "complete": false,
+        "failure": "Error: Initial settling failed",
+        "reasons": [],
+        "passed": false
+      },
+      {
+        "spec": {
+          "turn": 0,
+          "voltage": 20.4,
+          "turbulence": 0.2,
+          "wind": 0.8,
+          "thermal": 0,
+          "seed": 755759826,
+          "scales": {
+            "Cmq": 1.1718277676575735,
+            "joint_c_pitch": 1.17956891143603,
+            "joint_c_roll": 1.1606941889989246,
+            "joint_c_yaw": 1.0460410184123663,
+            "CLbrake": 0.7268089939071684,
+            "CDbrake": 1.2152610839556635
+          },
+          "slew": 0.9620012893890808,
+          "id": "diagnostic-3-lqi",
+          "scheme": "lqi",
+          "limit": 1,
+          "up": 0.75,
+          "down": 1,
+          "demand": 1,
+          "upDemand": 0.75,
+          "downDemand": 1
+        },
+        "complete": false,
+        "failure": "Error: Initial settling failed",
+        "reasons": [],
+        "passed": false
+      },
+      {
+        "spec": {
+          "id": "final-0-baseline",
+          "scheme": "baseline",
+          "limit": 1,
+          "up": 0.75,
+          "down": 1,
+          "demand": 1,
+          "upDemand": 0.75,
+          "downDemand": 1,
+          "turn": 0,
+          "voltage": 22.2,
+          "transitions": true,
+          "seed": 44017,
+          "parameters": {}
+        },
+        "complete": true,
+        "failure": null,
+        "reasons": [
+          "quiet pitch_rms"
+        ],
+        "phases": {
+          "climb": {
+            "vertical_mean": 0.7047263396042269,
+            "vertical_bias": -0.04527366039577309,
+            "vertical_rms": 0.04720874022565915,
+            "pitch_rms": 0.18353159849753445,
+            "pitch_peak": 0.6119653796908091,
+            "throttle_mean": 0.5561006711409398,
+            "airspeed_mean": 4.300707527754408
+          },
+          "descend": {
+            "vertical_mean": -1.0283759578787306,
+            "vertical_bias": -0.02837595787873047,
+            "vertical_rms": 0.0725948921691193,
+            "pitch_rms": 0.2263625520927467,
+            "pitch_peak": 0.4872833445352807,
+            "throttle_mean": 0.233255033557047,
+            "airspeed_mean": 4.453091953548624
+          }
+        },
+        "quiet": {
+          "pitch_rms": 4.691612355118014,
+          "height_rms": 0.49239472767759385,
+          "vertical_rms": 0.18517071012227787
+        },
+        "speed_min": 2.7163997848724026,
+        "throttle_ceiling_fraction": 0.039974210186976146,
+        "energy_Wh": 3.5672335013586256,
+        "shaft_W": 82.8468376929879,
+        "common_mm": 0.0,
+        "pitch_peak": 43.27200156710736,
+        "pitch_rms": 5.791813281432361,
+        "passed": false
+      },
+      {
+        "spec": {
+          "id": "final-0-lqi",
+          "scheme": "lqi",
+          "limit": 1,
+          "up": 0.75,
+          "down": 1,
+          "demand": 1,
+          "upDemand": 0.75,
+          "downDemand": 1,
+          "turn": 0,
+          "voltage": 22.2,
+          "transitions": true,
+          "seed": 44017,
+          "parameters": {
+            "TECS_CLMB_MAX": 1,
+            "TECS_SINK_MAX": 2.5
+          }
+        },
+        "complete": true,
+        "failure": null,
+        "reasons": [],
+        "phases": {
+          "climb": {
+            "vertical_mean": 0.733346349189416,
+            "vertical_bias": -0.01665365081058408,
+            "vertical_rms": 0.019480500130573317,
+            "pitch_rms": 0.13655855203309203,
+            "pitch_peak": 0.581464202995636,
+            "throttle_mean": 0.5601409395973155,
+            "airspeed_mean": 4.309004365462605
+          },
+          "descend": {
+            "vertical_mean": -1.0123879062788272,
+            "vertical_bias": -0.012387906278827037,
+            "vertical_rms": 0.013909108268116283,
+            "pitch_rms": 0.09518431311761542,
+            "pitch_peak": 0.44566710501790024,
+            "throttle_mean": 0.237469798657718,
+            "airspeed_mean": 4.410398090803485
+          }
+        },
+        "quiet": {
+          "pitch_rms": 0.14233998507954176,
+          "height_rms": 0.13328744272308524,
+          "vertical_rms": 0.012530502980362658
+        },
+        "speed_min": 3.431737523906304,
+        "throttle_ceiling_fraction": 0.0,
+        "energy_Wh": 3.42727452821245,
+        "shaft_W": 79.59807007887713,
+        "common_mm": 0.6690119343770463,
+        "pitch_peak": 11.967128006874502,
+        "pitch_rms": 2.124576453212645,
+        "passed": true
+      },
+      {
+        "spec": {
+          "id": "final-1-baseline",
+          "scheme": "baseline",
+          "limit": 1,
+          "up": 0.75,
+          "down": 1,
+          "demand": 1,
+          "upDemand": 0.75,
+          "downDemand": 1,
+          "turn": 35,
+          "voltage": 20.4,
+          "transitions": true,
+          "seed": 44018,
+          "parameters": {}
+        },
+        "complete": true,
+        "failure": null,
+        "reasons": [],
+        "phases": {
+          "climb": {
+            "vertical_mean": 0.7589560932366701,
+            "vertical_bias": 0.008956093236670199,
+            "vertical_rms": 0.0859818760509506,
+            "pitch_rms": 0.7565634551781555,
+            "pitch_peak": 2.8128379425170134,
+            "throttle_mean": 0.6276040268456375,
+            "airspeed_mean": 4.544577590925796
+          },
+          "descend": {
+            "vertical_mean": -1.005646454331085,
+            "vertical_bias": -0.005646454331085089,
+            "vertical_rms": 0.06862750707363316,
+            "pitch_rms": 0.2671674567679321,
+            "pitch_peak": 0.7034105483009988,
+            "throttle_mean": 0.30481208053691283,
+            "airspeed_mean": 4.317386709380674
+          }
+        },
+        "quiet": {
+          "pitch_rms": 1.0211458886969313,
+          "height_rms": 0.2691811210228051,
+          "vertical_rms": 0.03526617336002894
+        },
+        "speed_min": 2.900070672384753,
+        "throttle_ceiling_fraction": 0.1644100580270793,
+        "energy_Wh": 3.813969759182397,
+        "shaft_W": 88.57320929166981,
+        "common_mm": 0.0,
+        "pitch_peak": 45.68170656920284,
+        "pitch_rms": 6.316108900204918,
+        "passed": true
+      },
+      {
+        "spec": {
+          "id": "final-1-lqi",
+          "scheme": "lqi",
+          "limit": 1,
+          "up": 0.75,
+          "down": 1,
+          "demand": 1,
+          "upDemand": 0.75,
+          "downDemand": 1,
+          "turn": 35,
+          "voltage": 20.4,
+          "transitions": true,
+          "seed": 44018,
+          "parameters": {
+            "TECS_CLMB_MAX": 1,
+            "TECS_SINK_MAX": 2.5
+          }
+        },
+        "complete": false,
+        "failure": "Error: Initial settling failed",
+        "reasons": [],
+        "passed": false
+      },
+      {
+        "spec": {
+          "id": "fix-check-compensation-off",
+          "scheme": "lqi",
+          "limit": 0.5,
+          "demand": 0.5,
+          "turn": 0,
+          "voltage": 20.4,
+          "runtime": "/home/david/repos/micro-agu/research/lqi-longitudinal-2026-10-17/runtime-fixed",
+          "parameters": {
+            "FWD_BAT_VOLT_MAX": 0
+          }
+        },
+        "complete": true,
+        "failure": null,
+        "reasons": [],
+        "phases": {
+          "climb": {
+            "vertical_mean": 0.49895284898881154,
+            "vertical_bias": -0.0010471510111885285,
+            "vertical_rms": 0.005868496370528814,
+            "pitch_rms": 0.08981814786079809,
+            "pitch_peak": 0.40932827928547805,
+            "throttle_mean": 0.5760402684563758,
+            "airspeed_mean": 4.330403848322939
+          },
+          "descend": {
+            "vertical_mean": -0.503772001205238,
+            "vertical_bias": -0.0037720012052380432,
+            "vertical_rms": 0.00463201507819375,
+            "pitch_rms": 0.060702433593529385,
+            "pitch_peak": 0.33547043395175286,
+            "throttle_mean": 0.39089261744966447,
+            "airspeed_mean": 4.39191000504982
+          }
+        },
+        "quiet": {
+          "pitch_rms": 0.08687032257776371,
+          "height_rms": 0.613193599192837,
+          "vertical_rms": 0.004243996430321676
+        },
+        "speed_min": 3.9282452678117097,
+        "throttle_ceiling_fraction": 0.0,
+        "energy_Wh": 3.2391794654023447,
+        "shaft_W": 75.23158911368444,
+        "common_mm": 0.11604582792515492,
+        "pitch_peak": 8.377807922029374,
+        "pitch_rms": 0.991816026939057,
+        "passed": true
+      },
+      {
+        "spec": {
+          "id": "fix-check-old-limit",
+          "scheme": "lqi",
+          "limit": 0.5,
+          "demand": 0.5,
+          "turn": 0,
+          "voltage": 20.4,
+          "runtime": "/home/david/repos/micro-agu/research/lqi-longitudinal-2026-10-17/runtime-fixed",
+          "parameters": {}
+        },
+        "complete": true,
+        "failure": null,
+        "reasons": [],
+        "phases": {
+          "climb": {
+            "vertical_mean": 0.4962697516956858,
+            "vertical_bias": -0.0037302483043141947,
+            "vertical_rms": 0.011151305983018788,
+            "pitch_rms": 0.08083008184763889,
+            "pitch_peak": 0.36876962537753477,
+            "throttle_mean": 0.5756107382550337,
+            "airspeed_mean": 4.330631776773809
+          },
+          "descend": {
+            "vertical_mean": -0.5002008070658512,
+            "vertical_bias": -0.00020080706585119147,
+            "vertical_rms": 0.003873043418628744,
+            "pitch_rms": 0.05915360938215089,
+            "pitch_peak": 0.3149109156818664,
+            "throttle_mean": 0.3916644295302013,
+            "airspeed_mean": 4.39153684183733
+          }
+        },
+        "quiet": {
+          "pitch_rms": 0.08781651655260382,
+          "height_rms": 0.06131528126049105,
+          "vertical_rms": 0.006142053312609459
+        },
+        "speed_min": 3.9916216974798973,
+        "throttle_ceiling_fraction": 0.0,
+        "energy_Wh": 3.240606907903381,
+        "shaft_W": 75.26472089878087,
+        "common_mm": 0.10533866620192729,
+        "pitch_peak": 6.185904011193156,
+        "pitch_rms": 0.9754689666783307,
+        "passed": true
+      },
+      {
+        "spec": {
+          "id": "fix-check-voltage-step",
+          "scheme": "lqi",
+          "limit": 1,
+          "up": 0.75,
+          "down": 1,
+          "demand": 1,
+          "upDemand": 0.75,
+          "downDemand": 1,
+          "turn": 35,
+          "voltage": 22.2,
+          "voltageStep": 20.4,
+          "runtime": "/home/david/repos/micro-agu/research/lqi-longitudinal-2026-10-17/runtime-fixed"
+        },
+        "complete": true,
+        "failure": null,
+        "reasons": [],
+        "phases": {
+          "climb": {
+            "vertical_mean": 0.7027738356926122,
+            "vertical_bias": -0.04722616430738781,
+            "vertical_rms": 0.06211127276381389,
+            "pitch_rms": 0.3383529706306287,
+            "pitch_peak": 0.9368307950011994,
+            "throttle_mean": 0.5655100671140939,
+            "airspeed_mean": 4.675807254209084
+          },
+          "descend": {
+            "vertical_mean": -1.0131194158974826,
+            "vertical_bias": -0.01311941589748252,
+            "vertical_rms": 0.02655626155223163,
+            "pitch_rms": 0.18649879452927334,
+            "pitch_peak": 0.5166934825856174,
+            "throttle_mean": 0.2901006711409396,
+            "airspeed_mean": 4.224967875538445
+          }
+        },
+        "quiet": {
+          "pitch_rms": 0.06710118295452282,
+          "height_rms": 0.07099026874056728,
+          "vertical_rms": 0.003998128098349761
+        },
+        "speed_min": 4.033041006164657,
+        "throttle_ceiling_fraction": 0.050934880722114766,
+        "energy_Wh": 3.6764091709382885,
+        "shaft_W": 85.38098679166852,
+        "common_mm": 1.6253842842508897,
+        "pitch_peak": 16.353528520091086,
+        "pitch_rms": 1.772142337916553,
+        "passed": true
+      },
+      {
+        "spec": {
+          "id": "fixed-final-0-baseline",
+          "scheme": "baseline",
+          "limit": 1,
+          "up": 0.75,
+          "down": 1,
+          "demand": 1,
+          "upDemand": 0.75,
+          "downDemand": 1,
+          "turn": 0,
+          "voltage": 22.2,
+          "transitions": true,
+          "seed": 44017,
+          "parameters": {},
+          "runtime": "/home/david/repos/micro-agu/research/lqi-longitudinal-2026-10-17/runtime-fixed"
+        },
+        "complete": true,
+        "failure": null,
+        "reasons": [
+          "quiet pitch_rms"
+        ],
+        "phases": {
+          "climb": {
+            "vertical_mean": 0.7047200256904553,
+            "vertical_bias": -0.045279974309544654,
+            "vertical_rms": 0.047317431273501374,
+            "pitch_rms": 0.172668339608373,
+            "pitch_peak": 0.6444087425130052,
+            "throttle_mean": 0.5560604026845639,
+            "airspeed_mean": 4.300856503706191
+          },
+          "descend": {
+            "vertical_mean": -1.0273938519161656,
+            "vertical_bias": -0.027393851916165734,
+            "vertical_rms": 0.07154086319262222,
+            "pitch_rms": 0.2250631289467077,
+            "pitch_peak": 0.5595349607208708,
+            "throttle_mean": 0.23369127516778523,
+            "airspeed_mean": 4.452901711071034
+          }
+        },
+        "quiet": {
+          "pitch_rms": 3.8832464338142167,
+          "height_rms": 0.46960294193757834,
+          "vertical_rms": 0.1642224951523411
+        },
+        "speed_min": 2.711783338384119,
+        "throttle_ceiling_fraction": 0.039329464861379754,
+        "energy_Wh": 3.566265802574922,
+        "shaft_W": 82.82438733475625,
+        "common_mm": 0.0,
+        "pitch_peak": 42.53329219374066,
+        "pitch_rms": 5.638111413230765,
+        "passed": false
+      },
+      {
+        "spec": {
+          "id": "fixed-final-0-lqi",
+          "scheme": "lqi",
+          "limit": 1,
+          "up": 0.75,
+          "down": 1,
+          "demand": 1,
+          "upDemand": 0.75,
+          "downDemand": 1,
+          "turn": 0,
+          "voltage": 22.2,
+          "transitions": true,
+          "seed": 44017,
+          "parameters": {
+            "TECS_CLMB_MAX": 1,
+            "TECS_SINK_MAX": 2.5
+          },
+          "runtime": "/home/david/repos/micro-agu/research/lqi-longitudinal-2026-10-17/runtime-fixed"
+        },
+        "complete": true,
+        "failure": null,
+        "reasons": [],
+        "phases": {
+          "climb": {
+            "vertical_mean": 0.7326755199249588,
+            "vertical_bias": -0.017324480075041192,
+            "vertical_rms": 0.02025431533708085,
+            "pitch_rms": 0.12805980425327118,
+            "pitch_peak": 0.5918096256785224,
+            "throttle_mean": 0.5600738255033557,
+            "airspeed_mean": 4.309041795391825
+          },
+          "descend": {
+            "vertical_mean": -1.0123006921922642,
+            "vertical_bias": -0.012300692192264156,
+            "vertical_rms": 0.013814635720726299,
+            "pitch_rms": 0.09215229505509248,
+            "pitch_peak": 0.4216800230611352,
+            "throttle_mean": 0.23751677852348985,
+            "airspeed_mean": 4.4105009664111385
+          }
+        },
+        "quiet": {
+          "pitch_rms": 0.17344372487315893,
+          "height_rms": 0.12926971470994347,
+          "vertical_rms": 0.015355578543386315
+        },
+        "speed_min": 3.4126116228233294,
+        "throttle_ceiling_fraction": 0.0,
+        "energy_Wh": 3.42738211617835,
+        "shaft_W": 79.60064933354474,
+        "common_mm": 0.6582738270997053,
+        "pitch_peak": 12.275302490101874,
+        "pitch_rms": 2.1457739222328254,
+        "passed": true
+      },
+      {
+        "spec": {
+          "id": "fixed-final-1-baseline",
+          "scheme": "baseline",
+          "limit": 1,
+          "up": 0.75,
+          "down": 1,
+          "demand": 1,
+          "upDemand": 0.75,
+          "downDemand": 1,
+          "turn": 35,
+          "voltage": 20.4,
+          "transitions": true,
+          "seed": 44018,
+          "parameters": {},
+          "runtime": "/home/david/repos/micro-agu/research/lqi-longitudinal-2026-10-17/runtime-fixed"
+        },
+        "complete": true,
+        "failure": null,
+        "reasons": [],
+        "phases": {
+          "climb": {
+            "vertical_mean": 0.7576209052957408,
+            "vertical_bias": 0.007620905295740818,
+            "vertical_rms": 0.08462500789967296,
+            "pitch_rms": 0.6867493414786864,
+            "pitch_peak": 2.4176974831424567,
+            "throttle_mean": 0.6272550335570469,
+            "airspeed_mean": 4.542576361302919
+          },
+          "descend": {
+            "vertical_mean": -1.0045218456870437,
+            "vertical_bias": -0.004521845687043821,
+            "vertical_rms": 0.06788456266140921,
+            "pitch_rms": 0.2500828763781721,
+            "pitch_peak": 0.6660982670160247,
+            "throttle_mean": 0.30524161073825506,
+            "airspeed_mean": 4.317431196197447
+          }
+        },
+        "quiet": {
+          "pitch_rms": 0.9455720355609837,
+          "height_rms": 0.26849092863305873,
+          "vertical_rms": 0.03594509774416816
+        },
+        "speed_min": 2.910663277262663,
+        "throttle_ceiling_fraction": 0.1650548033526757,
+        "energy_Wh": 3.813953213761914,
+        "shaft_W": 88.57295699892029,
+        "common_mm": 0.0,
+        "pitch_peak": 44.41712681582416,
+        "pitch_rms": 5.992610737353385,
+        "passed": true
+      },
+      {
+        "spec": {
+          "id": "fixed-final-1-lqi",
+          "scheme": "lqi",
+          "limit": 1,
+          "up": 0.75,
+          "down": 1,
+          "demand": 1,
+          "upDemand": 0.75,
+          "downDemand": 1,
+          "turn": 35,
+          "voltage": 20.4,
+          "transitions": true,
+          "seed": 44018,
+          "parameters": {
+            "TECS_CLMB_MAX": 1,
+            "TECS_SINK_MAX": 2.5
+          },
+          "runtime": "/home/david/repos/micro-agu/research/lqi-longitudinal-2026-10-17/runtime-fixed"
+        },
+        "complete": true,
+        "failure": null,
+        "reasons": [],
+        "phases": {
+          "climb": {
+            "vertical_mean": 0.7601203036963992,
+            "vertical_bias": 0.010120303696399126,
+            "vertical_rms": 0.03688797813479584,
+            "pitch_rms": 0.2857315770634459,
+            "pitch_peak": 0.6975273026090553,
+            "throttle_mean": 0.6280201342281878,
+            "airspeed_mean": 4.670745368206581
+          },
+          "descend": {
+            "vertical_mean": -1.014560610039875,
+            "vertical_bias": -0.014560610039874796,
+            "vertical_rms": 0.02514511466790712,
+            "pitch_rms": 0.1800540628608115,
+            "pitch_peak": 0.5151554930849889,
+            "throttle_mean": 0.2901342281879195,
+            "airspeed_mean": 4.221095558841592
+          }
+        },
+        "quiet": {
+          "pitch_rms": 1.5283377721562668,
+          "height_rms": 0.3017312783867753,
+          "vertical_rms": 0.0809167549859412
+        },
+        "speed_min": 3.31173992035291,
+        "throttle_ceiling_fraction": 0.05673758865248227,
+        "energy_Wh": 3.7107968206968143,
+        "shaft_W": 86.17955998018462,
+        "common_mm": 1.489564247247288,
+        "pitch_peak": 22.0215327704394,
+        "pitch_rms": 2.3979644226957553,
+        "passed": true
+      },
+      {
+        "spec": {
+          "turn": 25,
+          "voltage": 21,
+          "turbulence": 0.25,
+          "thermal": 1,
+          "wind": 0.7,
+          "seed": 3380807935,
+          "scales": {
+            "Cmq": 0.8305599916826825,
+            "joint_c_pitch": 0.8385233899476241,
+            "joint_c_roll": 0.995412197828468,
+            "joint_c_yaw": 1.175893803853051,
+            "CLbrake": 1.191082881144993,
+            "CDbrake": 0.9227917898887844
+          },
+          "slew": 0.9601316311263138,
+          "limit": 1,
+          "up": 0.75,
+          "down": 1,
+          "demand": 1,
+          "upDemand": 0.75,
+          "downDemand": 1,
+          "runtime": "/home/david/repos/micro-agu/research/lqi-longitudinal-2026-10-17/runtime-fixed",
+          "id": "fixed-fresh-0-baseline",
+          "scheme": "baseline"
+        },
+        "complete": true,
+        "failure": null,
+        "reasons": [],
+        "phases": {
+          "climb": {
+            "vertical_mean": 0.6769545346110539,
+            "vertical_bias": -0.073045465388946,
+            "vertical_rms": 0.15833686713877734,
+            "pitch_rms": 11.654665583872884,
+            "pitch_peak": 33.55648165538195,
+            "throttle_mean": 0.6073355704697986,
+            "airspeed_mean": 4.532785665197336
+          },
+          "descend": {
+            "vertical_mean": -1.0352687546839587,
+            "vertical_bias": -0.03526875468395845,
+            "vertical_rms": 0.12435589085315271,
+            "pitch_rms": 5.0046081499935005,
+            "pitch_peak": 15.96861274620504,
+            "throttle_mean": 0.2889731543624161,
+            "airspeed_mean": 4.26720177922899
+          }
+        },
+        "quiet": {
+          "pitch_rms": 0.1841201893520267,
+          "height_rms": 0.5091949965311381,
+          "vertical_rms": 0.01678197700267011
+        },
+        "speed_min": 3.0238042836963532,
+        "throttle_ceiling_fraction": 0.11347517730496454,
+        "energy_Wh": 3.805601507102989,
+        "shaft_W": 88.37881498266597,
+        "common_mm": 0.0,
+        "pitch_peak": 59.06639389818628,
+        "pitch_rms": 9.18011312312861,
+        "passed": true
+      },
+      {
+        "spec": {
+          "turn": 25,
+          "voltage": 21,
+          "turbulence": 0.25,
+          "thermal": 1,
+          "wind": 0.7,
+          "seed": 3380807935,
+          "scales": {
+            "Cmq": 0.8305599916826825,
+            "joint_c_pitch": 0.8385233899476241,
+            "joint_c_roll": 0.995412197828468,
+            "joint_c_yaw": 1.175893803853051,
+            "CLbrake": 1.191082881144993,
+            "CDbrake": 0.9227917898887844
+          },
+          "slew": 0.9601316311263138,
+          "limit": 1,
+          "up": 0.75,
+          "down": 1,
+          "demand": 1,
+          "upDemand": 0.75,
+          "downDemand": 1,
+          "runtime": "/home/david/repos/micro-agu/research/lqi-longitudinal-2026-10-17/runtime-fixed",
+          "id": "fixed-fresh-0-lqi",
+          "scheme": "lqi"
+        },
+        "complete": true,
+        "failure": null,
+        "reasons": [],
+        "phases": {
+          "climb": {
+            "vertical_mean": 0.6661148769406866,
+            "vertical_bias": -0.08388512305931345,
+            "vertical_rms": 0.15292155425822343,
+            "pitch_rms": 9.280627796814972,
+            "pitch_peak": 32.559979634284794,
+            "throttle_mean": 0.6083221476510068,
+            "airspeed_mean": 4.667109135850154
+          },
+          "descend": {
+            "vertical_mean": -1.0760866220183511,
+            "vertical_bias": -0.07608662201835106,
+            "vertical_rms": 0.15793623845151397,
+            "pitch_rms": 4.2158637076224785,
+            "pitch_peak": 10.731716685457634,
+            "throttle_mean": 0.275744966442953,
+            "airspeed_mean": 4.181395811838925
+          }
+        },
+        "quiet": {
+          "pitch_rms": 0.11557234454351704,
+          "height_rms": 0.2284313029050656,
+          "vertical_rms": 0.0029787764630670754
+        },
+        "speed_min": 3.759974600936925,
+        "throttle_ceiling_fraction": 0.024500322372662798,
+        "energy_Wh": 3.634252397904657,
+        "shaft_W": 84.40264564438972,
+        "common_mm": 1.5422954714564787,
+        "pitch_peak": 32.559979634284794,
+        "pitch_rms": 5.959149690771363,
+        "passed": true
+      },
+      {
+        "spec": {
+          "turn": 35,
+          "voltage": 20.4,
+          "turbulence": 0.25,
+          "thermal": 0,
+          "wind": 0.7,
+          "seed": 4147102949,
+          "scales": {
+            "Cmq": 0.9147405099302314,
+            "joint_c_pitch": 1.2059633154342482,
+            "joint_c_roll": 1.0704857536548162,
+            "joint_c_yaw": 0.9096565247285399,
+            "CLbrake": 1.1058613208143135,
+            "CDbrake": 0.9044687151147558
+          },
+          "slew": 0.948429621070972,
+          "limit": 1,
+          "up": 0.75,
+          "down": 1,
+          "demand": 1,
+          "upDemand": 0.75,
+          "downDemand": 1,
+          "runtime": "/home/david/repos/micro-agu/research/lqi-longitudinal-2026-10-17/runtime-fixed",
+          "id": "fixed-fresh-1-baseline",
+          "scheme": "baseline"
+        },
+        "complete": true,
+        "failure": null,
+        "reasons": [],
+        "phases": {
+          "climb": {
+            "vertical_mean": 0.7438138519861307,
+            "vertical_bias": -0.006186148013869265,
+            "vertical_rms": 0.13907881028630503,
+            "pitch_rms": 8.162548960443427,
+            "pitch_peak": 21.56712407540755,
+            "throttle_mean": 0.613503355704698,
+            "airspeed_mean": 4.512091629966313
+          },
+          "descend": {
+            "vertical_mean": -0.9758894154658472,
+            "vertical_bias": 0.024110584534152886,
+            "vertical_rms": 0.13677353083290555,
+            "pitch_rms": 4.265592056857345,
+            "pitch_peak": 14.742172289833967,
+            "throttle_mean": 0.3315100671140939,
+            "airspeed_mean": 4.3132217780664766
+          }
+        },
+        "quiet": {
+          "pitch_rms": 0.15087451372708757,
+          "height_rms": 0.3351495581621026,
+          "vertical_rms": 0.013392607380066314
+        },
+        "speed_min": 2.734665635701275,
+        "throttle_ceiling_fraction": 0.14119922630560927,
+        "energy_Wh": 3.7796108326776747,
+        "shaft_W": 87.7753194383518,
+        "common_mm": 0.0,
+        "pitch_peak": 53.736912837663,
+        "pitch_rms": 8.176247270379733,
+        "passed": true
+      },
+      {
+        "spec": {
+          "turn": 35,
+          "voltage": 20.4,
+          "turbulence": 0.25,
+          "thermal": 0,
+          "wind": 0.7,
+          "seed": 4147102949,
+          "scales": {
+            "Cmq": 0.9147405099302314,
+            "joint_c_pitch": 1.2059633154342482,
+            "joint_c_roll": 1.0704857536548162,
+            "joint_c_yaw": 0.9096565247285399,
+            "CLbrake": 1.1058613208143135,
+            "CDbrake": 0.9044687151147558
+          },
+          "slew": 0.948429621070972,
+          "limit": 1,
+          "up": 0.75,
+          "down": 1,
+          "demand": 1,
+          "upDemand": 0.75,
+          "downDemand": 1,
+          "runtime": "/home/david/repos/micro-agu/research/lqi-longitudinal-2026-10-17/runtime-fixed",
+          "id": "fixed-fresh-1-lqi",
+          "scheme": "lqi"
+        },
+        "complete": true,
+        "failure": null,
+        "reasons": [],
+        "phases": {
+          "climb": {
+            "vertical_mean": 0.690497988907322,
+            "vertical_bias": -0.059502011092678,
+            "vertical_rms": 0.19370931890849316,
+            "pitch_rms": 8.331756361424013,
+            "pitch_peak": 26.08430840019189,
+            "throttle_mean": 0.6076912751677854,
+            "airspeed_mean": 4.608913100242944
+          },
+          "descend": {
+            "vertical_mean": -1.0072789389071264,
+            "vertical_bias": -0.007278938907126278,
+            "vertical_rms": 0.11991545716050755,
+            "pitch_rms": 3.228704680055654,
+            "pitch_peak": 7.820704294620423,
+            "throttle_mean": 0.3255838926174497,
+            "airspeed_mean": 4.206927574031049
+          }
+        },
+        "quiet": {
+          "pitch_rms": 0.07368619024003685,
+          "height_rms": 0.2382006464010185,
+          "vertical_rms": 0.003015446462309779
+        },
+        "speed_min": 3.888261846431188,
+        "throttle_ceiling_fraction": 0.0,
+        "energy_Wh": 3.6506250988178186,
+        "shaft_W": 84.78253592628532,
+        "common_mm": 1.471863390294438,
+        "pitch_peak": 27.19355483140386,
+        "pitch_rms": 5.365027592569673,
+        "passed": true
+      },
+      {
+        "spec": {
+          "turn": 0,
+          "voltage": 22.2,
+          "turbulence": 0.2,
+          "wind": 0,
+          "thermal": 1,
+          "seed": 1307428249,
+          "scales": {
+            "Cmq": 1.1864223361616215,
+            "joint_c_pitch": 1.077270521888962,
+            "joint_c_roll": 0.8973862247082747,
+            "joint_c_yaw": 1.1768405482540738,
+            "CLbrake": 1.191343753278031,
+            "CDbrake": 1.1470596260867105
+          },
+          "slew": 1.0154841159695889,
+          "id": "fixed-heldout-0-lqi",
+          "scheme": "lqi",
+          "limit": 1,
+          "up": 0.75,
+          "down": 1,
+          "demand": 1,
+          "upDemand": 0.75,
+          "downDemand": 1,
+          "runtime": "/home/david/repos/micro-agu/research/lqi-longitudinal-2026-10-17/runtime-fixed"
+        },
+        "complete": true,
+        "failure": null,
+        "reasons": [],
+        "phases": {
+          "climb": {
+            "vertical_mean": 0.7030127868688547,
+            "vertical_bias": -0.04698721313114535,
+            "vertical_rms": 0.1892531372045892,
+            "pitch_rms": 4.673308450710829,
+            "pitch_peak": 12.303495122480617,
+            "throttle_mean": 0.5408053691275169,
+            "airspeed_mean": 4.314395825656925
+          },
+          "descend": {
+            "vertical_mean": -1.0200357329521048,
+            "vertical_bias": -0.020035732952104902,
+            "vertical_rms": 0.1699247422960482,
+            "pitch_rms": 2.423148006322134,
+            "pitch_peak": 6.9872817579025615,
+            "throttle_mean": 0.23505405405405402,
+            "airspeed_mean": 4.389555705614648
+          }
+        },
+        "quiet": {
+          "pitch_rms": 0.07153219273965584,
+          "height_rms": 0.03486667972374499,
+          "vertical_rms": 0.0019121981900252277
+        },
+        "speed_min": 3.6058264541609995,
+        "throttle_ceiling_fraction": 0.0,
+        "energy_Wh": 3.2815682146251866,
+        "shaft_W": 76.2155963009604,
+        "common_mm": 0.2574979557773904,
+        "pitch_peak": 15.770993335438634,
+        "pitch_rms": 3.6568699515313465,
+        "passed": true
+      },
+      {
+        "spec": {
+          "turn": 25,
+          "voltage": 22.2,
+          "turbulence": 0.2,
+          "wind": 0.8,
+          "thermal": 0,
+          "seed": 3852568325,
+          "scales": {
+            "Cmq": 1.2065123559673818,
+            "joint_c_pitch": 0.9650031846761915,
+            "joint_c_roll": 1.2106779493420072,
+            "joint_c_yaw": 1.2778595447598344,
+            "CLbrake": 0.8460791959408466,
+            "CDbrake": 0.8584459109160045
+          },
+          "slew": 0.7796612484322768,
+          "id": "fixed-heldout-1-lqi",
+          "scheme": "lqi",
+          "limit": 1,
+          "up": 0.75,
+          "down": 1,
+          "demand": 1,
+          "upDemand": 0.75,
+          "downDemand": 1,
+          "runtime": "/home/david/repos/micro-agu/research/lqi-longitudinal-2026-10-17/runtime-fixed"
+        },
+        "complete": true,
+        "failure": null,
+        "reasons": [],
+        "phases": {
+          "climb": {
+            "vertical_mean": 0.7074291685950889,
+            "vertical_bias": -0.04257083140491112,
+            "vertical_rms": 0.13012874365197308,
+            "pitch_rms": 6.136027475624312,
+            "pitch_peak": 20.198595517162452,
+            "throttle_mean": 0.559463087248322,
+            "airspeed_mean": 4.676840413601055
+          },
+          "descend": {
+            "vertical_mean": -0.9797391904554076,
+            "vertical_bias": 0.020260809544592424,
+            "vertical_rms": 0.14212573295709055,
+            "pitch_rms": 2.8211806298180986,
+            "pitch_peak": 9.600021735146143,
+            "throttle_mean": 0.2605704697986577,
+            "airspeed_mean": 4.248587258370714
+          }
+        },
+        "quiet": {
+          "pitch_rms": 0.05696023096543242,
+          "height_rms": 0.026062761517515794,
+          "vertical_rms": 0.0037929902217664264
+        },
+        "speed_min": 3.909742027887383,
+        "throttle_ceiling_fraction": 0.0,
+        "energy_Wh": 3.603692847716048,
+        "shaft_W": 83.69262571908304,
+        "common_mm": 1.6711527587845707,
+        "pitch_peak": 20.198595517162452,
+        "pitch_rms": 4.264644886044654,
+        "passed": true
+      },
+      {
+        "spec": {
+          "turn": 35,
+          "voltage": 22.2,
+          "turbulence": 0.3,
+          "wind": 0,
+          "thermal": 0,
+          "seed": 892120347,
+          "scales": {
+            "Cmq": 1.0678885880894196,
+            "joint_c_pitch": 0.7588517674806788,
+            "joint_c_roll": 0.9128271418190098,
+            "joint_c_yaw": 1.0171145041997325,
+            "CLbrake": 0.9034340492977921,
+            "CDbrake": 0.7724845557384393
+          },
+          "slew": 0.7665829270997675,
+          "id": "fixed-heldout-2-lqi",
+          "scheme": "lqi",
+          "limit": 1,
+          "up": 0.75,
+          "down": 1,
+          "demand": 1,
+          "upDemand": 0.75,
+          "downDemand": 1,
+          "runtime": "/home/david/repos/micro-agu/research/lqi-longitudinal-2026-10-17/runtime-fixed"
+        },
+        "complete": true,
+        "failure": null,
+        "reasons": [],
+        "phases": {
+          "climb": {
+            "vertical_mean": 0.6471157945606476,
+            "vertical_bias": -0.1028842054393523,
+            "vertical_rms": 0.24576242563486056,
+            "pitch_rms": 9.927100164041361,
+            "pitch_peak": 38.73112596961686,
+            "throttle_mean": 0.5604228187919462,
+            "airspeed_mean": 4.683166100696442
+          },
+          "descend": {
+            "vertical_mean": -1.0354436668971303,
+            "vertical_bias": -0.03544366689713024,
+            "vertical_rms": 0.19693546057164477,
+            "pitch_rms": 4.381423329586983,
+            "pitch_peak": 13.161666304444479,
+            "throttle_mean": 0.2541476510067114,
+            "airspeed_mean": 4.214430972731084
+          }
+        },
+        "quiet": {
+          "pitch_rms": 0.06868676105207792,
+          "height_rms": 0.19676980930869095,
+          "vertical_rms": 0.002655183379935708
+        },
+        "speed_min": 3.8062213628321557,
+        "throttle_ceiling_fraction": 0.0,
+        "energy_Wh": 3.4883531430341925,
+        "shaft_W": 81.01569200739644,
+        "common_mm": 1.861096569932464,
+        "pitch_peak": 38.73112596961686,
+        "pitch_rms": 6.604345917384301,
+        "passed": true
+      },
+      {
+        "spec": {
+          "turn": 0,
+          "voltage": 20.4,
+          "turbulence": 0.2,
+          "wind": 0.8,
+          "thermal": 0,
+          "seed": 755759826,
+          "scales": {
+            "Cmq": 1.1718277676575735,
+            "joint_c_pitch": 1.17956891143603,
+            "joint_c_roll": 1.1606941889989246,
+            "joint_c_yaw": 1.0460410184123663,
+            "CLbrake": 0.7268089939071684,
+            "CDbrake": 1.2152610839556635
+          },
+          "slew": 0.9620012893890808,
+          "id": "fixed-heldout-3-lqi",
+          "scheme": "lqi",
+          "limit": 1,
+          "up": 0.75,
+          "down": 1,
+          "demand": 1,
+          "upDemand": 0.75,
+          "downDemand": 1,
+          "runtime": "/home/david/repos/micro-agu/research/lqi-longitudinal-2026-10-17/runtime-fixed"
+        },
+        "complete": true,
+        "failure": null,
+        "reasons": [],
+        "phases": {
+          "climb": {
+            "vertical_mean": 0.6367598835537625,
+            "vertical_bias": -0.11324011644623744,
+            "vertical_rms": 0.21549122832728698,
+            "pitch_rms": 5.021963081844633,
+            "pitch_peak": 12.964747058146571,
+            "throttle_mean": 0.6098523489932886,
+            "airspeed_mean": 4.31949841173702
+          },
+          "descend": {
+            "vertical_mean": -0.9612494850279761,
+            "vertical_bias": 0.03875051497202408,
+            "vertical_rms": 0.16169900483161925,
+            "pitch_rms": 2.5905708580180757,
+            "pitch_peak": 8.292023774507252,
+            "throttle_mean": 0.23130201342281878,
+            "airspeed_mean": 4.431252654238682
+          }
+        },
+        "quiet": {
+          "pitch_rms": 0.09257351392363344,
+          "height_rms": 0.16731929850769228,
+          "vertical_rms": 0.004927187168140781
+        },
+        "speed_min": 3.720019512045381,
+        "throttle_ceiling_fraction": 0.010315925209542231,
+        "energy_Wh": 3.4344885571363397,
+        "shaft_W": 79.76540521164502,
+        "common_mm": 0.4882898983549384,
+        "pitch_peak": 19.284554735786724,
+        "pitch_rms": 3.737745862657064,
+        "passed": true
+      },
+      {
+        "spec": {
+          "turn": 25,
+          "voltage": 20.4,
+          "turbulence": 0.3,
+          "wind": 0,
+          "thermal": 1,
+          "seed": 590437191,
+          "scales": {
+            "Cmq": 0.945036088141261,
+            "joint_c_pitch": 0.7047826233687973,
+            "joint_c_roll": 1.144369279491662,
+            "joint_c_yaw": 1.2259472360157053,
+            "CLbrake": 1.2584815367413478,
+            "CDbrake": 0.8670760996781277
+          },
+          "slew": 0.8300595039329395,
+          "id": "fixed-heldout-4-lqi",
+          "scheme": "lqi",
+          "limit": 1,
+          "up": 0.75,
+          "down": 1,
+          "demand": 1,
+          "upDemand": 0.75,
+          "downDemand": 1,
+          "runtime": "/home/david/repos/micro-agu/research/lqi-longitudinal-2026-10-17/runtime-fixed"
+        },
+        "complete": true,
+        "failure": null,
+        "reasons": [],
+        "phases": {
+          "climb": {
+            "vertical_mean": 0.6797392118539768,
+            "vertical_bias": -0.07026078814602332,
+            "vertical_rms": 0.1974379050466509,
+            "pitch_rms": 10.992175857382728,
+            "pitch_peak": 39.3476282097218,
+            "throttle_mean": 0.6131073825503356,
+            "airspeed_mean": 4.606772314149694
+          },
+          "descend": {
+            "vertical_mean": -1.0531421574967008,
+            "vertical_bias": -0.053142157496700856,
+            "vertical_rms": 0.21958161700696963,
+            "pitch_rms": 5.4243344439741215,
+            "pitch_peak": 15.19150260665902,
+            "throttle_mean": 0.19222818791946306,
+            "airspeed_mean": 4.1465369043832405
+          }
+        },
+        "quiet": {
+          "pitch_rms": 0.0703135173642284,
+          "height_rms": 0.2532941329999986,
+          "vertical_rms": 0.0035924195390379674
+        },
+        "speed_min": 3.5890427047752067,
+        "throttle_ceiling_fraction": 0.05222437137330754,
+        "energy_Wh": 3.5603115950401865,
+        "shaft_W": 82.68628802370944,
+        "common_mm": 1.8034759481733607,
+        "pitch_peak": 39.3476282097218,
+        "pitch_rms": 7.443031178296895,
+        "passed": true
+      },
+      {
+        "spec": {
+          "turn": -35,
+          "voltage": 20.4,
+          "turbulence": 0.2,
+          "wind": 0.8,
+          "thermal": 0,
+          "seed": 1349744319,
+          "scales": {
+            "Cmq": 0.7417368845665647,
+            "joint_c_pitch": 0.97287441532248,
+            "joint_c_roll": 0.9669124868272468,
+            "joint_c_yaw": 1.2905879107789646,
+            "CLbrake": 1.054882319105196,
+            "CDbrake": 1.1755985425257207
+          },
+          "slew": 0.9168245275188884,
+          "id": "fixed-heldout-5-lqi",
+          "scheme": "lqi",
+          "limit": 1,
+          "up": 0.75,
+          "down": 1,
+          "demand": 1,
+          "upDemand": 0.75,
+          "downDemand": 1,
+          "runtime": "/home/david/repos/micro-agu/research/lqi-longitudinal-2026-10-17/runtime-fixed"
+        },
+        "complete": true,
+        "failure": null,
+        "reasons": [],
+        "phases": {
+          "climb": {
+            "vertical_mean": 0.6776958990902685,
+            "vertical_bias": -0.07230410090973147,
+            "vertical_rms": 0.1640554674516218,
+            "pitch_rms": 7.171460335242598,
+            "pitch_peak": 16.712956164084595,
+            "throttle_mean": 0.6191073825503356,
+            "airspeed_mean": 4.850269394276929
+          },
+          "descend": {
+            "vertical_mean": -1.0920871292222687,
+            "vertical_bias": -0.09208712922226886,
+            "vertical_rms": 0.13397859552415547,
+            "pitch_rms": 2.9080948785207883,
+            "pitch_peak": 9.151424141743382,
+            "throttle_mean": 0.29901342281879195,
+            "airspeed_mean": 4.150973159312631
+          }
+        },
+        "quiet": {
+          "pitch_rms": 0.07019556938856185,
+          "height_rms": 0.24697975021423849,
+          "vertical_rms": 0.0040044348948639515
+        },
+        "speed_min": 3.870433582039003,
+        "throttle_ceiling_fraction": 0.039974210186976146,
+        "energy_Wh": 3.6245401991928863,
+        "shaft_W": 84.17652737631592,
+        "common_mm": 2.856181808002139,
+        "pitch_peak": 37.3750547672283,
+        "pitch_rms": 4.930603452114882,
+        "passed": true
+      },
+      {
+        "spec": {
+          "id": "fixed-regression-0-expanded",
+          "scheme": "lqi",
+          "limit": 1,
+          "up": 0.75,
+          "down": 1,
+          "demand": 0.5,
+          "turn": 0,
+          "turbulence": 0.2,
+          "seed": 10742,
+          "runtime": "/home/david/repos/micro-agu/research/lqi-longitudinal-2026-10-17/runtime-fixed"
+        },
+        "complete": true,
+        "failure": null,
+        "reasons": [],
+        "phases": {
+          "climb": {
+            "vertical_mean": 0.5288253666542383,
+            "vertical_bias": 0.028825366654238276,
+            "vertical_rms": 0.14230753481038924,
+            "pitch_rms": 5.280753931484786,
+            "pitch_peak": 13.487692652338772,
+            "throttle_mean": 0.5376241610738256,
+            "airspeed_mean": 4.327532296420671
+          },
+          "descend": {
+            "vertical_mean": -0.5807628916112458,
+            "vertical_bias": -0.08076289161124581,
+            "vertical_rms": 0.2312882965971734,
+            "pitch_rms": 3.5916835479031577,
+            "pitch_peak": 12.053106283776183,
+            "throttle_mean": 0.34582550335570467,
+            "airspeed_mean": 4.3930676106922615
+          }
+        },
+        "quiet": {
+          "pitch_rms": 0.003502135755198622,
+          "height_rms": 0.1596391565922128,
+          "vertical_rms": 0.000541133854187916
+        },
+        "speed_min": 3.796358288063627,
+        "throttle_ceiling_fraction": 0.0,
+        "energy_Wh": 3.2196191565463774,
+        "shaft_W": 74.777999750171,
+        "common_mm": 0.1218017009902426,
+        "pitch_peak": 16.128868570528713,
+        "pitch_rms": 3.774899555402043,
+        "passed": true
+      },
+      {
+        "spec": {
+          "id": "fixed-regression-0-old",
+          "scheme": "lqi",
+          "limit": 1,
+          "up": 0.5,
+          "down": 0.5,
+          "demand": 0.5,
+          "turn": 0,
+          "turbulence": 0.2,
+          "seed": 10742,
+          "runtime": "/home/david/repos/micro-agu/research/lqi-longitudinal-2026-10-17/runtime-fixed"
+        },
+        "complete": true,
+        "failure": null,
+        "reasons": [],
+        "phases": {
+          "climb": {
+            "vertical_mean": 0.5333208329181005,
+            "vertical_bias": 0.033320832918100514,
+            "vertical_rms": 0.1419541068997753,
+            "pitch_rms": 5.243671487484684,
+            "pitch_peak": 12.9261729613158,
+            "throttle_mean": 0.5379395973154363,
+            "airspeed_mean": 4.331206120403639
+          },
+          "descend": {
+            "vertical_mean": -0.5787323387871627,
+            "vertical_bias": -0.07873233878716271,
+            "vertical_rms": 0.23171297924989548,
+            "pitch_rms": 3.60201243856558,
+            "pitch_peak": 12.098607733894795,
+            "throttle_mean": 0.3460939597315436,
+            "airspeed_mean": 4.393213266231775
+          }
+        },
+        "quiet": {
+          "pitch_rms": 0.07453475758947027,
+          "height_rms": 0.14728167862915198,
+          "vertical_rms": 0.005653593491354443
+        },
+        "speed_min": 3.789452498462435,
+        "throttle_ceiling_fraction": 0.0,
+        "energy_Wh": 3.21568283783079,
+        "shaft_W": 74.68619786939534,
+        "common_mm": 0.10868078604617173,
+        "pitch_peak": 18.30539100630079,
+        "pitch_rms": 3.7689300273549278,
+        "passed": true
+      },
+      {
+        "spec": {
+          "id": "fixed-regression-1-expanded",
+          "scheme": "lqi",
+          "limit": 1,
+          "up": 0.75,
+          "down": 1,
+          "demand": 0.5,
+          "turn": 35,
+          "turbulence": 0.2,
+          "seed": 10743,
+          "runtime": "/home/david/repos/micro-agu/research/lqi-longitudinal-2026-10-17/runtime-fixed"
+        },
+        "complete": true,
+        "failure": null,
+        "reasons": [],
+        "phases": {
+          "climb": {
+            "vertical_mean": 0.46695131155174785,
+            "vertical_bias": -0.03304868844825217,
+            "vertical_rms": 0.15246490971668586,
+            "pitch_rms": 6.143061518675395,
+            "pitch_peak": 16.549845090149148,
+            "throttle_mean": 0.5400335570469799,
+            "airspeed_mean": 4.561437095999179
+          },
+          "descend": {
+            "vertical_mean": -0.5497947572381994,
+            "vertical_bias": -0.0497947572381993,
+            "vertical_rms": 0.15713376591232966,
+            "pitch_rms": 3.973771884019424,
+            "pitch_peak": 13.52044925756028,
+            "throttle_mean": 0.3712751677852349,
+            "airspeed_mean": 4.285966870695068
+          }
+        },
+        "quiet": {
+          "pitch_rms": 0.09269308983115804,
+          "height_rms": 0.19783269561919514,
+          "vertical_rms": 0.0029851519281150533
+        },
+        "speed_min": 3.973394755356992,
+        "throttle_ceiling_fraction": 0.0,
+        "energy_Wh": 3.5824802087050083,
+        "shaft_W": 83.20060896696842,
+        "common_mm": 1.4337384676267606,
+        "pitch_peak": 21.49722689486904,
+        "pitch_rms": 4.274914807676126,
+        "passed": true
+      },
+      {
+        "spec": {
+          "id": "fixed-regression-1-old",
+          "scheme": "lqi",
+          "limit": 1,
+          "up": 0.5,
+          "down": 0.5,
+          "demand": 0.5,
+          "turn": 35,
+          "turbulence": 0.2,
+          "seed": 10743,
+          "runtime": "/home/david/repos/micro-agu/research/lqi-longitudinal-2026-10-17/runtime-fixed"
+        },
+        "complete": true,
+        "failure": null,
+        "reasons": [],
+        "phases": {
+          "climb": {
+            "vertical_mean": 0.4708694547187836,
+            "vertical_bias": -0.029130545281216433,
+            "vertical_rms": 0.15452040558141783,
+            "pitch_rms": 6.166042049033685,
+            "pitch_peak": 16.191654694002874,
+            "throttle_mean": 0.5403959731543625,
+            "airspeed_mean": 4.563401666570121
+          },
+          "descend": {
+            "vertical_mean": -0.5479251792945671,
+            "vertical_bias": -0.04792517929456707,
+            "vertical_rms": 0.15667455862813598,
+            "pitch_rms": 3.985405525732389,
+            "pitch_peak": 13.483232383152307,
+            "throttle_mean": 0.3713959731543624,
+            "airspeed_mean": 4.29243577080912
+          }
+        },
+        "quiet": {
+          "pitch_rms": 0.10579363508012907,
+          "height_rms": 0.18013188519228632,
+          "vertical_rms": 0.007630107908839571
+        },
+        "speed_min": 3.9411257825095367,
+        "throttle_ceiling_fraction": 0.0,
+        "energy_Wh": 3.574427729778062,
+        "shaft_W": 83.01341196248079,
+        "common_mm": 1.2093522547506808,
+        "pitch_peak": 21.443508750337976,
+        "pitch_rms": 4.297181230142629,
+        "passed": true
+      },
+      {
+        "spec": {
+          "turn": 0,
+          "voltage": 22.2,
+          "turbulence": 0.2,
+          "wind": 0,
+          "thermal": 1,
+          "seed": 1307428249,
+          "scales": {
+            "Cmq": 1.1864223361616215,
+            "joint_c_pitch": 1.077270521888962,
+            "joint_c_roll": 0.8973862247082747,
+            "joint_c_yaw": 1.1768405482540738,
+            "CLbrake": 1.191343753278031,
+            "CDbrake": 1.1470596260867105
+          },
+          "slew": 1.0154841159695889,
+          "id": "heldout-0-baseline",
+          "scheme": "baseline",
+          "limit": 1,
+          "up": 0.75,
+          "down": 1,
+          "demand": 1,
+          "upDemand": 0.75,
+          "downDemand": 1
+        },
+        "complete": true,
+        "failure": null,
+        "reasons": [],
+        "phases": {
+          "climb": {
+            "vertical_mean": 0.6645538495227533,
+            "vertical_bias": -0.08544615047724682,
+            "vertical_rms": 0.11706054019555293,
+            "pitch_rms": 5.677938346752879,
+            "pitch_peak": 13.2212693718933,
+            "throttle_mean": 0.5362214765100671,
+            "airspeed_mean": 4.322133995320859
+          },
+          "descend": {
+            "vertical_mean": -1.0635863034867936,
+            "vertical_bias": -0.0635863034867938,
+            "vertical_rms": 0.18950650576440475,
+            "pitch_rms": 2.9703159960586674,
+            "pitch_peak": 7.641104960622597,
+            "throttle_mean": 0.22173154362416106,
+            "airspeed_mean": 4.40333037692391
+          }
+        },
+        "quiet": {
+          "pitch_rms": 0.16898691831587534,
+          "height_rms": 0.0911710633202351,
+          "vertical_rms": 0.01285051932353641
+        },
+        "speed_min": 2.8003459350903266,
+        "throttle_ceiling_fraction": 0.041908446163765316,
+        "energy_Wh": 3.355028705869434,
+        "shaft_W": 77.92067539776328,
+        "common_mm": 0.0,
+        "pitch_peak": 42.37776275955135,
+        "pitch_rms": 6.3931653911904025,
+        "passed": true
+      },
+      {
+        "spec": {
+          "turn": 0,
+          "voltage": 22.2,
+          "turbulence": 0.2,
+          "wind": 0,
+          "thermal": 1,
+          "seed": 1307428249,
+          "scales": {
+            "Cmq": 1.1864223361616215,
+            "joint_c_pitch": 1.077270521888962,
+            "joint_c_roll": 0.8973862247082747,
+            "joint_c_yaw": 1.1768405482540738,
+            "CLbrake": 1.191343753278031,
+            "CDbrake": 1.1470596260867105
+          },
+          "slew": 1.0154841159695889,
+          "id": "heldout-0-lqi",
+          "scheme": "lqi",
+          "limit": 1,
+          "up": 0.75,
+          "down": 1,
+          "demand": 1,
+          "upDemand": 0.75,
+          "downDemand": 1
+        },
+        "complete": true,
+        "failure": null,
+        "reasons": [],
+        "phases": {
+          "climb": {
+            "vertical_mean": 0.7036604920054806,
+            "vertical_bias": -0.046339507994519316,
+            "vertical_rms": 0.187983439908379,
+            "pitch_rms": 4.6742113442909465,
+            "pitch_peak": 12.314381773014047,
+            "throttle_mean": 0.5409261744966444,
+            "airspeed_mean": 4.314687256906348
+          },
+          "descend": {
+            "vertical_mean": -1.021626415241641,
+            "vertical_bias": -0.021626415241640967,
+            "vertical_rms": 0.17032790380871152,
+            "pitch_rms": 2.4072803028944256,
+            "pitch_peak": 6.9771160503823415,
+            "throttle_mean": 0.23451677852348993,
+            "airspeed_mean": 4.389846788472277
+          }
+        },
+        "quiet": {
+          "pitch_rms": 0.06724121669549639,
+          "height_rms": 0.16373250544328882,
+          "vertical_rms": 0.0014949720775813552
+        },
+        "speed_min": 3.718430810990154,
+        "throttle_ceiling_fraction": 0.0,
+        "energy_Wh": 3.280255934385555,
+        "shaft_W": 76.18513984104813,
+        "common_mm": 0.26303720996368446,
+        "pitch_peak": 15.563631985345584,
+        "pitch_rms": 3.661445489374754,
+        "passed": true
+      },
+      {
+        "spec": {
+          "turn": 25,
+          "voltage": 22.2,
+          "turbulence": 0.2,
+          "wind": 0.8,
+          "thermal": 0,
+          "seed": 3852568325,
+          "scales": {
+            "Cmq": 1.2065123559673818,
+            "joint_c_pitch": 0.9650031846761915,
+            "joint_c_roll": 1.2106779493420072,
+            "joint_c_yaw": 1.2778595447598344,
+            "CLbrake": 0.8460791959408466,
+            "CDbrake": 0.8584459109160045
+          },
+          "slew": 0.7796612484322768,
+          "id": "heldout-1-baseline",
+          "scheme": "baseline",
+          "limit": 1,
+          "up": 0.75,
+          "down": 1,
+          "demand": 1,
+          "upDemand": 0.75,
+          "downDemand": 1
+        },
+        "complete": true,
+        "failure": null,
+        "reasons": [],
+        "phases": {
+          "climb": {
+            "vertical_mean": 0.77245904507315,
+            "vertical_bias": 0.022459045073149907,
+            "vertical_rms": 0.11279254749475033,
+            "pitch_rms": 7.329232171061411,
+            "pitch_peak": 26.533160465135058,
+            "throttle_mean": 0.5658255033557047,
+            "airspeed_mean": 4.55706101811019
+          },
+          "descend": {
+            "vertical_mean": -0.9892368285992132,
+            "vertical_bias": 0.0107631714007867,
+            "vertical_rms": 0.15589977951236306,
+            "pitch_rms": 3.9056036250202486,
+            "pitch_peak": 13.446187994972425,
+            "throttle_mean": 0.2833087248322147,
+            "airspeed_mean": 4.336738699760249
+          }
+        },
+        "quiet": {
+          "pitch_rms": 0.17517704105976692,
+          "height_rms": 0.5979116938713134,
+          "vertical_rms": 0.018858810635338723
+        },
+        "speed_min": 3.0123289723928632,
+        "throttle_ceiling_fraction": 0.0548033526756931,
+        "energy_Wh": 3.7569162780592222,
+        "shaft_W": 87.24725413803989,
+        "common_mm": 0.0,
+        "pitch_peak": 42.63320473143,
+        "pitch_rms": 7.000554591602179,
+        "passed": true
+      },
+      {
+        "spec": {
+          "turn": 25,
+          "voltage": 22.2,
+          "turbulence": 0.2,
+          "wind": 0.8,
+          "thermal": 0,
+          "seed": 3852568325,
+          "scales": {
+            "Cmq": 1.2065123559673818,
+            "joint_c_pitch": 0.9650031846761915,
+            "joint_c_roll": 1.2106779493420072,
+            "joint_c_yaw": 1.2778595447598344,
+            "CLbrake": 0.8460791959408466,
+            "CDbrake": 0.8584459109160045
+          },
+          "slew": 0.7796612484322768,
+          "id": "heldout-1-lqi",
+          "scheme": "lqi",
+          "limit": 1,
+          "up": 0.75,
+          "down": 1,
+          "demand": 1,
+          "upDemand": 0.75,
+          "downDemand": 1
+        },
+        "complete": true,
+        "failure": null,
+        "reasons": [],
+        "phases": {
+          "climb": {
+            "vertical_mean": 0.7079784585916165,
+            "vertical_bias": -0.04202154140838365,
+            "vertical_rms": 0.13006796142176003,
+            "pitch_rms": 6.1289414006566325,
+            "pitch_peak": 19.991987376141193,
+            "throttle_mean": 0.5594429530201342,
+            "airspeed_mean": 4.671489112463703
+          },
+          "descend": {
+            "vertical_mean": -0.9799182379208002,
+            "vertical_bias": 0.02008176207919975,
+            "vertical_rms": 0.14200347950195422,
+            "pitch_rms": 2.814517995334102,
+            "pitch_peak": 9.684887316891565,
+            "throttle_mean": 0.26058389261744974,
+            "airspeed_mean": 4.249974378983003
+          }
+        },
+        "quiet": {
+          "pitch_rms": 0.14776605512908803,
+          "height_rms": 0.15006140082359815,
+          "vertical_rms": 0.003456437426907874
+        },
+        "speed_min": 3.911484042290786,
+        "throttle_ceiling_fraction": 0.0,
+        "energy_Wh": 3.6060955638445567,
+        "shaft_W": 83.69447886391715,
+        "common_mm": 1.6271512315246428,
+        "pitch_peak": 19.991987376141193,
+        "pitch_rms": 4.26412981597845,
+        "passed": true
+      },
+      {
+        "spec": {
+          "turn": 35,
+          "voltage": 22.2,
+          "turbulence": 0.3,
+          "wind": 0,
+          "thermal": 0,
+          "seed": 892120347,
+          "scales": {
+            "Cmq": 1.0678885880894196,
+            "joint_c_pitch": 0.7588517674806788,
+            "joint_c_roll": 0.9128271418190098,
+            "joint_c_yaw": 1.0171145041997325,
+            "CLbrake": 0.9034340492977921,
+            "CDbrake": 0.7724845557384393
+          },
+          "slew": 0.7665829270997675,
+          "id": "heldout-2-baseline",
+          "scheme": "baseline",
+          "limit": 1,
+          "up": 0.75,
+          "down": 1,
+          "demand": 1,
+          "upDemand": 0.75,
+          "downDemand": 1
+        },
+        "complete": true,
+        "failure": null,
+        "reasons": [],
+        "phases": {
+          "climb": {
+            "vertical_mean": 0.6860545860630536,
+            "vertical_bias": -0.06394541393694635,
+            "vertical_rms": 0.18517503974064836,
+            "pitch_rms": 11.656880010873158,
+            "pitch_peak": 43.891652868880115,
+            "throttle_mean": 0.5671073825503355,
+            "airspeed_mean": 4.553042663190468
+          },
+          "descend": {
+            "vertical_mean": -1.0808678206173818,
+            "vertical_bias": -0.08086782061738194,
+            "vertical_rms": 0.2100051905195182,
+            "pitch_rms": 6.057002755576247,
+            "pitch_peak": 16.331879615683537,
+            "throttle_mean": 0.2465704697986577,
+            "airspeed_mean": 4.340352319573701
+          }
+        },
+        "quiet": {
+          "pitch_rms": 0.1429819818425612,
+          "height_rms": 0.3795362717412635,
+          "vertical_rms": 0.021778795256962472
+        },
+        "speed_min": 2.909058803975419,
+        "throttle_ceiling_fraction": 0.06125080593165699,
+        "energy_Wh": 3.669729018822312,
+        "shaft_W": 85.22510464089744,
+        "common_mm": 0.0,
+        "pitch_peak": 49.18821365604023,
+        "pitch_rms": 9.76974334082248,
+        "passed": true
+      },
+      {
+        "spec": {
+          "turn": 35,
+          "voltage": 22.2,
+          "turbulence": 0.3,
+          "wind": 0,
+          "thermal": 0,
+          "seed": 892120347,
+          "scales": {
+            "Cmq": 1.0678885880894196,
+            "joint_c_pitch": 0.7588517674806788,
+            "joint_c_roll": 0.9128271418190098,
+            "joint_c_yaw": 1.0171145041997325,
+            "CLbrake": 0.9034340492977921,
+            "CDbrake": 0.7724845557384393
+          },
+          "slew": 0.7665829270997675,
+          "id": "heldout-2-lqi",
+          "scheme": "lqi",
+          "limit": 1,
+          "up": 0.75,
+          "down": 1,
+          "demand": 1,
+          "upDemand": 0.75,
+          "downDemand": 1
+        },
+        "complete": true,
+        "failure": null,
+        "reasons": [],
+        "phases": {
+          "climb": {
+            "vertical_mean": 0.6453918684556758,
+            "vertical_bias": -0.10460813154432431,
+            "vertical_rms": 0.24578114308199397,
+            "pitch_rms": 9.91822891023927,
+            "pitch_peak": 38.688816112456955,
+            "throttle_mean": 0.5604563758389263,
+            "airspeed_mean": 4.682252245422042
+          },
+          "descend": {
+            "vertical_mean": -1.035350630118475,
+            "vertical_bias": -0.03535063011847502,
+            "vertical_rms": 0.19799499471663248,
+            "pitch_rms": 4.40847352656294,
+            "pitch_peak": 13.034915096685692,
+            "throttle_mean": 0.25486577181208053,
+            "airspeed_mean": 4.214968762062678
+          }
+        },
+        "quiet": {
+          "pitch_rms": 0.09261889564265387,
+          "height_rms": 0.19504312983738575,
+          "vertical_rms": 0.0031680829317363942
+        },
+        "speed_min": 3.73049232492814,
+        "throttle_ceiling_fraction": 0.0,
+        "energy_Wh": 3.4894626540967146,
+        "shaft_W": 81.04157154207142,
+        "common_mm": 1.8498942793434228,
+        "pitch_peak": 38.688816112456955,
+        "pitch_rms": 6.5995709163406495,
+        "passed": true
+      },
+      {
+        "spec": {
+          "turn": 0,
+          "voltage": 20.4,
+          "turbulence": 0.2,
+          "wind": 0.8,
+          "thermal": 0,
+          "seed": 755759826,
+          "scales": {
+            "Cmq": 1.1718277676575735,
+            "joint_c_pitch": 1.17956891143603,
+            "joint_c_roll": 1.1606941889989246,
+            "joint_c_yaw": 1.0460410184123663,
+            "CLbrake": 0.7268089939071684,
+            "CDbrake": 1.2152610839556635
+          },
+          "slew": 0.9620012893890808,
+          "id": "heldout-3-baseline",
+          "scheme": "baseline",
+          "limit": 1,
+          "up": 0.75,
+          "down": 1,
+          "demand": 1,
+          "upDemand": 0.75,
+          "downDemand": 1
+        },
+        "complete": true,
+        "failure": null,
+        "reasons": [],
+        "phases": {
+          "climb": {
+            "vertical_mean": 0.6695110803334432,
+            "vertical_bias": -0.08048891966655669,
+            "vertical_rms": 0.1278896876652772,
+            "pitch_rms": 7.096682722156903,
+            "pitch_peak": 22.026473636640436,
+            "throttle_mean": 0.6161140939597315,
+            "airspeed_mean": 4.308474327729075
+          },
+          "descend": {
+            "vertical_mean": -0.9810367238454312,
+            "vertical_bias": 0.018963276154568873,
+            "vertical_rms": 0.14598249347016068,
+            "pitch_rms": 3.300106947850731,
+            "pitch_peak": 8.977836406297696,
+            "throttle_mean": 0.22944966442953021,
+            "airspeed_mean": 4.4242453985661045
+          }
+        },
+        "quiet": {
+          "pitch_rms": 0.16581638837537782,
+          "height_rms": 0.08374119514577519,
+          "vertical_rms": 0.00724402256781296
+        },
+        "speed_min": 2.8032434227594893,
+        "throttle_ceiling_fraction": 0.11146907216494846,
+        "energy_Wh": 3.621284387145815,
+        "shaft_W": 84.04650290514249,
+        "common_mm": 0.0,
+        "pitch_peak": 45.64915867138306,
+        "pitch_rms": 6.747214335850638,
+        "passed": true
+      },
+      {
+        "spec": {
+          "turn": 0,
+          "voltage": 20.4,
+          "turbulence": 0.2,
+          "wind": 0.8,
+          "thermal": 0,
+          "seed": 755759826,
+          "scales": {
+            "Cmq": 1.1718277676575735,
+            "joint_c_pitch": 1.17956891143603,
+            "joint_c_roll": 1.1606941889989246,
+            "joint_c_yaw": 1.0460410184123663,
+            "CLbrake": 0.7268089939071684,
+            "CDbrake": 1.2152610839556635
+          },
+          "slew": 0.9620012893890808,
+          "id": "heldout-3-lqi",
+          "scheme": "lqi",
+          "limit": 1,
+          "up": 0.75,
+          "down": 1,
+          "demand": 1,
+          "upDemand": 0.75,
+          "downDemand": 1
+        },
+        "complete": false,
+        "failure": "Error: Initial settling failed",
+        "reasons": [],
+        "passed": false
+      },
+      {
+        "spec": {
+          "turn": 25,
+          "voltage": 20.4,
+          "turbulence": 0.3,
+          "wind": 0,
+          "thermal": 1,
+          "seed": 590437191,
+          "scales": {
+            "Cmq": 0.945036088141261,
+            "joint_c_pitch": 0.7047826233687973,
+            "joint_c_roll": 1.144369279491662,
+            "joint_c_yaw": 1.2259472360157053,
+            "CLbrake": 1.2584815367413478,
+            "CDbrake": 0.8670760996781277
+          },
+          "slew": 0.8300595039329395,
+          "id": "heldout-4-baseline",
+          "scheme": "baseline",
+          "limit": 1,
+          "up": 0.75,
+          "down": 1,
+          "demand": 1,
+          "upDemand": 0.75,
+          "downDemand": 1
+        },
+        "complete": true,
+        "failure": null,
+        "reasons": [],
+        "phases": {
+          "climb": {
+            "vertical_mean": 0.8381264516878127,
+            "vertical_bias": 0.08812645168781283,
+            "vertical_rms": 0.23500656850304813,
+            "pitch_rms": 13.4312821577781,
+            "pitch_peak": 35.82737408530918,
+            "throttle_mean": 0.6301073825503355,
+            "airspeed_mean": 4.54864985485419
+          },
+          "descend": {
+            "vertical_mean": -1.0680615453154327,
+            "vertical_bias": -0.06806154531543293,
+            "vertical_rms": 0.20244111872819812,
+            "pitch_rms": 6.473339304798598,
+            "pitch_peak": 21.177411068454518,
+            "throttle_mean": 0.22928859060402684,
+            "airspeed_mean": 4.251013848942462
+          }
+        },
+        "quiet": {
+          "pitch_rms": 0.22001564529483963,
+          "height_rms": 0.2978888960143791,
+          "vertical_rms": 0.01916359817839942
+        },
+        "speed_min": 2.9932450382233875,
+        "throttle_ceiling_fraction": 0.2192134107027724,
+        "energy_Wh": 3.821290465649054,
+        "shaft_W": 88.74275237325983,
+        "common_mm": 0.0,
+        "pitch_peak": 66.90546923219598,
+        "pitch_rms": 10.729643201762283,
+        "passed": true
+      },
+      {
+        "spec": {
+          "turn": 25,
+          "voltage": 20.4,
+          "turbulence": 0.3,
+          "wind": 0,
+          "thermal": 1,
+          "seed": 590437191,
+          "scales": {
+            "Cmq": 0.945036088141261,
+            "joint_c_pitch": 0.7047826233687973,
+            "joint_c_roll": 1.144369279491662,
+            "joint_c_yaw": 1.2259472360157053,
+            "CLbrake": 1.2584815367413478,
+            "CDbrake": 0.8670760996781277
+          },
+          "slew": 0.8300595039329395,
+          "id": "heldout-4-lqi",
+          "scheme": "lqi",
+          "limit": 1,
+          "up": 0.75,
+          "down": 1,
+          "demand": 1,
+          "upDemand": 0.75,
+          "downDemand": 1
+        },
+        "complete": false,
+        "failure": "Error: Initial settling failed",
+        "reasons": [],
+        "passed": false
+      },
+      {
+        "spec": {
+          "turn": -35,
+          "voltage": 20.4,
+          "turbulence": 0.2,
+          "wind": 0.8,
+          "thermal": 0,
+          "seed": 1349744319,
+          "scales": {
+            "Cmq": 0.7417368845665647,
+            "joint_c_pitch": 0.97287441532248,
+            "joint_c_roll": 0.9669124868272468,
+            "joint_c_yaw": 1.2905879107789646,
+            "CLbrake": 1.054882319105196,
+            "CDbrake": 1.1755985425257207
+          },
+          "slew": 0.9168245275188884,
+          "id": "heldout-5-baseline",
+          "scheme": "baseline",
+          "limit": 1,
+          "up": 0.75,
+          "down": 1,
+          "demand": 1,
+          "upDemand": 0.75,
+          "downDemand": 1
+        },
+        "complete": true,
+        "failure": null,
+        "reasons": [],
+        "phases": {
+          "climb": {
+            "vertical_mean": 0.7095423690318219,
+            "vertical_bias": -0.040457630968178095,
+            "vertical_rms": 0.11338491957466854,
+            "pitch_rms": 8.219042936765302,
+            "pitch_peak": 23.334300154392107,
+            "throttle_mean": 0.6267046979865771,
+            "airspeed_mean": 4.95746390032403
+          },
+          "descend": {
+            "vertical_mean": -1.040642810174115,
+            "vertical_bias": -0.04064281017411492,
+            "vertical_rms": 0.13110271545887375,
+            "pitch_rms": 3.9021529566492807,
+            "pitch_peak": 11.382031503379993,
+            "throttle_mean": 0.31221476510067114,
+            "airspeed_mean": 4.3151018179008185
+          }
+        },
+        "quiet": {
+          "pitch_rms": 0.185573612199183,
+          "height_rms": 0.3730821562821606,
+          "vertical_rms": 0.02384910104240227
+        },
+        "speed_min": 3.343518520276393,
+        "throttle_ceiling_fraction": 0.13539651837524178,
+        "energy_Wh": 3.7876766396433244,
+        "shaft_W": 87.96253295107165,
+        "common_mm": 0.0,
+        "pitch_peak": 51.951931640747496,
+        "pitch_rms": 7.470225238382161,
+        "passed": true
+      },
+      {
+        "spec": {
+          "turn": -35,
+          "voltage": 20.4,
+          "turbulence": 0.2,
+          "wind": 0.8,
+          "thermal": 0,
+          "seed": 1349744319,
+          "scales": {
+            "Cmq": 0.7417368845665647,
+            "joint_c_pitch": 0.97287441532248,
+            "joint_c_roll": 0.9669124868272468,
+            "joint_c_yaw": 1.2905879107789646,
+            "CLbrake": 1.054882319105196,
+            "CDbrake": 1.1755985425257207
+          },
+          "slew": 0.9168245275188884,
+          "id": "heldout-5-lqi",
+          "scheme": "lqi",
+          "limit": 1,
+          "up": 0.75,
+          "down": 1,
+          "demand": 1,
+          "upDemand": 0.75,
+          "downDemand": 1
+        },
+        "complete": false,
+        "failure": "Error: Initial settling failed",
+        "reasons": [],
+        "passed": false
+      },
+      {
+        "spec": {
+          "id": "nominal-baseline-0.5-0",
+          "scheme": "baseline",
+          "limit": 0.5,
+          "demand": 0.5,
+          "turn": 0,
+          "seed": 73
+        },
+        "complete": true,
+        "failure": null,
+        "reasons": [],
+        "phases": {
+          "climb": {
+            "vertical_mean": 0.4959907657495868,
+            "vertical_bias": -0.004009234250413237,
+            "vertical_rms": 0.015783768043683345,
+            "pitch_rms": 0.2039004853541336,
+            "pitch_peak": 0.7036020768945621,
+            "throttle_mean": 0.5246510067114094,
+            "airspeed_mean": 4.321206364879408
+          },
+          "descend": {
+            "vertical_mean": -0.47086881878972786,
+            "vertical_bias": 0.029131181210272132,
+            "vertical_rms": 0.031024749618221686,
+            "pitch_rms": 0.23583921361949597,
+            "pitch_peak": 0.6604440449334437,
+            "throttle_mean": 0.36226174496644287,
+            "airspeed_mean": 4.4093952924698705
+          }
+        },
+        "quiet": {
+          "pitch_rms": 0.24257031432119858,
+          "height_rms": 0.32256507926494693,
+          "vertical_rms": 0.0067307816666386374
+        },
+        "speed_min": 2.9369566812801136,
+        "throttle_ceiling_fraction": 0.02321083172147002,
+        "energy_Wh": 3.3810840176395605,
+        "shaft_W": 78.52554995422635,
+        "common_mm": 0.0,
+        "pitch_peak": 40.513964612659166,
+        "pitch_rms": 4.713638805915266,
+        "passed": true
+      },
+      {
+        "spec": {
+          "id": "nominal-baseline-0.5-35",
+          "scheme": "baseline",
+          "limit": 0.5,
+          "demand": 0.5,
+          "turn": 35,
+          "seed": 73
+        },
+        "complete": true,
+        "failure": null,
+        "reasons": [],
+        "phases": {
+          "climb": {
+            "vertical_mean": 0.5280160916238136,
+            "vertical_bias": 0.02801609162381359,
+            "vertical_rms": 0.05907199533305084,
+            "pitch_rms": 0.32398799187029026,
+            "pitch_peak": 1.0184898304110208,
+            "throttle_mean": 0.5427046979865772,
+            "airspeed_mean": 4.485384253829745
+          },
+          "descend": {
+            "vertical_mean": -0.4664716147062242,
+            "vertical_bias": 0.033528385293775845,
+            "vertical_rms": 0.03915454346704603,
+            "pitch_rms": 0.2095615725362912,
+            "pitch_peak": 0.584816367971538,
+            "throttle_mean": 0.38950666666666667,
+            "airspeed_mean": 4.346313881300866
+          }
+        },
+        "quiet": {
+          "pitch_rms": 0.24101191834100796,
+          "height_rms": 0.37317467082481626,
+          "vertical_rms": 0.005456844834540916
+        },
+        "speed_min": 3.0528153223674765,
+        "throttle_ceiling_fraction": 0.04061895551257253,
+        "energy_Wh": 3.651922849853537,
+        "shaft_W": 84.81169001571752,
+        "common_mm": 0.0,
+        "pitch_peak": 43.03242448202142,
+        "pitch_rms": 4.7352513116288995,
+        "passed": true
+      },
+      {
+        "spec": {
+          "id": "nominal-baseline-0.75-0",
+          "scheme": "baseline",
+          "limit": 0.75,
+          "demand": 0.75,
+          "turn": 0,
+          "seed": 73
+        },
+        "complete": true,
+        "failure": null,
+        "reasons": [],
+        "phases": {
+          "climb": {
+            "vertical_mean": 0.7052489220393492,
+            "vertical_bias": -0.04475107796065071,
+            "vertical_rms": 0.046667653331450384,
+            "pitch_rms": 0.16814180208983168,
+            "pitch_peak": 0.6081352083997131,
+            "throttle_mean": 0.5562080536912754,
+            "airspeed_mean": 4.30069640394095
+          },
+          "descend": {
+            "vertical_mean": -0.679245320323294,
+            "vertical_bias": 0.070754679676706,
+            "vertical_rms": 0.07717674294023134,
+            "pitch_rms": 0.20644091961341468,
+            "pitch_peak": 0.6216654936231595,
+            "throttle_mean": 0.3196711409395974,
+            "airspeed_mean": 4.425062719335478
+          }
+        },
+        "quiet": {
+          "pitch_rms": 0.22171579831681315,
+          "height_rms": 0.4694194114582486,
+          "vertical_rms": 0.013196439586705645
+        },
+        "speed_min": 2.73489757374342,
+        "throttle_ceiling_fraction": 0.04061895551257253,
+        "energy_Wh": 3.4766992885563317,
+        "shaft_W": 80.7447494116164,
+        "common_mm": 0.0,
+        "pitch_peak": 41.61918823840008,
+        "pitch_rms": 5.187631299041286,
+        "passed": true
+      },
+      {
+        "spec": {
+          "id": "nominal-baseline-0.75-35",
+          "scheme": "baseline",
+          "limit": 0.75,
+          "demand": 0.75,
+          "turn": 35,
+          "seed": 73
+        },
+        "complete": true,
+        "failure": null,
+        "reasons": [],
+        "phases": {
+          "climb": {
+            "vertical_mean": 0.7604392631331421,
+            "vertical_bias": 0.01043926313314224,
+            "vertical_rms": 0.05484133803511391,
+            "pitch_rms": 0.3259835778454875,
+            "pitch_peak": 1.001831903620321,
+            "throttle_mean": 0.5741266666666665,
+            "airspeed_mean": 4.536891822009706
+          },
+          "descend": {
+            "vertical_mean": -0.6703082445749117,
+            "vertical_bias": 0.07969175542508829,
+            "vertical_rms": 0.08584427294909405,
+            "pitch_rms": 0.26993277702386587,
+            "pitch_peak": 0.6620973233607285,
+            "throttle_mean": 0.35062416107382555,
+            "airspeed_mean": 4.32916785573126
+          }
+        },
+        "quiet": {
+          "pitch_rms": 0.23001794260504288,
+          "height_rms": 0.5576023424936114,
+          "vertical_rms": 0.014345945281520167
+        },
+        "speed_min": 2.884371908491714,
+        "throttle_ceiling_fraction": 0.06576402321083172,
+        "energy_Wh": 3.731858737148902,
+        "shaft_W": 86.66707276259265,
+        "common_mm": 0.0,
+        "pitch_peak": 43.7565017663062,
+        "pitch_rms": 5.290511080755074,
+        "passed": true
+      },
+      {
+        "spec": {
+          "id": "nominal-baseline-1.0-0",
+          "scheme": "baseline",
+          "limit": 1,
+          "demand": 1,
+          "turn": 0,
+          "seed": 73
+        },
+        "complete": true,
+        "failure": null,
+        "reasons": [],
+        "phases": {
+          "climb": {
+            "vertical_mean": 0.9727358151625268,
+            "vertical_bias": -0.027264184837473136,
+            "vertical_rms": 0.029657339594616392,
+            "pitch_rms": 0.2124889077408107,
+            "pitch_peak": 0.732909451429407,
+            "throttle_mean": 0.5951409395973154,
+            "airspeed_mean": 4.283223476377394
+          },
+          "descend": {
+            "vertical_mean": -1.0341284950696679,
+            "vertical_bias": -0.03412849506966765,
+            "vertical_rms": 0.07504895102809804,
+            "pitch_rms": 0.25214959149516697,
+            "pitch_peak": 0.6743156332490159,
+            "throttle_mean": 0.2315771812080537,
+            "airspeed_mean": 4.453787323852787
+          }
+        },
+        "quiet": {
+          "pitch_rms": 0.2218009005946692,
+          "height_rms": 0.5269569738967487,
+          "vertical_rms": 0.01317765289250101
+        },
+        "speed_min": 2.5922855122725643,
+        "throttle_ceiling_fraction": 0.15538362346872986,
+        "energy_Wh": 3.5881170740686543,
+        "shaft_W": 83.32970268429406,
+        "common_mm": 0.0,
+        "pitch_peak": 41.668208939225956,
+        "pitch_rms": 5.548816687039525,
+        "passed": true
+      },
+      {
+        "spec": {
+          "id": "nominal-baseline-1.0-35",
+          "scheme": "baseline",
+          "limit": 1,
+          "demand": 1,
+          "turn": 35,
+          "seed": 73
+        },
+        "complete": true,
+        "failure": null,
+        "reasons": [],
+        "phases": {
+          "climb": {
+            "vertical_mean": 0.9433886378593273,
+            "vertical_bias": -0.05661136214067261,
+            "vertical_rms": 0.06011286877575438,
+            "pitch_rms": 0.24320237656627816,
+            "pitch_peak": 0.72799255906712,
+            "throttle_mean": 0.5982684563758389,
+            "airspeed_mean": 4.588484246234242
+          },
+          "descend": {
+            "vertical_mean": -1.0226428115648623,
+            "vertical_bias": -0.022642811564862267,
+            "vertical_rms": 0.07187180301381473,
+            "pitch_rms": 0.2577122644226888,
+            "pitch_peak": 0.6723390521919173,
+            "throttle_mean": 0.270758389261745,
+            "airspeed_mean": 4.307858667377121
+          }
+        },
+        "quiet": {
+          "pitch_rms": 0.20957823445710927,
+          "height_rms": 1.0495107904195373,
+          "vertical_rms": 0.021376762818152484
+        },
+        "speed_min": 2.8712031527236657,
+        "throttle_ceiling_fraction": 0.22823984526112184,
+        "energy_Wh": 3.834544094059852,
+        "shaft_W": 89.04919344121595,
+        "common_mm": 0.0,
+        "pitch_peak": 45.2514171236393,
+        "pitch_rms": 5.430399305034417,
+        "passed": true
+      },
+      {
+        "spec": {
+          "id": "nominal-lqi-0.5-0",
+          "scheme": "lqi",
+          "limit": 0.5,
+          "demand": 0.5,
+          "turn": 0,
+          "seed": 73
+        },
+        "complete": true,
+        "failure": null,
+        "reasons": [],
+        "phases": {
+          "climb": {
+            "vertical_mean": 0.49447775320396314,
+            "vertical_bias": -0.005522246796036868,
+            "vertical_rms": 0.011777418318065856,
+            "pitch_rms": 0.06697434153733964,
+            "pitch_peak": 0.3920600896987662,
+            "throttle_mean": 0.5242953020134229,
+            "airspeed_mean": 4.3306729519964655
+          },
+          "descend": {
+            "vertical_mean": -0.4993605323497824,
+            "vertical_bias": 0.0006394676502176287,
+            "vertical_rms": 0.0038278598694636594,
+            "pitch_rms": 0.08604128934909949,
+            "pitch_peak": 0.3984087720582661,
+            "throttle_mean": 0.3570402684563758,
+            "airspeed_mean": 4.391534578235066
+          }
+        },
+        "quiet": {
+          "pitch_rms": 0.06587910896129533,
+          "height_rms": 0.018652159777909502,
+          "vertical_rms": 0.005748217449762726
+        },
+        "speed_min": 3.989596849104662,
+        "throttle_ceiling_fraction": 0.0,
+        "energy_Wh": 3.2412642829913945,
+        "shaft_W": 75.27996478036184,
+        "common_mm": 0.11078508372588122,
+        "pitch_peak": 6.094792307625126,
+        "pitch_rms": 0.9917722989866908,
+        "passed": true
+      },
+      {
+        "spec": {
+          "id": "nominal-lqi-0.5-35",
+          "scheme": "lqi",
+          "limit": 0.5,
+          "demand": 0.5,
+          "turn": 35,
+          "seed": 73
+        },
+        "complete": true,
+        "failure": null,
+        "reasons": [],
+        "phases": {
+          "climb": {
+            "vertical_mean": 0.5010744961801048,
+            "vertical_bias": 0.0010744961801047914,
+            "vertical_rms": 0.03177522247226973,
+            "pitch_rms": 0.31476408490125873,
+            "pitch_peak": 0.7964355371900285,
+            "throttle_mean": 0.5396107382550335,
+            "airspeed_mean": 4.583838328726671
+          },
+          "descend": {
+            "vertical_mean": -0.49949115928119675,
+            "vertical_bias": 0.0005088407188032626,
+            "vertical_rms": 0.020886789181529676,
+            "pitch_rms": 0.22849511075417786,
+            "pitch_peak": 0.632538773027633,
+            "throttle_mean": 0.3814899328859061,
+            "airspeed_mean": 4.2931555578008584
+          }
+        },
+        "quiet": {
+          "pitch_rms": 0.08595064127784506,
+          "height_rms": 0.06505621813465416,
+          "vertical_rms": 0.007065494559112605
+        },
+        "speed_min": 4.070302261428371,
+        "throttle_ceiling_fraction": 0.0,
+        "energy_Wh": 3.5332541122829015,
+        "shaft_W": 82.05729226477187,
+        "common_mm": 0.5368434727588233,
+        "pitch_peak": 6.343044043961132,
+        "pitch_rms": 0.954280534890985,
+        "passed": true
+      },
+      {
+        "spec": {
+          "id": "nominal-lqi-0.75-0",
+          "scheme": "lqi",
+          "limit": 0.75,
+          "demand": 0.75,
+          "turn": 0,
+          "seed": 73
+        },
+        "complete": true,
+        "failure": null,
+        "reasons": [],
+        "phases": {
+          "climb": {
+            "vertical_mean": 0.6850396578635645,
+            "vertical_bias": -0.06496034213643559,
+            "vertical_rms": 0.06578063929348855,
+            "pitch_rms": 0.12629605291894133,
+            "pitch_peak": 0.6124404849790602,
+            "throttle_mean": 0.55303355704698,
+            "airspeed_mean": 4.312968958788254
+          },
+          "descend": {
+            "vertical_mean": -0.7049863926443344,
+            "vertical_bias": 0.045013607355665716,
+            "vertical_rms": 0.04515462800451764,
+            "pitch_rms": 0.08397267501119013,
+            "pitch_peak": 0.3829029041345818,
+            "throttle_mean": 0.3141744966442953,
+            "airspeed_mean": 4.3965466192826845
+          }
+        },
+        "quiet": {
+          "pitch_rms": 0.06936301706056638,
+          "height_rms": 0.16118070608871604,
+          "vertical_rms": 0.0033489391268180916
+        },
+        "speed_min": 3.832231302045369,
+        "throttle_ceiling_fraction": 0.0,
+        "energy_Wh": 3.306070551289199,
+        "shaft_W": 76.78446353980841,
+        "common_mm": 0.1926360743557571,
+        "pitch_peak": 8.431122605007081,
+        "pitch_rms": 1.3565161689041247,
+        "passed": true
+      },
+      {
+        "spec": {
+          "id": "nominal-lqi-0.75-35",
+          "scheme": "lqi",
+          "limit": 0.75,
+          "demand": 0.75,
+          "turn": 35,
+          "seed": 73
+        },
+        "complete": true,
+        "failure": null,
+        "reasons": [],
+        "phases": {
+          "climb": {
+            "vertical_mean": 0.700126234719718,
+            "vertical_bias": -0.04987376528028188,
+            "vertical_rms": 0.06577420230184278,
+            "pitch_rms": 0.36748699657627276,
+            "pitch_peak": 1.1456493765476838,
+            "throttle_mean": 0.5650536912751679,
+            "airspeed_mean": 4.669495767596576
+          },
+          "descend": {
+            "vertical_mean": -0.7016374047307261,
+            "vertical_bias": 0.048362595269273986,
+            "vertical_rms": 0.05385715881656863,
+            "pitch_rms": 0.19144466905911545,
+            "pitch_peak": 0.617294424584048,
+            "throttle_mean": 0.3400666666666667,
+            "airspeed_mean": 4.253065916180244
+          }
+        },
+        "quiet": {
+          "pitch_rms": 0.06929528339131279,
+          "height_rms": 0.20027901048033683,
+          "vertical_rms": 0.0032188678809330438
+        },
+        "speed_min": 4.018656882189962,
+        "throttle_ceiling_fraction": 0.0,
+        "energy_Wh": 3.604978139318087,
+        "shaft_W": 83.72295679814468,
+        "common_mm": 1.6137797014583741,
+        "pitch_peak": 8.331341302752552,
+        "pitch_rms": 1.3064719416210457,
+        "passed": true
+      },
+      {
+        "spec": {
+          "id": "nominal-lqi-1.0-0",
+          "scheme": "lqi",
+          "limit": 1,
+          "demand": 1,
+          "turn": 0,
+          "seed": 73
+        },
+        "complete": true,
+        "failure": null,
+        "reasons": [],
+        "phases": {
+          "climb": {
+            "vertical_mean": 0.9791881668349073,
+            "vertical_bias": -0.020811833165092643,
+            "vertical_rms": 0.028128894898546076,
+            "pitch_rms": 0.14078216036904026,
+            "pitch_peak": 0.5332696987516915,
+            "throttle_mean": 0.5963691275167785,
+            "airspeed_mean": 4.29778341496382
+          },
+          "descend": {
+            "vertical_mean": -1.0108384189198591,
+            "vertical_bias": -0.010838418919859082,
+            "vertical_rms": 0.014155945056186286,
+            "pitch_rms": 0.10653257907395818,
+            "pitch_peak": 0.4202013874846844,
+            "throttle_mean": 0.23795333333333332,
+            "airspeed_mean": 4.406710854495733
+          }
+        },
+        "quiet": {
+          "pitch_rms": 0.07803503865568466,
+          "height_rms": 0.15744660473204322,
+          "vertical_rms": 0.0038177745431048427
+        },
+        "speed_min": 3.565395572660945,
+        "throttle_ceiling_fraction": 0.16118633139909735,
+        "energy_Wh": 3.443520913778933,
+        "shaft_W": 79.97553794441467,
+        "common_mm": 0.5423827269451174,
+        "pitch_peak": 12.186606969024334,
+        "pitch_rms": 1.9295984913154325,
+        "passed": true
+      },
+      {
+        "spec": {
+          "id": "nominal-lqi-1.0-35",
+          "scheme": "lqi",
+          "limit": 1,
+          "demand": 1,
+          "turn": 35,
+          "seed": 73
+        },
+        "complete": true,
+        "failure": null,
+        "reasons": [],
+        "phases": {
+          "climb": {
+            "vertical_mean": 0.9560702333401001,
+            "vertical_bias": -0.04392976665989997,
+            "vertical_rms": 0.05027133717888422,
+            "pitch_rms": 0.36894654332171256,
+            "pitch_peak": 0.8792919925613292,
+            "throttle_mean": 0.599,
+            "airspeed_mean": 4.814517333261036
+          },
+          "descend": {
+            "vertical_mean": -1.018686292405698,
+            "vertical_bias": -0.018686292405698125,
+            "vertical_rms": 0.022353792174925412,
+            "pitch_rms": 0.15709048115938015,
+            "pitch_peak": 0.5223057531315628,
+            "throttle_mean": 0.262241610738255,
+            "airspeed_mean": 4.209253727169676
+          }
+        },
+        "quiet": {
+          "pitch_rms": 0.07748785405787198,
+          "height_rms": 0.08469019193675634,
+          "vertical_rms": 0.003634977491101195
+        },
+        "speed_min": 3.5882344711006766,
+        "throttle_ceiling_fraction": 0.1947130883301096,
+        "energy_Wh": 3.70475288784935,
+        "shaft_W": 86.03880518477027,
+        "common_mm": 1.8855126121279169,
+        "pitch_peak": 20.35733227668396,
+        "pitch_rms": 2.138141473614763,
+        "passed": true
+      },
+      {
+        "spec": {
+          "id": "regression-0-expanded",
+          "scheme": "lqi",
+          "limit": 1,
+          "up": 0.75,
+          "down": 1,
+          "demand": 0.5,
+          "turn": 0,
+          "turbulence": 0.2,
+          "seed": 10742
+        },
+        "complete": true,
+        "failure": null,
+        "reasons": [],
+        "phases": {
+          "climb": {
+            "vertical_mean": 0.5289353580069865,
+            "vertical_bias": 0.02893535800698654,
+            "vertical_rms": 0.14144430226449461,
+            "pitch_rms": 5.268161798850188,
+            "pitch_peak": 13.19438192397341,
+            "throttle_mean": 0.5375771812080539,
+            "airspeed_mean": 4.32744986821121
+          },
+          "descend": {
+            "vertical_mean": -0.580564021876503,
+            "vertical_bias": -0.08056402187650301,
+            "vertical_rms": 0.23096432257337637,
+            "pitch_rms": 3.585396153690519,
+            "pitch_peak": 12.039159537749036,
+            "throttle_mean": 0.34589932885906044,
+            "airspeed_mean": 4.393147055591553
+          }
+        },
+        "quiet": {
+          "pitch_rms": 0.05921625483279612,
+          "height_rms": 0.1578041897792792,
+          "vertical_rms": 0.003203446882921179
+        },
+        "speed_min": 3.799732547614578,
+        "throttle_ceiling_fraction": 0.0,
+        "energy_Wh": 3.219036809931379,
+        "shaft_W": 74.76433673752857,
+        "common_mm": 0.12208021097726296,
+        "pitch_peak": 17.962930622173236,
+        "pitch_rms": 3.7798029008709024,
+        "passed": true
+      },
+      {
+        "spec": {
+          "id": "regression-0-old",
+          "scheme": "lqi",
+          "limit": 1,
+          "up": 0.5,
+          "down": 0.5,
+          "demand": 0.5,
+          "turn": 0,
+          "turbulence": 0.2,
+          "seed": 10742
+        },
+        "complete": true,
+        "failure": null,
+        "reasons": [],
+        "phases": {
+          "climb": {
+            "vertical_mean": 0.5329639755551642,
+            "vertical_bias": 0.03296397555516418,
+            "vertical_rms": 0.1414455038288058,
+            "pitch_rms": 5.259937735920613,
+            "pitch_peak": 12.886819729709137,
+            "throttle_mean": 0.5379530201342282,
+            "airspeed_mean": 4.331012271965838
+          },
+          "descend": {
+            "vertical_mean": -0.5776975997572531,
+            "vertical_bias": -0.07769759975725311,
+            "vertical_rms": 0.23112672331497144,
+            "pitch_rms": 3.597165054551823,
+            "pitch_peak": 12.181066837885787,
+            "throttle_mean": 0.3463355704697986,
+            "airspeed_mean": 4.393229156320889
+          }
+        },
+        "quiet": {
+          "pitch_rms": 0.0889698671753018,
+          "height_rms": 0.142090810974284,
+          "vertical_rms": 0.006016183742578131
+        },
+        "speed_min": 3.8007394001020707,
+        "throttle_ceiling_fraction": 0.0,
+        "energy_Wh": 3.2162736155564198,
+        "shaft_W": 74.69990892127308,
+        "common_mm": 0.11208479699864293,
+        "pitch_peak": 16.046998113306145,
+        "pitch_rms": 3.76839604777492,
+        "passed": true
+      },
+      {
+        "spec": {
+          "id": "regression-1-expanded",
+          "scheme": "lqi",
+          "limit": 1,
+          "up": 0.75,
+          "down": 1,
+          "demand": 0.5,
+          "turn": 35,
+          "turbulence": 0.2,
+          "seed": 10743
+        },
+        "complete": true,
+        "failure": null,
+        "reasons": [],
+        "phases": {
+          "climb": {
+            "vertical_mean": 0.45906807346411294,
+            "vertical_bias": -0.040931926535887043,
+            "vertical_rms": 0.13543609980432547,
+            "pitch_rms": 6.121588229467787,
+            "pitch_peak": 14.708176981725439,
+            "throttle_mean": 0.5386174496644295,
+            "airspeed_mean": 4.562936867135861
+          },
+          "descend": {
+            "vertical_mean": -0.5425759406996724,
+            "vertical_bias": -0.0425759406996724,
+            "vertical_rms": 0.13945197384734515,
+            "pitch_rms": 3.969953428915013,
+            "pitch_peak": 12.8364010068612,
+            "throttle_mean": 0.3733624161073826,
+            "airspeed_mean": 4.290948266787211
+          }
+        },
+        "quiet": {
+          "pitch_rms": 0.08245289790134046,
+          "height_rms": 0.21170322829673116,
+          "vertical_rms": 0.0023222422720288577
+        },
+        "speed_min": 3.9500544670154625,
+        "throttle_ceiling_fraction": 0.0,
+        "energy_Wh": 3.573231808306588,
+        "shaft_W": 82.98549998063713,
+        "common_mm": 0.906704735521877,
+        "pitch_peak": 20.875397449151706,
+        "pitch_rms": 4.272422532946523,
+        "passed": true
+      },
+      {
+        "spec": {
+          "id": "regression-1-old",
+          "scheme": "lqi",
+          "limit": 1,
+          "up": 0.5,
+          "down": 0.5,
+          "demand": 0.5,
+          "turn": 35,
+          "turbulence": 0.2,
+          "seed": 10743
+        },
+        "complete": true,
+        "failure": null,
+        "reasons": [],
+        "phases": {
+          "climb": {
+            "vertical_mean": 0.4634495064090711,
+            "vertical_bias": -0.03655049359092891,
+            "vertical_rms": 0.13840205590894875,
+            "pitch_rms": 6.160576830740125,
+            "pitch_peak": 15.846995463402225,
+            "throttle_mean": 0.5389664429530202,
+            "airspeed_mean": 4.556568916564015
+          },
+          "descend": {
+            "vertical_mean": -0.5383199661877863,
+            "vertical_bias": -0.03831996618778627,
+            "vertical_rms": 0.14473887304996672,
+            "pitch_rms": 3.966350721727947,
+            "pitch_peak": 12.95341551421852,
+            "throttle_mean": 0.37355033557046985,
+            "airspeed_mean": 4.298815089499617
+          }
+        },
+        "quiet": {
+          "pitch_rms": 0.0989931101688424,
+          "height_rms": 0.19556969353154058,
+          "vertical_rms": 0.006430326555219183
+        },
+        "speed_min": 3.9644085394039306,
+        "throttle_ceiling_fraction": 0.0,
+        "energy_Wh": 3.564096909818813,
+        "shaft_W": 82.77317906842089,
+        "common_mm": 0.611329421509716,
+        "pitch_peak": 21.100700085982446,
+        "pitch_rms": 4.278376433982281,
+        "passed": true
+      }
+    ],
+    "pairs": [
+      {
+        "case": 0,
+        "complete": true,
+        "checks": {
+          "pitch_rms": true,
+          "pitch_peak": true
+        },
+        "passed": true,
+        "ratios": {
+          "pitch_rms": 0.5719967696394039,
+          "pitch_peak": 0.3721525703214258,
+          "energy_Wh": 0.9781043628283321
+        },
+        "lqi_reasons": [],
+        "baseline_reasons": []
+      },
+      {
+        "case": 1,
+        "complete": true,
+        "checks": {
+          "pitch_rms": true,
+          "pitch_peak": true
+        },
+        "passed": true,
+        "ratios": {
+          "pitch_rms": 0.6091867194579834,
+          "pitch_peak": 0.473776148061224,
+          "energy_Wh": 0.9592156388370924
+        },
+        "lqi_reasons": [],
+        "baseline_reasons": []
+      },
+      {
+        "case": 2,
+        "complete": true,
+        "checks": {
+          "pitch_rms": true,
+          "pitch_peak": true
+        },
+        "passed": true,
+        "ratios": {
+          "pitch_rms": 0.6759999405294822,
+          "pitch_peak": 0.7874066385181837,
+          "energy_Wh": 0.950575131063403
+        },
+        "lqi_reasons": [],
+        "baseline_reasons": []
+      },
+      {
+        "case": 3,
+        "complete": true,
+        "checks": {
+          "pitch_rms": true,
+          "pitch_peak": true
+        },
+        "passed": true,
+        "ratios": {
+          "pitch_rms": 0.5539687457084224,
+          "pitch_peak": 0.42245148206588945,
+          "energy_Wh": 0.9484172437070865
+        },
+        "lqi_reasons": [],
+        "baseline_reasons": []
+      },
+      {
+        "case": 4,
+        "complete": true,
+        "checks": {
+          "pitch_rms": true,
+          "pitch_peak": true
+        },
+        "passed": true,
+        "ratios": {
+          "pitch_rms": 0.6936886006679532,
+          "pitch_peak": 0.5881077983799131,
+          "energy_Wh": 0.9317039955599032
+        },
+        "lqi_reasons": [],
+        "baseline_reasons": []
+      },
+      {
+        "case": 5,
+        "complete": true,
+        "checks": {
+          "pitch_rms": true,
+          "pitch_peak": true
+        },
+        "passed": true,
+        "ratios": {
+          "pitch_rms": 0.6600341080455441,
+          "pitch_peak": 0.7194160753382631,
+          "energy_Wh": 0.9569296811816016
+        },
+        "lqi_reasons": [],
+        "baseline_reasons": []
+      },
+      {
+        "case": "fresh-0",
+        "complete": true,
+        "checks": {
+          "pitch_rms": true,
+          "pitch_peak": true
+        },
+        "passed": true,
+        "ratios": {
+          "pitch_rms": 0.6491368473181153,
+          "pitch_peak": 0.5512437358273297,
+          "energy_Wh": 0.9549745003835749
+        },
+        "lqi_reasons": [],
+        "baseline_reasons": []
+      },
+      {
+        "case": "fresh-1",
+        "complete": true,
+        "checks": {
+          "pitch_rms": true,
+          "pitch_peak": true
+        },
+        "passed": true,
+        "ratios": {
+          "pitch_rms": 0.6561723753152224,
+          "pitch_peak": 0.5060498155812275,
+          "energy_Wh": 0.9658732764906179
+        },
+        "lqi_reasons": [],
+        "baseline_reasons": []
+      }
+    ],
+    "all_screen_pass": true,
+    "all_heldout_lqi_pass": true,
+    "all_pairs_pass": true,
+    "qualified": true
+  }
+}

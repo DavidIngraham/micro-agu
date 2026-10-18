@@ -1,5 +1,7 @@
 # Browser LQI feasible-turn release
 
+For the current firmware and longitudinal limits, see [the subsequent longitudinal release](LQI-LONGITUDINAL.md). The results below describe the preceding lateral qualification.
+
 AI-assisted implementation and validation, 2026-10-17. This is a browser simulator controller, not a qualification for flight hardware.
 
 The optional LQI controller uses a nonlinear steady-turn trim table, actuator-specific anti-windup and observer equilibrium recentering. Its feedback and observer gain matrices remain those of `responsive_softspeed`. It retains EKF airspeed, the onboard canopy observer and the as-built 132 mm physics model. No pitot or canopy truth input is enabled. PG + TECS remains the default controller.

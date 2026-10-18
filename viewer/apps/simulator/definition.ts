@@ -14,6 +14,8 @@ export const definition = {
     "wasm/sim_wasm_bg.wasm",
     "wasm/highdof.json",
     "wasm/build.json",
+    "wasm/lqi-longitudinal.patch",
+    "wasm/lqi-longitudinal-validation.json",
     "wasm/COPYING.txt",
     "wasm/RUST-NOTICES.txt",
     "simulator-sw.js",

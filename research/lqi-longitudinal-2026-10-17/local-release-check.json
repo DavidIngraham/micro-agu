@@ -1,0 +1,17 @@
+{
+  "passed": true,
+  "base": "http://127.0.0.1:4198/",
+  "checks": [
+    "mobile controls",
+    "Dryden default",
+    "parameter application",
+    "LQI flight",
+    "legacy switch",
+    "no page errors"
+  ],
+  "firmware_sha256": "fb61d7d40def58d5a4757ff7135299749436e8cdfcbb8865182820f34055f82c",
+  "viewer_unit_tests": {
+    "passed": 42,
+    "failed": 0
+  }
+}

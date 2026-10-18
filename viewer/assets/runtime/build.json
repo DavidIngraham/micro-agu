@@ -1,7 +1,7 @@
 {
   "repository": "https://github.com/DavidIngraham/ardupilot",
-  "revision": "010ada6a4f0b26910fc18ecca176d2e65c5ed9d7",
-  "source": "https://github.com/DavidIngraham/ardupilot/tree/010ada6a4f0b26910fc18ecca176d2e65c5ed9d7",
+  "revision": "20a8fb59c8c050848a5dd0b2af24eaca062f5d2a",
+  "source": "https://github.com/DavidIngraham/ardupilot/tree/20a8fb59c8c050848a5dd0b2af24eaca062f5d2a",
   "license": "GPL-3.0-or-later",
   "board": "wasm",
   "vehicle": "ArduPlane",
@@ -9,12 +9,12 @@
   "transport": "Emscripten SOCKFS local UDP peer",
   "emscripten": "6.0.8",
   "sha256": {
-    "highdof.json": "01c7127e4f83adcaf385aa02dc44f8b5fc601c6dd2f0f4ab1602dc3412fc72f6",
+    "highdof.json": "51120b5f2d21f0e5d00b0d009c6bb25c7e082a6bdb76d49a05524fec92ec34e4",
     "sim_wasm_bg.wasm.d.ts": "98b5d976e3fdeafe277b6f98d5f95079fba5b6367533ddb4f7846b0f93ff9890",
     "sim_wasm.d.ts": "f123bfc6ec889cd120e526d7d3001395d45e44a97db671d791e14264a938c3be",
     "sim_wasm_bg.wasm": "ceae58a55b4585e85b86a142a15c1f5b9bcfbf3e51f21cddbdf741ac4a75c158",
     "sim_wasm.js": "65ffd575810f57b5793b1a61477d215e316267e40ced1eb29dfe7a59e5ce4f60",
-    "arduplane.wasm": "4995915df52e4977185e2f7e1e4616118576a9883923a7398679edcf6876a49e",
+    "arduplane.wasm": "fb61d7d40def58d5a4757ff7135299749436e8cdfcbb8865182820f34055f82c",
     "arduplane.js": "893b28e3cbea410e48736d7f7426928cbe8b56f22c1813914aa290172f1e8565"
   },
   "physics_source": {
@@ -59,27 +59,29 @@
     "rustc": "rustc 1.99.0 (b940084d7 2026-09-28)",
     "wasm_bindgen": "0.2.114"
   },
-  "working_tree_dirty": true,
+  "working_tree_dirty": false,
   "controller_source_sha256": {
     "libraries/AP_CustomControl/AP_CustomControl.cpp": "23a591cd4e56c4ce44efa7a6a7653e4b282fd7e888caed0fd1b18543928de053",
     "libraries/AP_CustomControl/AP_CustomControl_LQI.cpp": "141b15cbac99aded632712ae93c3d6cabb26146ac0a813b6eae99142c8e6b505",
     "libraries/AP_CustomControl/AP_CustomControl_LQI.h": "87c470b491bef663d62bf2a78c9fb3c5105fcb92b60bd9e1a949a7c8f66e011b",
-    "libraries/AP_CustomControl/AP_CustomControl_LQI_gains.h": "870cbf6b7bf3b03e465217bc29ce66a67a2c5d46578ddebbed4d7a070dd09c72"
+    "libraries/AP_CustomControl/AP_CustomControl_LQI_gains.h": "870cbf6b7bf3b03e465217bc29ce66a67a2c5d46578ddebbed4d7a070dd09c72",
+    "ArduPlane/Parameters.h": "5d1de054aa52d33d90ff72811fbe4e58db2f0e1d0c6027e5bdf693f258a0b016",
+    "ArduPlane/servos.cpp": "58b97f9a1be93a27995b07fb559bfdefb9af01e8b0fbff78fe78ba70c15d2673"
   },
   "controller_source_patch": {
-    "path": "lqi-feasible-turns.patch",
-    "sha256": "3216f6ef2e868aec4331267b67423fa0b3ecf60c42bd81c284e61f3368fd45a9",
+    "path": "lqi-longitudinal.patch",
+    "sha256": "a5b037c74a3f9694708c32e5701f37d9ca14e073ecd85c5c17312c33a23a1722",
     "base_revision": "010ada6a4f0b26910fc18ecca176d2e65c5ed9d7",
-    "description": "AI-assisted feasible trim map, anti-windup correction and observer equilibrium recentering. Complete patch against base revision; no research telemetry."
+    "description": "Complete qualified LQI patch against base, including voltage-normalized actuator feedback; no gain or sensing changes."
   },
   "controller_reference_filter": {
     "CP3_HRTC": 0.7,
-    "climb_limit_m_s": 0.5,
-    "descent_limit_m_s": 0.5,
+    "climb_limit_m_s": 0.75,
+    "descent_limit_m_s": 1,
     "canopy_sensor": false,
     "pitot_sensor": false,
     "selected": "responsive_softspeed",
-    "validation": "Corrected lateral gust incidence; fresh Monte Carlo commands and AUTO/CRUISE missions, 2026-10-17"
+    "validation": "Longitudinal limits and voltage feedback: lqi-longitudinal-validation.json"
   },
   "controller_turn_envelope": {
     "CP3_RMAX": 35,
@@ -91,5 +93,17 @@
     "feedback_gains_unchanged": true,
     "observer_gains_unchanged": true,
     "validation": "lqi-feasible-turns-validation.json"
+  },
+  "controller_longitudinal_envelope": {
+    "CP3_HUP": 0.75,
+    "CP3_HDN": 1,
+    "CP3_HRTC": 0.7,
+    "feedback_gains_unchanged": true,
+    "observer_gains_unchanged": true,
+    "validation": "lqi-longitudinal-validation.json",
+    "candidate_cases": 14,
+    "paired_disturbance_cases": 8,
+    "nominal_climb_1_m_s_withheld": "Insufficient throttle headroom",
+    "voltage_feedback_fix": true
   }
 }

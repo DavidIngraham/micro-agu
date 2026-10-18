@@ -1,0 +1,115 @@
+{
+  "selected": "responsive_softspeed",
+  "filter_tau_s": 0.7,
+  "study": "lqi-filter-retune-2026-10-17",
+  "validation": {
+    "selected": "responsive_softspeed",
+    "accepted": true,
+    "reasons": [],
+    "comparisons": {
+      "published": {
+        "reasons": [],
+        "changes": {
+          "score": {
+            "median": -40.89350619974111,
+            "minimum": -45.66899306979748,
+            "maximum": -30.289934727933076,
+            "improved": 12
+          },
+          "energy": {
+            "median": 0.31063978255564395,
+            "minimum": -20.974612277298398,
+            "maximum": 2.337339837370389,
+            "improved": 5
+          },
+          "acquisition_time": {
+            "median": 1.1102230246251565e-14,
+            "minimum": -1.22699386503069,
+            "maximum": 1.2500000000000178,
+            "improved": 4
+          },
+          "acquisition": {
+            "median": -4.049863173586571,
+            "minimum": -16.445577873998317,
+            "maximum": 19.289760226828246,
+            "improved": 8
+          },
+          "descent": {
+            "median": -7.581072300001989,
+            "minimum": -22.226790701177677,
+            "maximum": 28.794106091493532,
+            "improved": 9
+          },
+          "updraft": {
+            "median": -47.800227159938586,
+            "minimum": -50.048683005383744,
+            "maximum": -46.57130625956879,
+            "improved": 12
+          },
+          "crosswind": {
+            "median": -80.28060318141306,
+            "minimum": -85.68076950608734,
+            "maximum": -5.039060047469491,
+            "improved": 12
+          }
+        }
+      },
+      "local": {
+        "reasons": [],
+        "changes": {
+          "score": {
+            "median": -19.65942489226543,
+            "minimum": -26.123279008573054,
+            "maximum": -15.881097397185096,
+            "improved": 12
+          },
+          "energy": {
+            "median": -5.941980692893878,
+            "minimum": -8.21973521336863,
+            "maximum": -3.876543596030324,
+            "improved": 12
+          },
+          "acquisition_time": {
+            "median": 1.2500000000000178,
+            "minimum": -2.220446049250313e-14,
+            "maximum": 1.8867924528302105,
+            "improved": 1
+          },
+          "acquisition": {
+            "median": 1.8964413122201318,
+            "minimum": -9.509264254228288,
+            "maximum": 14.22654746471177,
+            "improved": 2
+          },
+          "descent": {
+            "median": -4.362521610768666,
+            "minimum": -16.610738538825885,
+            "maximum": 13.703783346412157,
+            "improved": 8
+          },
+          "updraft": {
+            "median": -47.90649058099095,
+            "minimum": -48.86989460196425,
+            "maximum": -46.35272390638773,
+            "improved": 12
+          },
+          "crosswind": {
+            "median": -46.89573255524537,
+            "minimum": -60.146707610935245,
+            "maximum": -38.648087313530944,
+            "improved": 12
+          }
+        }
+      }
+    }
+  },
+  "weights": {
+    "pitch": 90,
+    "height": 4,
+    "integral": 12,
+    "throttle": 500,
+    "common": 3000,
+    "speed": 0.3,
+    "speed_integral": 0.3
+  }
+}

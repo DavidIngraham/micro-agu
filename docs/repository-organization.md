@@ -36,4 +36,4 @@ The retired root Python import shims are removed. Analysis callers import `micro
 
 No Git history rewrite or simulator redeployment is part of this layout change.
 
-The October 18 cleanup reduced the tracked tree from 4,281 files to 2,829 while preserving previously untracked useful study evidence. It removed 14 Python root shims and consolidated 958 nested case artifacts into eight verified evidence archives. See [validation results](../provenance/layout-validation-2026-10-18.json).
+The October 18 cleanup reduced the tracked tree from 4,281 files to 2,834 while preserving previously untracked useful study evidence. It removed 14 Python root shims and consolidated 958 nested case artifacts into eight verified evidence archives. See [validation results](../provenance/layout-validation-2026-10-18.json).

@@ -40,3 +40,5 @@ These directories retain evidence and source context, not supported command-line
 The old `scratch/` implementation snapshots are no longer in this working tree. Recover tracked content from the pre-layout tag. `tools/restore_artifacts.py` can still verify and restore the original compressed archive using that tag. The checksummed local working-tree backup also preserves formerly untracked work; its location is recorded in [the migration manifest](../../provenance/layout-migration-2026-10-18.json).
 
 Large collections of nested tuning cases are consolidated into per-study `evidence.tar.gz` archives. Each has a manifest with per-file checksums and an `ARCHIVE.md` describing restoration. Use `tools/restore_study.py`; reports and directly linked artifacts stay browsable.
+
+`legacy-browser/` retains the earlier untracked EKF/stability harnesses and filter-design artifacts formerly mixed into viewer source/runtime directories. They are historical, not current integration tests or release assets.

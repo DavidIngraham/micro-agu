@@ -86,6 +86,8 @@
     "rigging-comparison/poses/routing-throttle-truth-baseline.json": "c0b43eb01d1b41b12657f2488132f2c812a20bcc2fc6255c6494799820ffecef",
     "rigging-comparison/poses/routing-throttle-truth-direct.json": "4af33e2883a1a491e3b7405bb7267f01e30b9e27121de7a1f43120e17fcb7994",
     "rigging-comparison/poses/routing-turns-truth-baseline.json": "c36c43bd47fc3a1f16a48475067050535642c9988caac755a5f260352a9b209b",
-    "rigging-comparison/poses/routing-turns-truth-direct.json": "436b22b2ade7058eca6da2619d12a8f6963a0c42d03b26e724a7081c68d26596"
+    "rigging-comparison/poses/routing-turns-truth-direct.json": "436b22b2ade7058eca6da2619d12a8f6963a0c42d03b26e724a7081c68d26596",
+    "takeoff/launch.jsonl": "05478553796fa8eecd83b9433319c592860224b4886bc4c3563fb61927ee33fd",
+    "takeoff/provenance.json": "4ca3bc1ced3348960afd94bbe5e91647156d4ad974bb8d09de9ee0b81bc3fcd7"
   }
 }

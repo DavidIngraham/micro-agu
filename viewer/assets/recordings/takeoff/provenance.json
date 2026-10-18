@@ -1,0 +1,34 @@
+{
+  "source": "ArduPlane WASM + Rust 9-DOF, EKF enabled; recorded simulation, not flight-test data",
+  "revision": "677fc2b977e08119d27a26ebb5e299da4f53b341",
+  "command": "npx tsx tools/record/takeoff.ts",
+  "home": {
+    "lat": 45.997,
+    "lon": -121.536,
+    "alt": 600
+  },
+  "weather": {
+    "turbulenceModel": "dryden",
+    "gustLength": 20,
+    "verticalRatio": 0.5,
+    "turbulence": 0.2,
+    "thermalStrength": 1.5,
+    "thermalRadius": 60,
+    "thermalNorth": 300,
+    "thermalEast": 0,
+    "seed": 73
+  },
+  "recording_hz": 20,
+  "frames": 578,
+  "duration_s": 28.85,
+  "assisted_release_s": 5.8,
+  "auto_handoff_altitude_m": 15,
+  "limitations": "Prescribed hand motion and scalar inflation until release; no cloth dynamics.",
+  "sha256": {
+    "generated/ardupilot/arduplane.wasm": "4995915df52e4977185e2f7e1e4616118576a9883923a7398679edcf6876a49e",
+    "generated/physics/sim_wasm_bg.wasm": "ceae58a55b4585e85b86a142a15c1f5b9bcfbf3e51f21cddbdf741ac4a75c158",
+    "assets/runtime/highdof.json": "01c7127e4f83adcaf385aa02dc44f8b5fc601c6dd2f0f4ab1602dc3412fc72f6",
+    "packages/sim-browser/src/session/runtime.ts": "90c945c8651d49bcad4d43fb66c4da04fb84ee11710435e368b905ecd13fc151",
+    "launch.jsonl": "05478553796fa8eecd83b9433319c592860224b4886bc4c3563fb61927ee33fd"
+  }
+}

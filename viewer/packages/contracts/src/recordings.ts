@@ -10,7 +10,7 @@ export interface Frame {
   joint_rate_rad_s: number[];
   released: boolean;
   // Optional native-log annotations added to a replay, not inferred from motion.
-  mode?: "AUTO";
+  mode?: "MANUAL" | "TAKEOFF" | "AUTO";
   mission_item?: number;
   wind_ned_m_s?: number[];
   turbulence?: string;
@@ -38,7 +38,7 @@ export function validate(x: unknown): Frame {
       (!Number.isFinite(f.inflation) || f.inflation < 0 || f.inflation > 1)) ||
     (f.wind_ned_m_s !== undefined && !vector(f.wind_ned_m_s, 3)) ||
     (f.turbulence !== undefined && typeof f.turbulence !== "string") ||
-    (f.mode !== undefined && f.mode !== "AUTO") ||
+    (f.mode !== undefined && !["MANUAL", "TAKEOFF", "AUTO"].includes(f.mode)) ||
     (f.mission_item !== undefined &&
       (!Number.isInteger(f.mission_item) || f.mission_item < 0))
   )

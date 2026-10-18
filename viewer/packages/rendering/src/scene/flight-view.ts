@@ -129,7 +129,7 @@ export class FlightView {
   showTrail(show: boolean) {
     this.trail.visible = show;
   }
-  render(f: RenderPose, dt: number) {
+  render(f: RenderPose, dt: number, recordedRotorPhase?: number) {
     if (this.controller.signal.aborted) return;
     this.thermal.update(f.time_s);
     this.trail.record(f.time_s, f.payload.position);
@@ -144,7 +144,7 @@ export class FlightView {
       // Illustrative pressure fill only; the solver has no cloth shape state.
       this.canopy.scale.set(1, 1, 0.15 + 0.85 * (f.inflation ?? 1));
       const brakes = f.brake_mm;
-      this.phase = this.rotor.advance(f.time_s, f.rpm);
+      this.phase = recordedRotorPhase ?? this.rotor.advance(f.time_s, f.rpm);
       if (this.mechanisms)
         poseMechanisms(this.mechanisms, this.phase, brakes, [0, 0]);
       poseCanopyBrakes(this.canopy, brakes);

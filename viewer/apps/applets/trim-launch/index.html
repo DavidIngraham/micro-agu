@@ -1,1 +1,90 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Micro-AGU: inflation and passive glide</title><style>body{margin:16px;background:#0b1520;color:#edf5ff;font:16px system-ui}canvas{max-width:100%;height:auto}button,a{color:inherit;background:#345;padding:10px;border:0;margin-right:12px}input{width:280px;max-width:45vw}</style></head><body><button id="play">Pause</button><input id="time" type="range" min="0" max="18" step="0.02" value="0" aria-label="Animation time"><button id="start">Start pose</button><button id="release">Release pose</button><button id="record">Record animation</button><a id="save" hidden download="trim-launch.webm">Save video</a><span id="status">Loading CAD</span><div id="view"></div><script type="module" src="/apps/applets/trim-launch/applet.ts"></script></body></html>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>MicroAGU · Recorded takeoff</title>
+    <style>
+      body {
+        margin: 0;
+        background: #102330;
+        color: #edf5ff;
+        font: 14px system-ui;
+      }
+      header,
+      footer {
+        padding: 12px;
+      }
+      h1 {
+        font-size: 20px;
+        margin: 0 0 8px;
+      }
+      button,
+      select {
+        background: #203b49;
+        color: #edf5ff;
+        border: 1px solid #66818b;
+        border-radius: 6px;
+        padding: 8px;
+        margin: 3px;
+        min-height: 40px;
+      }
+      #transport {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 4px;
+      }
+      #time {
+        flex: 1;
+        min-width: 140px;
+      }
+      #view {
+        height: 60vh;
+        min-height: 300px;
+      }
+      canvas {
+        display: block;
+        touch-action: none;
+      }
+      #phase {
+        font-weight: 600;
+        margin: 8px 0;
+      }
+      #telemetry {
+        line-height: 1.7;
+      }
+      footer {
+        color: #b9cfd9;
+        font-size: 12px;
+      }
+      a {
+        color: #aee3ce;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Inverted launch → TAKEOFF → AUTO</h1>
+      <div id="transport"></div>
+      <div>
+        <button id="release">Release</button><button id="climb">Climb</button
+        ><button id="mission">Mission</button
+        ><button id="camera">Camera: chase</button>
+      </div>
+      <div id="phase" aria-live="polite"></div>
+      <div id="telemetry"></div>
+    </header>
+    <div id="view"></div>
+    <footer>
+      <div id="status">Loading recorded states…</div>
+      Recorded from the Rust 9-DOF simulator and ArduPlane with its EKF enabled.
+      Hand motion and inflation are assisted approximations; the climb uses real
+      TAKEOFF control. <a href="takeoff/provenance.json">Recording details</a> ·
+      <a href="simulator.html" target="_blank" rel="noopener"
+        >Fly the simulator</a
+      >
+    </footer>
+    <script type="module" src="/apps/applets/trim-launch/applet.ts"></script>
+  </body>
+</html>

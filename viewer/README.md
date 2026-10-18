@@ -17,10 +17,18 @@ simulator. Existing HTML URLs are preserved for blog embeds. Physics lives in
 | `apps/simulator` | Simulator HTML, flight controls, default home/mission, input mapping, presentation loop | Private renderer or worker state |
 | `assets` | CAD models, bounded presentation recordings, runtime configuration and pinned asset inventories | Experiment execution |
 | `generated` | Rust JS/WASM/types, ArduPilot WASM and generated MAVLink dialect | Hand edits |
-| `tools/build`, `tools/convert`, `tools/publish` | Build manifests, data conversion and verified publishing | Tuning or flight-study execution |
+| `tools/build`, `tools/convert`, `tools/record`, `tools/publish` | Build manifests, data conversion, bounded applet capture and verified publishing | Tuning or flight-study execution |
 | `../research/viewer-studies` | Recording harnesses, gusts, scenario generation and analysis | Runtime imports from the web applications |
 
 Packages are private npm workspaces with explicit exports and one lockfile.
+
+The `trim-launch.html` URL now replays the recorded inverted launch, native
+TAKEOFF climb and AUTO handoff. It uses the shared `FlightView`, pose interpolation,
+rotor phase integration and playback controls; no autopilot or physics WASM loads.
+Regenerate its 20 Hz excerpt from the packaged simulator with
+`npx tsx tools/record/takeoff.ts` from this directory, review the result, then update
+the pinned recording inventory before building/publishing. `takeoff/provenance.json`
+records the firmware/model hashes, weather seed and assisted-launch limitations.
 `npm run check:boundaries` enforces package direction; TypeScript checks every
 application, package, tool and test. There is no implicit `shared` catch-all.
 

@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "url": "http://127.0.0.1:4198/",
+  "firmware": "466d4d86263d973cc38e850b3a015146e9b98a2cd2ae369fbca7a32eeb9ab504",
+  "checks": [
+    "AUTO launch",
+    "LQI engagement",
+    "MANUAL ownership",
+    "CRUISE re-engagement",
+    "baseline handover",
+    "configured filter",
+    "no page errors"
+  ]
+}

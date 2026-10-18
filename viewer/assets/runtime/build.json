@@ -1,7 +1,7 @@
 {
   "repository": "https://github.com/DavidIngraham/ardupilot",
-  "revision": "20a8fb59c8c050848a5dd0b2af24eaca062f5d2a",
-  "source": "https://github.com/DavidIngraham/ardupilot/tree/20a8fb59c8c050848a5dd0b2af24eaca062f5d2a",
+  "revision": "5e5bba8ee1b3575e04f45d56b8c53e5e6c48ab2f",
+  "source": "https://github.com/DavidIngraham/ardupilot/tree/5e5bba8ee1b3575e04f45d56b8c53e5e6c48ab2f",
   "license": "GPL-3.0-or-later",
   "board": "wasm",
   "vehicle": "ArduPlane",
@@ -14,8 +14,9 @@
     "sim_wasm.d.ts": "f123bfc6ec889cd120e526d7d3001395d45e44a97db671d791e14264a938c3be",
     "sim_wasm_bg.wasm": "ceae58a55b4585e85b86a142a15c1f5b9bcfbf3e51f21cddbdf741ac4a75c158",
     "sim_wasm.js": "65ffd575810f57b5793b1a61477d215e316267e40ced1eb29dfe7a59e5ce4f60",
-    "arduplane.wasm": "fb61d7d40def58d5a4757ff7135299749436e8cdfcbb8865182820f34055f82c",
-    "arduplane.js": "893b28e3cbea410e48736d7f7426928cbe8b56f22c1813914aa290172f1e8565"
+    "arduplane.wasm": "466d4d86263d973cc38e850b3a015146e9b98a2cd2ae369fbca7a32eeb9ab504",
+    "arduplane.js": "893b28e3cbea410e48736d7f7426928cbe8b56f22c1813914aa290172f1e8565",
+    "lqi-gains.bin": "311876eabeb033e55c30c8d556d159495b76e8358cd25a1684c0c3b486ed97f0"
   },
   "physics_source": {
     "repository": "https://github.com/DavidIngraham/micro-agu",
@@ -62,17 +63,18 @@
   "working_tree_dirty": false,
   "controller_source_sha256": {
     "libraries/AP_CustomControl/AP_CustomControl.cpp": "23a591cd4e56c4ce44efa7a6a7653e4b282fd7e888caed0fd1b18543928de053",
-    "libraries/AP_CustomControl/AP_CustomControl_LQI.cpp": "141b15cbac99aded632712ae93c3d6cabb26146ac0a813b6eae99142c8e6b505",
-    "libraries/AP_CustomControl/AP_CustomControl_LQI.h": "87c470b491bef663d62bf2a78c9fb3c5105fcb92b60bd9e1a949a7c8f66e011b",
+    "libraries/AP_CustomControl/AP_CustomControl_LQI.cpp": "537dba53b412eed45661d5ee9e3a65f2d0c93b09281ed86701ae723aeb97853e",
+    "libraries/AP_CustomControl/AP_CustomControl_LQI.h": "c3d766291afe8ab7d0fcd40520f9dff8efd3c6f090c7cd6aa585f99e91f3bc55",
     "libraries/AP_CustomControl/AP_CustomControl_LQI_gains.h": "870cbf6b7bf3b03e465217bc29ce66a67a2c5d46578ddebbed4d7a070dd09c72",
     "ArduPlane/Parameters.h": "5d1de054aa52d33d90ff72811fbe4e58db2f0e1d0c6027e5bdf693f258a0b016",
-    "ArduPlane/servos.cpp": "58b97f9a1be93a27995b07fb559bfdefb9af01e8b0fbff78fe78ba70c15d2673"
+    "ArduPlane/servos.cpp": "58b97f9a1be93a27995b07fb559bfdefb9af01e8b0fbff78fe78ba70c15d2673",
+    "libraries/AP_CustomControl/AP_CustomControl_LQI_File.h": "fcd17fd9c1d43013858381da30f77b5de403759dcb05cc4262cec1bb663e87e1"
   },
   "controller_source_patch": {
-    "path": "lqi-longitudinal.patch",
-    "sha256": "a5b037c74a3f9694708c32e5701f37d9ca14e073ecd85c5c17312c33a23a1722",
+    "path": "lqi-file-pipeline.patch",
+    "sha256": "e123801caef232e42950427f35b2b490ad06f6bc75fc97687e24284c6cea6277",
     "base_revision": "010ada6a4f0b26910fc18ecca176d2e65c5ed9d7",
-    "description": "Complete qualified LQI patch against base, including voltage-normalized actuator feedback; no gain or sensing changes."
+    "description": "Published controller plus boot-time compatible gain-file loader."
   },
   "controller_reference_filter": {
     "CP3_HRTC": 0.7,
@@ -80,8 +82,8 @@
     "descent_limit_m_s": 1,
     "canopy_sensor": false,
     "pitot_sensor": false,
-    "selected": "responsive_softspeed",
-    "validation": "Longitudinal limits and voltage feedback: lqi-longitudinal-validation.json"
+    "selected": "refit_damped",
+    "validation": "lqi-pipeline-validation.json"
   },
   "controller_turn_envelope": {
     "CP3_RMAX": 35,
@@ -105,5 +107,13 @@
     "paired_disturbance_cases": 8,
     "nominal_climb_1_m_s_withheld": "Insufficient throttle headroom",
     "voltage_feedback_fix": true
+  },
+  "controller_gain_file": {
+    "path": "lqi-gains.bin",
+    "format": "AGULQI01",
+    "candidate": "refit_damped",
+    "selection": "Practical non-regression; no demonstrated overall improvement",
+    "observer_changed": false,
+    "physics_changed": false
   }
 }

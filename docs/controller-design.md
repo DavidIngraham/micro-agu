@@ -150,16 +150,17 @@ The small P gain is deliberate. Large heading-rate feedback excited the payload 
 
 The steering design needs enough low-frequency authority to track a turn without feeding the suspended modes. To quantify that tradeoff, I linearized the 9-DOF model at the Trout Lake straight, level trim: 1.758 kg, 4.383 m/s, 44.59% throttle, left brake released and right brake at 3.747 mm. That nonzero brake trim matters: small corrections stay on the right-brake branch rather than crossing the mixer’s change of side.
 
-The local model keeps fourteen internal states after removing global position and heading. That is a state count, not fourteen mechanical degrees of freedom. Throttle and equilibrium rotor speed are held fixed for this lateral analysis. With differential brake command `u`, heading rate `ψ̇`, and body roll rate `p`, the plant is:
+The local model keeps fourteen internal states after removing global position and heading. That is a state count, not fourteen mechanical degrees of freedom. Throttle and equilibrium rotor speed are held fixed for this lateral analysis. With differential brake command $u$, heading rate $\dot\psi$, and body roll rate $p$, the plant is:
 
-```text
-Δẋ = A Δx + B Δu
-Gψ(s) = Δψ̇/Δu = Cψ (sI − A)⁻¹ B
-Gp(s) = Δp /Δu = Cp (sI − A)⁻¹ B
-
-Gψ(0) = 98.00 deg/s per brake fraction
-Gp(0) = −13.05 deg/s per brake fraction
-```
+$$
+\begin{aligned}
+\Delta\dot{x} &= A\Delta x+B\Delta u \\
+G_\psi(s) &= \frac{\Delta\dot{\psi}}{\Delta u}=C_\psi(sI-A)^{-1}B \\
+G_p(s) &= \frac{\Delta p}{\Delta u}=C_p(sI-A)^{-1}B \\
+G_\psi(0) &= 98.00\ \text{deg/s per brake fraction} \\
+G_p(0) &= -13.05\ \text{deg/s per brake fraction}
+\end{aligned}
+$$
 
 A one-percent brake-command increment therefore produces about 0.98 deg/s of steady heading rate locally. Inverting that gain, including the speed multiplier, gives a feedforward gain of **0.00894**—almost exactly the selected 0.009. The linear plant therefore gives a physical basis for the feedforward setting, rather than leaving it as an empirical gain.
 
@@ -171,25 +172,24 @@ A one-percent brake-command increment therefore produces about 0.98 deg/s of ste
 
 At fixed speed scaling, below the command and actuator limits, the implemented controller becomes:
 
-```text
-e(s) = r(s) − H(s) ψ̇(s)
-u(s) = S K_FF r(s) + [S K_P + K_I/s] e(s) − S K_RD H(s) p(s)
+$$
+\begin{aligned}
+e(s) &= r(s)-H(s)\dot{\psi}(s) \\
+u(s) &= SK_{\mathrm{FF}}r(s)+\left(SK_P+\frac{K_I}{s}\right)e(s)-SK_{\mathrm{RD}}H(s)p(s) \\
+K_{\mathrm{FF}} &= 0.009,\quad K_P=0.005,\quad K_I=0.002,\quad K_{\mathrm{RD}}=0.003 \\
+S &= \frac{5}{4.383}=1.1408 \\
+H(s) &= \frac{25.133}{s+25.133}\quad\text{(4 Hz measurement filter)} \\
+r(s) &= \frac{r_{\mathrm{requested}}(s)}{0.1s+1}\quad\text{(command limits inactive)} \\
+L(s) &= H(s)\left[\left(SK_P+\frac{K_I}{s}\right)G_\psi(s)+SK_{\mathrm{RD}}G_p(s)\right] \\
+\frac{\dot{\psi}(s)}{r_{\mathrm{requested}}(s)} &= \frac{G_\psi(s)\left[S(K_{\mathrm{FF}}+K_P)+K_I/s\right]}{(1+L(s))(0.1s+1)}
+\end{aligned}
+$$
 
-K_FF = 0.009; K_P = 0.005; K_I = 0.002; K_RD = 0.003
-S = 5 / 4.383 = 1.1408
-H(s) = 25.133 / (s + 25.133)       [4 Hz measurement filter]
-r(s) = r_requested(s) / (0.1s + 1) [when command limits are inactive]
-
-L(s) = H(s){[S K_P + K_I/s] Gψ(s) + S K_RD Gp(s)}
-ψ̇(s)/r_requested(s) = Gψ(s)[S(K_FF + K_P) + K_I/s]
-                       / {(1 + L(s))(0.1s + 1)}
-```
-
-The integrator is not speed-scaled. Feedforward affects command response but does not move the feedback poles. Also, body roll rate is not zero in every steady banked turn: `p = φ̇ − ψ̇ sinθ`. Roll-rate damping therefore supplies a small steady-turn correction as well as opposing oscillation.
+The integrator is not speed-scaled. Feedforward affects command response but does not move the feedback poles. Also, body roll rate is not zero in every steady banked turn: $p=\dot\phi-\dot\psi\sin\theta$. Roll-rate damping therefore supplies a small steady-turn correction as well as opposing oscillation.
 
 ### Poles, zeros and the feedback-gain limit
 
-The selected gains are locally stable, but the original larger feedback gains are unstable in this model. With the selected gains, a lightly damped pair sits at `−0.986 ± j15.969 s⁻¹`: about 2.54 Hz, with damping ratio 0.062. Scaling all feedback gains together reaches instability at **1.524 times nominal**, a gain margin of **3.66 dB**. Increasing heading-rate P alone reaches the boundary near 0.00791, with I and roll damping held fixed.
+The selected gains are locally stable, but the original larger feedback gains are unstable in this model. With the selected gains, a lightly damped pair sits at $(-0.986\pm j15.969)\,\mathrm{s}^{-1}$: about 2.54 Hz, with damping ratio 0.062. Scaling all feedback gains together reaches instability at **1.524 times nominal**, a gain margin of **3.66 dB**. Increasing heading-rate P alone reaches the boundary near 0.00791, with I and roll damping held fixed.
 
 ![Root locus annotated with physical mode participation and combined-loop zeros](../research/flight-log-analysis/figures/turn-model-spike/classical-lateral/annotated-root-locus.png)
 
@@ -197,7 +197,7 @@ The selected gains are locally stable, but the original larger feedback gains ar
 
 The slow oscillatory plant mode mixes pitch and forward speed at about 0.34 Hz. Another mixes sideways velocity and canopy yaw around 0.59 Hz; the fastest pair is predominantly relative canopy/payload roll at 5.86 Hz. Feedback changes these coupled motions rather than merely adding damping to a single isolated roll mode.
 
-Zeros need a different interpretation: they describe cancellation in an input–output response, not another natural motion. The combined loop has a right-half-plane zero pair at `+6.944 ± j19.054 s⁻¹`. The individual heading-rate and roll-rate plants have different zeros, so those cannot be substituted as endpoints of this root locus. The output-specific maps below show the distinction. These are properties of the modeled plant, not modes or zeros identified directly from flight.
+Zeros need a different interpretation: they describe cancellation in an input–output response, not another natural motion. The combined loop has a right-half-plane zero pair at $(6.944\pm j19.054)\,\mathrm{s}^{-1}$. The individual heading-rate and roll-rate plants have different zeros, so those cannot be substituted as endpoints of this root locus. The output-specific maps below show the distinction. These are properties of the modeled plant, not modes or zeros identified directly from flight.
 
 ![Heading-rate and roll-rate plant poles and zeros](../research/flight-log-analysis/figures/turn-model-spike/classical-lateral/plant-zero-map.png)
 
@@ -205,11 +205,12 @@ Zeros need a different interpretation: they describe cancellation in an input–
 
 The filter comparison keeps every gain and model coefficient fixed and changes only measurement filtering. It compares six filters across level flight, climb and descent at ±0.5 m/s, and level turns at ±10 deg/s. Two candidates stood out: lowering the existing low-pass cutoff from 4 to 1 Hz, and adding a broad notch at 2.5 Hz.
 
-```text
-1 Hz candidate: H₁(s) = 6.283 / (s + 6.283)
-Notch candidate: H_N(s) = H(s) (s² + 6.283s + 246.740)
-                              / (s² + 21.991s + 246.740)
-```
+$$
+\begin{aligned}
+H_1(s) &= \frac{6.283}{s+6.283}\quad\text{(1 Hz candidate)} \\
+H_N(s) &= H(s)\frac{s^2+6.283s+246.740}{s^2+21.991s+246.740}\quad\text{(notch candidate)}
+\end{aligned}
+$$
 
 Both retain unity DC gain. Feedforward bypasses the measurement filters, so reducing feedback near the troublesome modes need not make every turn command sluggish.
 

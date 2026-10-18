@@ -46,17 +46,20 @@ Navigation still encodes its request as bank, but bank is no longer the feedback
 
 The measured heading rate comes from the payload gyro and attitude:
 
-```text
-heading_rate = (q sinφ + r cosφ) / cosθ
-error = shaped_heading_rate_target − filtered_heading_rate
+$$
+\begin{aligned}
+\dot{\psi} &= \frac{q\sin\phi+r\cos\phi}{\cos\theta} \\
+e &= \dot{\psi}_{\mathrm{target,shaped}}-\dot{\psi}_{\mathrm{filtered}} \\
+u &= \operatorname{clip}\!\left[S_v\left(0.009\dot{\psi}_{\mathrm{target,shaped}}+0.005e-0.003p_{\mathrm{filtered}}\right)+I,-1,+1\right] \\
+\dot{I} &= 0.002e,\qquad |I|\leq 0.15
+\end{aligned}
+$$
 
-u = clip[Sᵥ (0.009 × target + 0.005 × error − 0.003 × filtered_roll_rate) + I, −1, +1]
-İ = 0.002 × error, with |I| ≤ 0.15 and conditional integration at output saturation
-```
+The integral uses conditional integration at output saturation.
 
-Rates here are in degrees per second. Both measured rates pass through 4 Hz low-pass filters. The airspeed multiplier is `Sᵥ = clamp(5 / max(Vair, 2), 0.25, 2.5)` for this configuration. The integral term is not multiplied by that scale. The normalized output passes through ArduPlane's brake mixer and servo mapping.
+Rates here are in degrees per second. Both measured rates pass through 4 Hz low-pass filters. The airspeed multiplier is $S_v=\operatorname{clamp}\!\left(5/\max(V_{\mathrm{air}},2),0.25,2.5\right)$ for this configuration. The integral term is not multiplied by that scale. The normalized output passes through ArduPlane's brake mixer and servo mapping.
 
-Here `p` is body-axis roll rate measured by the payload gyro. It is only approximately the Euler bank-angle rate `φ̇` near level attitude. In general, `φ̇ = p + (q sinφ + r cosφ) tanθ`. The damping path uses `p`, not that Euler-angle derivative. Its gain is labeled `K_RD`, alongside `K_FF`, `K_P`, and `K_I`; the separate `Sᵥ` block applies airspeed scaling.
+Here $p$ is body-axis roll rate measured by the payload gyro. It is only approximately the Euler bank-angle rate $\dot\phi$ near level attitude. In general, $\dot\phi=p+(q\sin\phi+r\cos\phi)\tan\theta$. The damping path uses $p$, not that Euler-angle derivative. Its gain is labeled $K_{\mathrm{RD}}$, alongside $K_{\mathrm{FF}}$, $K_P$, and $K_I$; the separate $S_v$ block applies airspeed scaling.
 This separates three jobs: feedforward supplies the expected brake input, heading-rate PI corrects tracking and trim error, and roll-rate feedback damps rocking. There is no roll-angle holding loop inside it. Heading-acceleration feedforward remains available in the implementation but is zero in this candidate.
 
 #### A mission that tracks without the repeated rocking
@@ -75,16 +78,17 @@ The progression is now clearer to me: the angle-controller workaround got the ai
 
 After getting the native mission controller to fly a much calmer route, I wanted to understand how much stability margin remained. I linearized the 9-DOF model at the Trout Lake straight, level trim: 1.758 kg, 4.383 m/s, 44.59% throttle, left brake released and right brake at 3.747 mm. That nonzero brake trim matters: small corrections stay on the right-brake branch rather than crossing the mixer’s change of side.
 
-The local model keeps fourteen internal states after removing global position and heading. That is a state count, not fourteen mechanical degrees of freedom. Throttle and equilibrium rotor speed are held fixed for this lateral analysis. With differential brake command `u`, heading rate `ψ̇`, and body roll rate `p`, the plant is:
+The local model keeps fourteen internal states after removing global position and heading. That is a state count, not fourteen mechanical degrees of freedom. Throttle and equilibrium rotor speed are held fixed for this lateral analysis. With differential brake command $u$, heading rate $\dot\psi$, and body roll rate $p$, the plant is:
 
-```text
-Δẋ = A Δx + B Δu
-Gψ(s) = Δψ̇/Δu = Cψ (sI − A)⁻¹ B
-Gp(s) = Δp /Δu = Cp (sI − A)⁻¹ B
-
-Gψ(0) = 98.00 deg/s per brake fraction
-Gp(0) = −13.05 deg/s per brake fraction
-```
+$$
+\begin{aligned}
+\Delta\dot{x} &= A\Delta x+B\Delta u \\
+G_\psi(s) &= \frac{\Delta\dot{\psi}}{\Delta u}=C_\psi(sI-A)^{-1}B \\
+G_p(s) &= \frac{\Delta p}{\Delta u}=C_p(sI-A)^{-1}B \\
+G_\psi(0) &= 98.00\ \text{deg/s per brake fraction} \\
+G_p(0) &= -13.05\ \text{deg/s per brake fraction}
+\end{aligned}
+$$
 
 A one-percent brake-command increment therefore produces about 0.98 deg/s of steady heading rate locally. Inverting that gain, including the speed multiplier, gives a feedforward gain of **0.00894**—almost exactly the 0.009 selected in the preceding nonlinear study.
 
@@ -96,25 +100,24 @@ A one-percent brake-command increment therefore produces about 0.98 deg/s of ste
 
 At fixed speed scaling, below the command and actuator limits, the implemented controller becomes:
 
-```text
-e(s) = r(s) − H(s) ψ̇(s)
-u(s) = S K_FF r(s) + [S K_P + K_I/s] e(s) − S K_RD H(s) p(s)
+$$
+\begin{aligned}
+e(s) &= r(s)-H(s)\dot{\psi}(s) \\
+u(s) &= SK_{\mathrm{FF}}r(s)+\left(SK_P+\frac{K_I}{s}\right)e(s)-SK_{\mathrm{RD}}H(s)p(s) \\
+K_{\mathrm{FF}} &= 0.009,\quad K_P=0.005,\quad K_I=0.002,\quad K_{\mathrm{RD}}=0.003 \\
+S &= \frac{5}{4.383}=1.1408 \\
+H(s) &= \frac{25.133}{s+25.133}\quad\text{(4 Hz measurement filter)} \\
+r(s) &= \frac{r_{\mathrm{requested}}(s)}{0.1s+1}\quad\text{(command limits inactive)} \\
+L(s) &= H(s)\left[\left(SK_P+\frac{K_I}{s}\right)G_\psi(s)+SK_{\mathrm{RD}}G_p(s)\right] \\
+\frac{\dot{\psi}(s)}{r_{\mathrm{requested}}(s)} &= \frac{G_\psi(s)\left[S(K_{\mathrm{FF}}+K_P)+K_I/s\right]}{(1+L(s))(0.1s+1)}
+\end{aligned}
+$$
 
-K_FF = 0.009; K_P = 0.005; K_I = 0.002; K_RD = 0.003
-S = 5 / 4.383 = 1.1408
-H(s) = 25.133 / (s + 25.133)       [4 Hz measurement filter]
-r(s) = r_requested(s) / (0.1s + 1) [when command limits are inactive]
-
-L(s) = H(s){[S K_P + K_I/s] Gψ(s) + S K_RD Gp(s)}
-ψ̇(s)/r_requested(s) = Gψ(s)[S(K_FF + K_P) + K_I/s]
-                       / {(1 + L(s))(0.1s + 1)}
-```
-
-The integrator is not speed-scaled. Feedforward affects command response but does not move the feedback poles. Also, body roll rate is not zero in every steady banked turn: `p = φ̇ − ψ̇ sinθ`. Roll-rate damping therefore supplies a small steady-turn correction as well as opposing oscillation.
+The integrator is not speed-scaled. Feedforward affects command response but does not move the feedback poles. Also, body roll rate is not zero in every steady banked turn: $p=\dot\phi-\dot\psi\sin\theta$. Roll-rate damping therefore supplies a small steady-turn correction as well as opposing oscillation.
 
 #### The poles explain why more P was not helping
 
-The selected gains are locally stable, but the original larger feedback gains are unstable in this model. With the selected gains, a lightly damped pair sits at `−0.986 ± j15.969 s⁻¹`: about 2.54 Hz, with damping ratio 0.062. Scaling all feedback gains together reaches instability at **1.524 times nominal**, a gain margin of **3.66 dB**. Increasing heading-rate P alone reaches the boundary near 0.00791, with I and roll damping held fixed.
+The selected gains are locally stable, but the original larger feedback gains are unstable in this model. With the selected gains, a lightly damped pair sits at $(-0.986\pm j15.969)\,\mathrm{s}^{-1}$: about 2.54 Hz, with damping ratio 0.062. Scaling all feedback gains together reaches instability at **1.524 times nominal**, a gain margin of **3.66 dB**. Increasing heading-rate P alone reaches the boundary near 0.00791, with I and roll damping held fixed.
 
 ![Root locus annotated with physical mode participation and combined-loop zeros](../research/flight-log-analysis/figures/turn-model-spike/classical-lateral/annotated-root-locus.png)
 
@@ -122,17 +125,18 @@ The selected gains are locally stable, but the original larger feedback gains ar
 
 The slow oscillatory plant mode mixes pitch and forward speed at about 0.34 Hz. Another mixes sideways velocity and canopy yaw around 0.59 Hz; the fastest pair is predominantly relative canopy/payload roll at 5.86 Hz. Feedback changes these coupled motions rather than merely adding damping to a single isolated roll mode.
 
-Zeros need a different interpretation: they describe cancellation in an input–output response, not another natural motion. The combined loop has a right-half-plane zero pair at `+6.944 ± j19.054 s⁻¹`. The individual heading-rate and roll-rate plants have different zeros, so those cannot be substituted as endpoints of this root locus. [The separate pole–zero maps](../research/flight-log-analysis/figures/turn-model-spike/classical-lateral/plant-zero-map.png) show all of them. These are properties of the modeled plant, not modes or zeros identified directly from flight.
+Zeros need a different interpretation: they describe cancellation in an input–output response, not another natural motion. The combined loop has a right-half-plane zero pair at $(6.944\pm j19.054)\,\mathrm{s}^{-1}$. The individual heading-rate and roll-rate plants have different zeros, so those cannot be substituted as endpoints of this root locus. [The separate pole–zero maps](../research/flight-log-analysis/figures/turn-model-spike/classical-lateral/plant-zero-map.png) show all of them. These are properties of the modeled plant, not modes or zeros identified directly from flight.
 
 ### Less feedback at the troublesome frequencies
 
 The next experiment kept every gain and model coefficient fixed and changed only measurement filtering. I compared six filters across level flight, climb and descent at ±0.5 m/s, and level turns at ±10 deg/s. Two candidates stood out: lowering the existing low-pass cutoff from 4 to 1 Hz, and adding a broad notch at 2.5 Hz.
 
-```text
-1 Hz candidate: H₁(s) = 6.283 / (s + 6.283)
-Notch candidate: H_N(s) = H(s) (s² + 6.283s + 246.740)
-                              / (s² + 21.991s + 246.740)
-```
+$$
+\begin{aligned}
+H_1(s) &= \frac{6.283}{s+6.283}\quad\text{(1 Hz candidate)} \\
+H_N(s) &= H(s)\frac{s^2+6.283s+246.740}{s^2+21.991s+246.740}\quad\text{(notch candidate)}
+\end{aligned}
+$$
 
 Both retain unity DC gain. Feedforward bypasses the measurement filters, so reducing feedback near the troublesome modes need not make every turn command sluggish.
 
@@ -252,9 +256,11 @@ A sharp pitch transient remained when the climb command returned to neutral. Nat
 
 I added a first-order smoother to that derivative:
 
-```text
-filtered_rate += dt / (dt + time_constant) × (raw_rate − filtered_rate)
-```
+$$
+\begin{aligned}
+v_{h,\mathrm{filtered},k+1} &= v_{h,\mathrm{filtered},k}+\frac{\Delta t}{\Delta t+\tau}\left(v_{h,\mathrm{raw},k}-v_{h,\mathrm{filtered},k}\right)
+\end{aligned}
+$$
 
 The selected time constant is 0.5 seconds. Height feedback and trajectory slew limits stay unchanged. `TECS_PG_HR_TC` defaults to zero, preserving the previous behavior unless explicitly enabled.
 

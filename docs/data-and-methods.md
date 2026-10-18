@@ -186,7 +186,7 @@ Before taking on an observer, I asked us to try controllers that could read the 
 
 ### First, test whether joint-state feedback helps
 
-We first kept TECS and added canopy/payload rate feedback ahead of motor lag, working through 44 trials. A useful correction was approximately `Δthrottle = -0.56 q_canopy + 0.16 q_payload`, with rates in rad/s. In a matched faster-TECS case, payload pitch-rate RMS fell from 4.69 to 2.95 deg/s. Relative-rate information supplied most of the benefit; matched payload-only feedback achieved 5.02 deg/s. This reduced oscillation but did not demonstrate a large usable bandwidth increase.
+We first kept TECS and added canopy/payload rate feedback ahead of motor lag, working through 44 trials. A useful correction was approximately $\Delta u_{\mathrm{throttle}}=-0.56q_{\mathrm{canopy}}+0.16q_{\mathrm{payload}}$, with rates in rad/s. In a matched faster-TECS case, payload pitch-rate RMS fell from 4.69 to 2.95 deg/s. Relative-rate information supplied most of the benefit; matched payload-only feedback achieved 5.02 deg/s. This reduced oscillation but did not demonstrate a large usable bandwidth increase.
 
 I then asked us to try a controller update that treated the longitudinal system more directly. We tested integrated longitudinal control in a subsequent 21-trial study. Strong direct-throttle LQI gains became unstable with actuator timing/slew. The final conservative prototype commands throttle rate at 50 Hz, including motor lag, command state, saturation and conditional integral antiwindup. Its states include payload pitch, relative angle/rate, payload rate, air-relative velocity, motor throttle, previous command and climb-error integral.
 
@@ -227,26 +227,30 @@ Finally, I wanted to revisit the free-body diagram. If this eventually needs to 
 
 ![Normalized force balance and observer equations](../scratch/paraglider-tests/pitch-joint/diagrams/normalized-observer-fbd.png)
 
-Let `R` be suspension force on the payload, `T` forward thrust, `Dp` payload aerodynamic force, and `fp = ap - g` payload-CG specific force. Define `τ = T/mp`, `dp = Dp/mp`, `κp = Ip/mp`, `κc = Ic/mp`, and `ma = Ma/mp`. Vectors `a` and `b(δ)` run from the hinge to payload and canopy CG in one frame; `zT` is the signed thrust moment arm using the diagram convention.
+Let $\mathbf R$ be suspension force on the payload, $T$ forward thrust, $\mathbf D_p$ payload aerodynamic force, and $\mathbf f_p=\mathbf a_p-\mathbf g$ payload-CG specific force. Define $\tau=T/m_p$, $\mathbf d_p=\mathbf D_p/m_p$, $\kappa_p=I_p/m_p$, $\kappa_c=I_c/m_p$, and $m_a=M_a/m_p$. Vectors $\mathbf a$ and $\mathbf b(\delta)$ run from the hinge to payload and canopy CG in one frame; $z_T$ is the signed thrust moment arm using the diagram convention.
 
 The payload force balance yields:
 
-```text
-R/mp = fp - τ ex - dp
-```
+$$
+\begin{aligned}
+\frac{\mathbf R}{m_p} &= \mathbf f_p-\tau\mathbf e_x-\mathbf d_p
+\end{aligned}
+$$
 
 Adding payload and canopy pitch equations cancels their equal-and-opposite internal hinge torque:
 
-```text
-κc q̇c + κp q̇p = [(b-a) × (fp-τ ex-dp)]y + zT τ + ma
-s = κc qc + κp qp
-ṡ = [(b-a) × (fp-τ ex-dp)]y + zT τ + ma
-qrel = (s-κp qp)/κc - qp
-```
+$$
+\begin{aligned}
+\kappa_c\dot q_c+\kappa_p\dot q_p &= \left[(\mathbf b-\mathbf a)\times(\mathbf f_p-\tau\mathbf e_x-\mathbf d_p)\right]_y+z_T\tau+m_a \\
+s &= \kappa_c q_c+\kappa_p q_p \\
+\dot s &= \left[(\mathbf b-\mathbf a)\times(\mathbf f_p-\tau\mathbf e_x-\mathbf d_p)\right]_y+z_T\tau+m_a \\
+q_{\mathrm{rel}} &= \frac{s-\kappa_p q_p}{\kappa_c}-q_p
+\end{aligned}
+$$
 
-This removes the explicit joint stiffness/damping law from the summed momentum propagation and replaces canopy lift/drag force modeling with measured suspension loading. Uniform gravity cancels when translation is eliminated. Absolute mass can be reduced to inertia/mass ratios; `κc = (mc/mp) kc²` if `kc` is canopy radius of gyration. Scaling lengths by a reference suspension length and time by `sqrt(L/g)` improves numerical conditioning.
+This removes the explicit joint stiffness/damping law from the summed momentum propagation and replaces canopy lift/drag force modeling with measured suspension loading. Uniform gravity cancels when translation is eliminated. Absolute mass can be reduced to inertia/mass ratios; $\kappa_c=(m_c/m_p)k_c^2$ if $k_c$ is canopy radius of gyration. Scaling lengths by a reference suspension length and time by $\sqrt{L/g}$ improves numerical conditioning.
 
-**The external canopy pitching moment `Ma` does not cancel.** Geometry, inertia ratios, thrust-per-mass/moment arm, payload drag and residual canopy moment still require modeling. Integrating the summed momentum without measurement correction drifts; this cancellation is not a complete observer and does not solve initial-state identifiability. That suggested benchmarking an uncertainty-aware relative-rate observer against simulation truth, then test control with confidence-dependent limits and recorded flight data. Those experiments gave me a reason to pursue relative-rate feedback, but left open how reliably I could estimate absolute canopy angle or protect the wing at the bandwidth I wanted. Before adding that complexity to native control, I returned to the existing loops in the improved simulator.
+**The external canopy pitching moment $M_a$ does not cancel.** Geometry, inertia ratios, thrust-per-mass/moment arm, payload drag and residual canopy moment still require modeling. Integrating the summed momentum without measurement correction drifts; this cancellation is not a complete observer and does not solve initial-state identifiability. That suggested benchmarking an uncertainty-aware relative-rate observer against simulation truth, then test control with confidence-dependent limits and recorded flight data. Those experiments gave me a reason to pursue relative-rate feedback, but left open how reliably I could estimate absolute canopy angle or protect the wing at the bandwidth I wanted. Before adding that complexity to native control, I returned to the existing loops in the improved simulator.
 
 
 ### Calm-air baseline and voltage-study record

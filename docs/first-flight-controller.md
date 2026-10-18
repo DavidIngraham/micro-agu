@@ -24,24 +24,25 @@ I started by breaking ArduPlane's roll controller into its individual paths. It 
 
 A conventional airplane roll controller has two nested loops. Bank-angle error creates a requested roll rate, then a rate controller drives the ailerons. For my parafoil, the output instead goes through the brake mixer. Differential braking produces a turn and the associated bank, so I wanted a simple angular correction rather than an inner loop tuned around aileron-driven roll dynamics.
 
-Let φ_cmd be commanded bank, φ be measured bank, τ be `RLL2SRV_TCONST`, and K_FF be `RLL_RATE_FF`. Ignoring the target filter and limits for the moment, ArduPlane's outer loop computes:
+Let $\phi_{\mathrm{cmd}}$ be commanded bank, $\phi$ be measured bank, $\tau$ be `RLL2SRV_TCONST`, and $K_{\mathrm{FF}}$ be `RLL_RATE_FF`. Ignoring the target filter and limits for the moment, ArduPlane's outer loop computes:
 
-```text
-e_φ   = φ_cmd − φ
-p_cmd = e_φ / τ
-```
+$$
+\begin{aligned}
+e_\phi &= \phi_{\mathrm{cmd}}-\phi \\
+p_{\mathrm{cmd}} &= \frac{e_\phi}{\tau}
+\end{aligned}
+$$
 
 The rate feed-forward term is proportional to that requested rate. With rate P, I, D, and derivative feed-forward set to zero, it is the only active rate-controller contribution:
 
-```text
-u = K_FF p_cmd
-  = (K_FF / τ) (φ_cmd − φ)
-  = K_φ e_φ
+$$
+\begin{aligned}
+u &= K_{\mathrm{FF}}p_{\mathrm{cmd}} = \frac{K_{\mathrm{FF}}}{\tau}(\phi_{\mathrm{cmd}}-\phi) = K_\phi e_\phi \\
+K_\phi &= \frac{K_{\mathrm{FF}}}{\tau}
+\end{aligned}
+$$
 
-K_φ = K_FF / τ
-```
-
-**The rate feed-forward gain becomes a proportional bank-angle gain.** It is feed-forward with respect to the inner rate loop, but the complete loop still feeds back measured bank angle. There is no integration hidden in the cancellation: the requested rate is just angle error multiplied by 1/τ. Measured roll rate no longer contributes when its feedback gains are zero.
+**The rate feed-forward gain becomes a proportional bank-angle gain.** It is feed-forward with respect to the inner rate loop, but the complete loop still feeds back measured bank angle. There is no integration hidden in the cancellation: the requested rate is just angle error multiplied by $1/\tau$. Measured roll rate no longer contributes when its feedback gains are zero.
 
 ![Flight-tested angle-control workaround using rate feedforward](assets/control-loops/flight-angle-workaround.png)
 
@@ -49,20 +50,19 @@ K_φ = K_FF / τ
 
 ### Including ArduPilot's speed scaling
 
-The implementation scales the PID inputs and rescales feed-forward on the way out. Let S be the supplied speed scaler, E be the true/equivalent airspeed ratio (`EAS2TAS`), and F be the feed-forward multiplier (`ff_scale`, normally 1). With angles expressed in degrees:
+The implementation scales the PID inputs and rescales feed-forward on the way out. Let $S$ be the supplied speed scaler, $E$ be the true/equivalent airspeed ratio (`EAS2TAS`), and $F$ be the feed-forward multiplier (`ff_scale`, normally 1). With angles expressed in degrees:
 
-```text
-PID target = radians(p_cmd) S²
-PID FF     = K_FF radians(p_cmd) S²
+$$
+\begin{aligned}
+\text{PID target} &= \operatorname{radians}(p_{\mathrm{cmd}})S^2 \\
+\text{PID FF} &= K_{\mathrm{FF}}\operatorname{radians}(p_{\mathrm{cmd}})S^2 \\
+u_{\mathrm{FF}} &= \operatorname{degrees}\!\left(\frac{F\,\text{PID FF}}{SE}\right) \\
+&= F K_{\mathrm{FF}}\frac{S}{E}p_{\mathrm{cmd}} = \frac{F K_{\mathrm{FF}}S}{E\tau}(\phi_{\mathrm{cmd}}-\phi) \\
+K_\phi &= \frac{F K_{\mathrm{FF}}S}{E\tau}
+\end{aligned}
+$$
 
-u_FF = degrees(F × PID FF / (S E))
-     = F K_FF (S / E) p_cmd
-     = [F K_FF S / (E τ)] (φ_cmd − φ)
-
-Effective angle gain: K_φ = F K_FF S / (E τ)
-```
-
-The radians/degrees conversions cancel, as does one factor of S. The nominal speed scaler is reference speed divided by estimated airspeed; the actual supplied scaler includes ArduPlane's bounds and fallback behavior. At fixed scaling, feed-forward is still simply an angle gain. The final controller output is converted to centidegrees, limited to ±4500, and passed to the mixer—these are controller units, not measured degrees of brake travel.
+The radians/degrees conversions cancel, as does one factor of $S$. The nominal speed scaler is reference speed divided by estimated airspeed; the actual supplied scaler includes ArduPlane's bounds and fallback behavior. At fixed scaling, feed-forward is still simply an angle gain. The final controller output is converted to centidegrees, limited to ±4500, and passed to the mixer—these are controller units, not measured degrees of brake travel.
 
 The Hood River log records the configuration that implements this idea:
 
@@ -75,59 +75,68 @@ The Hood River log records the configuration that implements this idea:
 | `RLL2SRV_RMAX` | 0 | Disables the requested-rate limit |
 | `RLL_RATE_FLTT` | 3 Hz | Filters the rate target before feed-forward |
 
-For example, with S = E = F = 1, a 10° bank error produces a 10°/s rate request and a feed-forward output of 3.45 controller degrees, or 345 centidegrees. Changing FF changes the angular correction directly; halving τ doubles it.
+For example, with $S=E=F=1$, a 10° bank error produces a 10°/s rate request and a feed-forward output of 3.45 controller degrees, or 345 centidegrees. Changing FF changes the angular correction directly; halving $\tau$ doubles it.
 
-The 3 Hz target filter means the dynamic implementation is a filtered angle controller. At constant speed scaling, with H_T(s) representing that filter:
+The 3 Hz target filter means the dynamic implementation is a filtered angle controller. At constant speed scaling, with $H_T(s)$ representing that filter:
 
-```text
-u_FF(s) = K_φ H_T(s) [φ_cmd(s) − φ(s)]
-```
+$$
+\begin{aligned}
+u_{\mathrm{FF}}(s) &= K_\phi H_T(s)\bigl[\phi_{\mathrm{cmd}}(s)-\phi(s)\bigr]
+\end{aligned}
+$$
 
 ### Where damping fits
 
 I also worked through how I could add damping using the derivative feed-forward path. If derivative feed-forward is enabled, it differentiates the requested rate—which already contains bank-angle error. At fixed scaling, its contribution reduces to:
 
-```text
-u_DFF = [F K_DFF S / (E τ)] d(φ_cmd − φ)/dt
-```
+$$
+\begin{aligned}
+u_{\mathrm{DFF}} &= \frac{F K_{\mathrm{DFF}}S}{E\tau}\frac{d(\phi_{\mathrm{cmd}}-\phi)}{dt}
+\end{aligned}
+$$
 
 For a steady bank command this becomes a negative bank-rate term, supplying damping. During a changing command it also reacts to the commanded bank rate. This is different from the inner rate-P term, which acts on requested minus measured body roll rate. I left D_FF at zero for the January flight, but this gave me a way to add damping to the same basic structure.
 
 ArduPlane's navigation still supplies the bank command from desired lateral acceleration:
 
-```text
-φ_cmd = atan(a_lat_cmd / g)
-```
+$$
+\begin{aligned}
+\phi_{\mathrm{cmd}} &= \arctan\!\left(\frac{a_{\mathrm{lat,cmd}}}{g}\right)
+\end{aligned}
+$$
 
 ### Why this was close to the yaw-rate controller I wanted
 
-The other part of the idea was the relationship between bank and turn rate. For a steady coordinated turn at airspeed V, heading rate ω is:
+The other part of the idea was the relationship between bank and turn rate. For a steady coordinated turn at airspeed $V$, heading rate $\omega$ is:
 
-```text
-ω = (g / V) tan(φ)
-```
+$$
+\begin{aligned}
+\omega &= \frac{g}{V}\tan\phi
+\end{aligned}
+$$
 
-At small bank angles, tan(φ) ≈ φ, with φ in radians. At fixed speed, the commanded and actual bank angles therefore give:
+At small bank angles, $\tan\phi\approx\phi$, with $\phi$ in radians. At fixed speed, the commanded and actual bank angles therefore give:
 
-```text
-ω_cmd ≈ (g / V) φ_cmd
-ω     ≈ (g / V) φ
-
-φ_cmd − φ ≈ (V / g) (ω_cmd − ω)
-```
+$$
+\begin{aligned}
+\omega_{\mathrm{cmd}} &\approx \frac{g}{V}\phi_{\mathrm{cmd}} \\
+\omega &\approx \frac{g}{V}\phi \\
+\phi_{\mathrm{cmd}}-\phi &\approx \frac{V}{g}(\omega_{\mathrm{cmd}}-\omega)
+\end{aligned}
+$$
 
 Substituting that into the angle controller gives:
 
-```text
-u ≈ K_φ (V / g) (ω_cmd − ω)
-  = K_ω (ω_cmd − ω)
-
-K_ω = K_φ V / g
-```
+$$
+\begin{aligned}
+u &\approx K_\phi\frac{V}{g}(\omega_{\mathrm{cmd}}-\omega) = K_\omega(\omega_{\mathrm{cmd}}-\omega) \\
+K_\omega &= \frac{K_\phi V}{g}
+\end{aligned}
+$$
 
 That was the useful discovery: **under the steady-turn approximation, the angle loop is mathematically equivalent to a proportional turn-rate loop with a rescaled gain.** I could use the bank-angle demand already produced by navigation, adjust the existing gains, and get something close to the yaw-rate behavior I had set out to implement.
 
-Here ω means heading rate, the rate of turning in the horizontal plane. It is the navigation quantity I wanted to control; it is not generally identical to the body-axis yaw gyro reading. The equivalence uses steady coordinated motion and fixed speed. Around a larger steady bank angle φ₀, the local conversion becomes K_ω = K_φ V cos²(φ₀) / g.
+Here $\omega$ means heading rate, the rate of turning in the horizontal plane. It is the navigation quantity I wanted to control; it is not generally identical to the body-axis yaw gyro reading. The equivalence uses steady coordinated motion and fixed speed. Around a larger steady bank angle $\phi_0$, the local conversion becomes $K_\omega=K_\phi V\cos^2(\phi_0)/g$.
 
 ## What TECS normally controls
 
@@ -252,10 +261,14 @@ Early at Trout Lake I raised maximum throttle to 65% and trim to 50%, then broug
 
 In the paraglider TECS implementation, trim is the zero-climb baseline. Requested climb or descent interpolates throttle toward its upper or lower bound:
 
-```text
-Climbing:   throttle_ff = trim + (climb_demand / climb_limit) × (max − trim)
-Descending: throttle_ff = trim + (climb_demand / sink_limit) × (trim − min)
-```
+$$
+\begin{aligned}
+u_{\mathrm{ff}} &= \begin{cases}u_{\mathrm{trim}}+\dfrac{\dot{h}_{\mathrm{cmd}}}{\dot{h}_{\mathrm{climb,max}}}(u_{\max}-u_{\mathrm{trim}}), & \text{climbing}, \\
+u_{\mathrm{trim}}+\dfrac{\dot{h}_{\mathrm{cmd}}}{\dot{h}_{\mathrm{sink,max}}}(u_{\mathrm{trim}}-u_{\min}), & \text{descending}.\end{cases}
+\end{aligned}
+$$
+
+Here $u$ denotes throttle and $\dot h_{\mathrm{cmd}}$ is the signed climb demand; the climb and sink limits are positive magnitudes.
 
 The limits therefore set feed-forward slopes as well as bounding the requested vertical speed. P and I correct the remaining climb-rate error. That baseline tuning was separate from the pitch damper, which responded to angular motion.
 

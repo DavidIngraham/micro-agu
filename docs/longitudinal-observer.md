@@ -112,10 +112,14 @@ Early at Trout Lake I raised maximum throttle to 65% and trim to 50%, then broug
 
 In the paraglider TECS implementation, trim is the zero-climb baseline. Requested climb or descent interpolates throttle toward its upper or lower bound:
 
-```text
-Climbing:   throttle_ff = trim + (climb_demand / climb_limit) × (max − trim)
-Descending: throttle_ff = trim + (climb_demand / sink_limit) × (trim − min)
-```
+$$
+\begin{aligned}
+u_{\mathrm{ff}} &= \begin{cases}u_{\mathrm{trim}}+\dfrac{\dot{h}_{\mathrm{cmd}}}{\dot{h}_{\mathrm{climb,max}}}(u_{\max}-u_{\mathrm{trim}}), & \text{climbing}, \\
+u_{\mathrm{trim}}+\dfrac{\dot{h}_{\mathrm{cmd}}}{\dot{h}_{\mathrm{sink,max}}}(u_{\mathrm{trim}}-u_{\min}), & \text{descending}.\end{cases}
+\end{aligned}
+$$
+
+Here $u$ denotes throttle and $\dot h_{\mathrm{cmd}}$ is the signed climb demand; the climb and sink limits are positive magnitudes.
 
 The limits therefore set feed-forward slopes as well as bounding the requested vertical speed. P and I correct the remaining climb-rate error. That baseline tuning was separate from the pitch damper, which responded to angular motion.
 

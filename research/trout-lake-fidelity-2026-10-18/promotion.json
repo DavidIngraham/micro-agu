@@ -1,0 +1,7 @@
+{
+  "status": "provisional_research_candidate",
+  "short_window_gates_passed": true,
+  "production_promotion": false,
+  "reason": "Continuous 90 s score worsens by 22.2% in one reserved block and 1.5% on average. Several fitted parameters are near bounds. Investigate slow course/speed drift before production promotion or controller retuning.",
+  "candidate_parameters": "candidate-parameters.json"
+}

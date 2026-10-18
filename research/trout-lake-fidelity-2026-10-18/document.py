@@ -1,0 +1,118 @@
+"""Build the study report from saved results, without refitting."""
+
+import json
+from pathlib import Path
+
+OUT = Path(__file__).resolve().parent
+read = lambda name: json.loads((OUT / name).read_text())
+s = read("summary.json")
+choice = read("selection.json")
+audit = read("audit.json")
+rows = read("checks.json")
+table = "| Candidate | Mean score change | Worst window | Improved windows | Lateral ratio | Longitudinal ratio | Fast-rate ratio | Gates |\n|---|---:|---:|---:|---:|---:|---:|---|\n"
+for name in ["zero-only", "physics"]:
+    r = s[name]
+    table += f"| {name} | {100 * (r['mean_ratio'] - 1):+.1f}% | {100 * (max(r['window_ratios']) - 1):+.1f}% | {r['improved_windows']}/9 | {r['group_ratios'][0]:.3f} | {r['group_ratios'][1]:.3f} | {r['group_ratios'][2]:.3f} | {'PASS' if r['passed'] else 'FAIL'} |\n"
+metrics = "| RMSE channel | Baseline | Selected | Unit |\n|---|---:|---:|---|\n"
+import numpy as np
+
+for key, unit in zip(
+    [
+        "slow_bank",
+        "slow_yaw_rate",
+        "course",
+        "slow_pitch",
+        "slow_climb",
+        "slow_speed",
+        "fast_roll_rate",
+        "fast_pitch_rate",
+        "fast_yaw_rate",
+    ],
+    ["deg", "deg/s", "deg", "deg", "m/s", "m/s", "deg/s", "deg/s", "deg/s"],
+):
+    vals = [
+        np.mean(
+            [
+                r["metrics"][key]
+                for r in rows
+                if r["family"] == fam and r["alpha"] == 0.35
+            ]
+        )
+        for fam in ["baseline", s["selected_family"]]
+    ]
+    metrics += f"| {key} | {vals[0]:.3f} | {vals[1]:.3f} | {unit} |\n"
+params = "| Parameter | Selected value |\n|---|---:|\n"
+for key, value in zip(read("protocol.json")["names"], choice["primary"]["theta"]):
+    params += f"| `{key}` | {value:.6g} |\n"
+text = f"""# Trout Lake primary fidelity study, 2026-10-18
+
+The primary candidate selected using training data alone is **{s["selected_family"]}**. Its frozen 30-second Trout Lake validation gates **{"pass" if s["selected_passed"] else "fail"}**. **It remains provisional because continuous 90-second replays expose a regression.** No production preset, browser runtime, or controller gain was changed by this study.
+
+## Scope and split
+
+Trout Lake is the primary target because it offers more data and is closer to the intended aircraft. The historical configuration remains **1.758 kg total mass and 132 mm riser spacing**, with its own payload inertia, CG-relative attachment/thrust locations, and mass-scaled yaw stiffness. This is not a fit for the planned 185 mm spreader. Full source configurations are in `configurations.json`.
+
+Training blocks: 660–750, 1140–1230, 1740–1830, 2520–2610 s. Reserved validation blocks: 1440–1530, 2100–2190, 2760–2850 s. Each block is divided into three independently initialized 30-second replays for fitting and primary validation. Separate 90-second continuous replays test sensitivity to that reset interval. No training replay overlaps a validation block; there are substantial time gaps between blocks.
+
+All data come from the same February flight and were potentially examined during prior project research. These are reserved blocks for this fit, **not independent flight validation**. Training includes bank angles up to 32.5 degrees; reserved blocks reach only 17.9 degrees. A good result cannot qualify aggressive turns or the whole LQI envelope. Input-groundspeed minima exceed 1.8 m/s, so observed course is not being inferred near zero ground speed.
+
+## Candidate families and fixed protocol
+
+The zero-only family fits two Trout Lake brake-zero offsets, bounded to ±3 mm. The physics family additionally fits aft aerodynamic application-point shift, residual brake yaw coefficient, roll stiffness, pitch/yaw damping, and brake lift/drag coefficients. Outboard redistribution stays disabled following the previous study. Mass, inertia, geometry, propulsion, initial wind, and baseline aerodynamic terms remain fixed.
+
+Two prescribed starts use bounded Powell search, with budgets of 120 evaluations per start for zero-only and 240 for physics. `optimizer-status.json` records convergence and budget exhaustion; a budget-limited fit is not proof of optimality or identifiable physical parameters. The lowest regularized training score across both families is selected **before validation runs**. Validation does not choose the winning family or retune it.
+
+The 0.7 Hz low-pass loss separates slower lateral and longitudinal motion from faster body-rate residuals. Lateral/longitudinal/fast groups carry 40/40/20% weights. Nine RMSE channels and their physical scales match the previous coupled-brake experiment, but the objective averages each training window's score relative to its own baseline, avoiding domination by the highest-error windows. Small regularization penalizes brake offsets and coefficient scale departures. Two seconds at each replay edge are excluded from the loss. Predicted velocity is transformed to the IMU point. Course is unwrapped.
+
+Frozen gates require at least 5% mean score improvement, no window more than 15% worse, no mean group more than 5% worse, improvement in at least six of nine windows, and at least 5% mean improvement at each initial canopy angle (0.25, 0.35, 0.45 rad). Hood River is diagnostic only and is not an acceptance gate. These metrics assess recorded-input prediction, not controller stability or flightworthiness.
+
+## Primary results
+
+{table}
+
+Ratios are relative to each window's baseline. They quantify this weighted score, not percentages of physical error. Nominal initial-angle mean RMSEs, averaged over nine validation windows:
+
+{metrics}
+
+![Reserved-window validation](validation.png)
+
+## Duration and numerical checks
+
+For the selected candidate, continuous 90-second replays have mean score ratio **{audit["long_mean_ratio"]:.3f}**, worst ratio **{audit["long_worst_ratio"]:.3f}**, over three blocks and three canopy initializations. These are post-selection robustness diagnostics; they do not select another candidate. All trajectories finite: **{audit["all_finite"]}**. Doubling integration substeps from 32 to 64 on the first validation window changes any reported RMSE by at most **{audit["integration_max_metric_delta"]:.3g}** in its channel's units.
+
+![Continuous validation](long-replays.png)
+
+## Decision and remaining weakness
+
+Retain this as a **provisional Trout Lake calibration candidate**, not a production replacement. The primary 30-second gates pass, and all four older Trout Lake check windows improve (about 9%, 13%, 13%, and 22% at 840, 1350, 2400, and 2910 s). However, the final continuous 90-second block is about 22% worse, leaving the three-block average about 1.5% worse. Passing the short-window gates does not remove that concern.
+
+At 2760 s, continuous-replay course RMSE grows from 48.1 to 78.1 degrees and groundspeed RMSE from 0.809 to 1.393 m/s, even while bank/yaw-rate errors improve. This localizes the remaining weakness to accumulated trajectory and speed error, rather than a general loss of local turning fidelity. Wind and voltage are held fixed at each replay start; errors in those assumptions can matter more over 90 seconds. This does not establish the cause of the drift.
+
+Both physics searches hit their evaluation budgets. Several selected parameters are at or near their bounds: left brake zero +3 mm, roll stiffness ×1.495, pitch/yaw damping approximately ×0.50, and brake lift ×0.705. The numerical improvement is real on these reserved blocks, but these values should not be treated as uniquely measured physical properties.
+
+The next step is to separate slow drift due to input/environment assumptions from static model errors, then include multiple replay horizons in a new fit. Previously used validation blocks must be identified as reused evidence. No LQI retuning or browser-model promotion should be based solely on the present short-window pass.
+
+## Selected parameters
+
+{params}
+
+Offsets are changes from the existing Trout Lake calibration, not measured line slack. Scale values multiply the current as-built profile. Damping, effective brake coefficients, and application-point shifts remain conditional model estimates; a good trajectory fit alone does not uniquely identify them.
+
+## Hood River transfer
+
+Trout Lake brake-zero corrections are **not** applied to Hood River; its existing calibration and its own 1.385 kg mass/inertia/CG remain. The fitted physics changes transfer as a diagnostic. Relative scores for starts 360, 600, 720, 1020, and the 438 s powered-turn replay are recorded in `summary.json` and `transfer.json`. Hood River regression does not veto a Trout Lake improvement, but limits claims of a generally calibrated mass-dependent model.
+
+## Reproduction
+
+From the repository root, using the installed Rust Python binding:
+
+```sh
+simulation/.venv/bin/python research/trout-lake-fidelity-2026-10-18/run.py
+simulation/.venv/bin/python research/trout-lake-fidelity-2026-10-18/audit.py
+python research/trout-lake-fidelity-2026-10-18/plot.py
+python research/trout-lake-fidelity-2026-10-18/document.py
+```
+
+NumPy/SciPy are required for analysis; Matplotlib for plotting. Set `MICROAGU_REPLAY_DATA` to the historical replay inputs if necessary. Protocol, input/source hashes, optimizer trace, selections, and metrics are versioned. Large replay arrays are generated locally and ignored. The production controller and browser remain unchanged pending acceptance and any required downstream validation.
+"""
+(OUT / "README.md").write_text(text)

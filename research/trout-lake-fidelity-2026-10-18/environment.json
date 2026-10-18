@@ -1,0 +1,7 @@
+{
+  "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+  "numpy": "2.5.4",
+  "scipy": "1.18.1",
+  "native_extension_sha256": "55000fafb4c8836d3684376474402ccbac971c5faeb9badddce33319ba6afb7e",
+  "source_commit": "4d60b7e74440ed0c43e4377465e11d0a4d367500"
+}

@@ -1,0 +1,6 @@
+{
+  "research/trout-lake-fidelity-2026-10-18/run.py": "19314085d3d14172c2a82d1557ceef243767b046095305a3d3145bb19274c51a",
+  "research/trout-lake-fidelity-2026-10-18/audit.py": "44bdaad4493fbd28cba5af402de3c587689d27a75e83029b238f7c42b2530463",
+  "simulation/crates/sim-core/src/dynamics.rs": "e6ebe50183d31429621b3aae945a297dd0de03676bc07f77fb2c38cae2b17653",
+  "simulation/crates/sim-core/src/config.rs": "804e0bdfe8cd2e631d7e807d23414ef84899952479e82f5c749d89b94398d4ae"
+}

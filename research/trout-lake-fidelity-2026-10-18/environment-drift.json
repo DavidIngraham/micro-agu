@@ -1,0 +1,44 @@
+[
+  {
+    "start": 1440,
+    "voltage_start": 22.469999313354492,
+    "voltage_range": [
+      22.209999084472656,
+      22.65999984741211
+    ],
+    "stored_replay_wind_start": [
+      0.1,
+      0.086,
+      0.0
+    ],
+    "max_stored_replay_wind_change_mps": 0.0
+  },
+  {
+    "start": 2100,
+    "voltage_start": 21.829999923706055,
+    "voltage_range": [
+      21.5,
+      21.90999984741211
+    ],
+    "stored_replay_wind_start": [
+      0.1,
+      0.086,
+      0.0
+    ],
+    "max_stored_replay_wind_change_mps": 0.0
+  },
+  {
+    "start": 2760,
+    "voltage_start": 20.670000076293945,
+    "voltage_range": [
+      20.579999923706055,
+      21.15999984741211
+    ],
+    "stored_replay_wind_start": [
+      0.217,
+      -1.139,
+      0.0
+    ],
+    "max_stored_replay_wind_change_mps": 0.0
+  }
+]

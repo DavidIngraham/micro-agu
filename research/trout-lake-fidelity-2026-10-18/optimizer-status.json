@@ -1,0 +1,30 @@
+[
+  {
+    "family": "zero-only",
+    "seed": 0,
+    "success": true,
+    "message": "Optimization terminated successfully.",
+    "nfev": 74
+  },
+  {
+    "family": "zero-only",
+    "seed": 1,
+    "success": true,
+    "message": "Optimization terminated successfully.",
+    "nfev": 94
+  },
+  {
+    "family": "physics",
+    "seed": 0,
+    "success": false,
+    "message": "Maximum number of function evaluations has been exceeded.",
+    "nfev": 240
+  },
+  {
+    "family": "physics",
+    "seed": 1,
+    "success": false,
+    "message": "Maximum number of function evaluations has been exceeded.",
+    "nfev": 240
+  }
+]

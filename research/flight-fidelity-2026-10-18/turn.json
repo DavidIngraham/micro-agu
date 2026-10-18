@@ -1,0 +1,326 @@
+[
+  {
+    "flight": "hood_river",
+    "start": 438,
+    "stage": "baseline",
+    "candidate": "baseline",
+    "alpha": 0.25,
+    "finite": true,
+    "metrics": {
+      "all": {
+        "roll_rate": 15.966619821546368,
+        "pitch_rate": 26.099556109934444,
+        "yaw_rate": 37.343273372287456,
+        "bank": 11.903725652335229,
+        "course": 74.6360365223238,
+        "climb": 0.29629299401091674
+      },
+      "settled": {
+        "roll_rate": 15.937324088166587,
+        "pitch_rate": 26.57390543518116,
+        "yaw_rate": 38.43767835995393,
+        "bank": 12.314904003100592,
+        "course": 77.22285040674365,
+        "climb": 0.2953946923631164
+      },
+      "late": {
+        "roll_rate": 18.090945087325263,
+        "pitch_rate": 30.587309285087592,
+        "yaw_rate": 43.45848137348313,
+        "bank": 14.338353286299654,
+        "course": 90.52884096777863,
+        "climb": 0.30867947181698085
+      },
+      "turn": {
+        "roll_rate": 18.714743871265725,
+        "pitch_rate": 36.97692521038938,
+        "yaw_rate": 43.75000456885115,
+        "bank": 18.76601051235723,
+        "course": 83.64576581193282,
+        "climb": 0.3660703241688497
+      }
+    },
+    "turn_summary": {
+      "model": {
+        "peak_abs_bank_deg": 18.428394554028888,
+        "course_rotation_deg": 141.9933244673072,
+        "mean_climb_mps": 0.16257797239082694
+      },
+      "flight": {
+        "peak_abs_bank_deg": 47.691890716552734,
+        "course_rotation_deg": 443.9232157323312,
+        "mean_climb_mps": 0.2848599211333527
+      }
+    }
+  },
+  {
+    "flight": "hood_river",
+    "start": 438,
+    "stage": "baseline",
+    "candidate": "baseline",
+    "alpha": 0.35,
+    "finite": true,
+    "metrics": {
+      "all": {
+        "roll_rate": 16.35658172443093,
+        "pitch_rate": 27.12989535481035,
+        "yaw_rate": 37.42214250731958,
+        "bank": 11.900713552945003,
+        "course": 74.82662891324367,
+        "climb": 0.2914445571009899
+      },
+      "settled": {
+        "roll_rate": 15.9371540436994,
+        "pitch_rate": 26.5541571728952,
+        "yaw_rate": 38.433275408921,
+        "bank": 12.311291668783642,
+        "course": 77.42148880359416,
+        "climb": 0.2918909763976607
+      },
+      "late": {
+        "roll_rate": 18.091069019025305,
+        "pitch_rate": 30.585942939824907,
+        "yaw_rate": 43.456818971667616,
+        "bank": 14.335073656698787,
+        "course": 90.74019440368684,
+        "climb": 0.308485122793472
+      },
+      "turn": {
+        "roll_rate": 18.714479459694104,
+        "pitch_rate": 36.97301069514836,
+        "yaw_rate": 43.74339003985141,
+        "bank": 18.760587756080074,
+        "course": 83.73067379754302,
+        "climb": 0.3656390754503226
+      }
+    },
+    "turn_summary": {
+      "model": {
+        "peak_abs_bank_deg": 18.437298676228565,
+        "course_rotation_deg": 141.8726679315993,
+        "mean_climb_mps": 0.1623548203564038
+      },
+      "flight": {
+        "peak_abs_bank_deg": 47.691890716552734,
+        "course_rotation_deg": 443.9232157323312,
+        "mean_climb_mps": 0.2848599211333527
+      }
+    }
+  },
+  {
+    "flight": "hood_river",
+    "start": 438,
+    "stage": "baseline",
+    "candidate": "baseline",
+    "alpha": 0.45,
+    "finite": true,
+    "metrics": {
+      "all": {
+        "roll_rate": 16.922061522789917,
+        "pitch_rate": 29.043143437944497,
+        "yaw_rate": 37.60446420948548,
+        "bank": 11.89769460060796,
+        "course": 75.15310400182472,
+        "climb": 0.28818899368524364
+      },
+      "settled": {
+        "roll_rate": 15.937428129921333,
+        "pitch_rate": 26.5481497851906,
+        "yaw_rate": 38.429089921646955,
+        "bank": 12.306656198907648,
+        "course": 77.7598816293605,
+        "climb": 0.28934089474342733
+      },
+      "late": {
+        "roll_rate": 18.091211634280015,
+        "pitch_rate": 30.58430639291924,
+        "yaw_rate": 43.45467002244119,
+        "bank": 14.330839793466296,
+        "course": 91.09357147440745,
+        "climb": 0.30832658114494554
+      },
+      "turn": {
+        "roll_rate": 18.71422827685607,
+        "pitch_rate": 36.96899606791339,
+        "yaw_rate": 43.735729416106345,
+        "bank": 18.75322626218375,
+        "course": 83.8715051988019,
+        "climb": 0.36530129547280904
+      }
+    },
+    "turn_summary": {
+      "model": {
+        "peak_abs_bank_deg": 18.448823817045973,
+        "course_rotation_deg": 141.6469397032186,
+        "mean_climb_mps": 0.16216802151842027
+      },
+      "flight": {
+        "peak_abs_bank_deg": 47.691890716552734,
+        "course_rotation_deg": 443.9232157323312,
+        "mean_climb_mps": 0.2848599211333527
+      }
+    }
+  },
+  {
+    "flight": "hood_river",
+    "start": 438,
+    "stage": "selected",
+    "candidate": "CDbrake_x1.5",
+    "alpha": 0.25,
+    "finite": true,
+    "metrics": {
+      "all": {
+        "roll_rate": 15.720671501014326,
+        "pitch_rate": 25.164316214613333,
+        "yaw_rate": 36.41650113528696,
+        "bank": 10.358676542194889,
+        "course": 95.94971659787896,
+        "climb": 0.29648714054872133
+      },
+      "settled": {
+        "roll_rate": 15.671082075126115,
+        "pitch_rate": 25.591744171769115,
+        "yaw_rate": 37.476370510266406,
+        "bank": 10.715361259745361,
+        "course": 99.2921401034806,
+        "climb": 0.2958314758282433
+      },
+      "late": {
+        "roll_rate": 17.77617139214467,
+        "pitch_rate": 29.39831361830115,
+        "yaw_rate": 42.30089319762591,
+        "bank": 12.456909990341241,
+        "course": 116.76052277674944,
+        "climb": 0.30986389265455266
+      },
+      "turn": {
+        "roll_rate": 18.136943316942215,
+        "pitch_rate": 34.81230348622906,
+        "yaw_rate": 41.59280278247093,
+        "bank": 16.109515642127146,
+        "course": 93.77845897419641,
+        "climb": 0.3660106459283192
+      }
+    },
+    "turn_summary": {
+      "model": {
+        "peak_abs_bank_deg": 23.54837431198362,
+        "course_rotation_deg": 169.74248914232328,
+        "mean_climb_mps": 0.1449027154574322
+      },
+      "flight": {
+        "peak_abs_bank_deg": 47.691890716552734,
+        "course_rotation_deg": 443.9232157323312,
+        "mean_climb_mps": 0.2848599211333527
+      }
+    }
+  },
+  {
+    "flight": "hood_river",
+    "start": 438,
+    "stage": "selected",
+    "candidate": "CDbrake_x1.5",
+    "alpha": 0.35,
+    "finite": true,
+    "metrics": {
+      "all": {
+        "roll_rate": 16.11791184179498,
+        "pitch_rate": 26.221671076912955,
+        "yaw_rate": 36.49749970416611,
+        "bank": 10.355762998935875,
+        "course": 96.19986036718063,
+        "climb": 0.29176037663822196
+      },
+      "settled": {
+        "roll_rate": 15.670929665138596,
+        "pitch_rate": 25.57205385155118,
+        "yaw_rate": 37.47257745132105,
+        "bank": 10.71178696987568,
+        "course": 99.55196971891132,
+        "climb": 0.29239087064328434
+      },
+      "late": {
+        "roll_rate": 17.77627585327848,
+        "pitch_rate": 29.396559076095816,
+        "yaw_rate": 42.2995241759155,
+        "bank": 12.453705815961454,
+        "course": 117.04474102512397,
+        "climb": 0.3096768011972114
+      },
+      "turn": {
+        "roll_rate": 18.136606644560317,
+        "pitch_rate": 34.80755338048623,
+        "yaw_rate": 41.5869668189968,
+        "bank": 16.10411474028487,
+        "course": 93.90667749347571,
+        "climb": 0.3656023116309907
+      }
+    },
+    "turn_summary": {
+      "model": {
+        "peak_abs_bank_deg": 23.55758986876783,
+        "course_rotation_deg": 169.624417118809,
+        "mean_climb_mps": 0.14468219011635816
+      },
+      "flight": {
+        "peak_abs_bank_deg": 47.691890716552734,
+        "course_rotation_deg": 443.9232157323312,
+        "mean_climb_mps": 0.2848599211333527
+      }
+    }
+  },
+  {
+    "flight": "hood_river",
+    "start": 438,
+    "stage": "selected",
+    "candidate": "CDbrake_x1.5",
+    "alpha": 0.45,
+    "finite": true,
+    "metrics": {
+      "all": {
+        "roll_rate": 16.692949901135176,
+        "pitch_rate": 28.18163354720045,
+        "yaw_rate": 36.683862448271896,
+        "bank": 10.353095269589977,
+        "course": 96.60569212923765,
+        "climb": 0.28859243355115255
+      },
+      "settled": {
+        "roll_rate": 15.671241737072092,
+        "pitch_rate": 25.56621006914492,
+        "yaw_rate": 37.469126523127414,
+        "bank": 10.707348101603223,
+        "course": 99.97226966867913,
+        "climb": 0.28988208895124695
+      },
+      "late": {
+        "roll_rate": 17.77641064598142,
+        "pitch_rate": 29.39440798213131,
+        "yaw_rate": 42.29777748726053,
+        "bank": 12.449659521065588,
+        "course": 117.49966229460217,
+        "climb": 0.30952158322872253
+      },
+      "turn": {
+        "roll_rate": 18.136304568061675,
+        "pitch_rate": 34.802435154997184,
+        "yaw_rate": 41.58030524415527,
+        "bank": 16.09691192096048,
+        "course": 94.11564302762396,
+        "climb": 0.36527566392289373
+      }
+    },
+    "turn_summary": {
+      "model": {
+        "peak_abs_bank_deg": 23.569422665237038,
+        "course_rotation_deg": 169.4192148564432,
+        "mean_climb_mps": 0.14449536222553194
+      },
+      "flight": {
+        "peak_abs_bank_deg": 47.691890716552734,
+        "course_rotation_deg": 443.9232157323312,
+        "mean_climb_mps": 0.2848599211333527
+      }
+    }
+  }
+]

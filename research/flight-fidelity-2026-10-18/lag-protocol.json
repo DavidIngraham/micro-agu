@@ -1,0 +1,72 @@
+{
+  "candidates": {
+    "baseline": {},
+    "yaw0_lag0.15": {
+      "set": {
+        "Cndelta": 0
+      },
+      "response_tau_s": 0.15
+    },
+    "yaw0_lag0.4": {
+      "set": {
+        "Cndelta": 0
+      },
+      "response_tau_s": 0.4
+    },
+    "yaw0.01_lag0": {
+      "set": {
+        "Cndelta": 0.01
+      },
+      "response_tau_s": 0
+    },
+    "yaw0.01_lag0.15": {
+      "set": {
+        "Cndelta": 0.01
+      },
+      "response_tau_s": 0.15
+    },
+    "yaw0.01_lag0.4": {
+      "set": {
+        "Cndelta": 0.01
+      },
+      "response_tau_s": 0.4
+    },
+    "yaw0.02_lag0": {
+      "set": {
+        "Cndelta": 0.02
+      },
+      "response_tau_s": 0
+    },
+    "yaw0.02_lag0.15": {
+      "set": {
+        "Cndelta": 0.02
+      },
+      "response_tau_s": 0.15
+    },
+    "yaw0.02_lag0.4": {
+      "set": {
+        "Cndelta": 0.02
+      },
+      "response_tau_s": 0.4
+    },
+    "yaw0.03_lag0": {
+      "set": {
+        "Cndelta": 0.03
+      },
+      "response_tau_s": 0
+    },
+    "yaw0.03_lag0.15": {
+      "set": {
+        "Cndelta": 0.03
+      },
+      "response_tau_s": 0.15
+    },
+    "yaw0.03_lag0.4": {
+      "set": {
+        "Cndelta": 0.03
+      },
+      "response_tau_s": 0.4
+    }
+  },
+  "purpose": "Explore a combined steering-authority and brake-response hypothesis after examining the first screen; no fresh validation or promotion claim."
+}

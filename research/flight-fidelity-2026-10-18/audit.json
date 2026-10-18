@@ -1,0 +1,14 @@
+{
+  "historical_baseline_max_absolute_metric_difference": 3.886668764607748e-12,
+  "32_vs_64_substeps_max_turn_metric_difference": 3.823306826689077e-08,
+  "input_hashes_match": true,
+  "all_finite": true,
+  "replays": 354,
+  "git_revision": "feb45dff3f2d082004cdb7b14b0617c4189650d3",
+  "code_hashes": {
+    "/home/david/repos/micro-agu/simulation/.venv/lib/python3.12/site-packages/microagu_sim/_native.abi3.so": "07a65d13cc2f100a66f2bd6623eed5168c3f4120bf1b691c612466326293a1c6",
+    "/home/david/repos/micro-agu/simulation/.venv/lib/python3.12/site-packages/microagu_sim/compat/profiles.py": "4b4d5b624d0f00f3481898e50c1aad947283846cffe6d12aeae2ae1b0d409486",
+    "/home/david/repos/micro-agu/simulation/.venv/lib/python3.12/site-packages/microagu_sim/compat/dynamics.py": "6da5c7b88ea3f25b1efd67fd7ebff48b643afffd863a1a3f09f589ddc798558f",
+    "/home/david/repos/micro-agu/research/flight-fidelity-2026-10-18/run.py": "0114d1050b03264ae966a6d7e96bf43150cb88fe3ac2d1a08449962d1296ef1d"
+  }
+}

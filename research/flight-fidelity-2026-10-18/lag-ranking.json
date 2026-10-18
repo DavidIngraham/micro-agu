@@ -1,0 +1,110 @@
+[
+  {
+    "candidate": "yaw0_lag0.15",
+    "mean_score": 0.9932344733377758,
+    "turn": {
+      "peak_abs_bank_deg": 18.137609240439925,
+      "course_rotation_deg": 143.95295875041106,
+      "mean_climb_mps": 0.1642028714084293
+    }
+  },
+  {
+    "candidate": "baseline",
+    "mean_score": 1.0,
+    "turn": {
+      "peak_abs_bank_deg": 18.437298676228565,
+      "course_rotation_deg": 141.8726679315993,
+      "mean_climb_mps": 0.1623548203564038
+    }
+  },
+  {
+    "candidate": "yaw0.01_lag0.15",
+    "mean_score": 1.0026483460178226,
+    "turn": {
+      "peak_abs_bank_deg": 34.476665092343225,
+      "course_rotation_deg": 248.99049691798754,
+      "mean_climb_mps": 0.1289906748267791
+    }
+  },
+  {
+    "candidate": "yaw0.01_lag0",
+    "mean_score": 1.0198040735958442,
+    "turn": {
+      "peak_abs_bank_deg": 34.74404277009131,
+      "course_rotation_deg": 243.79599667441866,
+      "mean_climb_mps": 0.12802714905128335
+    }
+  },
+  {
+    "candidate": "yaw0_lag0.4",
+    "mean_score": 1.0282121148359848,
+    "turn": {
+      "peak_abs_bank_deg": 17.332011497087134,
+      "course_rotation_deg": 146.95385332824492,
+      "mean_climb_mps": 0.1669740367373025
+    }
+  },
+  {
+    "candidate": "yaw0.01_lag0.4",
+    "mean_score": 1.0404797646099064,
+    "turn": {
+      "peak_abs_bank_deg": 33.56631464060032,
+      "course_rotation_deg": 258.96673651709494,
+      "mean_climb_mps": 0.13007173870469238
+    }
+  },
+  {
+    "candidate": "yaw0.02_lag0.15",
+    "mean_score": 1.1308208204355112,
+    "turn": {
+      "peak_abs_bank_deg": 46.688411879660244,
+      "course_rotation_deg": 372.69329920488406,
+      "mean_climb_mps": 0.043332914635802
+    }
+  },
+  {
+    "candidate": "yaw0.02_lag0",
+    "mean_score": 1.1501190880895642,
+    "turn": {
+      "peak_abs_bank_deg": 46.85766792841621,
+      "course_rotation_deg": 365.33575603954085,
+      "mean_climb_mps": 0.04480042983521096
+    }
+  },
+  {
+    "candidate": "yaw0.02_lag0.4",
+    "mean_score": 1.173796673837579,
+    "turn": {
+      "peak_abs_bank_deg": 46.07309409708182,
+      "course_rotation_deg": 387.3265679704516,
+      "mean_climb_mps": 0.04090229850557456
+    }
+  },
+  {
+    "candidate": "yaw0.03_lag0.4",
+    "mean_score": 1.3167836406673654,
+    "turn": {
+      "peak_abs_bank_deg": 47.69527938221146,
+      "course_rotation_deg": 457.8788795852149,
+      "mean_climb_mps": -0.13240767608788528
+    }
+  },
+  {
+    "candidate": "yaw0.03_lag0.15",
+    "mean_score": 1.4205337823949122,
+    "turn": {
+      "peak_abs_bank_deg": 47.8949434581881,
+      "course_rotation_deg": 435.1216689930426,
+      "mean_climb_mps": -0.12449188424652101
+    }
+  },
+  {
+    "candidate": "yaw0.03_lag0",
+    "mean_score": 1.4617534540488046,
+    "turn": {
+      "peak_abs_bank_deg": 47.998516251278005,
+      "course_rotation_deg": 424.6442106018711,
+      "mean_climb_mps": -0.11965578900313188
+    }
+  }
+]

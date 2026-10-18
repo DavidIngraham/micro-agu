@@ -264,11 +264,18 @@ Standard TECS coordinates total energy and its distribution between height and a
 
 The outer loop adds an altitude-error correction to the altitude trajectory's rate of change:
 
-![Requested climb rate equals trajectory rate plus altitude error divided by the height time constant](assets/control-loops/tecs-height.png)
+$$
+v_{z,c}=\dot h_c+\frac{h_c-h}{T_h}
+$$
 
 The climb demand is bounded. Throttle feedforward estimates the required power, PI feedback corrects climb-rate error, and filtered payload pitch rate supplies a separate damping correction:
 
-![Throttle law with feedforward, proportional, integral and pitch-rate damping terms](assets/control-loops/tecs-throttle.png)
+$$
+\begin{aligned}
+u_T &= u_{\mathrm{FF}}(v_{z,c})+K_Pe_v \\
+&\quad+K_I\int e_v\,dt-K_qF_q(s)q_{\mathrm{payload}}
+\end{aligned}
+$$
 
 ### Calibrate feedforward before increasing feedback
 
@@ -295,7 +302,9 @@ The later simulation reproduced the distinction the flight had exposed: the imme
 
 The sign-comparison and altitude-command animations below show that result directly. The useful design retained negative pitch-rate feedback but reduced its action around the troublesome fast modes with two 1.5 Hz first-order low-pass stages:
 
-![Pitch damping uses gain −0.1 and two cascaded 1.5 Hz filters](assets/control-loops/tecs-damper.png)
+$$
+\Delta u_T(s)=-0.1\left(\frac{2\pi(1.5)}{s+2\pi(1.5)}\right)^2q_{\mathrm{payload}}(s)
+$$
 
 The combined filter reaches −3 dB near 0.97 Hz. Washout is disabled. The correction is bounded to ±0.25 throttle fraction before final throttle limits. This is a frequency-dependent design choice, not a claim that the original fast feedback was correct.
 

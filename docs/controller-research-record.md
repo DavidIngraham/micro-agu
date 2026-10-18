@@ -351,9 +351,11 @@ A small pitch-rate feedback term helped when its frequency response was shaped a
 
 The selected configuration uses two cascaded **1.5 Hz** first-order stages and a pitch-rate gain of **0.1**:
 
-![Pitch damping: gain −0.1 with two cascaded first-order 1.5 Hz low-pass filters.](assets/control-loops/tecs-damper.png)
+$$
+\Delta u_T(s)=-0.1\left(\frac{2\pi(1.5)}{s+2\pi(1.5)}\right)^2q_{\mathrm{payload}}(s)
+$$
 
-Here q is body pitch rate in rad/s and u<sub>T</sub> is throttle fraction. Each stage has a 1.5 Hz cutoff; the combined continuous-time filter reaches −3 dB at about 0.97 Hz. Native code applies the discrete first-order filters at the measured update interval, limits the correction to ±0.25, and retains the final throttle limits. Height feedforward, height feedback, integration, voltage compensation and lateral gains are unchanged. Washout is off.
+Here $q$ is body pitch rate in rad/s and $u_T$ is throttle fraction. Each stage has a 1.5 Hz cutoff; the combined continuous-time filter reaches −3 dB at about 0.97 Hz. Native code applies the discrete first-order filters at the measured update interval, limits the correction to ±0.25, and retains the final throttle limits. Height feedforward, height feedback, integration, voltage compensation and lateral gains are unchanged. Washout is off.
 
 ![Filter magnitude and phase, with movement of the slow pitch/forward-speed poles](../research/flight-log-analysis/figures/turn-model-spike/gust-control/filter-and-poles.png)
 

@@ -140,9 +140,11 @@ Here $\omega$ means heading rate, the rate of turning in the horizontal plane. I
 
 ## What TECS normally controls
 
-[TECS](https://ardupilot.org/plane/docs/tecs-total-energy-control-system-for-speed-height-tuning-guide.html) coordinates throttle and pitch demands to manage height and airspeed. The useful starting point is the aircraft's specific energy: potential energy per unit mass is gh, and kinetic energy per unit mass is V²/2.
+[TECS](https://ardupilot.org/plane/docs/tecs-total-energy-control-system-for-speed-height-tuning-guide.html) coordinates throttle and pitch demands to manage height and airspeed. The useful starting point is the aircraft's specific energy: potential energy per unit mass is $gh$, and kinetic energy per unit mass is $V^2/2$.
 
-![Specific energy: E_T = gh + V²/2.](assets/control-loops/tecs-energy.png)
+$$
+E_T=gh+\frac{V^2}{2}
+$$
 
 Throttle controls the rate at which energy is added to the aircraft. Pitch helps determine how that energy is divided between speed and height. Climbing by pitching up alone can spend airspeed; adding power allows a sustained climb without that continuing loss of speed. TECS coordinates those demands, and the airplane's pitch controller uses the elevator to follow the requested attitude.
 
@@ -164,15 +166,22 @@ I retained TECS's altitude and climb-rate estimates, throttle limits and connect
 
 ![Parafoil TECS control loop with altitude and climb-rate feedback, throttle feedforward and a separate negative pitch-rate feedback path.](assets/control-loops/tecs-parafoil.png)
 
-Let h<sub>c</sub> be the shaped altitude demand, h measured altitude, and v<sub>z</sub> measured upward velocity. Before the climb/sink limits, the outer loop requests
+Let $h_c$ be the shaped altitude demand, $h$ measured altitude, and $v_z$ measured upward velocity. Before the climb/sink limits, the outer loop requests
 
-![Requested climb rate = altitude trajectory rate + altitude error / height time constant.](assets/control-loops/tecs-height.png)
+$$
+v_{z,c}=\dot h_c+\frac{h_c-h}{T_h}
+$$
 
-The first term anticipates a moving altitude target; the second closes the remaining height error over the height-demand time constant T<sub>h</sub>. With e<sub>v</sub> = v<sub>z,c</sub> − v<sub>z</sub>, the inner control law can be summarized as
+The first term anticipates a moving altitude target; the second closes the remaining height error over the height-demand time constant $T_h$. With $e_v=v_{z,c}-v_z$, the inner control law can be summarized as
 
-![Throttle = feedforward + proportional correction + integral correction − filtered pitch-rate damping.](assets/control-loops/tecs-throttle.png)
+$$
+\begin{aligned}
+u_T &= u_{\mathrm{FF}}(v_{z,c})+K_Pe_v \\
+&\quad +K_I\int e_v\,dt-K_qF_q(s)q_{\mathrm{payload}}
+\end{aligned}
+$$
 
-Here u<sub>T</sub> is throttle fraction, u<sub>FF</sub> is the climb/descent feedforward map, and F<sub>q</sub> filters the payload gyro's pitch rate. This equation shows the signal paths; the implementation also applies throttle limits, slew limiting to the proportional-plus-feedforward path, integrator bounds and a bounded damper correction.
+Here $u_T$ is throttle fraction, $u_{\mathrm{FF}}$ is the climb/descent feedforward map, and $F_q$ filters the payload gyro's pitch rate. This equation shows the signal paths; the implementation also applies throttle limits, slew limiting to the proportional-plus-feedforward path, integrator bounds and a bounded damper correction.
 
 The feedforward map was an important part of the design. I did not want the integrator to discover the throttle required for every sustained climb. Trim throttle supplied the level-flight baseline, while the configured climb and sink rates set the slopes toward the throttle limits. The flight measurements below let me calibrate that relationship.
 

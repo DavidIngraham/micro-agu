@@ -1,0 +1,5 @@
+{
+  "research/trout-lake-dynamics-2026-10-18/run.py": "8413e58fa12d87847fabe6a460f87ccc1e397dd0f8104e3dde8e2d5185166b73",
+  "research/trout-lake-fidelity-2026-10-18/selection.json": "cc09b71a4dfadefacc36b4f28884608420942b5c0ca30cb928aded5e22678d1e",
+  "simulation/crates/sim-core/src/dynamics.rs": "e6ebe50183d31429621b3aae945a297dd0de03676bc07f77fb2c38cae2b17653"
+}

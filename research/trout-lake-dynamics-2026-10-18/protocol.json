@@ -1,0 +1,62 @@
+{
+  "target": "Trout Lake 1.758 kg, historical 132 mm geometry",
+  "fit": "None; previous candidate frozen",
+  "validation_starts": [
+    1440,
+    1450,
+    1460,
+    1470,
+    1480,
+    1490,
+    1500,
+    1510,
+    1520,
+    2100,
+    2110,
+    2120,
+    2130,
+    2140,
+    2150,
+    2160,
+    2170,
+    2180,
+    2760,
+    2770,
+    2780,
+    2790,
+    2800,
+    2810,
+    2820,
+    2830,
+    2840
+  ],
+  "duration_s": 6,
+  "discard_initial_s": 2,
+  "discard_final_s": 0.24,
+  "initial_angles": [
+    0.25,
+    0.35,
+    0.45
+  ],
+  "channels": [
+    "roll_rate",
+    "pitch_rate",
+    "yaw_rate",
+    "roll_acceleration",
+    "pitch_acceleration",
+    "yaw_acceleration",
+    "forward_velocity",
+    "climb"
+  ],
+  "primary": "Demeaned per-window error: rates, smoothed angular accelerations, body-forward ground velocity and climb. Raw errors and bias reported separately.",
+  "gates": {
+    "mean_channel_ratio": 0.95,
+    "worst_channel_ratio": 1.05,
+    "mean_rate_spectral_error_ratio": 1.05,
+    "coherent_gain_error_ratio": 1.05,
+    "coherent_phase_error_increase_deg": 5,
+    "minimum_coherent_bins": 12
+  },
+  "spectral": "Pooled 30 s reserved-window PSD 0.2\u20133 Hz; input/output descriptive gain and phase 0.2\u20132 Hz where observed coherence >=0.5. Not an open-loop system identification.",
+  "limitations": "Same previously examined flight. No fitting on validation. Quiet input does not establish unforced decay; damping identification may remain unsupported. No course or horizontal earth-frame velocity loss. No automatic deployment."
+}

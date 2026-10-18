@@ -1,0 +1,12 @@
+{
+  "frequency_hz": 1.5625,
+  "yaw_coherence": {
+    "differential_brake": 0.6494568804951323,
+    "common_brake": 0.3468602633995581,
+    "throttle": 0.25963346358201,
+    "roll_rate": 0.7624435661338176,
+    "pitch_rate": 0.9514549938035245,
+    "yaw_rate": 1.0000000000000004
+  },
+  "interpretation": "Pooled closed-loop association, not causal attribution; missing disturbances or sensor processing can affect spectra."
+}

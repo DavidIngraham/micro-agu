@@ -1,0 +1,37 @@
+{
+  "baseline": {
+    "rate_psd_log_rmse_db": [
+      8.646145507738984,
+      4.031779988804382,
+      9.623690402806762
+    ],
+    "coherent_gain_rmse_db": 10.297317054688309,
+    "coherent_phase_rmse_deg": 51.93878073768318,
+    "peak_rate_frequency_hz": [
+      0.48828125,
+      0.390625,
+      0.48828125
+    ]
+  },
+  "physics": {
+    "rate_psd_log_rmse_db": [
+      11.987901871870248,
+      4.565016834283767,
+      8.674086962029667
+    ],
+    "coherent_gain_rmse_db": 10.817192266952386,
+    "coherent_phase_rmse_deg": 50.14931108824225,
+    "peak_rate_frequency_hz": [
+      0.48828125,
+      0.390625,
+      0.48828125
+    ]
+  },
+  "observed_peak_rate_frequency_hz": [
+    0.48828125,
+    0.29296875,
+    1.5625
+  ],
+  "coherent_bins": 38,
+  "quiet_3s_intervals": []
+}

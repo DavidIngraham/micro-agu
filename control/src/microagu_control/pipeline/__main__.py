@@ -167,6 +167,7 @@ def main():
     sub = p.add_subparsers(dest="action", required=True)
     init = sub.add_parser("init")
     init.add_argument("output", type=Path)
+    init.add_argument("--flight", choices=["trout_lake", "hood_river"], default="trout_lake")
     r = sub.add_parser("run")
     r.add_argument("protocol", type=Path)
     r.add_argument("output", type=Path)
@@ -184,7 +185,7 @@ def main():
     if args.action == "init":
         if args.output.exists():
             p.error("Output already exists")
-        write_json(args.output, snapshot())
+        write_json(args.output, snapshot(args.flight))
     elif args.action == "run":
         run(args.protocol, args.output)
     elif args.action == "campaign":

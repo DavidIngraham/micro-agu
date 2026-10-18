@@ -1,0 +1,33 @@
+{
+  "repeatability": {
+    "passed": false,
+    "reasons": [
+      "0: reference repeat failed"
+    ]
+  },
+  "selected": null,
+  "candidates": {
+    "refit_damped": {
+      "reasons": [
+        "0: reference repeat failed",
+        "reference 0: Unexpected controller ownership"
+      ],
+      "paired_ratios": [
+        {
+          "climb": 1.008667384784269,
+          "descent": 0.9793764330080981,
+          "vertical": 1.059060604914253,
+          "crosswind": 0.5671199132260955,
+          "relative_pitch_rate_rms": 0.7767393447804996,
+          "relative_pitch_rate_peak": 0.6106519463922631,
+          "shaft_W": 1.0013573554088433,
+          "shaft_Wh_per_km": 1.0040096182533866
+        }
+      ],
+      "mean_tracking_ratio": 0.9035560839831789,
+      "eligible": false
+    }
+  },
+  "deploy": false,
+  "note": "Training selection only; independent reserved native scenarios and mission checks still required."
+}

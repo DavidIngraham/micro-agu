@@ -110,6 +110,13 @@
       "reason": "Completed experiment with conclusions still relevant to sensing or model uncertainty."
     },
     {
+      "study": "hood-river-pipeline-2026-10-18",
+      "status": "active",
+      "path": "research/active/hood-river-pipeline-2026-10-18",
+      "summary": "Hood River configuration-specific sysid and gain-only pipeline screen; the powered turn remains underpredicted.",
+      "execution_policy": "maintained for ongoing fidelity/pipeline work"
+    },
+    {
       "study": "low-speed-ekf-2026-10-16",
       "status": "completed-unresolved",
       "path": "research/archive/low-speed-ekf-2026-10-16",

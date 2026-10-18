@@ -1,0 +1,106 @@
+{
+  "schema": 1,
+  "aircraft": "aircraft.json",
+  "fit": "fit/fit.json",
+  "reference": "reference.h",
+  "sensing": "ekf_air_velocity_no_canopy_truth",
+  "models": [
+    {
+      "name": "production",
+      "base": "production"
+    },
+    {
+      "name": "response",
+      "base": "fit"
+    },
+    {
+      "name": "response_no_lag",
+      "base": "fit",
+      "override": {
+        "5": 0
+      }
+    },
+    {
+      "name": "production_lag",
+      "base": "production",
+      "override": {
+        "5": 0.12
+      }
+    },
+    {
+      "name": "response_mid_lag",
+      "base": "fit",
+      "override": {
+        "5": 0.06
+      }
+    },
+    {
+      "name": "response_more_damping",
+      "base": "fit",
+      "override": {
+        "2": 0.5
+      }
+    },
+    {
+      "name": "response_pull_low",
+      "base": "fit",
+      "override": {
+        "4": 0.95
+      }
+    }
+  ],
+  "candidates": [
+    {
+      "name": "refit",
+      "model": "response",
+      "weights": {
+        "pitch": 90,
+        "height": 4,
+        "integral": 12,
+        "throttle": 500,
+        "common": 3000,
+        "speed": 0.3,
+        "speed_integral": 0.3
+      }
+    },
+    {
+      "name": "refit_damped",
+      "model": "response",
+      "weights": {
+        "pitch": 180,
+        "height": 4,
+        "integral": 12,
+        "throttle": 500,
+        "common": 3000,
+        "speed": 0.3,
+        "speed_integral": 0.3
+      }
+    },
+    {
+      "name": "refit_soft",
+      "model": "response",
+      "weights": {
+        "pitch": 90,
+        "height": 4,
+        "integral": 6,
+        "throttle": 1000,
+        "common": 3000,
+        "speed": 0.3,
+        "speed_integral": 0.3
+      }
+    },
+    {
+      "name": "production_resynth",
+      "model": "production",
+      "weights": {
+        "pitch": 90,
+        "height": 4,
+        "integral": 12,
+        "throttle": 500,
+        "common": 3000,
+        "speed": 0.3,
+        "speed_integral": 0.3
+      }
+    }
+  ]
+}

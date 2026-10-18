@@ -1,0 +1,54 @@
+{
+  "schema": 1,
+  "cases": [
+    {
+      "id": 0,
+      "mode": "CRUISE",
+      "speedup": 8,
+      "wind": 0,
+      "weather": {
+        "turbulence": 0,
+        "thermalStrength": 0,
+        "thermalRadius": 60,
+        "thermalNorth": 300,
+        "thermalEast": 0,
+        "seed": 20261018
+      },
+      "scales": {},
+      "brakeRateScale": 1,
+      "model": "production",
+      "from": 90
+    },
+    {
+      "id": 1,
+      "mode": "CRUISE",
+      "speedup": 8,
+      "wind": 0,
+      "weather": {
+        "turbulence": 0,
+        "thermalStrength": 0,
+        "thermalRadius": 60,
+        "thermalNorth": 300,
+        "thermalEast": 0,
+        "seed": 20261018
+      },
+      "scales": {},
+      "brakeRateScale": 1,
+      "model": "response",
+      "from": 90
+    }
+  ],
+  "phase": "training",
+  "gates": {
+    "tracking_improvement": 0.05,
+    "task_max_regression": 0.2,
+    "motion_max_regression": 0.1,
+    "power_max_regression": 0.05
+  },
+  "controllers": [
+    "reference",
+    "reference_repeat",
+    "refit_damped"
+  ],
+  "selection_note": "Hood River gain-only screening; refit_damped selected for highest worst-case local oscillatory damping among the four candidates. Fixed deployed observer and trim context. Not held-out qualification."
+}

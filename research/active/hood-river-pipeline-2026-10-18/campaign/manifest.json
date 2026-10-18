@@ -1,0 +1,24 @@
+{
+  "firmware": {
+    "arduplane.js": "893b28e3cbea410e48736d7f7426928cbe8b56f22c1813914aa290172f1e8565",
+    "arduplane.wasm": "466d4d86263d973cc38e850b3a015146e9b98a2cd2ae369fbca7a32eeb9ab504"
+  },
+  "gain_files": {
+    "reference": "311876eabeb033e55c30c8d556d159495b76e8358cd25a1684c0c3b486ed97f0",
+    "reference_repeat": "311876eabeb033e55c30c8d556d159495b76e8358cd25a1684c0c3b486ed97f0",
+    "refit_damped": "be92895c1ea7c8ce4cd339c67f33184e2f838ecac1f2d2de11c2225626931174"
+  },
+  "protocol_sha256": "096ce65f7d9746631ebbca3fe9f45d31e41f82405b0ef177ee2110d732b1b73f",
+  "harness_sha256": "83f0a4802d7197682d58fad9a3f6d948fce2cca0aebb5a9c583e0d0715d08b26",
+  "physics_sha256": "ceae58a55b4585e85b86a142a15c1f5b9bcfbf3e51f21cddbdf741ac4a75c158",
+  "config_sha256": "9c43856b1844f79ff2d86c87bcc9313509adc3801b4f38ceb829c7598a230665",
+  "source_hashes": {
+    "linearize.py": "600df261cc923782af7fe211f14e27fffaa97789aed741abad3dca92eca5f933",
+    "__init__.py": "793065d7024651770794f462d5b04511e0f5997b1b4ad13edf87ff4eeb89f43b",
+    "artifacts.py": "2bcfc3a31da7f468e47f0fefc29406c54f1447ace10ae30ab2a58705c037f4ce",
+    "assess.py": "5a25a303331a9beb48c54701829801361d1adc30327f4831a5da51120b07f2e3",
+    "control.py": "631ee1fd1f87e5714df80319f544e0fca9305dc01f4fb7260423043c0ffb11cf",
+    "__main__.py": "e003a7b0c42d6565f5e909346898c198937d8a91076a512421398c1018591b10",
+    "campaign.py": "d50da4da2eb0896d1715815d181476cccf6ec78926fe92964552344fa591d578"
+  }
+}

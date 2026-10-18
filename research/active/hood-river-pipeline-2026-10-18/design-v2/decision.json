@@ -1,0 +1,209 @@
+{
+  "eligible_for_nonlinear_validation": [
+    "refit",
+    "refit_damped",
+    "refit_soft",
+    "production_resynth"
+  ],
+  "deploy": false,
+  "reason": "Native EKF/SITL stability, tracking, actuator and power comparison required",
+  "summary": {
+    "reference": {
+      "production": {
+        "spectral_radius": 0.999931638141688,
+        "stable": true,
+        "minimum_oscillatory_damping": 0.07570989294673998
+      },
+      "response": {
+        "spectral_radius": 0.9999239394924905,
+        "stable": true,
+        "minimum_oscillatory_damping": 0.0831414257524758
+      },
+      "response_no_lag": {
+        "spectral_radius": 0.9999239713664549,
+        "stable": true,
+        "minimum_oscillatory_damping": 0.08341532966597223
+      },
+      "production_lag": {
+        "spectral_radius": 0.9999316123493588,
+        "stable": true,
+        "minimum_oscillatory_damping": 0.07547518691820217
+      },
+      "response_mid_lag": {
+        "spectral_radius": 0.999923956747295,
+        "stable": true,
+        "minimum_oscillatory_damping": 0.08315674108266913
+      },
+      "response_more_damping": {
+        "spectral_radius": 0.9999239393644332,
+        "stable": true,
+        "minimum_oscillatory_damping": 0.07608771220514912
+      },
+      "response_pull_low": {
+        "spectral_radius": 0.9999341410423285,
+        "stable": true,
+        "minimum_oscillatory_damping": 0.08455333394910662
+      }
+    },
+    "refit": {
+      "production": {
+        "spectral_radius": 0.9999322242700202,
+        "stable": true,
+        "minimum_oscillatory_damping": 0.10305823737161546
+      },
+      "response": {
+        "spectral_radius": 0.9999244407671218,
+        "stable": true,
+        "minimum_oscillatory_damping": 0.10785673807715518
+      },
+      "response_no_lag": {
+        "spectral_radius": 0.9999244722072793,
+        "stable": true,
+        "minimum_oscillatory_damping": 0.10819034093037805
+      },
+      "production_lag": {
+        "spectral_radius": 0.9999321989290328,
+        "stable": true,
+        "minimum_oscillatory_damping": 0.1026590823377296
+      },
+      "response_mid_lag": {
+        "spectral_radius": 0.9999244577870403,
+        "stable": true,
+        "minimum_oscillatory_damping": 0.10787749720918169
+      },
+      "response_more_damping": {
+        "spectral_radius": 0.999924440648862,
+        "stable": true,
+        "minimum_oscillatory_damping": 0.10308987521156529
+      },
+      "response_pull_low": {
+        "spectral_radius": 0.9999347676389534,
+        "stable": true,
+        "minimum_oscillatory_damping": 0.10928804254993699
+      }
+    },
+    "refit_damped": {
+      "production": {
+        "spectral_radius": 0.999932183304576,
+        "stable": true,
+        "minimum_oscillatory_damping": 0.10713535809019034
+      },
+      "response": {
+        "spectral_radius": 0.9999243864991361,
+        "stable": true,
+        "minimum_oscillatory_damping": 0.11303373394024101
+      },
+      "response_no_lag": {
+        "spectral_radius": 0.999924418009364,
+        "stable": true,
+        "minimum_oscillatory_damping": 0.1133728363451549
+      },
+      "production_lag": {
+        "spectral_radius": 0.9999321579164571,
+        "stable": true,
+        "minimum_oscillatory_damping": 0.1066898615532732
+      },
+      "response_mid_lag": {
+        "spectral_radius": 0.9999244035569964,
+        "stable": true,
+        "minimum_oscillatory_damping": 0.11304826002112468
+      },
+      "response_more_damping": {
+        "spectral_radius": 0.9999243863804619,
+        "stable": true,
+        "minimum_oscillatory_damping": 0.10599355770447999
+      },
+      "response_pull_low": {
+        "spectral_radius": 0.999934730192107,
+        "stable": true,
+        "minimum_oscillatory_damping": 0.11448174435409379
+      }
+    },
+    "refit_soft": {
+      "production": {
+        "spectral_radius": 0.9999323017359774,
+        "stable": true,
+        "minimum_oscillatory_damping": 0.09767541796436682
+      },
+      "response": {
+        "spectral_radius": 0.9999245513466108,
+        "stable": true,
+        "minimum_oscillatory_damping": 0.10099786577056193
+      },
+      "response_no_lag": {
+        "spectral_radius": 0.9999245826342129,
+        "stable": true,
+        "minimum_oscillatory_damping": 0.10132953227838888
+      },
+      "production_lag": {
+        "spectral_radius": 0.9999322764926604,
+        "stable": true,
+        "minimum_oscillatory_damping": 0.09731278478220909
+      },
+      "response_mid_lag": {
+        "spectral_radius": 0.9999245682839263,
+        "stable": true,
+        "minimum_oscillatory_damping": 0.10102426544744597
+      },
+      "response_more_damping": {
+        "spectral_radius": 0.9999245512291194,
+        "stable": true,
+        "minimum_oscillatory_damping": 0.09834791108463817
+      },
+      "response_pull_low": {
+        "spectral_radius": 0.9999348360945335,
+        "stable": true,
+        "minimum_oscillatory_damping": 0.10238694086187394
+      }
+    },
+    "production_resynth": {
+      "production": {
+        "spectral_radius": 0.9999322274198463,
+        "stable": true,
+        "minimum_oscillatory_damping": 0.09245521118842179
+      },
+      "response": {
+        "spectral_radius": 0.9999244206519333,
+        "stable": true,
+        "minimum_oscillatory_damping": 0.09634090242296642
+      },
+      "response_no_lag": {
+        "spectral_radius": 0.9999244521110617,
+        "stable": true,
+        "minimum_oscillatory_damping": 0.09660910293163652
+      },
+      "production_lag": {
+        "spectral_radius": 0.9999322020797904,
+        "stable": true,
+        "minimum_oscillatory_damping": 0.09219778176994894
+      },
+      "response_mid_lag": {
+        "spectral_radius": 0.9999244376821232,
+        "stable": true,
+        "minimum_oscillatory_damping": 0.09637482817177356
+      },
+      "response_more_damping": {
+        "spectral_radius": 0.99992442053491,
+        "stable": true,
+        "minimum_oscillatory_damping": 0.094222830701198
+      },
+      "response_pull_low": {
+        "spectral_radius": 0.9999347801148994,
+        "stable": true,
+        "minimum_oscillatory_damping": 0.09770427485153255
+      }
+    }
+  },
+  "unquantified_measurements": [
+    "mass",
+    "payload_mass",
+    "canopy_mass",
+    "Ixx",
+    "Iyy",
+    "Izz",
+    "yaw_payload_halfspacing",
+    "hinge_x",
+    "hinge_y",
+    "hinge_z"
+  ]
+}

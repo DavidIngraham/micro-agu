@@ -1,0 +1,51 @@
+{
+  "schema": 1,
+  "inputs": {
+    "protocol.json": "869591deedd36774d002ecb42042d9c4ec02b64955f27a58e11ac1260556f244",
+    "aircraft.json": "1caa7d8f518f701a0a6bfc410581f2a512a0b0c9184f1cbcd53b6c97939a3271",
+    "reference.h": "c36e2516e617ac03892a212c5af7f2835e5f7997f8cc14400611bf0a26867291",
+    "fit.json": "be73e2bdab1737afdde44539e14397270ea7fe2bce28cb46c93ece1ef886a8d8"
+  },
+  "source_hashes": {
+    "linearize.py": "600df261cc923782af7fe211f14e27fffaa97789aed741abad3dca92eca5f933",
+    "__init__.py": "793065d7024651770794f462d5b04511e0f5997b1b4ad13edf87ff4eeb89f43b",
+    "artifacts.py": "2bcfc3a31da7f468e47f0fefc29406c54f1447ace10ae30ab2a58705c037f4ce",
+    "assess.py": "5a25a303331a9beb48c54701829801361d1adc30327f4831a5da51120b07f2e3",
+    "control.py": "631ee1fd1f87e5714df80319f544e0fca9305dc01f4fb7260423043c0ffb11cf",
+    "__main__.py": "e003a7b0c42d6565f5e909346898c198937d8a91076a512421398c1018591b10",
+    "campaign.py": "d50da4da2eb0896d1715815d181476cccf6ec78926fe92964552344fa591d578"
+  },
+  "native_sha256": "55000fafb4c8836d3684376474402ccbac971c5faeb9badddce33319ba6afb7e",
+  "physics_inputs": {
+    "as-built-calibration.json": "cf0679e30b3ea4d6a2413b834ebfd8867d5b48913c12983d0e418c0aee924409",
+    "trim.py": "1593cc2bdc9c3432ae570ae48766b31a4ebc2802f7e6a83cd75e29ca0abfc453",
+    "geometry.py": "bc6e13d240c787cc3997cbec47082ff1679c3671a8f90ad689bb853d33223f27",
+    "equilibrium-trim-hood_river-0.0-0.0.npz": "251df576c53f491e4b066d90d832ee9207fdab3adb7e32f33972ea62413b5710",
+    "__init__.py": "c8f43602c44809f4d1be2ec8c3a1b9aac373d0396bde7399266bf119e49e3592",
+    "defaults.py": "0f002fc2179509c1749d59770326bbd40c1d5dd25efcc0855a489c4c2d3ff10a",
+    "profiles.py": "4b4d5b624d0f00f3481898e50c1aad947283846cffe6d12aeae2ae1b0d409486",
+    "equilibrium-trim-trout_lake-0.0-0.0.npz": "a5d40fea458d79070fdc2aaef79c8ca70e4679074b57b0339af8da9f43f628ea",
+    "parameters.json": "7793ba74306789dce70bcfc8b25154f0a7caedb7a2981cb951a717f2ffb82765",
+    "sensors.py": "5951522186fc39bf2c7fe17f8ab349e170f2d9ca12eae7c518dccfb181ebb69e",
+    "actuator.py": "1b1dbc9d47cf09807c272d6ea137751c7194a9921544609d439bf75179c6ab2a",
+    "equilibrium.py": "d0dfb3fe8ef71602e6029e16fcc3c56a5bbec148f32d07f06ce2943c3b8e5733",
+    "dynamics.py": "6da5c7b88ea3f25b1efd67fd7ebff48b643afffd863a1a3f09f589ddc798558f",
+    "smoke_sitl.py": "8efa90eae23850308c50797ff0d64ee462b35a8c5491a3b5fe8b947a0d509454",
+    "modal-calibration.json": "8d8153b5c500612dad12d07c3c368d8b7b7a4f928e2b8db96f0b03056e8c8649",
+    "simulator.py": "ed21e7f5c1d643b0f7397d8331aa77a2f679a0fbd0cbcc31c73affa3cd439863",
+    "firmware.py": "f6281598c43d6dd82a070cb7905555d88e9281ce2609b5d1d590da0d3674bc0a",
+    "napkin-payload-model.json": "929c01848e19d82a92da09df088370efe6ed709abcc90aed4426131b33bb6211",
+    "json_backend.py": "e2da8f3cc1457ef8d9b1d25b3d733836cf1b790f5e3f0ee9d9480e7489c9599b",
+    "cad_geometry.py": "09ed218349fbdafea3f47c2c4b67c49636e7393e0eda6a9438be8d58a25ccac3",
+    "routing.py": "73ba0bb44bb7f9e6ddfdc5628285b9c8bdd596171070e64af28d79cf7c5e9f14"
+  },
+  "versions": {
+    "microagu-sim": "0.1.0",
+    "numpy": "2.5.4",
+    "scipy": "1.18.1"
+  },
+  "context_id": 289087828,
+  "sensing": "ekf_air_velocity_no_canopy_truth",
+  "deployment_authorized": false,
+  "limitation": "Local linear observer-in-loop screen only. No EKF, saturation, antiwindup, rate limiting, turn scheduling or power claim."
+}

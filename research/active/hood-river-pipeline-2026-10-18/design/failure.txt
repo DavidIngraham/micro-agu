@@ -1,0 +1,17 @@
+Linearizing production
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/david/repos/micro-agu/control/src/microagu_control/pipeline/__main__.py", line 210, in <module>
+    main()
+  File "/home/david/repos/micro-agu/control/src/microagu_control/pipeline/__main__.py", line 190, in main
+    run(args.protocol, args.output)
+  File "/home/david/repos/micro-agu/control/src/microagu_control/pipeline/__main__.py", line 113, in run
+    plant = linearize(profile, vector, float(reference["TRIM"][1]))
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/david/repos/micro-agu/control/src/microagu_control/pipeline/control.py", line 28, in linearize
+    state, u, rpm, error = trim(sim, common=common)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/david/repos/micro-agu/control/src/microagu_control/pipeline/linearize.py", line 111, in trim
+    raise RuntimeError(f"trim failed: {fit.message}, residual {error}")
+RuntimeError: trim failed: `ftol` termination condition is satisfied., residual 0.042815181991567045

@@ -224,3 +224,31 @@ def test_campaign_freezes_gains_and_retains_failed_runs(tmp_path, monkeypatch):
     assert json.loads((viewer / "assets/runtime/highdof.json").read_text()) == {
         "parameter_keys": list(dynamics.KEYS)
     }
+
+
+@pytest.mark.parametrize("flight,mass", [("hood_river", 1.385), ("trout_lake", 1.758)])
+def test_flight_specific_aircraft_matches_legacy_profile(flight, mass):
+    from microagu_sim.compat.profiles import make_simulator
+    profile = snapshot(flight)
+    actual = make_aircraft(profile, [1, 1, 1, 1, 1, 0])
+    expected = make_simulator(flight, profile="as_built", substeps=16)
+    assert actual.flight == flight
+    assert actual.geometry["mass"] == pytest.approx(mass)
+    assert actual.parameters == expected.parameters
+    np.testing.assert_array_equal(actual.geometry["inertia"], expected.geometry["inertia"])
+    np.testing.assert_array_equal(actual.controls(.4, 12, 18), expected.controls(.4, 12, 18))
+    state = actual.initial_state()
+    a, ar = actual.step(state, 1000, [.4, 12, 18])
+    b, br = expected.step(state, 1000, [.4, 12, 18])
+    np.testing.assert_array_equal(a, b)
+    assert ar == br
+
+
+def test_hood_river_trim_opposite_brake_branch():
+    from microagu_control.pipeline.linearize import trim
+    from microagu_control.sysid.aircraft import snapshot, make_aircraft
+    from microagu_control.sysid.model import DEFAULT
+
+    _, command, _, error = trim(make_aircraft(snapshot("hood_river"), DEFAULT), common=0.1)
+    assert error < 1e-6
+    assert command[2] < -0.1

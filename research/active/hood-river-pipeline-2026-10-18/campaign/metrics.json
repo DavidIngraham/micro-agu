@@ -1,0 +1,100 @@
+[
+  {
+    "gates": [
+      "Unexpected controller ownership"
+    ],
+    "metrics": null,
+    "controller": "reference",
+    "case": "0",
+    "exit_code": 1
+  },
+  {
+    "gates": [],
+    "metrics": {
+      "climb": 2.5077638685234205,
+      "descent": 2.69527046708452,
+      "vertical": 1.188675127703427,
+      "crosswind": 0.30214405264167055,
+      "relative_pitch_rate_rms": 5.367747635506018,
+      "relative_pitch_rate_peak": 155.58054313174944,
+      "late_relative_pitch_rms": 0.033770217600089025,
+      "late_relative_pitch_rate_rms": 0.09781783519543003,
+      "upper_brake_fraction": 0.0,
+      "common_brake": 0.003691522681213403,
+      "shaft_W": 52.62752507993311,
+      "shaft_Wh_per_km": 3.858741164338354
+    },
+    "controller": "reference",
+    "case": "1",
+    "exit_code": 0
+  },
+  {
+    "gates": [
+      "Unexpected controller ownership"
+    ],
+    "metrics": null,
+    "controller": "reference_repeat",
+    "case": "0",
+    "exit_code": 1
+  },
+  {
+    "gates": [],
+    "metrics": {
+      "climb": 2.551844328233945,
+      "descent": 2.6338903494171717,
+      "vertical": 1.147327721373676,
+      "crosswind": 0.10033901180427632,
+      "relative_pitch_rate_rms": 5.858161631208157,
+      "relative_pitch_rate_peak": 154.22837335606266,
+      "late_relative_pitch_rms": 0.022643720908295365,
+      "late_relative_pitch_rate_rms": 0.10605968050160877,
+      "upper_brake_fraction": 0.0,
+      "common_brake": 0.03969980534928989,
+      "shaft_W": 53.779777529805905,
+      "shaft_Wh_per_km": 4.010370707114332
+    },
+    "controller": "reference_repeat",
+    "case": "1",
+    "exit_code": 0
+  },
+  {
+    "gates": [],
+    "metrics": {
+      "climb": 2.5450768894274187,
+      "descent": 2.6257482045942884,
+      "vertical": 1.2424089407770662,
+      "crosswind": 0.23151198621492017,
+      "relative_pitch_rate_rms": 2.885580415989933,
+      "relative_pitch_rate_peak": 82.83776264476542,
+      "late_relative_pitch_rms": 0.04858943411829291,
+      "late_relative_pitch_rate_rms": 0.08021416685667374,
+      "upper_brake_fraction": 0.0,
+      "common_brake": 0.0031003452446751426,
+      "shaft_W": 52.460037806369584,
+      "shaft_Wh_per_km": 3.8386799528450326
+    },
+    "controller": "refit_damped",
+    "case": "0",
+    "exit_code": 0
+  },
+  {
+    "gates": [],
+    "metrics": {
+      "climb": 2.5294996229200004,
+      "descent": 2.6396843760453073,
+      "vertical": 1.2588789997921184,
+      "crosswind": 0.171351908915925,
+      "relative_pitch_rate_rms": 4.16934078135002,
+      "relative_pitch_rate_peak": 95.00556148416823,
+      "late_relative_pitch_rms": 0.03610595876925982,
+      "late_relative_pitch_rate_rms": 0.06732761005094431,
+      "upper_brake_fraction": 0.0,
+      "common_brake": 0.008125233300491034,
+      "shaft_W": 52.69895933575439,
+      "shaft_Wh_per_km": 3.8742132433459795
+    },
+    "controller": "refit_damped",
+    "case": "1",
+    "exit_code": 0
+  }
+]

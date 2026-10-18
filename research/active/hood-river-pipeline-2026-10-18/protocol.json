@@ -1,0 +1,22 @@
+{
+  "purpose": "Hood River aircraft-specific pipeline run; no deployment",
+  "data_source": "/mnt/c/Users/davin/OneDrive/Documentos/Mission Planner/analysis/longitudinal-2026-10-09/2026-01-03 15-41-42",
+  "mode_sha256": "a06b14ec88022bf3fc1ab14cbe14fafacecd1459f03f61d9047776c65629e641",
+  "split": "All training windows from the second MANUAL episode; entire first MANUAL episode including powered turn reserved from this optimization. FBWA episodes are additional reserved checks.",
+  "limitations": [
+    "Historical windows have been studied before; not independent new-flight validation",
+    "Only one training episode; initialization/wind uncertainties remain",
+    "Final low-throttle landing segment excluded",
+    "No measured ground wind or airspeed sensor"
+  ],
+  "powered_turn": {
+    "replay_start_s": 438,
+    "duration_s": 30,
+    "assessment_interval_s": [
+      447,
+      456
+    ]
+  },
+  "model": "flight-specific Hood River as-built profile; 1.385 kg, 132 mm risers, HR inertia and brake preload",
+  "gain_synthesis": "If identification completes, screen gain-only designs against existing deployed observer context; no deployment authorization or claim of HR-specific observer tuning"
+}

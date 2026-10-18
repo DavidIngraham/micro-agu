@@ -1,7 +1,8 @@
 # Offline controller pipeline
 
-AI-assisted implementation. CLI only; the aircraft adapter currently supports the
-Trout Lake as-built 132 mm configuration. Future aircraft adapters must regenerate
+AI-assisted implementation. CLI only; the aircraft adapter supports the
+Hood River and Trout Lake as-built 132 mm configurations, including their
+flight-specific mass, inertia, brake preload and trim seed. Future aircraft adapters must regenerate
 routing, actuator mapping and trim seeds rather than silently reusing these values.
 
 ```mermaid
@@ -33,7 +34,7 @@ Run `uv sync --project control --locked` from the repository root, then use
 `uv run --project control python` for the commands below.
 Every output run directory must be new. Errors and failed flights are retained.
 
-1. `python -m microagu_control.pipeline init aircraft.json`
+1. `python -m microagu_control.pipeline init aircraft.json --flight hood_river` (or `trout_lake`, the default)
 2. `python -m microagu_control.sysid fit session.json fit-run`
 3. `python -m microagu_control.sysid validate session.json model-check --fit-result fit-run/fit.json`
 4. `python -m microagu_control.pipeline run protocol.json design-run`

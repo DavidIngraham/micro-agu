@@ -36,8 +36,10 @@ MEASUREMENTS = {
 }
 
 
-def snapshot():
-    sim = make_simulator("trout_lake", profile="as_built")
+def snapshot(flight="trout_lake"):
+    if flight not in ("trout_lake", "hood_river"):
+        raise ValueError("Unsupported aircraft configuration")
+    sim = make_simulator(flight, profile="as_built")
     measurements = {}
     for name, (target, key, units, source) in MEASUREMENTS.items():
         value = (sim.geometry if target == "geometry" else sim.parameters)[key]
@@ -50,7 +52,7 @@ def snapshot():
         }
     return {
         "schema": 1,
-        "flight": "trout_lake",
+        "flight": flight,
         "profile": "as_built",
         "measurements": measurements,
         "parameters": copy.deepcopy(sim.parameters),
@@ -70,8 +72,12 @@ def snapshot():
 
 
 def make_aircraft(profile, theta):
-    if profile.get("schema") != 1 or profile.get("flight") != "trout_lake":
-        raise ValueError("Only the Trout Lake as-built adapter is implemented")
+    if (
+        profile.get("schema") != 1
+        or profile.get("flight") not in ("trout_lake", "hood_river")
+        or profile.get("profile") != "as_built"
+    ):
+        raise ValueError("Only the Hood River and Trout Lake as-built adapters are implemented")
     theta = np.asarray(theta, float)
     if (
         theta.shape != (len(NAMES),)
@@ -80,7 +86,7 @@ def make_aircraft(profile, theta):
         or np.any(theta > BOUNDS[:, 1])
     ):
         raise ValueError("Fitted parameters outside adapter bounds")
-    sim = make_simulator("trout_lake", profile="as_built", substeps=16)
+    sim = make_simulator(profile["flight"], profile="as_built", substeps=16)
     if set(profile["parameters"]) != set(sim.parameters):
         raise ValueError("Physics parameter schema mismatch")
     sim.parameters = copy.deepcopy(profile["parameters"])

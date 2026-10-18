@@ -39,9 +39,11 @@ def main():
 
     from . import model
 
-    package_root = Path(__file__).resolve().parent.parent
+    import microagu_sim
+
+    package_root = Path(microagu_sim.__file__).resolve().parent
     manifest["runtime_versions"] = {
-        name: version(name) for name in ["numpy", "scipy", "microagu-sim"]
+        name: version(name) for name in ["numpy", "scipy", "microagu-sim", "microagu-control"]
     }
     manifest["physics_sources"] = {
         str(p.relative_to(package_root)): hashlib.sha256(p.read_bytes()).hexdigest()

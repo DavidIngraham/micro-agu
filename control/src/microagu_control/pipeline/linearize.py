@@ -74,7 +74,7 @@ class Chart:
 
 def trim(sim, voltage=22.2, common=0.0):
     seed = np.load(
-        Path(compat.__file__).parent / "equilibrium-trim-trout_lake-0.0-0.0.npz"
+        Path(compat.__file__).parent / f"equilibrium-trim-{sim.flight}-0.0-0.0.npz"
     )
     base = seed["state"].copy()
 
@@ -97,17 +97,23 @@ def trim(sim, voltage=22.2, common=0.0):
             Rotation.from_quat(state[3:7]).as_euler("xyz")[2],
         ]
 
-    fit = least_squares(
-        residual,
-        np.r_[np.zeros(15), 0.4, 0.02],
-        bounds=(np.r_[np.full(15, -3), 0.01, -0.3], np.r_[np.full(15, 3), 0.8, 0.3]),
-        max_nfev=300,
-        ftol=1e-11,
-        xtol=1e-11,
-        gtol=1e-10,
-    )
-    error = float(np.max(np.abs(residual(fit.x))))
-    if not fit.success or error > 1e-6:
+    # The unilateral brake map has distinct left/right branches. A seed on
+    # the wrong branch can stop at the dead zone without finding equilibrium.
+    # Preserve the established seed first, then try the opposite branch.
+    for differential in (0.02, -0.1):
+        fit = least_squares(
+            residual,
+            np.r_[np.zeros(15), 0.4, differential],
+            bounds=(np.r_[np.full(15, -3), 0.01, -0.3], np.r_[np.full(15, 3), 0.8, 0.3]),
+            max_nfev=300,
+            ftol=1e-11,
+            xtol=1e-11,
+            gtol=1e-10,
+        )
+        error = float(np.max(np.abs(residual(fit.x))))
+        if fit.success and error <= 1e-6:
+            break
+    else:
         raise RuntimeError(f"trim failed: {fit.message}, residual {error}")
     return (*unpack(fit.x), error)
 

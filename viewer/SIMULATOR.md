@@ -10,8 +10,9 @@ visit reloads once to enable cross-origin isolation on GitHub Pages.
 
 The example circuit uploads and starts automatically in **AUTO** after sensor
 initialization while upright. It then inverts for setup, swings the canopy overhead,
-takes two steps, tosses upright and glides unpowered for one second. It climbs in
-FBWA and hands over to AUTO above 12 m. Click the **mode display** to choose a mode;
+takes two steps and tosses upright. ArduPlane's actual TAKEOFF mode detects the
+launch and controls the climb, then the app hands over to AUTO at 15 m above home.
+Click the **mode display** to choose a mode;
 the displayed value follows confirmed telemetry. The launch button becomes
 **Reset simulation** as launch begins. Reset starts a fresh default mission.
 The **Mission & weather** panel is closed by default.
@@ -147,11 +148,17 @@ The assisted inverted trajectory is implemented in `sim-core/src/launch.rs`, wit
 generated Python and TypeScript bindings. Both body poses and their derivatives
 are used for sensor truth; the canopy starts laid out behind the payload and rises
 overhead. At release, the position/velocity constraints match the normal solver.
-Power remains zero during handling and the first second of dynamic glide. The
+Power remains zero during handling. The
 assumed inverted hand height is 1.2 m, rising by 0.6 m through the swing and
 another 0.24 m through the toss. Release is at 5.8 s with 4.5 m/s forward and
-0.6 m/s upward velocity. Stabilization engages after the glide, so it cannot
-pull a brake against the operator during inverted handling. These are launch
+0.6 m/s upward velocity. Quintic velocity ramps blend the walk into the toss;
+the follow camera also blends out of its fixed handling view during inflation.
+TAKEOFF engages at release, so stabilization cannot
+pull a brake against the operator during inverted handling. The browser sets
+TKOFF_ALT=15, TKOFF_DIST=200, TKOFF_LVL_ALT=5, TKOFF_LVL_PITCH=5,
+TKOFF_THR_MINSPD=2, TKOFF_THR_MINACC=0, TKOFF_THR_DELAY=0 and
+TKOFF_THR_MAX=60. Normal GPS/attitude launch checks remain enabled. The app sends
+no RC climb throttle; ArduPlane supplies it. These are simulator-specific launch
 assumptions rather than new flight-log measurements. The
 legacy reduced surface-launch API remains available for frozen parity fixtures.
 Terrain is an illustrative flat field, not a map or elevation database. Grid and

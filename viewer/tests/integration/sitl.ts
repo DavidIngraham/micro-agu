@@ -25,10 +25,12 @@ let truthFrames = 0,
 const launchStages = new Set<string>();
 let inverted = false,
   canopyLow = false,
-  canopyHigh = false;
+  canopyHigh = false,
+  takeoffSeen = false;
 sim.onTruth = (frame) => {
   validate(frame);
   truthFrames++;
+  takeoffSeen ||= sim.state.mode === 13;
   maxJoint = Math.max(maxJoint, Math.hypot(...frame.joint_rotvec_rad));
   if (frame.launch_stage) launchStages.add(frame.launch_stage);
   if (frame.launch_stage === "Inverted setup")
@@ -36,17 +38,10 @@ sim.onTruth = (frame) => {
   if (frame.launch_stage === "Upright initialization")
     canopyLow = frame.state[15] > -0.2;
   if (frame.launch_stage === "Two steps") canopyHigh = frame.state[15] < -1.8;
-  if (
-    frame.launch_stage === "Unpowered glide" ||
-    frame.launch_stage === "Free flight"
-  )
+  if (frame.launch_stage === "Free flight")
     assert.equal(frame.launch_phase, 2, "Launch must not touch down");
   if (frame.launch_stage && frame.launch_stage !== "Free flight")
-    assert.equal(
-      frame.rpm,
-      0,
-      "Propeller stays stopped through handling and unpowered glide",
-    );
+    assert.equal(frame.rpm, 0, "Propeller stays stopped through handling");
 };
 const timeout = setTimeout(() => {
   console.error("Integration timeout");
@@ -92,10 +87,11 @@ try {
     "Paraglider must arm and release airborne physics",
   );
   assert.ok(
-    sim.state.alt > 2 && sim.state.alt < 15,
+    sim.state.alt >= 15 && sim.state.alt < 20,
     `Ground home datum must be preserved: ${sim.state.alt}`,
   );
   console.log("GROUND LAUNCH OK", JSON.stringify(sim.state));
+  assert.ok(takeoffSeen, "ArduPlane TAKEOFF must own the climb");
   assert.ok(
     inverted && canopyLow && canopyHigh,
     "Inverted launch must move the real canopy truth from ground to overhead",
@@ -105,7 +101,6 @@ try {
     "Overhead swing",
     "Two steps",
     "Light toss",
-    "Unpowered glide",
   ])
     assert.ok(launchStages.has(stage), stage);
   await sim.execute();

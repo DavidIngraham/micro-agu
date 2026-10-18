@@ -40,7 +40,7 @@ export class Physics {
   private inverted = false;
   launchElapsed = 0;
   get powerReady() {
-    return !this.inverted || this.launchElapsed >= 6.8;
+    return !this.inverted || this.launchElapsed >= 5.8;
   }
   get launchStage() {
     if (!this.inverted) return undefined;
@@ -56,9 +56,7 @@ export class Physics {
             ? "Two steps"
             : t < 5.8
               ? "Light toss"
-              : t < 6.8
-                ? "Unpowered glide"
-                : "Free flight";
+              : "Free flight";
   }
   groundStart(inverted = false) {
     if (!this.config.launch_settings)

@@ -98,6 +98,8 @@ export class Simulator {
     const defaults =
       this.physics.config.defaults +
       "\nCP_TYPE 3\nRC6_OPTION 109\n" +
+      // Browser hand launch: release upright at 4.5 m/s; AP owns throttle and climb.
+      "\nTKOFF_ALT 15\nTKOFF_DIST 200\nTKOFF_LVL_ALT 5\nTKOFF_LVL_PITCH 5\nTKOFF_THR_MINACC 0\nTKOFF_THR_MINSPD 2\nTKOFF_THR_DELAY 0\nTKOFF_THR_MAX 60\n" +
       `\nFLTMODE_CH 0\nLOG_DISARMED 0\nLOG_BACKEND_TYPE 0\nFS_GCS_ENABL 0\nFS_LONG_ACTN 0\nRC_OVERRIDE_TIME 1\nSIM_SPEEDUP ${this.warmupSpeed}\nSTICK_MIXING 4\nFBWB_ELEV_REV 0\n`;
     this.module = await create({
       ...(wasmBinary ? { wasmBinary } : {}),
@@ -442,28 +444,25 @@ export class Simulator {
     ]);
     await this.command(512, [242]);
     await home;
-    // A waypoint-only AUTO mission suppresses throttle while on the ground.
-    // The assisted launch uses the normal FBWA RC/throttle path, then hands over.
+    // Keep direct neutral brakes while the operator handles the inverted payload.
     this.controls(0, 0, 0);
     this.sendRC();
     await delay(1000, this.lifetime.signal);
     this.physics.released = true;
     while (!this.physics.powerReady) await delay(50, this.lifetime.signal);
-    // Do not let stabilization pull a brake while the operator holds the
-    // carriage inverted. Engage it only after upright release and the glide.
-    await this.mode("FBWA");
-    this.controls(0, 0, 0.65);
+    // Actual ArduPlane takeoff detection, throttle and heading/climb control.
+    // No RC throttle injection or FBWA climb to bypass AUTO suppression.
+    await this.mode("TAKEOFF");
+    this.onLog("TAKEOFF confirmed; ArduPlane controls the climb to 15 m.");
     const deadline = performance.now() + 45000;
-    // Above 10 m ArduPlane's normal AUTO throttle-suppression gate clears,
-    // including when this slow aircraft is below the fixed-wing 5 m/s gate.
-    while (this.physics.launchPhase !== 2 || this.state.alt < 12) {
+    while (this.physics.launchPhase !== 2 || this.state.alt < 15) {
       if (performance.now() > deadline)
         throw Error(
           "Launch did not clear the ground. Reset and check wind conditions.",
         );
       await delay(100, this.lifetime.signal);
     }
-    await this.mode(mode);
+    if (mode !== "TAKEOFF") await this.mode(mode);
     this.controls(
       0,
       0,

@@ -9,6 +9,12 @@ fn smooth(t: f64) -> f64 {
     let x = t.clamp(0., 1.);
     (x * x * x * (10. + x * (-15. + 6. * x))).clamp(0., 1.)
 }
+// Integral of the quintic velocity ramp, extended linearly after completion.
+// Position, velocity and acceleration agree at both ends of each phase.
+fn travel(t: f64, start: f64, duration: f64) -> f64 {
+    let x = ((t - start) / duration).clamp(0., 1.);
+    duration * (2.5 * x.powi(4) - 3. * x.powi(5) + x.powi(6)) + (t - start - duration).max(0.)
+}
 fn poses(trim: &State, p: &Parameters, t: f64, height: f64) -> State {
     let mut y = State::zeros();
     let invert = smooth(t / 2.);
@@ -18,17 +24,15 @@ fn poses(trim: &State, p: &Parameters, t: f64, height: f64) -> State {
     let qc0 = UnitQuaternion::from_matrix(&rotation(trim, 13));
     let qp = UnitQuaternion::from_axis_angle(&V::y_axis(), angle) * qp0;
     let qc = UnitQuaternion::from_axis_angle(&V::y_axis(), PI * (1. - swing)) * qc0;
-    let walk = (t - 3.8).clamp(0., 1.6);
-    let toss = (t - 5.4).max(0.);
-    let x =
-        -0.4 * invert + 0.8 * swing + 0.75 / 1.6 * walk * walk + 1.5 * toss + 3.75 * toss * toss;
+    // Start walking during the overhead swing; blend the steps into the toss
+    // without stopping or introducing an impulse in the synthetic IMU data.
+    let x = -0.4 * invert + 0.8 * swing + 1.5 * travel(t, 3.2, 1.6) + 3. * travel(t, 5.0, 0.8);
     let h = 0.10
         + (height - 0.10) * invert
         // The hand rises from inverted setup to overhead release.
         + 0.6 * swing
         + 0.4 * (PI * swing).sin()
-        + 3. * toss * toss
-        - 3.75 * toss * toss * toss;
+        + 0.6 * travel(t, 5.0, 0.8);
     y.fixed_rows_mut::<3>(0).copy_from(&V::new(x, 0., -h));
     y.fixed_rows_mut::<4>(3).copy_from(&qp.coords);
     y.fixed_rows_mut::<4>(16).copy_from(&qc.coords);

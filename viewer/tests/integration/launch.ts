@@ -49,7 +49,6 @@ try {
     "Overhead swing",
     "Two steps",
     "Light toss",
-    "Unpowered glide",
     "Free flight",
   ])
     assert.ok(stages.has(stage), stage);

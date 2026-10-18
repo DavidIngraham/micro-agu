@@ -177,7 +177,10 @@ export class FlightView {
       );
       // The operator flips the carriage during handling; keep the launch
       // camera on the same side until the canopy is overhead.
-      if ((f.inflation ?? 1) < 0.99) forward.set(0, 0, -1);
+      const fill = Math.max(0, Math.min(1, ((f.inflation ?? 1) - 0.8) / 0.2));
+      const blend = fill * fill * (3 - 2 * fill);
+      const yaw = Math.atan2(forward.x, -forward.z) * blend;
+      forward.set(Math.sin(yaw), 0, -Math.cos(yaw));
       forward.y = 0;
       const desired = forward
         .normalize()

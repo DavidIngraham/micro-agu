@@ -1,5 +1,51 @@
 /* @ts-self-types="./sim_wasm.d.ts" */
 
+export class Dryden {
+    __destroy_into_raw() {
+        const ptr = this.__wbg_ptr;
+        this.__wbg_ptr = 0;
+        DrydenFinalization.unregister(this);
+        return ptr;
+    }
+    free() {
+        const ptr = this.__destroy_into_raw();
+        wasm.__wbg_dryden_free(ptr, 0);
+    }
+    /**
+     * @param {number} seed
+     */
+    constructor(seed) {
+        const ret = wasm.dryden_new(seed);
+        if (ret[2]) {
+            throw takeFromExternrefTable0(ret[1]);
+        }
+        this.__wbg_ptr = ret[0] >>> 0;
+        DrydenFinalization.register(this, this.__wbg_ptr, this);
+        return this;
+    }
+    /**
+     * @param {number} dt
+     * @param {number} speed
+     * @param {Float64Array} lengths
+     * @param {Float64Array} sigma
+     * @returns {Float64Array}
+     */
+    step(dt, speed, lengths, sigma) {
+        const ptr0 = passArrayF64ToWasm0(lengths, wasm.__wbindgen_malloc);
+        const len0 = WASM_VECTOR_LEN;
+        const ptr1 = passArrayF64ToWasm0(sigma, wasm.__wbindgen_malloc);
+        const len1 = WASM_VECTOR_LEN;
+        const ret = wasm.dryden_step(this.__wbg_ptr, dt, speed, ptr0, len0, ptr1, len1);
+        if (ret[3]) {
+            throw takeFromExternrefTable0(ret[2]);
+        }
+        var v3 = getArrayF64FromWasm0(ret[0], ret[1]).slice();
+        wasm.__wbindgen_free(ret[0], ret[1] * 8, 8);
+        return v3;
+    }
+}
+if (Symbol.dispose) Dryden.prototype[Symbol.dispose] = Dryden.prototype.free;
+
 export class Kernel {
     __destroy_into_raw() {
         const ptr = this.__wbg_ptr;
@@ -242,6 +288,9 @@ function __wbg_get_imports() {
     };
 }
 
+const DrydenFinalization = (typeof FinalizationRegistry === 'undefined')
+    ? { register: () => {}, unregister: () => {} }
+    : new FinalizationRegistry(ptr => wasm.__wbg_dryden_free(ptr >>> 0, 1));
 const KernelFinalization = (typeof FinalizationRegistry === 'undefined')
     ? { register: () => {}, unregister: () => {} }
     : new FinalizationRegistry(ptr => wasm.__wbg_kernel_free(ptr >>> 0, 1));

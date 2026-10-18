@@ -1,6 +1,13 @@
 /* tslint:disable */
 /* eslint-disable */
 
+export class Dryden {
+    free(): void;
+    [Symbol.dispose](): void;
+    constructor(seed: number);
+    step(dt: number, speed: number, lengths: Float64Array, sigma: Float64Array): Float64Array;
+}
+
 export class Kernel {
     free(): void;
     [Symbol.dispose](): void;
@@ -29,9 +36,12 @@ export type InitInput = RequestInfo | URL | Response | BufferSource | WebAssembl
 
 export interface InitOutput {
     readonly memory: WebAssembly.Memory;
+    readonly __wbg_dryden_free: (a: number, b: number) => void;
     readonly __wbg_kernel_free: (a: number, b: number) => void;
     readonly __wbg_simulator_free: (a: number, b: number) => void;
     readonly config_schema: () => [number, number];
+    readonly dryden_new: (a: number) => [number, number, number];
+    readonly dryden_step: (a: number, b: number, c: number, d: number, e: number, f: number, g: number) => [number, number, number, number];
     readonly kernel_derivative: (a: number, b: number, c: number, d: number, e: number, f: number, g: number) => [number, number, number, number];
     readonly kernel_inverted_launch: (a: number, b: number, c: number, d: number, e: number) => [number, number, number, number];
     readonly kernel_new: (a: number, b: number, c: number) => [number, number, number];
@@ -46,8 +56,8 @@ export interface InitOutput {
     readonly simulator_time_s: (a: number) => number;
     readonly __wbindgen_externrefs: WebAssembly.Table;
     readonly __wbindgen_free: (a: number, b: number, c: number) => void;
-    readonly __wbindgen_malloc: (a: number, b: number) => number;
     readonly __externref_table_dealloc: (a: number) => void;
+    readonly __wbindgen_malloc: (a: number, b: number) => number;
     readonly __wbindgen_realloc: (a: number, b: number, c: number, d: number) => number;
     readonly __wbindgen_start: () => void;
 }

@@ -6,7 +6,11 @@ My interest in guided parafoils started when I was 18, helping run tests at Star
 
 Stara was developing miniature autonomous parafoil systems. A [2002 company announcement](https://guidedparafoils.org/wp-content/uploads/2019/10/ProQuestDocuments-2019-10-06.pdf) describes a guidance unit weighing just over half a pound, combining GPS, a compass, and motor-driven steering under a small parafoil. Its later [Mosquito system](https://www.spacewar.com/reports/STARA_Technologies_Demos_UAV_Precision_Airdrop_Capabilities_For_US_Military.html) pursued precision delivery of small payloads from unmanned aircraft. I was helping execute tests, not designing those guidance systems, but the idea stayed with me.
 
-I'd wanted to try a project like this for years. The higher-end Opale and Hacker canopies cost more than I wanted to spend on an experiment, and I thought the original HobbyKing canopy was pretty bad. The inexpensive V2 canopy changed that: it made the experiment practical. Modern open-source avionics supplied the other key ingredient.
+There is already a rich little corner of the RC hobby devoted to powered paragliders, often called RC paramotors. Companies such as [Opale Paramodels](https://www.opale-paramodels.com/gb/) and [Hacker's Para-RC](https://www.hacker-motor-shop.com/Para-RC/Para-RC-gliders.htm?a=catalog&p=7836&shop=hacker_e) offer purpose-built canopies, motorized frames, miniature pilots and accessories. Around that hardware is a community with years of experience in rigging, launching and flying these aircraft. That meant I could build on an existing flying platform and learn from people who already understood its peculiarities.
+
+The barrier for me had always been cost. I'd wanted to try a project like this for years, but the specialist canopies and powered setups represented more money than I wanted to put into an experiment. HobbyKing offered a much cheaper entry point. I hadn't been impressed by its original canopy, but the [V2's redesigned wing and improved suspension lines](https://www.hobbyking.com/en_us/h-king-paramotor-v2-w-led-light-bar-2400mm-pnf.html) made it worth another look.
+
+That changed the economics of the project: I could start with an affordable commercial canopy and concentrate my effort on the payload, guidance and control. Modern open-source avionics supplied the other key ingredient. Together, they made it practical to revisit the small guided parafoils that had first caught my imagination at Stara.
 
 That became **micro-AGU—Micro Aerial Guidance Unit**: an opportunity to explore how much better a small guided parafoil could perform with modern open-source avionics.
 
@@ -21,8 +25,6 @@ This post brings together the physical design, my original notebook, and what th
 ## A commercial canopy and a custom payload
 
 The canopy is a **HobbyKing V2**, a 2.4 m single-skin wing. [HobbyKing redesigned the wing and improved the suspension lines](https://hobbyking.com/en_us/h-king-paramotor-v2-w-led-light-bar-2400mm-pnf.html), with testing and feedback from JohnVHRC. Those changes made V2 worth trying.
-
-The affordability mattered more than having a premium wing. The [Opale](https://www.opale-paramodels.com/gb/rc-paramotor-paraglider-wing/1739-ultra-35.html) and [Hacker](https://www.hacker-motor-shop.com/Para-RC/Para-RC-gliders.htm?a=catalog&p=7836&shop=hacker_e) canopies I had considered cost more than I wanted to spend on the experiment.
 
 ![The custom payload resting on the folded canopy with suspension lines visible](assets/micro-agu/build-canopy.jpg)
 

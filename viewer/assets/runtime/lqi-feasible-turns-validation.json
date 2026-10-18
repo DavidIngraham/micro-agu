@@ -1,0 +1,357 @@
+{
+  "ai_assisted": true,
+  "qualification": {
+    "accepted": true,
+    "rows": [
+      {
+        "kind": "transition",
+        "scheme": "baseline",
+        "case": 0,
+        "rate": 25,
+        "complete": true,
+        "failure": null,
+        "source": "deployment-v2/qualification/transition-baseline-25/000.json",
+        "pitch_peak": 36.455000770212116,
+        "alt_peak": 3.2366489788187778,
+        "passed": true
+      },
+      {
+        "kind": "transition",
+        "scheme": "lqi",
+        "case": 0,
+        "rate": 25,
+        "complete": true,
+        "failure": null,
+        "source": "deployment-v2/qualification/transition-lqi-25/000.json",
+        "pitch_peak": 39.833331291894325,
+        "alt_peak": 3.3227135065811524,
+        "passed": true
+      },
+      {
+        "kind": "transition",
+        "scheme": "baseline",
+        "case": 1,
+        "rate": 25,
+        "complete": true,
+        "failure": null,
+        "source": "deployment-v2/qualification/transition-baseline-25/001.json",
+        "pitch_peak": 38.70948964863265,
+        "alt_peak": 3.2228627222270987,
+        "passed": true
+      },
+      {
+        "kind": "transition",
+        "scheme": "lqi",
+        "case": 1,
+        "rate": 25,
+        "complete": true,
+        "failure": null,
+        "source": "deployment-v2/qualification/transition-lqi-25/001.json",
+        "pitch_peak": 27.73075499706545,
+        "alt_peak": 3.1441798653945057,
+        "passed": true
+      },
+      {
+        "kind": "transition",
+        "scheme": "baseline",
+        "case": 2,
+        "rate": 25,
+        "complete": true,
+        "failure": null,
+        "source": "deployment-v2/qualification/transition-baseline-25/002.json",
+        "pitch_peak": 39.55091563073994,
+        "alt_peak": 3.2139379184188854,
+        "passed": true
+      },
+      {
+        "kind": "transition",
+        "scheme": "lqi",
+        "case": 2,
+        "rate": 25,
+        "complete": true,
+        "failure": null,
+        "source": "deployment-v2/qualification/transition-lqi-25/002.json",
+        "pitch_peak": 41.69530194401265,
+        "alt_peak": 3.356089756836866,
+        "passed": true
+      },
+      {
+        "kind": "transition",
+        "scheme": "baseline",
+        "case": 3,
+        "rate": 25,
+        "complete": true,
+        "failure": null,
+        "source": "deployment-v2/qualification/transition-baseline-25/003.json",
+        "pitch_peak": 56.036331874244965,
+        "alt_peak": 4.3556450284972925,
+        "passed": true
+      },
+      {
+        "kind": "transition",
+        "scheme": "lqi",
+        "case": 3,
+        "rate": 25,
+        "complete": true,
+        "failure": null,
+        "source": "deployment-v2/qualification/transition-lqi-25/003.json",
+        "pitch_peak": 38.64226087440051,
+        "alt_peak": 4.526148106843522,
+        "passed": true
+      },
+      {
+        "kind": "turn",
+        "scheme": "lqi",
+        "case": 0,
+        "rate": 10,
+        "complete": true,
+        "failure": null,
+        "source": "deployment-v2/qualification/turn-lqi-10/000.json",
+        "pitch_peak": 2.9845005001048874,
+        "alt_peak": 0.25695807096567336,
+        "original_reasons": [
+          "Missing controller diagnostics"
+        ],
+        "release_reasons": [],
+        "passed": true
+      },
+      {
+        "kind": "turn",
+        "scheme": "lqi",
+        "case": 1,
+        "rate": 10,
+        "complete": true,
+        "failure": null,
+        "source": "deployment-v2/qualification/turn-lqi-10/001.json",
+        "pitch_peak": 2.933453159178209,
+        "alt_peak": 0.24437167658760472,
+        "original_reasons": [
+          "Missing controller diagnostics"
+        ],
+        "release_reasons": [],
+        "passed": true
+      },
+      {
+        "kind": "turn",
+        "scheme": "lqi",
+        "case": 0,
+        "rate": 25,
+        "complete": true,
+        "failure": null,
+        "source": "deployment-v2/qualification/turn-lqi-25/000.json",
+        "pitch_peak": 5.101219631130722,
+        "alt_peak": 0.39743665550565765,
+        "original_reasons": [
+          "Missing controller diagnostics"
+        ],
+        "release_reasons": [],
+        "passed": true
+      },
+      {
+        "kind": "turn",
+        "scheme": "lqi",
+        "case": 1,
+        "rate": 25,
+        "complete": true,
+        "failure": null,
+        "source": "deployment-v2/qualification/turn-lqi-25/001.json",
+        "pitch_peak": 3.5167643685704775,
+        "alt_peak": 0.3739337354545782,
+        "original_reasons": [
+          "Missing controller diagnostics"
+        ],
+        "release_reasons": [],
+        "passed": true
+      }
+    ],
+    "firmware_sha256": "7288fcc2de2da91965ce6ea9eaf66be520859042f9be9a7906ace2a090793238"
+  },
+  "fresh_transitions": {
+    "accepted": true,
+    "rows": [
+      {
+        "kind": "transition",
+        "scheme": "baseline",
+        "case": 0,
+        "rate": 25,
+        "complete": true,
+        "failure": null,
+        "source": "deployment-v2/fresh/qualification/transition-baseline-25/000.json",
+        "pitch_peak": 40.934474574570395,
+        "alt_peak": 3.709375337909613,
+        "passed": true
+      },
+      {
+        "kind": "transition",
+        "scheme": "lqi",
+        "case": 0,
+        "rate": 25,
+        "complete": true,
+        "failure": null,
+        "source": "deployment-v2/fresh/qualification/transition-lqi-25/000.json",
+        "pitch_peak": 44.85171383694806,
+        "alt_peak": 3.810946161174911,
+        "passed": true
+      },
+      {
+        "kind": "transition",
+        "scheme": "baseline",
+        "case": 1,
+        "rate": 25,
+        "complete": true,
+        "failure": null,
+        "source": "deployment-v2/fresh/qualification/transition-baseline-25/001.json",
+        "pitch_peak": 49.255875732053354,
+        "alt_peak": 3.6177034334196136,
+        "passed": true
+      },
+      {
+        "kind": "transition",
+        "scheme": "lqi",
+        "case": 1,
+        "rate": 25,
+        "complete": true,
+        "failure": null,
+        "source": "deployment-v2/fresh/qualification/transition-lqi-25/001.json",
+        "pitch_peak": 29.097583295561765,
+        "alt_peak": 3.7383127020579536,
+        "passed": true
+      }
+    ],
+    "firmware_sha256": "7288fcc2de2da91965ce6ea9eaf66be520859042f9be9a7906ace2a090793238"
+  },
+  "comparison": {
+    "mean_bias": {
+      "reference_median": 3.6248921581306974,
+      "candidate_median": 0.5998310077990535,
+      "paired_percent_median": -85.03947349470113,
+      "paired_percent_min": -95.03061261312926,
+      "paired_percent_max": -65.49043904803575,
+      "improved": 12,
+      "reference_max": 4.908961873575273,
+      "candidate_max": 1.2379558375690305
+    },
+    "tracking_rms": {
+      "reference_median": 6.678366731626353,
+      "candidate_median": 4.888922217056418,
+      "paired_percent_median": -28.739807496591006,
+      "paired_percent_min": -52.774891803524724,
+      "paired_percent_max": -14.373427272220107,
+      "improved": 12,
+      "reference_max": 11.269185771464278,
+      "candidate_max": 9.649417550431483
+    },
+    "rate_std": {
+      "reference_median": 4.968656172995353,
+      "candidate_median": 4.73962079864616,
+      "paired_percent_median": -7.339896310639799,
+      "paired_percent_min": -14.504493021209107,
+      "paired_percent_max": -0.6324700742899814,
+      "improved": 12,
+      "reference_max": 9.797835387781616,
+      "candidate_max": 9.153891589098038
+    },
+    "pitch_rms": {
+      "reference_median": 6.559521010207837,
+      "candidate_median": 6.587341488591979,
+      "paired_percent_median": -3.565855235292498,
+      "paired_percent_min": -5.765524959549284,
+      "paired_percent_max": 1.194618207003817,
+      "improved": 8,
+      "reference_max": 14.271584641125072,
+      "candidate_max": 13.490075039014968
+    },
+    "pitch_p95": {
+      "reference_median": 12.907650241796865,
+      "candidate_median": 12.831137100184293,
+      "paired_percent_median": -0.4529958372562981,
+      "paired_percent_min": -8.229771101125472,
+      "paired_percent_max": 1.707555216161838,
+      "improved": 6,
+      "reference_max": 29.081678317448272,
+      "candidate_max": 26.68832275955664
+    },
+    "pitch_peak": {
+      "reference_median": 23.18752399470062,
+      "candidate_median": 27.14276225450335,
+      "paired_percent_median": -0.43862199918008327,
+      "paired_percent_min": -24.807829196475083,
+      "paired_percent_max": 44.266802229920984,
+      "improved": 6,
+      "reference_max": 52.23979748448233,
+      "candidate_max": 45.85235703213768
+    },
+    "alt_rms": {
+      "reference_median": 0.482390548817185,
+      "candidate_median": 0.3159460410002053,
+      "paired_percent_median": -32.38145233236946,
+      "paired_percent_min": -49.44064942575225,
+      "paired_percent_max": -12.524824538260004,
+      "improved": 12,
+      "reference_max": 0.7574222276002276,
+      "candidate_max": 0.6625564225795187
+    },
+    "alt_peak": {
+      "reference_median": 1.1884032369010349,
+      "candidate_median": 0.9228019077644092,
+      "paired_percent_median": -21.94815788987416,
+      "paired_percent_min": -43.11098552491007,
+      "paired_percent_max": 8.484406157493996,
+      "improved": 9,
+      "reference_max": 2.3097386987630344,
+      "candidate_max": 1.7055597090986936
+    },
+    "shaft_W": {
+      "reference_median": 81.28646521682028,
+      "candidate_median": 78.64648865943497,
+      "paired_percent_median": -2.750752725325728,
+      "paired_percent_min": -5.842430832234891,
+      "paired_percent_max": -0.6217580301035697,
+      "improved": 12,
+      "reference_max": 85.92051105978629,
+      "candidate_max": 83.92271735940676
+    },
+    "shaft_Wh_air_km": {
+      "reference_median": 5.261333915008892,
+      "candidate_median": 5.029494259994136,
+      "paired_percent_median": -3.841767757671416,
+      "paired_percent_min": -8.167231997248003,
+      "paired_percent_max": 0.031347071029830254,
+      "improved": 11,
+      "reference_max": 5.615750338596449,
+      "candidate_max": 5.447933060798282
+    },
+    "common_brake_mean": {
+      "reference_median": 0.05918448717948718,
+      "candidate_median": 0.038767692307692316,
+      "paired_percent_median": -50.45282350455642,
+      "paired_percent_min": -86.76688955252612,
+      "paired_percent_max": 29.20067779503266,
+      "improved": 9,
+      "reference_max": 0.08925176923076925,
+      "candidate_max": 0.06459543589743591
+    },
+    "pitch_wind_low": {
+      "reference_median": 7.058527106831472,
+      "candidate_median": 6.97310602579627,
+      "paired_percent_median": -7.345439908476697,
+      "paired_percent_min": -21.34571826817283,
+      "paired_percent_max": 30.08486943463462,
+      "improved": 7,
+      "reference_max": 8.485519751028164,
+      "candidate_max": 8.816356876468651
+    },
+    "pitch_wind_high": {
+      "reference_median": 35.5060360698849,
+      "candidate_median": 35.52578579888835,
+      "paired_percent_median": -2.3581626798436783,
+      "paired_percent_min": -6.972528059803107,
+      "paired_percent_max": 6.885457602377265,
+      "improved": 9,
+      "reference_max": 39.374368799828595,
+      "candidate_max": 39.87745844975924
+    }
+  },
+  "scope": "Browser simulation only. 25 deg/s cap; unchanged K/L, as-built geometry and EKF sensing. Original disturbance screens retained; post-hoc paired analysis is not a physical safety certification.",
+  "limits": "Pitch peaks are mixed; 40 deg/s is not deployed. PG + TECS remains the default."
+}

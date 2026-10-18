@@ -219,3 +219,35 @@ by `simulation/tools/design_mimo.py` from the 132 mm as-built Rust model. This
 initial fixed operating-point design is distinct from the archived scheduled
 two-input research controller; the switch is for simulation comparison, not a
 claim that it outperforms PG + TECS or is ready for flight.
+
+The 2026-10-17 original-observer backport study adds `CP3_HRTC`, a climb-reference
+filter applied before altitude-reference integration and feedforward. Zero disables
+it; the accepted local research configuration uses 0.7 s with the existing ±0.5 m/s
+limits. Gains and sensing are unchanged by this backport; it does not enable a
+pitot sensor or canopy-truth feedback. See the
+[paired results](../research/lqi-backport-2026-10-17/RESULTS.md).
+
+The preceding public simulator release used the separately validated
+`responsive_softspeed` retune with `CP3_HRTC=0.7`. Its observer, sensing, 10% common
+trim and 132 mm physics remain unchanged. Two tuning passes and 168 SITL runs
+included fresh paired cases, AUTO/CRUISE missions and ten-minute recovery checks.
+See the [retune results](../research/lqi-filter-retune-2026-10-17/RESULTS.md).
+The earlier crosswind comparison had unmatched gust incidence; that test was
+corrected before retuning, and its original results retain an erratum.
+
+The current browser release adds feasible turn trims, corrected anti-windup and
+observer equilibrium recentering with the same feedback and observer gains. Its
+LQI rate cap is 25 deg/s, and a two-second engagement blend addresses the tested
+FBWA-to-LQI brake transient. PG + TECS remains the default. See
+[release scope and validation](LQI-FEASIBLE-TURNS.md).
+
+To reproduce the published controller, use ArduPilot base
+`010ada6a4f0b26910fc18ecca176d2e65c5ed9d7` plus
+`assets/runtime/lqi-feasible-turns.patch`; validation details and firmware hashes are in
+`assets/runtime/lqi-feasible-turns-validation.json` and `assets/runtime/build.json`.
+This complete patch replaces the older filter-tune patch; do not apply both.
+Apply that patch in a clean checkout before running the firmware build command
+above. The local ArduPilot research checkout still contains separate zero-trim
+and EKF experiments with a different gain dimension. Rebuilding that checkout
+does not reproduce the packaged public runtime. Its research changes were
+preserved rather than overwritten during publication.

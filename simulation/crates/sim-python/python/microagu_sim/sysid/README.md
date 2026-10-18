@@ -41,3 +41,7 @@ Optional nuisance fitting permits a bounded initial canopy-angle correction and 
 ## Evidence and limitations
 
 See `research/greybox-pipeline-2026-10-18` for exact baseline reproduction, frozen real-data comparisons, known-physics synthetic recovery, integration-resolution audits and CLI smoke tests. The noise-free synthetic case verifies six-parameter recovery, but uses the same simulator for generation and fitting. The real-data candidates still miss oscillation energy and reach parameter bounds. None is promoted to production or used for LQI retuning.
+
+### Measured aircraft profile
+
+An optional session `aircraft_profile` path loads the versioned profile produced by `python -m microagu_sim.pipeline init aircraft.json`. It is applied during every identification and validation replay, and its hash is bound into CLI fit outputs. The current adapter supports the Trout Lake as-built geometry. Validation rejects a different profile from the fitted one. Omitting the field retains the historical profile exactly.

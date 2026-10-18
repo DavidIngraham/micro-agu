@@ -173,3 +173,7 @@ bounded fitting, optional initial-state/wind corrections, residual diagnostics,
 and separate reserved-episode validation through a CLI. See the
 [Trout Lake comparison](../research/greybox-pipeline-2026-10-18/README.md) for
 baseline reproduction, synthetic parameter recovery and measured limitations.
+
+## Offline controller pipeline
+
+The [CLI pipeline and diagram](crates/sim-python/python/microagu_sim/pipeline/README.md) connect measured aircraft profiles, existing sysid, gain synthesis, observer-in-loop screening and paired ArduPilot/EKF campaigns. It exports compatible gain files without modifying the deployed simulator. The [initial pipeline study](../research/controller-pipeline-2026-10-18/RESULTS.md) records the current tuning decision and repeatability limits.

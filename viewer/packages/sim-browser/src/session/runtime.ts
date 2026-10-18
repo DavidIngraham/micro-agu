@@ -69,10 +69,12 @@ export class Simulator {
   private channels = [1500, 1500, 1000, 1500, 1500, 1500, 1000, 1800];
   private busy = false;
   private lastStatus = "";
+  private gainFileConfirmed = false;
   async start(
     url: string,
     config?: PhysicsConfig,
     physicsBase = new URL(".", url).href,
+    gainFile?: Uint8Array,
   ) {
     if (this.started) throw Error("Session already started");
     this.started = true;
@@ -90,6 +92,8 @@ export class Simulator {
       await assets.bytes("arduplane.js");
       url = assets.url("arduplane.js");
     }
+    if (!gainFile && assets?.has("lqi-gains.bin"))
+      gainFile = new Uint8Array(await assets.bytes("lqi-gains.bin"));
     const wasmBinary = assets
       ? await assets.bytes("arduplane.wasm")
       : undefined;
@@ -98,6 +102,7 @@ export class Simulator {
     const defaults =
       this.physics.config.defaults +
       "\nCP_TYPE 3\nRC6_OPTION 109\n" +
+      (gainFile ? "\nCP3_FILE 1\n" : "") +
       // Browser hand launch: release upright at 4.5 m/s; AP owns throttle and climb.
       "\nTKOFF_ALT 15\nTKOFF_DIST 200\nTKOFF_LVL_ALT 5\nTKOFF_LVL_PITCH 5\nTKOFF_THR_MINACC 0\nTKOFF_THR_MINSPD 2\nTKOFF_THR_DELAY 0\nTKOFF_THR_MAX 60\n" +
       `\nFLTMODE_CH 0\nLOG_DISARMED 0\nLOG_BACKEND_TYPE 0\nFS_GCS_ENABL 0\nFS_LONG_ACTN 0\nRC_OVERRIDE_TIME 1\nSIM_SPEEDUP ${this.warmupSpeed}\nSTICK_MIXING 4\nFBWB_ELEV_REV 0\n`;
@@ -132,6 +137,7 @@ export class Simulator {
       preRun: [
         (m: any) => {
           m.FS.writeFile("/browser.parm", defaults);
+          if (gainFile) m.FS.writeFile("/lqi-gains.bin", gainFile);
           this.disconnectPhysics = connectPhysicsSocket(m, (packet) => {
             const sensors = this.physics.respond(packet);
             if (performance.now() - this.lastTruth >= this.truthIntervalMs) {
@@ -206,6 +212,13 @@ export class Simulator {
         m.name === "EKF_STATUS_REPORT" && (Number(m.values.flags) & 19) === 19,
       45000,
     );
+    if (gainFile && !this.gainFileConfirmed) {
+      const error = Error(
+        "Firmware did not confirm a compatible LQI gain file",
+      );
+      this.dispose(error);
+      throw error;
+    }
     await this.speedup(1);
     this.onLog("EKF ready; simulation speed restored to 1× before launch.");
   }
@@ -276,6 +289,8 @@ export class Simulator {
             break;
           case "STATUSTEXT":
             this.lastStatus = String(m.values.text);
+            if (this.lastStatus === "LQI gain file loaded")
+              this.gainFileConfirmed = true;
             this.onLog(this.lastStatus);
             break;
         }

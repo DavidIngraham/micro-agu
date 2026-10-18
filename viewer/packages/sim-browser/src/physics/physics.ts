@@ -19,6 +19,9 @@ export interface PhysicsConfig {
   voltage: number;
   brake_rate_mm_s: number;
   brake_offsets_m: number[];
+  /** Experimental sysid uncertainties; absent means production behavior. */
+  brake_lag_s?: number;
+  effective_pull_scale?: number;
   defaults: string;
   trim_residual: number;
   launch_settings?: number[];
@@ -30,6 +33,7 @@ export class Physics {
   released = false;
   brakes: number[];
   command: number[];
+  private laggedPull?: number[];
   private frame: number | null = null;
   private cached = "";
   private windNED = [0, 0, 0];
@@ -98,6 +102,15 @@ export class Physics {
       config.parameters.length !== 70
     )
       throw Error("Unsupported high-DOF model configuration.");
+    if (
+      !Number.isFinite(config.brake_lag_s ?? 0) ||
+      (config.brake_lag_s ?? 0) < 0 ||
+      (config.brake_lag_s ?? 0) > 1 ||
+      !Number.isFinite(config.effective_pull_scale ?? 1) ||
+      (config.effective_pull_scale ?? 1) <= 0 ||
+      (config.effective_pull_scale ?? 1) > 2
+    )
+      throw Error("Invalid actuator uncertainty configuration");
     this.state = config.state.slice();
     this.rpm = config.rpm;
     this.command = config.command.slice();
@@ -222,10 +235,21 @@ export class Physics {
       const input = [
         this.command[0],
         ...average.map((v, i) => {
-          const pull = v / 1000 - this.config.brake_offsets_m[i];
+          const pull =
+            (v / 1000 - this.config.brake_offsets_m[i]) *
+            (this.config.effective_pull_scale ?? 1);
           return this.config.parameters[60] > 0 ? pull : Math.max(0, pull);
         }),
       ];
+      const lag = this.config.brake_lag_s ?? 0;
+      if (lag > 0) {
+        const decay = Math.exp(-dt / lag);
+        this.laggedPull ??= input.slice(1);
+        this.laggedPull = this.laggedPull.map(
+          (v, i) => decay * v + (1 - decay) * input[i + 1],
+        );
+        input.splice(1, 2, ...this.laggedPull);
+      }
       const y = new Float64Array(this.state),
         wind = new Float64Array(this.windNED);
       if (this.inverted && this.launchElapsed <= 5.8 + 1e-8) {

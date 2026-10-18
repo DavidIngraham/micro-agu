@@ -59,13 +59,17 @@ def main():
             "geometry": {k: np.asarray(v).tolist() for k, v in sim.geometry.items()},
         }
         for flight in sorted({s.flight for s in segments})
-        for sim in [model.make_simulator(flight, profile="as_built")]
+        for sim in [
+            model.configured_simulator(next(s for s in segments if s.flight == flight))
+        ]
     }
     (args.output / "manifest.json").write_text(json.dumps(manifest, indent=2) + "\n")
     if args.action == "validate":
         from .validation import validate
 
         fitted = json.loads(args.fit_result.read_text())
+        if fitted.get("aircraft_profile_sha256") != hashes.get("aircraft_profile"):
+            raise ValueError("Validation aircraft profile differs from fitted profile")
         result = validate(
             segments,
             fitted["selection"]["theta"],
@@ -84,6 +88,7 @@ def main():
         print(json.dumps(result["by_episode"], indent=2))
         return
     result = fit(segments, options, cfg.get("starts"))
+    result["aircraft_profile_sha256"] = hashes.get("aircraft_profile")
     (args.output / "fit.json").write_text(
         json.dumps(result, indent=2, allow_nan=False) + "\n"
     )

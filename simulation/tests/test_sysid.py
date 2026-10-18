@@ -229,3 +229,32 @@ def test_relabeling_session_cannot_validate_training_episode():
             [1, 1, 1, 1, 1, 0.04],
             training_episodes=["a", "b"],
         )
+
+
+def test_measured_profile_reaches_identification(tmp_path):
+    from microagu_sim.sysid.aircraft import snapshot
+    from microagu_sim.sysid.model import configured_simulator
+
+    profile = snapshot()
+    profile["measurements"]["Ixx"]["value"] *= 1.2
+    (tmp_path / "aircraft.json").write_text(json.dumps(profile))
+    path, cfg = prepared(tmp_path)
+    cfg["aircraft_profile"] = "aircraft.json"
+    path.write_text(json.dumps(cfg))
+    _, segments, hashes = load_session(path)
+    assert "aircraft_profile" in hashes
+    sim = configured_simulator(segments[0])
+    assert sim.parameters["Ixx"] == profile["measurements"]["Ixx"]["value"]
+    with pytest.raises(ValueError, match="does not match"):
+        replace(segments[0], flight="hood_river")
+
+
+def test_explicit_profile_preserves_replay():
+    from microagu_sim.sysid.aircraft import snapshot
+    from microagu_sim.sysid.model import replay
+
+    a = segment()
+    baseline = replay(a)
+    explicit = replay(replace(a, aircraft_profile=snapshot()))
+    for before, after in zip(baseline, explicit):
+        np.testing.assert_array_equal(before, after)

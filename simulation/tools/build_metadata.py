@@ -19,7 +19,7 @@ manifest['physics_source'] = dict(repository='https://github.com/DavidIngraham/m
     working_tree_dirty=dirty, language='Rust', source_sha256=hashes,
     rustc=subprocess.check_output(['rustc','--version'],text=True).strip(), wasm_bindgen='0.2.114')
 manifest['sha256'] = {p.name: hashlib.sha256(p.read_bytes()).hexdigest() for p in [*destination.iterdir(), *(root.parent/'viewer/generated/physics').iterdir(), *(root.parent/'viewer/generated/ardupilot').iterdir()]
-    if p.name.startswith(('arduplane.','sim_wasm.','sim_wasm_bg.','highdof.json'))}
+    if p.name.startswith(('arduplane.','sim_wasm.','sim_wasm_bg.','highdof.json','lqi-gains.bin'))}
 manifest_path.write_text(json.dumps(manifest,indent=2)+'\n')
 metadata = json.loads(subprocess.check_output(['cargo','metadata','--locked','--format-version','1','--filter-platform','wasm32-unknown-unknown'],cwd=root,text=True))
 packages = {p['id']:p for p in metadata['packages']}

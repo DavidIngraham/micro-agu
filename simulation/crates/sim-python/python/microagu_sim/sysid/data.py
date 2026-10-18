@@ -23,9 +23,15 @@ class Segment:
     rpm: float
     wind_sigma: float = 2.0
     initial_state: np.ndarray | None = None
+    aircraft_profile: dict | None = None
 
     def __post_init__(self):
         n = len(self.time)
+        if (
+            self.aircraft_profile is not None
+            and self.aircraft_profile.get("flight") != self.flight
+        ):
+            raise ValueError("Aircraft profile does not match flight configuration")
         if (
             self.role not in ("train", "validation")
             or not self.episode
@@ -96,6 +102,16 @@ def load_session(path):
     segments = []
     hashes = {}
     arrays = {}
+    aircraft_profile = None
+    if cfg.get("aircraft_profile"):
+        profile_path = (path.parent / cfg["aircraft_profile"]).resolve()
+        aircraft_profile = json.loads(profile_path.read_text())
+        hashes["aircraft_profile"] = hashlib.sha256(
+            profile_path.read_bytes()
+        ).hexdigest()
+        from .aircraft import make_aircraft
+
+        make_aircraft(aircraft_profile, [1, 1, 1, 1, 1, 0])
     for spec in cfg["segments"]:
         pair = []
         for key in ["causal_input", "propulsion_input"]:
@@ -158,6 +174,7 @@ def load_session(path):
                 float(b["voltage"][i]),
                 float(b["rpm"][i]),
                 sigma,
+                aircraft_profile=aircraft_profile,
             )
         )
     validate_split(segments)

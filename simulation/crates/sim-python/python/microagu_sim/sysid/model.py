@@ -63,6 +63,16 @@ def initialize(sim, segment, alpha, wind):
     ]
 
 
+def configured_simulator(segment, substeps=32):
+    if segment.aircraft_profile is None:
+        return make_simulator(segment.flight, profile="as_built", substeps=substeps)
+    from .aircraft import make_aircraft
+
+    sim = make_aircraft(segment.aircraft_profile, DEFAULT)
+    sim.substeps = substeps
+    return sim
+
+
 def replay(segment, theta=DEFAULT, nuisance=None, substeps=32, alpha=0.35):
     theta = np.asarray(theta, float)
     if (
@@ -75,7 +85,7 @@ def replay(segment, theta=DEFAULT, nuisance=None, substeps=32, alpha=0.35):
     nuisance = np.zeros(3) if nuisance is None else np.asarray(nuisance, float)
     if nuisance.shape != (3,) or not np.isfinite(nuisance).all():
         raise ValueError("Expected canopy-angle, north-wind, east-wind corrections")
-    sim = make_simulator(segment.flight, profile="as_built", substeps=substeps)
+    sim = configured_simulator(segment, substeps)
     for key, value in zip(
         ["rotor_spin_inertia", "joint_k_yaw", "joint_c_yaw", "joint_c_pitch"], theta[:4]
     ):

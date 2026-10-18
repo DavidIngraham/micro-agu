@@ -23,6 +23,9 @@ export class RuntimeAssets {
       throw Error("Unsupported physics runtime");
     return new RuntimeAssets(base, data.sha256);
   }
+  has(name: string) {
+    return Object.hasOwn(this.hashes, name);
+  }
   url(name: string) {
     const url = new URL(name, this.base),
       hash = this.hashes[name];

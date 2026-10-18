@@ -1,0 +1,133 @@
+{
+  "source": "viewer/assets/runtime/lqi-longitudinal-validation.json",
+  "pairs": [
+    {
+      "case": 0,
+      "complete": true,
+      "checks": {
+        "pitch_rms": true,
+        "pitch_peak": true
+      },
+      "passed": true,
+      "ratios": {
+        "pitch_rms": 0.5719967696394039,
+        "pitch_peak": 0.3721525703214258,
+        "energy_Wh": 0.9781043628283321
+      },
+      "lqi_reasons": [],
+      "baseline_reasons": []
+    },
+    {
+      "case": 1,
+      "complete": true,
+      "checks": {
+        "pitch_rms": true,
+        "pitch_peak": true
+      },
+      "passed": true,
+      "ratios": {
+        "pitch_rms": 0.6091867194579834,
+        "pitch_peak": 0.473776148061224,
+        "energy_Wh": 0.9592156388370924
+      },
+      "lqi_reasons": [],
+      "baseline_reasons": []
+    },
+    {
+      "case": 2,
+      "complete": true,
+      "checks": {
+        "pitch_rms": true,
+        "pitch_peak": true
+      },
+      "passed": true,
+      "ratios": {
+        "pitch_rms": 0.6759999405294822,
+        "pitch_peak": 0.7874066385181837,
+        "energy_Wh": 0.950575131063403
+      },
+      "lqi_reasons": [],
+      "baseline_reasons": []
+    },
+    {
+      "case": 3,
+      "complete": true,
+      "checks": {
+        "pitch_rms": true,
+        "pitch_peak": true
+      },
+      "passed": true,
+      "ratios": {
+        "pitch_rms": 0.5539687457084224,
+        "pitch_peak": 0.42245148206588945,
+        "energy_Wh": 0.9484172437070865
+      },
+      "lqi_reasons": [],
+      "baseline_reasons": []
+    },
+    {
+      "case": 4,
+      "complete": true,
+      "checks": {
+        "pitch_rms": true,
+        "pitch_peak": true
+      },
+      "passed": true,
+      "ratios": {
+        "pitch_rms": 0.6936886006679532,
+        "pitch_peak": 0.5881077983799131,
+        "energy_Wh": 0.9317039955599032
+      },
+      "lqi_reasons": [],
+      "baseline_reasons": []
+    },
+    {
+      "case": 5,
+      "complete": true,
+      "checks": {
+        "pitch_rms": true,
+        "pitch_peak": true
+      },
+      "passed": true,
+      "ratios": {
+        "pitch_rms": 0.6600341080455441,
+        "pitch_peak": 0.7194160753382631,
+        "energy_Wh": 0.9569296811816016
+      },
+      "lqi_reasons": [],
+      "baseline_reasons": []
+    },
+    {
+      "case": "fresh-0",
+      "complete": true,
+      "checks": {
+        "pitch_rms": true,
+        "pitch_peak": true
+      },
+      "passed": true,
+      "ratios": {
+        "pitch_rms": 0.6491368473181153,
+        "pitch_peak": 0.5512437358273297,
+        "energy_Wh": 0.9549745003835749
+      },
+      "lqi_reasons": [],
+      "baseline_reasons": []
+    },
+    {
+      "case": "fresh-1",
+      "complete": true,
+      "checks": {
+        "pitch_rms": true,
+        "pitch_peak": true
+      },
+      "passed": true,
+      "ratios": {
+        "pitch_rms": 0.6561723753152224,
+        "pitch_peak": 0.5060498155812275,
+        "energy_Wh": 0.9658732764906179
+      },
+      "lqi_reasons": [],
+      "baseline_reasons": []
+    }
+  ]
+}

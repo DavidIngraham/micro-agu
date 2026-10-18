@@ -645,4 +645,7 @@ A relative-motion observer remains a possible extension. The present result uses
 
 The [next flight test card](next-flight-test-card.md) turns that validation into a staged sequence, with configuration records, ordinary throttle/turn maneuvers, takeover criteria and a postflight analysis plan.
 
-The follow-up [state-space controller study](controller-state-space.md) builds on these two loops, comparing their joint tuning with actuator/sensor diagnostics and a full-state feedback benchmark under matched tests.
+The follow-up [state-space controller study](controller-state-space-archive.md) builds on these two loops, comparing their joint tuning with actuator/sensor diagnostics and a full-state feedback benchmark under matched tests.
+
+
+For the subsequent coordinated controller, see [Developing the LQI controller](controller-state-space.md).

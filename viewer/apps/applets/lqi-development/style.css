@@ -1,0 +1,106 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  background: #f5f8f8;
+  color: #203e49;
+  font:
+    16px/1.55 system-ui,
+    sans-serif;
+}
+main {
+  max-width: 1050px;
+  margin: auto;
+  padding: 24px;
+}
+h1 {
+  font-size: clamp(24px, 4vw, 34px);
+  line-height: 1.2;
+}
+h2 {
+  margin-top: 36px;
+}
+.eyebrow {
+  font-size: 12px;
+  letter-spacing: 0.15em;
+  color: #277f78;
+}
+.grid {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 24px;
+  align-items: center;
+}
+canvas {
+  width: 100%;
+  height: auto;
+}
+label {
+  display: block;
+  margin: 16px 0;
+  font-weight: 600;
+}
+input {
+  display: block;
+  width: 100%;
+  min-height: 44px;
+  accent-color: #237f78;
+}
+select {
+  font: inherit;
+  max-width: 100%;
+  padding: 10px;
+  border: 1px solid #91a9b3;
+  border-radius: 8px;
+  background: white;
+  color: inherit;
+}
+.note {
+  font-size: 14px;
+  color: #526c76;
+}
+output {
+  float: right;
+}
+.row {
+  display: grid;
+  grid-template-columns: 82px 1fr 58px;
+  gap: 8px;
+  align-items: center;
+  margin: 10px 0;
+}
+.track {
+  background: #e0e9eb;
+  border-right: 2px dashed #536975;
+  height: 18px;
+}
+.fill {
+  height: 100%;
+  background: #237f78;
+}
+.brake {
+  height: 12px;
+  background: #e0e9eb;
+  margin: 6px 0 12px;
+}
+.brake span {
+  display: block;
+  height: 100%;
+  background: #237f78;
+}
+a {
+  color: #176b87;
+}
+@media (max-width: 600px) {
+  main {
+    padding: 16px;
+  }
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  .row {
+    font-size: 14px;
+  }
+}

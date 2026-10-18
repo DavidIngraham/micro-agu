@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>LQI: authority and evidence</title>
+  </head>
+  <body>
+    <main>
+      <p class="eyebrow">FROM CONTROL LAW TO REAL ACTUATORS</p>
+      <h1>Two brakes share one budget.</h1>
+      <p>
+        Move the requested common and differential brake. The shaded diamond
+        contains every physically possible pair of normalized brake positions.
+      </p>
+      <div class="grid">
+        <div>
+          <canvas
+            id="authority"
+            width="600"
+            height="420"
+            role="img"
+            aria-label="Brake feasibility diamond with requested and clipped brake positions"
+          ></canvas>
+        </div>
+        <div>
+          <label
+            >Common brake <output id="common-value"></output
+            ><input
+              id="common"
+              type="range"
+              min="0"
+              max="100"
+              value="10" /></label
+          ><label
+            >Differential brake <output id="differential-value"></output
+            ><input
+              id="differential"
+              type="range"
+              min="-50"
+              max="50"
+              value="30"
+          /></label>
+          <div id="brakes" aria-live="polite"></div>
+          <p class="note">
+            Orange: request. Teal: independent left/right travel clipping. This
+            is a geometric teaching model, not a replay of the firmware
+            allocator: slew limits, priorities and servo calibration are
+            omitted.
+          </p>
+        </div>
+      </div>
+      <h2>Better damping — at what cost?</h2>
+      <p>
+        Eight matched disturbance cases from the longitudinal release
+        validation. Every row remains visible; switch metrics to see the
+        distribution rather than only the median.
+      </p>
+      <label
+        >Compare
+        <select id="metric">
+          <option value="pitch_rms">Relative pitch-rate RMS</option>
+          <option value="pitch_peak">Relative pitch-rate peak</option>
+          <option value="energy_Wh">Modeled shaft energy</option>
+        </select></label
+      >
+      <div id="comparison"></div>
+      <p id="summary" aria-live="polite"></p>
+      <p class="note">
+        Ratios are LQI / PG + TECS; lower is better. Comparison gates passed in
+        all eight pairs. These ratios do not replace the absolute recovery
+        screens: one classical comparator failed its quiet pitch-rate screen.
+        Energy excludes electrical and servo losses. Finite simulation evidence,
+        not flight qualification.
+      </p>
+      <p>
+        <a
+          href="https://github.com/DavidIngraham/micro-agu/blob/main/viewer/assets/runtime/lqi-longitudinal-validation.json"
+          target="_blank"
+          rel="noopener"
+          >Full protocol, cases, failures and runtime hashes</a
+        >
+      </p>
+      <p id="error" role="alert"></p>
+    </main>
+    <script
+      type="module"
+      src="/apps/applets/lqi-development/applet.ts"
+    ></script>
+  </body>
+</html>

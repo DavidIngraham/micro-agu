@@ -1,0 +1,89 @@
+{
+  "names": [
+    "rotor_inertia_scale",
+    "yaw_stiffness_scale",
+    "yaw_damping_scale",
+    "pitch_damping_scale",
+    "effective_pull_scale",
+    "actuator_lag_s"
+  ],
+  "bounds": [
+    [
+      0.5,
+      1.5
+    ],
+    [
+      0.5,
+      1.5
+    ],
+    [
+      0.2,
+      1.5
+    ],
+    [
+      0.2,
+      1.5
+    ],
+    [
+      0.85,
+      1.15
+    ],
+    [
+      0.0,
+      0.12
+    ]
+  ],
+  "training": [
+    280,
+    310,
+    535,
+    555,
+    1988
+  ],
+  "manual_check": [
+    380,
+    400,
+    440
+  ],
+  "nonmanual_check": [
+    1440,
+    1470,
+    1500,
+    2130,
+    2160,
+    2190,
+    2760,
+    2790,
+    2820
+  ],
+  "starts": [
+    [
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      0.0
+    ],
+    [
+      1.0,
+      1.0,
+      0.5,
+      0.5,
+      1.0,
+      0.04
+    ]
+  ],
+  "budget_per_start": 220,
+  "methods": [
+    "Powell",
+    "least_squares"
+  ],
+  "budget_unit": "One unique parameter vector evaluated on all five 20 s training windows; numerical Jacobian probes count. Equal ceilings, early convergence allowed.",
+  "residual": "Exact previous 0.4 local + 0.4 amplitude + 0.2 circular phase, plus .005 mean squared log parameter regularization; linear least squares loss.",
+  "normalization": "All parameters transformed to [0,1] by exploratory bounds.",
+  "jacobian": "Bound-aware central differences, h=.001 of parameter range; sensitivity repeats at .0005.",
+  "selection": "Lowest training objective among finite evaluations, including derivative probes; freeze all runs before validation.",
+  "limitations": "Same flight and previously reused validation windows; no new independent flight evidence. Timing is descriptive command/output association, not causal plant identification.",
+  "deployment": false
+}

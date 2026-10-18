@@ -1,0 +1,68 @@
+{
+  "integration": [
+    {
+      "family": "Powell-0",
+      "start": 380,
+      "max_rate_rmse_difference_deg_s": 4.138131792785771e-08,
+      "phase_error_difference_deg": 8.931888544339017e-07,
+      "score_difference": 2.6150824172788134e-08
+    },
+    {
+      "family": "Powell-0",
+      "start": 2760,
+      "max_rate_rmse_difference_deg_s": 2.801540155417115e-08,
+      "phase_error_difference_deg": 5.917743806094222e-08,
+      "score_difference": 1.918556202795685e-09
+    },
+    {
+      "family": "least_squares-1",
+      "start": 380,
+      "max_rate_rmse_difference_deg_s": 1.1910803898729228e-07,
+      "phase_error_difference_deg": 1.3281808222131986e-06,
+      "score_difference": 1.5293754707101925e-08
+    },
+    {
+      "family": "least_squares-1",
+      "start": 2760,
+      "max_rate_rmse_difference_deg_s": 2.729890358210696e-08,
+      "phase_error_difference_deg": 1.9144884078059476e-07,
+      "score_difference": 2.2414835876283234e-08
+    }
+  ],
+  "initialization": {
+    "parameter_names": [
+      "rotor_inertia_scale",
+      "yaw_stiffness_scale",
+      "yaw_damping_scale",
+      "pitch_damping_scale",
+      "effective_pull_scale",
+      "actuator_lag_s"
+    ],
+    "conditional_singular_values": [
+      1.3530208710849125,
+      0.6158863967354531,
+      0.301995896915785,
+      0.18681503938947888,
+      0.14156732801020147,
+      0.11097698601338118
+    ],
+    "initial_angle_projected_singular_values": [
+      1.344782929182695,
+      0.6145414006018148,
+      0.30166665442772234,
+      0.18654522816175031,
+      0.14147506038667293,
+      0.11023438828701165
+    ],
+    "relative_column_norm_remaining": [
+      0.9961742055868767,
+      0.9977059845564773,
+      0.9942572233906196,
+      0.996275437966148,
+      0.9892227163344606,
+      0.9964872400377541
+    ],
+    "condition_number_after_projection": 12.199305045185648,
+    "interpretation": "Local residual Jacobian at previous constrained candidate. Project away independent canopy-initial-angle sensitivity per training window. No wind or other nuisance parameters included; not a confidence interval."
+  }
+}

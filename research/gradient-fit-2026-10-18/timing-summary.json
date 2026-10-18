@@ -1,0 +1,1189 @@
+{
+  "manual": {
+    "differential_to_yaw": {
+      "common_windows": [
+        400,
+        440
+      ],
+      "total_windows": 3,
+      "families": {
+        "baseline": {
+          "mean_absolute_phase_error_deg": 167.90472839513154,
+          "rows": [
+            {
+              "start": 380,
+              "frequency_hz": 1.3671875,
+              "command_std_mm": 10.836019715734977,
+              "observed_coherence": 0.4026725863921475,
+              "model_coherence": 0.9733170904507876,
+              "observed_phase_deg": -57.54969681843246,
+              "model_phase_deg": -35.781259470987074,
+              "phase_error_deg": 21.76843734744538,
+              "interpretable": false
+            },
+            {
+              "start": 400,
+              "frequency_hz": 1.66015625,
+              "command_std_mm": 15.786442953405086,
+              "observed_coherence": 0.7894538573666041,
+              "model_coherence": 0.8065790785411251,
+              "observed_phase_deg": -137.93132748848657,
+              "model_phase_deg": 19.158537438483375,
+              "phase_error_deg": 157.08986492696994,
+              "interpretable": true
+            },
+            {
+              "start": 440,
+              "frequency_hz": 1.7578125,
+              "command_std_mm": 15.48255743495389,
+              "observed_coherence": 0.6458214529537781,
+              "model_coherence": 0.843638663288878,
+              "observed_phase_deg": 105.93866285339884,
+              "model_phase_deg": -75.341745283308,
+              "phase_error_deg": 178.71959186329318,
+              "interpretable": true
+            }
+          ]
+        },
+        "previous_constrained": {
+          "mean_absolute_phase_error_deg": 164.26562097428848,
+          "rows": [
+            {
+              "start": 380,
+              "frequency_hz": 1.3671875,
+              "command_std_mm": 10.836019715734977,
+              "observed_coherence": 0.4026725863921475,
+              "model_coherence": 0.9365299567154085,
+              "observed_phase_deg": -57.54969681843246,
+              "model_phase_deg": -11.722856106377996,
+              "phase_error_deg": 45.82684071205446,
+              "interpretable": false
+            },
+            {
+              "start": 400,
+              "frequency_hz": 1.66015625,
+              "command_std_mm": 15.786442953405086,
+              "observed_coherence": 0.7894538573666041,
+              "model_coherence": 0.649342709095539,
+              "observed_phase_deg": -137.93132748848657,
+              "model_phase_deg": 57.23796619360011,
+              "phase_error_deg": -164.83070631791335,
+              "interpretable": true
+            },
+            {
+              "start": 440,
+              "frequency_hz": 1.7578125,
+              "command_std_mm": 15.48255743495389,
+              "observed_coherence": 0.6458214529537781,
+              "model_coherence": 0.6527989397131343,
+              "observed_phase_deg": 105.93866285339884,
+              "model_phase_deg": -90.36080151593755,
+              "phase_error_deg": 163.7005356306636,
+              "interpretable": true
+            }
+          ]
+        },
+        "Powell-0": {
+          "mean_absolute_phase_error_deg": 164.86703971203028,
+          "rows": [
+            {
+              "start": 380,
+              "frequency_hz": 1.3671875,
+              "command_std_mm": 10.836019715734977,
+              "observed_coherence": 0.4026725863921475,
+              "model_coherence": 0.9094020503001059,
+              "observed_phase_deg": -57.54969681843246,
+              "model_phase_deg": -8.373693649601776,
+              "phase_error_deg": 49.176003168830675,
+              "interpretable": false
+            },
+            {
+              "start": 400,
+              "frequency_hz": 1.66015625,
+              "command_std_mm": 15.786442953405086,
+              "observed_coherence": 0.7894538573666041,
+              "model_coherence": 0.7688973855283595,
+              "observed_phase_deg": -137.93132748848657,
+              "model_phase_deg": 56.34748291854443,
+              "phase_error_deg": -165.721189592969,
+              "interpretable": true
+            },
+            {
+              "start": 440,
+              "frequency_hz": 1.7578125,
+              "command_std_mm": 15.48255743495389,
+              "observed_coherence": 0.6458214529537781,
+              "model_coherence": 0.6716574373525444,
+              "observed_phase_deg": 105.93866285339884,
+              "model_phase_deg": -90.04844731550965,
+              "phase_error_deg": 164.01288983109154,
+              "interpretable": true
+            }
+          ]
+        },
+        "least_squares-1": {
+          "mean_absolute_phase_error_deg": 164.85459294883023,
+          "rows": [
+            {
+              "start": 380,
+              "frequency_hz": 1.3671875,
+              "command_std_mm": 10.836019715734977,
+              "observed_coherence": 0.4026725863921475,
+              "model_coherence": 0.9095574299896406,
+              "observed_phase_deg": -57.54969681843246,
+              "model_phase_deg": -8.342604506463571,
+              "phase_error_deg": 49.207092311968886,
+              "interpretable": false
+            },
+            {
+              "start": 400,
+              "frequency_hz": 1.66015625,
+              "command_std_mm": 15.786442953405086,
+              "observed_coherence": 0.7894538573666041,
+              "model_coherence": 0.7697609807918784,
+              "observed_phase_deg": -137.93132748848657,
+              "model_phase_deg": 56.453545763473365,
+              "phase_error_deg": -165.6151267480401,
+              "interpretable": true
+            },
+            {
+              "start": 440,
+              "frequency_hz": 1.7578125,
+              "command_std_mm": 15.48255743495389,
+              "observed_coherence": 0.6458214529537781,
+              "model_coherence": 0.6716370399648053,
+              "observed_phase_deg": 105.93866285339884,
+              "model_phase_deg": -89.96727799698081,
+              "phase_error_deg": 164.09405914962036,
+              "interpretable": true
+            }
+          ]
+        }
+      }
+    },
+    "common_to_pitch": {
+      "common_windows": [
+        380
+      ],
+      "total_windows": 3,
+      "families": {
+        "baseline": {
+          "mean_absolute_phase_error_deg": 13.805136180469361,
+          "rows": [
+            {
+              "start": 380,
+              "frequency_hz": 1.46484375,
+              "command_std_mm": 5.418009857867489,
+              "observed_coherence": 0.6261858103467601,
+              "model_coherence": 0.972352425427204,
+              "observed_phase_deg": -41.19590855932124,
+              "model_phase_deg": -27.390772378851878,
+              "phase_error_deg": 13.805136180469361,
+              "interpretable": true
+            },
+            {
+              "start": 400,
+              "frequency_hz": 1.66015625,
+              "command_std_mm": 6.41026135459384,
+              "observed_coherence": 0.02602619825533945,
+              "model_coherence": 0.13845782591539638,
+              "observed_phase_deg": 51.8109784279143,
+              "model_phase_deg": -65.08441727697415,
+              "phase_error_deg": -116.89539570488844,
+              "interpretable": false
+            },
+            {
+              "start": 440,
+              "frequency_hz": 1.7578125,
+              "command_std_mm": 7.462696678417708,
+              "observed_coherence": 0.41294433861722907,
+              "model_coherence": 0.974401132809518,
+              "observed_phase_deg": 67.23967238472598,
+              "model_phase_deg": -72.03812272225859,
+              "phase_error_deg": -139.27779510698457,
+              "interpretable": false
+            }
+          ]
+        },
+        "previous_constrained": {
+          "mean_absolute_phase_error_deg": 29.525490138438233,
+          "rows": [
+            {
+              "start": 380,
+              "frequency_hz": 1.46484375,
+              "command_std_mm": 5.418009857867489,
+              "observed_coherence": 0.6261858103467601,
+              "model_coherence": 0.949235094619928,
+              "observed_phase_deg": -41.19590855932124,
+              "model_phase_deg": -70.72139869775947,
+              "phase_error_deg": -29.525490138438233,
+              "interpretable": true
+            },
+            {
+              "start": 400,
+              "frequency_hz": 1.66015625,
+              "command_std_mm": 6.41026135459384,
+              "observed_coherence": 0.02602619825533945,
+              "model_coherence": 0.274249842553152,
+              "observed_phase_deg": 51.8109784279143,
+              "model_phase_deg": -116.87476947641916,
+              "phase_error_deg": -168.68574790433345,
+              "interpretable": false
+            },
+            {
+              "start": 440,
+              "frequency_hz": 1.7578125,
+              "command_std_mm": 7.462696678417708,
+              "observed_coherence": 0.41294433861722907,
+              "model_coherence": 0.9384565766567877,
+              "observed_phase_deg": 67.23967238472598,
+              "model_phase_deg": -122.25480209061729,
+              "phase_error_deg": 170.50552552465678,
+              "interpretable": false
+            }
+          ]
+        },
+        "Powell-0": {
+          "mean_absolute_phase_error_deg": 24.46412559522799,
+          "rows": [
+            {
+              "start": 380,
+              "frequency_hz": 1.46484375,
+              "command_std_mm": 5.418009857867489,
+              "observed_coherence": 0.6261858103467601,
+              "model_coherence": 0.9595152474458851,
+              "observed_phase_deg": -41.19590855932124,
+              "model_phase_deg": -65.66003415454922,
+              "phase_error_deg": -24.46412559522799,
+              "interpretable": true
+            },
+            {
+              "start": 400,
+              "frequency_hz": 1.66015625,
+              "command_std_mm": 6.41026135459384,
+              "observed_coherence": 0.02602619825533945,
+              "model_coherence": 0.22093365606954002,
+              "observed_phase_deg": 51.8109784279143,
+              "model_phase_deg": -114.07931270479351,
+              "phase_error_deg": -165.8902911327078,
+              "interpretable": false
+            },
+            {
+              "start": 440,
+              "frequency_hz": 1.7578125,
+              "command_std_mm": 7.462696678417708,
+              "observed_coherence": 0.41294433861722907,
+              "model_coherence": 0.9281710404897319,
+              "observed_phase_deg": 67.23967238472598,
+              "model_phase_deg": -114.9472726962231,
+              "phase_error_deg": 177.81305491905096,
+              "interpretable": false
+            }
+          ]
+        },
+        "least_squares-1": {
+          "mean_absolute_phase_error_deg": 24.155388294005483,
+          "rows": [
+            {
+              "start": 380,
+              "frequency_hz": 1.46484375,
+              "command_std_mm": 5.418009857867489,
+              "observed_coherence": 0.6261858103467601,
+              "model_coherence": 0.9597958757423152,
+              "observed_phase_deg": -41.19590855932124,
+              "model_phase_deg": -65.35129685332672,
+              "phase_error_deg": -24.155388294005483,
+              "interpretable": true
+            },
+            {
+              "start": 400,
+              "frequency_hz": 1.66015625,
+              "command_std_mm": 6.41026135459384,
+              "observed_coherence": 0.02602619825533945,
+              "model_coherence": 0.22014478458842557,
+              "observed_phase_deg": 51.8109784279143,
+              "model_phase_deg": -113.88359049936506,
+              "phase_error_deg": -165.69456892727936,
+              "interpretable": false
+            },
+            {
+              "start": 440,
+              "frequency_hz": 1.7578125,
+              "command_std_mm": 7.462696678417708,
+              "observed_coherence": 0.41294433861722907,
+              "model_coherence": 0.9286215696042163,
+              "observed_phase_deg": 67.23967238472598,
+              "model_phase_deg": -114.57238776782141,
+              "phase_error_deg": 178.1879398474526,
+              "interpretable": false
+            }
+          ]
+        }
+      }
+    }
+  },
+  "nonmanual": {
+    "differential_to_yaw": {
+      "common_windows": [
+        1440,
+        1470,
+        2130,
+        2160,
+        2190,
+        2760,
+        2790,
+        2820
+      ],
+      "total_windows": 9,
+      "families": {
+        "baseline": {
+          "mean_absolute_phase_error_deg": 23.483879243460258,
+          "rows": [
+            {
+              "start": 1440,
+              "frequency_hz": 1.46484375,
+              "command_std_mm": 12.63551420308141,
+              "observed_coherence": 0.5506976022453507,
+              "model_coherence": 0.8124031438581076,
+              "observed_phase_deg": -37.69503855082912,
+              "model_phase_deg": -15.457692022432491,
+              "phase_error_deg": 22.237346528396625,
+              "interpretable": true
+            },
+            {
+              "start": 1470,
+              "frequency_hz": 1.26953125,
+              "command_std_mm": 21.31175887495067,
+              "observed_coherence": 0.9906156903808764,
+              "model_coherence": 0.9658558789866006,
+              "observed_phase_deg": -47.13668473737607,
+              "model_phase_deg": -55.120788616941425,
+              "phase_error_deg": -7.984103879565351,
+              "interpretable": true
+            },
+            {
+              "start": 1500,
+              "frequency_hz": 1.66015625,
+              "command_std_mm": 11.094132090352653,
+              "observed_coherence": 0.8742348165508319,
+              "model_coherence": 0.4919270123007961,
+              "observed_phase_deg": -60.79106998702101,
+              "model_phase_deg": -19.120563379832095,
+              "phase_error_deg": 41.67050660718891,
+              "interpretable": false
+            },
+            {
+              "start": 2130,
+              "frequency_hz": 1.66015625,
+              "command_std_mm": 13.43977694310665,
+              "observed_coherence": 0.9958553266104043,
+              "model_coherence": 0.7221054463954952,
+              "observed_phase_deg": -58.88043104130906,
+              "model_phase_deg": -34.229094833288464,
+              "phase_error_deg": 24.651336208020588,
+              "interpretable": true
+            },
+            {
+              "start": 2160,
+              "frequency_hz": 1.46484375,
+              "command_std_mm": 8.671554518784411,
+              "observed_coherence": 0.9880563310968955,
+              "model_coherence": 0.9248890613857689,
+              "observed_phase_deg": -41.00618084892463,
+              "model_phase_deg": -60.0924457889308,
+              "phase_error_deg": -19.086264940006178,
+              "interpretable": true
+            },
+            {
+              "start": 2190,
+              "frequency_hz": 1.66015625,
+              "command_std_mm": 9.83472000250188,
+              "observed_coherence": 0.9786003735382481,
+              "model_coherence": 0.9791600178858819,
+              "observed_phase_deg": -45.260151060587084,
+              "model_phase_deg": -51.696312780065576,
+              "phase_error_deg": -6.436161719478491,
+              "interpretable": true
+            },
+            {
+              "start": 2760,
+              "frequency_hz": 1.46484375,
+              "command_std_mm": 7.491595329807741,
+              "observed_coherence": 0.9990594130705052,
+              "model_coherence": 0.9817705735249858,
+              "observed_phase_deg": -40.51500702711516,
+              "model_phase_deg": -64.15123522358944,
+              "phase_error_deg": -23.636228196474274,
+              "interpretable": true
+            },
+            {
+              "start": 2790,
+              "frequency_hz": 1.66015625,
+              "command_std_mm": 17.111082431938197,
+              "observed_coherence": 0.964670504400443,
+              "model_coherence": 0.8635100020468087,
+              "observed_phase_deg": -53.481380827339976,
+              "model_phase_deg": -82.89414759356511,
+              "phase_error_deg": -29.412766766225136,
+              "interpretable": true
+            },
+            {
+              "start": 2820,
+              "frequency_hz": 1.66015625,
+              "command_std_mm": 13.213899402769576,
+              "observed_coherence": 0.9924595876899707,
+              "model_coherence": 0.8789950517086226,
+              "observed_phase_deg": -37.35527257313207,
+              "model_phase_deg": -91.78209828264751,
+              "phase_error_deg": -54.42682570951544,
+              "interpretable": true
+            }
+          ]
+        },
+        "previous_constrained": {
+          "mean_absolute_phase_error_deg": 28.790781540274523,
+          "rows": [
+            {
+              "start": 1440,
+              "frequency_hz": 1.46484375,
+              "command_std_mm": 12.63551420308141,
+              "observed_coherence": 0.5506976022453507,
+              "model_coherence": 0.6891167717606074,
+              "observed_phase_deg": -37.69503855082912,
+              "model_phase_deg": 11.183763160018605,
+              "phase_error_deg": 48.87880171084773,
+              "interpretable": true
+            },
+            {
+              "start": 1470,
+              "frequency_hz": 1.26953125,
+              "command_std_mm": 21.31175887495067,
+              "observed_coherence": 0.9906156903808764,
+              "model_coherence": 0.9026781488622773,
+              "observed_phase_deg": -47.13668473737607,
+              "model_phase_deg": -65.97764625371617,
+              "phase_error_deg": -18.84096151634011,
+              "interpretable": true
+            },
+            {
+              "start": 1500,
+              "frequency_hz": 1.66015625,
+              "command_std_mm": 11.094132090352653,
+              "observed_coherence": 0.8742348165508319,
+              "model_coherence": 0.2054474198807005,
+              "observed_phase_deg": -60.79106998702101,
+              "model_phase_deg": 63.23551959773392,
+              "phase_error_deg": 124.02658958475494,
+              "interpretable": false
+            },
+            {
+              "start": 2130,
+              "frequency_hz": 1.66015625,
+              "command_std_mm": 13.43977694310665,
+              "observed_coherence": 0.9958553266104043,
+              "model_coherence": 0.5850760082326205,
+              "observed_phase_deg": -58.88043104130906,
+              "model_phase_deg": -15.186522191663737,
+              "phase_error_deg": 43.69390884964532,
+              "interpretable": true
+            },
+            {
+              "start": 2160,
+              "frequency_hz": 1.46484375,
+              "command_std_mm": 8.671554518784411,
+              "observed_coherence": 0.9880563310968955,
+              "model_coherence": 0.623192645499714,
+              "observed_phase_deg": -41.00618084892463,
+              "model_phase_deg": -61.246335991312364,
+              "phase_error_deg": -20.240155142387746,
+              "interpretable": true
+            },
+            {
+              "start": 2190,
+              "frequency_hz": 1.66015625,
+              "command_std_mm": 9.83472000250188,
+              "observed_coherence": 0.9786003735382481,
+              "model_coherence": 0.9635131204082494,
+              "observed_phase_deg": -45.260151060587084,
+              "model_phase_deg": -47.87704568710432,
+              "phase_error_deg": -2.616894626517237,
+              "interpretable": true
+            },
+            {
+              "start": 2760,
+              "frequency_hz": 1.46484375,
+              "command_std_mm": 7.491595329807741,
+              "observed_coherence": 0.9990594130705052,
+              "model_coherence": 0.9790561756337003,
+              "observed_phase_deg": -40.51500702711516,
+              "model_phase_deg": -58.59731306375257,
+              "phase_error_deg": -18.082306036637416,
+              "interpretable": true
+            },
+            {
+              "start": 2790,
+              "frequency_hz": 1.66015625,
+              "command_std_mm": 17.111082431938197,
+              "observed_coherence": 0.964670504400443,
+              "model_coherence": 0.9262785638471336,
+              "observed_phase_deg": -53.481380827339976,
+              "model_phase_deg": -78.15805521271807,
+              "phase_error_deg": -24.676674385378107,
+              "interpretable": true
+            },
+            {
+              "start": 2820,
+              "frequency_hz": 1.66015625,
+              "command_std_mm": 13.213899402769576,
+              "observed_coherence": 0.9924595876899707,
+              "model_coherence": 0.789797803845734,
+              "observed_phase_deg": -37.35527257313207,
+              "model_phase_deg": -90.6518226275746,
+              "phase_error_deg": -53.29655005444254,
+              "interpretable": true
+            }
+          ]
+        },
+        "Powell-0": {
+          "mean_absolute_phase_error_deg": 29.17256909426486,
+          "rows": [
+            {
+              "start": 1440,
+              "frequency_hz": 1.46484375,
+              "command_std_mm": 12.63551420308141,
+              "observed_coherence": 0.5506976022453507,
+              "model_coherence": 0.7236242451984829,
+              "observed_phase_deg": -37.69503855082912,
+              "model_phase_deg": 16.395470425691602,
+              "phase_error_deg": 54.090508976520724,
+              "interpretable": true
+            },
+            {
+              "start": 1470,
+              "frequency_hz": 1.26953125,
+              "command_std_mm": 21.31175887495067,
+              "observed_coherence": 0.9906156903808764,
+              "model_coherence": 0.853658956809229,
+              "observed_phase_deg": -47.13668473737607,
+              "model_phase_deg": -63.947032454643775,
+              "phase_error_deg": -16.810347717267703,
+              "interpretable": true
+            },
+            {
+              "start": 1500,
+              "frequency_hz": 1.66015625,
+              "command_std_mm": 11.094132090352653,
+              "observed_coherence": 0.8742348165508319,
+              "model_coherence": 0.24685032823458045,
+              "observed_phase_deg": -60.79106998702101,
+              "model_phase_deg": 66.74297053048349,
+              "phase_error_deg": 127.5340405175045,
+              "interpretable": false
+            },
+            {
+              "start": 2130,
+              "frequency_hz": 1.66015625,
+              "command_std_mm": 13.43977694310665,
+              "observed_coherence": 0.9958553266104043,
+              "model_coherence": 0.6065888592649286,
+              "observed_phase_deg": -58.88043104130906,
+              "model_phase_deg": -13.5794248101886,
+              "phase_error_deg": 45.301006231120446,
+              "interpretable": true
+            },
+            {
+              "start": 2160,
+              "frequency_hz": 1.46484375,
+              "command_std_mm": 8.671554518784411,
+              "observed_coherence": 0.9880563310968955,
+              "model_coherence": 0.5866739634278478,
+              "observed_phase_deg": -41.00618084892463,
+              "model_phase_deg": -51.49847591678056,
+              "phase_error_deg": -10.492295067855938,
+              "interpretable": true
+            },
+            {
+              "start": 2190,
+              "frequency_hz": 1.66015625,
+              "command_std_mm": 9.83472000250188,
+              "observed_coherence": 0.9786003735382481,
+              "model_coherence": 0.9646651537541561,
+              "observed_phase_deg": -45.260151060587084,
+              "model_phase_deg": -44.826122101520724,
+              "phase_error_deg": 0.43402895906636396,
+              "interpretable": true
+            },
+            {
+              "start": 2760,
+              "frequency_hz": 1.46484375,
+              "command_std_mm": 7.491595329807741,
+              "observed_coherence": 0.9990594130705052,
+              "model_coherence": 0.9531526825919592,
+              "observed_phase_deg": -40.51500702711516,
+              "model_phase_deg": -59.47463510215104,
+              "phase_error_deg": -18.95962807503589,
+              "interpretable": true
+            },
+            {
+              "start": 2790,
+              "frequency_hz": 1.66015625,
+              "command_std_mm": 17.111082431938197,
+              "observed_coherence": 0.964670504400443,
+              "model_coherence": 0.8655185309895853,
+              "observed_phase_deg": -53.481380827339976,
+              "model_phase_deg": -81.55035833373223,
+              "phase_error_deg": -28.068977506392265,
+              "interpretable": true
+            },
+            {
+              "start": 2820,
+              "frequency_hz": 1.66015625,
+              "command_std_mm": 13.213899402769576,
+              "observed_coherence": 0.9924595876899707,
+              "model_coherence": 0.7073585477344114,
+              "observed_phase_deg": -37.35527257313207,
+              "model_phase_deg": -96.57903279399162,
+              "phase_error_deg": -59.22376022085954,
+              "interpretable": true
+            }
+          ]
+        },
+        "least_squares-1": {
+          "mean_absolute_phase_error_deg": 29.1520348845996,
+          "rows": [
+            {
+              "start": 1440,
+              "frequency_hz": 1.46484375,
+              "command_std_mm": 12.63551420308141,
+              "observed_coherence": 0.5506976022453507,
+              "model_coherence": 0.7236755875670092,
+              "observed_phase_deg": -37.69503855082912,
+              "model_phase_deg": 16.401012819290308,
+              "phase_error_deg": 54.096051370119426,
+              "interpretable": true
+            },
+            {
+              "start": 1470,
+              "frequency_hz": 1.26953125,
+              "command_std_mm": 21.31175887495067,
+              "observed_coherence": 0.9906156903808764,
+              "model_coherence": 0.8541013852256432,
+              "observed_phase_deg": -47.13668473737607,
+              "model_phase_deg": -63.86534559531536,
+              "phase_error_deg": -16.72866085793929,
+              "interpretable": true
+            },
+            {
+              "start": 1500,
+              "frequency_hz": 1.66015625,
+              "command_std_mm": 11.094132090352653,
+              "observed_coherence": 0.8742348165508319,
+              "model_coherence": 0.24653746433434204,
+              "observed_phase_deg": -60.79106998702101,
+              "model_phase_deg": 66.78499728130244,
+              "phase_error_deg": 127.57606726832344,
+              "interpretable": false
+            },
+            {
+              "start": 2130,
+              "frequency_hz": 1.66015625,
+              "command_std_mm": 13.43977694310665,
+              "observed_coherence": 0.9958553266104043,
+              "model_coherence": 0.6065149962420524,
+              "observed_phase_deg": -58.88043104130906,
+              "model_phase_deg": -13.488330811871524,
+              "phase_error_deg": 45.392100229437524,
+              "interpretable": true
+            },
+            {
+              "start": 2160,
+              "frequency_hz": 1.46484375,
+              "command_std_mm": 8.671554518784411,
+              "observed_coherence": 0.9880563310968955,
+              "model_coherence": 0.5870794918022337,
+              "observed_phase_deg": -41.00618084892463,
+              "model_phase_deg": -51.485812932889736,
+              "phase_error_deg": -10.479632083965102,
+              "interpretable": true
+            },
+            {
+              "start": 2190,
+              "frequency_hz": 1.66015625,
+              "command_std_mm": 9.83472000250188,
+              "observed_coherence": 0.9786003735382481,
+              "model_coherence": 0.9647243501817422,
+              "observed_phase_deg": -45.260151060587084,
+              "model_phase_deg": -44.74841306558886,
+              "phase_error_deg": 0.5117379949982224,
+              "interpretable": true
+            },
+            {
+              "start": 2760,
+              "frequency_hz": 1.46484375,
+              "command_std_mm": 7.491595329807741,
+              "observed_coherence": 0.9990594130705052,
+              "model_coherence": 0.9532851556710052,
+              "observed_phase_deg": -40.51500702711516,
+              "model_phase_deg": -59.373135115609564,
+              "phase_error_deg": -18.858128088494404,
+              "interpretable": true
+            },
+            {
+              "start": 2790,
+              "frequency_hz": 1.66015625,
+              "command_std_mm": 17.111082431938197,
+              "observed_coherence": 0.964670504400443,
+              "model_coherence": 0.8652495990534111,
+              "observed_phase_deg": -53.481380827339976,
+              "model_phase_deg": -81.47774235463834,
+              "phase_error_deg": -27.996361527298365,
+              "interpretable": true
+            },
+            {
+              "start": 2820,
+              "frequency_hz": 1.66015625,
+              "command_std_mm": 13.213899402769576,
+              "observed_coherence": 0.9924595876899707,
+              "model_coherence": 0.7076353235511881,
+              "observed_phase_deg": -37.35527257313207,
+              "model_phase_deg": -96.50887949767655,
+              "phase_error_deg": -59.15360692454448,
+              "interpretable": true
+            }
+          ]
+        }
+      }
+    },
+    "common_to_pitch": {
+      "common_windows": [
+        1440,
+        1470,
+        2130,
+        2160,
+        2190,
+        2760,
+        2790,
+        2820
+      ],
+      "total_windows": 9,
+      "families": {
+        "baseline": {
+          "mean_absolute_phase_error_deg": 64.76042079486704,
+          "rows": [
+            {
+              "start": 1440,
+              "frequency_hz": 1.46484375,
+              "command_std_mm": 4.709679045275344,
+              "observed_coherence": 0.7149868782939248,
+              "model_coherence": 0.9139514534275013,
+              "observed_phase_deg": -115.21413415463498,
+              "model_phase_deg": -3.370468663144674,
+              "phase_error_deg": 111.8436654914903,
+              "interpretable": true
+            },
+            {
+              "start": 1470,
+              "frequency_hz": 1.66015625,
+              "command_std_mm": 7.985936602573092,
+              "observed_coherence": 0.9982629410058167,
+              "model_coherence": 0.6901920445547418,
+              "observed_phase_deg": -95.42201155586659,
+              "model_phase_deg": -26.04790565605776,
+              "phase_error_deg": 69.37410589980884,
+              "interpretable": true
+            },
+            {
+              "start": 1500,
+              "frequency_hz": 1.66015625,
+              "command_std_mm": 4.40830269309496,
+              "observed_coherence": 0.2795738172120525,
+              "model_coherence": 0.9508300380326274,
+              "observed_phase_deg": 92.14210345126168,
+              "model_phase_deg": -45.698499392834506,
+              "phase_error_deg": -137.84060284409617,
+              "interpretable": false
+            },
+            {
+              "start": 2130,
+              "frequency_hz": 1.5625,
+              "command_std_mm": 4.514636713183194,
+              "observed_coherence": 0.8039522746060016,
+              "model_coherence": 0.9807397793351563,
+              "observed_phase_deg": -117.09801736784323,
+              "model_phase_deg": -32.870438746105144,
+              "phase_error_deg": 84.22757862173806,
+              "interpretable": true
+            },
+            {
+              "start": 2160,
+              "frequency_hz": 1.46484375,
+              "command_std_mm": 3.686899495071468,
+              "observed_coherence": 0.6828423151180676,
+              "model_coherence": 0.7843171983341112,
+              "observed_phase_deg": -66.73213363391751,
+              "model_phase_deg": -16.48828784774073,
+              "phase_error_deg": 50.24384578617678,
+              "interpretable": true
+            },
+            {
+              "start": 2190,
+              "frequency_hz": 1.66015625,
+              "command_std_mm": 3.5229005692136646,
+              "observed_coherence": 0.771752186883793,
+              "model_coherence": 0.9974038823327729,
+              "observed_phase_deg": -117.61171919935698,
+              "model_phase_deg": -48.14380076621794,
+              "phase_error_deg": 69.46791843313905,
+              "interpretable": true
+            },
+            {
+              "start": 2760,
+              "frequency_hz": 1.46484375,
+              "command_std_mm": 2.491635881389644,
+              "observed_coherence": 0.8811613768073288,
+              "model_coherence": 0.8983986699757169,
+              "observed_phase_deg": -130.57084099271705,
+              "model_phase_deg": -74.814617865594,
+              "phase_error_deg": 55.75622312712303,
+              "interpretable": true
+            },
+            {
+              "start": 2790,
+              "frequency_hz": 1.66015625,
+              "command_std_mm": 5.712803807508686,
+              "observed_coherence": 0.5858824258358826,
+              "model_coherence": 0.6320469975616606,
+              "observed_phase_deg": -150.1576737858917,
+              "model_phase_deg": -99.62960051347972,
+              "phase_error_deg": 50.528073272411966,
+              "interpretable": true
+            },
+            {
+              "start": 2820,
+              "frequency_hz": 1.66015625,
+              "command_std_mm": 4.54209763998396,
+              "observed_coherence": 0.5453728153158328,
+              "model_coherence": 0.6476033221338675,
+              "observed_phase_deg": -111.59773885585685,
+              "model_phase_deg": -84.95578312880853,
+              "phase_error_deg": 26.64195572704833,
+              "interpretable": true
+            }
+          ]
+        },
+        "previous_constrained": {
+          "mean_absolute_phase_error_deg": 23.900198905130946,
+          "rows": [
+            {
+              "start": 1440,
+              "frequency_hz": 1.46484375,
+              "command_std_mm": 4.709679045275344,
+              "observed_coherence": 0.7149868782939248,
+              "model_coherence": 0.8769971984391945,
+              "observed_phase_deg": -115.21413415463498,
+              "model_phase_deg": -30.077106594288168,
+              "phase_error_deg": 85.1370275603468,
+              "interpretable": true
+            },
+            {
+              "start": 1470,
+              "frequency_hz": 1.66015625,
+              "command_std_mm": 7.985936602573092,
+              "observed_coherence": 0.9982629410058167,
+              "model_coherence": 0.6673321133590666,
+              "observed_phase_deg": -95.42201155586659,
+              "model_phase_deg": -95.28229138754513,
+              "phase_error_deg": 0.13972016832146458,
+              "interpretable": true
+            },
+            {
+              "start": 1500,
+              "frequency_hz": 1.66015625,
+              "command_std_mm": 4.40830269309496,
+              "observed_coherence": 0.2795738172120525,
+              "model_coherence": 0.9053414629207139,
+              "observed_phase_deg": 92.14210345126168,
+              "model_phase_deg": -87.0824431770808,
+              "phase_error_deg": -179.22454662834247,
+              "interpretable": false
+            },
+            {
+              "start": 2130,
+              "frequency_hz": 1.5625,
+              "command_std_mm": 4.514636713183194,
+              "observed_coherence": 0.8039522746060016,
+              "model_coherence": 0.9458867886098101,
+              "observed_phase_deg": -117.09801736784323,
+              "model_phase_deg": -79.56165951069327,
+              "phase_error_deg": 37.53635785714993,
+              "interpretable": true
+            },
+            {
+              "start": 2160,
+              "frequency_hz": 1.46484375,
+              "command_std_mm": 3.686899495071468,
+              "observed_coherence": 0.6828423151180676,
+              "model_coherence": 0.7929656736236882,
+              "observed_phase_deg": -66.73213363391751,
+              "model_phase_deg": -55.518543288666116,
+              "phase_error_deg": 11.213590345251395,
+              "interpretable": true
+            },
+            {
+              "start": 2190,
+              "frequency_hz": 1.66015625,
+              "command_std_mm": 3.5229005692136646,
+              "observed_coherence": 0.771752186883793,
+              "model_coherence": 0.9921247557023559,
+              "observed_phase_deg": -117.61171919935698,
+              "model_phase_deg": -97.13942228051309,
+              "phase_error_deg": 20.4722969188439,
+              "interpretable": true
+            },
+            {
+              "start": 2760,
+              "frequency_hz": 1.46484375,
+              "command_std_mm": 2.491635881389644,
+              "observed_coherence": 0.8811613768073288,
+              "model_coherence": 0.8667549125825509,
+              "observed_phase_deg": -130.57084099271705,
+              "model_phase_deg": -112.43832337964102,
+              "phase_error_deg": 18.13251761307603,
+              "interpretable": true
+            },
+            {
+              "start": 2790,
+              "frequency_hz": 1.66015625,
+              "command_std_mm": 5.712803807508686,
+              "observed_coherence": 0.5858824258358826,
+              "model_coherence": 0.758308037984423,
+              "observed_phase_deg": -150.1576737858917,
+              "model_phase_deg": -135.04257873293858,
+              "phase_error_deg": 15.115095052953103,
+              "interpretable": true
+            },
+            {
+              "start": 2820,
+              "frequency_hz": 1.66015625,
+              "command_std_mm": 4.54209763998396,
+              "observed_coherence": 0.5453728153158328,
+              "model_coherence": 0.7240664870218303,
+              "observed_phase_deg": -111.59773885585685,
+              "model_phase_deg": -115.0527245809618,
+              "phase_error_deg": -3.4549857251049523,
+              "interpretable": true
+            }
+          ]
+        },
+        "Powell-0": {
+          "mean_absolute_phase_error_deg": 28.807881133701905,
+          "rows": [
+            {
+              "start": 1440,
+              "frequency_hz": 1.46484375,
+              "command_std_mm": 4.709679045275344,
+              "observed_coherence": 0.7149868782939248,
+              "model_coherence": 0.8981534532738754,
+              "observed_phase_deg": -115.21413415463498,
+              "model_phase_deg": -25.36174584432855,
+              "phase_error_deg": 89.85238831030642,
+              "interpretable": true
+            },
+            {
+              "start": 1470,
+              "frequency_hz": 1.66015625,
+              "command_std_mm": 7.985936602573092,
+              "observed_coherence": 0.9982629410058167,
+              "model_coherence": 0.6082520559485846,
+              "observed_phase_deg": -95.42201155586659,
+              "model_phase_deg": -90.25785680592838,
+              "phase_error_deg": 5.164154749938207,
+              "interpretable": true
+            },
+            {
+              "start": 1500,
+              "frequency_hz": 1.66015625,
+              "command_std_mm": 4.40830269309496,
+              "observed_coherence": 0.2795738172120525,
+              "model_coherence": 0.9002067406400457,
+              "observed_phase_deg": 92.14210345126168,
+              "model_phase_deg": -75.63541256443682,
+              "phase_error_deg": -167.7775160156985,
+              "interpretable": false
+            },
+            {
+              "start": 2130,
+              "frequency_hz": 1.5625,
+              "command_std_mm": 4.514636713183194,
+              "observed_coherence": 0.8039522746060016,
+              "model_coherence": 0.9474471551152019,
+              "observed_phase_deg": -117.09801736784323,
+              "model_phase_deg": -75.42155197429635,
+              "phase_error_deg": 41.67646539354686,
+              "interpretable": true
+            },
+            {
+              "start": 2160,
+              "frequency_hz": 1.46484375,
+              "command_std_mm": 3.686899495071468,
+              "observed_coherence": 0.6828423151180676,
+              "model_coherence": 0.8258662937595129,
+              "observed_phase_deg": -66.73213363391751,
+              "model_phase_deg": -50.15466571061249,
+              "phase_error_deg": 16.57746792330502,
+              "interpretable": true
+            },
+            {
+              "start": 2190,
+              "frequency_hz": 1.66015625,
+              "command_std_mm": 3.5229005692136646,
+              "observed_coherence": 0.771752186883793,
+              "model_coherence": 0.991347530378062,
+              "observed_phase_deg": -117.61171919935698,
+              "model_phase_deg": -88.01119526535904,
+              "phase_error_deg": 29.60052393399796,
+              "interpretable": true
+            },
+            {
+              "start": 2760,
+              "frequency_hz": 1.46484375,
+              "command_std_mm": 2.491635881389644,
+              "observed_coherence": 0.8811613768073288,
+              "model_coherence": 0.8473793972305351,
+              "observed_phase_deg": -130.57084099271705,
+              "model_phase_deg": -109.37305258259012,
+              "phase_error_deg": 21.19778841012691,
+              "interpretable": true
+            },
+            {
+              "start": 2790,
+              "frequency_hz": 1.66015625,
+              "command_std_mm": 5.712803807508686,
+              "observed_coherence": 0.5858824258358826,
+              "model_coherence": 0.6958768496273311,
+              "observed_phase_deg": -150.1576737858917,
+              "model_phase_deg": -124.88116913066821,
+              "phase_error_deg": 25.27650465522347,
+              "interpretable": true
+            },
+            {
+              "start": 2820,
+              "frequency_hz": 1.66015625,
+              "command_std_mm": 4.54209763998396,
+              "observed_coherence": 0.5453728153158328,
+              "model_coherence": 0.7060796757364247,
+              "observed_phase_deg": -111.59773885585685,
+              "model_phase_deg": -112.71549454902726,
+              "phase_error_deg": -1.1177556931704007,
+              "interpretable": true
+            }
+          ]
+        },
+        "least_squares-1": {
+          "mean_absolute_phase_error_deg": 29.052864190901715,
+          "rows": [
+            {
+              "start": 1440,
+              "frequency_hz": 1.46484375,
+              "command_std_mm": 4.709679045275344,
+              "observed_coherence": 0.7149868782939248,
+              "model_coherence": 0.8984301302154244,
+              "observed_phase_deg": -115.21413415463498,
+              "model_phase_deg": -25.170773181977157,
+              "phase_error_deg": 90.04336097265782,
+              "interpretable": true
+            },
+            {
+              "start": 1470,
+              "frequency_hz": 1.66015625,
+              "command_std_mm": 7.985936602573092,
+              "observed_coherence": 0.9982629410058167,
+              "model_coherence": 0.6066631437883524,
+              "observed_phase_deg": -95.42201155586659,
+              "model_phase_deg": -89.77442339961641,
+              "phase_error_deg": 5.647588156250175,
+              "interpretable": true
+            },
+            {
+              "start": 1500,
+              "frequency_hz": 1.66015625,
+              "command_std_mm": 4.40830269309496,
+              "observed_coherence": 0.2795738172120525,
+              "model_coherence": 0.9005104405324,
+              "observed_phase_deg": 92.14210345126168,
+              "model_phase_deg": -75.38572312902949,
+              "phase_error_deg": -167.52782658029116,
+              "interpretable": false
+            },
+            {
+              "start": 2130,
+              "frequency_hz": 1.5625,
+              "command_std_mm": 4.514636713183194,
+              "observed_coherence": 0.8039522746060016,
+              "model_coherence": 0.9480463955898639,
+              "observed_phase_deg": -117.09801736784323,
+              "model_phase_deg": -75.117714296106,
+              "phase_error_deg": 41.98030307173721,
+              "interpretable": true
+            },
+            {
+              "start": 2160,
+              "frequency_hz": 1.46484375,
+              "command_std_mm": 3.686899495071468,
+              "observed_coherence": 0.6828423151180676,
+              "model_coherence": 0.8254043105376154,
+              "observed_phase_deg": -66.73213363391751,
+              "model_phase_deg": -49.940890196066164,
+              "phase_error_deg": 16.791243437851342,
+              "interpretable": true
+            },
+            {
+              "start": 2190,
+              "frequency_hz": 1.66015625,
+              "command_std_mm": 3.5229005692136646,
+              "observed_coherence": 0.771752186883793,
+              "model_coherence": 0.9913837601531544,
+              "observed_phase_deg": -117.61171919935698,
+              "model_phase_deg": -87.67026552243937,
+              "phase_error_deg": 29.94145367691762,
+              "interpretable": true
+            },
+            {
+              "start": 2760,
+              "frequency_hz": 1.46484375,
+              "command_std_mm": 2.491635881389644,
+              "observed_coherence": 0.8811613768073288,
+              "model_coherence": 0.8480138069456121,
+              "observed_phase_deg": -130.57084099271705,
+              "model_phase_deg": -109.02542636710758,
+              "phase_error_deg": 21.54541462560945,
+              "interpretable": true
+            },
+            {
+              "start": 2790,
+              "frequency_hz": 1.66015625,
+              "command_std_mm": 5.712803807508686,
+              "observed_coherence": 0.5858824258358826,
+              "model_coherence": 0.6963566257760151,
+              "observed_phase_deg": -150.1576737858917,
+              "model_phase_deg": -124.55892888945418,
+              "phase_error_deg": 25.598744896437516,
+              "interpretable": true
+            },
+            {
+              "start": 2820,
+              "frequency_hz": 1.66015625,
+              "command_std_mm": 4.54209763998396,
+              "observed_coherence": 0.5453728153158328,
+              "model_coherence": 0.7063777506328508,
+              "observed_phase_deg": -111.59773885585685,
+              "model_phase_deg": -112.47254354560943,
+              "phase_error_deg": -0.8748046897525726,
+              "interpretable": true
+            }
+          ]
+        }
+      }
+    }
+  }
+}

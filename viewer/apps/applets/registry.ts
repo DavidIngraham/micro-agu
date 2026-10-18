@@ -1,3 +1,4 @@
+import { definition as lqiExplainer } from "./lqi-explainer/definition";
 import { definition as lqiDevelopment } from "./lqi-development/definition";
 import { definition as app0 } from "./replay/definition";
 import { definition as app1 } from "./simulation-replay/definition";
@@ -14,6 +15,7 @@ import { definition as app11 } from "../simulator/definition";
 import { definition as canopyPanels } from "./canopy-panels/definition";
 import { definition as jointMechanics } from "./joint-mechanics/definition";
 export const applets = [
+  lqiExplainer,
   lqiDevelopment,
   jointMechanics,
   canopyPanels,

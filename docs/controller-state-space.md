@@ -1,101 +1,178 @@
-# Developing the LQI controller
+# Coordinated control: from separate loops to LQI
 
-A paraglider can follow an altitude command and still rock badly beneath its canopy. Our controller work started with that distinction: reaching the requested flight path and damping the aircraft's internal motion are related, but they are not the same task.
+Ask a powered paraglider to climb and the motor does more than add height. Its thrust acts on the suspended payload, while the aerodynamic forces act on the canopy. Pull a brake to turn and the wing also changes its drag and flight path. The controls we use to steer, climb and regulate speed all act on the same coupled aircraft.
 
-The classical controller remains a useful baseline. It couples a paraglider turn controller to ArduPlane's TECS longitudinal control. The LQI development asks whether one coordinated controller can use throttle and both brakes to track the path while managing the motion between canopy and payload.
+The preceding chapters built separate controllers for turning and longitudinal motion. Here we bring those actions together. The goal is to follow the commanded path while damping the motion between canopy and payload, using throttle and both brakes in a coordinated way.
 
-This page follows that development through simulation. The browser currently selects the experimental LQI by default, with PG + TECS available for comparison. The results below are finite simulator tests, not flight qualification. The [earlier frequency-response and state-space study](controller-state-space-archive.md) remains available as a technical archive; its controller and sensing assumptions differ from today's implementation.
+We will first build the intuition behind that controller, then explain how it estimates the motion it cannot measure, how its gains are designed, and how the complete system is tested. At the end, you can fly the same controller in the browser simulator.
 
-## One aircraft, several competing objectives
+## One input, several responses
 
-A turn needs differential brake. Symmetric brake can help damp longitudinal motion, but sustained braking can also increase drag. Throttle changes flight-path energy and can excite the suspended payload. Treating those actions independently makes it harder to account for their combined effects.
+The aircraft has three useful control directions: throttle, common brake and differential brake. Common brake means pulling both sides; differential brake creates an imbalance between them. Each affects several aspects of the motion:
 
-The useful question therefore became broader than “which controller has the smallest altitude error?” We want accurate tracking, motion that settles after disturbances, acceptable actuator demand, and reasonable energy use. An improvement in one does not automatically compensate for a failure in another.
+- Throttle changes available energy and the forces acting on the payload.
+- Common brake changes aerodynamic forces, speed and longitudinal motion.
+- Differential brake changes turning motion, but also drag and the flight path.
 
-Early matched simulation tests exposed persistent pitch oscillations in some classical-controller CRUISE cases after the weather disturbance ended. LQI settled much more strongly in those cases, but early AUTO results also showed worse altitude and path tracking. That was a reason to keep developing and testing, rather than declare a winner from the damping plots alone.
+A separate altitude controller can therefore disturb the motion that a pitch damper is trying to suppress. A turn command can change the power needed to maintain height. Separate loops can work well, especially when their interactions are weak or their response speeds are well separated. Here, those interactions are a central part of the problem.
 
-## What LQI adds
+Select an actuator in the following applet. A small pulse produces several responses, rather than a change in just one variable. This uses the controller's local linear model to isolate the coupling; it is not a nonlinear flight test. Each trace has its own labeled scale.
 
-The controller works around a modeled equilibrium. A local linear model describes how small changes in aircraft state and control affect the subsequent motion. Feedback uses the estimated state deviation to choose coordinated changes in throttle, symmetric brake and differential brake.
+[Explore one input and several responses](https://davidingraham.github.io/assets/microagu-viewer/lqi-explainer.html?view=coupling)
 
-An LQR penalizes state deviations and control effort. LQI augments that problem with accumulated tracking errors, so persistent offsets can generate a correcting action even when the immediate error is small. In schematic form, with the error sign defined here as measured output minus reference:
+Coordinated control gives us a way to account for those effects together. It does not remove the coupling; it uses a model of that coupling when choosing the commands.
+
+## Control the motion, not just the error
+
+Consider the payload and canopy at a particular relative pitch angle. If they are moving farther apart, we want to arrest that motion. If they are already returning toward alignment, the appropriate correction is different. The angle alone cannot tell us which situation we are in.
+
+A **state** collects the quantities needed to describe the aircraft's current motion. Our control model includes payload attitude, canopy-relative orientation, air-relative velocity, payload and canopy angular rates, rotor speed and height. Rates matter because they tell us where the motion is heading.
+
+[Compare the same angle with opposite motion](https://davidingraham.github.io/assets/microagu-viewer/lqi-explainer.html?view=motion)
+
+**Full-state feedback** combines these quantities to choose all three control commands together. “Full” refers to the state of the chosen model; it does not imply that the controller knows every wrinkle in the canopy or every gust around it. In this implementation, many of those states are estimates.
+
+The example above uses the actual feedback gains, but prescribes a simple state for teaching. It shows contributions to a requested command, before actuator limits. It does not predict a complete maneuver from those two quantities alone.
+
+## What LQR does, and why we add the I
+
+We need a systematic way to choose how strongly every state should affect each actuator. A **linear quadratic regulator**, or LQR, starts with a linear model near an equilibrium and a set of costs. Those costs express how much we dislike deviations in the state and how much we dislike using control effort. Solving the design problem gives a matrix of feedback gains.
+
+The equilibrium, usually called **trim**, matters. The controls needed to sustain a turn differ from those needed for straight flight. Feedback supplies corrections around the reference state and its associated feedforward controls.
+
+Pure state feedback does not necessarily eliminate a persistent tracking offset when the model and aircraft differ. Integral action supplies a memory of that error. A small height error that persists can build a correction instead of being accepted indefinitely. **LQI** applies the LQR design to an augmented state that also contains accumulated tracking errors.
+
+Our controller accumulates height, turn-rate and airspeed errors. In physical coordinates, the basic structure is:
+
+$$
+\mathbf u_{\mathrm{requested}}
+=\mathbf u_{\mathrm{feedforward}}
+-K_x(\hat{\mathbf x}-\mathbf x_{\mathrm{reference}})
+-K_i\boldsymbol\eta.
+$$
+
+Here, the estimated state is $\hat{\mathbf x}$, and $\boldsymbol\eta$ holds the accumulated errors. The first feedback term reacts to the estimated motion; the second reacts to errors that have persisted. Feedforward supplies the expected equilibrium action. The firmware normalizes these quantities before applying its stored gains.
+
+This is a tradeoff, not a command to minimize every error at any cost. Stronger correction may demand more actuator motion or energy. Persistent common brake can be expensive, but short brake action can also be useful for damping. The design weights and nonlinear tests determine how those competing objectives are balanced.
+
+## Estimating the motion we cannot measure
+
+The avionics ride on the payload. ArduPilot's EKF supplies navigation and attitude estimates, but we do not have a sensor directly measuring the canopy's relative orientation and angular motion. Those states still affect how the aircraft responds. Feeding back only the directly available quantities would discard information the coordinated controller was designed to use.
+
+The **canopy observer** estimates the missing motion using two steps:
+
+1. **Predict:** use the previous state estimate, the model and the controls actually applied to predict the next state.
+2. **Correct:** compare the model's predicted measurements with the available measurements. Use that residual to correct the state estimate.
+
+For the local, normalized model, this is:
 
 $$
 \begin{aligned}
-\dot{\boldsymbol\eta} &= \mathbf y-\mathbf r,\\
-\delta\mathbf u &= -K_x\,\delta\hat{\mathbf x}-K_i\boldsymbol\eta,\\
-\mathbf u_{\rm requested} &= \mathbf u_{\rm trim}+\delta\mathbf u.
+\hat{\mathbf x}_{k+1}^{-}&=A\hat{\mathbf x}_{k}+B\mathbf u_k,\\
+\mathbf e_{k+1}&=\mathbf y_{k+1}-C\hat{\mathbf x}_{k+1}^{-},\\
+\hat{\mathbf x}_{k+1}&=\hat{\mathbf x}_{k+1}^{-}+L\mathbf e_{k+1}.
 \end{aligned}
 $$
 
-The design balances these terms through a quadratic cost on the augmented state and control effort. The gains come from the model and chosen weights; those weights still need to be selected against the nonlinear aircraft and real actuator constraints.
+The minus superscript marks the prediction before correction. The measurement matrix $C$ selects the quantities we can observe; the correction matrix $L$ determines how each residual adjusts the estimated states. The deployed implementation also accounts for equilibrium offsets when turning.
 
-| Stage | Information entering it | What it contributes |
-|---|---|---|
-| References and trim | Flight-mode commands, turn and climb demand | Feasible commands and an equilibrium about which feedback acts |
-| EKF and canopy observer | Navigation and attitude estimates, available measurements and applied controls | Estimated motion, including canopy states that are not directly measured |
-| State feedback | Estimated deviations from equilibrium | Coordinated damping and tracking action |
-| Integral feedback | Accumulated tracking errors | Rejection of persistent offsets |
-| Allocation and anti-windup | Requested controls, travel and slew constraints | Achievable actuator commands and feedback about unavailable authority |
-| Aircraft and sensors | Applied throttle and brakes | The next motion and measurements, closing the loop |
+Why can a payload measurement correct an estimate of canopy motion? Because the model couples them. A canopy disturbance changes the forces and motion at the payload. Observing that response over time gives information about the hidden state. It does not make the reconstruction exact: model errors, biased wind estimates and weakly observable motion can all limit it.
 
-The current browser controller retains the EKF and uses synthetic airspeed rather than a pitot sensor. Its canopy observer has fixed gains; it does not dynamically propagate uncertainty like a full Kalman filter. It receives no canopy-angle truth from the simulator. Extra sensing was investigated separately, and should not be credited to the deployed results.
+[Explore prediction, measurement residual and correction](https://davidingraham.github.io/assets/microagu-viewer/lqi-explainer.html?view=observer)
 
-## The actuator limits are part of the controller
+This demonstration uses the released linear plant and observer, with synthetic measurement noise and an initially unknown relative-pitch displacement. It illustrates the mechanism, not measured observer accuracy. Simulator truth is shown only for the reader and is never supplied to the observer.
 
-An unconstrained linear controller can ask for a brake to move beyond its stop or faster than its servo permits. It can also accumulate integral action while that request is impossible. The eventual response can then be very different from the linear design.
+The onboard observer uses **fixed gains calculated offline**. Its design uses a covariance-based estimation calculation, but it does not propagate a changing covariance during flight. ArduPilot's EKF remains a separate estimator upstream. The current browser configuration uses synthetic airspeed derived from navigation/wind estimation, with no pitot sensor or canopy-angle truth supplied to the controller.
 
-The diagram below makes the shared brake budget visible. For this normalized illustration, common brake is the mean of left and right brake, and differential brake is half their difference:
+## The online feedback loop
 
-$$
- b_L=c+d,\qquad b_R=c-d,\qquad
- |d|\leq c\leq 1-|d|.
-$$
+Every 20 ms, while the custom controller is eligible and active, the observer and controller update. References describe the motion we want; measurements describe what the aircraft appears to be doing. The observer supplies a consistent state estimate, and LQI turns its deviation from the reference into coordinated control requests.
 
-Near zero common brake, a large differential request would require one brake to push beyond its fully released position. At the other extreme, applying both brakes fully leaves no differential authority. The firmware includes additional allocation and slew behavior; the diagram isolates the travel geometry so this coupling is easy to see.
+[Follow the online control flow](https://davidingraham.github.io/assets/microagu-viewer/lqi-explainer.html?view=online)
+
+The requested controls are not necessarily achievable. Brakes have finite travel and servos have finite speed. Throttle has a ceiling. The allocation stage applies those constraints, and the observer receives the **applied** controls so that its next prediction reflects what the aircraft actually received.
+
+The integrators also need to know when an actuator cannot deliver more action. Otherwise, error can continue accumulating behind a saturated actuator and produce a large correction after it leaves saturation. **Anti-windup** uses the difference between requested and applied controls to manage that accumulated action. In this controller, the correction is actuator-specific, so a common-brake limit need not prevent useful turn-error integration.
+
+A two-second engagement blend manages the transfer into LQI. Selecting it in the interface does not give it ownership in every flight mode: assisted launch, MANUAL, FBWA and landing retain their designated baseline behavior.
+
+## Designing and tuning the current controller
+
+The onboard calculation is a matrix multiplication and a state update. The more involved work happens offline: constructing the model, choosing the design priorities and testing the resulting controller with all of its practical constraints included.
+
+[Follow the offline design and validation process](https://davidingraham.github.io/assets/microagu-viewer/lqi-explainer.html?view=offline)
+
+**Build the nonlinear aircraft model.** Use the as-built 132 mm riser spacing, mass and geometry, then constrain the aerodynamic and joint parameters with flight data. Treat parameters that the logs cannot identify well as uncertainties to test, rather than as precisely known constants.
+
+**Find equilibrium and linearize.** Express the motion in a heading-independent, 16-state coordinate system. Perturb the nonlinear model around trim to obtain a discrete plant at the 20 ms controller interval. Normalize angles, velocities, rates and controls so that the cost weights have a clear scale. Use steady-turn equilibrium information to support the requested turn envelope.
+
+**Define the available measurements and desired outputs.** The observer uses nine channels: payload roll and pitch, three air-relative velocity components, three payload body rates and height. The feedback design augments the 16 modeled states with three integral errors: height, turn rate and speed. Its output has three components: throttle, common brake and differential brake.
+
+**Choose costs and solve for gains.** The current `responsive_softspeed` design emphasizes pitch-rate motion and height tracking, penalizes common-brake effort, and places a softer cost on speed tracking. The discrete Riccati solution supplies the coordinated gains. The observer's fixed correction gains are designed separately from its measurement model and assumed process/measurement noise.
+
+**Evaluate the complete implementation.** Choose candidate costs using nonlinear SITL training cases. Include the 0.7 s climb-reference filter, command limits, trim handling, observer, actuator travel and slew, anti-windup, voltage compensation and engagement behavior. These features change the closed-loop response and must be present when judging a tune.
+
+**Freeze and validate.** Freeze the selected controller before evaluating held-out weather and parameter variations. Assess tracking, internal motion, recovery after disturbances, actuator saturation and energy. A low aggregate tracking cost cannot override a failed recovery screen. If the design changes in response to a validation result, it needs fresh validation rather than continuing to call the same cases held out.
+
+**Export the tested configuration.** Keep the gains, reference parameters, source revision, physics configuration and runtime hashes together. The released command bounds are 35 degrees/s turn rate, 0.75 m/s climb and 1.0 m/s descent. The 3.8–4.4 m/s airspeed target clamp is a bound on the requested target, not a guarantee on actual speed.
+
+<details>
+<summary>Design weights and reproducibility</summary>
+
+The selected normalized design adds output costs of 4 for height, 1 for turn rate and 0.3 for speed. Integral-state costs are 12, 3 and 0.3 respectively. A base cost of 0.02 applies to each modeled state, with an additional 90 on each of the payload and canopy pitch-rate states. Input costs are 500 for throttle, 3000 for common brake and 1000 for differential brake. These numbers only have meaning together with the model's normalization and sampling interval.
+
+The [teaching-data generator](../viewer/apps/applets/lqi-explainer/generate.py) reconstructs the selected feedback matrix from the pinned release plant and these costs, and checks agreement with the deployed gains. It also regenerates the local demonstrations and extracts the recorded comparison from the archived campaign data. Its [README](../viewer/apps/applets/lqi-explainer/README.md) specifies assumptions and provenance.
+
+The [runtime manifest](../viewer/assets/runtime/build.json) identifies the actual binary and source hashes. The [longitudinal reproduction instructions](../research/lqi-longitudinal-2026-10-17/REPRODUCE.md) describe rebuilding and rerunning the final campaign. These reproduce the current artifact and its evaluation; obtaining a suitable model for a different aircraft still requires calibration, linearization and new validation.
+
+</details>
+
+## Reading the gains
+
+A gain matrix can look like a wall of unrelated numbers. Read it as a set of contributions: each state deviation affects each requested actuator command, and the controller adds those contributions together.
+
+The heatmap below uses the deployed gains. Its colors show command changes for **labeled example deviations**, rather than raw coefficients whose units differ. Teal increases a command; orange decreases it. Select a cell and vary its deviation to see how the same state contributes to all three outputs. The feedback minus sign is already included.
+
+[Explore the gain matrix and command contributions](https://davidingraham.github.io/assets/microagu-viewer/lqi-explainer.html?view=gains)
+
+These example deviations are teaching scales, not measured distributions of flight states. A large cell does not, by itself, prove a state is especially valuable: its typical magnitude, estimation quality, correlation with other states and actuator saturation also matter. The current controller combines all of them at once.
+
+## What the complete system achieves
+
+Once the mechanism is clear, the useful comparison asks three things together: does it follow the command, does the internal motion settle, and what effort does that require?
+
+This recording shows a matched case from the longitudinal validation. Switch between LQI and the classical PG + TECS controller, and inspect altitude error, relative pitch rate and throttle through the test phases. The plotted recording is downsampled for presentation; the full-resolution campaign metrics remain the authority for peak values.
+
+[Inspect a matched nonlinear SITL recording](https://davidingraham.github.io/assets/microagu-viewer/lqi-explainer.html?view=replay)
+
+Across eight matched disturbance cases, the median LQI / PG + TECS ratio was 0.653 for relative pitch-rate RMS, 0.529 for its peak and 0.956 for modeled shaft energy. These results support a substantial damping improvement and a smaller energy improvement for these cases. They do not show that every flight task benefits equally.
+
+<details>
+<summary>Per-case evidence and actuator limits</summary>
 
 [Explore brake authority and the release evidence](https://davidingraham.github.io/assets/microagu-viewer/lqi-development.html)
 
-This is why the practical development extended beyond a gain matrix. Applied actuator feedback, actuator-specific anti-windup, reference filtering and trim handling all affect whether the controller can deliver the action it was designed to produce.
+The brake diamond is a simplified geometric illustration using the mean and half-difference of left/right travel. Those coordinates are not the firmware's common/differential allocation convention. The actual allocator also includes slew limits and calibration.
 
-## How the design became a usable controller
+All fourteen LQI validation flights passed their frozen screens. A classical comparator exceeded its quiet pitch-rate RMS screen; that failure remains in the [full validation record](../viewer/assets/runtime/lqi-longitudinal-validation.json). The tests include reduced voltage, turns, Dryden turbulence, thermals, coefficient uncertainty, actuator variation and controller transitions. Modeled shaft energy excludes electrical and servo losses.
 
-**Start with a model, then challenge it.** Linearization and state-space analysis supplied a way to reason about coupled motion and choose candidate gains. The archived study documents those early diagnostics. A favorable linear result was only a starting point for nonlinear, autopilot-in-the-loop tests.
+</details>
 
-**Judge recovery as well as error.** Disturbance tests examine what happens after the disturbance stops. Persistent oscillation, peak motion, quiet-period residuals and actuator saturation matter alongside RMS tracking error. A favorable weighted score cannot override a failed stability or recovery screen.
+These are finite simulator tests, not flight qualification or a statistical reliability estimate. Their usefulness depends on the model representing the motions and disturbances that matter. Flight evidence remains necessary.
 
-**Retune with the actual command shaping in place.** The selected `responsive_softspeed` tune was evaluated with the 0.7 s climb-reference filter included. In twelve fresh validation cases its composite score improved in every case against the published comparator, with a median reduction of about 41%. Energy did not improve uniformly: the median paired change was about +0.3%, with improvements in five of twelve cases. This was primarily a tracking and recovery improvement, not a universal efficiency win. The score is specific to that campaign and is not interchangeable with the later release metrics.
+## Fly the controller in your browser
 
-**Handle equilibrium and transitions.** Expanding turn demand required steady-turn trim handling and observer equilibrium recentering. A two-second engagement blend softened the transfer from the previously applied commands into LQI. Tests of an already settled controller would have missed that handover problem.
+The explanatory applets above either illustrate the local model or replay recorded results. The **browser flight simulator** runs a live aircraft instead: the Rust nonlinear model supplies motion and simulated sensors to ArduPilot SITL, with its EKF and controllers in the loop. Your inputs and the weather controls change the flight as it runs.
 
-**Leave authority for disturbances.** Nominal 1 m/s climb tests passed, but used nearly all of the nominal 60% throttle ceiling. The released climb command was limited to 0.75 m/s instead. During reduced-voltage validation, a mismatch between voltage-compensated motor feedback and uncompensated controller requests also produced false anti-windup feedback. Correcting those units was necessary before accepting the expanded envelope.
+[Open the interactive flight simulator](https://davidingraham.github.io/assets/microagu-viewer/simulator.html)
 
-The [turn-release notes](../viewer/LQI-FEASIBLE-TURNS.md) and [longitudinal-release notes](../viewer/LQI-LONGITUDINAL.md) describe the integration changes, retained failures and validation limits. The [filter-retuning report](../research/lqi-filter-retune-2026-10-17/RESULTS.md) records the earlier selection and its mixed energy results.
+LQI is selected by default; PG + TECS is available in the controller selector. Allow the launch sequence to finish and the aircraft to settle in an eligible autopilot mode. Observe altitude/path tracking and canopy–payload motion separately, then try a modest turn or altitude change. Repeat with the other controller after resetting and settling the aircraft.
 
-## What the current comparison supports
+Weather and trajectories are not necessarily synchronized between interactive runs. Use the recorded matched tests for quantitative comparisons, and the live simulator to build a feel for the coupled motion. The [simulator guide](../viewer/SIMULATOR.md) describes flight modes, touch controls, weather and plots.
 
-The interactive chart uses the eight matched disturbance comparisons from the longitudinal release. Across those cases, the median LQI / PG + TECS ratio was 0.653 for relative pitch-rate RMS, 0.529 for its peak, and 0.956 for modeled shaft energy. The largest ratio in each category was 0.694, 0.787 and 0.978 respectively. Lower is better for each of these metrics.
+<details>
+<summary>Earlier analytical reference</summary>
 
-That supports a substantial damping improvement and a smaller modeled energy improvement for these cases. It does not establish a field reliability rate or show that LQI wins under every flight task. Energy here excludes electrical losses and servo consumption.
+The [frequency-response and state-space study](controller-state-space-archive.md) is retained as a technical archive. It describes an earlier controller and sensing configuration, rather than the implementation introduced here.
 
-The full validation also included absolute tracking and recovery screens. All fourteen LQI validation flights passed their frozen gates. One classical comparator exceeded the quiet pitch-rate RMS screen; that failure remains in the record rather than being hidden by the paired ratios. Tests covered turn demand, reduced voltage, Dryden turbulence, thermals, coefficient uncertainty, actuator slew variation and mode/controller transitions.
-
-[Read the machine-readable protocol and all retained outcomes](../viewer/assets/runtime/lqi-longitudinal-validation.json). The record includes source and binary hashes so these results can be associated with the tested configuration.
-
-## What is running in the browser
-
-| Item | Current published configuration |
-|---|---|
-| Physics geometry | As-built 132 mm riser spacing |
-| Controller | Experimental LQI selected by default; PG + TECS selectable |
-| Sensing | EKF synthetic airspeed and internal canopy observer; no pitot or canopy truth |
-| Turn-reference limit | 35 degrees/s |
-| Vertical command limits | 0.75 m/s climb; 1.0 m/s descent |
-| Climb-reference filter | 0.7 s |
-| Airspeed target clamp | 3.8–4.4 m/s; not a guarantee on actual airspeed |
-
-Selecting LQI does not mean it owns the actuators in every mode. Assisted launch, MANUAL, FBWA and landing retain their designated baseline behavior; the custom controller takes over only in eligible conditions. The [simulator documentation](../viewer/SIMULATOR.md) describes the current controls and mode behavior.
-
-[Fly the browser simulator](https://davidingraham.github.io/assets/microagu-viewer/simulator.html).
-
-The next useful improvements must survive the same distinction that started this work: following the route is necessary, but the aircraft also needs to settle, preserve control authority and use power sensibly. Broader validation and flight evidence are needed before treating the simulated envelope as an operational one.
+</details>

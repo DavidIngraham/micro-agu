@@ -5,6 +5,7 @@ import {
   ManagedScene,
   disposeTree,
 } from "@microagu/rendering/scene/resources";
+import { brakeOffset } from "@microagu/rendering/aircraft/paraglider";
 import { definition } from "./definition";
 import data from "./loads.json";
 import "./style.css";
@@ -28,7 +29,8 @@ export const applet = registerApplet(definition, (scope) => {
   const camera = new T.OrthographicCamera(-1.6, 1.6, 1.1, -1.1, 0.1, 20);
   let caseIndex = 0,
     selected = 2,
-    front = false;
+    front = false,
+    rear = false;
   function arrow(
     vector: number[],
     origin: number[],
@@ -60,7 +62,7 @@ export const applet = registerApplet(definition, (scope) => {
     camera.top = halfHeight;
     camera.bottom = -halfHeight;
     camera.position.set(
-      ...((front ? [0, 0.22, -5] : [-2.3, 1.8, -4.5]) as [
+      ...((front ? [0, 0.22, -5] : rear ? [0, 0.8, 5] : [-2.3, 1.8, -4.5]) as [
         number,
         number,
         number,
@@ -88,26 +90,58 @@ export const applet = registerApplet(definition, (scope) => {
       current.panels[0].position[2];
     current.panels.forEach((p, i) => {
       const vertices: number[] = [];
-      const point = (t: number, x: number) =>
-        cv([
-          x,
-          radius * Math.sin(t),
-          radius * (1 - Math.cos(t)) - centerOffset,
+      const shape = {
+        arcSpan: data.arcSpan,
+        halfArc: data.halfArc,
+        chord: data.chord,
+      };
+      const brakes = [current.left_m * 1000, current.right_m * 1000];
+      const point = (t: number, u: number, deformed = true) => {
+        const offset = deformed
+          ? brakeOffset(t / data.halfArc, u, shape, brakes)
+          : new T.Vector3();
+        return cv([
+          (0.5 - u) * data.chord + offset.x,
+          radius * Math.sin(t) + offset.y,
+          radius * (1 - Math.cos(t)) - centerOffset + offset.z,
         ]);
+      };
       const start = (-1 + i * 0.4) * data.halfArc,
         end = start + 0.4 * data.halfArc;
       for (let j = 0; j < 12; j++) {
         const a = start + ((end - start) * j) / 12,
           b = start + ((end - start) * (j + 1)) / 12;
-        for (const v of [
-          point(a, -data.chord / 2),
-          point(a, data.chord / 2),
-          point(b, data.chord / 2),
-          point(a, -data.chord / 2),
-          point(b, data.chord / 2),
-          point(b, -data.chord / 2),
-        ])
-          vertices.push(v.x, v.y, v.z);
+        for (let k = 0; k < 20; k++) {
+          const u = k / 20,
+            v = (k + 1) / 20;
+          for (const p of [
+            point(a, u),
+            point(a, v),
+            point(b, v),
+            point(a, u),
+            point(b, v),
+            point(b, u),
+          ])
+            vertices.push(p.x, p.y, p.z);
+        }
+      }
+      for (const deformed of [false, true]) {
+        const edge = new T.Line(
+          new T.BufferGeometry().setFromPoints(
+            Array.from({ length: 25 }, (_, j) =>
+              point(start + ((end - start) * j) / 24, 1, deformed),
+            ),
+          ),
+          deformed
+            ? new T.LineBasicMaterial({ color: 0xb98224 })
+            : new T.LineDashedMaterial({
+                color: 0x748c99,
+                dashSize: 0.025,
+                gapSize: 0.018,
+              }),
+        );
+        edge.computeLineDistances();
+        group.add(edge);
       }
       const geometry = new T.BufferGeometry();
       geometry.setAttribute(
@@ -169,8 +203,8 @@ export const applet = registerApplet(definition, (scope) => {
     const tilt = data.brakeTiltRadPerM * (current.right_m - current.left_m);
     el("tilt-status").textContent =
       data.brakeTiltRadPerM === 0
-        ? "Brake-induced inclination change: 0°. The brake-tilt term is disabled in this preset; braking changes lift and drag coefficients. The angles below come from canopy curvature."
-        : `Brake-induced inclination change: ${degrees(tilt)}° on every panel. The surface shows rigid geometry; the inset shows effective aerodynamic orientations.`;
+        ? "Brake-induced inclination change: 0°. The optional roll-axis tilt term is disabled in this preset; braking changes lift and drag coefficients. The surface illustrates trailing-edge deformation separately. The angles below come from canopy curvature."
+        : `Brake-induced inclination change: ${degrees(tilt)}° on every panel. The inset shows effective aerodynamic orientations; the surface separately illustrates trailing-edge deformation.`;
     el("front").innerHTML =
       `<svg viewBox="0 0 600 112" role="img" aria-label="Front view of five local aerodynamic inclinations"><text x="10" y="18" fill="#536975" font-size="13">Front view · effective aerodynamic inclination</text>${current.panels
         .map((p, i) => {
@@ -182,8 +216,27 @@ export const applet = registerApplet(definition, (scope) => {
         })
         .join("")}</svg>`;
     const p = current.panels[selected];
+    const profile = (deformed: boolean) => {
+      const pts: string[] = [];
+      for (const upper of [true, false])
+        for (let j = 0; j <= 40; j++) {
+          const u = upper ? j / 40 : 1 - j / 40;
+          const offset = deformed
+            ? brakeOffset(0, u, { halfArc: 0 }, [
+                p.brake_m * 1000,
+                p.brake_m * 1000,
+              ])
+            : new T.Vector3();
+          const x = 300 - u * 230 + (offset.x * 230) / data.chord;
+          const z =
+            (upper ? -0.05 : 0.006) * data.chord * Math.sin(Math.PI * u) +
+            offset.z;
+          pts.push(`${x},${120 + (z * 230) / data.chord}`);
+        }
+      return `M${pts.join("L")}Z`;
+    };
     el("local").innerHTML =
-      `<svg viewBox="0 0 380 210" role="img" aria-label="Local panel side view with computed lift, drag and incoming airflow"><defs><marker id="tip" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto-start-reverse"><path d="M0 0L6 3L0 6Z" fill="context-stroke"/></marker></defs><path d="M70 120Q180 94 300 120L70 120" fill="${colors[selected]}" stroke="#536975"/><circle cx="185" cy="115" r="4" fill="#213c4a"/><text x="260" y="145" font-size="13" fill="#536975">Forward →</text>${[
+      `<svg viewBox="0 0 380 210" role="img" aria-label="Local panel side view with computed lift, drag and incoming airflow"><defs><marker id="tip" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto-start-reverse"><path d="M0 0L6 3L0 6Z" fill="context-stroke"/></marker></defs><path d="${profile(false)}" fill="none" stroke="#748c99" stroke-dasharray="5 4"/><path d="${profile(true)}" fill="${colors[selected]}" fill-opacity=".7" stroke="#536975"/><text x="12" y="195" font-size="12" fill="#536975">Dashed: neutral profile · deformation illustrative</text><circle cx="185" cy="115" r="4" fill="#213c4a"/><text x="260" y="145" font-size="13" fill="#536975">Forward →</text>${[
         [
           -p.localVelocity[0],
           -p.localVelocity[2],
@@ -274,6 +327,7 @@ export const applet = registerApplet(definition, (scope) => {
   document.querySelectorAll<HTMLButtonElement>("[data-view]").forEach((b) =>
     scope.listen(b, "click", () => {
       front = b.dataset.view === "front";
+      rear = b.dataset.view === "rear";
       document
         .querySelectorAll<HTMLButtonElement>("[data-view]")
         .forEach((x) => x.setAttribute("aria-pressed", String(x === b)));

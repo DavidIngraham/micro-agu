@@ -1,5 +1,6 @@
 import { RuntimeAssets } from "../assets/runtime";
 import { Atmosphere } from "./atmosphere";
+import { equivalentAirspeed } from "./airspeed";
 import type { Weather } from "@microagu/contracts/weather";
 import { Quaternion, Vector3 } from "@microagu/contracts/math";
 import type { Frame } from "@microagu/contracts/recordings";
@@ -89,7 +90,10 @@ export class Physics {
   constructor(
     private kernel: Kernel,
     readonly config: PhysicsConfig,
+    private readonly homeAltitudeM = 0,
+    atmosphere?: Atmosphere,
   ) {
+    if (atmosphere) this.atmosphere = atmosphere;
     if (
       config.schema !== "microagu.physics.v1" ||
       config.state.length !== 26 ||
@@ -101,7 +105,7 @@ export class Physics {
     this.command = config.command.slice();
     this.brakes = config.command.slice(1);
   }
-  static async load(base: string, config?: PhysicsConfig) {
+  static async load(base: string, config?: PhysicsConfig, homeAltitudeM = 0) {
     const assets = base.startsWith("file:")
       ? null
       : await RuntimeAssets.load(base);
@@ -139,9 +143,12 @@ export class Physics {
     return new Physics(
       new bindings.Kernel(new Float64Array(data.parameters), data.mass),
       data,
+      homeAltitudeM,
+      new Atmosphere((seed) => new bindings.Dryden(seed)),
     );
   }
   dispose() {
+    this.atmosphere.dispose();
     this.kernel.free();
   }
   private observation() {
@@ -182,7 +189,12 @@ export class Physics {
     const dt = 1 / rate,
       before = this.observation();
     // One wind sample drives forces, airspeed, JSON wind and render truth alike.
-    this.windNED = this.atmosphere.sample(dt, this.state[13], this.state[14]);
+    this.windNED = this.atmosphere.sample(
+      dt,
+      this.state[13],
+      this.state[14],
+      this.state.slice(7, 10),
+    );
     if (this.released) {
       const clamp = (x: number, lo: number, hi: number) =>
         Math.max(lo, Math.min(hi, x));
@@ -288,8 +300,12 @@ export class Physics {
       position: obs.position.toArray(),
       quaternion: [this.state[6], ...this.state.slice(3, 6)],
       velocity: obs.velocity.toArray(),
-      airspeed: Math.hypot(
-        ...this.state.slice(7, 10).map((v, i) => v - this.windNED[i]),
+      // JSON airspeed goes directly to SITL's EAS pressure-sensor input.
+      airspeed: equivalentAirspeed(
+        Math.hypot(
+          ...this.state.slice(7, 10).map((v, i) => v - this.windNED[i]),
+        ),
+        this.homeAltitudeM - obs.position.z,
       ),
       velocity_wind: this.windNED.slice(),
     };

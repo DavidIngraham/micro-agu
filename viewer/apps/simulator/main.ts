@@ -320,6 +320,10 @@ export const applet = registerApplet(definition, async (scope) => {
     );
 
   const weatherValues = () => ({
+    turbulenceModel: el<HTMLSelectElement>("turbulence-model").value as
+      "dryden" | "legacy",
+    gustLength: Number(el<HTMLInputElement>("gust-length").value),
+    verticalRatio: Number(el<HTMLInputElement>("vertical-ratio").value),
     turbulence: Number(el<HTMLInputElement>("turbulence").value),
     thermalStrength: Number(el<HTMLInputElement>("thermal-strength").value),
     thermalRadius: Number(el<HTMLInputElement>("thermal-radius").value),
@@ -337,6 +341,11 @@ export const applet = registerApplet(definition, async (scope) => {
   });
   function windLabels() {
     const weather = weatherValues();
+    el("gust-length-value").textContent = `${weather.gustLength} m`;
+    el("vertical-ratio-value").textContent =
+      `${Math.round(weather.verticalRatio * 100)}%`;
+    for (const id of ["gust-length", "vertical-ratio"])
+      el<HTMLInputElement>(id).disabled = weather.turbulenceModel !== "dryden";
     el("turbulence-value").textContent = `${weather.turbulence.toFixed(1)} m/s`;
     el("thermal-strength-value").textContent =
       `${weather.thermalStrength.toFixed(1)} m/s`;
@@ -354,6 +363,9 @@ export const applet = registerApplet(definition, async (scope) => {
     "wind-direction",
     "wind-up",
     "turbulence",
+    "turbulence-model",
+    "gust-length",
+    "vertical-ratio",
     "thermal-strength",
     "thermal-radius",
   ])
@@ -685,6 +697,9 @@ export const applet = registerApplet(definition, async (scope) => {
     "wind-direction": 0,
     "wind-up": 0,
     turbulence: defaultWeather.turbulence,
+    "turbulence-model": defaultWeather.turbulenceModel,
+    "gust-length": defaultWeather.gustLength,
+    "vertical-ratio": defaultWeather.verticalRatio,
     "thermal-strength": defaultWeather.thermalStrength,
     "thermal-radius": defaultWeather.thermalRadius,
     "thermal-north": defaultWeather.thermalNorth,

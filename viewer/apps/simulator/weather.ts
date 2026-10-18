@@ -2,6 +2,9 @@ import type { Weather } from "@microagu/contracts/weather";
 
 /** Centre of the northbound 200–400 m leg of the example AUTO circuit. */
 export const defaultWeather: Weather = {
+  turbulenceModel: "dryden",
+  gustLength: 20,
+  verticalRatio: 0.5,
   turbulence: 0.2,
   thermalStrength: 1.5,
   thermalRadius: 60,

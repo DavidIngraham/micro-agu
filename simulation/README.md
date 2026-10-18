@@ -137,3 +137,30 @@ C++ reference traces and are not overwritten by the Rust configuration exporter.
 Ground contact, scalar inflation and prescribed hand motion remain development
 approximations. Existing logs do not identify cloth dynamics, inflation pressure,
 contact friction or launch timing. The model is not a validated training model.
+# Dryden gusts
+
+`sim_core::atmosphere::Dryden` provides seeded MIL-F-8785C translational gust
+filters, also exported as `microagu_sim.Dryden` and the generated TypeScript
+`Dryden` class. `step(dt, speed, lengths, sigma)` takes SI units: seconds,
+mean-air-relative speed in m/s, three length scales in metres, and three component
+RMS intensities in m/s. Outputs are along-wind, cross-wind and down velocities.
+Callers add mean wind and rotate these axes into their world frame.
+
+The longitudinal filter is first order; lateral and vertical filters are second
+order. State propagation and process-noise covariance are discretized exactly,
+including a small-step series to avoid cancellation. A nonzero seed reproduces
+the same time-step sequence; changing timestep preserves statistics, not the
+individual random path. Zero dt does not consume randomness. Speed has a 0.5 m/s
+floor; the frozen-field model is not a calibrated model of stationary turbulence.
+
+The API accepts independent axis lengths/intensities. The browser exposes a
+shared gust size and a vertical/horizontal RMS ratio, with 20 m and 0.5 defaults.
+It rotates gusts into NED, uses speed relative to the mean airmass, and ramps mean
+wind and gust intensity over two seconds. Thermals remain a separate spatial
+field. This is velocity turbulence only: no canopy-scale gradients, angular gusts,
+terrain rotor, automatic altitude scaling or flight-data calibration is claimed.
+
+The Rust tests verify stationary variance and analytic autocorrelation at two
+timesteps; `viewer/tests/integration/dryden.ts` checks Python/WASM sequence parity.
+Reference: https://www.mathworks.com/help/aeroblks/drydenwindturbulencemodelcontinuous.html
+

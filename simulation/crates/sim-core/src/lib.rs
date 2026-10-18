@@ -1,6 +1,7 @@
 //! Deterministic two-body parafoil simulation. SI units, NED world, FRD bodies.
 //! Quaternions are body-to-world in xyzw order. No transport or filesystem I/O.
 pub mod actuators;
+pub mod atmosphere;
 pub mod config;
 pub mod dynamics;
 pub mod integrator;

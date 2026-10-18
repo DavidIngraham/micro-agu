@@ -50,6 +50,8 @@ export class Simulator {
   onUpdate = () => {};
   onLog = (text: string) => {};
   onTruth = (frame: Frame) => {};
+  /** Wall-clock render throttling; set to zero for simulation-time research sampling. */
+  truthIntervalMs = 40;
   onError = (text: string) => {};
   physics!: Physics;
   private disconnectPhysics?: () => void;
@@ -79,7 +81,7 @@ export class Simulator {
       throw Error(
         "This browser has not enabled shared memory. Reload once after the simulator service worker activates, or use a browser supporting cross-origin isolation.",
       );
-    this.physics = await Physics.load(physicsBase, config);
+    this.physics = await Physics.load(physicsBase, config, this.home.alt);
     this.physics.groundStart(true);
     const assets = url.startsWith("file:")
       ? null
@@ -130,7 +132,7 @@ export class Simulator {
           m.FS.writeFile("/browser.parm", defaults);
           this.disconnectPhysics = connectPhysicsSocket(m, (packet) => {
             const sensors = this.physics.respond(packet);
-            if (performance.now() - this.lastTruth >= 40) {
+            if (performance.now() - this.lastTruth >= this.truthIntervalMs) {
               this.lastTruth = performance.now();
               this.onTruth(this.physics.truth());
             }
@@ -202,19 +204,25 @@ export class Simulator {
         m.name === "EKF_STATUS_REPORT" && (Number(m.values.flags) & 19) === 19,
       45000,
     );
-    const normalSpeed = this.wait(
+    await this.speedup(1);
+    this.onLog("EKF ready; simulation speed restored to 1× before launch.");
+  }
+  /** Set SITL pacing after launch; sensor and controller simulated timesteps stay unchanged. */
+  async speedup(factor: number) {
+    if (!Number.isFinite(factor) || factor < 1 || factor > 8)
+      throw Error("Simulation speed must be between 1 and 8.");
+    const accepted = this.wait(
       (m) =>
         m.name === "PARAM_VALUE" &&
         m.values.param_id === "SIM_SPEEDUP" &&
-        Number(m.values.param_value) === 1,
+        Math.abs(Number(m.values.param_value) - factor) < 1e-5,
     );
     this.send("PARAM_SET", {
       param_id: "SIM_SPEEDUP",
-      param_value: 1,
+      param_value: factor,
       param_type: 9,
     });
-    await normalSpeed;
-    this.onLog("EKF ready; simulation speed restored to 1× before launch.");
+    await accepted;
   }
   private poll() {
     for (let i = 0; i < 16; i++) {

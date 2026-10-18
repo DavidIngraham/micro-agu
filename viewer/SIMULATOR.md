@@ -252,3 +252,19 @@ above. The local ArduPilot research checkout still contains separate zero-trim
 and EKF experiments with a different gain dimension. Rebuilding that checkout
 does not reproduce the packaged public runtime. Its research changes were
 preserved rather than overwritten during publication.
+# Gust controls
+
+The web simulator defaults to the shared Rust Dryden velocity-gust model. Settings
+expose **Gust model**, **Gust size** (1–200 m), **Vertical proportion** (0–200%),
+and **Turbulence** (horizontal component RMS in m/s). Larger gust sizes produce
+longer disturbances at the same speed. Defaults remain 0.2 m/s strength, with a
+20 m gust size and 50% vertical proportion. Apply wind updates the configuration;
+mean wind and intensity ramp over two seconds in Dryden mode.
+
+Legacy turbulence preserves the original fixed two-second OU model for previous
+experiments. Size and vertical controls are disabled in that mode. Existing API
+callers that omit `turbulenceModel` retain legacy behavior. The explicit Rust
+Dryden binding is available to Python experiments as well as the browser.
+The autopilot firmware and 35 deg/s controller tune are unchanged by this weather
+update; earlier controller qualification results describe the legacy gust model.
+

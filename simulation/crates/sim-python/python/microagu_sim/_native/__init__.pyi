@@ -6,6 +6,7 @@ import numpy
 import numpy.typing
 import typing
 __all__ = [
+    "Dryden",
     "Kernel",
     "Simulator",
     "config_schema",
@@ -15,6 +16,11 @@ __all__ = [
     "parameter_keys",
     "rotor_loads",
 ]
+
+@typing.final
+class Dryden:
+    def __new__(cls, seed: builtins.int) -> Dryden: ...
+    def step(self, dt: builtins.float, speed: builtins.float, lengths: typing.Sequence[builtins.float], sigma: typing.Sequence[builtins.float]) -> builtins.list[builtins.float]: ...
 
 @typing.final
 class Kernel:

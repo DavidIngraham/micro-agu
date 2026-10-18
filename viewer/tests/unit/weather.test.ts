@@ -3,6 +3,22 @@ import assert from "node:assert/strict";
 import { Atmosphere } from "@microagu/sim-browser/physics/atmosphere";
 import { calmWeather } from "@microagu/contracts/weather";
 
+test("explicit gust seeds reproduce sequences and reset accumulated gust state", () => {
+  const a = new Atmosphere(),
+    b = new Atmosphere();
+  const weather = { ...calmWeather, turbulence: 0.5, seed: 1234 };
+  a.configure(1, 90, 0, weather);
+  const first = a.sample(0.02, 0, 0);
+  for (let i = 0; i < 20; i++) a.sample(0.02, 0, 0);
+  a.configure(1, 90, 0, weather);
+  b.configure(1, 90, 0, weather);
+  assert.deepEqual(a.sample(0.02, 0, 0), first);
+  assert.deepEqual(b.sample(0.02, 0, 0), first);
+  b.configure(1, 90, 0, { ...weather, seed: 4321 });
+  assert.notDeepEqual(b.sample(0.02, 0, 0), first);
+  assert.throws(() => a.configure(0, 0, 0, { ...weather, seed: 0 }));
+});
+
 test("wind bearing, thermal centre and radius use NED consistently", () => {
   const air = new Atmosphere();
   assert.deepEqual(air.sample(0.005, 0, 0), [0, 0, 0]);

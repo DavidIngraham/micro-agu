@@ -1,5 +1,35 @@
 use sim_core::kernel;
 use wasm_bindgen::prelude::*;
+#[wasm_bindgen]
+pub struct Dryden {
+    inner: sim_core::atmosphere::Dryden,
+}
+#[wasm_bindgen]
+impl Dryden {
+    #[wasm_bindgen(constructor)]
+    pub fn new(seed: u32) -> Result<Dryden, JsValue> {
+        Ok(Self {
+            inner: sim_core::atmosphere::Dryden::new(seed).map_err(error)?,
+        })
+    }
+    pub fn step(
+        &mut self,
+        dt: f64,
+        speed: f64,
+        lengths: &[f64],
+        sigma: &[f64],
+    ) -> Result<Vec<f64>, JsValue> {
+        self.inner
+            .step(
+                dt,
+                speed,
+                kernel::array(lengths).map_err(error)?,
+                kernel::array(sigma).map_err(error)?,
+            )
+            .map(|v| v.to_vec())
+            .map_err(error)
+    }
+}
 fn error(e: String) -> JsValue {
     JsValue::from_str(&e)
 }

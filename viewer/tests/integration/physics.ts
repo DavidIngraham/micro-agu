@@ -3,6 +3,7 @@ import { resolve } from "node:path";
 import { pathToFileURL } from "node:url";
 import assert from "node:assert/strict";
 import { Physics } from "@microagu/sim-browser/physics/physics";
+import { equivalentAirspeed } from "@microagu/sim-browser/physics/airspeed";
 import { validate } from "@microagu/contracts/recordings";
 const config = JSON.parse(
   await readFile("assets/runtime/highdof.json", "utf8"),
@@ -83,6 +84,7 @@ console.log(
 const wind = await Physics.load(
   pathToFileURL(resolve("generated/physics/")).href + "/",
   config,
+  600,
 );
 const calm = await Physics.load(
   pathToFileURL(resolve("generated/physics/")).href + "/",
@@ -112,7 +114,10 @@ assert.ok(
 assert.ok(
   Math.abs(
     sensor.airspeed -
-      Math.hypot(wind.state[7], wind.state[8] + 2, wind.state[9] + 0.5),
+      equivalentAirspeed(
+        Math.hypot(wind.state[7], wind.state[8] + 2, wind.state[9] + 0.5),
+        600 - sensor.position[2],
+      ),
   ) < 1e-9,
 );
 assert.throws(() => wind.setWind(NaN, 0, 0));
@@ -147,7 +152,10 @@ for (let i = 200; i < 400; i++) {
   assert.ok(
     Math.abs(
       sensors.airspeed -
-        Math.hypot(...wind.state.slice(7, 10).map((v, axis) => v - flow[axis])),
+        equivalentAirspeed(
+          Math.hypot(...wind.state.slice(7, 10).map((v, axis) => v - flow[axis])),
+          600 - sensors.position[2],
+        ),
     ) < 1e-9,
   );
   assert.equal(

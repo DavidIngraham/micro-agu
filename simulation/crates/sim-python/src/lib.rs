@@ -3,6 +3,38 @@ use pyo3::exceptions::PyValueError;
 use pyo3::prelude::*;
 use pyo3_stub_gen::derive::{gen_stub_pyclass, gen_stub_pyfunction, gen_stub_pymethods};
 use sim_core::{kernel, state::*};
+#[gen_stub_pyclass]
+#[pyclass(module = "microagu_sim._native")]
+struct Dryden {
+    inner: sim_core::atmosphere::Dryden,
+}
+#[gen_stub_pymethods]
+#[pymethods]
+impl Dryden {
+    #[new]
+    fn new(seed: u32) -> PyResult<Self> {
+        Ok(Self {
+            inner: sim_core::atmosphere::Dryden::new(seed).map_err(err)?,
+        })
+    }
+    fn step(
+        &mut self,
+        dt: f64,
+        speed: f64,
+        lengths: Vec<f64>,
+        sigma: Vec<f64>,
+    ) -> PyResult<Vec<f64>> {
+        self.inner
+            .step(
+                dt,
+                speed,
+                kernel::array(&lengths).map_err(err)?,
+                kernel::array(&sigma).map_err(err)?,
+            )
+            .map(|v| v.to_vec())
+            .map_err(err)
+    }
+}
 fn err(e: String) -> PyErr {
     PyValueError::new_err(e)
 }
@@ -190,6 +222,7 @@ fn parameter_defaults_json() -> String {
 }
 #[pymodule]
 fn _native(m: &Bound<'_, PyModule>) -> PyResult<()> {
+    m.add_class::<Dryden>()?;
     m.add_function(wrap_pyfunction!(parameter_defaults_json, m)?)?;
     m.add_class::<Kernel>()?;
     m.add_class::<PySimulator>()?;

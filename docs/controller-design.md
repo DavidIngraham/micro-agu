@@ -2,21 +2,19 @@
 
 *Micro-AGU · Controller design, part 2 · [Through Trout Lake](first-flight-controller.md) · [Build](micro-agu-design.md) · [Flight tests](flight-testing.md) · [Controller design](controller-design.md) · [Data and methods](data-and-methods.md)*
 
-The controller has two jobs: turn the aircraft along its route and use throttle to follow the requested altitude. Both jobs act on the same suspended system. A brake correction can excite payload pitch, and a throttle correction changes the motion seen by the steering loop. The design uses feedforward for the expected effort, modest feedback for tracking, and separate damping paths shaped around the coupled modes.
+Micro-AGU is a powered paraglider: a flexible wing supports a motorized payload on suspension lines. Its autopilot pulls the left and right brakes to steer and changes throttle to climb or descend. The controller and its motion sensors ride on the payload, below the wing.
 
-The follow-up [state-space controller study](controller-state-space.md) compares joint tuning of these loops with actuator/sensor diagnostics and a full-state feedback benchmark, using the same sampled linear plant and matched nonlinear tests.
+[Part 1](first-flight-controller.md) follows the initial controller through the Trout Lake missions. Those flights also exposed problems with the early design: turns were less effective than the simulator suggested, and a pitch damper intended to settle the aircraft made its motion worse. Before choosing another set of gains, I needed to understand what was moving and how the control inputs affected it.
 
-[Part 1](first-flight-controller.md) follows my independent preflight design work through the Trout Lake missions: adapting the roll loop, changing TECS to throttle-only altitude control, and disabling a pitch damper that made the motion worse. This second phase uses those flights to inform the articulated model and design the replacement controller. It brings steering and altitude together around the resulting architecture, its classical analysis and its simulation evidence.
+This article follows that investigation from flight logs to a model of the suspended aircraft, then uses the model to develop steering and altitude control. The flight data establishes the starting point; the later controller changes are evaluated in simulation.
 
 ## From flight logs to a model for controller design
 
-Micro-AGU is a powered paraglider: a flexible wing supports a motorized payload on suspension lines. The controller lives on the payload, pulls the left and right brakes to steer, and changes throttle to climb or descend. Its sensors measure the payload's motion, while most aerodynamic forces act on the canopy.
+Most aerodynamic forces act on the canopy, while the sensors report the payload's motion. The two can rotate relative to each other. A model that treats them as one rigid aircraft cannot show how that relative motion reaches the controller, or how a correction might reinforce it.
 
-That separation is why this simulator exists. The early single-body model helped choose initial gains, but the Hood River and Trout Lake flights exposed overly optimistic turns and pitch motion it could not explain. The controller-design question became: **when a command moves the canopy or payload, what will the controller's sensors see next?**
+The first step is to make those separate motions visible. The picture below introduces the two bodies; the optional applets then explore the forces and suspension connecting them. Equations and parameter tables accompany each applet for readers who want to inspect the calculation.
 
-Start with the two-body picture below, then follow the forces from canopy to suspension to sensors. The expandable applets each answer one question; the equations and parameter tables are there when you want to inspect the mechanism more closely.
-
-This article records a controller-development study. The newer explanatory applets use the current Rust implementation and identify their presets. Historical flight comparisons and controller results retain the configurations used in that study; adding an explanation does not constitute a new validation run.
+This article records a controller-development study. The newer explanatory applets use the current Rust implementation and identify their presets. Historical flight comparisons and controller results retain the configurations used in that study.
 
 ### Let the payload and canopy move independently
 
@@ -304,17 +302,28 @@ The controller tests reported below begin from solved airborne trim and concern 
 
 ## One aircraft, two control paths
 
-Navigation supplies a turn request and an altitude trajectory. Differential brake pull controls turning; throttle controls climb and descent. Symmetric braking is reserved for future landing work, rather than acting as an elevator during normal flight.
+The model gives us a way to examine the problem encountered in flight: a command can produce both the intended maneuver and rocking between the canopy and payload. Both appear in the sensor feedback. The next task is to choose which motion each control loop should track, and how it should respond to the oscillations accompanying it.
 
-The analysis uses the 1.758 kg Trout Lake configuration, asymmetric brake trim, and modeled 9×4.5 pusher propulsion. Canopy and payload have separate attitudes. Rotor dynamics and active steering remain in the longitudinal plant.
+Navigation supplies two requests: a turn along the route and an altitude trajectory. In this study, differential brake pull handles turning, while throttle handles climb and descent. These give us two control paths to design, but they still act on one coupled aircraft. A steering change must therefore be checked for its effect on pitch and altitude, and a throttle change for its effect on steering.
 
-Nine mechanical degrees of freedom do not mean nine linear states. The local plant uses 15 perturbation states after removing absolute position and arbitrary heading, including rotor RPM. Steering filters and integration add three states; altitude, climb integration, pitch filters and reference smoothing add five more to the full longitudinal model.
+Within each path, the design separates the effort needed to sustain a maneuver from corrections to tracking error and damping of unwanted motion. Feedforward supplies an estimate of the steady effort; feedback corrects the remaining error. The simulation lets us examine whether increasing a correction improves tracking or excites the suspended motion instead.
+
+We start with steering, then apply the same reasoning to altitude control and test the two together in missions. The analysis uses the 1.758 kg Trout Lake configuration, asymmetric brake trim and modeled 9×4.5 pusher propulsion. Symmetric braking is reserved for future landing work in this study.
+
+<details>
+<summary>Model coordinates used in the control analysis</summary>
+
+Nine mechanical degrees of freedom do not mean nine linear states. The local plant uses 15 perturbation states after removing absolute position and arbitrary heading, including rotor RPM. Steering filters and integration add three states; altitude, climb integration, pitch filters and reference smoothing add five more to the full longitudinal model. Rotor dynamics and active steering remain in the longitudinal plant.
+
+</details>
 
 ## Steering: track turn rate, damp roll separately
 
+For steering, the desired motion is a change in heading at the requested rate. Payload roll also contains the rocking motion we want to damp. The controller therefore tracks heading rate and gives roll-rate feedback a separate damping role.
+
 ![Heading-rate controller with separate feedforward, PI correction and roll-rate damping](assets/control-loops/current-lateral.png)
 
-Feedforward supplies the expected differential-brake input. Heading-rate PI corrects tracking and asymmetric trim, while payload roll-rate feedback damps rocking. These paths have different jobs and independently adjustable gains.
+Feedforward supplies the expected differential-brake input. Heading-rate proportional–integral (PI) feedback corrects tracking and asymmetric trim, while payload roll-rate feedback damps rocking. These paths have different jobs and independently adjustable gains.
 
 Navigation's bank-encoded request is converted into heading rate, limited to ±25°/s, smoothed with a 0.1 s time constant, and limited to 40°/s² acceleration.
 
@@ -633,3 +642,5 @@ A relative-motion observer remains a possible extension. The present result uses
 [Data and methods](data-and-methods.md#full-loop-longitudinal-design) records reproduction commands, numerical results, parameter provenance and the archived experimental sequence. Raw trajectories and flight logs remain in Mission Planner.
 
 The [next flight test card](next-flight-test-card.md) turns that validation into a staged sequence, with configuration records, ordinary throttle/turn maneuvers, takeover criteria and a postflight analysis plan.
+
+The follow-up [state-space controller study](controller-state-space.md) builds on these two loops, comparing their joint tuning with actuator/sensor diagnostics and a full-state feedback benchmark under matched tests.

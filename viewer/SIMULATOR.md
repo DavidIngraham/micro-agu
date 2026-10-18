@@ -237,7 +237,8 @@ corrected before retuning, and its original results retain an erratum.
 
 The current browser release adds feasible turn trims, corrected anti-windup and
 observer equilibrium recentering with the same feedback and observer gains. Its
-LQI rate cap is 25 deg/s, and a two-second engagement blend addresses the tested
+LQI rate cap is 35 deg/s after paired disturbance and transition qualification,
+and a two-second engagement blend addresses the tested
 FBWA-to-LQI brake transient. PG + TECS remains the default. See
 [release scope and validation](LQI-FEASIBLE-TURNS.md).
 

@@ -9,12 +9,12 @@
   "transport": "Emscripten SOCKFS local UDP peer",
   "emscripten": "6.0.8",
   "sha256": {
-    "highdof.json": "4a8b0c95c02c9aee878a8592c72607234e44e6c4d4eb1097488edf85bf87daa1",
+    "highdof.json": "01c7127e4f83adcaf385aa02dc44f8b5fc601c6dd2f0f4ab1602dc3412fc72f6",
     "sim_wasm_bg.wasm.d.ts": "20c6b4faa8cc91f0d0ea36e5130f3cbb0e19209ab6ef7ab069098e4b5fe6c16c",
     "sim_wasm.d.ts": "a7d9b12c7b8118fd60f80d6675ff6ed8b37e0ddebbfb1d244c88105a58bac842",
     "sim_wasm_bg.wasm": "f5d479506baad4065fbfa082e985ab2d930018d7bba700b0cc184102b71a636e",
     "sim_wasm.js": "400f027b6e8f2968179d2070c9157fa913bad58aa1d1d54e5db034eb19ea6097",
-    "arduplane.wasm": "7288fcc2de2da91965ce6ea9eaf66be520859042f9be9a7906ace2a090793238",
+    "arduplane.wasm": "4995915df52e4977185e2f7e1e4616118576a9883923a7398679edcf6876a49e",
     "arduplane.js": "893b28e3cbea410e48736d7f7426928cbe8b56f22c1813914aa290172f1e8565"
   },
   "physics_source": {
@@ -61,13 +61,13 @@
   "working_tree_dirty": true,
   "controller_source_sha256": {
     "libraries/AP_CustomControl/AP_CustomControl.cpp": "23a591cd4e56c4ce44efa7a6a7653e4b282fd7e888caed0fd1b18543928de053",
-    "libraries/AP_CustomControl/AP_CustomControl_LQI.cpp": "6d280a99f93866524aa54b12b6803bf589df37157b7cb1b1353fd5f317fbe98a",
+    "libraries/AP_CustomControl/AP_CustomControl_LQI.cpp": "141b15cbac99aded632712ae93c3d6cabb26146ac0a813b6eae99142c8e6b505",
     "libraries/AP_CustomControl/AP_CustomControl_LQI.h": "87c470b491bef663d62bf2a78c9fb3c5105fcb92b60bd9e1a949a7c8f66e011b",
     "libraries/AP_CustomControl/AP_CustomControl_LQI_gains.h": "870cbf6b7bf3b03e465217bc29ce66a67a2c5d46578ddebbed4d7a070dd09c72"
   },
   "controller_source_patch": {
     "path": "lqi-feasible-turns.patch",
-    "sha256": "2bd94485fd7c18a640a33b0f6d9e5a3b2da4980a5351103ee244cf9994ebd55a",
+    "sha256": "3216f6ef2e868aec4331267b67423fa0b3ecf60c42bd81c284e61f3368fd45a9",
     "base_revision": "010ada6a4f0b26910fc18ecca176d2e65c5ed9d7",
     "description": "AI-assisted feasible trim map, anti-windup correction and observer equilibrium recentering. Complete patch against base revision; no research telemetry."
   },
@@ -81,7 +81,8 @@
     "validation": "Corrected lateral gust incidence; fresh Monte Carlo commands and AUTO/CRUISE missions, 2026-10-17"
   },
   "controller_turn_envelope": {
-    "CP3_RMAX": 25,
+    "CP3_RMAX": 35,
+    "PG_TURN_RMAX": 35,
     "CP3_AWMODE": 1,
     "CP3_TMAP": 1,
     "CP3_OBSTRIM": 1,

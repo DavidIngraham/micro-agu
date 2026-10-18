@@ -128,9 +128,9 @@
 +    AP_GROUPINFO("HRTC", 4, AP_CustomControl_LQI, _height_rate_tc, 0.0f),
 +    // @Param: RMAX
 +    // @DisplayName: LQI heading rate limit
-+    // @Description: Maximum heading rate reference. This browser model is qualified through 25 deg/s; not a flight-hardware qualification.
++    // @Description: Maximum heading rate reference. This browser model is qualified through 35 deg/s; not a flight-hardware qualification.
 +    // @Units: deg/s
-+    // @Range: 1 25
++    // @Range: 1 35
 +    // @User: Advanced
 +    AP_GROUPINFO("RMAX", 5, AP_CustomControl_LQI, _turn_max, 10.0f),
 +    // @Param: TMAP
@@ -164,7 +164,7 @@
  {
      const auto &s = in.state;
 -    return in.eligible && in.reference.valid && s.attitude_valid && s.navigation_valid &&
-+    return isfinite(_turn_max.get()) && _turn_max >= 1 && _turn_max <= 25 &&
++    return isfinite(_turn_max.get()) && _turn_max >= 1 && _turn_max <= 35 &&
 +        isfinite(_height_rate_tc.get()) && _height_rate_tc >= 0 && _height_rate_tc <= 3 &&
 +        isfinite(_height_up.get()) && _height_up >= 0.1f && _height_up <= 3.0f &&
 +        isfinite(_height_down.get()) && _height_down >= 0.1f && _height_down <= 3.0f &&

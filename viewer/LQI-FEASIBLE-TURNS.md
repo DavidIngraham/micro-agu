@@ -4,17 +4,28 @@ AI-assisted implementation and validation, 2026-10-17. This is a browser simulat
 
 The optional LQI controller uses a nonlinear steady-turn trim table, actuator-specific anti-windup and observer equilibrium recentering. Its feedback and observer gain matrices remain those of `responsive_softspeed`. It retains EKF airspeed, the onboard canopy observer and the as-built 132 mm physics model. No pitot or canopy truth input is enabled. PG + TECS remains the default controller.
 
-The browser configuration sets `CP3_RMAX=25`, `CP3_TMAP=1`, `CP3_AWMODE=1`, and `CP3_OBSTRIM=1`. The release firmware rejects rate-limit parameters above 25 deg/s. An engagement-only two-second smooth blend from previous applied controls prevents a sharp brake transient while the observer settles. Actual allocated outputs continue to feed the observer during the blend. The existing travel/slew allocator remains active.
+The browser configuration sets `CP3_RMAX=35`, `PG_TURN_RMAX=35`, `CP3_TMAP=1`, `CP3_AWMODE=1`, and `CP3_OBSTRIM=1`. The release firmware rejects LQI rate-limit parameters above 35 deg/s. The shared PG turn-reference limit also rises so the browser can request the full rate; PG + TECS was tested at that rate and remains the default. An engagement-only two-second smooth blend from previous applied controls prevents a sharp brake transient while the observer settles. Actual allocated outputs continue to feed the observer during the blend. The existing travel/slew allocator remains active.
 
 ## Evidence and interpretation
+
+The follow-up 35 deg/s release changes only the allowed limit, not gains, trim, observer or handover behavior. Fourteen final-binary nominal-turn and transition flights passed, including 10, 25 and 35 deg/s reversals. Eighteen additional flights compared LQI 35, LQI 25 and PG + TECS 35 across six fresh seeded disturbance/model cases. Every flight completed and the frozen comparative and quiet-recovery checks passed. The 40 deg/s envelope remains experimental.
+
+| Median across six fresh cases | LQI 25 | LQI 35 | PG + TECS 35 |
+|---|---:|---:|---:|
+| Turn tracking RMS, deg/s | 10.37 | 11.96 | 12.65 |
+| Relative pitch-rate RMS, deg/s | 14.73 | 15.33 | 18.76 |
+| Altitude RMS, m | 0.67 | 0.65 | 0.88 |
+| Modeled shaft power, W | 79.52 | 83.61 | 82.40 |
+
+Higher turn demand increases workload; the 25/35 comparison is not an equal-task efficiency comparison. The disturbance protocol retained the original failed absolute screens, while requiring clean final recovery, minimum airspeed of 2 m/s, bounded median tracking/pitch/altitude regression against PG + TECS 35, and bounded pitch/power growth against LQI 25. Exact limits, per-case results and original screen outcomes are bundled under `additional_validation` in the validation artifact. These are browser regression criteria, not physical safety boundaries.
 
 Twelve paired disturbed cases at 25 deg/s compared the candidate with the preceding LQI at the same commanded rate. Median paired tracking RMS improved 28.7%, altitude RMS 32.4%, and modeled shaft power 2.8%; all twelve cases improved on those measures. Relative pitch-rate RMS improved in eight cases; peaks were mixed. These comparisons precede the engagement-blend change, which affects only the first two seconds after engagement. They do not compare against PG + TECS, prove stability margins, or establish flight safety.
 
 The original absolute turbulence screens remain recorded as failed. Their binary result obscured relative improvements and conflated ongoing forcing with recovery. All weather-off recovery cases settled. No new physical safety boundary is inferred from that finding. The 40 deg/s experiments are not deployed.
 
-Final-binary qualification covers paired PG + TECS/LQI controller and mode transitions, including FBWA, CRUISE and AUTO, plus nominal 10 and 25 deg/s reversals and recovery. The transition protocol was specified before execution. The initial release candidate failed a handover comparison; the revised blend was checked against the same protocol and additional fresh transition cases. Full summaries and exact firmware hashes are bundled in [the validation artifact](assets/runtime/lqi-feasible-turns-validation.json).
+Final-binary qualification covers paired PG + TECS/LQI controller and mode transitions, including FBWA, CRUISE and AUTO, plus nominal 10, 25 and 35 deg/s reversals and recovery. The transition protocol was specified before execution. The initial 25 deg/s release candidate failed a handover comparison; the revised blend was checked against the same protocol and additional fresh transition cases. Full summaries and exact firmware hashes are bundled in [the validation artifact](assets/runtime/lqi-feasible-turns-validation.json).
 
-All 16 final-binary flights passed. Transition comparisons required candidate peak relative pitch rate no greater than 1.2 times the matched baseline plus 2 deg/s, and altitude excursion no greater than 1.2 times baseline plus 1 m. Ownership had to match within five seconds; finite-state, 15 m altitude-floor and 60/45 degree roll/pitch operational guards remained active. These are explicit simulation regression tolerances, not calibrated physical limits. Calm turn tests retained the original tracking, motion and recovery checks; only the research-diagnostics requirement was omitted for the telemetry-free binary.
+All 16 flights in the preceding 25 deg/s final-binary qualification passed. The 35 deg/s qualification retained its transition criteria: candidate peak relative pitch rate no greater than 1.2 times the matched baseline plus 2 deg/s, and altitude excursion no greater than 1.2 times baseline plus 1 m. Ownership had to match within five seconds; finite-state, 15 m altitude-floor and 60/45 degree roll/pitch operational guards remained active. These are explicit simulation regression tolerances, not calibrated physical limits. Calm turn tests retained the original tracking, motion and recovery checks; only the research-diagnostics requirement was omitted for the telemetry-free binary.
 
 ## Reproduce the firmware
 

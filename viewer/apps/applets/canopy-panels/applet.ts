@@ -166,6 +166,11 @@ export const applet = registerApplet(definition, (scope) => {
     group.add(cg);
     el("condition").textContent =
       `${current.label}: left ${(current.left_m * 1000).toFixed(0)} mm · right ${(current.right_m * 1000).toFixed(0)} mm effective brake pull. Both cases use identical airspeed and attitude.`;
+    const tilt = data.brakeTiltRadPerM * (current.right_m - current.left_m);
+    el("tilt-status").textContent =
+      data.brakeTiltRadPerM === 0
+        ? "Brake-induced inclination change: 0°. The brake-tilt term is disabled in this preset; braking changes lift and drag coefficients. The angles below come from canopy curvature."
+        : `Brake-induced inclination change: ${degrees(tilt)}° on every panel. The surface shows rigid geometry; the inset shows effective aerodynamic orientations.`;
     el("front").innerHTML =
       `<svg viewBox="0 0 600 112" role="img" aria-label="Front view of five local aerodynamic inclinations"><text x="10" y="18" fill="#536975" font-size="13">Front view · effective aerodynamic inclination</text>${current.panels
         .map((p, i) => {

@@ -46,7 +46,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
         "{}",
         serde_json::to_string_pretty(&json!({"sourcePreset":path,
         "speed":speed,"alpha":alpha,"angularRate":vector(rates),"area":p.s,
-        "arcSpan":p.b,"halfArc":p.canopy_half_arc,"chord":p.c,"cases":cases}))?
+        "brakeTiltRadPerM":p.brake_tilt_rad_per_m,"arcSpan":p.b,"halfArc":p.canopy_half_arc,"chord":p.c,"cases":cases}))?
     );
     Ok(())
 }

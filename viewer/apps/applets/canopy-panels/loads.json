@@ -7,6 +7,7 @@
   ],
   "arcSpan": 2.15,
   "area": 1.16,
+  "brakeTiltRadPerM": 0.0,
   "cases": [
     {
       "additionalMoment": [

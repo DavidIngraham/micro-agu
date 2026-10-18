@@ -7,11 +7,16 @@ test("canopy panels: cases, panel inspection and mobile layout", async ({
   await page.goto("/canopy-panels.html");
   await expect(page.locator("canvas")).toBeVisible();
   await expect(page.locator("#panel-info")).toContainText("Panel 3");
+  await expect(page.locator("#tilt-status")).toContainText(
+    "disabled in this preset",
+  );
+  const inclinations = await page.locator("#front").innerText();
   const symmetric = await page.locator("#totals").innerText();
   await page.getByRole("button", { name: "Right brake", exact: true }).click();
   await expect(page.locator("#condition")).toContainText("right 30 mm");
   await expect(page.locator("#panel-info")).toContainText("brake 15 mm");
   expect(await page.locator("#totals").innerText()).not.toEqual(symmetric);
+  expect(await page.locator("#front").innerText()).toEqual(inclinations);
   await page
     .getByRole("button", { name: "Inspect panel 5", exact: true })
     .click();

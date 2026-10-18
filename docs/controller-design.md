@@ -77,7 +77,7 @@ $$
 
 Here $\mathbf{r}_i$ is the panel center's offset from the canopy CG, $R_i$ maps the panel frame to the canopy frame, and $\mathbf{v}_{c,\mathrm{air}}$ and $\boldsymbol{\omega}_c$ are expressed in canopy coordinates. The blue arrows show incoming airflow, opposite this local velocity. Even in a uniform wind, canopy rotation changes the velocity at the different panel centers.
 
-The two left panels receive left brake pull; the two right panels receive right brake pull; the center panel receives their average. Local angle of attack and brake pull change lift and drag coefficients. The model also applies an effective aerodynamic inclination change proportional to differential brake pull. This is a modeled aerodynamic correction, not five physical hinges or simulated fabric deformation. The front inset shows those effective inclinations; the main surface retains its rigid geometric arc.
+The two left panels receive left brake pull; the two right panels receive right brake pull; the center panel receives their average. Local angle of attack and brake pull change lift and drag coefficients. The Rust kernel also supports an optional effective aerodynamic inclination change proportional to differential brake pull. **That term is disabled in the preset shown here** (`brake_tilt_rad_per_m = 0`). Switching to right braking changes the force arrows, but leaves the panel inclinations unchanged: the angles in the front inset come from canopy curvature. With a nonzero coefficient, the optional term would shift all five aerodynamic inclinations by the same amount; it would not simulate individual trailing-edge deflections or fabric deformation.
 
 The panel forces and their moment arms contribute
 

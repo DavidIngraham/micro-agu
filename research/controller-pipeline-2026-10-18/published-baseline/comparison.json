@@ -1,0 +1,49 @@
+{
+  "repeatability": {
+    "passed": false,
+    "reasons": [
+      "0: nonrepeatable relative_pitch_rate_peak",
+      "1: nonrepeatable relative_pitch_rate_rms",
+      "1: nonrepeatable relative_pitch_rate_peak"
+    ]
+  },
+  "selected": null,
+  "candidates": {
+    "refit_damped": {
+      "reasons": [
+        "0: nonrepeatable relative_pitch_rate_peak",
+        "1: nonrepeatable relative_pitch_rate_rms",
+        "1: nonrepeatable relative_pitch_rate_peak",
+        "0: task regression >20%",
+        "1: task regression >20%",
+        "Tracking improvement below 5%"
+      ],
+      "paired_ratios": [
+        {
+          "climb": 1.0105962815917662,
+          "descent": 0.9955126535128931,
+          "vertical": 1.0035665784095589,
+          "crosswind": 3.4246327861507533,
+          "relative_pitch_rate_rms": 0.98631277901087,
+          "relative_pitch_rate_peak": 0.9658286779090188,
+          "shaft_W": 1.0002502093916166,
+          "shaft_Wh_per_km": 1.00028408327755
+        },
+        {
+          "climb": 1.02379427798021,
+          "descent": 0.9868222070738595,
+          "vertical": 1.016392615320191,
+          "crosswind": 2.740620999361302,
+          "relative_pitch_rate_rms": 0.741566316793885,
+          "relative_pitch_rate_peak": 0.538904258687481,
+          "shaft_W": 0.9998227757379536,
+          "shaft_Wh_per_km": 0.9997463063128792
+        }
+      ],
+      "mean_tracking_ratio": 1.5252422999250668,
+      "eligible": false
+    }
+  },
+  "deploy": false,
+  "note": "Training selection only; independent reserved native scenarios and mission checks still required."
+}

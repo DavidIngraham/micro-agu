@@ -1,0 +1,19 @@
+{
+  "id": "auto-refit_damped",
+  "scheme": "lqi",
+  "up": 0.75,
+  "down": 1,
+  "demand": 1,
+  "upDemand": 0.75,
+  "downDemand": 1,
+  "turn": 0,
+  "voltage": 22.2,
+  "transitions": true,
+  "seed": 44017,
+  "parameters": {
+    "TECS_CLMB_MAX": 1,
+    "TECS_SINK_MAX": 2.5
+  },
+  "runtime": "/home/david/repos/micro-agu/research/controller-pipeline-2026-10-18/published-baseline/runtime",
+  "gainFile": "/home/david/repos/micro-agu/research/controller-pipeline-2026-10-18/run-verified/refit_damped/lqi-gains.bin"
+}

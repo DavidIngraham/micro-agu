@@ -1,0 +1,17 @@
+*.log
+training-001/
+training-002/
+repeatability-001/
+run-final/
+run-001/
+**/runtime/
+**/[0-9]*.json
+!**/*.case.json
+
+pre-deploy/
+envelope-reference-0.json
+envelope-reference-35.json
+envelope-refit_damped-0.json
+envelope-refit_damped-35.json
+auto-reference.json
+auto-refit_damped.json

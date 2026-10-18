@@ -1,0 +1,34 @@
+{
+  "id": 0,
+  "mode": "CRUISE",
+  "speedup": 8,
+  "wind": 0,
+  "weather": {
+    "turbulence": 0,
+    "thermalStrength": 0,
+    "thermalRadius": 60,
+    "thermalNorth": 300,
+    "thermalEast": 0,
+    "seed": 20261018
+  },
+  "scales": {},
+  "brakeRateScale": 1,
+  "model": "production",
+  "from": 90,
+  "firmware": "/home/david/repos/micro-agu/research/controller-pipeline-2026-10-18/published-baseline/runtime/arduplane.js",
+  "modelConfig": "/home/david/repos/micro-agu/research/controller-pipeline-2026-10-18/published-baseline/physics.json",
+  "gains": "/home/david/repos/micro-agu/research/controller-pipeline-2026-10-18/published-baseline/gains/refit_damped.bin",
+  "theta": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    0
+  ],
+  "parameters": {
+    "CP3_HRTC": 0.7,
+    "ARSPD_TYPE": 0,
+    "ARSPD_USE": 0
+  }
+}

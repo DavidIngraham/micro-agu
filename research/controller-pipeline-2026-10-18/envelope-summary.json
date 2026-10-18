@@ -1,0 +1,38 @@
+[
+  {
+    "case": "envelope-reference-0",
+    "complete": true,
+    "failure": null,
+    "min_height": 72.03537256700324,
+    "max_roll_deg": 7.052240327477158,
+    "max_pitch_deg": 14.649338505424573,
+    "alt_tracking_rmse": 11.46784142486796
+  },
+  {
+    "case": "envelope-reference-35",
+    "complete": true,
+    "failure": null,
+    "min_height": 72.21453309870897,
+    "max_roll_deg": 39.46394509974157,
+    "max_pitch_deg": 17.710646366897212,
+    "alt_tracking_rmse": 11.496100241994734
+  },
+  {
+    "case": "envelope-refit_damped-0",
+    "complete": true,
+    "failure": null,
+    "min_height": 72.47110606503706,
+    "max_roll_deg": 7.150720129364517,
+    "max_pitch_deg": 14.563660612475934,
+    "alt_tracking_rmse": 11.540720343307584
+  },
+  {
+    "case": "envelope-refit_damped-35",
+    "complete": true,
+    "failure": null,
+    "min_height": 72.14945303148103,
+    "max_roll_deg": 39.24212446116165,
+    "max_pitch_deg": 17.648681183199564,
+    "alt_tracking_rmse": 11.339473748111798
+  }
+]

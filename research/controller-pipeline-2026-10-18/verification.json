@@ -1,0 +1,86 @@
+{
+  "ai_assisted": true,
+  "ardupilot_branch": "feature/lqi-file-pipeline",
+  "ardupilot_commit": "5e5bba8ee1b3575e04f45d56b8c53e5e6c48ab2f",
+  "published_source_match_before_loader": {
+    "libraries/AP_CustomControl/AP_CustomControl.cpp": true,
+    "libraries/AP_CustomControl/AP_CustomControl_LQI.cpp": true,
+    "libraries/AP_CustomControl/AP_CustomControl_LQI.h": true,
+    "libraries/AP_CustomControl/AP_CustomControl_LQI_gains.h": true,
+    "ArduPlane/Parameters.h": true,
+    "ArduPlane/servos.cpp": true
+  },
+  "tests": {
+    "python": 30,
+    "viewer_unit": 42,
+    "typescript": true,
+    "viewer_production_build": true,
+    "wasm_build": true,
+    "chibios_build": "MatekH743 with both custom-controller feature flags enabled",
+    "hardware_bench_test": false
+  },
+  "build_outputs": {
+    "build/wasm/bin/arduplane.js": "893b28e3cbea410e48736d7f7426928cbe8b56f22c1813914aa290172f1e8565",
+    "build/wasm/bin/arduplane.wasm": "466d4d86263d973cc38e850b3a015146e9b98a2cd2ae369fbca7a32eeb9ab504",
+    "build/MatekH743/bin/arduplane.apj": "5f760613d6583ee4bf299daa35ec85871c50f458915a799eddef16c5e22fe35c"
+  },
+  "controller_sources": {
+    "libraries/AP_CustomControl/AP_CustomControl_LQI_File.h": "fcd17fd9c1d43013858381da30f77b5de403759dcb05cc4262cec1bb663e87e1",
+    "libraries/AP_CustomControl/AP_CustomControl_LQI_gains.h": "870cbf6b7bf3b03e465217bc29ce66a67a2c5d46578ddebbed4d7a070dd09c72",
+    "libraries/AP_CustomControl/AP_CustomControl_LQI.h": "c3d766291afe8ab7d0fcd40520f9dff8efd3c6f090c7cd6aa585f99e91f3bc55",
+    "libraries/AP_CustomControl/AP_CustomControl_LQI.cpp": "537dba53b412eed45661d5ee9e3a65f2d0c93b09281ed86701ae723aeb97853e"
+  },
+  "python_sources": {
+    "simulation/crates/sim-python/python/microagu_sim/pipeline/linearize.py": "e2962857d066e5f61609046c53154a19fb69d5c884764ed27184a53c2a2502ba",
+    "simulation/crates/sim-python/python/microagu_sim/pipeline/__init__.py": "793065d7024651770794f462d5b04511e0f5997b1b4ad13edf87ff4eeb89f43b",
+    "simulation/crates/sim-python/python/microagu_sim/pipeline/artifacts.py": "2bcfc3a31da7f468e47f0fefc29406c54f1447ace10ae30ab2a58705c037f4ce",
+    "simulation/crates/sim-python/python/microagu_sim/pipeline/assess.py": "5a25a303331a9beb48c54701829801361d1adc30327f4831a5da51120b07f2e3",
+    "simulation/crates/sim-python/python/microagu_sim/pipeline/control.py": "631ee1fd1f87e5714df80319f544e0fca9305dc01f4fb7260423043c0ffb11cf",
+    "simulation/crates/sim-python/python/microagu_sim/pipeline/__main__.py": "3a607bb1b5f8f99381d3f4b124f034c465a8f2d484d3bd9b307d5f54fa86c34c",
+    "simulation/crates/sim-python/python/microagu_sim/pipeline/campaign.py": "d50da4da2eb0896d1715815d181476cccf6ec78926fe92964552344fa591d578",
+    "simulation/crates/sim-python/python/microagu_sim/sysid/diagnostics.py": "30a329f29733361548ea09588e8133323723bb06cd2653a428f31fa5b4380e23",
+    "simulation/crates/sim-python/python/microagu_sim/sysid/__init__.py": "b9104b925360b18c3e7e291193f80851c8a050c9a21816c063ecc64312ad5c95",
+    "simulation/crates/sim-python/python/microagu_sim/sysid/model.py": "3e373f01605823f17b8c584457906c9fc24018c5a5a5e248bebe34da2d765ff9",
+    "simulation/crates/sim-python/python/microagu_sim/sysid/data.py": "8570c2c95196d68fb5d647e6d2af16a879d3b0ef320af6dc75681f8e05a985f4",
+    "simulation/crates/sim-python/python/microagu_sim/sysid/validation.py": "482439f2ac33ce232c906dc1cbb773fececab98dffb78603f018880a98a800ee",
+    "simulation/crates/sim-python/python/microagu_sim/sysid/metrics.py": "4440a08c360f5904e779033d0b464f6d173b8b9da2c4438fcbf23470f2df3d20",
+    "simulation/crates/sim-python/python/microagu_sim/sysid/aircraft.py": "b79a44cfcac01885c9ddd07aa407a1b0033c74c9c9fd908363da4d5c7c99c3ca",
+    "simulation/crates/sim-python/python/microagu_sim/sysid/fit.py": "267e00f98dd0323132e36b34bf723b786bd5a5b6f86d2688337b6d21e59c6bd5",
+    "simulation/crates/sim-python/python/microagu_sim/sysid/__main__.py": "6f2ba632c826c24a0eee952be1cd8d111e1a81d06f9637fb080f924b4949afec"
+  },
+  "browser_sources": {
+    "viewer/packages/sim-browser/src/session/runtime.ts": "e4b6ee69eb96ff7d6bb996a32809c6bd5fc2b977c6f77e8168f318c3ac9db5eb",
+    "viewer/packages/sim-browser/src/session/pilot-input.ts": "f3b77229eb88cc54e05c16f5e02e2da2d3d045d86b4d2808e825e519591caef3",
+    "viewer/packages/sim-browser/src/session/delay.ts": "f5cb8ad9ce138bf543a21ce6aacc91ce5f2698ea3eea9c1fb513bc280c22f908",
+    "viewer/packages/sim-browser/src/session/isolation.ts": "33f432bd2fc3ea7fcea3d0461301c6db81b68ccd0802bebe6ffd82b86c62f3cb",
+    "viewer/packages/sim-browser/src/physics/atmosphere.ts": "badb31aa25bd8e269c642e099af4fb8aefdc1f38650dd12ec5f553cebb7846dd",
+    "viewer/packages/sim-browser/src/physics/airspeed.ts": "d2d00c2686e9a4ace5c118c91207eedded573f62e5469d9800af8edde2f89502",
+    "viewer/packages/sim-browser/src/physics/physics.ts": "bfdcc025853bed18b55a95b58b2f42bc89ff01e443ab56396b2810ace14fea22",
+    "viewer/packages/sim-browser/src/ardupilot/mavlink.ts": "e47eb069c3ac9109ad47a111b1bc62d2332b3a97d9ac11162cbafc05762ad372",
+    "viewer/packages/sim-browser/src/ardupilot/socket-physics.ts": "ae7ca80d7e64ddf62cc8cd5c465e66ddbc0f51c6ecc98a6362b9774f21d4bba7",
+    "viewer/packages/sim-browser/src/assets/runtime.ts": "f9478539efac6904443cd409f28dfdfeee87d99947bf528a78df06967c3a18d4",
+    "viewer/packages/sim-browser/src/worker/worker.ts": "02e32827470cab3f2f7223c1b8105c126f146223f52eebaceba3e2d5df1a1f4f",
+    "viewer/packages/sim-browser/src/worker/client.ts": "6ad9bfad014fb417d7ea67a4cbba845b3e6a4b1bf363793a42ea05b869db4c6b"
+  },
+  "final_gain_bytes_equal_original_study": {
+    "reference": true,
+    "refit": true,
+    "refit_damped": true,
+    "refit_soft": true,
+    "production_resynth": true
+  },
+  "initial_packaged_firmware_unchanged": {
+    "arduplane.js": true,
+    "arduplane.wasm": true
+  },
+  "deploy": false,
+  "audited_native_campaign": {
+    "completed": 6,
+    "repeatability_passed": false,
+    "selected": null
+  },
+  "handshake_tests": {
+    "valid": true,
+    "corrupt": true
+  }
+}

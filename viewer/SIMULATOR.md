@@ -124,7 +124,7 @@ The primary heading-rate controller remains the deployed baseline. The firmware'
 custom-controller frontend now receives its heading-rate reference and can request
 symmetric brake through the shared allocator. Returning from custom steering
 matches the previous differential demand within the brake limits, then releases
-excess matching correction with a 0.25 s time constant. The optional coordinated
+excess matching correction with a 0.25 s time constant. The coordinated
 LQI backend additionally owns throttle and both brakes; see the selection notes
 below and the [firmware contract](https://github.com/DavidIngraham/ardupilot/blob/paraglider-browser-9dof/libraries/AP_CustomControl/MIMO.md).
 
@@ -212,7 +212,7 @@ are same-origin. Do not embed the simulator in an ordinary non-isolated iframe;
 link to its standalone page.
 # Coordinated controller selection
 
-The Settings panel offers **PG + TECS** (default) and **LQI · experimental**.
+The Settings panel offers **LQI · experimental** (default) and **PG + TECS**.
 The status distinguishes selection from firmware-confirmed active control. LQI
 automatically waits through assisted launch, MANUAL, FBWA and landing, where the
 baseline retains ownership. Switching back to PG + TECS does not restart the
@@ -246,7 +246,7 @@ The current browser release adds feasible turn trims, corrected anti-windup and
 observer equilibrium recentering with the same feedback and observer gains. Its
 LQI rate cap is 35 deg/s after paired disturbance and transition qualification,
 and a two-second engagement blend addresses the tested
-FBWA-to-LQI brake transient. PG + TECS remains the default. See
+FBWA-to-LQI brake transient. PG + TECS remains selectable. See
 [release scope and validation](LQI-FEASIBLE-TURNS.md).
 
 To reproduce the published controller, use ArduPilot base
@@ -278,9 +278,10 @@ update; earlier controller qualification results describe the legacy gust model.
 
 ## Current longitudinal envelope
 
-The optional LQI uses 0.75 m/s climb and 1.0 m/s descent limits, with the existing
+LQI is selected automatically on each page load or reset. PG + TECS remains
+available in the Control selector. LQI uses 0.75 m/s climb and 1.0 m/s descent limits, with the existing
 0.7 s reference filter and unchanged gains and sensing. The firmware also fixes
 voltage-compensated throttle feedback to prevent false anti-windup at reduced
-battery voltage. PG + TECS remains the default. See [qualification results and
+battery voltage. See [qualification results and
 reproduction](LQI-LONGITUDINAL.md); the current complete source patch is
 assets/runtime/lqi-longitudinal.patch, replacing the earlier patch recipe.

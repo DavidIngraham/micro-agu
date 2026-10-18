@@ -42,6 +42,10 @@ try {
     timeout: 130000,
   });
   await page.locator("#panel-toggle").click();
+  await expect(page.locator("#controller")).toHaveValue("lqi");
+  await expect(page.locator("#controller-status")).toHaveText("LQI active", {
+    timeout: 20000,
+  });
   await expect(page.locator("#turbulence-model")).toHaveValue("dryden");
   await page.locator("#gust-length").fill("40");
   await page.locator("#gust-length").dispatchEvent("input");
@@ -74,6 +78,7 @@ try {
         passed: true,
         base,
         checks: [
+          "LQI selected and active after automatic launch",
           "mobile controls",
           "Dryden default",
           "parameter application",

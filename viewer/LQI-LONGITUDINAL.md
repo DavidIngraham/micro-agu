@@ -1,6 +1,6 @@
 # Browser LQI longitudinal expansion
 
-The optional LQI now permits **0.75 m/s climb and 1.0 m/s descent**, previously 0.5 m/s each. PG + TECS remains the default. The 35 deg/s turn-reference limit, responsive_softspeed gains, observer, EKF airspeed, 132 mm geometry and 0.7 s climb-reference filter are unchanged. No pitot or canopy truth is fed to the controller.
+The optional LQI now permits **0.75 m/s climb and 1.0 m/s descent**, previously 0.5 m/s each. The browser now selects LQI on startup; PG + TECS remains selectable. The 35 deg/s turn-reference limit, responsive_softspeed gains, observer, EKF airspeed, 132 mm geometry and 0.7 s climb-reference filter are unchanged. No pitot or canopy truth is fed to the controller.
 
 All 12 initial nominal flights passed, including 1 m/s climbs, but the latter used nearly all of the 60% nominal throttle ceiling. The lower climb limit reserves more actuator authority. Numerical trim failures are not interpreted as physical infeasibility.
 

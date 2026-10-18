@@ -1,0 +1,13 @@
+{
+  "legacy": {
+    "selected_cost_delta": 2.220446049250313e-16
+  },
+  "response": {
+    "selected_cost_delta": 1.1102230246251565e-16
+  },
+  "response_nuisance": {
+    "selected_cost_delta": 2.220446049250313e-16
+  },
+  "baseline_reproduced": true,
+  "quality_flag_update": "Averaging flags changed; fitting objectives, selected costs and replay mathematics reproduced."
+}

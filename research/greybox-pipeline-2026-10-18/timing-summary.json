@@ -1,0 +1,42 @@
+{
+  "manual": {
+    "differential_to_yaw": {
+      "windows": [],
+      "mean_absolute_phase_error": {
+        "baseline": null,
+        "legacy": null,
+        "response": null,
+        "response_nuisance": null
+      }
+    },
+    "common_to_pitch": {
+      "windows": [],
+      "mean_absolute_phase_error": {
+        "baseline": null,
+        "legacy": null,
+        "response": null,
+        "response_nuisance": null
+      }
+    }
+  },
+  "nonmanual": {
+    "differential_to_yaw": {
+      "windows": [],
+      "mean_absolute_phase_error": {
+        "baseline": null,
+        "legacy": null,
+        "response": null,
+        "response_nuisance": null
+      }
+    },
+    "common_to_pitch": {
+      "windows": [],
+      "mean_absolute_phase_error": {
+        "baseline": null,
+        "legacy": null,
+        "response": null,
+        "response_nuisance": null
+      }
+    }
+  }
+}

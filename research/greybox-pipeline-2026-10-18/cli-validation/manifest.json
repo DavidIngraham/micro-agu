@@ -1,0 +1,66 @@
+{
+  "session": {
+    "schema_version": 1,
+    "segments": [
+      {
+        "name": "tl-280",
+        "episode": "manual-266",
+        "role": "train",
+        "flight": "trout_lake",
+        "start_s": 280,
+        "duration_s": 20,
+        "causal_input": "/mnt/c/Users/davin/OneDrive/Documentos/Mission Planner/analysis/longitudinal-2026-10-09/turn-model-spike/2026-02-15-causal-input.npz",
+        "propulsion_input": "/mnt/c/Users/davin/OneDrive/Documentos/Mission Planner/analysis/longitudinal-2026-10-09/turn-model-spike/2026-02-15-propulsion-9x45.npz"
+      },
+      {
+        "name": "tl-440",
+        "episode": "manual-435",
+        "role": "validation",
+        "flight": "trout_lake",
+        "start_s": 440,
+        "duration_s": 20,
+        "causal_input": "/mnt/c/Users/davin/OneDrive/Documentos/Mission Planner/analysis/longitudinal-2026-10-09/turn-model-spike/2026-02-15-causal-input.npz",
+        "propulsion_input": "/mnt/c/Users/davin/OneDrive/Documentos/Mission Planner/analysis/longitudinal-2026-10-09/turn-model-spike/2026-02-15-propulsion-9x45.npz"
+      }
+    ],
+    "fit": {
+      "max_replays": 1,
+      "workers": 1
+    },
+    "starts": [
+      [
+        1,
+        1,
+        1,
+        1,
+        1,
+        0.04
+      ]
+    ]
+  },
+  "input_hashes": {
+    "/mnt/c/Users/davin/OneDrive/Documentos/Mission Planner/analysis/longitudinal-2026-10-09/turn-model-spike/2026-02-15-causal-input.npz": "25441062d4e328bfa110f8aca88261ffc3fa50c553314d3ef7feaabfa10698f5",
+    "/mnt/c/Users/davin/OneDrive/Documentos/Mission Planner/analysis/longitudinal-2026-10-09/turn-model-spike/2026-02-15-propulsion-9x45.npz": "2a5168520029adc3ef32a64182412466699efb9acffc6df3f088d44b0acae422"
+  },
+  "options": {
+    "objective": "response",
+    "fit_nuisance": false,
+    "max_replays": 1,
+    "workers": 1,
+    "substeps": 32,
+    "regularization": 0.005,
+    "nuisance_weight": 0.02,
+    "fd_step": 0.001
+  },
+  "package_sources": {
+    "diagnostics.py": "30a329f29733361548ea09588e8133323723bb06cd2653a428f31fa5b4380e23",
+    "__init__.py": "b9104b925360b18c3e7e291193f80851c8a050c9a21816c063ecc64312ad5c95",
+    "model.py": "a0ccc8f576afe468b2d3d1c57a11b02309c6e8c52352ad1a8ee993dafad7f530",
+    "data.py": "8f9a0079f8e7f0521f485d713bd5d7a50eb086d62c6f11c79f45b6e7d9736258",
+    "validation.py": "e58e76e7cb6514f4ec79673fa5bd717dbab9d8964aaf53cb7981b7225c80ab20",
+    "metrics.py": "3272e08711d5777c59b96a1ec684f41a5a931565d6a06e1aa08daab0ff48ccd8",
+    "fit.py": "267e00f98dd0323132e36b34bf723b786bd5a5b6f86d2688337b6d21e59c6bd5",
+    "__main__.py": "5d53ca434296206388b424c6249f253da9813b0d458b548182ff85f0ed1769fe"
+  },
+  "fit_result_sha256": "b749af2f13818603f459ca7ba1c86d5a5e3bafaa15f1ba67f24c22126b2856d4"
+}

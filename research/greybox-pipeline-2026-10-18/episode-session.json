@@ -1,0 +1,75 @@
+{
+  "schema_version": 1,
+  "segments": [
+    {
+      "name": "manual-266",
+      "episode": "manual-266",
+      "role": "train",
+      "flight": "trout_lake",
+      "start_s": 266.64,
+      "duration_s": 72.72,
+      "causal_input": "/mnt/c/Users/davin/OneDrive/Documentos/Mission Planner/analysis/longitudinal-2026-10-09/turn-model-spike/2026-02-15-causal-input.npz",
+      "propulsion_input": "/mnt/c/Users/davin/OneDrive/Documentos/Mission Planner/analysis/longitudinal-2026-10-09/turn-model-spike/2026-02-15-propulsion-9x45.npz"
+    },
+    {
+      "name": "manual-371",
+      "episode": "manual-371",
+      "role": "train",
+      "flight": "trout_lake",
+      "start_s": 371.52,
+      "duration_s": 49.32,
+      "causal_input": "/mnt/c/Users/davin/OneDrive/Documentos/Mission Planner/analysis/longitudinal-2026-10-09/turn-model-spike/2026-02-15-causal-input.npz",
+      "propulsion_input": "/mnt/c/Users/davin/OneDrive/Documentos/Mission Planner/analysis/longitudinal-2026-10-09/turn-model-spike/2026-02-15-propulsion-9x45.npz"
+    },
+    {
+      "name": "manual-435",
+      "episode": "manual-435",
+      "role": "train",
+      "flight": "trout_lake",
+      "start_s": 435.64,
+      "duration_s": 32.96,
+      "causal_input": "/mnt/c/Users/davin/OneDrive/Documentos/Mission Planner/analysis/longitudinal-2026-10-09/turn-model-spike/2026-02-15-causal-input.npz",
+      "propulsion_input": "/mnt/c/Users/davin/OneDrive/Documentos/Mission Planner/analysis/longitudinal-2026-10-09/turn-model-spike/2026-02-15-propulsion-9x45.npz"
+    },
+    {
+      "name": "manual-529",
+      "episode": "manual-529",
+      "role": "train",
+      "flight": "trout_lake",
+      "start_s": 529.84,
+      "duration_s": 49.08,
+      "causal_input": "/mnt/c/Users/davin/OneDrive/Documentos/Mission Planner/analysis/longitudinal-2026-10-09/turn-model-spike/2026-02-15-causal-input.npz",
+      "propulsion_input": "/mnt/c/Users/davin/OneDrive/Documentos/Mission Planner/analysis/longitudinal-2026-10-09/turn-model-spike/2026-02-15-propulsion-9x45.npz"
+    },
+    {
+      "name": "manual-1985",
+      "episode": "manual-1985",
+      "role": "train",
+      "flight": "trout_lake",
+      "start_s": 1985.28,
+      "duration_s": 33.4,
+      "causal_input": "/mnt/c/Users/davin/OneDrive/Documentos/Mission Planner/analysis/longitudinal-2026-10-09/turn-model-spike/2026-02-15-causal-input.npz",
+      "propulsion_input": "/mnt/c/Users/davin/OneDrive/Documentos/Mission Planner/analysis/longitudinal-2026-10-09/turn-model-spike/2026-02-15-propulsion-9x45.npz"
+    },
+    {
+      "name": "manual-903",
+      "episode": "manual-903",
+      "role": "train",
+      "flight": "trout_lake",
+      "start_s": 903.8,
+      "duration_s": 22.32,
+      "causal_input": "/mnt/c/Users/davin/OneDrive/Documentos/Mission Planner/analysis/longitudinal-2026-10-09/turn-model-spike/2026-02-15-causal-input.npz",
+      "propulsion_input": "/mnt/c/Users/davin/OneDrive/Documentos/Mission Planner/analysis/longitudinal-2026-10-09/turn-model-spike/2026-02-15-propulsion-9x45.npz"
+    },
+    {
+      "name": "manual-1087",
+      "episode": "manual-1087",
+      "role": "train",
+      "flight": "trout_lake",
+      "start_s": 1087.2,
+      "duration_s": 18.8,
+      "causal_input": "/mnt/c/Users/davin/OneDrive/Documentos/Mission Planner/analysis/longitudinal-2026-10-09/turn-model-spike/2026-02-15-causal-input.npz",
+      "propulsion_input": "/mnt/c/Users/davin/OneDrive/Documentos/Mission Planner/analysis/longitudinal-2026-10-09/turn-model-spike/2026-02-15-propulsion-9x45.npz"
+    }
+  ]
+}

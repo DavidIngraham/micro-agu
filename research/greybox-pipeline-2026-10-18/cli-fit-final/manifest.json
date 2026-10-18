@@ -1,0 +1,227 @@
+{
+  "session": {
+    "schema_version": 1,
+    "segments": [
+      {
+        "name": "tl-280",
+        "episode": "manual-266",
+        "role": "train",
+        "flight": "trout_lake",
+        "start_s": 280,
+        "duration_s": 20,
+        "causal_input": "/mnt/c/Users/davin/OneDrive/Documentos/Mission Planner/analysis/longitudinal-2026-10-09/turn-model-spike/2026-02-15-causal-input.npz",
+        "propulsion_input": "/mnt/c/Users/davin/OneDrive/Documentos/Mission Planner/analysis/longitudinal-2026-10-09/turn-model-spike/2026-02-15-propulsion-9x45.npz"
+      },
+      {
+        "name": "tl-440",
+        "episode": "manual-435",
+        "role": "validation",
+        "flight": "trout_lake",
+        "start_s": 440,
+        "duration_s": 20,
+        "causal_input": "/mnt/c/Users/davin/OneDrive/Documentos/Mission Planner/analysis/longitudinal-2026-10-09/turn-model-spike/2026-02-15-causal-input.npz",
+        "propulsion_input": "/mnt/c/Users/davin/OneDrive/Documentos/Mission Planner/analysis/longitudinal-2026-10-09/turn-model-spike/2026-02-15-propulsion-9x45.npz"
+      }
+    ],
+    "fit": {
+      "max_replays": 1,
+      "workers": 1
+    },
+    "starts": [
+      [
+        1,
+        1,
+        1,
+        1,
+        1,
+        0.04
+      ]
+    ]
+  },
+  "input_hashes": {
+    "/mnt/c/Users/davin/OneDrive/Documentos/Mission Planner/analysis/longitudinal-2026-10-09/turn-model-spike/2026-02-15-causal-input.npz": "25441062d4e328bfa110f8aca88261ffc3fa50c553314d3ef7feaabfa10698f5",
+    "/mnt/c/Users/davin/OneDrive/Documentos/Mission Planner/analysis/longitudinal-2026-10-09/turn-model-spike/2026-02-15-propulsion-9x45.npz": "2a5168520029adc3ef32a64182412466699efb9acffc6df3f088d44b0acae422"
+  },
+  "options": {
+    "objective": "response",
+    "fit_nuisance": false,
+    "max_replays": 1,
+    "workers": 1,
+    "substeps": 32,
+    "regularization": 0.005,
+    "nuisance_weight": 0.02,
+    "fd_step": 0.001
+  },
+  "package_sources": {
+    "diagnostics.py": "30a329f29733361548ea09588e8133323723bb06cd2653a428f31fa5b4380e23",
+    "__init__.py": "b9104b925360b18c3e7e291193f80851c8a050c9a21816c063ecc64312ad5c95",
+    "model.py": "a0ccc8f576afe468b2d3d1c57a11b02309c6e8c52352ad1a8ee993dafad7f530",
+    "data.py": "8f9a0079f8e7f0521f485d713bd5d7a50eb086d62c6f11c79f45b6e7d9736258",
+    "validation.py": "14ee8d84a15fc86819f4ad2141eaf22e8418b1c7393b919cb8d7e5bea4604d1b",
+    "metrics.py": "4440a08c360f5904e779033d0b464f6d173b8b9da2c4438fcbf23470f2df3d20",
+    "fit.py": "267e00f98dd0323132e36b34bf723b786bd5a5b6f86d2688337b6d21e59c6bd5",
+    "__main__.py": "aa61e5dd4c7f2cde8809f58517db1b92468fd4d6294c9eda3c5b56a6b845898f"
+  },
+  "runtime_versions": {
+    "numpy": "2.5.4",
+    "scipy": "1.18.1",
+    "microagu-sim": "0.1.0"
+  },
+  "physics_sources": {
+    "_native.abi3.so": "55000fafb4c8836d3684376474402ccbac971c5faeb9badddce33319ba6afb7e",
+    "compat/as-built-calibration.json": "cf0679e30b3ea4d6a2413b834ebfd8867d5b48913c12983d0e418c0aee924409",
+    "compat/trim.py": "1593cc2bdc9c3432ae570ae48766b31a4ebc2802f7e6a83cd75e29ca0abfc453",
+    "compat/geometry.py": "bc6e13d240c787cc3997cbec47082ff1679c3671a8f90ad689bb853d33223f27",
+    "compat/equilibrium-trim-hood_river-0.0-0.0.npz": "251df576c53f491e4b066d90d832ee9207fdab3adb7e32f33972ea62413b5710",
+    "compat/__init__.py": "c8f43602c44809f4d1be2ec8c3a1b9aac373d0396bde7399266bf119e49e3592",
+    "compat/defaults.py": "0f002fc2179509c1749d59770326bbd40c1d5dd25efcc0855a489c4c2d3ff10a",
+    "compat/profiles.py": "4b4d5b624d0f00f3481898e50c1aad947283846cffe6d12aeae2ae1b0d409486",
+    "compat/equilibrium-trim-trout_lake-0.0-0.0.npz": "a5d40fea458d79070fdc2aaef79c8ca70e4679074b57b0339af8da9f43f628ea",
+    "compat/parameters.json": "7793ba74306789dce70bcfc8b25154f0a7caedb7a2981cb951a717f2ffb82765",
+    "compat/sensors.py": "5951522186fc39bf2c7fe17f8ab349e170f2d9ca12eae7c518dccfb181ebb69e",
+    "compat/actuator.py": "1b1dbc9d47cf09807c272d6ea137751c7194a9921544609d439bf75179c6ab2a",
+    "compat/equilibrium.py": "d0dfb3fe8ef71602e6029e16fcc3c56a5bbec148f32d07f06ce2943c3b8e5733",
+    "compat/dynamics.py": "6da5c7b88ea3f25b1efd67fd7ebff48b643afffd863a1a3f09f589ddc798558f",
+    "compat/smoke_sitl.py": "8efa90eae23850308c50797ff0d64ee462b35a8c5491a3b5fe8b947a0d509454",
+    "compat/modal-calibration.json": "8d8153b5c500612dad12d07c3c368d8b7b7a4f928e2b8db96f0b03056e8c8649",
+    "compat/simulator.py": "ed21e7f5c1d643b0f7397d8331aa77a2f679a0fbd0cbcc31c73affa3cd439863",
+    "compat/firmware.py": "f6281598c43d6dd82a070cb7905555d88e9281ce2609b5d1d590da0d3674bc0a",
+    "compat/napkin-payload-model.json": "929c01848e19d82a92da09df088370efe6ed709abcc90aed4426131b33bb6211",
+    "compat/json_backend.py": "e2da8f3cc1457ef8d9b1d25b3d733836cf1b790f5e3f0ee9d9480e7489c9599b",
+    "compat/cad_geometry.py": "09ed218349fbdafea3f47c2c4b67c49636e7393e0eda6a9438be8d58a25ccac3",
+    "compat/routing.py": "73ba0bb44bb7f9e6ddfdc5628285b9c8bdd596171070e64af28d79cf7c5e9f14"
+  },
+  "aircraft_profiles": {
+    "trout_lake": {
+      "parameters": {
+        "rho": 1.225,
+        "S": 1.16,
+        "b": 2.15,
+        "c": 0.54,
+        "CL0": 0.7930571614569453,
+        "CLa": 3.7500452620462257,
+        "CD0": 0.10197592019959645,
+        "k_drag": 0.14480215620335352,
+        "CYbeta": 0.0,
+        "CLbrake": 0.7540989784138509,
+        "CDbrake": 0.25062036103489294,
+        "Clbeta": -0.03,
+        "Clp": 0.0,
+        "Cldelta": 0.0,
+        "Cm0": -0.042447256879107435,
+        "Cma": -1.9933377903419933,
+        "Cmq": -1.1054372158394723,
+        "payload_CDA": 0.015,
+        "thrust_max": 12.15,
+        "thrust_z": -0.058,
+        "prop_torque": -0.02,
+        "joint_k_roll": 4.862204090535876,
+        "joint_k_pitch": 0.0,
+        "joint_k_yaw": 0.43489340043192554,
+        "joint_c_roll": 0.0010331850005169947,
+        "joint_c_pitch": 0.045,
+        "joint_c_yaw": 0.06,
+        "Cnbeta": 0.0075,
+        "Cnr": -0.0125,
+        "Cndelta": 0.0,
+        "added_mx": 0.01,
+        "added_my": 0.1,
+        "added_mz": 0.5,
+        "added_Jx": 0.01,
+        "added_Jy": 0.005,
+        "added_Jz": 0.005,
+        "added_z1": 0.0,
+        "added_z2": 0.5,
+        "canopy_half_arc": 0.9459856901122734,
+        "hinge_x": 0.005275293367346938,
+        "hinge_y": -8.380102040816326e-05,
+        "hinge_z": -0.09801844387755101,
+        "Ixx": 0.004531667645148981,
+        "Iyy": 0.00478985392513478,
+        "Izz": 0.001765463657077636,
+        "Ixy": -8.902735484693947e-07,
+        "Ixz": -0.0006109220014841836,
+        "Iyz": 6.0468235255101976e-06,
+        "thrust_x": -0.03872470663265306,
+        "thrust_y": -8.380102040816326e-05,
+        "thrust_arm_z": -0.07301844387755102,
+        "canopy_mass": 0.19,
+        "brake_tilt_rad_per_m": 0.0,
+        "rotor_spin_inertia": 4.2164374870231074e-05,
+        "rotor_spin_sign": 1.0,
+        "geometry_yaw": 0.0,
+        "yaw_payload_halfspacing": 0.066,
+        "yaw_canopy_halfspacing": 0.3235535694002066,
+        "yaw_vertical_separation": 0.85,
+        "spin_acceleration_scale": 1.0,
+        "routing_enabled": 1.0,
+        "riser_halfspacing": 0.066,
+        "guide_halfspacing": 0.0455,
+        "guide_x": -0.0225,
+        "ring_height": 0.06,
+        "support_halfspacing": 0.3235535694002066,
+        "support_height": 0.85,
+        "cascade_x": -0.1,
+        "route_reference_left": 0.9058767862136052,
+        "route_reference_right": 0.905430247479104,
+        "brake_cp_shift": 0.0,
+        "brake_outboard_fraction": 0.0,
+        "left_offset": 0.0,
+        "right_offset": -0.0,
+        "added_scale": 0.5262397269532798
+      },
+      "geometry": {
+        "mass": 1.758,
+        "payload_mass": 1.568,
+        "canopy_mass": 0.19,
+        "inertia": [
+          [
+            0.004531667645148981,
+            -8.902735484693947e-07,
+            -0.0006109220014841836
+          ],
+          [
+            -8.902735484693947e-07,
+            0.00478985392513478,
+            6.0468235255101976e-06
+          ],
+          [
+            -0.0006109220014841836,
+            6.0468235255101976e-06,
+            0.001765463657077636
+          ]
+        ],
+        "hinge": [
+          0.005275293367346938,
+          -8.380102040816326e-05,
+          -0.09801844387755101
+        ],
+        "thrust": [
+          -0.03872470663265306,
+          -8.380102040816326e-05,
+          -0.07301844387755102
+        ],
+        "imu": [
+          -0.001224706632653061,
+          -8.380102040816326e-05,
+          -0.058018443877551014
+        ],
+        "parameters": {
+          "hinge_x": 0.005275293367346938,
+          "hinge_y": -8.380102040816326e-05,
+          "hinge_z": -0.09801844387755101,
+          "Ixx": 0.004531667645148981,
+          "Iyy": 0.00478985392513478,
+          "Izz": 0.001765463657077636,
+          "Ixy": -8.902735484693947e-07,
+          "Ixz": -0.0006109220014841836,
+          "Iyz": 6.0468235255101976e-06,
+          "thrust_x": -0.03872470663265306,
+          "thrust_y": -8.380102040816326e-05,
+          "thrust_arm_z": -0.07301844387755102,
+          "canopy_mass": 0.19
+        }
+      }
+    }
+  }
+}

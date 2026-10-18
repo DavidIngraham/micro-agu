@@ -1,0 +1,142 @@
+{
+  "legacy": {
+    "sensitivity": {
+      "column_norms": [
+        0.443412994330096,
+        0.5573945403138545,
+        0.9790491250035808,
+        0.2200257434831674,
+        0.19361679237201582,
+        0.0
+      ],
+      "singular_values": [
+        0.9922535967694037,
+        0.6471892325716344,
+        0.2865741050941763,
+        0.18743534604573855,
+        0.17624388400795205,
+        0.0
+      ],
+      "inactive_columns": [
+        5
+      ],
+      "condition_number": null,
+      "weakest_direction": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "bound_hits": [
+        0,
+        2,
+        3,
+        4,
+        5
+      ],
+      "interpretation": "Local conditional response sensitivity, normalized by exploratory bounds. Nuisance fixed; no posterior confidence or global-identifiability claim."
+    },
+    "integration": [
+      {
+        "name": "tl-380",
+        "max_rate_rmse_difference": 1.1910799457837129e-07
+      },
+      {
+        "name": "tl-2760",
+        "max_rate_rmse_difference": 2.7298893812144343e-08
+      }
+    ]
+  },
+  "response": {
+    "sensitivity": {
+      "column_norms": [
+        0.2428862860656189,
+        0.3325231506465671,
+        0.6267654695838024,
+        0.08366736551006905,
+        0.16460954077732315,
+        0.14637710092189934
+      ],
+      "singular_values": [
+        0.6314330257676849,
+        0.370852274085183,
+        0.18661701749735563,
+        0.16390406016255715,
+        0.1210483784017777,
+        0.07308142638540979
+      ],
+      "inactive_columns": [],
+      "condition_number": 8.64013001658854,
+      "weakest_direction": [
+        0.046024221550960386,
+        -0.03396578645969012,
+        0.0529793442793085,
+        -0.9916883286310773,
+        0.010718959397167823,
+        0.10178726947354308
+      ],
+      "bound_hits": [
+        2,
+        5
+      ],
+      "interpretation": "Local conditional response sensitivity, normalized by exploratory bounds. Nuisance fixed; no posterior confidence or global-identifiability claim."
+    },
+    "integration": [
+      {
+        "name": "tl-380",
+        "max_rate_rmse_difference": 8.114313843066157e-08
+      },
+      {
+        "name": "tl-2760",
+        "max_rate_rmse_difference": 2.108145480406165e-08
+      }
+    ]
+  },
+  "response_nuisance": {
+    "sensitivity": {
+      "column_norms": [
+        0.24469544641664284,
+        0.33680588652104426,
+        0.6329911100720927,
+        0.08562434173619576,
+        0.1651946594928575,
+        0.1455831393146273
+      ],
+      "singular_values": [
+        0.6377307862930255,
+        0.37514550531708885,
+        0.1871946387562837,
+        0.16457532738250769,
+        0.12090969954662437,
+        0.07500888911218019
+      ],
+      "inactive_columns": [],
+      "condition_number": 8.502069472582932,
+      "weakest_direction": [
+        0.04607926261049263,
+        -0.035209244089135235,
+        0.05270080968456759,
+        -0.9911107470584111,
+        0.012387272921574414,
+        0.1067973683262869
+      ],
+      "bound_hits": [
+        2,
+        5
+      ],
+      "interpretation": "Local conditional response sensitivity, normalized by exploratory bounds. Nuisance fixed; no posterior confidence or global-identifiability claim."
+    },
+    "integration": [
+      {
+        "name": "tl-380",
+        "max_rate_rmse_difference": 8.0416308279041e-08
+      },
+      {
+        "name": "tl-2760",
+        "max_rate_rmse_difference": 2.6737168923318677e-08
+      }
+    ]
+  }
+}

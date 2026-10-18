@@ -1,0 +1,53 @@
+{
+  "episodes": [
+    [
+      "manual-266",
+      266.64,
+      339.36,
+      "training"
+    ],
+    [
+      "manual-371",
+      371.52,
+      420.84,
+      "previous_validation"
+    ],
+    [
+      "manual-435",
+      435.64,
+      468.6,
+      "previous_validation"
+    ],
+    [
+      "manual-529",
+      529.84,
+      578.92,
+      "training"
+    ],
+    [
+      "manual-1985",
+      1985.28,
+      2018.68,
+      "training"
+    ],
+    [
+      "manual-903",
+      903.8,
+      926.12,
+      "unused_check"
+    ],
+    [
+      "manual-1087",
+      1087.2,
+      1106.0,
+      "unused_check"
+    ]
+  ],
+  "nperseg": [
+    128,
+    256
+  ],
+  "selection": "Reuse frozen candidates only; no refit or new selection",
+  "new_checks": "903.80..926.12 and 1087.20..1106.00 s: manual episodes excluded from this comparison fitting/selection and earlier 20 s gradient validation; broader historical studies may have examined them",
+  "evidence": "Additional episodes in the same historical flight, not independent prospective data"
+}

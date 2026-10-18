@@ -1,0 +1,18 @@
+{
+  "variants": [
+    "legacy",
+    "response",
+    "response_nuisance"
+  ],
+  "max_replays_per_start": 2000,
+  "training_episodes": [
+    "manual-1985",
+    "manual-266",
+    "manual-529"
+  ],
+  "selection": "Training objective only; all fits frozen before validation; no validation nuisance fitting",
+  "evidence": "Reused historical flight and previously studied evaluation windows; not independent prospective validation",
+  "improvement_criteria": "No scalar promotion gate: report uncentered rate/acceleration, centered local, spectral amplitudes, inter-axis and command phase independently. A different objective alone cannot establish overall model fidelity.",
+  "nuisance": "Per training segment only: canopy initial angle +/-0.1 rad and constant north/east wind corrections +/-2 m/s, penalized by stated priors. No arbitrary latent forces.",
+  "production_changed": false
+}

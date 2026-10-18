@@ -1,0 +1,28 @@
+{
+  "truth": [
+    1.2,
+    0.95,
+    0.65,
+    0.7,
+    1.04,
+    0.035
+  ],
+  "training": [
+    "tl-280",
+    "tl-535"
+  ],
+  "validation": [
+    "tl-440"
+  ],
+  "cases": [
+    "exact",
+    "wind_bias_no_nuisance",
+    "wind_bias_with_nuisance"
+  ],
+  "noise_deg_s": 0.1,
+  "wind_bias_m_s": [
+    0.6,
+    -0.4
+  ],
+  "note": "Same simulator generates and fits data. Tests implementation and conditional recovery, not real-world model adequacy. Initial full state is known in synthetic cases; no fitted validation nuisance."
+}

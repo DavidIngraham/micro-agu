@@ -1,0 +1,5182 @@
+[
+  {
+    "episode": "manual-266",
+    "kind": "training",
+    "family": "baseline",
+    "duration_s": 72.71999999998553,
+    "response_loss": 0.851956206640688,
+    "rate_rmse": [
+      13.054298167936995,
+      18.98453942407724,
+      27.212930219062628
+    ],
+    "acceleration_rmse": [
+      105.27822225527552,
+      116.9502380450985,
+      233.75530104048363
+    ],
+    "mean_rate_bias": [
+      -2.6896401189626764,
+      -4.037004707240666,
+      2.6446830854147367
+    ],
+    "observed_band_rms": [
+      4.230149848365059,
+      7.571827680503137,
+      17.895479319066105
+    ],
+    "model_band_rms": [
+      0.5684720154792973,
+      3.423366256728408,
+      2.5674108039441337
+    ],
+    "peak_hz": 1.66015625,
+    "observed_qr_phase_deg": -83.93783958038019,
+    "model_qr_phase_deg": -26.653532529362455,
+    "phase_error_deg": 57.28430705101772,
+    "observed_qr_coherence": 0.9307084392798507,
+    "local": 0.8399657927461188,
+    "amplitude": 2.8094506825572645,
+    "phase": 0.45952921534704116,
+    "score": 1.5516724331907616,
+    "spectral": [
+      {
+        "nperseg": 128,
+        "welch_averages": 26,
+        "note": "Overlapping averages are not independent; coherence is descriptive under feedback.",
+        "channels": {
+          "differential_yaw": {
+            "peak_hz": 1.7578125,
+            "observed_phase_deg": -19.3370875702224,
+            "model_phase_deg": -93.86072859373138,
+            "phase_error_deg": -74.52364102350899,
+            "observed_coherence": 0.022464748157800935,
+            "model_coherence": 0.19094253812591194,
+            "observed_rms": 17.47999791499733,
+            "model_rms": 2.475454639080866,
+            "command_band_rms_mm": 1.6218970928911909,
+            "frequencies": [
+              1.3671875,
+              1.5625,
+              1.7578125
+            ],
+            "phase_error_band_deg": [
+              56.488455743021824,
+              -99.16188979111911,
+              -74.52364102350899
+            ],
+            "observed_coherence_band": [
+              0.06485528939936244,
+              0.05249543543942565,
+              0.022464748157800935
+            ]
+          },
+          "common_pitch": {
+            "peak_hz": 1.5625,
+            "observed_phase_deg": -82.80211258684785,
+            "model_phase_deg": -14.212078810068322,
+            "phase_error_deg": 68.59003377677953,
+            "observed_coherence": 0.18730679256918786,
+            "model_coherence": 0.338696912907794,
+            "observed_rms": 7.094912701834696,
+            "model_rms": 3.3831411792788795,
+            "command_band_rms_mm": 0.6488012604845947,
+            "frequencies": [
+              1.3671875,
+              1.5625,
+              1.7578125
+            ],
+            "phase_error_band_deg": [
+              118.32089622428208,
+              68.59003377677953,
+              67.09600829026611
+            ],
+            "observed_coherence_band": [
+              0.15362495826218736,
+              0.18730679256918786,
+              0.04618193227093326
+            ]
+          }
+        }
+      },
+      {
+        "nperseg": 256,
+        "welch_averages": 12,
+        "note": "Overlapping averages are not independent; coherence is descriptive under feedback.",
+        "channels": {
+          "differential_yaw": {
+            "peak_hz": 1.66015625,
+            "observed_phase_deg": -35.785619326401424,
+            "model_phase_deg": -107.0133504820116,
+            "phase_error_deg": -71.22773115561019,
+            "observed_coherence": 0.17373082134064108,
+            "model_coherence": 0.4048579241962703,
+            "observed_rms": 17.89547931906611,
+            "model_rms": 2.5674108039441337,
+            "command_band_rms_mm": 1.5235974152901404,
+            "frequencies": [
+              1.26953125,
+              1.3671875,
+              1.46484375,
+              1.5625,
+              1.66015625,
+              1.7578125,
+              1.85546875
+            ],
+            "phase_error_band_deg": [
+              -7.108147920166295,
+              -45.32843069188984,
+              -39.679626086372394,
+              -26.39645365132671,
+              -71.22773115561019,
+              -48.83240824188009,
+              -161.0687341439832
+            ],
+            "observed_coherence_band": [
+              0.15398170142512443,
+              0.24874462915949355,
+              0.3469782697802773,
+              0.15397778117459535,
+              0.17373082134064108,
+              0.09575243911677721,
+              0.030570151048563095
+            ]
+          },
+          "common_pitch": {
+            "peak_hz": 1.66015625,
+            "observed_phase_deg": -129.00608123202588,
+            "model_phase_deg": -92.25471801572463,
+            "phase_error_deg": 36.75136321630125,
+            "observed_coherence": 0.05536594659075247,
+            "model_coherence": 0.0034954893658124308,
+            "observed_rms": 7.571827680503137,
+            "model_rms": 3.423366256728408,
+            "command_band_rms_mm": 0.672347415077181,
+            "frequencies": [
+              1.26953125,
+              1.3671875,
+              1.46484375,
+              1.5625,
+              1.66015625,
+              1.7578125,
+              1.85546875
+            ],
+            "phase_error_band_deg": [
+              -133.27478994364873,
+              100.47449785855386,
+              59.61435289102924,
+              47.041625462539805,
+              36.75136321630125,
+              65.45865933224866,
+              174.6810837384629
+            ],
+            "observed_coherence_band": [
+              0.009084238782949245,
+              0.3707972906724462,
+              0.5187795725105708,
+              0.2350102706656338,
+              0.05536594659075247,
+              0.1764796540812343,
+              0.11042706526554256
+            ]
+          }
+        }
+      }
+    ]
+  },
+  {
+    "episode": "manual-266",
+    "kind": "training",
+    "family": "legacy",
+    "duration_s": 72.71999999998553,
+    "response_loss": 0.8919411371463457,
+    "rate_rmse": [
+      13.792756904992476,
+      19.144292457210828,
+      28.07432284400084
+    ],
+    "acceleration_rmse": [
+      107.00667351227821,
+      119.09700081148128,
+      241.60552325382002
+    ],
+    "mean_rate_bias": [
+      -2.034844049472666,
+      -3.093297051685523,
+      2.147370818345199
+    ],
+    "observed_band_rms": [
+      4.230149848365059,
+      7.571827680503137,
+      17.895479319066105
+    ],
+    "model_band_rms": [
+      1.170195633250295,
+      3.8362766197599014,
+      8.796119947442813
+    ],
+    "peak_hz": 1.66015625,
+    "observed_qr_phase_deg": -83.93783958038019,
+    "model_qr_phase_deg": -61.709699598116686,
+    "phase_error_deg": 22.228139982263485,
+    "observed_qr_coherence": 0.9307084392798507,
+    "local": 0.8849050564982405,
+    "amplitude": 0.872713615649702,
+    "phase": 0.07431509781301804,
+    "score": 0.7179104884217806,
+    "spectral": [
+      {
+        "nperseg": 128,
+        "welch_averages": 26,
+        "note": "Overlapping averages are not independent; coherence is descriptive under feedback.",
+        "channels": {
+          "differential_yaw": {
+            "peak_hz": 1.7578125,
+            "observed_phase_deg": -19.3370875702224,
+            "model_phase_deg": -122.11018155582087,
+            "phase_error_deg": -102.77309398559846,
+            "observed_coherence": 0.022464748157800935,
+            "model_coherence": 0.14225957660200575,
+            "observed_rms": 17.47999791499733,
+            "model_rms": 8.325123582261215,
+            "command_band_rms_mm": 1.6218970928911909,
+            "frequencies": [
+              1.3671875,
+              1.5625,
+              1.7578125
+            ],
+            "phase_error_band_deg": [
+              38.860931498492135,
+              -113.06502004147923,
+              -102.77309398559846
+            ],
+            "observed_coherence_band": [
+              0.06485528939936244,
+              0.05249543543942565,
+              0.022464748157800935
+            ]
+          },
+          "common_pitch": {
+            "peak_hz": 1.5625,
+            "observed_phase_deg": -82.80211258684785,
+            "model_phase_deg": -49.23974139413636,
+            "phase_error_deg": 33.56237119271149,
+            "observed_coherence": 0.18730679256918786,
+            "model_coherence": 0.38518352955198015,
+            "observed_rms": 7.094912701834696,
+            "model_rms": 3.717391642332475,
+            "command_band_rms_mm": 0.6488012604845947,
+            "frequencies": [
+              1.3671875,
+              1.5625,
+              1.7578125
+            ],
+            "phase_error_band_deg": [
+              102.93514756572407,
+              33.56237119271149,
+              29.479748636883308
+            ],
+            "observed_coherence_band": [
+              0.15362495826218736,
+              0.18730679256918786,
+              0.04618193227093326
+            ]
+          }
+        }
+      },
+      {
+        "nperseg": 256,
+        "welch_averages": 12,
+        "note": "Overlapping averages are not independent; coherence is descriptive under feedback.",
+        "channels": {
+          "differential_yaw": {
+            "peak_hz": 1.66015625,
+            "observed_phase_deg": -35.785619326401424,
+            "model_phase_deg": -136.10104846958438,
+            "phase_error_deg": -100.31542914318295,
+            "observed_coherence": 0.17373082134064108,
+            "model_coherence": 0.2957929919335637,
+            "observed_rms": 17.89547931906611,
+            "model_rms": 8.796119947442813,
+            "command_band_rms_mm": 1.5235974152901404,
+            "frequencies": [
+              1.26953125,
+              1.3671875,
+              1.46484375,
+              1.5625,
+              1.66015625,
+              1.7578125,
+              1.85546875
+            ],
+            "phase_error_band_deg": [
+              -31.65524691184176,
+              -73.3146375239729,
+              -35.50844107060927,
+              -15.81823023057916,
+              -100.31542914318295,
+              -68.76227342948269,
+              167.84739374022945
+            ],
+            "observed_coherence_band": [
+              0.15398170142512443,
+              0.24874462915949355,
+              0.3469782697802773,
+              0.15397778117459535,
+              0.17373082134064108,
+              0.09575243911677721,
+              0.030570151048563095
+            ]
+          },
+          "common_pitch": {
+            "peak_hz": 1.66015625,
+            "observed_phase_deg": -129.00608123202588,
+            "model_phase_deg": -82.86760255772487,
+            "phase_error_deg": 46.13847867430101,
+            "observed_coherence": 0.05536594659075247,
+            "model_coherence": 0.02574847169744909,
+            "observed_rms": 7.571827680503137,
+            "model_rms": 3.8362766197599014,
+            "command_band_rms_mm": 0.672347415077181,
+            "frequencies": [
+              1.26953125,
+              1.3671875,
+              1.46484375,
+              1.5625,
+              1.66015625,
+              1.7578125,
+              1.85546875
+            ],
+            "phase_error_band_deg": [
+              -152.00447664169891,
+              109.3968542174803,
+              24.462153049175875,
+              -9.733456693598853,
+              46.13847867430102,
+              23.544368563262825,
+              125.58961382929655
+            ],
+            "observed_coherence_band": [
+              0.009084238782949245,
+              0.3707972906724462,
+              0.5187795725105708,
+              0.2350102706656338,
+              0.05536594659075247,
+              0.1764796540812343,
+              0.11042706526554256
+            ]
+          }
+        }
+      }
+    ]
+  },
+  {
+    "episode": "manual-266",
+    "kind": "training",
+    "family": "response",
+    "duration_s": 72.71999999998553,
+    "response_loss": 0.7719148223118634,
+    "rate_rmse": [
+      12.370555429874878,
+      17.91922561247482,
+      26.057999761985037
+    ],
+    "acceleration_rmse": [
+      102.87540959506318,
+      108.95180051305152,
+      223.44071548150407
+    ],
+    "mean_rate_bias": [
+      -2.4620588802564836,
+      -3.573577208094446,
+      2.239783002092711
+    ],
+    "observed_band_rms": [
+      4.230149848365059,
+      7.571827680503137,
+      17.895479319066105
+    ],
+    "model_band_rms": [
+      0.786495897175148,
+      2.94001619456745,
+      5.31114264590351
+    ],
+    "peak_hz": 1.66015625,
+    "observed_qr_phase_deg": -83.93783958038019,
+    "model_qr_phase_deg": -52.58219902427764,
+    "phase_error_deg": 31.35564055610254,
+    "observed_qr_coherence": 0.9307084392798507,
+    "local": 0.7623076011363897,
+    "amplitude": 1.733678638405386,
+    "phase": 0.14604608336244218,
+    "score": 1.0276037124891988,
+    "spectral": [
+      {
+        "nperseg": 128,
+        "welch_averages": 26,
+        "note": "Overlapping averages are not independent; coherence is descriptive under feedback.",
+        "channels": {
+          "differential_yaw": {
+            "peak_hz": 1.7578125,
+            "observed_phase_deg": -19.3370875702224,
+            "model_phase_deg": -130.2142942560245,
+            "phase_error_deg": -110.8772066858021,
+            "observed_coherence": 0.022464748157800935,
+            "model_coherence": 0.22663928735985137,
+            "observed_rms": 17.47999791499733,
+            "model_rms": 5.13504350988503,
+            "command_band_rms_mm": 1.6218970928911909,
+            "frequencies": [
+              1.3671875,
+              1.5625,
+              1.7578125
+            ],
+            "phase_error_band_deg": [
+              29.770620418460652,
+              -123.95715684205315,
+              -110.8772066858021
+            ],
+            "observed_coherence_band": [
+              0.06485528939936244,
+              0.05249543543942565,
+              0.022464748157800935
+            ]
+          },
+          "common_pitch": {
+            "peak_hz": 1.5625,
+            "observed_phase_deg": -82.80211258684785,
+            "model_phase_deg": -58.82435433674111,
+            "phase_error_deg": 23.977758250106746,
+            "observed_coherence": 0.18730679256918786,
+            "model_coherence": 0.23311081018776483,
+            "observed_rms": 7.094912701834696,
+            "model_rms": 2.954977354726267,
+            "command_band_rms_mm": 0.6488012604845947,
+            "frequencies": [
+              1.3671875,
+              1.5625,
+              1.7578125
+            ],
+            "phase_error_band_deg": [
+              75.38888268638397,
+              23.977758250106746,
+              10.046953697112158
+            ],
+            "observed_coherence_band": [
+              0.15362495826218736,
+              0.18730679256918786,
+              0.04618193227093326
+            ]
+          }
+        }
+      },
+      {
+        "nperseg": 256,
+        "welch_averages": 12,
+        "note": "Overlapping averages are not independent; coherence is descriptive under feedback.",
+        "channels": {
+          "differential_yaw": {
+            "peak_hz": 1.66015625,
+            "observed_phase_deg": -35.785619326401424,
+            "model_phase_deg": -137.21233749920253,
+            "phase_error_deg": -101.42671817280113,
+            "observed_coherence": 0.17373082134064108,
+            "model_coherence": 0.5081074591258516,
+            "observed_rms": 17.89547931906611,
+            "model_rms": 5.31114264590351,
+            "command_band_rms_mm": 1.5235974152901404,
+            "frequencies": [
+              1.26953125,
+              1.3671875,
+              1.46484375,
+              1.5625,
+              1.66015625,
+              1.7578125,
+              1.85546875
+            ],
+            "phase_error_band_deg": [
+              -37.80520985055948,
+              -58.89934863175498,
+              -28.126968086441728,
+              2.0726245196312543,
+              -101.42671817280113,
+              -80.02074681315926,
+              113.14762284975764
+            ],
+            "observed_coherence_band": [
+              0.15398170142512443,
+              0.24874462915949355,
+              0.3469782697802773,
+              0.15397778117459535,
+              0.17373082134064108,
+              0.09575243911677721,
+              0.030570151048563095
+            ]
+          },
+          "common_pitch": {
+            "peak_hz": 1.66015625,
+            "observed_phase_deg": -129.00608123202588,
+            "model_phase_deg": -177.03974128802642,
+            "phase_error_deg": -48.03366005600056,
+            "observed_coherence": 0.05536594659075247,
+            "model_coherence": 0.09496020954194224,
+            "observed_rms": 7.571827680503137,
+            "model_rms": 2.9400161945674497,
+            "command_band_rms_mm": 0.672347415077181,
+            "frequencies": [
+              1.26953125,
+              1.3671875,
+              1.46484375,
+              1.5625,
+              1.66015625,
+              1.7578125,
+              1.85546875
+            ],
+            "phase_error_band_deg": [
+              -166.0812222724812,
+              19.334451366758085,
+              15.24597466545485,
+              11.007316523008093,
+              -48.033660056000556,
+              15.729121075059366,
+              122.33155917308187
+            ],
+            "observed_coherence_band": [
+              0.009084238782949245,
+              0.3707972906724462,
+              0.5187795725105708,
+              0.2350102706656338,
+              0.05536594659075247,
+              0.1764796540812343,
+              0.11042706526554256
+            ]
+          }
+        }
+      }
+    ]
+  },
+  {
+    "episode": "manual-266",
+    "kind": "training",
+    "family": "response_nuisance",
+    "duration_s": 72.71999999998553,
+    "response_loss": 0.7724790242348214,
+    "rate_rmse": [
+      12.391817403205543,
+      17.937068953737423,
+      26.069423495693172
+    ],
+    "acceleration_rmse": [
+      102.87688601458137,
+      108.89629617561431,
+      223.32986187289643
+    ],
+    "mean_rate_bias": [
+      -2.465615127550227,
+      -3.6265326262551643,
+      2.2551144795369216
+    ],
+    "observed_band_rms": [
+      4.230149848365059,
+      7.571827680503137,
+      17.895479319066105
+    ],
+    "model_band_rms": [
+      0.7915591469130772,
+      2.939294731441966,
+      5.364560542081092
+    ],
+    "peak_hz": 1.66015625,
+    "observed_qr_phase_deg": -83.93783958038019,
+    "model_qr_phase_deg": -51.981613298779784,
+    "phase_error_deg": 31.95622628160038,
+    "observed_qr_coherence": 0.9307084392798507,
+    "local": 0.7627106933057294,
+    "amplitude": 1.7185787961615107,
+    "phase": 0.15154729544162882,
+    "score": 1.0228252548752217,
+    "spectral": [
+      {
+        "nperseg": 128,
+        "welch_averages": 26,
+        "note": "Overlapping averages are not independent; coherence is descriptive under feedback.",
+        "channels": {
+          "differential_yaw": {
+            "peak_hz": 1.7578125,
+            "observed_phase_deg": -19.3370875702224,
+            "model_phase_deg": -131.0720584917752,
+            "phase_error_deg": -111.7349709215528,
+            "observed_coherence": 0.022464748157800935,
+            "model_coherence": 0.22604618193571538,
+            "observed_rms": 17.47999791499733,
+            "model_rms": 5.18886336573637,
+            "command_band_rms_mm": 1.6218970928911909,
+            "frequencies": [
+              1.3671875,
+              1.5625,
+              1.7578125
+            ],
+            "phase_error_band_deg": [
+              29.381555345860797,
+              -124.30669281337819,
+              -111.7349709215528
+            ],
+            "observed_coherence_band": [
+              0.06485528939936244,
+              0.05249543543942565,
+              0.022464748157800935
+            ]
+          },
+          "common_pitch": {
+            "peak_hz": 1.5625,
+            "observed_phase_deg": -82.80211258684785,
+            "model_phase_deg": -58.913035683518494,
+            "phase_error_deg": 23.88907690332936,
+            "observed_coherence": 0.18730679256918786,
+            "model_coherence": 0.2294201803795006,
+            "observed_rms": 7.094912701834696,
+            "model_rms": 2.9557073030019745,
+            "command_band_rms_mm": 0.6488012604845947,
+            "frequencies": [
+              1.3671875,
+              1.5625,
+              1.7578125
+            ],
+            "phase_error_band_deg": [
+              75.18537814928685,
+              23.88907690332936,
+              10.020683426325023
+            ],
+            "observed_coherence_band": [
+              0.15362495826218736,
+              0.18730679256918786,
+              0.04618193227093326
+            ]
+          }
+        }
+      },
+      {
+        "nperseg": 256,
+        "welch_averages": 12,
+        "note": "Overlapping averages are not independent; coherence is descriptive under feedback.",
+        "channels": {
+          "differential_yaw": {
+            "peak_hz": 1.66015625,
+            "observed_phase_deg": -35.785619326401424,
+            "model_phase_deg": -138.02024945369573,
+            "phase_error_deg": -102.23463012729431,
+            "observed_coherence": 0.17373082134064108,
+            "model_coherence": 0.5033287614635162,
+            "observed_rms": 17.89547931906611,
+            "model_rms": 5.364560542081092,
+            "command_band_rms_mm": 1.5235974152901404,
+            "frequencies": [
+              1.26953125,
+              1.3671875,
+              1.46484375,
+              1.5625,
+              1.66015625,
+              1.7578125,
+              1.85546875
+            ],
+            "phase_error_band_deg": [
+              -37.888132218356986,
+              -59.1779246228922,
+              -28.283433596857122,
+              2.6590741652707837,
+              -102.23463012729431,
+              -80.83021739180194,
+              110.78323343450235
+            ],
+            "observed_coherence_band": [
+              0.15398170142512443,
+              0.24874462915949355,
+              0.3469782697802773,
+              0.15397778117459535,
+              0.17373082134064108,
+              0.09575243911677721,
+              0.030570151048563095
+            ]
+          },
+          "common_pitch": {
+            "peak_hz": 1.66015625,
+            "observed_phase_deg": -129.00608123202588,
+            "model_phase_deg": -177.4370703149758,
+            "phase_error_deg": -48.43098908294995,
+            "observed_coherence": 0.05536594659075247,
+            "model_coherence": 0.09544137362658255,
+            "observed_rms": 7.571827680503137,
+            "model_rms": 2.939294731441966,
+            "command_band_rms_mm": 0.672347415077181,
+            "frequencies": [
+              1.26953125,
+              1.3671875,
+              1.46484375,
+              1.5625,
+              1.66015625,
+              1.7578125,
+              1.85546875
+            ],
+            "phase_error_band_deg": [
+              -165.96038690178773,
+              18.539158166495337,
+              15.175251126311869,
+              11.372981972446505,
+              -48.43098908294995,
+              15.817188822642192,
+              122.26477423276594
+            ],
+            "observed_coherence_band": [
+              0.009084238782949245,
+              0.3707972906724462,
+              0.5187795725105708,
+              0.2350102706656338,
+              0.05536594659075247,
+              0.1764796540812343,
+              0.11042706526554256
+            ]
+          }
+        }
+      }
+    ]
+  },
+  {
+    "episode": "manual-371",
+    "kind": "previous_validation",
+    "family": "baseline",
+    "duration_s": 49.319999999990216,
+    "response_loss": 0.8627642220966968,
+    "rate_rmse": [
+      30.21509707083079,
+      28.558998686003424,
+      36.44811441014379
+    ],
+    "acceleration_rmse": [
+      345.2605413633883,
+      290.9806526345318,
+      359.79221958558344
+    ],
+    "mean_rate_bias": [
+      -2.35921890615618,
+      -4.3599041420051945,
+      2.170965041474518
+    ],
+    "observed_band_rms": [
+      5.547139557506186,
+      13.173758528006,
+      24.309011718679844
+    ],
+    "model_band_rms": [
+      0.7185588013533616,
+      6.1042261040537005,
+      2.222579223613057
+    ],
+    "peak_hz": 1.66015625,
+    "observed_qr_phase_deg": -108.22970273937837,
+    "model_qr_phase_deg": -20.588611119595395,
+    "phase_error_deg": 87.64109161978298,
+    "observed_qr_coherence": 0.6605450589980536,
+    "local": 0.8587548928940434,
+    "amplitude": 3.497112072477133,
+    "phase": 0.9588409119467258,
+    "score": 1.9341149685378158,
+    "spectral": [
+      {
+        "nperseg": 128,
+        "welch_averages": 17,
+        "note": "Overlapping averages are not independent; coherence is descriptive under feedback.",
+        "channels": {
+          "differential_yaw": {
+            "peak_hz": 1.5625,
+            "observed_phase_deg": -137.9087162239229,
+            "model_phase_deg": -47.865793574436154,
+            "phase_error_deg": 90.04292264948675,
+            "observed_coherence": 0.04536319828351243,
+            "model_coherence": 0.3385636504884223,
+            "observed_rms": 22.88865134411545,
+            "model_rms": 2.154484536803347,
+            "command_band_rms_mm": 1.7057349626435805,
+            "frequencies": [
+              1.3671875,
+              1.5625,
+              1.7578125
+            ],
+            "phase_error_band_deg": [
+              66.34498135828898,
+              90.04292264948675,
+              96.56383379614283
+            ],
+            "observed_coherence_band": [
+              0.0470713481944125,
+              0.04536319828351243,
+              0.10742783509849471
+            ]
+          },
+          "common_pitch": {
+            "peak_hz": 1.7578125,
+            "observed_phase_deg": 81.34413018979788,
+            "model_phase_deg": -52.9198506133429,
+            "phase_error_deg": -134.2639808031408,
+            "observed_coherence": 0.0064751505500088785,
+            "model_coherence": 0.08220652194813838,
+            "observed_rms": 12.289121188103694,
+            "model_rms": 5.720233134726934,
+            "command_band_rms_mm": 0.8172990116116825,
+            "frequencies": [
+              1.3671875,
+              1.5625,
+              1.7578125
+            ],
+            "phase_error_band_deg": [
+              50.78917132019163,
+              -35.41330286396787,
+              -134.2639808031408
+            ],
+            "observed_coherence_band": [
+              0.07931801114884703,
+              0.021781504149952936,
+              0.0064751505500088785
+            ]
+          }
+        }
+      },
+      {
+        "nperseg": 256,
+        "welch_averages": 8,
+        "note": "Overlapping averages are not independent; coherence is descriptive under feedback.",
+        "channels": {
+          "differential_yaw": {
+            "peak_hz": 1.66015625,
+            "observed_phase_deg": 175.2606811619466,
+            "model_phase_deg": -20.924517907863045,
+            "phase_error_deg": 163.8148009301904,
+            "observed_coherence": 0.06375506580387455,
+            "model_coherence": 0.202373395090343,
+            "observed_rms": 24.309011718679844,
+            "model_rms": 2.2225792236130566,
+            "command_band_rms_mm": 1.581825724657335,
+            "frequencies": [
+              1.26953125,
+              1.3671875,
+              1.46484375,
+              1.5625,
+              1.66015625,
+              1.7578125,
+              1.85546875
+            ],
+            "phase_error_band_deg": [
+              150.1175093408871,
+              93.15460134034917,
+              -41.81707045074942,
+              43.369964302218044,
+              163.8148009301904,
+              130.46939903882546,
+              22.14290539839851
+            ],
+            "observed_coherence_band": [
+              0.21547820036577317,
+              0.002736723856593479,
+              0.11870260284975552,
+              0.13075244420096968,
+              0.06375506580387455,
+              0.010246505378525231,
+              0.24000685956910137
+            ]
+          },
+          "common_pitch": {
+            "peak_hz": 1.66015625,
+            "observed_phase_deg": 45.122013671213445,
+            "model_phase_deg": -26.71022444132281,
+            "phase_error_deg": -71.83223811253625,
+            "observed_coherence": 0.1251078286118228,
+            "model_coherence": 0.1108928665018809,
+            "observed_rms": 13.173758528006,
+            "model_rms": 6.1042261040537005,
+            "command_band_rms_mm": 0.7868420085627063,
+            "frequencies": [
+              1.26953125,
+              1.3671875,
+              1.46484375,
+              1.5625,
+              1.66015625,
+              1.7578125,
+              1.85546875
+            ],
+            "phase_error_band_deg": [
+              54.93300210882718,
+              112.78759643725836,
+              34.15997420457319,
+              -49.48291492046751,
+              -71.83223811253625,
+              152.64641751363746,
+              -12.326982485727234
+            ],
+            "observed_coherence_band": [
+              0.19737374524004714,
+              0.19872495483357747,
+              0.05070988204319041,
+              0.06793586821437488,
+              0.1251078286118228,
+              0.10309685689357131,
+              0.12150871028398227
+            ]
+          }
+        }
+      }
+    ]
+  },
+  {
+    "episode": "manual-371",
+    "kind": "previous_validation",
+    "family": "legacy",
+    "duration_s": 49.319999999990216,
+    "response_loss": 0.9275163615615012,
+    "rate_rmse": [
+      31.28246007849835,
+      28.614147537452094,
+      39.30644913689949
+    ],
+    "acceleration_rmse": [
+      346.79812174705376,
+      296.07313213762234,
+      389.17852461780853
+    ],
+    "mean_rate_bias": [
+      -2.0337041861401377,
+      -3.1949130886805155,
+      2.8484949326657696
+    ],
+    "observed_band_rms": [
+      5.547139557506186,
+      13.173758528006,
+      24.309011718679844
+    ],
+    "model_band_rms": [
+      1.0515789976516507,
+      7.057050252077636,
+      7.155523352670008
+    ],
+    "peak_hz": 1.66015625,
+    "observed_qr_phase_deg": -108.22970273937837,
+    "model_qr_phase_deg": -51.154990161220724,
+    "phase_error_deg": 57.07471257815765,
+    "observed_qr_coherence": 0.6605450589980536,
+    "local": 0.9246635265315879,
+    "amplitude": 1.5502656714605216,
+    "phase": 0.4564550377686003,
+    "score": 1.081262686750564,
+    "spectral": [
+      {
+        "nperseg": 128,
+        "welch_averages": 17,
+        "note": "Overlapping averages are not independent; coherence is descriptive under feedback.",
+        "channels": {
+          "differential_yaw": {
+            "peak_hz": 1.5625,
+            "observed_phase_deg": -137.9087162239229,
+            "model_phase_deg": -43.175557181345155,
+            "phase_error_deg": 94.73315904257777,
+            "observed_coherence": 0.04536319828351243,
+            "model_coherence": 0.0744738669582609,
+            "observed_rms": 22.88865134411545,
+            "model_rms": 6.878379359072315,
+            "command_band_rms_mm": 1.7057349626435805,
+            "frequencies": [
+              1.3671875,
+              1.5625,
+              1.7578125
+            ],
+            "phase_error_band_deg": [
+              55.148462223276276,
+              94.73315904257777,
+              93.54786537472047
+            ],
+            "observed_coherence_band": [
+              0.0470713481944125,
+              0.04536319828351243,
+              0.10742783509849471
+            ]
+          },
+          "common_pitch": {
+            "peak_hz": 1.7578125,
+            "observed_phase_deg": 81.34413018979788,
+            "model_phase_deg": -102.07146506151601,
+            "phase_error_deg": 176.58440474868613,
+            "observed_coherence": 0.0064751505500088785,
+            "model_coherence": 0.07324934969979491,
+            "observed_rms": 12.289121188103694,
+            "model_rms": 6.672845584307366,
+            "command_band_rms_mm": 0.8172990116116825,
+            "frequencies": [
+              1.3671875,
+              1.5625,
+              1.7578125
+            ],
+            "phase_error_band_deg": [
+              36.73519668252935,
+              -69.09246942854848,
+              176.58440474868613
+            ],
+            "observed_coherence_band": [
+              0.07931801114884703,
+              0.021781504149952936,
+              0.0064751505500088785
+            ]
+          }
+        }
+      },
+      {
+        "nperseg": 256,
+        "welch_averages": 8,
+        "note": "Overlapping averages are not independent; coherence is descriptive under feedback.",
+        "channels": {
+          "differential_yaw": {
+            "peak_hz": 1.66015625,
+            "observed_phase_deg": 175.2606811619466,
+            "model_phase_deg": 27.421044510758684,
+            "phase_error_deg": -147.8396366511879,
+            "observed_coherence": 0.06375506580387455,
+            "model_coherence": 0.12779803595023087,
+            "observed_rms": 24.309011718679844,
+            "model_rms": 7.155523352670008,
+            "command_band_rms_mm": 1.581825724657335,
+            "frequencies": [
+              1.26953125,
+              1.3671875,
+              1.46484375,
+              1.5625,
+              1.66015625,
+              1.7578125,
+              1.85546875
+            ],
+            "phase_error_band_deg": [
+              -126.72607746319666,
+              92.4129917199133,
+              -36.05905962732851,
+              9.254604402297108,
+              -147.8396366511879,
+              134.28459214388621,
+              5.444653739353595
+            ],
+            "observed_coherence_band": [
+              0.21547820036577317,
+              0.002736723856593479,
+              0.11870260284975552,
+              0.13075244420096968,
+              0.06375506580387455,
+              0.010246505378525231,
+              0.24000685956910137
+            ]
+          },
+          "common_pitch": {
+            "peak_hz": 1.66015625,
+            "observed_phase_deg": 45.122013671213445,
+            "model_phase_deg": -65.3380234397134,
+            "phase_error_deg": -110.46003711092683,
+            "observed_coherence": 0.1251078286118228,
+            "model_coherence": 0.044469848849457025,
+            "observed_rms": 13.173758528006,
+            "model_rms": 7.057050252077637,
+            "command_band_rms_mm": 0.7868420085627063,
+            "frequencies": [
+              1.26953125,
+              1.3671875,
+              1.46484375,
+              1.5625,
+              1.66015625,
+              1.7578125,
+              1.85546875
+            ],
+            "phase_error_band_deg": [
+              46.38183278234642,
+              33.255532845063065,
+              12.623315811104035,
+              -65.72670404235052,
+              -110.46003711092683,
+              65.75555233796938,
+              -26.46750683357631
+            ],
+            "observed_coherence_band": [
+              0.19737374524004714,
+              0.19872495483357747,
+              0.05070988204319041,
+              0.06793586821437488,
+              0.1251078286118228,
+              0.10309685689357131,
+              0.12150871028398227
+            ]
+          }
+        }
+      }
+    ]
+  },
+  {
+    "episode": "manual-371",
+    "kind": "previous_validation",
+    "family": "response",
+    "duration_s": 49.319999999990216,
+    "response_loss": 0.8559478444616143,
+    "rate_rmse": [
+      29.86224356549724,
+      28.267417728135754,
+      36.3250028059934
+    ],
+    "acceleration_rmse": [
+      343.0508710509137,
+      294.33709163416574,
+      359.50578133368265
+    ],
+    "mean_rate_bias": [
+      -2.2915920983428424,
+      -3.776848100410908,
+      2.198951516697407
+    ],
+    "observed_band_rms": [
+      5.547139557506186,
+      13.173758528006,
+      24.309011718679844
+    ],
+    "model_band_rms": [
+      0.6328546675495953,
+      5.627156750757681,
+      3.684357849388727
+    ],
+    "peak_hz": 1.66015625,
+    "observed_qr_phase_deg": -108.22970273937837,
+    "model_qr_phase_deg": -70.9095100037645,
+    "phase_error_deg": 37.32019273561387,
+    "observed_qr_coherence": 0.6605450589980536,
+    "local": 0.8526382115100032,
+    "amplitude": 2.9985822411262237,
+    "phase": 0.20474013686535952,
+    "score": 1.5814362084275628,
+    "spectral": [
+      {
+        "nperseg": 128,
+        "welch_averages": 17,
+        "note": "Overlapping averages are not independent; coherence is descriptive under feedback.",
+        "channels": {
+          "differential_yaw": {
+            "peak_hz": 1.5625,
+            "observed_phase_deg": -137.9087162239229,
+            "model_phase_deg": -78.80968076591817,
+            "phase_error_deg": 59.099035458004735,
+            "observed_coherence": 0.04536319828351243,
+            "model_coherence": 0.08063364930587301,
+            "observed_rms": 22.88865134411545,
+            "model_rms": 3.6152962777587043,
+            "command_band_rms_mm": 1.7057349626435805,
+            "frequencies": [
+              1.3671875,
+              1.5625,
+              1.7578125
+            ],
+            "phase_error_band_deg": [
+              37.758940962348284,
+              59.099035458004735,
+              53.91368744330685
+            ],
+            "observed_coherence_band": [
+              0.0470713481944125,
+              0.04536319828351243,
+              0.10742783509849471
+            ]
+          },
+          "common_pitch": {
+            "peak_hz": 1.7578125,
+            "observed_phase_deg": 81.34413018979788,
+            "model_phase_deg": -124.27900231941234,
+            "phase_error_deg": 154.37686749078975,
+            "observed_coherence": 0.0064751505500088785,
+            "model_coherence": 0.04590284611881468,
+            "observed_rms": 12.289121188103694,
+            "model_rms": 5.246454066030066,
+            "command_band_rms_mm": 0.8172990116116825,
+            "frequencies": [
+              1.3671875,
+              1.5625,
+              1.7578125
+            ],
+            "phase_error_band_deg": [
+              9.384862543952883,
+              -88.06156034824478,
+              154.37686749078975
+            ],
+            "observed_coherence_band": [
+              0.07931801114884703,
+              0.021781504149952936,
+              0.0064751505500088785
+            ]
+          }
+        }
+      },
+      {
+        "nperseg": 256,
+        "welch_averages": 8,
+        "note": "Overlapping averages are not independent; coherence is descriptive under feedback.",
+        "channels": {
+          "differential_yaw": {
+            "peak_hz": 1.66015625,
+            "observed_phase_deg": 175.2606811619466,
+            "model_phase_deg": 14.750663672544896,
+            "phase_error_deg": -160.5100174894017,
+            "observed_coherence": 0.06375506580387455,
+            "model_coherence": 0.0626816634177069,
+            "observed_rms": 24.309011718679844,
+            "model_rms": 3.684357849388727,
+            "command_band_rms_mm": 1.581825724657335,
+            "frequencies": [
+              1.26953125,
+              1.3671875,
+              1.46484375,
+              1.5625,
+              1.66015625,
+              1.7578125,
+              1.85546875
+            ],
+            "phase_error_band_deg": [
+              167.0390736274528,
+              75.85261577284805,
+              -73.27808677134777,
+              -11.734879033074403,
+              -160.5100174894017,
+              119.22358748823488,
+              -33.97134212160681
+            ],
+            "observed_coherence_band": [
+              0.21547820036577317,
+              0.002736723856593479,
+              0.11870260284975552,
+              0.13075244420096968,
+              0.06375506580387455,
+              0.010246505378525231,
+              0.24000685956910137
+            ]
+          },
+          "common_pitch": {
+            "peak_hz": 1.66015625,
+            "observed_phase_deg": 45.122013671213445,
+            "model_phase_deg": -78.04433094600401,
+            "phase_error_deg": -123.16634461721745,
+            "observed_coherence": 0.1251078286118228,
+            "model_coherence": 0.0405517292200107,
+            "observed_rms": 13.173758528006,
+            "model_rms": 5.62715675075768,
+            "command_band_rms_mm": 0.7868420085627063,
+            "frequencies": [
+              1.26953125,
+              1.3671875,
+              1.46484375,
+              1.5625,
+              1.66015625,
+              1.7578125,
+              1.85546875
+            ],
+            "phase_error_band_deg": [
+              12.150863060311478,
+              -12.447977465197024,
+              -16.218405739944863,
+              -80.66000411636725,
+              -123.16634461721745,
+              50.99483783521864,
+              -60.38270004967121
+            ],
+            "observed_coherence_band": [
+              0.19737374524004714,
+              0.19872495483357747,
+              0.05070988204319041,
+              0.06793586821437488,
+              0.1251078286118228,
+              0.10309685689357131,
+              0.12150871028398227
+            ]
+          }
+        }
+      }
+    ]
+  },
+  {
+    "episode": "manual-371",
+    "kind": "previous_validation",
+    "family": "response_nuisance",
+    "duration_s": 49.319999999990216,
+    "response_loss": 0.8553778826710453,
+    "rate_rmse": [
+      29.870138693202442,
+      28.231023782482396,
+      36.352534473646756
+    ],
+    "acceleration_rmse": [
+      343.00290105723514,
+      293.68567476493894,
+      359.5467456611299
+    ],
+    "mean_rate_bias": [
+      -2.284796077461254,
+      -3.851604650437179,
+      2.1577459547128734
+    ],
+    "observed_band_rms": [
+      5.547139557506186,
+      13.173758528006,
+      24.309011718679844
+    ],
+    "model_band_rms": [
+      0.6328083839512005,
+      5.681614215965308,
+      3.709604502573449
+    ],
+    "peak_hz": 1.66015625,
+    "observed_qr_phase_deg": -108.22970273937837,
+    "model_qr_phase_deg": -70.48356035371562,
+    "phase_error_deg": 37.746142385662765,
+    "observed_qr_coherence": 0.6605450589980536,
+    "local": 0.8520107759441019,
+    "amplitude": 2.984683166882711,
+    "phase": 0.2092692086395358,
+    "score": 1.5765314188586323,
+    "spectral": [
+      {
+        "nperseg": 128,
+        "welch_averages": 17,
+        "note": "Overlapping averages are not independent; coherence is descriptive under feedback.",
+        "channels": {
+          "differential_yaw": {
+            "peak_hz": 1.5625,
+            "observed_phase_deg": -137.9087162239229,
+            "model_phase_deg": -78.21388501842557,
+            "phase_error_deg": 59.69483120549734,
+            "observed_coherence": 0.04536319828351243,
+            "model_coherence": 0.07947819927643791,
+            "observed_rms": 22.88865134411545,
+            "model_rms": 3.6409306734289126,
+            "command_band_rms_mm": 1.7057349626435805,
+            "frequencies": [
+              1.3671875,
+              1.5625,
+              1.7578125
+            ],
+            "phase_error_band_deg": [
+              37.84332784623869,
+              59.69483120549734,
+              54.0358871693816
+            ],
+            "observed_coherence_band": [
+              0.0470713481944125,
+              0.04536319828351243,
+              0.10742783509849471
+            ]
+          },
+          "common_pitch": {
+            "peak_hz": 1.7578125,
+            "observed_phase_deg": 81.34413018979788,
+            "model_phase_deg": -124.85906062738748,
+            "phase_error_deg": 153.79680918281466,
+            "observed_coherence": 0.0064751505500088785,
+            "model_coherence": 0.04487929702398499,
+            "observed_rms": 12.289121188103694,
+            "model_rms": 5.294830321832306,
+            "command_band_rms_mm": 0.8172990116116825,
+            "frequencies": [
+              1.3671875,
+              1.5625,
+              1.7578125
+            ],
+            "phase_error_band_deg": [
+              9.320140787689404,
+              -88.28595603717099,
+              153.79680918281466
+            ],
+            "observed_coherence_band": [
+              0.07931801114884703,
+              0.021781504149952936,
+              0.0064751505500088785
+            ]
+          }
+        }
+      },
+      {
+        "nperseg": 256,
+        "welch_averages": 8,
+        "note": "Overlapping averages are not independent; coherence is descriptive under feedback.",
+        "channels": {
+          "differential_yaw": {
+            "peak_hz": 1.66015625,
+            "observed_phase_deg": 175.2606811619466,
+            "model_phase_deg": 13.809935743556704,
+            "phase_error_deg": -161.4507454183899,
+            "observed_coherence": 0.06375506580387455,
+            "model_coherence": 0.06536074393488307,
+            "observed_rms": 24.309011718679844,
+            "model_rms": 3.709604502573449,
+            "command_band_rms_mm": 1.581825724657335,
+            "frequencies": [
+              1.26953125,
+              1.3671875,
+              1.46484375,
+              1.5625,
+              1.66015625,
+              1.7578125,
+              1.85546875
+            ],
+            "phase_error_band_deg": [
+              168.38923895293945,
+              76.10893977976538,
+              -73.41052686232777,
+              -11.719835981999482,
+              -161.4507454183899,
+              119.0931281940836,
+              -34.50813740706066
+            ],
+            "observed_coherence_band": [
+              0.21547820036577317,
+              0.002736723856593479,
+              0.11870260284975552,
+              0.13075244420096968,
+              0.06375506580387455,
+              0.010246505378525231,
+              0.24000685956910137
+            ]
+          },
+          "common_pitch": {
+            "peak_hz": 1.66015625,
+            "observed_phase_deg": 45.122013671213445,
+            "model_phase_deg": -78.16111246244945,
+            "phase_error_deg": -123.2831261336629,
+            "observed_coherence": 0.1251078286118228,
+            "model_coherence": 0.03849677739403943,
+            "observed_rms": 13.173758528006,
+            "model_rms": 5.6816142159653085,
+            "command_band_rms_mm": 0.7868420085627063,
+            "frequencies": [
+              1.26953125,
+              1.3671875,
+              1.46484375,
+              1.5625,
+              1.66015625,
+              1.7578125,
+              1.85546875
+            ],
+            "phase_error_band_deg": [
+              11.908610244177938,
+              -12.99392531721973,
+              -16.274472787012904,
+              -80.28979202240014,
+              -123.2831261336629,
+              49.225032763128844,
+              -60.093786005283484
+            ],
+            "observed_coherence_band": [
+              0.19737374524004714,
+              0.19872495483357747,
+              0.05070988204319041,
+              0.06793586821437488,
+              0.1251078286118228,
+              0.10309685689357131,
+              0.12150871028398227
+            ]
+          }
+        }
+      }
+    ]
+  },
+  {
+    "episode": "manual-435",
+    "kind": "previous_validation",
+    "family": "baseline",
+    "duration_s": 32.95999999999344,
+    "response_loss": 0.8981928230728005,
+    "rate_rmse": [
+      12.836203261592656,
+      19.774153780249968,
+      33.59847686429414
+    ],
+    "acceleration_rmse": [
+      106.01412580302754,
+      138.72940764128447,
+      291.50422099434445
+    ],
+    "mean_rate_bias": [
+      -1.3287892729274642,
+      -3.965358380968736,
+      -1.1519760018168266
+    ],
+    "observed_band_rms": [
+      3.808929873232998,
+      8.187625190040603,
+      18.794419402333087
+    ],
+    "model_band_rms": [
+      0.5234723519348234,
+      3.082071733049933,
+      2.528170109207416
+    ],
+    "peak_hz": 1.7578125,
+    "observed_qr_phase_deg": -83.98560297033748,
+    "model_qr_phase_deg": -4.652452613219287,
+    "phase_error_deg": 79.3331503571182,
+    "observed_qr_coherence": 0.9426320045834934,
+    "local": 0.8911904733986248,
+    "amplitude": 2.9725264468395243,
+    "phase": 0.8149019386010832,
+    "score": 1.7084671558154765,
+    "spectral": [
+      {
+        "nperseg": 128,
+        "welch_averages": 10,
+        "note": "Overlapping averages are not independent; coherence is descriptive under feedback.",
+        "channels": {
+          "differential_yaw": {
+            "peak_hz": 1.5625,
+            "observed_phase_deg": 16.79178975197786,
+            "model_phase_deg": -52.293393930183605,
+            "phase_error_deg": -69.08518368216147,
+            "observed_coherence": 0.07638733454211635,
+            "model_coherence": 0.6004250747771046,
+            "observed_rms": 20.084719113250323,
+            "model_rms": 2.0336304791074333,
+            "command_band_rms_mm": 1.5788046072544302,
+            "frequencies": [
+              1.3671875,
+              1.5625,
+              1.7578125
+            ],
+            "phase_error_band_deg": [
+              42.83860520746684,
+              -69.08518368216147,
+              -172.23715531381478
+            ],
+            "observed_coherence_band": [
+              0.12310996865933962,
+              0.07638733454211635,
+              0.1492704432056132
+            ]
+          },
+          "common_pitch": {
+            "peak_hz": 1.5625,
+            "observed_phase_deg": 105.6880597104252,
+            "model_phase_deg": -28.78381470886292,
+            "phase_error_deg": -134.4718744192881,
+            "observed_coherence": 0.15935444194305687,
+            "model_coherence": 0.8201049668661037,
+            "observed_rms": 8.698143729146793,
+            "model_rms": 2.5437184871840297,
+            "command_band_rms_mm": 0.7801121300069849,
+            "frequencies": [
+              1.3671875,
+              1.5625,
+              1.7578125
+            ],
+            "phase_error_band_deg": [
+              -72.4592481019943,
+              -134.4718744192881,
+              -141.5041018802504
+            ],
+            "observed_coherence_band": [
+              0.10359801879861026,
+              0.15935444194305687,
+              0.02099546551431238
+            ]
+          }
+        }
+      },
+      {
+        "nperseg": 256,
+        "welch_averages": 4,
+        "note": "Overlapping averages are not independent; coherence is descriptive under feedback.",
+        "channels": {
+          "differential_yaw": {
+            "peak_hz": 1.7578125,
+            "observed_phase_deg": 110.97040354546026,
+            "model_phase_deg": -70.93167206154796,
+            "phase_error_deg": 178.0979243929918,
+            "observed_coherence": 0.5103433871783156,
+            "model_coherence": 0.8138747436140582,
+            "observed_rms": 18.794419402333087,
+            "model_rms": 2.528170109207416,
+            "command_band_rms_mm": 1.9381856363098644,
+            "frequencies": [
+              1.26953125,
+              1.3671875,
+              1.46484375,
+              1.5625,
+              1.66015625,
+              1.7578125,
+              1.85546875
+            ],
+            "phase_error_band_deg": [
+              -61.2947589073196,
+              86.08957941675119,
+              -167.9971806326442,
+              -60.33278994008681,
+              178.03617036311377,
+              178.0979243929918,
+              119.59274830578771
+            ],
+            "observed_coherence_band": [
+              0.014433566706539874,
+              0.142201165416966,
+              0.014110594277606567,
+              0.11424281117515905,
+              0.18418101950777876,
+              0.5103433871783156,
+              0.26811569032451094
+            ]
+          },
+          "common_pitch": {
+            "peak_hz": 1.5625,
+            "observed_phase_deg": 139.42854421923334,
+            "model_phase_deg": -31.507347757561135,
+            "phase_error_deg": -170.93589197679447,
+            "observed_coherence": 0.0497389660915581,
+            "model_coherence": 0.892013843426387,
+            "observed_rms": 8.187625190040603,
+            "model_rms": 3.082071733049933,
+            "command_band_rms_mm": 0.904396520227573,
+            "frequencies": [
+              1.26953125,
+              1.3671875,
+              1.46484375,
+              1.5625,
+              1.66015625,
+              1.7578125,
+              1.85546875
+            ],
+            "phase_error_band_deg": [
+              3.286714884153928,
+              -71.88743705355255,
+              -93.95862742170604,
+              -170.93589197679447,
+              -149.7135985120756,
+              -126.88538545483361,
+              -166.1068427260952
+            ],
+            "observed_coherence_band": [
+              0.2654035036849264,
+              0.08412766726217934,
+              0.24851743277300362,
+              0.0497389660915581,
+              0.11500306601822799,
+              0.2525188589461866,
+              0.15302697531360904
+            ]
+          }
+        }
+      }
+    ]
+  },
+  {
+    "episode": "manual-435",
+    "kind": "previous_validation",
+    "family": "legacy",
+    "duration_s": 32.95999999999344,
+    "response_loss": 0.9333052633839166,
+    "rate_rmse": [
+      12.83487464794568,
+      20.172162424554738,
+      34.5593330701289
+    ],
+    "acceleration_rmse": [
+      106.99172176059453,
+      139.41720909588423,
+      307.5174218548909
+    ],
+    "mean_rate_bias": [
+      -1.1223425215204244,
+      -3.474022314238393,
+      -0.08777185609368127
+    ],
+    "observed_band_rms": [
+      3.808929873232998,
+      8.187625190040603,
+      18.794419402333087
+    ],
+    "model_band_rms": [
+      0.897018865717691,
+      3.696795649605118,
+      7.434882490210572
+    ],
+    "peak_hz": 1.7578125,
+    "observed_qr_phase_deg": -83.98560297033748,
+    "model_qr_phase_deg": -40.74603524049968,
+    "phase_error_deg": 43.23956772983781,
+    "observed_qr_coherence": 0.9426320045834934,
+    "local": 0.9281047043936385,
+    "amplitude": 1.1944323422845924,
+    "phase": 0.27150428581141595,
+    "score": 0.9033156758335756,
+    "spectral": [
+      {
+        "nperseg": 128,
+        "welch_averages": 10,
+        "note": "Overlapping averages are not independent; coherence is descriptive under feedback.",
+        "channels": {
+          "differential_yaw": {
+            "peak_hz": 1.5625,
+            "observed_phase_deg": 16.79178975197786,
+            "model_phase_deg": -51.04122123986521,
+            "phase_error_deg": -67.83301099184308,
+            "observed_coherence": 0.07638733454211635,
+            "model_coherence": 0.3037366662088253,
+            "observed_rms": 20.084719113250323,
+            "model_rms": 6.161935792282481,
+            "command_band_rms_mm": 1.5788046072544302,
+            "frequencies": [
+              1.3671875,
+              1.5625,
+              1.7578125
+            ],
+            "phase_error_band_deg": [
+              123.09830210540494,
+              -67.83301099184308,
+              -179.97443662868056
+            ],
+            "observed_coherence_band": [
+              0.12310996865933962,
+              0.07638733454211635,
+              0.1492704432056132
+            ]
+          },
+          "common_pitch": {
+            "peak_hz": 1.5625,
+            "observed_phase_deg": 105.6880597104252,
+            "model_phase_deg": -62.28703967266576,
+            "phase_error_deg": -167.97509938309096,
+            "observed_coherence": 0.15935444194305687,
+            "model_coherence": 0.7108508685864531,
+            "observed_rms": 8.698143729146793,
+            "model_rms": 3.0468286733448413,
+            "command_band_rms_mm": 0.7801121300069849,
+            "frequencies": [
+              1.3671875,
+              1.5625,
+              1.7578125
+            ],
+            "phase_error_band_deg": [
+              -84.87818895213037,
+              -167.97509938309096,
+              -179.27018086844345
+            ],
+            "observed_coherence_band": [
+              0.10359801879861026,
+              0.15935444194305687,
+              0.02099546551431238
+            ]
+          }
+        }
+      },
+      {
+        "nperseg": 256,
+        "welch_averages": 4,
+        "note": "Overlapping averages are not independent; coherence is descriptive under feedback.",
+        "channels": {
+          "differential_yaw": {
+            "peak_hz": 1.7578125,
+            "observed_phase_deg": 110.97040354546026,
+            "model_phase_deg": -79.19374768686201,
+            "phase_error_deg": 169.83584876767776,
+            "observed_coherence": 0.5103433871783156,
+            "model_coherence": 0.6918449741798535,
+            "observed_rms": 18.794419402333087,
+            "model_rms": 7.434882490210572,
+            "command_band_rms_mm": 1.9381856363098644,
+            "frequencies": [
+              1.26953125,
+              1.3671875,
+              1.46484375,
+              1.5625,
+              1.66015625,
+              1.7578125,
+              1.85546875
+            ],
+            "phase_error_band_deg": [
+              -35.81995183424583,
+              165.097359230405,
+              -115.66621981832493,
+              -51.042270569687034,
+              178.7170514754544,
+              169.83584876767776,
+              113.0112886636298
+            ],
+            "observed_coherence_band": [
+              0.014433566706539874,
+              0.142201165416966,
+              0.014110594277606567,
+              0.11424281117515905,
+              0.18418101950777876,
+              0.5103433871783156,
+              0.26811569032451094
+            ]
+          },
+          "common_pitch": {
+            "peak_hz": 1.5625,
+            "observed_phase_deg": 139.42854421923334,
+            "model_phase_deg": -65.77358110855151,
+            "phase_error_deg": 154.79787467221516,
+            "observed_coherence": 0.0497389660915581,
+            "model_coherence": 0.7959018692353685,
+            "observed_rms": 8.187625190040603,
+            "model_rms": 3.696795649605118,
+            "command_band_rms_mm": 0.904396520227573,
+            "frequencies": [
+              1.26953125,
+              1.3671875,
+              1.46484375,
+              1.5625,
+              1.66015625,
+              1.7578125,
+              1.85546875
+            ],
+            "phase_error_band_deg": [
+              -9.702498956556179,
+              -90.95442947835585,
+              -121.66626864998447,
+              154.79787467221516,
+              168.7091770277136,
+              -167.0070259889174,
+              155.76935430092567
+            ],
+            "observed_coherence_band": [
+              0.2654035036849264,
+              0.08412766726217934,
+              0.24851743277300362,
+              0.0497389660915581,
+              0.11500306601822799,
+              0.2525188589461866,
+              0.15302697531360904
+            ]
+          }
+        }
+      }
+    ]
+  },
+  {
+    "episode": "manual-435",
+    "kind": "previous_validation",
+    "family": "response",
+    "duration_s": 32.95999999999344,
+    "response_loss": 0.8791726994901977,
+    "rate_rmse": [
+      12.647316696501493,
+      19.038375063267058,
+      33.564342463948286
+    ],
+    "acceleration_rmse": [
+      106.84510226911651,
+      134.94218337451247,
+      293.3833912257512
+    ],
+    "mean_rate_bias": [
+      -1.311712207408561,
+      -3.8321104476658157,
+      -0.9955042762426637
+    ],
+    "observed_band_rms": [
+      3.808929873232998,
+      8.187625190040603,
+      18.794419402333087
+    ],
+    "model_band_rms": [
+      0.4672851490253933,
+      2.470292867688781,
+      3.351274099670373
+    ],
+    "peak_hz": 1.7578125,
+    "observed_qr_phase_deg": -83.98560297033748,
+    "model_qr_phase_deg": -27.075344460173632,
+    "phase_error_deg": 56.91025851016386,
+    "observed_qr_coherence": 0.9426320045834934,
+    "local": 0.8726083973628459,
+    "amplitude": 2.9370387795669353,
+    "phase": 0.454048036900211,
+    "score": 1.6146684781519547,
+    "spectral": [
+      {
+        "nperseg": 128,
+        "welch_averages": 10,
+        "note": "Overlapping averages are not independent; coherence is descriptive under feedback.",
+        "channels": {
+          "differential_yaw": {
+            "peak_hz": 1.5625,
+            "observed_phase_deg": 16.79178975197786,
+            "model_phase_deg": -78.62778152703193,
+            "phase_error_deg": -95.4195712790098,
+            "observed_coherence": 0.07638733454211635,
+            "model_coherence": 0.4135326376968951,
+            "observed_rms": 20.084719113250323,
+            "model_rms": 2.771507836040946,
+            "command_band_rms_mm": 1.5788046072544302,
+            "frequencies": [
+              1.3671875,
+              1.5625,
+              1.7578125
+            ],
+            "phase_error_band_deg": [
+              18.634038406821677,
+              -95.4195712790098,
+              154.33987278344355
+            ],
+            "observed_coherence_band": [
+              0.12310996865933962,
+              0.07638733454211635,
+              0.1492704432056132
+            ]
+          },
+          "common_pitch": {
+            "peak_hz": 1.5625,
+            "observed_phase_deg": 105.6880597104252,
+            "model_phase_deg": -77.89849562584476,
+            "phase_error_deg": 176.41344466373005,
+            "observed_coherence": 0.15935444194305687,
+            "model_coherence": 0.7433671970429713,
+            "observed_rms": 8.698143729146793,
+            "model_rms": 2.023052081137914,
+            "command_band_rms_mm": 0.7801121300069849,
+            "frequencies": [
+              1.3671875,
+              1.5625,
+              1.7578125
+            ],
+            "phase_error_band_deg": [
+              -109.09251114907988,
+              176.41344466373005,
+              168.73503905467084
+            ],
+            "observed_coherence_band": [
+              0.10359801879861026,
+              0.15935444194305687,
+              0.02099546551431238
+            ]
+          }
+        }
+      },
+      {
+        "nperseg": 256,
+        "welch_averages": 4,
+        "note": "Overlapping averages are not independent; coherence is descriptive under feedback.",
+        "channels": {
+          "differential_yaw": {
+            "peak_hz": 1.7578125,
+            "observed_phase_deg": 110.97040354546026,
+            "model_phase_deg": -98.72780720051033,
+            "phase_error_deg": 150.30178925402942,
+            "observed_coherence": 0.5103433871783156,
+            "model_coherence": 0.6663489374481816,
+            "observed_rms": 18.794419402333087,
+            "model_rms": 3.351274099670373,
+            "command_band_rms_mm": 1.9381856363098644,
+            "frequencies": [
+              1.26953125,
+              1.3671875,
+              1.46484375,
+              1.5625,
+              1.66015625,
+              1.7578125,
+              1.85546875
+            ],
+            "phase_error_band_deg": [
+              -84.47036180359957,
+              77.6745630573429,
+              -172.60442559378927,
+              -84.87477338187537,
+              152.92058446575192,
+              150.30178925402942,
+              88.15807997791275
+            ],
+            "observed_coherence_band": [
+              0.014433566706539874,
+              0.142201165416966,
+              0.014110594277606567,
+              0.11424281117515905,
+              0.18418101950777876,
+              0.5103433871783156,
+              0.26811569032451094
+            ]
+          },
+          "common_pitch": {
+            "peak_hz": 1.5625,
+            "observed_phase_deg": 139.42854421923334,
+            "model_phase_deg": -80.61635961862044,
+            "phase_error_deg": 139.95509616214625,
+            "observed_coherence": 0.0497389660915581,
+            "model_coherence": 0.8353015648820283,
+            "observed_rms": 8.187625190040603,
+            "model_rms": 2.4702928676887814,
+            "command_band_rms_mm": 0.904396520227573,
+            "frequencies": [
+              1.26953125,
+              1.3671875,
+              1.46484375,
+              1.5625,
+              1.66015625,
+              1.7578125,
+              1.85546875
+            ],
+            "phase_error_band_deg": [
+              -30.018190261855686,
+              -112.46306223018934,
+              -139.67308617748597,
+              139.95509616214625,
+              156.32828400951988,
+              -171.6682498574338,
+              152.4938775846397
+            ],
+            "observed_coherence_band": [
+              0.2654035036849264,
+              0.08412766726217934,
+              0.24851743277300362,
+              0.0497389660915581,
+              0.11500306601822799,
+              0.2525188589461866,
+              0.15302697531360904
+            ]
+          }
+        }
+      }
+    ]
+  },
+  {
+    "episode": "manual-435",
+    "kind": "previous_validation",
+    "family": "response_nuisance",
+    "duration_s": 32.95999999999344,
+    "response_loss": 0.8796075813260698,
+    "rate_rmse": [
+      12.662753852307027,
+      19.02565273844329,
+      33.599679239840846
+    ],
+    "acceleration_rmse": [
+      106.85939116652854,
+      134.87727105293948,
+      293.4617475818181
+    ],
+    "mean_rate_bias": [
+      -1.3040073062615452,
+      -3.861678780590294,
+      -1.0622288829489888
+    ],
+    "observed_band_rms": [
+      3.808929873232998,
+      8.187625190040603,
+      18.794419402333087
+    ],
+    "model_band_rms": [
+      0.46489753125225775,
+      2.462531608742332,
+      3.3690233989021214
+    ],
+    "peak_hz": 1.7578125,
+    "observed_qr_phase_deg": -83.98560297033748,
+    "model_qr_phase_deg": -26.7231170421319,
+    "phase_error_deg": 57.26248592820558,
+    "observed_qr_coherence": 0.9426320045834934,
+    "local": 0.872961340431411,
+    "amplitude": 2.9406674968475204,
+    "phase": 0.45920882116628603,
+    "score": 1.6172932991448299,
+    "spectral": [
+      {
+        "nperseg": 128,
+        "welch_averages": 10,
+        "note": "Overlapping averages are not independent; coherence is descriptive under feedback.",
+        "channels": {
+          "differential_yaw": {
+            "peak_hz": 1.5625,
+            "observed_phase_deg": 16.79178975197786,
+            "model_phase_deg": -78.92187060987783,
+            "phase_error_deg": -95.71366036185569,
+            "observed_coherence": 0.07638733454211635,
+            "model_coherence": 0.4095799432950693,
+            "observed_rms": 20.084719113250323,
+            "model_rms": 2.785253501038706,
+            "command_band_rms_mm": 1.5788046072544302,
+            "frequencies": [
+              1.3671875,
+              1.5625,
+              1.7578125
+            ],
+            "phase_error_band_deg": [
+              19.94756761811831,
+              -95.71366036185569,
+              154.04621138006578
+            ],
+            "observed_coherence_band": [
+              0.12310996865933962,
+              0.07638733454211635,
+              0.1492704432056132
+            ]
+          },
+          "common_pitch": {
+            "peak_hz": 1.5625,
+            "observed_phase_deg": 105.6880597104252,
+            "model_phase_deg": -78.02063355407115,
+            "phase_error_deg": 176.29130673550367,
+            "observed_coherence": 0.15935444194305687,
+            "model_coherence": 0.7416132075739389,
+            "observed_rms": 8.698143729146793,
+            "model_rms": 2.0159440612098307,
+            "command_band_rms_mm": 0.7801121300069849,
+            "frequencies": [
+              1.3671875,
+              1.5625,
+              1.7578125
+            ],
+            "phase_error_band_deg": [
+              -109.13574899263864,
+              176.29130673550367,
+              168.68929481298224
+            ],
+            "observed_coherence_band": [
+              0.10359801879861026,
+              0.15935444194305687,
+              0.02099546551431238
+            ]
+          }
+        }
+      },
+      {
+        "nperseg": 256,
+        "welch_averages": 4,
+        "note": "Overlapping averages are not independent; coherence is descriptive under feedback.",
+        "channels": {
+          "differential_yaw": {
+            "peak_hz": 1.7578125,
+            "observed_phase_deg": 110.97040354546026,
+            "model_phase_deg": -98.89416485174868,
+            "phase_error_deg": 150.1354316027911,
+            "observed_coherence": 0.5103433871783156,
+            "model_coherence": 0.6656573069526401,
+            "observed_rms": 18.794419402333087,
+            "model_rms": 3.3690233989021214,
+            "command_band_rms_mm": 1.9381856363098644,
+            "frequencies": [
+              1.26953125,
+              1.3671875,
+              1.46484375,
+              1.5625,
+              1.66015625,
+              1.7578125,
+              1.85546875
+            ],
+            "phase_error_band_deg": [
+              -84.13580950430168,
+              79.25798349284501,
+              -171.89844825249554,
+              -85.21490956665507,
+              152.57738465206864,
+              150.1354316027911,
+              87.97157282940434
+            ],
+            "observed_coherence_band": [
+              0.014433566706539874,
+              0.142201165416966,
+              0.014110594277606567,
+              0.11424281117515905,
+              0.18418101950777876,
+              0.5103433871783156,
+              0.26811569032451094
+            ]
+          },
+          "common_pitch": {
+            "peak_hz": 1.5625,
+            "observed_phase_deg": 139.42854421923334,
+            "model_phase_deg": -80.71447563628811,
+            "phase_error_deg": 139.85698014447854,
+            "observed_coherence": 0.0497389660915581,
+            "model_coherence": 0.8339889661207305,
+            "observed_rms": 8.187625190040603,
+            "model_rms": 2.4625316087423323,
+            "command_band_rms_mm": 0.904396520227573,
+            "frequencies": [
+              1.26953125,
+              1.3671875,
+              1.46484375,
+              1.5625,
+              1.66015625,
+              1.7578125,
+              1.85546875
+            ],
+            "phase_error_band_deg": [
+              -29.883170158678162,
+              -112.50453009105115,
+              -139.84412924083023,
+              139.85698014447854,
+              156.1569601591742,
+              -171.56350065824623,
+              152.7884440504553
+            ],
+            "observed_coherence_band": [
+              0.2654035036849264,
+              0.08412766726217934,
+              0.24851743277300362,
+              0.0497389660915581,
+              0.11500306601822799,
+              0.2525188589461866,
+              0.15302697531360904
+            ]
+          }
+        }
+      }
+    ]
+  },
+  {
+    "episode": "manual-529",
+    "kind": "training",
+    "family": "baseline",
+    "duration_s": 49.079999999990264,
+    "response_loss": 0.8702527894190262,
+    "rate_rmse": [
+      14.849385000482853,
+      19.743772390952024,
+      33.43663181878705
+    ],
+    "acceleration_rmse": [
+      119.99213278225812,
+      138.43005049190634,
+      277.08259291578645
+    ],
+    "mean_rate_bias": [
+      -0.7001505863830424,
+      -3.579326074137926,
+      -6.218736291712527
+    ],
+    "observed_band_rms": [
+      4.7869519494467445,
+      9.005156587714682,
+      22.26460741856777
+    ],
+    "model_band_rms": [
+      0.8114064320581496,
+      3.611122945993927,
+      3.114447354504997
+    ],
+    "peak_hz": 1.5625,
+    "observed_qr_phase_deg": -82.48200830487364,
+    "model_qr_phase_deg": -10.826757000627822,
+    "phase_error_deg": 71.65525130424584,
+    "observed_qr_coherence": 0.9332439169800232,
+    "local": 0.861720441758207,
+    "amplitude": 2.618023143698754,
+    "phase": 0.6852661271083735,
+    "score": 1.5289506596044593,
+    "spectral": [
+      {
+        "nperseg": 128,
+        "welch_averages": 17,
+        "note": "Overlapping averages are not independent; coherence is descriptive under feedback.",
+        "channels": {
+          "differential_yaw": {
+            "peak_hz": 1.5625,
+            "observed_phase_deg": -47.02932821163072,
+            "model_phase_deg": -35.98166521281748,
+            "phase_error_deg": 11.047662998813236,
+            "observed_coherence": 0.06659549030311872,
+            "model_coherence": 0.4961430299146628,
+            "observed_rms": 21.58681015245819,
+            "model_rms": 3.265893303806672,
+            "command_band_rms_mm": 2.4501020945065837,
+            "frequencies": [
+              1.3671875,
+              1.5625,
+              1.7578125
+            ],
+            "phase_error_band_deg": [
+              -33.1046299942534,
+              11.047662998813239,
+              138.57014711210348
+            ],
+            "observed_coherence_band": [
+              0.1742808602521722,
+              0.06659549030311872,
+              0.01755189747074677
+            ]
+          },
+          "common_pitch": {
+            "peak_hz": 1.5625,
+            "observed_phase_deg": -153.12344175934714,
+            "model_phase_deg": -20.601655485791582,
+            "phase_error_deg": 132.5217862735556,
+            "observed_coherence": 0.0372485885215586,
+            "model_coherence": 0.7300901828870783,
+            "observed_rms": 8.92796072492531,
+            "model_rms": 3.658111680252075,
+            "command_band_rms_mm": 1.244722000233595,
+            "frequencies": [
+              1.3671875,
+              1.5625,
+              1.7578125
+            ],
+            "phase_error_band_deg": [
+              116.24537686248627,
+              132.5217862735556,
+              -141.9486415591205
+            ],
+            "observed_coherence_band": [
+              0.10056936801944015,
+              0.0372485885215586,
+              0.047593247069597736
+            ]
+          }
+        }
+      },
+      {
+        "nperseg": 256,
+        "welch_averages": 8,
+        "note": "Overlapping averages are not independent; coherence is descriptive under feedback.",
+        "channels": {
+          "differential_yaw": {
+            "peak_hz": 1.5625,
+            "observed_phase_deg": -83.28381435301921,
+            "model_phase_deg": -15.276387332760805,
+            "phase_error_deg": 68.0074270202584,
+            "observed_coherence": 0.15595416427580577,
+            "model_coherence": 0.23750481506641405,
+            "observed_rms": 22.26460741856777,
+            "model_rms": 3.1144473545049967,
+            "command_band_rms_mm": 2.388931296726631,
+            "frequencies": [
+              1.26953125,
+              1.3671875,
+              1.46484375,
+              1.5625,
+              1.66015625,
+              1.7578125,
+              1.85546875
+            ],
+            "phase_error_band_deg": [
+              -76.8904508899255,
+              -60.30277233616793,
+              12.171828614128506,
+              68.0074270202584,
+              86.21446253963427,
+              115.0738777989358,
+              -150.41930166375266
+            ],
+            "observed_coherence_band": [
+              0.0328718986094349,
+              0.2352850780471429,
+              0.47536494729011336,
+              0.15595416427580577,
+              0.10333368562668394,
+              0.2640992515750423,
+              0.17620751061975154
+            ]
+          },
+          "common_pitch": {
+            "peak_hz": 1.5625,
+            "observed_phase_deg": 101.24560909325943,
+            "model_phase_deg": 2.3053901105853805,
+            "phase_error_deg": -98.94021898267405,
+            "observed_coherence": 0.04509589769665641,
+            "model_coherence": 0.7499366126039878,
+            "observed_rms": 9.005156587714682,
+            "model_rms": 3.611122945993928,
+            "command_band_rms_mm": 1.2217450364759748,
+            "frequencies": [
+              1.26953125,
+              1.3671875,
+              1.46484375,
+              1.5625,
+              1.66015625,
+              1.7578125,
+              1.85546875
+            ],
+            "phase_error_band_deg": [
+              26.764615680010746,
+              96.57491024492035,
+              119.36251205667017,
+              -98.94021898267405,
+              -150.62319451658564,
+              -167.74651300457737,
+              -85.63823842199469
+            ],
+            "observed_coherence_band": [
+              0.4252922199566764,
+              0.17426301037010372,
+              0.253191177898543,
+              0.04509589769665641,
+              0.147965562730222,
+              0.5341172194302856,
+              0.05426264375962287
+            ]
+          }
+        }
+      }
+    ]
+  },
+  {
+    "episode": "manual-529",
+    "kind": "training",
+    "family": "legacy",
+    "duration_s": 49.079999999990264,
+    "response_loss": 0.921486577684649,
+    "rate_rmse": [
+      14.60829104383511,
+      19.969092443730503,
+      35.274519173177055
+    ],
+    "acceleration_rmse": [
+      121.68709151364935,
+      139.31436722450647,
+      303.0666183385345
+    ],
+    "mean_rate_bias": [
+      -0.09249782517497776,
+      -2.6777985542881377,
+      -6.355651702245625
+    ],
+    "observed_band_rms": [
+      4.7869519494467445,
+      9.005156587714682,
+      22.26460741856777
+    ],
+    "model_band_rms": [
+      1.2662101927001137,
+      4.074952258457234,
+      10.089483811473098
+    ],
+    "peak_hz": 1.5625,
+    "observed_qr_phase_deg": -82.48200830487364,
+    "model_qr_phase_deg": -65.61836327693754,
+    "phase_error_deg": 16.86364502793612,
+    "observed_qr_coherence": 0.9332439169800232,
+    "local": 0.9148289453492998,
+    "amplitude": 1.0079243751411886,
+    "phase": 0.043002153964531886,
+    "score": 0.7777017589891018,
+    "spectral": [
+      {
+        "nperseg": 128,
+        "welch_averages": 17,
+        "note": "Overlapping averages are not independent; coherence is descriptive under feedback.",
+        "channels": {
+          "differential_yaw": {
+            "peak_hz": 1.5625,
+            "observed_phase_deg": -47.02932821163072,
+            "model_phase_deg": -27.649290714699063,
+            "phase_error_deg": 19.38003749693166,
+            "observed_coherence": 0.06659549030311872,
+            "model_coherence": 0.2567600667965765,
+            "observed_rms": 21.58681015245819,
+            "model_rms": 10.393513714065318,
+            "command_band_rms_mm": 2.4501020945065837,
+            "frequencies": [
+              1.3671875,
+              1.5625,
+              1.7578125
+            ],
+            "phase_error_band_deg": [
+              -43.294290979652594,
+              19.38003749693166,
+              139.98745334605306
+            ],
+            "observed_coherence_band": [
+              0.1742808602521722,
+              0.06659549030311872,
+              0.01755189747074677
+            ]
+          },
+          "common_pitch": {
+            "peak_hz": 1.5625,
+            "observed_phase_deg": -153.12344175934714,
+            "model_phase_deg": -66.3662404795672,
+            "phase_error_deg": 86.75720127977995,
+            "observed_coherence": 0.0372485885215586,
+            "model_coherence": 0.6833591514005124,
+            "observed_rms": 8.92796072492531,
+            "model_rms": 4.153455746576544,
+            "command_band_rms_mm": 1.244722000233595,
+            "frequencies": [
+              1.3671875,
+              1.5625,
+              1.7578125
+            ],
+            "phase_error_band_deg": [
+              81.37382153722137,
+              86.75720127977995,
+              172.87657242785298
+            ],
+            "observed_coherence_band": [
+              0.10056936801944015,
+              0.0372485885215586,
+              0.047593247069597736
+            ]
+          }
+        }
+      },
+      {
+        "nperseg": 256,
+        "welch_averages": 8,
+        "note": "Overlapping averages are not independent; coherence is descriptive under feedback.",
+        "channels": {
+          "differential_yaw": {
+            "peak_hz": 1.5625,
+            "observed_phase_deg": -83.28381435301921,
+            "model_phase_deg": -0.19198163388666623,
+            "phase_error_deg": 83.09183271913255,
+            "observed_coherence": 0.15595416427580577,
+            "model_coherence": 0.09284144154458758,
+            "observed_rms": 22.26460741856777,
+            "model_rms": 10.089483811473098,
+            "command_band_rms_mm": 2.388931296726631,
+            "frequencies": [
+              1.26953125,
+              1.3671875,
+              1.46484375,
+              1.5625,
+              1.66015625,
+              1.7578125,
+              1.85546875
+            ],
+            "phase_error_band_deg": [
+              -109.67610542915673,
+              -86.12192528280269,
+              34.606281276722626,
+              83.09183271913254,
+              90.31943692791876,
+              105.86665322904577,
+              -168.74219327597294
+            ],
+            "observed_coherence_band": [
+              0.0328718986094349,
+              0.2352850780471429,
+              0.47536494729011336,
+              0.15595416427580577,
+              0.10333368562668394,
+              0.2640992515750423,
+              0.17620751061975154
+            ]
+          },
+          "common_pitch": {
+            "peak_hz": 1.5625,
+            "observed_phase_deg": 101.24560909325943,
+            "model_phase_deg": -52.09781052457804,
+            "phase_error_deg": -153.34341961783747,
+            "observed_coherence": 0.04509589769665641,
+            "model_coherence": 0.6807160764957011,
+            "observed_rms": 9.005156587714682,
+            "model_rms": 4.074952258457234,
+            "command_band_rms_mm": 1.2217450364759748,
+            "frequencies": [
+              1.26953125,
+              1.3671875,
+              1.46484375,
+              1.5625,
+              1.66015625,
+              1.7578125,
+              1.85546875
+            ],
+            "phase_error_band_deg": [
+              0.9984741423719611,
+              58.20874542326532,
+              76.6096287528321,
+              -153.34341961783747,
+              159.26227628634587,
+              138.6732665239218,
+              -131.2767448366632
+            ],
+            "observed_coherence_band": [
+              0.4252922199566764,
+              0.17426301037010372,
+              0.253191177898543,
+              0.04509589769665641,
+              0.147965562730222,
+              0.5341172194302856,
+              0.05426264375962287
+            ]
+          }
+        }
+      }
+    ]
+  },
+  {
+    "episode": "manual-529",
+    "kind": "training",
+    "family": "response",
+    "duration_s": 49.079999999990264,
+    "response_loss": 0.8240826363548006,
+    "rate_rmse": [
+      14.123803615318403,
+      18.809569260291493,
+      33.216328287016054
+    ],
+    "acceleration_rmse": [
+      118.89171025989066,
+      131.4655952827198,
+      275.3273022853461
+    ],
+    "mean_rate_bias": [
+      -0.5642554469219827,
+      -3.134963735756399,
+      -6.580661614593695
+    ],
+    "observed_band_rms": [
+      4.7869519494467445,
+      9.005156587714682,
+      22.26460741856777
+    ],
+    "model_band_rms": [
+      0.6249555645573386,
+      2.5325922507061014,
+      4.3791426904011175
+    ],
+    "peak_hz": 1.5625,
+    "observed_qr_phase_deg": -82.48200830487364,
+    "model_qr_phase_deg": -54.61393244007575,
+    "phase_error_deg": 27.868075864797923,
+    "observed_qr_coherence": 0.9332439169800232,
+    "local": 0.816099667216068,
+    "amplitude": 2.7995820009404944,
+    "phase": 0.11597378537950032,
+    "score": 1.469467424338525,
+    "spectral": [
+      {
+        "nperseg": 128,
+        "welch_averages": 17,
+        "note": "Overlapping averages are not independent; coherence is descriptive under feedback.",
+        "channels": {
+          "differential_yaw": {
+            "peak_hz": 1.5625,
+            "observed_phase_deg": -47.02932821163072,
+            "model_phase_deg": -63.16138614246325,
+            "phase_error_deg": -16.132057930832527,
+            "observed_coherence": 0.06659549030311872,
+            "model_coherence": 0.301311019523739,
+            "observed_rms": 21.58681015245819,
+            "model_rms": 4.536440359316716,
+            "command_band_rms_mm": 2.4501020945065837,
+            "frequencies": [
+              1.3671875,
+              1.5625,
+              1.7578125
+            ],
+            "phase_error_band_deg": [
+              -76.21324167169178,
+              -16.132057930832527,
+              110.90874068885586
+            ],
+            "observed_coherence_band": [
+              0.1742808602521722,
+              0.06659549030311872,
+              0.01755189747074677
+            ]
+          },
+          "common_pitch": {
+            "peak_hz": 1.5625,
+            "observed_phase_deg": -153.12344175934714,
+            "model_phase_deg": -81.96392197819642,
+            "phase_error_deg": 71.15951978115072,
+            "observed_coherence": 0.0372485885215586,
+            "model_coherence": 0.5807682008471294,
+            "observed_rms": 8.92796072492531,
+            "model_rms": 2.5969136082529696,
+            "command_band_rms_mm": 1.244722000233595,
+            "frequencies": [
+              1.3671875,
+              1.5625,
+              1.7578125
+            ],
+            "phase_error_band_deg": [
+              59.251532097376604,
+              71.15951978115072,
+              165.53824329626113
+            ],
+            "observed_coherence_band": [
+              0.10056936801944015,
+              0.0372485885215586,
+              0.047593247069597736
+            ]
+          }
+        }
+      },
+      {
+        "nperseg": 256,
+        "welch_averages": 8,
+        "note": "Overlapping averages are not independent; coherence is descriptive under feedback.",
+        "channels": {
+          "differential_yaw": {
+            "peak_hz": 1.5625,
+            "observed_phase_deg": -83.28381435301921,
+            "model_phase_deg": -53.88428382902844,
+            "phase_error_deg": 29.399530523990776,
+            "observed_coherence": 0.15595416427580577,
+            "model_coherence": 0.0820399625445488,
+            "observed_rms": 22.26460741856777,
+            "model_rms": 4.3791426904011175,
+            "command_band_rms_mm": 2.388931296726631,
+            "frequencies": [
+              1.26953125,
+              1.3671875,
+              1.46484375,
+              1.5625,
+              1.66015625,
+              1.7578125,
+              1.85546875
+            ],
+            "phase_error_band_deg": [
+              -135.54525875594265,
+              -106.0680631979663,
+              -5.2857536582945155,
+              29.399530523990776,
+              63.42749559987295,
+              54.54228663410824,
+              156.21758618236663
+            ],
+            "observed_coherence_band": [
+              0.0328718986094349,
+              0.2352850780471429,
+              0.47536494729011336,
+              0.15595416427580577,
+              0.10333368562668394,
+              0.2640992515750423,
+              0.17620751061975154
+            ]
+          },
+          "common_pitch": {
+            "peak_hz": 1.5625,
+            "observed_phase_deg": 101.24560909325943,
+            "model_phase_deg": -59.295466918441775,
+            "phase_error_deg": -160.5410760117012,
+            "observed_coherence": 0.04509589769665641,
+            "model_coherence": 0.41284030321466686,
+            "observed_rms": 9.005156587714682,
+            "model_rms": 2.532592250706102,
+            "command_band_rms_mm": 1.2217450364759748,
+            "frequencies": [
+              1.26953125,
+              1.3671875,
+              1.46484375,
+              1.5625,
+              1.66015625,
+              1.7578125,
+              1.85546875
+            ],
+            "phase_error_band_deg": [
+              -18.387007685757318,
+              42.56905244641059,
+              62.894451984776815,
+              -160.5410760117012,
+              150.35225045620965,
+              129.59759809837905,
+              -144.853985290347
+            ],
+            "observed_coherence_band": [
+              0.4252922199566764,
+              0.17426301037010372,
+              0.253191177898543,
+              0.04509589769665641,
+              0.147965562730222,
+              0.5341172194302856,
+              0.05426264375962287
+            ]
+          }
+        }
+      }
+    ]
+  },
+  {
+    "episode": "manual-529",
+    "kind": "training",
+    "family": "response_nuisance",
+    "duration_s": 49.079999999990264,
+    "response_loss": 0.824246852789185,
+    "rate_rmse": [
+      14.153217590546907,
+      18.812955021914885,
+      33.23862640088873
+    ],
+    "acceleration_rmse": [
+      118.886782485462,
+      131.3022358665308,
+      275.1898964312208
+    ],
+    "mean_rate_bias": [
+      -0.5640789169455253,
+      -3.192331130394988,
+      -6.574235856532132
+    ],
+    "observed_band_rms": [
+      4.7869519494467445,
+      9.005156587714682,
+      22.26460741856777
+    ],
+    "model_band_rms": [
+      0.6255280784837784,
+      2.5205138289879048,
+      4.3983662376905315
+    ],
+    "peak_hz": 1.5625,
+    "observed_qr_phase_deg": -82.48200830487364,
+    "model_qr_phase_deg": -54.0330079597091,
+    "phase_error_deg": 28.44900034516456,
+    "observed_qr_coherence": 0.9332439169800232,
+    "local": 0.8161554991441052,
+    "amplitude": 2.7976478638370352,
+    "phase": 0.12075851084918021,
+    "score": 1.4696730473622923,
+    "spectral": [
+      {
+        "nperseg": 128,
+        "welch_averages": 17,
+        "note": "Overlapping averages are not independent; coherence is descriptive under feedback.",
+        "channels": {
+          "differential_yaw": {
+            "peak_hz": 1.5625,
+            "observed_phase_deg": -47.02932821163072,
+            "model_phase_deg": -63.31592857299783,
+            "phase_error_deg": -16.286600361367114,
+            "observed_coherence": 0.06659549030311872,
+            "model_coherence": 0.30179114633537407,
+            "observed_rms": 21.58681015245819,
+            "model_rms": 4.555715517610831,
+            "command_band_rms_mm": 2.4501020945065837,
+            "frequencies": [
+              1.3671875,
+              1.5625,
+              1.7578125
+            ],
+            "phase_error_band_deg": [
+              -76.2688579677248,
+              -16.286600361367114,
+              110.86091345337486
+            ],
+            "observed_coherence_band": [
+              0.1742808602521722,
+              0.06659549030311872,
+              0.01755189747074677
+            ]
+          },
+          "common_pitch": {
+            "peak_hz": 1.5625,
+            "observed_phase_deg": -153.12344175934714,
+            "model_phase_deg": -82.31868100710086,
+            "phase_error_deg": 70.80476075224628,
+            "observed_coherence": 0.0372485885215586,
+            "model_coherence": 0.5766708937354653,
+            "observed_rms": 8.92796072492531,
+            "model_rms": 2.585413097290168,
+            "command_band_rms_mm": 1.244722000233595,
+            "frequencies": [
+              1.3671875,
+              1.5625,
+              1.7578125
+            ],
+            "phase_error_band_deg": [
+              58.99472678623565,
+              70.80476075224628,
+              165.49623808774246
+            ],
+            "observed_coherence_band": [
+              0.10056936801944015,
+              0.0372485885215586,
+              0.047593247069597736
+            ]
+          }
+        }
+      },
+      {
+        "nperseg": 256,
+        "welch_averages": 8,
+        "note": "Overlapping averages are not independent; coherence is descriptive under feedback.",
+        "channels": {
+          "differential_yaw": {
+            "peak_hz": 1.5625,
+            "observed_phase_deg": -83.28381435301921,
+            "model_phase_deg": -54.29147700193267,
+            "phase_error_deg": 28.99233735108654,
+            "observed_coherence": 0.15595416427580577,
+            "model_coherence": 0.084441363224016,
+            "observed_rms": 22.26460741856777,
+            "model_rms": 4.3983662376905315,
+            "command_band_rms_mm": 2.388931296726631,
+            "frequencies": [
+              1.26953125,
+              1.3671875,
+              1.46484375,
+              1.5625,
+              1.66015625,
+              1.7578125,
+              1.85546875
+            ],
+            "phase_error_band_deg": [
+              -135.77160160166304,
+              -105.68983892378104,
+              -5.48398726000351,
+              28.99233735108654,
+              63.10149481583951,
+              54.53199508560867,
+              156.558288675161
+            ],
+            "observed_coherence_band": [
+              0.0328718986094349,
+              0.2352850780471429,
+              0.47536494729011336,
+              0.15595416427580577,
+              0.10333368562668394,
+              0.2640992515750423,
+              0.17620751061975154
+            ]
+          },
+          "common_pitch": {
+            "peak_hz": 1.5625,
+            "observed_phase_deg": 101.24560909325943,
+            "model_phase_deg": -59.7189770711508,
+            "phase_error_deg": -160.96458616441024,
+            "observed_coherence": 0.04509589769665641,
+            "model_coherence": 0.40233625385962685,
+            "observed_rms": 9.005156587714682,
+            "model_rms": 2.5205138289879048,
+            "command_band_rms_mm": 1.2217450364759748,
+            "frequencies": [
+              1.26953125,
+              1.3671875,
+              1.46484375,
+              1.5625,
+              1.66015625,
+              1.7578125,
+              1.85546875
+            ],
+            "phase_error_band_deg": [
+              -18.330095503371055,
+              42.28611467594039,
+              62.61870913838584,
+              -160.96458616441024,
+              150.12228073152124,
+              129.43573150526112,
+              -144.9006424318229
+            ],
+            "observed_coherence_band": [
+              0.4252922199566764,
+              0.17426301037010372,
+              0.253191177898543,
+              0.04509589769665641,
+              0.147965562730222,
+              0.5341172194302856,
+              0.05426264375962287
+            ]
+          }
+        }
+      }
+    ]
+  },
+  {
+    "episode": "manual-1985",
+    "kind": "training",
+    "family": "baseline",
+    "duration_s": 33.3999999999935,
+    "response_loss": 1.002327302550221,
+    "rate_rmse": [
+      73.78090471518817,
+      85.62003327407821,
+      130.47625171671382
+    ],
+    "acceleration_rmse": [
+      587.6726449186638,
+      766.7787383779689,
+      1044.920441021039
+    ],
+    "mean_rate_bias": [
+      0.31674225945921647,
+      -4.89974375371816,
+      2.041588966694373
+    ],
+    "observed_band_rms": [
+      9.272264219932346,
+      14.894334859077777,
+      35.66577109507289
+    ],
+    "model_band_rms": [
+      1.5545145930529305,
+      6.8855517080582285,
+      6.590374497042726
+    ],
+    "peak_hz": 1.5625,
+    "observed_qr_phase_deg": -133.90860347424305,
+    "model_qr_phase_deg": 12.918453539165789,
+    "phase_error_deg": 146.82705701340885,
+    "observed_qr_coherence": 0.630263651397853,
+    "local": 1.001725867516133,
+    "amplitude": 2.2119719983775927,
+    "phase": 1.8370227981027862,
+    "score": 1.6528837059780477,
+    "spectral": [
+      {
+        "nperseg": 128,
+        "welch_averages": 11,
+        "note": "Overlapping averages are not independent; coherence is descriptive under feedback.",
+        "channels": {
+          "differential_yaw": {
+            "peak_hz": 1.5625,
+            "observed_phase_deg": 150.55707137742897,
+            "model_phase_deg": -49.86264526088975,
+            "phase_error_deg": 159.5802833616813,
+            "observed_coherence": 0.022924418365171607,
+            "model_coherence": 0.8634606794109094,
+            "observed_rms": 56.919155894309164,
+            "model_rms": 5.455919803359483,
+            "command_band_rms_mm": 3.4944920918067632,
+            "frequencies": [
+              1.3671875,
+              1.5625,
+              1.7578125
+            ],
+            "phase_error_band_deg": [
+              17.091807742065402,
+              159.5802833616813,
+              -101.93849207654647
+            ],
+            "observed_coherence_band": [
+              0.003590725962953993,
+              0.022924418365171607,
+              0.0008239326696441053
+            ]
+          },
+          "common_pitch": {
+            "peak_hz": 1.5625,
+            "observed_phase_deg": 129.39285547803436,
+            "model_phase_deg": -19.191081468800338,
+            "phase_error_deg": -148.58393694683468,
+            "observed_coherence": 0.01364320467404791,
+            "model_coherence": 0.9205202580662162,
+            "observed_rms": 30.841583767408007,
+            "model_rms": 5.569579486126062,
+            "command_band_rms_mm": 1.7803334113220048,
+            "frequencies": [
+              1.3671875,
+              1.5625,
+              1.7578125
+            ],
+            "phase_error_band_deg": [
+              160.6821219780433,
+              -148.58393694683468,
+              161.4167296318999
+            ],
+            "observed_coherence_band": [
+              0.04034609670421339,
+              0.01364320467404791,
+              0.030960450046602292
+            ]
+          }
+        }
+      },
+      {
+        "nperseg": 256,
+        "welch_averages": 5,
+        "note": "Overlapping averages are not independent; coherence is descriptive under feedback.",
+        "channels": {
+          "differential_yaw": {
+            "peak_hz": 1.5625,
+            "observed_phase_deg": 175.41532938373257,
+            "model_phase_deg": -47.95843324842703,
+            "phase_error_deg": 136.62623736784045,
+            "observed_coherence": 0.364604859826377,
+            "model_coherence": 0.8729602181154036,
+            "observed_rms": 35.66577109507289,
+            "model_rms": 6.590374497042726,
+            "command_band_rms_mm": 4.243682043997668,
+            "frequencies": [
+              1.26953125,
+              1.3671875,
+              1.46484375,
+              1.5625,
+              1.66015625,
+              1.7578125,
+              1.85546875
+            ],
+            "phase_error_band_deg": [
+              26.327819094328714,
+              86.28702253561188,
+              154.63020814177526,
+              136.62623736784045,
+              -179.1816516850121,
+              -134.9046367853064,
+              65.65780959659934
+            ],
+            "observed_coherence_band": [
+              0.11984801647170204,
+              0.1141577644697073,
+              0.5644080911966696,
+              0.364604859826377,
+              0.08950970575712572,
+              0.13199146370461004,
+              0.012611063999738758
+            ]
+          },
+          "common_pitch": {
+            "peak_hz": 1.66015625,
+            "observed_phase_deg": 28.765556613154637,
+            "model_phase_deg": -20.941831703867653,
+            "phase_error_deg": -49.707388317022286,
+            "observed_coherence": 0.0442647958041271,
+            "model_coherence": 0.813630263313036,
+            "observed_rms": 14.894334859077777,
+            "model_rms": 6.885551708058228,
+            "command_band_rms_mm": 2.214500875780262,
+            "frequencies": [
+              1.26953125,
+              1.3671875,
+              1.46484375,
+              1.5625,
+              1.66015625,
+              1.7578125,
+              1.85546875
+            ],
+            "phase_error_band_deg": [
+              165.81503394216142,
+              157.70723487807916,
+              -115.69502856825585,
+              -78.3077148074501,
+              -49.707388317022286,
+              149.23762121695313,
+              143.38979454297223
+            ],
+            "observed_coherence_band": [
+              0.08925854376335687,
+              0.08663460173387451,
+              0.27990294355546946,
+              0.29720821867684283,
+              0.0442647958041271,
+              0.02013349679521229,
+              0.07384275969969517
+            ]
+          }
+        }
+      }
+    ]
+  },
+  {
+    "episode": "manual-1985",
+    "kind": "training",
+    "family": "legacy",
+    "duration_s": 33.3999999999935,
+    "response_loss": 1.0208604724638912,
+    "rate_rmse": [
+      73.86249728384442,
+      86.27607752806242,
+      132.7487500176478
+    ],
+    "acceleration_rmse": [
+      588.51336941651,
+      772.5300024329936,
+      1066.1690058885185
+    ],
+    "mean_rate_bias": [
+      1.3549444856527462,
+      -3.3884701388020937,
+      2.0306055614412313
+    ],
+    "observed_band_rms": [
+      9.272264219932346,
+      14.894334859077777,
+      35.66577109507289
+    ],
+    "model_band_rms": [
+      2.047160458375308,
+      8.003759393299536,
+      18.057748381280163
+    ],
+    "peak_hz": 1.5625,
+    "observed_qr_phase_deg": -133.90860347424305,
+    "model_qr_phase_deg": -41.22876535473402,
+    "phase_error_deg": 92.67983811950904,
+    "observed_qr_coherence": 0.630263651397853,
+    "local": 1.0204966663572903,
+    "amplitude": 1.0435999579305917,
+    "phase": 1.0467549472456306,
+    "score": 1.034989639164279,
+    "spectral": [
+      {
+        "nperseg": 128,
+        "welch_averages": 11,
+        "note": "Overlapping averages are not independent; coherence is descriptive under feedback.",
+        "channels": {
+          "differential_yaw": {
+            "peak_hz": 1.5625,
+            "observed_phase_deg": 150.55707137742897,
+            "model_phase_deg": -33.54764221546635,
+            "phase_error_deg": 175.8952864071047,
+            "observed_coherence": 0.022924418365171607,
+            "model_coherence": 0.69935655532871,
+            "observed_rms": 56.919155894309164,
+            "model_rms": 14.640956410802517,
+            "command_band_rms_mm": 3.4944920918067632,
+            "frequencies": [
+              1.3671875,
+              1.5625,
+              1.7578125
+            ],
+            "phase_error_band_deg": [
+              35.6975313238153,
+              175.8952864071047,
+              -98.76481851006186
+            ],
+            "observed_coherence_band": [
+              0.003590725962953993,
+              0.022924418365171607,
+              0.0008239326696441053
+            ]
+          },
+          "common_pitch": {
+            "peak_hz": 1.5625,
+            "observed_phase_deg": 129.39285547803436,
+            "model_phase_deg": -49.256689152676145,
+            "phase_error_deg": -178.6495446307105,
+            "observed_coherence": 0.01364320467404791,
+            "model_coherence": 0.8181639077048616,
+            "observed_rms": 30.841583767408007,
+            "model_rms": 6.531362335898913,
+            "command_band_rms_mm": 1.7803334113220048,
+            "frequencies": [
+              1.3671875,
+              1.5625,
+              1.7578125
+            ],
+            "phase_error_band_deg": [
+              139.26518873787958,
+              -178.6495446307105,
+              128.22335691449777
+            ],
+            "observed_coherence_band": [
+              0.04034609670421339,
+              0.01364320467404791,
+              0.030960450046602292
+            ]
+          }
+        }
+      },
+      {
+        "nperseg": 256,
+        "welch_averages": 5,
+        "note": "Overlapping averages are not independent; coherence is descriptive under feedback.",
+        "channels": {
+          "differential_yaw": {
+            "peak_hz": 1.5625,
+            "observed_phase_deg": 175.41532938373257,
+            "model_phase_deg": -30.856560756492375,
+            "phase_error_deg": 153.7281098597751,
+            "observed_coherence": 0.364604859826377,
+            "model_coherence": 0.6481154084590437,
+            "observed_rms": 35.66577109507289,
+            "model_rms": 18.057748381280163,
+            "command_band_rms_mm": 4.243682043997668,
+            "frequencies": [
+              1.26953125,
+              1.3671875,
+              1.46484375,
+              1.5625,
+              1.66015625,
+              1.7578125,
+              1.85546875
+            ],
+            "phase_error_band_deg": [
+              68.01441179708056,
+              98.74540163187352,
+              170.31682974033328,
+              153.7281098597751,
+              -164.54494752873185,
+              -134.73252413876875,
+              57.91305144495168
+            ],
+            "observed_coherence_band": [
+              0.11984801647170204,
+              0.1141577644697073,
+              0.5644080911966696,
+              0.364604859826377,
+              0.08950970575712572,
+              0.13199146370461004,
+              0.012611063999738758
+            ]
+          },
+          "common_pitch": {
+            "peak_hz": 1.66015625,
+            "observed_phase_deg": 28.765556613154637,
+            "model_phase_deg": -62.61897240297271,
+            "phase_error_deg": -91.38452901612735,
+            "observed_coherence": 0.0442647958041271,
+            "model_coherence": 0.6424426005833072,
+            "observed_rms": 14.894334859077777,
+            "model_rms": 8.003759393299536,
+            "command_band_rms_mm": 2.214500875780262,
+            "frequencies": [
+              1.26953125,
+              1.3671875,
+              1.46484375,
+              1.5625,
+              1.66015625,
+              1.7578125,
+              1.85546875
+            ],
+            "phase_error_band_deg": [
+              150.04955971951196,
+              130.40849000837585,
+              -144.53838474356894,
+              -110.3900863617695,
+              -91.38452901612735,
+              103.95316566464162,
+              101.69506357469845
+            ],
+            "observed_coherence_band": [
+              0.08925854376335687,
+              0.08663460173387451,
+              0.27990294355546946,
+              0.29720821867684283,
+              0.0442647958041271,
+              0.02013349679521229,
+              0.07384275969969517
+            ]
+          }
+        }
+      }
+    ]
+  },
+  {
+    "episode": "manual-1985",
+    "kind": "training",
+    "family": "response",
+    "duration_s": 33.3999999999935,
+    "response_loss": 0.9944882466117726,
+    "rate_rmse": [
+      73.59008558384836,
+      84.85331510905176,
+      130.42909803736995
+    ],
+    "acceleration_rmse": [
+      587.5639089301378,
+      759.102938730062,
+      1043.9843456161823
+    ],
+    "mean_rate_bias": [
+      0.5199294224949659,
+      -4.364678003464351,
+      1.758745666406447
+    ],
+    "observed_band_rms": [
+      9.272264219932346,
+      14.894334859077777,
+      35.66577109507289
+    ],
+    "model_band_rms": [
+      1.1750781402918384,
+      4.838323676847923,
+      8.129093737336678
+    ],
+    "peak_hz": 1.5625,
+    "observed_qr_phase_deg": -133.90860347424305,
+    "model_qr_phase_deg": -20.786664778966742,
+    "phase_error_deg": 113.12193869527633,
+    "observed_qr_coherence": 0.630263651397853,
+    "local": 0.9940065294896119,
+    "amplitude": 2.572689662697702,
+    "phase": 1.3926892897535945,
+    "score": 1.7052163348256446,
+    "spectral": [
+      {
+        "nperseg": 128,
+        "welch_averages": 11,
+        "note": "Overlapping averages are not independent; coherence is descriptive under feedback.",
+        "channels": {
+          "differential_yaw": {
+            "peak_hz": 1.5625,
+            "observed_phase_deg": 150.55707137742897,
+            "model_phase_deg": -73.85174258200576,
+            "phase_error_deg": 135.59118604056528,
+            "observed_coherence": 0.022924418365171607,
+            "model_coherence": 0.6366098470596949,
+            "observed_rms": 56.919155894309164,
+            "model_rms": 6.642590823531451,
+            "command_band_rms_mm": 3.4944920918067632,
+            "frequencies": [
+              1.3671875,
+              1.5625,
+              1.7578125
+            ],
+            "phase_error_band_deg": [
+              -7.646689227370294,
+              135.59118604056528,
+              -131.86268166860555
+            ],
+            "observed_coherence_band": [
+              0.003590725962953993,
+              0.022924418365171607,
+              0.0008239326696441053
+            ]
+          },
+          "common_pitch": {
+            "peak_hz": 1.5625,
+            "observed_phase_deg": 129.39285547803436,
+            "model_phase_deg": -65.10413787909833,
+            "phase_error_deg": 165.50300664286735,
+            "observed_coherence": 0.01364320467404791,
+            "model_coherence": 0.837056261861546,
+            "observed_rms": 30.841583767408007,
+            "model_rms": 4.01567773275428,
+            "command_band_rms_mm": 1.7803334113220048,
+            "frequencies": [
+              1.3671875,
+              1.5625,
+              1.7578125
+            ],
+            "phase_error_band_deg": [
+              115.61281295519137,
+              165.50300664286735,
+              121.38355626283689
+            ],
+            "observed_coherence_band": [
+              0.04034609670421339,
+              0.01364320467404791,
+              0.030960450046602292
+            ]
+          }
+        }
+      },
+      {
+        "nperseg": 256,
+        "welch_averages": 5,
+        "note": "Overlapping averages are not independent; coherence is descriptive under feedback.",
+        "channels": {
+          "differential_yaw": {
+            "peak_hz": 1.5625,
+            "observed_phase_deg": 175.41532938373257,
+            "model_phase_deg": -78.05472982827762,
+            "phase_error_deg": 106.52994078798983,
+            "observed_coherence": 0.364604859826377,
+            "model_coherence": 0.6937862319639035,
+            "observed_rms": 35.66577109507289,
+            "model_rms": 8.129093737336676,
+            "command_band_rms_mm": 4.243682043997668,
+            "frequencies": [
+              1.26953125,
+              1.3671875,
+              1.46484375,
+              1.5625,
+              1.66015625,
+              1.7578125,
+              1.85546875
+            ],
+            "phase_error_band_deg": [
+              0.4376389545030199,
+              62.78815566011219,
+              129.30407247158973,
+              106.52994078798983,
+              147.47079521885107,
+              -177.52391111204287,
+              51.52686496737811
+            ],
+            "observed_coherence_band": [
+              0.11984801647170204,
+              0.1141577644697073,
+              0.5644080911966696,
+              0.364604859826377,
+              0.08950970575712572,
+              0.13199146370461004,
+              0.012611063999738758
+            ]
+          },
+          "common_pitch": {
+            "peak_hz": 1.66015625,
+            "observed_phase_deg": 28.765556613154637,
+            "model_phase_deg": -69.429776034161,
+            "phase_error_deg": -98.19533264731564,
+            "observed_coherence": 0.0442647958041271,
+            "model_coherence": 0.7398151843340286,
+            "observed_rms": 14.894334859077777,
+            "model_rms": 4.838323676847923,
+            "command_band_rms_mm": 2.214500875780262,
+            "frequencies": [
+              1.26953125,
+              1.3671875,
+              1.46484375,
+              1.5625,
+              1.66015625,
+              1.7578125,
+              1.85546875
+            ],
+            "phase_error_band_deg": [
+              125.67873839849678,
+              107.52237578171227,
+              -164.92725927329258,
+              -129.76619251978198,
+              -98.19533264731564,
+              97.4958686481895,
+              97.51951825678235
+            ],
+            "observed_coherence_band": [
+              0.08925854376335687,
+              0.08663460173387451,
+              0.27990294355546946,
+              0.29720821867684283,
+              0.0442647958041271,
+              0.02013349679521229,
+              0.07384275969969517
+            ]
+          }
+        }
+      }
+    ]
+  },
+  {
+    "episode": "manual-1985",
+    "kind": "training",
+    "family": "response_nuisance",
+    "duration_s": 33.3999999999935,
+    "response_loss": 0.9942551169148076,
+    "rate_rmse": [
+      73.592346676788,
+      84.83248498874754,
+      130.39675108651807
+    ],
+    "acceleration_rmse": [
+      587.5553664099159,
+      759.0396942666781,
+      1043.7803299538416
+    ],
+    "mean_rate_bias": [
+      0.5230742070478827,
+      -4.460958765951545,
+      1.7506148479174493
+    ],
+    "observed_band_rms": [
+      9.272264219932346,
+      14.894334859077777,
+      35.66577109507289
+    ],
+    "model_band_rms": [
+      1.1654647682950288,
+      4.807992268835045,
+      8.14230894451874
+    ],
+    "peak_hz": 1.5625,
+    "observed_qr_phase_deg": -133.90860347424305,
+    "model_qr_phase_deg": -20.840411416205757,
+    "phase_error_deg": 113.0681920580373,
+    "observed_qr_coherence": 0.630263651397853,
+    "local": 0.9937539986406326,
+    "amplitude": 2.5871516663633285,
+    "phase": 1.3918264142176477,
+    "score": 1.7107275488451141,
+    "spectral": [
+      {
+        "nperseg": 128,
+        "welch_averages": 11,
+        "note": "Overlapping averages are not independent; coherence is descriptive under feedback.",
+        "channels": {
+          "differential_yaw": {
+            "peak_hz": 1.5625,
+            "observed_phase_deg": 150.55707137742897,
+            "model_phase_deg": -73.90196103365699,
+            "phase_error_deg": 135.54096758891404,
+            "observed_coherence": 0.022924418365171607,
+            "model_coherence": 0.6302628151929961,
+            "observed_rms": 56.919155894309164,
+            "model_rms": 6.655756754759404,
+            "command_band_rms_mm": 3.4944920918067632,
+            "frequencies": [
+              1.3671875,
+              1.5625,
+              1.7578125
+            ],
+            "phase_error_band_deg": [
+              -7.793449582433521,
+              135.54096758891404,
+              -132.10292988974982
+            ],
+            "observed_coherence_band": [
+              0.003590725962953993,
+              0.022924418365171607,
+              0.0008239326696441053
+            ]
+          },
+          "common_pitch": {
+            "peak_hz": 1.5625,
+            "observed_phase_deg": 129.39285547803436,
+            "model_phase_deg": -65.08381581829673,
+            "phase_error_deg": 165.52332870366894,
+            "observed_coherence": 0.01364320467404791,
+            "model_coherence": 0.8351330933896634,
+            "observed_rms": 30.841583767408007,
+            "model_rms": 3.9927229753593165,
+            "command_band_rms_mm": 1.7803334113220048,
+            "frequencies": [
+              1.3671875,
+              1.5625,
+              1.7578125
+            ],
+            "phase_error_band_deg": [
+              115.51448299684289,
+              165.52332870366894,
+              121.50321600037945
+            ],
+            "observed_coherence_band": [
+              0.04034609670421339,
+              0.01364320467404791,
+              0.030960450046602292
+            ]
+          }
+        }
+      },
+      {
+        "nperseg": 256,
+        "welch_averages": 5,
+        "note": "Overlapping averages are not independent; coherence is descriptive under feedback.",
+        "channels": {
+          "differential_yaw": {
+            "peak_hz": 1.5625,
+            "observed_phase_deg": 175.41532938373257,
+            "model_phase_deg": -78.30987995057055,
+            "phase_error_deg": 106.2747906656969,
+            "observed_coherence": 0.364604859826377,
+            "model_coherence": 0.6888649037112797,
+            "observed_rms": 35.66577109507289,
+            "model_rms": 8.14230894451874,
+            "command_band_rms_mm": 4.243682043997668,
+            "frequencies": [
+              1.26953125,
+              1.3671875,
+              1.46484375,
+              1.5625,
+              1.66015625,
+              1.7578125,
+              1.85546875
+            ],
+            "phase_error_band_deg": [
+              0.4338350622337413,
+              62.59117468961294,
+              129.10867622518043,
+              106.2747906656969,
+              147.35437850415414,
+              -178.40441401166524,
+              51.04454261863256
+            ],
+            "observed_coherence_band": [
+              0.11984801647170204,
+              0.1141577644697073,
+              0.5644080911966696,
+              0.364604859826377,
+              0.08950970575712572,
+              0.13199146370461004,
+              0.012611063999738758
+            ]
+          },
+          "common_pitch": {
+            "peak_hz": 1.66015625,
+            "observed_phase_deg": 28.765556613154637,
+            "model_phase_deg": -69.3205283100219,
+            "phase_error_deg": -98.08608492317653,
+            "observed_coherence": 0.0442647958041271,
+            "model_coherence": 0.7353219510907891,
+            "observed_rms": 14.894334859077777,
+            "model_rms": 4.807992268835045,
+            "command_band_rms_mm": 2.214500875780262,
+            "frequencies": [
+              1.26953125,
+              1.3671875,
+              1.46484375,
+              1.5625,
+              1.66015625,
+              1.7578125,
+              1.85546875
+            ],
+            "phase_error_band_deg": [
+              125.74425860775011,
+              107.25921149073434,
+              -165.06544901250123,
+              -129.78155742190984,
+              -98.08608492317653,
+              97.53095066761364,
+              97.50599879613623
+            ],
+            "observed_coherence_band": [
+              0.08925854376335687,
+              0.08663460173387451,
+              0.27990294355546946,
+              0.29720821867684283,
+              0.0442647958041271,
+              0.02013349679521229,
+              0.07384275969969517
+            ]
+          }
+        }
+      }
+    ]
+  },
+  {
+    "episode": "manual-903",
+    "kind": "unused_check",
+    "family": "baseline",
+    "duration_s": 22.319999999995503,
+    "response_loss": 0.8094113304556348,
+    "rate_rmse": [
+      9.441615763779641,
+      15.541633524325995,
+      14.709450812721936
+    ],
+    "acceleration_rmse": [
+      68.09542778930381,
+      90.09614370431629,
+      132.74718968894277
+    ],
+    "mean_rate_bias": [
+      0.9663656682536728,
+      -3.357632722396783,
+      -8.776011938121334
+    ],
+    "observed_band_rms": [
+      0.850505356171154,
+      2.640889459941269,
+      6.257634501916672
+    ],
+    "model_band_rms": [
+      0.6960627609910373,
+      2.8948290833906123,
+      2.411092647951577
+    ],
+    "peak_hz": 1.85546875,
+    "observed_qr_phase_deg": -85.81410196684939,
+    "model_qr_phase_deg": 8.603116585701352,
+    "phase_error_deg": 94.41721855255074,
+    "observed_qr_coherence": 0.9870315335830101,
+    "local": 0.7752403043437927,
+    "amplitude": 0.31939056468360766,
+    "phase": 1.0770186593842206,
+    "score": 0.6532560794878043,
+    "spectral": [
+      {
+        "nperseg": 128,
+        "welch_averages": 6,
+        "note": "Overlapping averages are not independent; coherence is descriptive under feedback.",
+        "channels": {
+          "differential_yaw": {
+            "peak_hz": 1.7578125,
+            "observed_phase_deg": 3.5204182291217565,
+            "model_phase_deg": -58.8618151848441,
+            "phase_error_deg": -62.38223341396586,
+            "observed_coherence": 0.03939749611385386,
+            "model_coherence": 0.7769125555249201,
+            "observed_rms": 6.796100150242633,
+            "model_rms": 1.938606982732468,
+            "command_band_rms_mm": 1.5220223212204644,
+            "frequencies": [
+              1.3671875,
+              1.5625,
+              1.7578125
+            ],
+            "phase_error_band_deg": [
+              -4.277557986834416,
+              -65.62292439836801,
+              -62.38223341396586
+            ],
+            "observed_coherence_band": [
+              0.25278148535666406,
+              0.09037590142188028,
+              0.03939749611385386
+            ]
+          },
+          "common_pitch": {
+            "peak_hz": 1.7578125,
+            "observed_phase_deg": -80.71078089164888,
+            "model_phase_deg": -51.68704697250707,
+            "phase_error_deg": 29.023733919141822,
+            "observed_coherence": 0.055334161953154264,
+            "model_coherence": 0.8079277456777861,
+            "observed_rms": 2.6652229734100508,
+            "model_rms": 2.400820294847446,
+            "command_band_rms_mm": 0.761276539623425,
+            "frequencies": [
+              1.3671875,
+              1.5625,
+              1.7578125
+            ],
+            "phase_error_band_deg": [
+              59.5577817863485,
+              81.91650712327413,
+              29.023733919141822
+            ],
+            "observed_coherence_band": [
+              0.09570298169588945,
+              0.19546821909211928,
+              0.055334161953154264
+            ]
+          }
+        }
+      },
+      {
+        "nperseg": 256,
+        "welch_averages": 2,
+        "note": "Overlapping averages are not independent; coherence is descriptive under feedback.",
+        "channels": {
+          "differential_yaw": {
+            "peak_hz": 1.85546875,
+            "observed_phase_deg": -24.155712900496283,
+            "model_phase_deg": -46.34204057960469,
+            "phase_error_deg": -22.18632767910841,
+            "observed_coherence": 0.1146697699674334,
+            "model_coherence": 0.9773378020334331,
+            "observed_rms": 6.257634501916672,
+            "model_rms": 2.411092647951577,
+            "command_band_rms_mm": 1.6913942053825377,
+            "frequencies": [
+              1.26953125,
+              1.3671875,
+              1.46484375,
+              1.5625,
+              1.66015625,
+              1.7578125,
+              1.85546875
+            ],
+            "phase_error_band_deg": [
+              -36.27725200984386,
+              -20.779890839068184,
+              -8.392240225851385,
+              -15.186604534084244,
+              -23.839452719435343,
+              59.03265668641678,
+              -22.18632767910841
+            ],
+            "observed_coherence_band": [
+              0.7639258354724242,
+              0.8644690463407315,
+              0.8846251592379647,
+              0.7881996953023521,
+              0.3493199754822796,
+              0.10273682231937277,
+              0.1146697699674334
+            ]
+          },
+          "common_pitch": {
+            "peak_hz": 1.85546875,
+            "observed_phase_deg": -94.37510105737402,
+            "model_phase_deg": -38.26840970896908,
+            "phase_error_deg": 56.10669134840495,
+            "observed_coherence": 0.14729481864247623,
+            "model_coherence": 0.9597003106913626,
+            "observed_rms": 2.6408894599412696,
+            "model_rms": 2.8948290833906123,
+            "command_band_rms_mm": 0.8456746114646208,
+            "frequencies": [
+              1.26953125,
+              1.3671875,
+              1.46484375,
+              1.5625,
+              1.66015625,
+              1.7578125,
+              1.85546875
+            ],
+            "phase_error_band_deg": [
+              0.6038728926237763,
+              76.16332238338637,
+              85.7311492739341,
+              87.08338571642985,
+              73.79160418986703,
+              124.38123178386947,
+              56.10669134840495
+            ],
+            "observed_coherence_band": [
+              0.11331484725839032,
+              0.8998098942484034,
+              0.9971509456180335,
+              0.9850840008215987,
+              0.8337438961666074,
+              0.030551785703338746,
+              0.14729481864247623
+            ]
+          }
+        }
+      }
+    ]
+  },
+  {
+    "episode": "manual-903",
+    "kind": "unused_check",
+    "family": "legacy",
+    "duration_s": 22.319999999995503,
+    "response_loss": 0.8983328201987797,
+    "rate_rmse": [
+      9.195335233946329,
+      15.575735645123716,
+      16.707792321157104
+    ],
+    "acceleration_rmse": [
+      67.87060806805762,
+      93.61137542994761,
+      156.4574002967175
+    ],
+    "mean_rate_bias": [
+      1.2176394265087376,
+      -3.0268873025979377,
+      -7.859831687381817
+    ],
+    "observed_band_rms": [
+      0.850505356171154,
+      2.640889459941269,
+      6.257634501916672
+    ],
+    "model_band_rms": [
+      0.8892085538902983,
+      3.3880371223763617,
+      5.467071527448665
+    ],
+    "peak_hz": 1.85546875,
+    "observed_qr_phase_deg": -85.81410196684939,
+    "model_qr_phase_deg": -31.75850523150739,
+    "phase_error_deg": 54.055596735342,
+    "observed_qr_coherence": 0.9870315335830101,
+    "local": 0.8700508089350003,
+    "amplitude": 0.02742984796196526,
+    "phase": 0.41300005077849333,
+    "score": 0.44159227291448494,
+    "spectral": [
+      {
+        "nperseg": 128,
+        "welch_averages": 6,
+        "note": "Overlapping averages are not independent; coherence is descriptive under feedback.",
+        "channels": {
+          "differential_yaw": {
+            "peak_hz": 1.7578125,
+            "observed_phase_deg": 3.5204182291217565,
+            "model_phase_deg": -31.2186414931513,
+            "phase_error_deg": -34.73905972227305,
+            "observed_coherence": 0.03939749611385386,
+            "model_coherence": 0.33437905192653644,
+            "observed_rms": 6.796100150242633,
+            "model_rms": 4.642128421185561,
+            "command_band_rms_mm": 1.5220223212204644,
+            "frequencies": [
+              1.3671875,
+              1.5625,
+              1.7578125
+            ],
+            "phase_error_band_deg": [
+              34.22533173168563,
+              -44.218882256126406,
+              -34.73905972227305
+            ],
+            "observed_coherence_band": [
+              0.25278148535666406,
+              0.09037590142188028,
+              0.03939749611385386
+            ]
+          },
+          "common_pitch": {
+            "peak_hz": 1.7578125,
+            "observed_phase_deg": -80.71078089164888,
+            "model_phase_deg": -68.50232316017807,
+            "phase_error_deg": 12.208457731470823,
+            "observed_coherence": 0.055334161953154264,
+            "model_coherence": 0.81393760026645,
+            "observed_rms": 2.6652229734100508,
+            "model_rms": 3.0275275641105153,
+            "command_band_rms_mm": 0.761276539623425,
+            "frequencies": [
+              1.3671875,
+              1.5625,
+              1.7578125
+            ],
+            "phase_error_band_deg": [
+              59.2638497596467,
+              68.64943889146961,
+              12.208457731470824
+            ],
+            "observed_coherence_band": [
+              0.09570298169588945,
+              0.19546821909211928,
+              0.055334161953154264
+            ]
+          }
+        }
+      },
+      {
+        "nperseg": 256,
+        "welch_averages": 2,
+        "note": "Overlapping averages are not independent; coherence is descriptive under feedback.",
+        "channels": {
+          "differential_yaw": {
+            "peak_hz": 1.85546875,
+            "observed_phase_deg": -24.155712900496283,
+            "model_phase_deg": -29.469370485375883,
+            "phase_error_deg": -5.313657584879598,
+            "observed_coherence": 0.1146697699674334,
+            "model_coherence": 0.9583237835037591,
+            "observed_rms": 6.257634501916672,
+            "model_rms": 5.467071527448664,
+            "command_band_rms_mm": 1.6913942053825377,
+            "frequencies": [
+              1.26953125,
+              1.3671875,
+              1.46484375,
+              1.5625,
+              1.66015625,
+              1.7578125,
+              1.85546875
+            ],
+            "phase_error_band_deg": [
+              3.9439597493152316,
+              23.149369265548035,
+              37.12131950538704,
+              21.21577438674,
+              4.221400947209243,
+              82.32689424919495,
+              -5.313657584879597
+            ],
+            "observed_coherence_band": [
+              0.7639258354724242,
+              0.8644690463407315,
+              0.8846251592379647,
+              0.7881996953023521,
+              0.3493199754822796,
+              0.10273682231937277,
+              0.1146697699674334
+            ]
+          },
+          "common_pitch": {
+            "peak_hz": 1.85546875,
+            "observed_phase_deg": -94.37510105737402,
+            "model_phase_deg": -60.834964549854895,
+            "phase_error_deg": 33.540136507519136,
+            "observed_coherence": 0.14729481864247623,
+            "model_coherence": 0.934372644227955,
+            "observed_rms": 2.6408894599412696,
+            "model_rms": 3.3880371223763617,
+            "command_band_rms_mm": 0.8456746114646208,
+            "frequencies": [
+              1.26953125,
+              1.3671875,
+              1.46484375,
+              1.5625,
+              1.66015625,
+              1.7578125,
+              1.85546875
+            ],
+            "phase_error_band_deg": [
+              0.07913446215884108,
+              73.86769423498801,
+              80.3621242391858,
+              76.39268249637969,
+              59.426535657120404,
+              107.16642801718423,
+              33.540136507519136
+            ],
+            "observed_coherence_band": [
+              0.11331484725839032,
+              0.8998098942484034,
+              0.9971509456180335,
+              0.9850840008215987,
+              0.8337438961666074,
+              0.030551785703338746,
+              0.14729481864247623
+            ]
+          }
+        }
+      }
+    ]
+  },
+  {
+    "episode": "manual-903",
+    "kind": "unused_check",
+    "family": "response",
+    "duration_s": 22.319999999995503,
+    "response_loss": 0.7767955812340378,
+    "rate_rmse": [
+      9.094758927794885,
+      14.877106688068986,
+      14.541794872433336
+    ],
+    "acceleration_rmse": [
+      67.81088327032475,
+      85.10314138020189,
+      135.5896930583997
+    ],
+    "mean_rate_bias": [
+      1.0312102264766598,
+      -3.2326606240482287,
+      -8.418278034082961
+    ],
+    "observed_band_rms": [
+      0.850505356171154,
+      2.640889459941269,
+      6.257634501916672
+    ],
+    "model_band_rms": [
+      0.6020774851207501,
+      2.1617564076644147,
+      2.6629830999312256
+    ],
+    "peak_hz": 1.85546875,
+    "observed_qr_phase_deg": -85.81410196684939,
+    "model_qr_phase_deg": -10.4199426866942,
+    "phase_error_deg": 75.39415928015518,
+    "observed_qr_coherence": 0.9870315335830101,
+    "local": 0.7450898456180042,
+    "amplitude": 0.29644427215619057,
+    "phase": 0.7478319949952398,
+    "score": 0.566180046108726,
+    "spectral": [
+      {
+        "nperseg": 128,
+        "welch_averages": 6,
+        "note": "Overlapping averages are not independent; coherence is descriptive under feedback.",
+        "channels": {
+          "differential_yaw": {
+            "peak_hz": 1.7578125,
+            "observed_phase_deg": 3.5204182291217565,
+            "model_phase_deg": -79.28313797796449,
+            "phase_error_deg": -82.80355620708625,
+            "observed_coherence": 0.03939749611385386,
+            "model_coherence": 0.5586016723140326,
+            "observed_rms": 6.796100150242633,
+            "model_rms": 2.1361094682754245,
+            "command_band_rms_mm": 1.5220223212204644,
+            "frequencies": [
+              1.3671875,
+              1.5625,
+              1.7578125
+            ],
+            "phase_error_band_deg": [
+              -24.15336421705553,
+              -92.151682523157,
+              -82.80355620708625
+            ],
+            "observed_coherence_band": [
+              0.25278148535666406,
+              0.09037590142188028,
+              0.03939749611385386
+            ]
+          },
+          "common_pitch": {
+            "peak_hz": 1.7578125,
+            "observed_phase_deg": -80.71078089164888,
+            "model_phase_deg": -104.55153239849784,
+            "phase_error_deg": -23.840751506848946,
+            "observed_coherence": 0.055334161953154264,
+            "model_coherence": 0.7443545580206116,
+            "observed_rms": 2.6652229734100508,
+            "model_rms": 1.9260259472695334,
+            "command_band_rms_mm": 0.761276539623425,
+            "frequencies": [
+              1.3671875,
+              1.5625,
+              1.7578125
+            ],
+            "phase_error_band_deg": [
+              20.180667988357317,
+              32.011611557112204,
+              -23.840751506848946
+            ],
+            "observed_coherence_band": [
+              0.09570298169588945,
+              0.19546821909211928,
+              0.055334161953154264
+            ]
+          }
+        }
+      },
+      {
+        "nperseg": 256,
+        "welch_averages": 2,
+        "note": "Overlapping averages are not independent; coherence is descriptive under feedback.",
+        "channels": {
+          "differential_yaw": {
+            "peak_hz": 1.85546875,
+            "observed_phase_deg": -24.155712900496283,
+            "model_phase_deg": -78.97968322715812,
+            "phase_error_deg": -54.823970326661836,
+            "observed_coherence": 0.1146697699674334,
+            "model_coherence": 0.9987851031756564,
+            "observed_rms": 6.257634501916672,
+            "model_rms": 2.6629830999312256,
+            "command_band_rms_mm": 1.6913942053825377,
+            "frequencies": [
+              1.26953125,
+              1.3671875,
+              1.46484375,
+              1.5625,
+              1.66015625,
+              1.7578125,
+              1.85546875
+            ],
+            "phase_error_band_deg": [
+              -55.177435364559635,
+              -36.840409367252434,
+              -23.642245056421828,
+              -36.26014569258876,
+              -48.967460353523535,
+              31.596394281960198,
+              -54.823970326661836
+            ],
+            "observed_coherence_band": [
+              0.7639258354724242,
+              0.8644690463407315,
+              0.8846251592379647,
+              0.7881996953023521,
+              0.3493199754822796,
+              0.10273682231937277,
+              0.1146697699674334
+            ]
+          },
+          "common_pitch": {
+            "peak_hz": 1.85546875,
+            "observed_phase_deg": -94.37510105737402,
+            "model_phase_deg": -89.2912722195703,
+            "phase_error_deg": 5.083828837803732,
+            "observed_coherence": 0.14729481864247623,
+            "model_coherence": 0.9875302386029817,
+            "observed_rms": 2.6408894599412696,
+            "model_rms": 2.1617564076644147,
+            "command_band_rms_mm": 0.8456746114646208,
+            "frequencies": [
+              1.26953125,
+              1.3671875,
+              1.46484375,
+              1.5625,
+              1.66015625,
+              1.7578125,
+              1.85546875
+            ],
+            "phase_error_band_deg": [
+              -38.92319805933387,
+              35.60700800052297,
+              41.199022508829444,
+              37.263155484551184,
+              24.91629769029028,
+              76.13403486581939,
+              5.083828837803732
+            ],
+            "observed_coherence_band": [
+              0.11331484725839032,
+              0.8998098942484034,
+              0.9971509456180335,
+              0.9850840008215987,
+              0.8337438961666074,
+              0.030551785703338746,
+              0.14729481864247623
+            ]
+          }
+        }
+      }
+    ]
+  },
+  {
+    "episode": "manual-903",
+    "kind": "unused_check",
+    "family": "response_nuisance",
+    "duration_s": 22.319999999995503,
+    "response_loss": 0.7768973337299865,
+    "rate_rmse": [
+      9.11640113324495,
+      14.891750565020036,
+      14.543722562865113
+    ],
+    "acceleration_rmse": [
+      67.803321669436,
+      84.9003501232451,
+      135.54529213944895
+    ],
+    "mean_rate_bias": [
+      1.0259132271328464,
+      -3.252304788426607,
+      -8.462657707497387
+    ],
+    "observed_band_rms": [
+      0.850505356171154,
+      2.640889459941269,
+      6.257634501916672
+    ],
+    "model_band_rms": [
+      0.5968987819139482,
+      2.1478600179863157,
+      2.6604844732657926
+    ],
+    "peak_hz": 1.85546875,
+    "observed_qr_phase_deg": -85.81410196684939,
+    "model_qr_phase_deg": -9.901911856311038,
+    "phase_error_deg": 75.91219011053836,
+    "observed_qr_coherence": 0.9870315335830101,
+    "local": 0.7448739705888697,
+    "amplitude": 0.29986811817149694,
+    "phase": 0.7565913413345402,
+    "score": 0.5692151037710548,
+    "spectral": [
+      {
+        "nperseg": 128,
+        "welch_averages": 6,
+        "note": "Overlapping averages are not independent; coherence is descriptive under feedback.",
+        "channels": {
+          "differential_yaw": {
+            "peak_hz": 1.7578125,
+            "observed_phase_deg": 3.5204182291217565,
+            "model_phase_deg": -79.29370854483437,
+            "phase_error_deg": -82.81412677395613,
+            "observed_coherence": 0.03939749611385386,
+            "model_coherence": 0.5551715453006796,
+            "observed_rms": 6.796100150242633,
+            "model_rms": 2.1371752006480618,
+            "command_band_rms_mm": 1.5220223212204644,
+            "frequencies": [
+              1.3671875,
+              1.5625,
+              1.7578125
+            ],
+            "phase_error_band_deg": [
+              -24.227267568745688,
+              -92.35096875994111,
+              -82.81412677395613
+            ],
+            "observed_coherence_band": [
+              0.25278148535666406,
+              0.09037590142188028,
+              0.03939749611385386
+            ]
+          },
+          "common_pitch": {
+            "peak_hz": 1.7578125,
+            "observed_phase_deg": -80.71078089164888,
+            "model_phase_deg": -104.82690418273982,
+            "phase_error_deg": -24.116123291090936,
+            "observed_coherence": 0.055334161953154264,
+            "model_coherence": 0.7421222879721194,
+            "observed_rms": 2.6652229734100508,
+            "model_rms": 1.9196045797294319,
+            "command_band_rms_mm": 0.761276539623425,
+            "frequencies": [
+              1.3671875,
+              1.5625,
+              1.7578125
+            ],
+            "phase_error_band_deg": [
+              20.074346744404828,
+              31.585696783704627,
+              -24.116123291090936
+            ],
+            "observed_coherence_band": [
+              0.09570298169588945,
+              0.19546821909211928,
+              0.055334161953154264
+            ]
+          }
+        }
+      },
+      {
+        "nperseg": 256,
+        "welch_averages": 2,
+        "note": "Overlapping averages are not independent; coherence is descriptive under feedback.",
+        "channels": {
+          "differential_yaw": {
+            "peak_hz": 1.85546875,
+            "observed_phase_deg": -24.155712900496283,
+            "model_phase_deg": -79.71597833942539,
+            "phase_error_deg": -55.56026543892911,
+            "observed_coherence": 0.1146697699674334,
+            "model_coherence": 0.999023221201677,
+            "observed_rms": 6.257634501916672,
+            "model_rms": 2.6604844732657926,
+            "command_band_rms_mm": 1.6913942053825377,
+            "frequencies": [
+              1.26953125,
+              1.3671875,
+              1.46484375,
+              1.5625,
+              1.66015625,
+              1.7578125,
+              1.85546875
+            ],
+            "phase_error_band_deg": [
+              -55.1173088037127,
+              -36.85438945883654,
+              -23.785438574892083,
+              -36.55468224532285,
+              -49.369174899304866,
+              31.055023065035822,
+              -55.56026543892911
+            ],
+            "observed_coherence_band": [
+              0.7639258354724242,
+              0.8644690463407315,
+              0.8846251592379647,
+              0.7881996953023521,
+              0.3493199754822796,
+              0.10273682231937277,
+              0.1146697699674334
+            ]
+          },
+          "common_pitch": {
+            "peak_hz": 1.85546875,
+            "observed_phase_deg": -94.37510105737402,
+            "model_phase_deg": -89.48728373932494,
+            "phase_error_deg": 4.887817318049098,
+            "observed_coherence": 0.14729481864247623,
+            "model_coherence": 0.98779287720866,
+            "observed_rms": 2.6408894599412696,
+            "model_rms": 2.1478600179863157,
+            "command_band_rms_mm": 0.8456746114646208,
+            "frequencies": [
+              1.26953125,
+              1.3671875,
+              1.46484375,
+              1.5625,
+              1.66015625,
+              1.7578125,
+              1.85546875
+            ],
+            "phase_error_band_deg": [
+              -38.99783093889175,
+              35.51481229605344,
+              41.08999021177859,
+              37.104177593362,
+              24.734044362118638,
+              75.95599199906648,
+              4.887817318049098
+            ],
+            "observed_coherence_band": [
+              0.11331484725839032,
+              0.8998098942484034,
+              0.9971509456180335,
+              0.9850840008215987,
+              0.8337438961666074,
+              0.030551785703338746,
+              0.14729481864247623
+            ]
+          }
+        }
+      }
+    ]
+  },
+  {
+    "episode": "manual-1087",
+    "kind": "unused_check",
+    "family": "baseline",
+    "duration_s": 18.799999999996317,
+    "response_loss": 0.9491839297822224,
+    "rate_rmse": [
+      14.60864347925083,
+      19.109716098465537,
+      21.014930840481973
+    ],
+    "acceleration_rmse": [
+      89.25816625457601,
+      153.41441103012224,
+      150.76905365448448
+    ],
+    "mean_rate_bias": [
+      1.0512045067360718,
+      -4.065190463465428,
+      -7.249472110184406
+    ],
+    "observed_band_rms": [
+      1.2467573047916127,
+      2.1856136028461717,
+      3.5054264743324546
+    ],
+    "model_band_rms": [
+      0.4489432004631447,
+      3.259394970956531,
+      1.1350897153433253
+    ],
+    "peak_hz": 1.7578125,
+    "observed_qr_phase_deg": -75.96455823372808,
+    "model_qr_phase_deg": -39.79615369390548,
+    "phase_error_deg": 36.168404539822596,
+    "observed_qr_coherence": 0.8089196952304616,
+    "local": 0.9277730678946637,
+    "amplitude": 0.8248223357918679,
+    "phase": 0.19271412413809352,
+    "score": 0.7395809863022315,
+    "spectral": [
+      {
+        "nperseg": 128,
+        "welch_averages": 5,
+        "note": "Overlapping averages are not independent; coherence is descriptive under feedback.",
+        "channels": {
+          "differential_yaw": {
+            "peak_hz": 1.7578125,
+            "observed_phase_deg": 112.45654103073804,
+            "model_phase_deg": 48.82581227032211,
+            "phase_error_deg": -63.63072876041592,
+            "observed_coherence": 0.4271538912646959,
+            "model_coherence": 0.1912348959113033,
+            "observed_rms": 4.461104944516653,
+            "model_rms": 1.4246585725420167,
+            "command_band_rms_mm": 1.5991198851745316,
+            "frequencies": [
+              1.3671875,
+              1.5625,
+              1.7578125
+            ],
+            "phase_error_band_deg": [
+              -52.26410100671706,
+              18.11563546941746,
+              -63.63072876041592
+            ],
+            "observed_coherence_band": [
+              0.33966858805375383,
+              0.3715894525274455,
+              0.4271538912646959
+            ]
+          },
+          "common_pitch": {
+            "peak_hz": 1.7578125,
+            "observed_phase_deg": -82.88161539488172,
+            "model_phase_deg": -22.041692905862188,
+            "phase_error_deg": 60.839922489019536,
+            "observed_coherence": 0.7787228891282564,
+            "model_coherence": 0.9648675303121856,
+            "observed_rms": 2.689875541362154,
+            "model_rms": 4.794011953193036,
+            "command_band_rms_mm": 1.4434665164337022,
+            "frequencies": [
+              1.3671875,
+              1.5625,
+              1.7578125
+            ],
+            "phase_error_band_deg": [
+              56.16497696651619,
+              85.44242182754142,
+              60.839922489019536
+            ],
+            "observed_coherence_band": [
+              0.1799935351531744,
+              0.8252005263960146,
+              0.7787228891282564
+            ]
+          }
+        }
+      },
+      {
+        "nperseg": 256,
+        "welch_averages": 2,
+        "note": "Overlapping averages are not independent; coherence is descriptive under feedback.",
+        "channels": {
+          "differential_yaw": {
+            "peak_hz": 1.7578125,
+            "observed_phase_deg": 169.40454049951705,
+            "model_phase_deg": 149.99317660878376,
+            "phase_error_deg": -19.411363890733316,
+            "observed_coherence": 0.9258304123341292,
+            "model_coherence": 0.8181977905084031,
+            "observed_rms": 3.5054264743324555,
+            "model_rms": 1.135089715343325,
+            "command_band_rms_mm": 1.05895873222302,
+            "frequencies": [
+              1.26953125,
+              1.3671875,
+              1.46484375,
+              1.5625,
+              1.66015625,
+              1.7578125,
+              1.85546875
+            ],
+            "phase_error_band_deg": [
+              -115.87452062163227,
+              -8.517463373493978,
+              -27.282853570900805,
+              21.89547114663005,
+              20.213850078132335,
+              -19.411363890733316,
+              -38.01093757216665
+            ],
+            "observed_coherence_band": [
+              0.24073329906849997,
+              0.9444969429431748,
+              0.9469482766166379,
+              0.698215069908066,
+              0.5107642830183295,
+              0.9258304123341292,
+              0.11421523929622976
+            ]
+          },
+          "common_pitch": {
+            "peak_hz": 1.26953125,
+            "observed_phase_deg": -23.194187486616993,
+            "model_phase_deg": -21.770627829697755,
+            "phase_error_deg": 1.4235596569192366,
+            "observed_coherence": 0.9753830218674172,
+            "model_coherence": 0.9928108133149105,
+            "observed_rms": 2.1856136028461712,
+            "model_rms": 3.259394970956531,
+            "command_band_rms_mm": 0.7383061520353277,
+            "frequencies": [
+              1.26953125,
+              1.3671875,
+              1.46484375,
+              1.5625,
+              1.66015625,
+              1.7578125,
+              1.85546875
+            ],
+            "phase_error_band_deg": [
+              1.4235596569192377,
+              -38.56868034401267,
+              53.12490330750273,
+              118.5322121594871,
+              24.07867156047389,
+              21.69501684592525,
+              161.32905038666163
+            ],
+            "observed_coherence_band": [
+              0.9753830218674172,
+              0.8624735447904961,
+              0.8708843653483531,
+              0.8473267138624203,
+              0.9906675624271174,
+              0.8621160186351833,
+              0.9800697272942848
+            ]
+          }
+        }
+      }
+    ]
+  },
+  {
+    "episode": "manual-1087",
+    "kind": "unused_check",
+    "family": "legacy",
+    "duration_s": 18.799999999996317,
+    "response_loss": 1.1394593023259278,
+    "rate_rmse": [
+      14.791795270713624,
+      20.934596602122838,
+      23.18987024832287
+    ],
+    "acceleration_rmse": [
+      90.31056087860678,
+      176.1674942378385,
+      173.98842148245024
+    ],
+    "mean_rate_bias": [
+      1.1535280750605776,
+      -3.6760587126356508,
+      -7.543379909232093
+    ],
+    "observed_band_rms": [
+      1.2467573047916127,
+      2.1856136028461717,
+      3.5054264743324546
+    ],
+    "model_band_rms": [
+      0.6966436682402117,
+      3.9053769415659074,
+      4.563193754750084
+    ],
+    "peak_hz": 1.7578125,
+    "observed_qr_phase_deg": -75.96455823372808,
+    "model_qr_phase_deg": -49.09692351541281,
+    "phase_error_deg": 26.867634718315273,
+    "observed_qr_coherence": 0.8089196952304616,
+    "local": 1.1186702395671173,
+    "amplitude": 0.24841004355798568,
+    "phase": 0.10794704104201613,
+    "score": 0.5684215214584445,
+    "spectral": [
+      {
+        "nperseg": 128,
+        "welch_averages": 5,
+        "note": "Overlapping averages are not independent; coherence is descriptive under feedback.",
+        "channels": {
+          "differential_yaw": {
+            "peak_hz": 1.7578125,
+            "observed_phase_deg": 112.45654103073804,
+            "model_phase_deg": 127.53871815649705,
+            "phase_error_deg": 15.082177125759022,
+            "observed_coherence": 0.4271538912646959,
+            "model_coherence": 0.7871543458596139,
+            "observed_rms": 4.461104944516653,
+            "model_rms": 6.249975141471708,
+            "command_band_rms_mm": 1.5991198851745316,
+            "frequencies": [
+              1.3671875,
+              1.5625,
+              1.7578125
+            ],
+            "phase_error_band_deg": [
+              -51.792275783910945,
+              95.41510721075855,
+              15.082177125759026
+            ],
+            "observed_coherence_band": [
+              0.33966858805375383,
+              0.3715894525274455,
+              0.4271538912646959
+            ]
+          },
+          "common_pitch": {
+            "peak_hz": 1.7578125,
+            "observed_phase_deg": -82.88161539488172,
+            "model_phase_deg": -28.078864751755088,
+            "phase_error_deg": 54.802750643126636,
+            "observed_coherence": 0.7787228891282564,
+            "model_coherence": 0.9510876866561863,
+            "observed_rms": 2.689875541362154,
+            "model_rms": 5.745688525791959,
+            "command_band_rms_mm": 1.4434665164337022,
+            "frequencies": [
+              1.3671875,
+              1.5625,
+              1.7578125
+            ],
+            "phase_error_band_deg": [
+              55.11293634170464,
+              81.51152924978622,
+              54.802750643126636
+            ],
+            "observed_coherence_band": [
+              0.1799935351531744,
+              0.8252005263960146,
+              0.7787228891282564
+            ]
+          }
+        }
+      },
+      {
+        "nperseg": 256,
+        "welch_averages": 2,
+        "note": "Overlapping averages are not independent; coherence is descriptive under feedback.",
+        "channels": {
+          "differential_yaw": {
+            "peak_hz": 1.7578125,
+            "observed_phase_deg": 169.40454049951705,
+            "model_phase_deg": 148.39427042294045,
+            "phase_error_deg": -21.010270076576596,
+            "observed_coherence": 0.9258304123341292,
+            "model_coherence": 0.961241172201534,
+            "observed_rms": 3.5054264743324555,
+            "model_rms": 4.563193754750084,
+            "command_band_rms_mm": 1.05895873222302,
+            "frequencies": [
+              1.26953125,
+              1.3671875,
+              1.46484375,
+              1.5625,
+              1.66015625,
+              1.7578125,
+              1.85546875
+            ],
+            "phase_error_band_deg": [
+              -94.84089158529015,
+              12.511862743961881,
+              -20.871532543059082,
+              71.3272316826213,
+              -9.704523713056266,
+              -21.010270076576596,
+              -102.3744363156219
+            ],
+            "observed_coherence_band": [
+              0.24073329906849997,
+              0.9444969429431748,
+              0.9469482766166379,
+              0.698215069908066,
+              0.5107642830183295,
+              0.9258304123341292,
+              0.11421523929622976
+            ]
+          },
+          "common_pitch": {
+            "peak_hz": 1.26953125,
+            "observed_phase_deg": -23.194187486616993,
+            "model_phase_deg": -20.36491124907643,
+            "phase_error_deg": 2.829276237540564,
+            "observed_coherence": 0.9753830218674172,
+            "model_coherence": 0.989178964909104,
+            "observed_rms": 2.1856136028461712,
+            "model_rms": 3.905376941565907,
+            "command_band_rms_mm": 0.7383061520353277,
+            "frequencies": [
+              1.26953125,
+              1.3671875,
+              1.46484375,
+              1.5625,
+              1.66015625,
+              1.7578125,
+              1.85546875
+            ],
+            "phase_error_band_deg": [
+              2.8292762375405633,
+              -42.1201792755303,
+              125.38282602144889,
+              120.68261665581358,
+              13.320354196885967,
+              10.91599376013163,
+              147.5814060782423
+            ],
+            "observed_coherence_band": [
+              0.9753830218674172,
+              0.8624735447904961,
+              0.8708843653483531,
+              0.8473267138624203,
+              0.9906675624271174,
+              0.8621160186351833,
+              0.9800697272942848
+            ]
+          }
+        }
+      }
+    ]
+  },
+  {
+    "episode": "manual-1087",
+    "kind": "unused_check",
+    "family": "response",
+    "duration_s": 18.799999999996317,
+    "response_loss": 0.8527222632751147,
+    "rate_rmse": [
+      13.816155880215591,
+      17.392721313179067,
+      20.497515468222925
+    ],
+    "acceleration_rmse": [
+      86.5152989782993,
+      134.9639458628825,
+      155.36086843354758
+    ],
+    "mean_rate_bias": [
+      1.022160166997904,
+      -3.890658965656314,
+      -7.203820811837925
+    ],
+    "observed_band_rms": [
+      1.2467573047916127,
+      2.1856136028461717,
+      3.5054264743324546
+    ],
+    "model_band_rms": [
+      0.44204223159982226,
+      2.4981778180685703,
+      1.8360399495674584
+    ],
+    "peak_hz": 1.7578125,
+    "observed_qr_phase_deg": -75.96455823372808,
+    "model_qr_phase_deg": -54.75320215167113,
+    "phase_error_deg": 21.21135608205694,
+    "observed_qr_coherence": 0.8089196952304616,
+    "local": 0.8322417605050457,
+    "amplitude": 0.5037472510904294,
+    "phase": 0.06774789145593507,
+    "score": 0.5479451829293771,
+    "spectral": [
+      {
+        "nperseg": 128,
+        "welch_averages": 5,
+        "note": "Overlapping averages are not independent; coherence is descriptive under feedback.",
+        "channels": {
+          "differential_yaw": {
+            "peak_hz": 1.7578125,
+            "observed_phase_deg": 112.45654103073804,
+            "model_phase_deg": 97.69092064634852,
+            "phase_error_deg": -14.765620384389514,
+            "observed_coherence": 0.4271538912646959,
+            "model_coherence": 0.4832741022431328,
+            "observed_rms": 4.461104944516653,
+            "model_rms": 2.169438947678828,
+            "command_band_rms_mm": 1.5991198851745316,
+            "frequencies": [
+              1.3671875,
+              1.5625,
+              1.7578125
+            ],
+            "phase_error_band_deg": [
+              -73.31703088700259,
+              54.384090648318974,
+              -14.765620384389514
+            ],
+            "observed_coherence_band": [
+              0.33966858805375383,
+              0.3715894525274455,
+              0.4271538912646959
+            ]
+          },
+          "common_pitch": {
+            "peak_hz": 1.7578125,
+            "observed_phase_deg": -82.88161539488172,
+            "model_phase_deg": -62.67963753474223,
+            "phase_error_deg": 20.201977860139504,
+            "observed_coherence": 0.7787228891282564,
+            "model_coherence": 0.9563896151329319,
+            "observed_rms": 2.689875541362154,
+            "model_rms": 3.362933877481855,
+            "command_band_rms_mm": 1.4434665164337022,
+            "frequencies": [
+              1.3671875,
+              1.5625,
+              1.7578125
+            ],
+            "phase_error_band_deg": [
+              25.503207016206655,
+              49.03717830168767,
+              20.201977860139504
+            ],
+            "observed_coherence_band": [
+              0.1799935351531744,
+              0.8252005263960146,
+              0.7787228891282564
+            ]
+          }
+        }
+      },
+      {
+        "nperseg": 256,
+        "welch_averages": 2,
+        "note": "Overlapping averages are not independent; coherence is descriptive under feedback.",
+        "channels": {
+          "differential_yaw": {
+            "peak_hz": 1.7578125,
+            "observed_phase_deg": 169.40454049951705,
+            "model_phase_deg": 129.45032914590269,
+            "phase_error_deg": -39.95421135361438,
+            "observed_coherence": 0.9258304123341292,
+            "model_coherence": 0.9391540171520584,
+            "observed_rms": 3.5054264743324555,
+            "model_rms": 1.8360399495674584,
+            "command_band_rms_mm": 1.05895873222302,
+            "frequencies": [
+              1.26953125,
+              1.3671875,
+              1.46484375,
+              1.5625,
+              1.66015625,
+              1.7578125,
+              1.85546875
+            ],
+            "phase_error_band_deg": [
+              -124.36820779989017,
+              -6.459677174359176,
+              8.437801046971838,
+              74.82907007149403,
+              -61.486849074203846,
+              -39.95421135361438,
+              -85.73428323886336
+            ],
+            "observed_coherence_band": [
+              0.24073329906849997,
+              0.9444969429431748,
+              0.9469482766166379,
+              0.698215069908066,
+              0.5107642830183295,
+              0.9258304123341292,
+              0.11421523929622976
+            ]
+          },
+          "common_pitch": {
+            "peak_hz": 1.26953125,
+            "observed_phase_deg": -23.194187486616993,
+            "model_phase_deg": -31.022822758734563,
+            "phase_error_deg": -7.828635272117569,
+            "observed_coherence": 0.9753830218674172,
+            "model_coherence": 0.9974944535247889,
+            "observed_rms": 2.1856136028461712,
+            "model_rms": 2.4981778180685703,
+            "command_band_rms_mm": 0.7383061520353277,
+            "frequencies": [
+              1.26953125,
+              1.3671875,
+              1.46484375,
+              1.5625,
+              1.66015625,
+              1.7578125,
+              1.85546875
+            ],
+            "phase_error_band_deg": [
+              -7.8286352721175705,
+              -39.61984823285652,
+              29.609820055251106,
+              111.2426893771749,
+              -25.19904265370552,
+              -13.861217531358541,
+              125.68728478729992
+            ],
+            "observed_coherence_band": [
+              0.9753830218674172,
+              0.8624735447904961,
+              0.8708843653483531,
+              0.8473267138624203,
+              0.9906675624271174,
+              0.8621160186351833,
+              0.9800697272942848
+            ]
+          }
+        }
+      }
+    ]
+  },
+  {
+    "episode": "manual-1087",
+    "kind": "unused_check",
+    "family": "response_nuisance",
+    "duration_s": 18.799999999996317,
+    "response_loss": 0.852450522861466,
+    "rate_rmse": [
+      13.851898773560357,
+      17.376364828591136,
+      20.495959955167915
+    ],
+    "acceleration_rmse": [
+      86.51887459976632,
+      134.8353132315524,
+      155.321705184019
+    ],
+    "mean_rate_bias": [
+      1.032538597811291,
+      -3.912986673171717,
+      -7.181897135971617
+    ],
+    "observed_band_rms": [
+      1.2467573047916127,
+      2.1856136028461717,
+      3.5054264743324546
+    ],
+    "model_band_rms": [
+      0.44037547497043433,
+      2.5056488478268713,
+      1.850996855548068
+    ],
+    "peak_hz": 1.7578125,
+    "observed_qr_phase_deg": -75.96455823372808,
+    "model_qr_phase_deg": -53.78793481188089,
+    "phase_error_deg": 22.17662342184719,
+    "observed_qr_coherence": 0.8089196952304616,
+    "local": 0.831932074618195,
+    "amplitude": 0.5031564967300434,
+    "phase": 0.07397533387338251,
+    "score": 0.5488304953139719,
+    "spectral": [
+      {
+        "nperseg": 128,
+        "welch_averages": 5,
+        "note": "Overlapping averages are not independent; coherence is descriptive under feedback.",
+        "channels": {
+          "differential_yaw": {
+            "peak_hz": 1.7578125,
+            "observed_phase_deg": 112.45654103073804,
+            "model_phase_deg": 96.98363842468076,
+            "phase_error_deg": -15.472902606057284,
+            "observed_coherence": 0.4271538912646959,
+            "model_coherence": 0.4860785161576287,
+            "observed_rms": 4.461104944516653,
+            "model_rms": 2.1817717884342818,
+            "command_band_rms_mm": 1.5991198851745316,
+            "frequencies": [
+              1.3671875,
+              1.5625,
+              1.7578125
+            ],
+            "phase_error_band_deg": [
+              -73.37116140723704,
+              53.31068138606278,
+              -15.472902606057284
+            ],
+            "observed_coherence_band": [
+              0.33966858805375383,
+              0.3715894525274455,
+              0.4271538912646959
+            ]
+          },
+          "common_pitch": {
+            "peak_hz": 1.7578125,
+            "observed_phase_deg": -82.88161539488172,
+            "model_phase_deg": -62.706510831996155,
+            "phase_error_deg": 20.175104562885565,
+            "observed_coherence": 0.7787228891282564,
+            "model_coherence": 0.9568006684424917,
+            "observed_rms": 2.689875541362154,
+            "model_rms": 3.351810873578288,
+            "command_band_rms_mm": 1.4434665164337022,
+            "frequencies": [
+              1.3671875,
+              1.5625,
+              1.7578125
+            ],
+            "phase_error_band_deg": [
+              25.5650960184027,
+              48.829973596192914,
+              20.175104562885565
+            ],
+            "observed_coherence_band": [
+              0.1799935351531744,
+              0.8252005263960146,
+              0.7787228891282564
+            ]
+          }
+        }
+      },
+      {
+        "nperseg": 256,
+        "welch_averages": 2,
+        "note": "Overlapping averages are not independent; coherence is descriptive under feedback.",
+        "channels": {
+          "differential_yaw": {
+            "peak_hz": 1.7578125,
+            "observed_phase_deg": 169.40454049951705,
+            "model_phase_deg": 128.76717286644515,
+            "phase_error_deg": -40.63736763307193,
+            "observed_coherence": 0.9258304123341292,
+            "model_coherence": 0.9397392692084902,
+            "observed_rms": 3.5054264743324555,
+            "model_rms": 1.8509968555480678,
+            "command_band_rms_mm": 1.05895873222302,
+            "frequencies": [
+              1.26953125,
+              1.3671875,
+              1.46484375,
+              1.5625,
+              1.66015625,
+              1.7578125,
+              1.85546875
+            ],
+            "phase_error_band_deg": [
+              -123.93779561505156,
+              -5.8997164827255455,
+              10.504933026739021,
+              75.24224166238602,
+              -62.67297908093404,
+              -40.63736763307193,
+              -86.08650532382005
+            ],
+            "observed_coherence_band": [
+              0.24073329906849997,
+              0.9444969429431748,
+              0.9469482766166379,
+              0.698215069908066,
+              0.5107642830183295,
+              0.9258304123341292,
+              0.11421523929622976
+            ]
+          },
+          "common_pitch": {
+            "peak_hz": 1.26953125,
+            "observed_phase_deg": -23.194187486616993,
+            "model_phase_deg": -30.57634820582596,
+            "phase_error_deg": -7.382160719208961,
+            "observed_coherence": 0.9753830218674172,
+            "model_coherence": 0.9975013433300937,
+            "observed_rms": 2.1856136028461712,
+            "model_rms": 2.5056488478268713,
+            "command_band_rms_mm": 0.7383061520353277,
+            "frequencies": [
+              1.26953125,
+              1.3671875,
+              1.46484375,
+              1.5625,
+              1.66015625,
+              1.7578125,
+              1.85546875
+            ],
+            "phase_error_band_deg": [
+              -7.382160719208962,
+              -38.637730237840266,
+              29.04926894580723,
+              111.29528468420708,
+              -25.11336780701783,
+              -13.586955112613232,
+              126.19531115537917
+            ],
+            "observed_coherence_band": [
+              0.9753830218674172,
+              0.8624735447904961,
+              0.8708843653483531,
+              0.8473267138624203,
+              0.9906675624271174,
+              0.8621160186351833,
+              0.9800697272942848
+            ]
+          }
+        }
+      }
+    ]
+  }
+]

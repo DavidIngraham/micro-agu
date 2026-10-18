@@ -164,3 +164,12 @@ The Rust tests verify stationary variance and analytic autocorrelation at two
 timesteps; `viewer/tests/integration/dryden.ts` checks Python/WASM sequence parity.
 Reference: https://www.mathworks.com/help/aeroblks/drydenwindturbulencemodelcontinuous.html
 
+
+# Offline grey-box identification
+
+The reusable [`microagu_sim.sysid`](crates/sim-python/python/microagu_sim/sysid/README.md)
+package provides prepared-log session validation, Rust recorded-input replay,
+bounded fitting, optional initial-state/wind corrections, residual diagnostics,
+and separate reserved-episode validation through a CLI. See the
+[Trout Lake comparison](../research/greybox-pipeline-2026-10-18/README.md) for
+baseline reproduction, synthetic parameter recovery and measured limitations.

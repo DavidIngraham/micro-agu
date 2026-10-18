@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "segments": [
+    {
+      "name": "tl-280",
+      "episode": "manual-266",
+      "role": "train",
+      "flight": "trout_lake",
+      "start_s": 280,
+      "duration_s": 20,
+      "causal_input": "/mnt/c/Users/davin/OneDrive/Documentos/Mission Planner/analysis/longitudinal-2026-10-09/turn-model-spike/2026-02-15-causal-input.npz",
+      "propulsion_input": "/mnt/c/Users/davin/OneDrive/Documentos/Mission Planner/analysis/longitudinal-2026-10-09/turn-model-spike/2026-02-15-propulsion-9x45.npz"
+    },
+    {
+      "name": "tl-440",
+      "episode": "manual-435",
+      "role": "validation",
+      "flight": "trout_lake",
+      "start_s": 440,
+      "duration_s": 20,
+      "causal_input": "/mnt/c/Users/davin/OneDrive/Documentos/Mission Planner/analysis/longitudinal-2026-10-09/turn-model-spike/2026-02-15-causal-input.npz",
+      "propulsion_input": "/mnt/c/Users/davin/OneDrive/Documentos/Mission Planner/analysis/longitudinal-2026-10-09/turn-model-spike/2026-02-15-propulsion-9x45.npz"
+    }
+  ],
+  "fit": {
+    "max_replays": 1,
+    "workers": 1
+  },
+  "starts": [
+    [
+      1,
+      1,
+      1,
+      1,
+      1,
+      0.04
+    ]
+  ]
+}

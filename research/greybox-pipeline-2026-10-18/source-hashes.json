@@ -1,0 +1,10 @@
+{
+  "research/greybox-pipeline-2026-10-18/study.py": "d4387c353421da1843023f822fd8c76a9340cd0a81e7c2ae2927f43809394291",
+  "simulation/crates/sim-python/python/microagu_sim/sysid/diagnostics.py": "30a329f29733361548ea09588e8133323723bb06cd2653a428f31fa5b4380e23",
+  "simulation/crates/sim-python/python/microagu_sim/sysid/__init__.py": "b9104b925360b18c3e7e291193f80851c8a050c9a21816c063ecc64312ad5c95",
+  "simulation/crates/sim-python/python/microagu_sim/sysid/model.py": "a0ccc8f576afe468b2d3d1c57a11b02309c6e8c52352ad1a8ee993dafad7f530",
+  "simulation/crates/sim-python/python/microagu_sim/sysid/data.py": "8f9a0079f8e7f0521f485d713bd5d7a50eb086d62c6f11c79f45b6e7d9736258",
+  "simulation/crates/sim-python/python/microagu_sim/sysid/metrics.py": "3272e08711d5777c59b96a1ec684f41a5a931565d6a06e1aa08daab0ff48ccd8",
+  "simulation/crates/sim-python/python/microagu_sim/sysid/fit.py": "267e00f98dd0323132e36b34bf723b786bd5a5b6f86d2688337b6d21e59c6bd5",
+  "simulation/crates/sim-python/python/microagu_sim/sysid/__main__.py": "d8c8e6af54d7dd28c3eabf40ee3d2c9c7f31dc37606b7b0cc8abb8b18ccc22d8"
+}

@@ -1,0 +1,79 @@
+{
+  "schema_version": 1,
+  "training_names": [
+    "tl-280"
+  ],
+  "training_episodes": [
+    "manual-266"
+  ],
+  "selection": {
+    "replays": 1,
+    "cost": 0.7595956893638207,
+    "theta": [
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      0.04
+    ],
+    "nuisance": {
+      "tl-280": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  "runs": [
+    {
+      "best": {
+        "replays": 1,
+        "cost": 0.7595956893638207,
+        "theta": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          0.04
+        ],
+        "nuisance": {
+          "tl-280": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      },
+      "status": {
+        "success": false,
+        "message": "Replay budget exhausted"
+      },
+      "replays": 1,
+      "seconds": 0.09445803402923048,
+      "trace": [
+        {
+          "replays": 1,
+          "cost": 0.7595956893638207,
+          "theta": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            0.04
+          ],
+          "nuisance": {
+            "tl-280": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "production_changed": false
+}

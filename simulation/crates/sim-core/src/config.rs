@@ -101,6 +101,13 @@ pub struct Parameters {
     pub cascade_x: f64,
     pub route_reference_left: f64,
     pub route_reference_right: f64,
+    /// Quasi-static aft center-of-pressure shift, as a fraction of chord at full brake.
+    /// Research option; zero preserves the calibrated production model.
+    #[serde(default)]
+    pub brake_cp_shift: f64,
+    /// Blend from uniform half-wing braking to outboard loading, preserving mean brake.
+    #[serde(default)]
+    pub brake_outboard_fraction: f64,
 }
 impl Default for Parameters {
     fn default() -> Self {
@@ -175,11 +182,13 @@ impl Default for Parameters {
             cascade_x: -0.1,
             route_reference_left: 0.0,
             route_reference_right: 0.0,
+            brake_cp_shift: 0.0,
+            brake_outboard_fraction: 0.0,
         }
     }
 }
 impl Parameters {
-    pub const KEYS: [&'static str; 70] = [
+    pub const KEYS: [&'static str; 72] = [
         "rho",
         "S",
         "b",
@@ -250,8 +259,10 @@ impl Parameters {
         "cascade_x",
         "route_reference_left",
         "route_reference_right",
+        "brake_cp_shift",
+        "brake_outboard_fraction",
     ];
-    pub fn packed(&self) -> [f64; 70] {
+    pub fn packed(&self) -> [f64; 72] {
         [
             self.rho,
             self.s,
@@ -323,11 +334,13 @@ impl Parameters {
             self.cascade_x,
             self.route_reference_left,
             self.route_reference_right,
+            self.brake_cp_shift,
+            self.brake_outboard_fraction,
         ]
     }
     pub fn from_packed(values: &[f64]) -> crate::Result<Self> {
-        if values.len() != 70 || !values.iter().all(|x| x.is_finite()) {
-            return Err("expected 70 finite parameters".into());
+        if !matches!(values.len(), 70 | 72) || !values.iter().all(|x| x.is_finite()) {
+            return Err("expected 70 legacy or 72 finite parameters".into());
         }
         Ok(Self {
             rho: values[0],
@@ -400,6 +413,8 @@ impl Parameters {
             cascade_x: values[67],
             route_reference_left: values[68],
             route_reference_right: values[69],
+            brake_cp_shift: values.get(70).copied().unwrap_or(0.),
+            brake_outboard_fraction: values.get(71).copied().unwrap_or(0.),
         })
     }
     pub fn validate(&self, mass: f64) -> crate::Result<()> {
@@ -419,6 +434,14 @@ impl Parameters {
         }
         if p[30..36].iter().any(|x| *x < 0.) {
             return Err("added inertia must be nonnegative".into());
+        }
+        if !(0.0..=0.35).contains(&self.brake_cp_shift)
+            || !(0.0..=1.0).contains(&self.brake_outboard_fraction)
+        {
+            return Err(
+                "brake load model requires CP shift in 0..0.35 chord and outboard fraction in 0..1"
+                    .into(),
+            );
         }
         let inertia = M::new(
             self.ixx, self.ixy, self.ixz, self.ixy, self.iyy, self.iyz, self.ixz, self.iyz,

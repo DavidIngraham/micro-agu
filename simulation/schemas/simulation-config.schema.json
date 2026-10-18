@@ -248,6 +248,18 @@
           "type": "number",
           "format": "double"
         },
+        "brake_cp_shift": {
+          "description": "Quasi-static aft center-of-pressure shift, as a fraction of chord at full brake. Research option; zero preserves the calibrated production model.",
+          "default": 0.0,
+          "type": "number",
+          "format": "double"
+        },
+        "brake_outboard_fraction": {
+          "description": "Blend from uniform half-wing braking to outboard loading, preserving mean brake.",
+          "default": 0.0,
+          "type": "number",
+          "format": "double"
+        },
         "brake_tilt_rad_per_m": {
           "type": "number",
           "format": "double"

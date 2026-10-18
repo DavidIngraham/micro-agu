@@ -868,6 +868,7 @@ dependencies = [
  "nalgebra",
  "schemars",
  "serde",
+ "serde_json",
  "ts-rs",
 ]
 

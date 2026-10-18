@@ -38,18 +38,25 @@ pub fn panel_loads(v: V, w: V, left: f64, right: f64, p: &Parameters) -> [PanelL
     let zmean = positions.iter().map(|v| v.z / 5.).sum::<f64>();
     std::array::from_fn(|i| {
         positions[i].z -= zmean;
-        let rotation = Rotation3::from_axis_angle(
-            &V::x_axis(),
-            angles[i] + p.brake_tilt_rad_per_m * 0.072 * (right - left),
-        );
-        let local = rotation.inverse() * (v + w.cross(&positions[i]));
-        let brake = if etas[i] < 0. {
+        // Preserve the integrated brake-loading proxy while moving it outboard.
+        // The weights sum to five; each half (plus half the center) sums to 2.5.
+        let base_brake = if etas[i] < 0. {
             left
         } else if etas[i] > 0. {
             right
         } else {
             (left + right) / 2.
         };
+        let outboard_weight = [2., 0.5, 0., 0.5, 2.][i];
+        let brake = base_brake * (1. + p.brake_outboard_fraction * (outboard_weight - 1.));
+        if p.brake_cp_shift != 0. {
+            positions[i].x = -p.c * p.brake_cp_shift * brake.clamp(0., 1.);
+        }
+        let rotation = Rotation3::from_axis_angle(
+            &V::x_axis(),
+            angles[i] + p.brake_tilt_rad_per_m * 0.072 * (right - left),
+        );
+        let local = rotation.inverse() * (v + w.cross(&positions[i]));
         let alpha = local.z.atan2(local.x);
         let cl = (p.cl0 + p.cla * alpha + p.clbrake * brake) / (1. + (alpha.abs() / 0.6).powi(4));
         let cd = p.cd0 + p.k_drag * cl * cl + p.cdbrake * brake * brake;

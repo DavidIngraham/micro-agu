@@ -1,0 +1,38 @@
+[
+  {
+    "id": "fix-check-old-limit",
+    "scheme": "lqi",
+    "limit": 0.5,
+    "demand": 0.5,
+    "turn": 0,
+    "voltage": 20.4,
+    "runtime": "/home/david/repos/micro-agu/research/lqi-longitudinal-2026-10-17/runtime-fixed",
+    "parameters": {}
+  },
+  {
+    "id": "fix-check-compensation-off",
+    "scheme": "lqi",
+    "limit": 0.5,
+    "demand": 0.5,
+    "turn": 0,
+    "voltage": 20.4,
+    "runtime": "/home/david/repos/micro-agu/research/lqi-longitudinal-2026-10-17/runtime-fixed",
+    "parameters": {
+      "FWD_BAT_VOLT_MAX": 0
+    }
+  },
+  {
+    "id": "fix-check-voltage-step",
+    "scheme": "lqi",
+    "limit": 1,
+    "up": 0.75,
+    "down": 1,
+    "demand": 1,
+    "upDemand": 0.75,
+    "downDemand": 1,
+    "turn": 35,
+    "voltage": 22.2,
+    "voltageStep": 20.4,
+    "runtime": "/home/david/repos/micro-agu/research/lqi-longitudinal-2026-10-17/runtime-fixed"
+  }
+]

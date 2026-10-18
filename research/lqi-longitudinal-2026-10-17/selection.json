@@ -1,0 +1,6 @@
+{
+  "candidate": {"CP3_HUP": 0.75, "CP3_HDN": 1.0, "CP3_HRTC": 0.7},
+  "decision_before_heldout": "All 12 nominal screens passed. The 1 m/s LQI climb uses mean throttle 0.596 straight and 0.599 at 35 deg/s reference, against a 0.6 nominal ceiling. Prefer 0.75 climb for disturbance headroom; retain 1 m/s descent. No gain, observer, sensing, trim-map or throttle-ceiling change.",
+  "trim_interpretation": "A failed constrained least-squares solve is not proof of physical infeasibility. Finite trajectory tests achieve near 1 m/s at the ceiling, with true speed outside some grid cells. Keep initial and flight-seeded solves. Do not infer a hard aerodynamic limit from this grid.",
+  "heldout": "Six paired new model/weather cases plus two paired unchanged-demand regression cases, frozen in heldout-specs.json before execution. Apply original protocol gates."
+}

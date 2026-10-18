@@ -1,0 +1,542 @@
+[
+  {
+    "spec": {
+      "id": "nominal-lqi-0.5-0",
+      "scheme": "lqi",
+      "limit": 0.5,
+      "demand": 0.5,
+      "turn": 0,
+      "seed": 73
+    },
+    "complete": true,
+    "failure": null,
+    "reasons": [],
+    "phases": {
+      "climb": {
+        "vertical_mean": 0.49447775320396314,
+        "vertical_bias": -0.005522246796036868,
+        "vertical_rms": 0.011777418318065856,
+        "pitch_rms": 0.06697434153733964,
+        "pitch_peak": 0.3920600896987662,
+        "throttle_mean": 0.5242953020134229,
+        "airspeed_mean": 4.3306729519964655
+      },
+      "descend": {
+        "vertical_mean": -0.4993605323497824,
+        "vertical_bias": 0.0006394676502176287,
+        "vertical_rms": 0.0038278598694636594,
+        "pitch_rms": 0.08604128934909949,
+        "pitch_peak": 0.3984087720582661,
+        "throttle_mean": 0.3570402684563758,
+        "airspeed_mean": 4.391534578235066
+      }
+    },
+    "quiet": {
+      "pitch_rms": 0.06587910896129533,
+      "height_rms": 0.018652159777909502,
+      "vertical_rms": 0.005748217449762726
+    },
+    "speed_min": 3.989596849104662,
+    "energy_Wh": 3.2412642829913945,
+    "shaft_W": 75.27996478036184,
+    "common_mm": 0.11078508372588122,
+    "pitch_peak": 6.094792307625126,
+    "pitch_rms": 0.9917722989866908,
+    "passed": true
+  },
+  {
+    "spec": {
+      "id": "nominal-baseline-0.5-0",
+      "scheme": "baseline",
+      "limit": 0.5,
+      "demand": 0.5,
+      "turn": 0,
+      "seed": 73
+    },
+    "complete": true,
+    "failure": null,
+    "reasons": [],
+    "phases": {
+      "climb": {
+        "vertical_mean": 0.4959907657495868,
+        "vertical_bias": -0.004009234250413237,
+        "vertical_rms": 0.015783768043683345,
+        "pitch_rms": 0.2039004853541336,
+        "pitch_peak": 0.7036020768945621,
+        "throttle_mean": 0.5246510067114094,
+        "airspeed_mean": 4.321206364879408
+      },
+      "descend": {
+        "vertical_mean": -0.47086881878972786,
+        "vertical_bias": 0.029131181210272132,
+        "vertical_rms": 0.031024749618221686,
+        "pitch_rms": 0.23583921361949597,
+        "pitch_peak": 0.6604440449334437,
+        "throttle_mean": 0.36226174496644287,
+        "airspeed_mean": 4.4093952924698705
+      }
+    },
+    "quiet": {
+      "pitch_rms": 0.24257031432119858,
+      "height_rms": 0.32256507926494693,
+      "vertical_rms": 0.0067307816666386374
+    },
+    "speed_min": 2.9369566812801136,
+    "energy_Wh": 3.3810840176395605,
+    "shaft_W": 78.52554995422635,
+    "common_mm": 0.0,
+    "pitch_peak": 40.513964612659166,
+    "pitch_rms": 4.713638805915266,
+    "passed": true
+  },
+  {
+    "spec": {
+      "id": "nominal-lqi-0.5-35",
+      "scheme": "lqi",
+      "limit": 0.5,
+      "demand": 0.5,
+      "turn": 35,
+      "seed": 73
+    },
+    "complete": true,
+    "failure": null,
+    "reasons": [],
+    "phases": {
+      "climb": {
+        "vertical_mean": 0.5010744961801048,
+        "vertical_bias": 0.0010744961801047914,
+        "vertical_rms": 0.03177522247226973,
+        "pitch_rms": 0.31476408490125873,
+        "pitch_peak": 0.7964355371900285,
+        "throttle_mean": 0.5396107382550335,
+        "airspeed_mean": 4.583838328726671
+      },
+      "descend": {
+        "vertical_mean": -0.49949115928119675,
+        "vertical_bias": 0.0005088407188032626,
+        "vertical_rms": 0.020886789181529676,
+        "pitch_rms": 0.22849511075417786,
+        "pitch_peak": 0.632538773027633,
+        "throttle_mean": 0.3814899328859061,
+        "airspeed_mean": 4.2931555578008584
+      }
+    },
+    "quiet": {
+      "pitch_rms": 0.08595064127784506,
+      "height_rms": 0.06505621813465416,
+      "vertical_rms": 0.007065494559112605
+    },
+    "speed_min": 4.070302261428371,
+    "energy_Wh": 3.5332541122829015,
+    "shaft_W": 82.05729226477187,
+    "common_mm": 0.5368434727588233,
+    "pitch_peak": 6.343044043961132,
+    "pitch_rms": 0.954280534890985,
+    "passed": true
+  },
+  {
+    "spec": {
+      "id": "nominal-baseline-0.5-35",
+      "scheme": "baseline",
+      "limit": 0.5,
+      "demand": 0.5,
+      "turn": 35,
+      "seed": 73
+    },
+    "complete": true,
+    "failure": null,
+    "reasons": [],
+    "phases": {
+      "climb": {
+        "vertical_mean": 0.5280160916238136,
+        "vertical_bias": 0.02801609162381359,
+        "vertical_rms": 0.05907199533305084,
+        "pitch_rms": 0.32398799187029026,
+        "pitch_peak": 1.0184898304110208,
+        "throttle_mean": 0.5427046979865772,
+        "airspeed_mean": 4.485384253829745
+      },
+      "descend": {
+        "vertical_mean": -0.4664716147062242,
+        "vertical_bias": 0.033528385293775845,
+        "vertical_rms": 0.03915454346704603,
+        "pitch_rms": 0.2095615725362912,
+        "pitch_peak": 0.584816367971538,
+        "throttle_mean": 0.38950666666666667,
+        "airspeed_mean": 4.346313881300866
+      }
+    },
+    "quiet": {
+      "pitch_rms": 0.24101191834100796,
+      "height_rms": 0.37317467082481626,
+      "vertical_rms": 0.005456844834540916
+    },
+    "speed_min": 3.0528153223674765,
+    "energy_Wh": 3.651922849853537,
+    "shaft_W": 84.81169001571752,
+    "common_mm": 0.0,
+    "pitch_peak": 43.03242448202142,
+    "pitch_rms": 4.7352513116288995,
+    "passed": true
+  },
+  {
+    "spec": {
+      "id": "nominal-lqi-0.75-0",
+      "scheme": "lqi",
+      "limit": 0.75,
+      "demand": 0.75,
+      "turn": 0,
+      "seed": 73
+    },
+    "complete": true,
+    "failure": null,
+    "reasons": [],
+    "phases": {
+      "climb": {
+        "vertical_mean": 0.6850396578635645,
+        "vertical_bias": -0.06496034213643559,
+        "vertical_rms": 0.06578063929348855,
+        "pitch_rms": 0.12629605291894133,
+        "pitch_peak": 0.6124404849790602,
+        "throttle_mean": 0.55303355704698,
+        "airspeed_mean": 4.312968958788254
+      },
+      "descend": {
+        "vertical_mean": -0.7049863926443344,
+        "vertical_bias": 0.045013607355665716,
+        "vertical_rms": 0.04515462800451764,
+        "pitch_rms": 0.08397267501119013,
+        "pitch_peak": 0.3829029041345818,
+        "throttle_mean": 0.3141744966442953,
+        "airspeed_mean": 4.3965466192826845
+      }
+    },
+    "quiet": {
+      "pitch_rms": 0.06936301706056638,
+      "height_rms": 0.16118070608871604,
+      "vertical_rms": 0.0033489391268180916
+    },
+    "speed_min": 3.832231302045369,
+    "energy_Wh": 3.306070551289199,
+    "shaft_W": 76.78446353980841,
+    "common_mm": 0.1926360743557571,
+    "pitch_peak": 8.431122605007081,
+    "pitch_rms": 1.3565161689041247,
+    "passed": true
+  },
+  {
+    "spec": {
+      "id": "nominal-baseline-0.75-0",
+      "scheme": "baseline",
+      "limit": 0.75,
+      "demand": 0.75,
+      "turn": 0,
+      "seed": 73
+    },
+    "complete": true,
+    "failure": null,
+    "reasons": [],
+    "phases": {
+      "climb": {
+        "vertical_mean": 0.7052489220393492,
+        "vertical_bias": -0.04475107796065071,
+        "vertical_rms": 0.046667653331450384,
+        "pitch_rms": 0.16814180208983168,
+        "pitch_peak": 0.6081352083997131,
+        "throttle_mean": 0.5562080536912754,
+        "airspeed_mean": 4.30069640394095
+      },
+      "descend": {
+        "vertical_mean": -0.679245320323294,
+        "vertical_bias": 0.070754679676706,
+        "vertical_rms": 0.07717674294023134,
+        "pitch_rms": 0.20644091961341468,
+        "pitch_peak": 0.6216654936231595,
+        "throttle_mean": 0.3196711409395974,
+        "airspeed_mean": 4.425062719335478
+      }
+    },
+    "quiet": {
+      "pitch_rms": 0.22171579831681315,
+      "height_rms": 0.4694194114582486,
+      "vertical_rms": 0.013196439586705645
+    },
+    "speed_min": 2.73489757374342,
+    "energy_Wh": 3.4766992885563317,
+    "shaft_W": 80.7447494116164,
+    "common_mm": 0.0,
+    "pitch_peak": 41.61918823840008,
+    "pitch_rms": 5.187631299041286,
+    "passed": true
+  },
+  {
+    "spec": {
+      "id": "nominal-lqi-0.75-35",
+      "scheme": "lqi",
+      "limit": 0.75,
+      "demand": 0.75,
+      "turn": 35,
+      "seed": 73
+    },
+    "complete": true,
+    "failure": null,
+    "reasons": [],
+    "phases": {
+      "climb": {
+        "vertical_mean": 0.700126234719718,
+        "vertical_bias": -0.04987376528028188,
+        "vertical_rms": 0.06577420230184278,
+        "pitch_rms": 0.36748699657627276,
+        "pitch_peak": 1.1456493765476838,
+        "throttle_mean": 0.5650536912751679,
+        "airspeed_mean": 4.669495767596576
+      },
+      "descend": {
+        "vertical_mean": -0.7016374047307261,
+        "vertical_bias": 0.048362595269273986,
+        "vertical_rms": 0.05385715881656863,
+        "pitch_rms": 0.19144466905911545,
+        "pitch_peak": 0.617294424584048,
+        "throttle_mean": 0.3400666666666667,
+        "airspeed_mean": 4.253065916180244
+      }
+    },
+    "quiet": {
+      "pitch_rms": 0.06929528339131279,
+      "height_rms": 0.20027901048033683,
+      "vertical_rms": 0.0032188678809330438
+    },
+    "speed_min": 4.018656882189962,
+    "energy_Wh": 3.604978139318087,
+    "shaft_W": 83.72295679814468,
+    "common_mm": 1.6137797014583741,
+    "pitch_peak": 8.331341302752552,
+    "pitch_rms": 1.3064719416210457,
+    "passed": true
+  },
+  {
+    "spec": {
+      "id": "nominal-baseline-0.75-35",
+      "scheme": "baseline",
+      "limit": 0.75,
+      "demand": 0.75,
+      "turn": 35,
+      "seed": 73
+    },
+    "complete": true,
+    "failure": null,
+    "reasons": [],
+    "phases": {
+      "climb": {
+        "vertical_mean": 0.7604392631331421,
+        "vertical_bias": 0.01043926313314224,
+        "vertical_rms": 0.05484133803511391,
+        "pitch_rms": 0.3259835778454875,
+        "pitch_peak": 1.001831903620321,
+        "throttle_mean": 0.5741266666666665,
+        "airspeed_mean": 4.536891822009706
+      },
+      "descend": {
+        "vertical_mean": -0.6703082445749117,
+        "vertical_bias": 0.07969175542508829,
+        "vertical_rms": 0.08584427294909405,
+        "pitch_rms": 0.26993277702386587,
+        "pitch_peak": 0.6620973233607285,
+        "throttle_mean": 0.35062416107382555,
+        "airspeed_mean": 4.32916785573126
+      }
+    },
+    "quiet": {
+      "pitch_rms": 0.23001794260504288,
+      "height_rms": 0.5576023424936114,
+      "vertical_rms": 0.014345945281520167
+    },
+    "speed_min": 2.884371908491714,
+    "energy_Wh": 3.731858737148902,
+    "shaft_W": 86.66707276259265,
+    "common_mm": 0.0,
+    "pitch_peak": 43.7565017663062,
+    "pitch_rms": 5.290511080755074,
+    "passed": true
+  },
+  {
+    "spec": {
+      "id": "nominal-lqi-1.0-0",
+      "scheme": "lqi",
+      "limit": 1,
+      "demand": 1,
+      "turn": 0,
+      "seed": 73
+    },
+    "complete": true,
+    "failure": null,
+    "reasons": [],
+    "phases": {
+      "climb": {
+        "vertical_mean": 0.9791881668349073,
+        "vertical_bias": -0.020811833165092643,
+        "vertical_rms": 0.028128894898546076,
+        "pitch_rms": 0.14078216036904026,
+        "pitch_peak": 0.5332696987516915,
+        "throttle_mean": 0.5963691275167785,
+        "airspeed_mean": 4.29778341496382
+      },
+      "descend": {
+        "vertical_mean": -1.0108384189198591,
+        "vertical_bias": -0.010838418919859082,
+        "vertical_rms": 0.014155945056186286,
+        "pitch_rms": 0.10653257907395818,
+        "pitch_peak": 0.4202013874846844,
+        "throttle_mean": 0.23795333333333332,
+        "airspeed_mean": 4.406710854495733
+      }
+    },
+    "quiet": {
+      "pitch_rms": 0.07803503865568466,
+      "height_rms": 0.15744660473204322,
+      "vertical_rms": 0.0038177745431048427
+    },
+    "speed_min": 3.565395572660945,
+    "energy_Wh": 3.443520913778933,
+    "shaft_W": 79.97553794441467,
+    "common_mm": 0.5423827269451174,
+    "pitch_peak": 12.186606969024334,
+    "pitch_rms": 1.9295984913154325,
+    "passed": true
+  },
+  {
+    "spec": {
+      "id": "nominal-baseline-1.0-0",
+      "scheme": "baseline",
+      "limit": 1,
+      "demand": 1,
+      "turn": 0,
+      "seed": 73
+    },
+    "complete": true,
+    "failure": null,
+    "reasons": [],
+    "phases": {
+      "climb": {
+        "vertical_mean": 0.9727358151625268,
+        "vertical_bias": -0.027264184837473136,
+        "vertical_rms": 0.029657339594616392,
+        "pitch_rms": 0.2124889077408107,
+        "pitch_peak": 0.732909451429407,
+        "throttle_mean": 0.5951409395973154,
+        "airspeed_mean": 4.283223476377394
+      },
+      "descend": {
+        "vertical_mean": -1.0341284950696679,
+        "vertical_bias": -0.03412849506966765,
+        "vertical_rms": 0.07504895102809804,
+        "pitch_rms": 0.25214959149516697,
+        "pitch_peak": 0.6743156332490159,
+        "throttle_mean": 0.2315771812080537,
+        "airspeed_mean": 4.453787323852787
+      }
+    },
+    "quiet": {
+      "pitch_rms": 0.2218009005946692,
+      "height_rms": 0.5269569738967487,
+      "vertical_rms": 0.01317765289250101
+    },
+    "speed_min": 2.5922855122725643,
+    "energy_Wh": 3.5881170740686543,
+    "shaft_W": 83.32970268429406,
+    "common_mm": 0.0,
+    "pitch_peak": 41.668208939225956,
+    "pitch_rms": 5.548816687039525,
+    "passed": true
+  },
+  {
+    "spec": {
+      "id": "nominal-lqi-1.0-35",
+      "scheme": "lqi",
+      "limit": 1,
+      "demand": 1,
+      "turn": 35,
+      "seed": 73
+    },
+    "complete": true,
+    "failure": null,
+    "reasons": [],
+    "phases": {
+      "climb": {
+        "vertical_mean": 0.9560702333401001,
+        "vertical_bias": -0.04392976665989997,
+        "vertical_rms": 0.05027133717888422,
+        "pitch_rms": 0.36894654332171256,
+        "pitch_peak": 0.8792919925613292,
+        "throttle_mean": 0.599,
+        "airspeed_mean": 4.814517333261036
+      },
+      "descend": {
+        "vertical_mean": -1.018686292405698,
+        "vertical_bias": -0.018686292405698125,
+        "vertical_rms": 0.022353792174925412,
+        "pitch_rms": 0.15709048115938015,
+        "pitch_peak": 0.5223057531315628,
+        "throttle_mean": 0.262241610738255,
+        "airspeed_mean": 4.209253727169676
+      }
+    },
+    "quiet": {
+      "pitch_rms": 0.07748785405787198,
+      "height_rms": 0.08469019193675634,
+      "vertical_rms": 0.003634977491101195
+    },
+    "speed_min": 3.5882344711006766,
+    "energy_Wh": 3.70475288784935,
+    "shaft_W": 86.03880518477027,
+    "common_mm": 1.8855126121279169,
+    "pitch_peak": 20.35733227668396,
+    "pitch_rms": 2.138141473614763,
+    "passed": true
+  },
+  {
+    "spec": {
+      "id": "nominal-baseline-1.0-35",
+      "scheme": "baseline",
+      "limit": 1,
+      "demand": 1,
+      "turn": 35,
+      "seed": 73
+    },
+    "complete": true,
+    "failure": null,
+    "reasons": [],
+    "phases": {
+      "climb": {
+        "vertical_mean": 0.9433886378593273,
+        "vertical_bias": -0.05661136214067261,
+        "vertical_rms": 0.06011286877575438,
+        "pitch_rms": 0.24320237656627816,
+        "pitch_peak": 0.72799255906712,
+        "throttle_mean": 0.5982684563758389,
+        "airspeed_mean": 4.588484246234242
+      },
+      "descend": {
+        "vertical_mean": -1.0226428115648623,
+        "vertical_bias": -0.022642811564862267,
+        "vertical_rms": 0.07187180301381473,
+        "pitch_rms": 0.2577122644226888,
+        "pitch_peak": 0.6723390521919173,
+        "throttle_mean": 0.270758389261745,
+        "airspeed_mean": 4.307858667377121
+      }
+    },
+    "quiet": {
+      "pitch_rms": 0.20957823445710927,
+      "height_rms": 1.0495107904195373,
+      "vertical_rms": 0.021376762818152484
+    },
+    "speed_min": 2.8712031527236657,
+    "energy_Wh": 3.834544094059852,
+    "shaft_W": 89.04919344121595,
+    "common_mm": 0.0,
+    "pitch_peak": 45.2514171236393,
+    "pitch_rms": 5.430399305034417,
+    "passed": true
+  }
+]

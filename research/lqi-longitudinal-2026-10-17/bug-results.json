@@ -1,0 +1,17 @@
+[
+  {
+    "spec": {
+      "id": "bug-original-limit",
+      "scheme": "lqi",
+      "limit": 0.5,
+      "demand": 0.5,
+      "turn": 0,
+      "voltage": 20.4,
+      "runtime": "/home/david/repos/micro-agu/research/lqi-longitudinal-2026-10-17/runtime-original"
+    },
+    "complete": false,
+    "failure": "Error: Initial settling failed",
+    "reasons": [],
+    "passed": false
+  }
+]

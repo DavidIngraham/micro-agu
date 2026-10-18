@@ -1,0 +1,18 @@
+{
+  "original_microagu_commit": "058a8df",
+  "fixed_ardupilot_commit": "20a8fb59c8",
+  "base_ardupilot_commit": "010ada6a4f0b26910fc18ecca176d2e65c5ed9d7",
+  "runtime_sha256": {
+    "runtime-original": {
+      "arduplane.js": "893b28e3cbea410e48736d7f7426928cbe8b56f22c1813914aa290172f1e8565",
+      "arduplane.wasm": "4995915df52e4977185e2f7e1e4616118576a9883923a7398679edcf6876a49e"
+    },
+    "runtime-fixed": {
+      "arduplane.js": "893b28e3cbea410e48736d7f7426928cbe8b56f22c1813914aa290172f1e8565",
+      "arduplane.wasm": "fb61d7d40def58d5a4757ff7135299749436e8cdfcbb8865182820f34055f82c"
+    }
+  },
+  "physics_wasm_sha256": "ceae58a55b4585e85b86a142a15c1f5b9bcfbf3e51f21cddbdf741ac4a75c158",
+  "physics_config_sha256": "01c7127e4f83adcaf385aa02dc44f8b5fc601c6dd2f0f4ab1602dc3412fc72f6",
+  "propeller_data_sha256": "1897a098858e69611bea1cdcb184fc7e8f6337a60eddf7eb9b4fd7e849530af9"
+}

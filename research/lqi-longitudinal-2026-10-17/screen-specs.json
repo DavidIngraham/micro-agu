@@ -1,0 +1,98 @@
+[
+  {
+    "id": "nominal-lqi-0.5-0",
+    "scheme": "lqi",
+    "limit": 0.5,
+    "demand": 0.5,
+    "turn": 0,
+    "seed": 73
+  },
+  {
+    "id": "nominal-baseline-0.5-0",
+    "scheme": "baseline",
+    "limit": 0.5,
+    "demand": 0.5,
+    "turn": 0,
+    "seed": 73
+  },
+  {
+    "id": "nominal-lqi-0.5-35",
+    "scheme": "lqi",
+    "limit": 0.5,
+    "demand": 0.5,
+    "turn": 35,
+    "seed": 73
+  },
+  {
+    "id": "nominal-baseline-0.5-35",
+    "scheme": "baseline",
+    "limit": 0.5,
+    "demand": 0.5,
+    "turn": 35,
+    "seed": 73
+  },
+  {
+    "id": "nominal-lqi-0.75-0",
+    "scheme": "lqi",
+    "limit": 0.75,
+    "demand": 0.75,
+    "turn": 0,
+    "seed": 73
+  },
+  {
+    "id": "nominal-baseline-0.75-0",
+    "scheme": "baseline",
+    "limit": 0.75,
+    "demand": 0.75,
+    "turn": 0,
+    "seed": 73
+  },
+  {
+    "id": "nominal-lqi-0.75-35",
+    "scheme": "lqi",
+    "limit": 0.75,
+    "demand": 0.75,
+    "turn": 35,
+    "seed": 73
+  },
+  {
+    "id": "nominal-baseline-0.75-35",
+    "scheme": "baseline",
+    "limit": 0.75,
+    "demand": 0.75,
+    "turn": 35,
+    "seed": 73
+  },
+  {
+    "id": "nominal-lqi-1.0-0",
+    "scheme": "lqi",
+    "limit": 1.0,
+    "demand": 1.0,
+    "turn": 0,
+    "seed": 73
+  },
+  {
+    "id": "nominal-baseline-1.0-0",
+    "scheme": "baseline",
+    "limit": 1.0,
+    "demand": 1.0,
+    "turn": 0,
+    "seed": 73
+  },
+  {
+    "id": "nominal-lqi-1.0-35",
+    "scheme": "lqi",
+    "limit": 1.0,
+    "demand": 1.0,
+    "turn": 35,
+    "seed": 73
+  },
+  {
+    "id": "nominal-baseline-1.0-35",
+    "scheme": "baseline",
+    "limit": 1.0,
+    "demand": 1.0,
+    "turn": 35,
+    "seed": 73
+  }
+]

@@ -1,0 +1,9 @@
+{
+  "objective": "Expand longitudinal authority from +/-0.5 toward +/-1 m/s with current sensing, 132 mm geometry, 3.8-4.4 m/s speed target and up to 35 deg/s turns",
+  "stages": ["physical trim screen", "fixed-gain nominal 0.5/0.75/1.0", "conditional trim compensation or retune", "paired held-out Dryden and uncertainty", "final deployed configuration transitions"],
+  "initial_candidate": "Packaged firmware 4995915df52e4977185e2f7e1e4616118576a9883923a7398679edcf6876a49e; change HUP/HDN only, HRTC=.7",
+  "screen_gates": {"min_airspeed_mps":2, "max_abs_roll_deg":60, "max_abs_pitch_deg":45, "min_height_m":15, "calm_vertical_bias_mps":0.15, "calm_vertical_rms_mps":0.25, "disturbed_vertical_bias_mps":0.35, "disturbed_vertical_rms_mps":0.55, "quiet_relative_pitch_rate_rms_deg_s":3, "quiet_height_rms_m":1.5, "quiet_vertical_rms_mps":0.2},
+  "comparison_gates": "At matched commands, candidate pitch-rate RMS and peak <=1.2*PG+TECS+2 deg/s; preserve quiet recovery; report saturation and power separately. No aggregate score can override a stability/recovery failure.",
+  "reporting": "Per-case outcomes, median/p90/worst; power is modeled shaft power. Failure screens are operational regression criteria, not calibrated collapse/stall or structural boundaries. Freeze held-out cases before running them.",
+  "release": "Only proven bounds; do not silently loosen gates after failures. Retain failed candidates and narrow envelope if needed. Dryden is synthetic and canopy collapse is not modeled."
+}

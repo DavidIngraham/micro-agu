@@ -1,0 +1,68 @@
+[
+  {
+    "id": "final-0-lqi",
+    "scheme": "lqi",
+    "limit": 1,
+    "up": 0.75,
+    "down": 1,
+    "demand": 1,
+    "upDemand": 0.75,
+    "downDemand": 1,
+    "turn": 0,
+    "voltage": 22.2,
+    "transitions": true,
+    "seed": 44017,
+    "parameters": {
+      "TECS_CLMB_MAX": 1,
+      "TECS_SINK_MAX": 2.5
+    }
+  },
+  {
+    "id": "final-0-baseline",
+    "scheme": "baseline",
+    "limit": 1,
+    "up": 0.75,
+    "down": 1,
+    "demand": 1,
+    "upDemand": 0.75,
+    "downDemand": 1,
+    "turn": 0,
+    "voltage": 22.2,
+    "transitions": true,
+    "seed": 44017,
+    "parameters": {}
+  },
+  {
+    "id": "final-1-lqi",
+    "scheme": "lqi",
+    "limit": 1,
+    "up": 0.75,
+    "down": 1,
+    "demand": 1,
+    "upDemand": 0.75,
+    "downDemand": 1,
+    "turn": 35,
+    "voltage": 20.4,
+    "transitions": true,
+    "seed": 44018,
+    "parameters": {
+      "TECS_CLMB_MAX": 1,
+      "TECS_SINK_MAX": 2.5
+    }
+  },
+  {
+    "id": "final-1-baseline",
+    "scheme": "baseline",
+    "limit": 1,
+    "up": 0.75,
+    "down": 1,
+    "demand": 1,
+    "upDemand": 0.75,
+    "downDemand": 1,
+    "turn": 35,
+    "voltage": 20.4,
+    "transitions": true,
+    "seed": 44018,
+    "parameters": {}
+  }
+]

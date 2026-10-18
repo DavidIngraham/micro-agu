@@ -1,0 +1,27 @@
+[
+  {
+    "turn": 0,
+    "voltage": 20.4,
+    "turbulence": 0.2,
+    "wind": 0.8,
+    "thermal": 0,
+    "seed": 755759826,
+    "scales": {
+      "Cmq": 1.1718277676575735,
+      "joint_c_pitch": 1.17956891143603,
+      "joint_c_roll": 1.1606941889989246,
+      "joint_c_yaw": 1.0460410184123663,
+      "CLbrake": 0.7268089939071684,
+      "CDbrake": 1.2152610839556635
+    },
+    "slew": 0.9620012893890808,
+    "id": "diagnostic-3-lqi",
+    "scheme": "lqi",
+    "limit": 1,
+    "up": 0.75,
+    "down": 1,
+    "demand": 1,
+    "upDemand": 0.75,
+    "downDemand": 1
+  }
+]

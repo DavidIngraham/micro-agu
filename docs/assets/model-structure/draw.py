@@ -19,7 +19,7 @@ s=start('How one simulation step is assembled','Commands become brake travel and
 text(s,32,45,['One aircraft model, two ways to drive it'],'title')
 text(s,32,79,['Recorded commands for replay, or live commands from a controller / native ArduPilot SITL.'])
 box(s,30,125,290,120,'1 · Commands & actuators',['Throttle + left/right PWM or pull','Asymmetric mapping, limits, rate','Slack / preload → effective pull'])
-box(s,410,125,350,125,'2a · Canopy aerodynamics',['Five curved rigid panels','Local airflow + rotation + brakes','Sum panel forces and moments'])
+box(s,410,125,350,125,'2a · Canopy aerodynamics',['Five regions on one rigid canopy','Local airflow + rotation + brakes','Sum panel forces and moments'])
 box(s,410,280,350,125,'2b · Payload & propulsion',['Payload drag + thrust at motor','Voltage → RPM lag → prop map','Shaft torque + rotor momentum'])
 box(s,410,435,350,105,'2c · Coupling & gravity',['Weights of both bodies','Relative-rotation spring/damper'])
 path(s,'M320 175H410');path(s,'M350 175V330H410')

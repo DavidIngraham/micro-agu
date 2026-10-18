@@ -11,7 +11,7 @@
 <text x="48" y="235" class="small">Slack / preload → effective pull</text>
 <rect x="410" y="125" width="350" height="125" rx="10" class="box"/>
 <text x="428" y="157" class="head">2a · Canopy aerodynamics</text>
-<text x="428" y="187" class="small">Five curved rigid panels</text>
+<text x="428" y="187" class="small">Five regions on one rigid canopy</text>
 <text x="428" y="211" class="small">Local airflow + rotation + brakes</text>
 <text x="428" y="235" class="small">Sum panel forces and moments</text>
 <rect x="410" y="280" width="350" height="125" rx="10" class="box"/>

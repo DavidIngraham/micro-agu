@@ -58,6 +58,34 @@ The force model has four main pieces:
 
 Added-air inertia represents the surrounding air that must accelerate with the canopy. It enters the canopy's coupled translational/rotational mass matrix; it is neither another rigid body nor an extra lift arrow. Likewise, the five panels are aerodynamic integration elements on one canopy, not five articulated wing segments.
 
+### How the five-panel canopy produces loads
+
+The canopy is one rigid body, divided into **five equal-area aerodynamic integration regions** along its curved span. The panel centers have different positions and local orientations. Lift and drag are evaluated at each center, then combined into the force and moment on the canopy.
+
+[Explore the five-panel canopy aerodynamics](https://davidingraham.github.io/assets/microagu-viewer/canopy-panels.html)
+
+*Select symmetric flight or right braking, inspect any panel, and switch between three-quarter and front views. These are frozen operating points calculated by the current Rust plant with the as-built Trout Lake SITL preset: 7 m/s, 4.58° canopy angle of attack, zero sideslip and zero angular rate. They illustrate the force calculation; neither case is claimed to be a trimmed equilibrium or a predicted turn trajectory. The earlier refinement results below retain their historical model provenance.*
+
+For panel $i$, its velocity through the air in local panel coordinates is
+
+$$
+\mathbf{v}_i = R_i^T\left[\mathbf{v}_{c,\mathrm{air}} + \boldsymbol{\omega}_c\times\mathbf{r}_i\right].
+$$
+
+Here $\mathbf{r}_i$ is the panel center's offset from the canopy CG, $R_i$ maps the panel frame to the canopy frame, and $\mathbf{v}_{c,\mathrm{air}}$ and $\boldsymbol{\omega}_c$ are expressed in canopy coordinates. The blue arrows show incoming airflow, opposite this local velocity. Even in a uniform wind, canopy rotation changes the velocity at the different panel centers.
+
+The two left panels receive left brake pull; the two right panels receive right brake pull; the center panel receives their average. Local angle of attack and brake pull change lift and drag coefficients. The model also applies an effective aerodynamic inclination change proportional to differential brake pull. This is a modeled aerodynamic correction, not five physical hinges or simulated fabric deformation. The front inset shows those effective inclinations; the main surface retains its rigid geometric arc.
+
+The panel forces and their moment arms contribute
+
+$$
+\mathbf{F}_{\mathrm{panels}}=\sum_{i=1}^{5}(\mathbf{L}_i+\mathbf{D}_i),
+\qquad
+\mathbf{M}_{\mathrm{panels}}=\sum_{i=1}^{5}\mathbf{r}_i\times(\mathbf{L}_i+\mathbf{D}_i).
+$$
+
+The plant then adds separate whole-canopy side-force and aerodynamic moment terms, based on sideslip, angle of attack, angular rate and differential braking. The figure lists the panel moments and additional aerodynamic moments separately, so the distributed-panel calculation is not mistaken for the entire aerodynamic model. Gravity, suspension reactions and added-air inertia enter elsewhere in the body equations.
+
 ### How the equations become a simulation step
 
 ![Simulation block diagram from commands and actuator mapping through canopy and payload loads, constrained acceleration solving, integration and payload sensor feedback](assets/model-structure/simulation-blocks.svg)

@@ -3,7 +3,21 @@ use crate::config::Parameters;
 use crate::state::*;
 use nalgebra::{Rotation3, UnitQuaternion};
 
-pub fn panel(v: V, w: V, left: f64, right: f64, p: &Parameters) -> (V, V) {
+/// Loads at each aerodynamic integration point, in the canopy FRD frame.
+/// Diagnostics share the force calculation used by the plant.
+#[derive(Clone, Debug)]
+pub struct PanelLoad {
+    pub position: V,
+    pub inclination: f64,
+    pub local_velocity: V,
+    pub brake: f64,
+    pub alpha: f64,
+    pub lift: V,
+    pub drag: V,
+    pub force: V,
+}
+
+pub fn panel_loads(v: V, w: V, left: f64, right: f64, p: &Parameters) -> [PanelLoad; 5] {
     let curvature = p.canopy_half_arc;
     let mut positions = [V::zeros(); 5];
     let mut etas = [0.; 5];
@@ -22,8 +36,7 @@ pub fn panel(v: V, w: V, left: f64, right: f64, p: &Parameters) -> (V, V) {
         };
     }
     let zmean = positions.iter().map(|v| v.z / 5.).sum::<f64>();
-    let (mut force, mut moment) = (V::zeros(), V::zeros());
-    for i in 0..5 {
+    std::array::from_fn(|i| {
         positions[i].z -= zmean;
         let rotation = Rotation3::from_axis_angle(
             &V::x_axis(),
@@ -44,8 +57,25 @@ pub fn panel(v: V, w: V, left: f64, right: f64, p: &Parameters) -> (V, V) {
             * (0.5 * p.rho * p.s / 5.
                 * (local.x.hypot(local.z) * cl * V::new(local.z, 0., -local.x)
                     - local.norm() * cd * local));
-        force += f;
-        moment += positions[i].cross(&f);
+        let scale = 0.5 * p.rho * p.s / 5.;
+        PanelLoad {
+            position: positions[i],
+            inclination: angles[i] + p.brake_tilt_rad_per_m * 0.072 * (right - left),
+            local_velocity: local,
+            brake,
+            alpha,
+            lift: rotation * (scale * local.x.hypot(local.z) * cl * V::new(local.z, 0., -local.x)),
+            drag: rotation * (-scale * local.norm() * cd * local),
+            force: f,
+        }
+    })
+}
+
+pub fn panel(v: V, w: V, left: f64, right: f64, p: &Parameters) -> (V, V) {
+    let (mut force, mut moment) = (V::zeros(), V::zeros());
+    for load in panel_loads(v, w, left, right, p) {
+        force += load.force;
+        moment += load.position.cross(&load.force);
     }
     (force, moment)
 }

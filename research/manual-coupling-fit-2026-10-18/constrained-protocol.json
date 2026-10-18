@@ -1,0 +1,33 @@
+{
+  "reason": "First fit improves amplitude/phase but regresses local waveform error. Constrain training errors before repeating validation.",
+  "validation": "Reused after first-stage inspection, not independent evidence",
+  "training_local_limit": 1.03,
+  "training_rate_channel_limit": 1.03,
+  "optimizer": "Powell two starts, 180 evaluations each; select lowest original training score among feasible evaluated points; default baseline included",
+  "bounds": [
+    [
+      0.5,
+      1.5
+    ],
+    [
+      0.5,
+      1.5
+    ],
+    [
+      0.2,
+      1.5
+    ],
+    [
+      0.2,
+      1.5
+    ],
+    [
+      0.85,
+      1.15
+    ],
+    [
+      0.0,
+      0.12
+    ]
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "research/manual-coupling-fit-2026-10-18/report.py": "3efa985a25cade51306746c1be2186f51658fec6204b567a7b611c84b3649259",
+  "research/manual-coupling-fit-2026-10-18/constrained.py": "2cfffa398817c3e6830db614f8a3b95e22058746587039cb6690cfa083987eed",
+  "research/manual-coupling-fit-2026-10-18/run.py": "542a91249e7732a9eab83de6dcd102dfa6d451e2d9ae8e0314acb75ac36a621f",
+  "research/manual-coupling-fit-2026-10-18/audit.py": "b6390dd14e77427cf6c1e456e1b48707f7c5d85b8066948c442ea29e711375c8",
+  "simulation/crates/sim-core/src/dynamics.rs": "e6ebe50183d31429621b3aae945a297dd0de03676bc07f77fb2c38cae2b17653",
+  "simulation/crates/sim-python/python/microagu_sim/compat/profiles.py": "4b4d5b624d0f00f3481898e50c1aad947283846cffe6d12aeae2ae1b0d409486",
+  "simulation/crates/sim-python/python/microagu_sim/compat/simulator.py": "ed21e7f5c1d643b0f7397d8331aa77a2f679a0fbd0cbcc31c73affa3cd439863"
+}

@@ -1,0 +1,14 @@
+[
+  {
+    "seed": 0,
+    "success": false,
+    "message": "Maximum number of function evaluations has been exceeded.",
+    "nfev": 220
+  },
+  {
+    "seed": 1,
+    "success": true,
+    "message": "Optimization terminated successfully.",
+    "nfev": 193
+  }
+]

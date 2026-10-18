@@ -1,0 +1,95 @@
+{
+  "names": [
+    "rotor_inertia_scale",
+    "yaw_stiffness_scale",
+    "yaw_damping_scale",
+    "pitch_damping_scale",
+    "effective_pull_scale",
+    "actuator_lag_s"
+  ],
+  "bounds": [
+    [
+      0.5,
+      1.5
+    ],
+    [
+      0.5,
+      1.5
+    ],
+    [
+      0.2,
+      1.5
+    ],
+    [
+      0.2,
+      1.5
+    ],
+    [
+      0.85,
+      1.15
+    ],
+    [
+      0.0,
+      0.12
+    ]
+  ],
+  "default": [
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    0.0
+  ],
+  "training": [
+    280,
+    310,
+    535,
+    555,
+    1988
+  ],
+  "manual_validation": [
+    380,
+    400,
+    440
+  ],
+  "automatic_validation": [
+    1440,
+    1470,
+    1500,
+    2130,
+    2160,
+    2190,
+    2760,
+    2790,
+    2820
+  ],
+  "duration_s": 20,
+  "initial_alpha_train": 0.35,
+  "initial_alpha_validation": [
+    0.25,
+    0.35,
+    0.45
+  ],
+  "model": "Production Trout Lake 1.758 kg / 132 mm; no adoption of previous candidate bundle",
+  "weights": {
+    "local": 0.4,
+    "log_band_amplitude": 0.4,
+    "pitch_yaw_phase": 0.2
+  },
+  "band_hz": [
+    1.2,
+    1.9
+  ],
+  "optimizer": "Bounded Powell; 2 specified starts; max 220 evaluations each; best finite training score frozen before validation",
+  "gates": {
+    "manual_score_ratio": 0.9,
+    "auto_score_ratio": 0.95,
+    "maximum_rate_error_ratio": 1.05,
+    "maximum_local_ratio": 1.05,
+    "maximum_amplitude_error_ratio": 0.95,
+    "phase_increase_deg": 5
+  },
+  "bounds_interpretation": "Exploratory uncertainty bounds, not confidence intervals or new measurements. Pull scale +/-15%; causal first-order actuator lag 0..120 ms.",
+  "limitations": "Only three training manual episodes and two validation manual episodes within one historical flight. Reused log evidence. Cross spectra from short driven windows do not establish causal damping. No course/velocity drift objective and no automatic promotion."
+}

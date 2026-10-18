@@ -1,0 +1,15 @@
+{
+  "inputs": {
+    "IMU": "474af8543a68be8cff8385c7c9c27329c10e7181e0412396052f1909dd496f5c",
+    "ATT": "61088d9ee8a6bf0e2533fd04c48889e38ec6ae9e939a01f2924b2488bc17da1f",
+    "RCOU": "0ee2797ce0f68011609feedb95992ccba60383b26f93bcf586b637dac74f0b33",
+    "MODE": "91450d262ecfec3e85c1460a7d1181c8a5e6426fa6c9e9b3c09553192f405f2a",
+    "VIBE": "89c02e16863c00bed9f627ac4253c728a87146556868a80252a010a166c3f823"
+  },
+  "median_dt_s": {
+    "IMU": 0.02003500000000713,
+    "ATT": 0.03999099999964528,
+    "RCOU": 0.03998699999965538
+  },
+  "rate_source": "IMU instance 0 GyrX/Y/Z; original causal replay uses latest-sample hold; attitude rate independently derived from successive ATT orientations, shares underlying sensors and EKF."
+}

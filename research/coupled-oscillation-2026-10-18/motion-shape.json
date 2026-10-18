@@ -1,0 +1,74 @@
+[
+  {
+    "start": 300,
+    "peak_hz": 1.66015625,
+    "pitch_per_yaw_amplitude": 0.38120942880091624,
+    "pitch_relative_to_yaw_phase_deg": -78.41334110796473,
+    "principal_axis": [
+      0.07901226022609105,
+      0.047629418471593875,
+      0.9957351561685579
+    ],
+    "principal_fraction": 0.8628648358937347
+  },
+  {
+    "start": 390,
+    "peak_hz": 1.85546875,
+    "pitch_per_yaw_amplitude": 0.37950127509493464,
+    "pitch_relative_to_yaw_phase_deg": -96.27815374525794,
+    "principal_axis": [
+      -0.13935448343226461,
+      -0.3781304757709163,
+      0.915203622829689
+    ],
+    "principal_fraction": 0.7869855713207101
+  },
+  {
+    "start": 540,
+    "peak_hz": 1.5625,
+    "pitch_per_yaw_amplitude": 0.37271141800529417,
+    "pitch_relative_to_yaw_phase_deg": -85.70324596625764,
+    "principal_axis": [
+      0.20689925856979993,
+      0.06698385394545463,
+      0.9760665244305231
+    ],
+    "principal_fraction": 0.866151729424439
+  },
+  {
+    "start": 1440,
+    "peak_hz": 1.46484375,
+    "pitch_per_yaw_amplitude": 0.38464962935320396,
+    "pitch_relative_to_yaw_phase_deg": -87.34511212388327,
+    "principal_axis": [
+      0.07470141797752955,
+      0.04957096066696137,
+      0.9959731010477648
+    ],
+    "principal_fraction": 0.8661596662204311
+  },
+  {
+    "start": 2100,
+    "peak_hz": 1.5625,
+    "pitch_per_yaw_amplitude": 0.4106929035256022,
+    "pitch_relative_to_yaw_phase_deg": -75.9993626824297,
+    "principal_axis": [
+      0.09892526878128406,
+      0.09690442502027631,
+      0.9903652475768925
+    ],
+    "principal_fraction": 0.8613622205253345
+  },
+  {
+    "start": 2760,
+    "peak_hz": 1.5625,
+    "pitch_per_yaw_amplitude": 0.47429394009941594,
+    "pitch_relative_to_yaw_phase_deg": -83.80959781687741,
+    "principal_axis": [
+      0.15189086659365872,
+      0.051873300027445376,
+      0.9870351186202496
+    ],
+    "principal_fraction": 0.8217428858314811
+  }
+]

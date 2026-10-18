@@ -1,0 +1,808 @@
+[
+  {
+    "variant": "baseline",
+    "trim_success": true,
+    "trim_max_residual": 6.551473839593171e-14,
+    "command": [
+      0.45010412696996055,
+      4.215648296929742,
+      7.784351703070258
+    ],
+    "rpm": 7983.633616482704,
+    "forced_response": {
+      "frequency_hz": 1.5625,
+      "pitch_per_yaw_amplitude": 0.1489734557687419,
+      "pitch_relative_to_yaw_phase_deg": 178.673764034258,
+      "yaw_gain_deg_s_per_mm": 0.71542931732587
+    },
+    "modes": [
+      {
+        "frequency_hz": 5.693006746406841,
+        "decay_per_s": 3.622948812230221,
+        "damping_ratio": 0.10076840578893816,
+        "payload_rate_magnitude": [
+          0.9638030242603797,
+          0.06847917013471137,
+          0.2576709795149763
+        ],
+        "pitch_yaw_phase_deg": 105.38970700871691
+      },
+      {
+        "frequency_hz": 2.992651065423246,
+        "decay_per_s": 10.349950054773531,
+        "damping_ratio": 0.4822081165612046,
+        "payload_rate_magnitude": [
+          0.034056525768729695,
+          0.7308836416755567,
+          0.6816518579037545
+        ],
+        "pitch_yaw_phase_deg": 27.16450972420789
+      },
+      {
+        "frequency_hz": 0.510951140065117,
+        "decay_per_s": 14.075451267853957,
+        "damping_ratio": 0.974961399104947,
+        "payload_rate_magnitude": [
+          0.04934909214477602,
+          0.2410655514513698,
+          0.9692533554277403
+        ],
+        "pitch_yaw_phase_deg": -6.772997222068776
+      },
+      {
+        "frequency_hz": 1.7643915535205545,
+        "decay_per_s": 5.413394033868882,
+        "damping_ratio": 0.4387895805917061,
+        "payload_rate_magnitude": [
+          0.036311557656977675,
+          0.7482766376371293,
+          0.6623922888643831
+        ],
+        "pitch_yaw_phase_deg": -13.194655416815408
+      },
+      {
+        "frequency_hz": 0.540529157513664,
+        "decay_per_s": 3.9252127958164196,
+        "damping_ratio": 0.756223390670388,
+        "payload_rate_magnitude": [
+          0.26673841776929624,
+          0.07260731937535066,
+          0.9610300690712327
+        ],
+        "pitch_yaw_phase_deg": -75.99636159513854
+      },
+      {
+        "frequency_hz": 0.35618818262873003,
+        "decay_per_s": 0.3525803699600834,
+        "damping_ratio": 0.15562343951654084,
+        "payload_rate_magnitude": [
+          0.05890635136307401,
+          0.9727816030178158,
+          0.22411156730338364
+        ],
+        "pitch_yaw_phase_deg": -53.14101529247705
+      }
+    ]
+  },
+  {
+    "variant": "candidate",
+    "trim_success": true,
+    "trim_max_residual": 1.246305791210468e-13,
+    "command": [
+      0.4482790231375513,
+      7.117823463947119,
+      8.408678844711826
+    ],
+    "rpm": 7954.178317415822,
+    "forced_response": {
+      "frequency_hz": 1.5625,
+      "pitch_per_yaw_amplitude": 0.18770165975722444,
+      "pitch_relative_to_yaw_phase_deg": -162.39674444693065,
+      "yaw_gain_deg_s_per_mm": 0.7072040074299573
+    },
+    "modes": [
+      {
+        "frequency_hz": 6.833052243933703,
+        "decay_per_s": 3.7916489776955205,
+        "damping_ratio": 0.0879724008833655,
+        "payload_rate_magnitude": [
+          0.94201486047508,
+          0.06778008029948275,
+          0.32865462625484404
+        ],
+        "pitch_yaw_phase_deg": 93.96683612861749
+      },
+      {
+        "frequency_hz": 3.667823905402335,
+        "decay_per_s": 7.076418977773395,
+        "damping_ratio": 0.2935348261852607,
+        "payload_rate_magnitude": [
+          0.025149390692716832,
+          0.6107521449392127,
+          0.7914223433792705
+        ],
+        "pitch_yaw_phase_deg": 62.75258822617014
+      },
+      {
+        "frequency_hz": 2.0430204576776205,
+        "decay_per_s": 6.072889388645274,
+        "damping_ratio": 0.42764680506282554,
+        "payload_rate_magnitude": [
+          0.04376033081946933,
+          0.2524022837819282,
+          0.966632360615057
+        ],
+        "pitch_yaw_phase_deg": -31.277598953524723
+      },
+      {
+        "frequency_hz": 1.5906067996666176,
+        "decay_per_s": 4.843820120666485,
+        "damping_ratio": 0.43614277908696464,
+        "payload_rate_magnitude": [
+          0.04006437985292856,
+          0.48056506191274373,
+          0.8760434160107597
+        ],
+        "pitch_yaw_phase_deg": -68.77560562674822
+      },
+      {
+        "frequency_hz": 0.5428922202025193,
+        "decay_per_s": 3.891606426148846,
+        "damping_ratio": 0.752007881620614,
+        "payload_rate_magnitude": [
+          0.2999178971254308,
+          0.06607824245990353,
+          0.9516737470673813
+        ],
+        "pitch_yaw_phase_deg": -65.00390948124671
+      },
+      {
+        "frequency_hz": 0.35145823169493273,
+        "decay_per_s": 0.34870958830895676,
+        "damping_ratio": 0.15597751702431337,
+        "payload_rate_magnitude": [
+          0.05765148072147895,
+          0.9747129889431665,
+          0.215895567245137
+        ],
+        "pitch_yaw_phase_deg": -62.29291857631006
+      }
+    ]
+  },
+  {
+    "variant": "no_rotor_gyro",
+    "trim_success": true,
+    "trim_max_residual": 1.445056277296418e-13,
+    "command": [
+      0.4501041269699812,
+      4.215648296929484,
+      7.784351703070516
+    ],
+    "rpm": 7983.633616483037,
+    "forced_response": {
+      "frequency_hz": 1.5625,
+      "pitch_per_yaw_amplitude": 0.18135618488752545,
+      "pitch_relative_to_yaw_phase_deg": 80.50161368145613,
+      "yaw_gain_deg_s_per_mm": 0.7742268109791722
+    },
+    "modes": [
+      {
+        "frequency_hz": 5.698773868328541,
+        "decay_per_s": 3.6019289361762765,
+        "damping_ratio": 0.10008927121748341,
+        "payload_rate_magnitude": [
+          0.9697012846664357,
+          0.004353685443191917,
+          0.24425491589592596
+        ],
+        "pitch_yaw_phase_deg": 46.83503052775315
+      },
+      {
+        "frequency_hz": 2.9389598119743905,
+        "decay_per_s": 7.107886247797327,
+        "damping_ratio": 0.3592241759800411,
+        "payload_rate_magnitude": [
+          0.004434649843105528,
+          0.999726079421125,
+          0.022980426585148133
+        ],
+        "pitch_yaw_phase_deg": 135.7044812004041
+      },
+      {
+        "frequency_hz": 1.765511726248928,
+        "decay_per_s": 4.898961867931869,
+        "damping_ratio": 0.4039835779527592,
+        "payload_rate_magnitude": [
+          0.014582747452781932,
+          0.9994232688371918,
+          0.03066713523481724
+        ],
+        "pitch_yaw_phase_deg": 65.86946996559101
+      },
+      {
+        "frequency_hz": 0.5422048372578273,
+        "decay_per_s": 3.9213651165525745,
+        "damping_ratio": 0.7549018259389976,
+        "payload_rate_magnitude": [
+          0.28049320825316554,
+          0.06362617872833008,
+          0.9577448874853246
+        ],
+        "pitch_yaw_phase_deg": 158.87523396735372
+      },
+      {
+        "frequency_hz": 0.356977987037492,
+        "decay_per_s": 0.35398911996958204,
+        "damping_ratio": 0.15589284674098922,
+        "payload_rate_magnitude": [
+          0.05073386568662281,
+          0.9973216742778945,
+          0.052683516283833366
+        ],
+        "pitch_yaw_phase_deg": -13.437169613270498
+      }
+    ]
+  },
+  {
+    "variant": "diagonal_payload_inertia",
+    "trim_success": true,
+    "trim_max_residual": 1.2470605183183774e-13,
+    "command": [
+      0.450104126970034,
+      4.215648296928498,
+      7.784351703071502
+    ],
+    "rpm": 7983.633616483889,
+    "forced_response": {
+      "frequency_hz": 1.5625,
+      "pitch_per_yaw_amplitude": 0.1454607327974197,
+      "pitch_relative_to_yaw_phase_deg": 177.14552744729525,
+      "yaw_gain_deg_s_per_mm": 0.6947650742784768
+    },
+    "modes": [
+      {
+        "frequency_hz": 5.699967040504464,
+        "decay_per_s": 3.301315140361091,
+        "damping_ratio": 0.09179043944058121,
+        "payload_rate_magnitude": [
+          0.9982063768964643,
+          0.012871812826998324,
+          0.05846661917522353
+        ],
+        "pitch_yaw_phase_deg": 100.00715517774937
+      },
+      {
+        "frequency_hz": 3.0029925902909484,
+        "decay_per_s": 10.285218338242512,
+        "damping_ratio": 0.4786149160243736,
+        "payload_rate_magnitude": [
+          0.03501613335416868,
+          0.7375171954603802,
+          0.6744199409901656
+        ],
+        "pitch_yaw_phase_deg": 28.062240261584332
+      },
+      {
+        "frequency_hz": 0.5880888908944936,
+        "decay_per_s": 13.676895495716382,
+        "damping_ratio": 0.9653880432477366,
+        "payload_rate_magnitude": [
+          0.03195103458135778,
+          0.24287749295727873,
+          0.9695306363410946
+        ],
+        "pitch_yaw_phase_deg": -8.484308447364189
+      },
+      {
+        "frequency_hz": 1.7654244203752358,
+        "decay_per_s": 5.410383740709461,
+        "damping_ratio": 0.4383852508185709,
+        "payload_rate_magnitude": [
+          0.03880006179735426,
+          0.7478027757446327,
+          0.6627862127361613
+        ],
+        "pitch_yaw_phase_deg": -12.572197241583838
+      },
+      {
+        "frequency_hz": 0.5401372291879042,
+        "decay_per_s": 3.9184212925932647,
+        "damping_ratio": 0.7558974493022855,
+        "payload_rate_magnitude": [
+          0.26456354645650965,
+          0.07271498957802469,
+          0.9616229303510926
+        ],
+        "pitch_yaw_phase_deg": -76.24364278105809
+      },
+      {
+        "frequency_hz": 0.3561871170485729,
+        "decay_per_s": 0.3525872873759398,
+        "damping_ratio": 0.15562687310841286,
+        "payload_rate_magnitude": [
+          0.05913857872585336,
+          0.9727421024150863,
+          0.22422183367228943
+        ],
+        "pitch_yaw_phase_deg": -53.05551141377073
+      }
+    ]
+  },
+  {
+    "variant": "half_yaw_stiffness",
+    "trim_success": true,
+    "trim_max_residual": 4.541034112156412e-14,
+    "command": [
+      0.45017095634994736,
+      4.179191581030087,
+      7.820808418969913
+    ],
+    "rpm": 7984.7119664610245,
+    "forced_response": {
+      "frequency_hz": 1.5625,
+      "pitch_per_yaw_amplitude": 0.14287849049729126,
+      "pitch_relative_to_yaw_phase_deg": 170.06145864089063,
+      "yaw_gain_deg_s_per_mm": 0.6648048780525747
+    },
+    "modes": [
+      {
+        "frequency_hz": 5.6941188116459855,
+        "decay_per_s": 3.597192121484884,
+        "damping_ratio": 0.10003986308223968,
+        "payload_rate_magnitude": [
+          0.968484485395931,
+          0.06505711390508684,
+          0.24042748070409742
+        ],
+        "pitch_yaw_phase_deg": 106.7754925067168
+      },
+      {
+        "frequency_hz": 3.043128340075255,
+        "decay_per_s": 9.54155226557095,
+        "damping_ratio": 0.4465127299521934,
+        "payload_rate_magnitude": [
+          0.030697045755548463,
+          0.8061631548328578,
+          0.590896487696293
+        ],
+        "pitch_yaw_phase_deg": 34.42979328116465
+      },
+      {
+        "frequency_hz": 1.7888826090998922,
+        "decay_per_s": 5.273851770200219,
+        "damping_ratio": 0.4247744225327671,
+        "payload_rate_magnitude": [
+          0.04423806256528011,
+          0.7914438364493169,
+          0.6096389485317166
+        ],
+        "pitch_yaw_phase_deg": 10.329933933896147
+      },
+      {
+        "frequency_hz": 0.5441213523662759,
+        "decay_per_s": 3.6369824835495064,
+        "damping_ratio": 0.728622494868915,
+        "payload_rate_magnitude": [
+          0.3691424947384694,
+          0.07067578366174132,
+          0.9266815807935634
+        ],
+        "pitch_yaw_phase_deg": -97.14236225974554
+      },
+      {
+        "frequency_hz": 0.35597173074144706,
+        "decay_per_s": 0.35324666122975196,
+        "damping_ratio": 0.15600288405903814,
+        "payload_rate_magnitude": [
+          0.06056156187282303,
+          0.9224594566615242,
+          0.3813146312944858
+        ],
+        "pitch_yaw_phase_deg": -44.100141464836966
+      }
+    ]
+  },
+  {
+    "variant": "double_yaw_stiffness",
+    "trim_success": true,
+    "trim_max_residual": 6.878190578729412e-14,
+    "command": [
+      0.45007797932102167,
+      4.231982702909541,
+      7.768017297090459
+    ],
+    "rpm": 7983.211697516654,
+    "forced_response": {
+      "frequency_hz": 1.5625,
+      "pitch_per_yaw_amplitude": 0.1444802160916737,
+      "pitch_relative_to_yaw_phase_deg": -173.93624075290276,
+      "yaw_gain_deg_s_per_mm": 0.7598878545422246
+    },
+    "modes": [
+      {
+        "frequency_hz": 5.688738963889658,
+        "decay_per_s": 3.6767721353365284,
+        "damping_ratio": 0.10232581175172518,
+        "payload_rate_magnitude": [
+          0.9529517730873491,
+          0.07704553144740539,
+          0.29316702449911447
+        ],
+        "pitch_yaw_phase_deg": 104.75310974604994
+      },
+      {
+        "frequency_hz": 3.279848286917115,
+        "decay_per_s": 15.982250879515536,
+        "damping_ratio": 0.6128383254119127,
+        "payload_rate_magnitude": [
+          0.05857481335347952,
+          0.41576708190809764,
+          0.907582902462486
+        ],
+        "pitch_yaw_phase_deg": 36.798761093266265
+      },
+      {
+        "frequency_hz": 2.431650996845823,
+        "decay_per_s": 8.679277697209008,
+        "damping_ratio": 0.4939364391391501,
+        "payload_rate_magnitude": [
+          0.02717085327888122,
+          0.6325089953296642,
+          0.7740762982801864
+        ],
+        "pitch_yaw_phase_deg": -34.97846912810779
+      },
+      {
+        "frequency_hz": 1.709509094946706,
+        "decay_per_s": 5.0969526491318105,
+        "damping_ratio": 0.4287068209795103,
+        "payload_rate_magnitude": [
+          0.012379050868155812,
+          0.8484244650344244,
+          0.5291716982517625
+        ],
+        "pitch_yaw_phase_deg": -60.84865342230586
+      },
+      {
+        "frequency_hz": 0.5174635070736177,
+        "decay_per_s": 3.931972007449879,
+        "damping_ratio": 0.7706567541094878,
+        "payload_rate_magnitude": [
+          0.33835078727754087,
+          0.0655664238819118,
+          0.9387330764429288
+        ],
+        "pitch_yaw_phase_deg": -67.86491920864806
+      },
+      {
+        "frequency_hz": 0.35634928952271416,
+        "decay_per_s": 0.3530252160420383,
+        "damping_ratio": 0.15574628809047972,
+        "payload_rate_magnitude": [
+          0.07648750483319165,
+          0.9892975277148012,
+          0.12425805109438641
+        ],
+        "pitch_yaw_phase_deg": -48.63606067877062
+      }
+    ]
+  },
+  {
+    "variant": "half_pitch_damping",
+    "trim_success": true,
+    "trim_max_residual": 8.553547703148256e-14,
+    "command": [
+      0.4501041269699893,
+      4.215648296929488,
+      7.784351703070512
+    ],
+    "rpm": 7983.633616483168,
+    "forced_response": {
+      "frequency_hz": 1.5625,
+      "pitch_per_yaw_amplitude": 0.14854108320227336,
+      "pitch_relative_to_yaw_phase_deg": -170.09550510896315,
+      "yaw_gain_deg_s_per_mm": 0.7186872771631677
+    },
+    "modes": [
+      {
+        "frequency_hz": 5.69355114925439,
+        "decay_per_s": 3.63249390275594,
+        "damping_ratio": 0.10102162403877005,
+        "payload_rate_magnitude": [
+          0.9615767895513596,
+          0.07363729827154784,
+          0.264476135217088
+        ],
+        "pitch_yaw_phase_deg": 93.45948460771187
+      },
+      {
+        "frequency_hz": 3.156358143491217,
+        "decay_per_s": 6.728247250914632,
+        "damping_ratio": 0.3212765911154814,
+        "payload_rate_magnitude": [
+          0.022210045667860393,
+          0.7963392343758581,
+          0.6044423360959289
+        ],
+        "pitch_yaw_phase_deg": 22.933525470319555
+      },
+      {
+        "frequency_hz": 1.7582279990261191,
+        "decay_per_s": 5.2357402463248475,
+        "damping_ratio": 0.4282748529224582,
+        "payload_rate_magnitude": [
+          0.03485394963568328,
+          0.7535818277458036,
+          0.6564294562906875
+        ],
+        "pitch_yaw_phase_deg": -13.217332302307243
+      },
+      {
+        "frequency_hz": 0.5405173258359853,
+        "decay_per_s": 3.9239808222793866,
+        "damping_ratio": 0.7561288361770538,
+        "payload_rate_magnitude": [
+          0.2680460833730851,
+          0.0668928940314107,
+          0.9610809736522993
+        ],
+        "pitch_yaw_phase_deg": -71.76317647673805
+      },
+      {
+        "frequency_hz": 0.3563256016130392,
+        "decay_per_s": 0.3552392375691164,
+        "damping_ratio": 0.1567093113634333,
+        "payload_rate_magnitude": [
+          0.05965611156939834,
+          0.9725840182064097,
+          0.22476982867345294
+        ],
+        "pitch_yaw_phase_deg": -53.248073449596916
+      }
+    ]
+  },
+  {
+    "variant": "half_yaw_damping",
+    "trim_success": true,
+    "trim_max_residual": 5.388456202820968e-14,
+    "command": [
+      0.4501041269700392,
+      4.215648296928174,
+      7.784351703071826
+    ],
+    "rpm": 7983.633616483974,
+    "forced_response": {
+      "frequency_hz": 1.5625,
+      "pitch_per_yaw_amplitude": 0.17129915839929524,
+      "pitch_relative_to_yaw_phase_deg": -178.0271659407316,
+      "yaw_gain_deg_s_per_mm": 0.7965150579892203
+    },
+    "modes": [
+      {
+        "frequency_hz": 5.716869173617718,
+        "decay_per_s": 3.666455012705436,
+        "damping_ratio": 0.10154476424544771,
+        "payload_rate_magnitude": [
+          0.9295546305942181,
+          0.09322472859387924,
+          0.35670343244696157
+        ],
+        "pitch_yaw_phase_deg": 105.85627303666213
+      },
+      {
+        "frequency_hz": 3.6725413990847153,
+        "decay_per_s": 9.633713243210218,
+        "damping_ratio": 0.38526348220206325,
+        "payload_rate_magnitude": [
+          0.04773087239616268,
+          0.5851070916174453,
+          0.8095501560491948
+        ],
+        "pitch_yaw_phase_deg": 75.9164380301697
+      },
+      {
+        "frequency_hz": 2.020405451498427,
+        "decay_per_s": 5.981177836878562,
+        "damping_ratio": 0.4262203652909582,
+        "payload_rate_magnitude": [
+          0.05458041612670771,
+          0.25806039474552517,
+          0.9645858234699591
+        ],
+        "pitch_yaw_phase_deg": -35.585550512496376
+      },
+      {
+        "frequency_hz": 1.514315684621205,
+        "decay_per_s": 5.162268049271126,
+        "damping_ratio": 0.47688714344592215,
+        "payload_rate_magnitude": [
+          0.04838954689136754,
+          0.4857752667926081,
+          0.8727432852358239
+        ],
+        "pitch_yaw_phase_deg": -78.50395621327637
+      },
+      {
+        "frequency_hz": 0.5274416875269955,
+        "decay_per_s": 3.991743005780684,
+        "damping_ratio": 0.7693990844113022,
+        "payload_rate_magnitude": [
+          0.26378561324781524,
+          0.07152426616344902,
+          0.9619258961028412
+        ],
+        "pitch_yaw_phase_deg": -70.24540470716919
+      },
+      {
+        "frequency_hz": 0.3562259240647199,
+        "decay_per_s": 0.3522954817559694,
+        "damping_ratio": 0.15548465942895207,
+        "payload_rate_magnitude": [
+          0.0551595602864134,
+          0.9742110771277108,
+          0.21879259610570673
+        ],
+        "pitch_yaw_phase_deg": -61.33320272164114
+      }
+    ]
+  },
+  {
+    "variant": "half_rotor_gyro",
+    "trim_success": true,
+    "trim_max_residual": 7.48954720791188e-14,
+    "command": [
+      0.4501041269699842,
+      4.215648296929581,
+      7.784351703070419
+    ],
+    "rpm": 7983.6336164830855,
+    "forced_response": {
+      "frequency_hz": 1.5625,
+      "pitch_per_yaw_amplitude": 0.10373661818586716,
+      "pitch_relative_to_yaw_phase_deg": 123.04852894428775,
+      "yaw_gain_deg_s_per_mm": 0.7552687577115178
+    },
+    "modes": [
+      {
+        "frequency_hz": 5.6975095270540255,
+        "decay_per_s": 3.6084904894125613,
+        "damping_ratio": 0.10029179729659554,
+        "payload_rate_magnitude": [
+          0.968061197861159,
+          0.034201276300285875,
+          0.2483702677355922
+        ],
+        "pitch_yaw_phase_deg": 102.3408961170216
+      },
+      {
+        "frequency_hz": 2.960897603414388,
+        "decay_per_s": 7.737821056482001,
+        "damping_ratio": 0.3840321148536653,
+        "payload_rate_magnitude": [
+          0.013076868036369305,
+          0.9257020517909677,
+          0.3780273889976122
+        ],
+        "pitch_yaw_phase_deg": 22.65396046076592
+      },
+      {
+        "frequency_hz": 1.7662462208744918,
+        "decay_per_s": 5.011186364365427,
+        "damping_ratio": 0.41154193285384505,
+        "payload_rate_magnitude": [
+          0.02744822122726519,
+          0.9185199593346591,
+          0.394420688422039
+        ],
+        "pitch_yaw_phase_deg": -11.300763979526332
+      },
+      {
+        "frequency_hz": 0.5415711033402099,
+        "decay_per_s": 3.9275783324553126,
+        "damping_ratio": 0.7557947528845659,
+        "payload_rate_magnitude": [
+          0.27848290085042343,
+          0.03184290950604519,
+          0.9599131747445303
+        ],
+        "pitch_yaw_phase_deg": -131.9852026927198
+      },
+      {
+        "frequency_hz": 0.3566468947078176,
+        "decay_per_s": 0.35417300187542006,
+        "damping_ratio": 0.15611312560910584,
+        "payload_rate_magnitude": [
+          0.05499665376800058,
+          0.9892764862999822,
+          0.13530484739388923
+        ],
+        "pitch_yaw_phase_deg": -46.075386770957714
+      }
+    ]
+  },
+  {
+    "variant": "double_rotor_gyro",
+    "trim_success": true,
+    "trim_max_residual": 8.422290820562419e-14,
+    "command": [
+      0.4501041269699844,
+      4.215648296929963,
+      7.784351703070037
+    ],
+    "rpm": 7983.633616483089,
+    "forced_response": {
+      "frequency_hz": 1.5625,
+      "pitch_per_yaw_amplitude": 0.37259673282612926,
+      "pitch_relative_to_yaw_phase_deg": -158.46591241959808,
+      "yaw_gain_deg_s_per_mm": 0.5788756126037943
+    },
+    "modes": [
+      {
+        "frequency_hz": 5.670758389272315,
+        "decay_per_s": 3.6148566398751005,
+        "damping_ratio": 0.10093607286842085,
+        "payload_rate_magnitude": [
+          0.9517684120902198,
+          0.14245353922997037,
+          0.27174230238981345
+        ],
+        "pitch_yaw_phase_deg": 106.97348846900695
+      },
+      {
+        "frequency_hz": 4.534549167169064,
+        "decay_per_s": 18.108404239783916,
+        "damping_ratio": 0.5364011357032191,
+        "payload_rate_magnitude": [
+          0.08826335799069666,
+          0.5322454575292745,
+          0.841976456069681
+        ],
+        "pitch_yaw_phase_deg": 60.43449669928316
+      },
+      {
+        "frequency_hz": 1.9530749299049013,
+        "decay_per_s": 5.808415281893332,
+        "damping_ratio": 0.4278206997401003,
+        "payload_rate_magnitude": [
+          0.04418217577128785,
+          0.48977710338473845,
+          0.8707274684677003
+        ],
+        "pitch_yaw_phase_deg": -7.951159330908632
+      },
+      {
+        "frequency_hz": 0.9609370735056733,
+        "decay_per_s": 5.984705332609583,
+        "damping_ratio": 0.7039803329757579,
+        "payload_rate_magnitude": [
+          0.045638427577550836,
+          0.4243027707144056,
+          0.9043695553767427
+        ],
+        "pitch_yaw_phase_deg": -54.64770911181418
+      },
+      {
+        "frequency_hz": 0.5376958313837086,
+        "decay_per_s": 3.8836385350382545,
+        "damping_ratio": 0.7544741484092993,
+        "payload_rate_magnitude": [
+          0.2166763434811837,
+          0.18847073688472513,
+          0.9578779376902637
+        ],
+        "pitch_yaw_phase_deg": -59.83763116851436
+      },
+      {
+        "frequency_hz": 0.3548127482987669,
+        "decay_per_s": 0.3442253900246732,
+        "damping_ratio": 0.15259753613010504,
+        "payload_rate_magnitude": [
+          0.06520895102163725,
+          0.9203160407114627,
+          0.38570218811388013
+        ],
+        "pitch_yaw_phase_deg": -57.58485375222222
+      }
+    ]
+  }
+]

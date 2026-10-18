@@ -1,0 +1,52 @@
+[
+  {
+    "variant": "baseline",
+    "frequency_delta_hz": 7.719842320952353e-09,
+    "damping_ratio_delta": 7.658836786994527e-09
+  },
+  {
+    "variant": "candidate",
+    "frequency_delta_hz": 2.4968592748919605e-08,
+    "damping_ratio_delta": 6.476501557273195e-10
+  },
+  {
+    "variant": "no_rotor_gyro",
+    "frequency_delta_hz": -7.287226377883371e-10,
+    "damping_ratio_delta": 7.418483660703856e-09
+  },
+  {
+    "variant": "diagonal_payload_inertia",
+    "frequency_delta_hz": -5.823400650584176e-09,
+    "damping_ratio_delta": 3.8669872859387056e-09
+  },
+  {
+    "variant": "half_yaw_stiffness",
+    "frequency_delta_hz": 6.503200200569381e-09,
+    "damping_ratio_delta": -2.6125718255443076e-10
+  },
+  {
+    "variant": "double_yaw_stiffness",
+    "frequency_delta_hz": -1.2252343584151504e-09,
+    "damping_ratio_delta": 1.2507931357319535e-09
+  },
+  {
+    "variant": "half_pitch_damping",
+    "frequency_delta_hz": 9.86165149541307e-09,
+    "damping_ratio_delta": 2.119760755814326e-09
+  },
+  {
+    "variant": "half_yaw_damping",
+    "frequency_delta_hz": 3.079261046146087e-08,
+    "damping_ratio_delta": 8.050171640405779e-12
+  },
+  {
+    "variant": "half_rotor_gyro",
+    "frequency_delta_hz": -5.646164202843806e-09,
+    "damping_ratio_delta": -4.769956096772887e-09
+  },
+  {
+    "variant": "double_rotor_gyro",
+    "frequency_delta_hz": -2.420002198633142e-09,
+    "damping_ratio_delta": 1.0264415983840536e-09
+  }
+]

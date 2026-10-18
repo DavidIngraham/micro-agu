@@ -1,0 +1,14 @@
+{
+  "analysis_source_sha256": {
+    "shape.py": "15d13775f055b02939d874852d53b24960bf263cbc6f8e96586d5351deb0883e",
+    "report.py": "80bbc5c85d0fcdd3ba11544f4efcde7ae0fc45fdc570933dbe5d08e7b017661e",
+    "modes.py": "bf00c7c6a3958a1fe6022a860f918cb8c723626862d23c6b56c25a35876bc382",
+    "investigate.py": "bdeb4fc557f6870688035a5b6ef5a269e4785c21495c97cbeca7436197aad040"
+  },
+  "logged_firmware": "3a2da6cf",
+  "firmware_source_sha256": {
+    "ArduPlane/mode_manual.cpp": "3895d96c28891a3386d8ee4e4a7ece369785d33bdd07a089c3a03ca0a649811c",
+    "ArduPlane/servos.cpp": "9122214c465e9958635753299d7a60b9a2d4d771d81684e9df40353e41b49d2f"
+  },
+  "runtime_changed": false
+}

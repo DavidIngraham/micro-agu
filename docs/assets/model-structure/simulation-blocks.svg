@@ -2,8 +2,8 @@
 <defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto-start-reverse"><path d="M0 0L8 4L0 8Z" fill="context-stroke"/></marker></defs>
 <style>text{font-family:Arial,sans-serif;fill:#213c4a;font-size:19px}.title{font-size:29px;font-weight:bold}.head{font-size:20px;font-weight:bold}.small{font-size:17px}.box{fill:#fff;stroke:#9bb2bd;stroke-width:2}.link{fill:none;stroke:#536f80;stroke-width:2.5;marker-end:url(#arrow)}.force{fill:none;stroke:#c56a2e;stroke-width:3;marker-end:url(#arrow)}.joint{fill:none;stroke:#237f78;stroke-width:3;marker-end:url(#arrow)}.ghost{fill:none;stroke:#9bb2bd;stroke-width:2;stroke-dasharray:6 5}</style>
 <rect width="1200" height="850" fill="#f5f8fa"/>
-<text x="32" y="45" class="title">One aircraft model, two ways to drive it</text>
-<text x="32" y="79" class="">Recorded commands for replay, or live commands from a controller / native ArduPilot SITL.</text>
+<text x="32" y="45" class="title">One Rust physics core</text>
+<text x="32" y="79" class="">Recorded-input replay or live feedback · Python, native SITL and browser WASM</text>
 <rect x="30" y="125" width="290" height="120" rx="10" class="box"/>
 <text x="48" y="157" class="head">1 · Commands &amp; actuators</text>
 <text x="48" y="187" class="small">Throttle + left/right PWM or pull</text>
@@ -29,7 +29,7 @@
 <text x="30" y="358" class="">Wind → relative airflow</text>
 <text x="30" y="385" class="">Voltage → motor speed</text>
 <text x="30" y="412" class="">Mass, inertia, geometry</text>
-<text x="30" y="439" class="">Mission / softer-roll profile</text>
+<text x="30" y="439" class="">Selected aircraft configuration</text>
 <path d="M300 385H370V220H410" class="link"/>
 <path d="M370 385H410" class="link"/>
 <path d="M300 420H350V490H410" class="link"/>
@@ -55,7 +55,7 @@
 <text x="428" y="627" class="head">5 · Payload observations</text>
 <text x="428" y="657" class="small">IMU location and body frame</text>
 <text x="428" y="681" class="small">Attitude / rates / navigation</text>
-<text x="428" y="705" class="small">JSON sensor interface in SITL</text>
+<text x="428" y="705" class="small">Native / browser SITL adapters</text>
 <path d="M840 650H760" class="link"/>
 <rect x="30" y="595" width="290" height="115" rx="10" class="box"/>
 <text x="48" y="627" class="head">Controller or log analysis</text>
@@ -67,5 +67,6 @@
 <path d="M1005 710V775H785V110H580V125" class="link"/>
 <path d="M785 375H760" class="link"/>
 <path d="M785 515H760" class="link"/>
+<text x="35" y="560" class="small">Feedback only in live runs</text>
 <text x="345" y="804" class="small">Updated motion feeds the next airflow, joint and rotor-load calculation.</text>
 </svg>

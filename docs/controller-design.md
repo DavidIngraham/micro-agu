@@ -10,33 +10,38 @@ The follow-up [state-space controller study](controller-state-space.md) compares
 
 ## From flight logs to a model for controller design
 
-The simple simulator had been useful for choosing the gains I took to Trout Lake. After the flights, I wanted it to answer a harder question: would a controller that looked good in simulation behave sensibly on the actual suspended aircraft? The achievable turn radius looked optimistic, sustained bank was harder to maintain in flight, and the pitch damper had exposed motion that a single rigid aircraft could not explain.
+Micro-AGU is a powered paraglider: a flexible wing supports a motorized payload on suspension lines. The controller lives on the payload, pulls the left and right brakes to steer, and changes throttle to climb or descend. Its sensors measure the payload's motion, while most aerodynamic forces act on the canopy.
 
-The starting evidence was the Hood River and Trout Lake logs: actuator commands, logged parameter ranges, payload attitude and rates, navigation velocity, altitude and battery measurements. Hood River included substantial manual flying to feel out the platform. Early Trout Lake throttle tests and the later sustained turns supplied more ordinary operating points. The powered, high-bank Hood River turn was useful as a stress case, but reproducing that maneuver stopped being the main objective. The controller needed a useful model of everyday glide, climb and sustained turns first.
+That separation is why this simulator exists. The early single-body model helped choose initial gains, but the Hood River and Trout Lake flights exposed overly optimistic turns and pitch motion it could not explain. The controller-design question became: **when a command moves the canopy or payload, what will the controller's sensors see next?**
 
-### Reconstruct the aircraft before fitting its response
+Start with the two-body picture below, then follow the forces from canopy to suspension to sensors. The expandable applets each answer one question; the equations and parameter tables are there when you want to inspect the mechanism more closely.
 
-The two flights were not the same aircraft configuration. All-up mass was 1.385 kg without the added ballast and 1.758 kg with it—a 373 g difference, carried at the bottom of the payload. I had also adjusted the rigging. We therefore kept separate flight configurations instead of asking one set of coefficients to explain both through mass alone.
-
-The logged PWM ranges mattered just as much as mass. Both main flights used 800–2100 μs on the left brake and a reversed 900–2400 μs range on the right, with no recorded in-flight changes to those ranges. The nominal conversion using the 55 mm drums and servo mapping gives about 62.4 mm of configured left travel and 72.0 mm on the right. The asymmetry is real; treating both outputs as identical normalized brakes would fit the wrong inputs. Effective slack and preload are separate from physical drum travel. Their fitted values can absorb rigging and canopy asymmetry, so they are not measurements of line length.
-
-![Flight-derived throttle and climb relationships for the two configurations](assets/flight-testing/throttle-climb-fit.png)
-
-*Steady flight windows establish useful throttle/climb relationships. They do not identify the complete transient dynamics. Hood River’s erroneous current readings and false power limiting also prevent treating that flight as a clean propulsion calibration; the missing input capacitor was fixed before Trout Lake.*
-
-The propulsion model uses the reported FFTY 3115-900KV motor and 9×4.5 propeller geometry, with an APC 9×4.5 aerodynamic map as a proxy. It includes rotor speed dynamics, reaction torque, rotor angular momentum and precession, and the reaction to spin acceleration. Rotation is clockwise viewed from behind. Component weights and CAD-informed dimensions supplied approximate mass distribution and inertia; these were engineering estimates where direct measurements were unavailable.
+This article records a controller-development study. The newer explanatory applets use the current Rust implementation and identify their presets. Historical flight comparisons and controller results retain the configurations used in that study; adding an explanation does not constitute a new validation run.
 
 ### Let the payload and canopy move independently
 
-The important structural change was moving to two rigid bodies connected by a point joint. Each body has its own attitude and angular velocity. Their shared attachment constrains relative translation while allowing relative roll, pitch and yaw: twelve free-body degrees of freedom minus three positional constraints gives **nine mechanical degrees of freedom**.
+The model represents the canopy and payload as two rigid bodies connected at one equivalent attachment point. The canopy can rotate relative to the payload, but the two attachment positions must coincide. Each body has its own attitude and angular velocity. Three overall translations, three payload rotations and three relative canopy rotations give **nine mechanical degrees of freedom**.
 
-The purpose of this change is to separate **what the canopy does** from **what the payload-mounted sensors see**. The canopy generates most of the aerodynamic support and steering forces. The payload carries most of the mass, the motor and the IMU. A throttle or brake change acts on one part of that system first; the suspension transfers forces and moments to the other. Treating them as one rigid aircraft would remove that relative motion before the controller ever saw it.
+This separates **what the canopy does** from **what the payload-mounted sensors see**. The canopy generates most of the aerodynamic support and steering forces. The payload carries most of the mass, the motor and the inertial measurement unit (IMU). A throttle or brake change acts on one part of that system first; the suspension transfers forces and moments to the other. Treating them as one rigid aircraft would remove that relative motion before the controller ever saw it.
 
 ![Modeled canopy and payload, with separate free-body diagrams showing aerodynamic loads, weights, thrust and equal-and-opposite joint reactions](assets/model-structure/modeled-system-fbd.svg)
 
 *Left: the two rigid bodies and their equivalent attachment. Right: the loads on each isolated body. Orange arrows are external loads; green arrows are internal joint reactions. Directions are illustrative, not a solved trim condition. The suspension sketch is not a set of individually simulated lines, and the force arrows are not to scale.*
 
-### What is connected to what?
+<details>
+<summary>Explore the motion: how can the canopy rotate while the payload moves differently?</summary>
+
+Start with **Relative pitch** in the prescribed-motion view. Watch which body changes attitude and remember that the IMU is attached to the payload. Then try relative roll or yaw. These first views demonstrate the allowed motions; the disturbance-release views show recorded simulation responses.
+
+#### See the separate motions
+
+The motion tour lets you step through the three translations, three payload rotations and three relative canopy rotations. Use front, side or top views, pause, scrub, or slow playback. The default disturbance view releases either the canopy or payload, with a 3°–15° amplitude slider and both stiffness profiles. Select **Closed loop · AUTO** at 9° to see the native autopilot respond after flying a straight waypoint leg at 100 m altitude for 100 seconds. **Open loop · fixed trim** shows the original natural response with throttle and brakes held at equilibrium trim. Throttle, brake pull, altitude deviation and ground-track deviation appear below the motion.
+
+[Explore the joint motions](https://davidingraham.github.io/assets/microagu-viewer/joint-tour.html)
+
+*The first nine segments prescribe one coordinate at a time to explain the degrees of freedom. The final three replay simulated roll, pitch and yaw deflection releases with the mission profile. Prescribed motion is labeled separately from physics. The response view removes shared translation, preserving all rotations and relative displacement at their simulated amplitudes. The canopy is schematic; the carriage uses the SolidWorks model.*
+
+#### What is connected to what?
 
 The joint is an **equivalent point connection**, not a pin that permits only one rotational axis. If $\mathbf{x}_p$ and $\mathbf{x}_c$ are the payload and canopy CG positions, $R_p$ and $R_c$ their attitudes, and $\mathbf{a}_p$ and $\mathbf{a}_c$ the fixed attachment offsets in their respective body frames, the shared-point condition is
 
@@ -47,20 +52,57 @@ $$
 
 The equations solve for a reaction force $\mathbf{J}$ that makes the two attachment-point accelerations agree, including the rotational acceleration and centripetal terms. The payload receives $+\mathbf{J}$ and the canopy receives $-\mathbf{J}$, each acting through its own attachment-to-CG moment arm. There are three independent relative rotations, but they are not torque-free: an effective spring and damper oppose relative attitude and angular rate. That torque also enters the two bodies with opposite signs. The coefficients represent the suspension's aggregate behavior; they do not model fabric deformation or individual line tensions.
 
-The force model has four main pieces:
+</details>
 
-| Component | What the simulation calculates | Why it matters to the controller |
-|---|---|---|
-| Canopy aerodynamics | Lift and drag on five panels across a curved **rigid** wing, using local airflow including rotational velocity; left/right brake pull changes those loads. Panel moment arms and additional aerodynamic moment terms produce roll, pitch and yaw moments. | A brake command can change support, drag and attitude together; it is not a direct turn-rate command. |
-| Payload loads | Gravity, air-relative drag, and thrust applied at the motor's offset from the payload CG. | A thrust increase can immediately rotate the payload before changing the aircraft's climb rate. |
-| Propeller dynamics | Voltage and throttle set a target RPM with a first-order lag. RPM and axial airflow determine thrust and shaft torque through the propeller map. Rotor angular momentum adds gyroscopic and spin-acceleration reactions. | Throttle response has dynamics, and payload rotation can couple pitch and yaw. |
-| Inertia and suspension | Separate body inertias, canopy added-air inertia, the point-joint reaction, and rotational restoring/damping torques. | These determine how the two bodies exchange motion and which oscillations appear in the payload gyro. |
+### Follow the forces through the aircraft
 
-Added-air inertia represents the surrounding air that must accelerate with the canopy. It enters the canopy's coupled translational/rotational mass matrix; it is neither another rigid body nor an extra lift arrow. Likewise, the five panels are aerodynamic integration elements on one canopy, not five articulated wing segments.
+The canopy supplies lift and drag. The motor supplies thrust at an offset from the payload's center of gravity. The suspension transfers forces and torques between them. A brake or throttle change therefore affects both bodies, often at different times; the controller must track the route without amplifying their relative motion.
+
+### How the five-panel canopy produces loads
+
+The canopy is one rigid body, with **five equal-area regions** along its curved span where aerodynamic loads are evaluated. The panel centers have different positions and local orientations. Lift and drag are evaluated at each center, then combined into the force and moment on the canopy.
+
+**What to look for:** a brake input changes distributed forces across the curved wing. Their distances from the canopy's center of gravity turn those forces into moments.
+
+<details>
+<summary>Explore canopy aerodynamics: compare symmetric flight with right braking</summary>
+
+[Explore the five-panel canopy aerodynamics](https://davidingraham.github.io/assets/microagu-viewer/canopy-panels.html)
+
+*Select symmetric flight or right braking, inspect any panel, and switch between three-quarter and front views. These are frozen operating points calculated by the current Rust plant with the as-built Trout Lake SITL preset: 7 m/s, 4.58° canopy angle of attack, zero sideslip and zero angular rate. They illustrate the force calculation; neither case is claimed to be a trimmed equilibrium or a predicted turn trajectory. The earlier refinement results below retain their historical model provenance.*
+
+For panel $i$, its velocity through the air in local panel coordinates is
+
+$$
+\mathbf{v}_i = R_i^T\left[\mathbf{v}_{c,\mathrm{air}} + \boldsymbol{\omega}_c\times\mathbf{r}_i\right].
+$$
+
+Here $\mathbf{r}_i$ is the panel center's offset from the canopy CG, $R_i$ maps the panel frame to the canopy frame, and $\mathbf{v}_{c,\mathrm{air}}$ and $\boldsymbol{\omega}_c$ are expressed in canopy coordinates. The blue arrows show incoming airflow, opposite this local velocity. Even in a uniform wind, canopy rotation changes the velocity at the different panel centers.
+
+The two left panels receive left brake pull; the two right panels receive right brake pull; the center panel receives their average. Local angle of attack and brake pull change lift and drag coefficients. The model also applies an effective aerodynamic inclination change proportional to differential brake pull. This is a modeled aerodynamic correction, not five physical hinges or simulated fabric deformation. The front inset shows those effective inclinations; the main surface retains its rigid geometric arc.
+
+The panel forces and their moment arms contribute
+
+$$
+\mathbf{F}_{\mathrm{panels}}=\sum_{i=1}^{5}(\mathbf{L}_i+\mathbf{D}_i),
+\qquad
+\mathbf{M}_{\mathrm{panels}}=\sum_{i=1}^{5}\mathbf{r}_i\times(\mathbf{L}_i+\mathbf{D}_i).
+$$
+
+The plant then adds separate whole-canopy side-force and aerodynamic moment terms, based on sideslip, angle of attack, angular rate and differential braking. The figure lists the panel moments and additional aerodynamic moments separately, so the distributed-panel calculation is not mistaken for the entire aerodynamic model. Gravity, suspension reactions and added-air inertia enter elsewhere in the body equations.
+
+</details>
 
 ### What the joint's springs and dampers represent
 
 The point constraint prevents the equivalent attachment positions from separating. **Rotational stiffness and damping are separate from that positional constraint.** They represent the suspension's aggregate resistance to relative attitude and relative angular velocity; there is no literal metal spring or shock absorber in the model.
+
+A spring responds to relative angle and pulls toward alignment; a damper responds to relative angular rate and removes energy. For yaw, twisting separated suspension groups provides a geometric reason for the restoring torque. The effective attachment geometry can give a stiffness estimate, while damping still needs experimental identification.
+
+**What to look for:** pause at a turning point, where damping vanishes, then at alignment, where the linear spring torque vanishes. In the yaw view, compare the geometry-based estimate with the fitted spring actually used by the preset.
+
+<details>
+<summary>Explore suspension mechanics: spring, damper, parameters and yaw geometry</summary>
 
 [Explore the joint springs, dampers and yaw geometry](https://davidingraham.github.io/assets/microagu-viewer/joint-mechanics.html)
 
@@ -109,7 +151,7 @@ $$
 P_d=-\Delta\boldsymbol{\omega}^TC\Delta\boldsymbol{\omega}\leq0.
 $$
 
-### How geometry supplies a yaw-stiffness estimate
+#### How geometry supplies a yaw-stiffness estimate
 
 Imagine two taut, fixed-length connections between symmetric upper and lower attachment groups—a **bifilar suspension**. Let $2a$ be the lower attachment spacing, $2b$ the effective upper attachment spacing, and $H$ their vertical separation when aligned. Twisting through relative yaw $\psi$ increases the horizontal distance between corresponding attachments. To keep the connection lengths fixed, the payload must rise:
 
@@ -158,61 +200,16 @@ These stored dimensions give $k_{\psi,0}=0.386312$ N·m/rad. The preset currentl
 
 Geometry alone does **not** determine the damping coefficients. A suspended twist-and-release test with known rotational inertia can provide an initial yaw stiffness/damping estimate from oscillation frequency and decay. Flight fitting should then account for aerodynamic damping, coupled modes and sensor location; a payload gyro alone does not directly measure canopy–payload relative motion. The useful path is measured loaded geometry first, a constrained effective-parameter fit second, and independent validation of the resulting motion.
 
-### How the five-panel canopy produces loads
+</details>
 
-The canopy is one rigid body, divided into **five equal-area aerodynamic integration regions** along its curved span. The panel centers have different positions and local orientations. Lift and drag are evaluated at each center, then combined into the force and moment on the canopy.
+### Why the controller sees coupled motion
 
-[Explore the five-panel canopy aerodynamics](https://davidingraham.github.io/assets/microagu-viewer/canopy-panels.html)
+The sensor feedback combines all of these effects. A throttle change can pitch the payload before the aircraft climbs. A brake correction can move the canopy and excite payload motion. The spinning propeller adds another coupling: a pitch disturbance can also produce yaw through gyroscopic torque.
 
-*Select symmetric flight or right braking, inspect any panel, and switch between three-quarter and front views. These are frozen operating points calculated by the current Rust plant with the as-built Trout Lake SITL preset: 7 m/s, 4.58° canopy angle of attack, zero sideslip and zero angular rate. They illustrate the force calculation; neither case is claimed to be a trimmed equilibrium or a predicted turn trajectory. The earlier refinement results below retain their historical model provenance.*
+<details>
+<summary>Inspect a model check: why does a pitch release also produce yaw?</summary>
 
-For panel $i$, its velocity through the air in local panel coordinates is
-
-$$
-\mathbf{v}_i = R_i^T\left[\mathbf{v}_{c,\mathrm{air}} + \boldsymbol{\omega}_c\times\mathbf{r}_i\right].
-$$
-
-Here $\mathbf{r}_i$ is the panel center's offset from the canopy CG, $R_i$ maps the panel frame to the canopy frame, and $\mathbf{v}_{c,\mathrm{air}}$ and $\boldsymbol{\omega}_c$ are expressed in canopy coordinates. The blue arrows show incoming airflow, opposite this local velocity. Even in a uniform wind, canopy rotation changes the velocity at the different panel centers.
-
-The two left panels receive left brake pull; the two right panels receive right brake pull; the center panel receives their average. Local angle of attack and brake pull change lift and drag coefficients. The model also applies an effective aerodynamic inclination change proportional to differential brake pull. This is a modeled aerodynamic correction, not five physical hinges or simulated fabric deformation. The front inset shows those effective inclinations; the main surface retains its rigid geometric arc.
-
-The panel forces and their moment arms contribute
-
-$$
-\mathbf{F}_{\mathrm{panels}}=\sum_{i=1}^{5}(\mathbf{L}_i+\mathbf{D}_i),
-\qquad
-\mathbf{M}_{\mathrm{panels}}=\sum_{i=1}^{5}\mathbf{r}_i\times(\mathbf{L}_i+\mathbf{D}_i).
-$$
-
-The plant then adds separate whole-canopy side-force and aerodynamic moment terms, based on sideslip, angle of attack, angular rate and differential braking. The figure lists the panel moments and additional aerodynamic moments separately, so the distributed-panel calculation is not mistaken for the entire aerodynamic model. Gravity, suspension reactions and added-air inertia enter elsewhere in the body equations.
-
-### How the equations become a simulation step
-
-![Simulation block diagram from commands and actuator mapping through canopy and payload loads, constrained acceleration solving, integration and payload sensor feedback](assets/model-structure/simulation-blocks.svg)
-
-*The same mechanics support recorded-input replay, standalone controller experiments and native ArduPilot SITL. The outer feedback path changes between those uses; the two-body force and constraint calculation remains the plant.*
-
-Each step converts commands into throttle and effective left/right brake pull, with the selected actuator mapping and rate limits. The force routines use the current body motion, wind and rotor speed. The coupled solver combines those loads with the inertia matrices and joint constraint to obtain both bodies' accelerations. RK4 substeps advance their motion, and quaternion normalization maintains valid attitudes. Updated motion then changes the next aerodynamic and joint loads: this is a nonlinear feedback process inside the plant, even when replaying fixed actuator commands.
-
-The implementation stores **26 body-state values**: position (3), attitude quaternion (4), translational velocity (3) and angular velocity (3) for each body. Those are redundant coordinates, not 26 independent degrees of freedom. Unit-quaternion conditions and the shared attachment's position/velocity constraints leave the nine mechanical freedoms and their velocities. Rotor RPM is retained separately, and the actuator wrapper retains brake position. Controller integrators and filters belong to the controller, rather than to these mechanical coordinates.
-
-Finally, the sensor interface samples the **payload**, including the IMU's offset from its CG. Standalone analysis can use ideal observations; native SITL constructs payload-frame gyro and specific-force measurements plus navigation quantities for ArduPilot's estimator. Full canopy attitude is available to analysis and rendering, but is not silently supplied as a measured flight-controller input. Wind and voltage are inputs to this model; the constant-voltage mission runs below do not contain a battery-discharge model.
-
-These details describe the [mechanics](https://github.com/DavidIngraham/ardupilot/blob/5f483ade60/Tools/simulation/paraglider/dynamics.cpp), [simulation wrapper](https://github.com/DavidIngraham/ardupilot/blob/5f483ade60/Tools/simulation/paraglider/simulator.py) and [SITL sensor interface](https://github.com/DavidIngraham/ardupilot/blob/5f483ade60/Tools/simulation/paraglider/json_backend.py) used by this refinement study. The diagrams are explanatory views of that model, not additional calibration evidence.
-
-### See the separate motions
-
-[Open the interactive 3D motion tour](https://davidingraham.github.io/assets/microagu-viewer/joint-tour.html) to step through the three translations, three payload rotations and three relative canopy rotations. Use front, side or top views, pause, scrub, or slow playback. The default disturbance view releases either the canopy or payload, with a 3°–15° amplitude slider and both stiffness profiles. Select **Closed loop · AUTO** at 9° to see the native autopilot respond after flying a straight waypoint leg at 100 m altitude for 100 seconds. **Open loop · fixed trim** shows the original natural response with throttle and brakes held at equilibrium trim. Throttle, brake pull, altitude deviation and ground-track deviation appear below the motion.
-
-[Explore the joint motions](https://davidingraham.github.io/assets/microagu-viewer/joint-tour.html)
-
-*The first nine segments prescribe one coordinate at a time to explain the degrees of freedom. The final three replay simulated roll, pitch and yaw deflection releases with the mission profile. Prescribed motion is labeled separately from physics. The response view removes shared translation, preserving all rotations and relative displacement at their simulated amplitudes. The canopy is schematic; the carriage uses the SolidWorks model.*
-
-A curved five-panel canopy supplies aerodynamic forces and moments. Effective joint stiffness and damping represent the suspension’s resistance to relative rotation, including a mass-dependent yaw restoring term. Thrust acts at the motor’s location relative to the payload CG. That geometry lets the carriage pitch nose-down immediately after a throttle increase while the aircraft eventually climbs. The simulated IMU follows the payload, including its offset from the CG; it does not report canopy attitude.
-
-This is what makes the articulated animation relevant to control design: steering can excite pitch, and the payload gyro can see a motion quite different from the wing’s. Rotor and actuator dynamics add states to the equations without changing the nine mechanical freedoms.
-
-### Why a pitch disturbance also produces yaw
+#### Why a pitch disturbance also produces yaw
 
 In the [interactive joint-response viewer](https://davidingraham.github.io/assets/microagu-viewer/joint-tour.html), select **Open loop**, **Payload-only deflection**, **Pitch release**, **Mission profile**, and **9°**. The carriage pitches and also yaws, even though the brake commands stay fixed. Switch to **Canopy-only deflection** to see the same coupling excited through the wing.
 
@@ -227,6 +224,70 @@ I checked this by replaying both releases with the rotor angular-momentum terms 
 
 That large reduction identifies gyroscopic coupling as the dominant source of the visible yaw in these cases. A canopy disturbance also drives payload pitch, which then excites the rotor coupling. The smaller remaining yaw comes from the rest of the coupled model. This establishes the mechanism in the simulator; its magnitude depends on the estimated rotor inertia and has not been isolated in flight data. The intervention removes both gyroscopic and spin-acceleration reaction terms, rather than switching off propeller thrust or shaft torque. [Numerical results](assets/viewer/joint-tour/pitch-yaw-coupling.json) and the [reproduction script](https://github.com/DavidIngraham/micro-agu/blob/main/research/viewer-studies/check_pitch_yaw_coupling.py) record the comparison.
 
+</details>
+
+### Connect the model to the real controller
+
+The current simulator has **one Rust physics core**, with two ways to supply commands:
+
+| How commands are supplied | What the run answers |
+|---|---|
+| Recorded-input replay | Given the commands flown, does the model reproduce the measured response? |
+| Live controller feedback | Given simulated measurements, what commands does the controller choose, and how does the aircraft respond? |
+
+Python experiments, native ArduPilot software-in-the-loop (SITL) and browser WebAssembly (WASM) use interfaces to this shared physics core. In SITL, ArduPilot's estimator and control loops receive simulated payload measurements and return actuator commands. The renderer can show canopy truth without supplying that truth to the flight controller. Standalone experiments may use different observations, so their sensing assumptions must be stated separately.
+
+<details>
+<summary>Inspect the implementation: forces, constraints, integration and sensor feedback</summary>
+
+#### How the equations become a simulation step
+
+![Simulation block diagram from commands and actuator mapping through canopy and payload loads, constrained acceleration solving, integration and payload sensor feedback](assets/model-structure/simulation-blocks.svg)
+
+*One Rust physics core supports recorded-input replay and live feedback. Python experiments, native ArduPilot SITL and browser WASM use adapters around that core; matching runs also requires matching configuration, actuator mapping and sensor handling.*
+
+Each step converts commands into throttle and effective left/right brake pull, with the selected actuator mapping and rate limits. The force routines use the current body motion, wind and rotor speed. The coupled solver combines those loads with the inertia matrices and joint constraint to obtain both bodies' accelerations. RK4 substeps advance their motion, and quaternion normalization maintains valid attitudes. Updated motion then changes the next aerodynamic and joint loads: this is a nonlinear feedback process inside the plant, even when replaying fixed actuator commands.
+
+The implementation stores **26 body-state values**: position (3), attitude quaternion (4), translational velocity (3) and angular velocity (3) for each body. Those are redundant coordinates, not 26 independent degrees of freedom. Unit-quaternion conditions and the shared attachment's position/velocity constraints leave the nine mechanical freedoms and their velocities. Rotor RPM is retained separately, and the actuator wrapper retains brake position. Controller integrators and filters belong to the controller, rather than to these mechanical coordinates.
+
+Finally, the sensor interface samples the **payload**, including the IMU's offset from its CG. Standalone analysis can use ideal observations; SITL constructs payload-frame gyro and specific-force measurements plus navigation quantities for ArduPilot's estimator. Full canopy attitude is available to analysis and rendering, but is not silently supplied as a measured flight-controller input. Wind and voltage are inputs to this model; the constant-voltage mission runs below do not contain a battery-discharge model.
+
+The force model has four main pieces:
+
+| Component | What the simulation calculates | Why it matters to the controller |
+|---|---|---|
+| Canopy aerodynamics | Lift and drag on five panels across a curved **rigid** wing, using local airflow including rotational velocity; left/right brake pull changes those loads. Panel moment arms and additional aerodynamic moment terms produce roll, pitch and yaw moments. | A brake command can change support, drag and attitude together; it is not a direct turn-rate command. |
+| Payload loads | Gravity, air-relative drag, and thrust applied at the motor's offset from the payload CG. | A thrust increase can immediately rotate the payload before changing the aircraft's climb rate. |
+| Propeller dynamics | Voltage and throttle set a target RPM with a first-order lag. RPM and axial airflow determine thrust and shaft torque through the propeller map. Rotor angular momentum adds gyroscopic and spin-acceleration reactions. | Throttle response has dynamics, and payload rotation can couple pitch and yaw. |
+| Inertia and suspension | Separate body inertias, canopy added-air inertia, the point-joint reaction, and rotational restoring/damping torques. | These determine how the two bodies exchange motion and which oscillations appear in the payload gyro. |
+
+Added-air inertia represents the surrounding air that must accelerate with the canopy. It enters the canopy's coupled translational/rotational mass matrix; it is neither another rigid body nor an extra lift arrow. Likewise, the five panels are aerodynamic integration elements on one canopy, not five articulated wing segments.
+
+The current [Rust simulator documentation](../simulation/README.md) describes the adapters and configuration contract. Historical source links preserve the [mechanics](https://github.com/DavidIngraham/ardupilot/blob/5f483ade60/Tools/simulation/paraglider/dynamics.cpp), [simulation wrapper](https://github.com/DavidIngraham/ardupilot/blob/5f483ade60/Tools/simulation/paraglider/simulator.py) and [SITL sensor interface](https://github.com/DavidIngraham/ardupilot/blob/5f483ade60/Tools/simulation/paraglider/json_backend.py) used by this refinement study. The current diagrams explain the mechanics and are not additional calibration evidence.
+
+</details>
+
+### Ground the model in the two flight configurations
+
+The starting evidence was the Hood River and Trout Lake logs: actuator commands, payload attitude and rates, navigation velocity, altitude and battery measurements. They cover different masses and rigging configurations. Those differences must be reconstructed before fitting aerodynamic or suspension coefficients; otherwise the fit can compensate for the wrong aircraft or the wrong control inputs.
+
+<details>
+<summary>Inspect the flight inputs: mass, brake travel, rigging and propulsion assumptions</summary>
+
+#### Reconstruct the aircraft before fitting its response
+
+The two flights were not the same aircraft configuration. All-up mass was 1.385 kg without the added ballast and 1.758 kg with it—a 373 g difference, carried at the bottom of the payload. I had also adjusted the rigging. We therefore kept separate flight configurations instead of asking one set of coefficients to explain both through mass alone.
+
+The logged PWM ranges mattered just as much as mass. Both main flights used 800–2100 μs on the left brake and a reversed 900–2400 μs range on the right, with no recorded in-flight changes to those ranges. The nominal conversion using the 55 mm drums and servo mapping gives about 62.4 mm of configured left travel and 72.0 mm on the right. The asymmetry is real; treating both outputs as identical normalized brakes would fit the wrong inputs. Effective slack and preload are separate from physical drum travel. Their fitted values can absorb rigging and canopy asymmetry, so they are not measurements of line length.
+
+![Flight-derived throttle and climb relationships for the two configurations](assets/flight-testing/throttle-climb-fit.png)
+
+*Steady flight windows establish useful throttle/climb relationships. They do not identify the complete transient dynamics. Hood River’s erroneous current readings and false power limiting also prevent treating that flight as a clean propulsion calibration; the missing input capacitor was fixed before Trout Lake.*
+
+The propulsion model uses the reported FFTY 3115-900KV motor and 9×4.5 propeller geometry, with an APC 9×4.5 aerodynamic map as a proxy. It includes rotor speed dynamics, reaction torque, rotor angular momentum and precession, and the reaction to spin acceleration. Rotation is clockwise viewed from behind. Component weights and CAD-informed dimensions supplied approximate mass distribution and inertia; these were engineering estimates where direct measurements were unavailable.
+
+</details>
+
 <a id="watching-the-coupled-aircraft-move"></a>
 
 ### Fit useful behavior, retain competing explanations
@@ -237,13 +298,9 @@ Two profiles survived that work. The **mission profile** better represents ordin
 
 The resulting model is more useful for controller design because it represents asymmetric brake authority, configuration-dependent trim, propulsion dynamics and the coupled motions missing from the original approximation. It is not a unique identification of the aircraft. Cross-axis phase errors and missing low-frequency yaw energy remain, and the powered Hood River equilibrium has a slow instability in the model. The same two flights guided development, so replay agreement is not independent flight validation.
 
-### Connect the model to the real controller
+The controller tests reported below begin from solved airborne trim and concern an inflated canopy with a taut connection. Their results do not establish launch, collapse or landing behavior. The current Rust runtime also includes ground contact and assisted launch, but those additions should not be read back into these historical comparisons. The rigid canopy, approximate stall law and constant-voltage mission runs remain important limits on what the reported tests demonstrate.
 
-The retained dynamics run through ArduPilot’s JSON SITL backend. Native navigation, TECS, steering code and the estimator receive simulated payload sensor data and return PWM commands through the flight-specific actuator mapping. Tests start from a solved airborne trim. This allows the full mission controller to be evaluated against the same mechanics used in the analysis, rather than relying only on a standalone ideal-sensor controller.
-
-The model assumes an inflated canopy and a taut point connection. It does not simulate inflation, slack lines, collapse or landing. The canopy is rigid, the stall law is approximate, and the mission comparisons use constant voltage rather than battery discharge. Those limits set the scope of this article: up-and-away control, ordinary maneuvers and sensitivity to modeled disturbances.
-
-[Model mechanics and configuration notes](https://github.com/DavidIngraham/ardupilot/blob/5f483ade60/Tools/simulation/paraglider/README.txt) preserve the calibration assumptions, competing profiles and reproduction details. The [data and methods appendix](data-and-methods.md) separates flight evidence from subsequent model and controller tests.
+[Historical model and configuration notes](https://github.com/DavidIngraham/ardupilot/blob/5f483ade60/Tools/simulation/paraglider/README.txt) preserve the study's calibration assumptions and reproduction details. The [data and methods appendix](data-and-methods.md) separates flight evidence from subsequent model and controller tests.
 
 ## One aircraft, two control paths
 
@@ -560,8 +617,6 @@ The calm, gust and crosswind replays below show native AUTO with the same two-st
 **Steady 2 m/s eastward wind**
 
 [Replay native AUTO in steady crosswind](https://davidingraham.github.io/assets/microagu-viewer/simulation-replay.html?case=crosswind)
-
-
 
 ## Bringing the two axes together
 

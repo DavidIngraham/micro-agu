@@ -1,0 +1,69 @@
+{
+  "zero-only": {
+    "mean_check_score_ratio": 0.8762732878379909,
+    "window_ratios": [
+      0.892628008799749,
+      0.7422387029807741,
+      0.747220355742923,
+      0.7929105063979173,
+      0.6697317693405297,
+      1.0691535914212442,
+      1.2156034892735497,
+      0.8806998787472398
+    ],
+    "improved_windows": 6,
+    "group_ratios_lateral_longitudinal_fast": [
+      0.9743708206061164,
+      0.8532455967192573,
+      0.9988163688085688
+    ],
+    "turn_gate": false,
+    "passed": false,
+    "nominal_turn": {
+      "flight": {
+        "bank_peak_deg": 47.691890716552734,
+        "course_rotation_deg": 443.92321573233124,
+        "mean_climb_mps": 0.2848599211333527
+      },
+      "model": {
+        "bank_peak_deg": 23.051883664823173,
+        "course_rotation_deg": 175.92012181899378,
+        "mean_climb_mps": 0.13970178137345063
+      }
+    }
+  },
+  "coupled": {
+    "mean_check_score_ratio": 1.1201387648392351,
+    "window_ratios": [
+      0.8895347504437238,
+      0.6454718973772878,
+      0.6925772369678156,
+      0.897492886393473,
+      0.6636478755777131,
+      1.7364596570197524,
+      2.4193345281039482,
+      1.016591286830167
+    ],
+    "improved_windows": 5,
+    "group_ratios_lateral_longitudinal_fast": [
+      2.1562795311837166,
+      0.8267362354857862,
+      0.9995227273253017
+    ],
+    "turn_gate": false,
+    "passed": false,
+    "nominal_turn": {
+      "flight": {
+        "bank_peak_deg": 47.691890716552734,
+        "course_rotation_deg": 443.92321573233124,
+        "mean_climb_mps": 0.2848599211333527
+      },
+      "model": {
+        "bank_peak_deg": 39.67893564662701,
+        "course_rotation_deg": 313.18655558459284,
+        "mean_climb_mps": 0.10712194779889678
+      }
+    }
+  },
+  "production_changed": false
+}

@@ -1,0 +1,169 @@
+{
+  "geometry_mm": 132,
+  "training": [
+    [
+      "hood_river",
+      300
+    ],
+    [
+      "hood_river",
+      480
+    ],
+    [
+      "hood_river",
+      690
+    ],
+    [
+      "hood_river",
+      930
+    ],
+    [
+      "trout_lake",
+      600
+    ],
+    [
+      "trout_lake",
+      900
+    ],
+    [
+      "trout_lake",
+      1920
+    ],
+    [
+      "trout_lake",
+      2790
+    ],
+    [
+      "hood_river",
+      438
+    ]
+  ],
+  "checks": [
+    [
+      "hood_river",
+      360
+    ],
+    [
+      "hood_river",
+      600
+    ],
+    [
+      "hood_river",
+      720
+    ],
+    [
+      "hood_river",
+      1020
+    ],
+    [
+      "trout_lake",
+      840
+    ],
+    [
+      "trout_lake",
+      1350
+    ],
+    [
+      "trout_lake",
+      2400
+    ],
+    [
+      "trout_lake",
+      2910
+    ]
+  ],
+  "names": [
+    "hr_left_zero_mm",
+    "hr_right_zero_mm",
+    "tl_left_zero_mm",
+    "tl_right_zero_mm",
+    "brake_cp_shift",
+    "brake_outboard_fraction",
+    "Cndelta"
+  ],
+  "bounds": [
+    [
+      -3.0,
+      3.0
+    ],
+    [
+      -3.0,
+      3.0
+    ],
+    [
+      -3.0,
+      3.0
+    ],
+    [
+      -3.0,
+      3.0
+    ],
+    [
+      0.0,
+      0.3
+    ],
+    [
+      0.0,
+      1.0
+    ],
+    [
+      0.0,
+      0.035
+    ]
+  ],
+  "filter": {
+    "sample_hz": 25,
+    "lowpass_hz": 0.7,
+    "order": 3,
+    "zero_phase": true,
+    "discard_edges_s": 2
+  },
+  "metrics": [
+    "slow_bank",
+    "slow_yaw_rate",
+    "course",
+    "slow_pitch",
+    "slow_climb",
+    "slow_speed",
+    "fast_roll_rate",
+    "fast_pitch_rate",
+    "fast_yaw_rate"
+  ],
+  "scales": [
+    5.0,
+    10.0,
+    90.0,
+    5.0,
+    0.4,
+    1.0,
+    15.0,
+    15.0,
+    15.0
+  ],
+  "group_weights": [
+    0.4,
+    0.4,
+    0.2
+  ],
+  "families": [
+    "zero-only",
+    "coupled"
+  ],
+  "optimizer": "Powell; two specified starts per family; 96 function evaluations per start; no check-window access until selection frozen",
+  "initial_alpha_fit": 0.35,
+  "initial_alpha_checks": [
+    0.25,
+    0.35,
+    0.45
+  ],
+  "gates": {
+    "mean_check_score_ratio": 0.95,
+    "worst_window_score_ratio": 1.15,
+    "improved_windows": 6,
+    "maximum_mean_group_ratio": 1.1,
+    "turn_course_relative_error": 0.2,
+    "turn_peak_bank_relative_error": 0.15,
+    "turn_mean_climb_absolute_error_mps": 0.15
+  },
+  "limitations": "Reused historical checks, not independent flights. CP and spanwise loading are quasi-static hypotheses; offsets are bounded nuisance parameters, not inferred physical measurements. Production settings remain unchanged."
+}

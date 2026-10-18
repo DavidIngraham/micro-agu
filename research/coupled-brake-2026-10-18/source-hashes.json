@@ -1,0 +1,6 @@
+{
+  "simulation/crates/sim-core/src/config.rs": "804e0bdfe8cd2e631d7e807d23414ef84899952479e82f5c749d89b94398d4ae",
+  "simulation/crates/sim-core/src/dynamics.rs": "e6ebe50183d31429621b3aae945a297dd0de03676bc07f77fb2c38cae2b17653",
+  "research/coupled-brake-2026-10-18/run.py": "170d10eebd8a590901319661b23421338af2ca1963ec014a5f63e31d8d048a2f",
+  "research/coupled-brake-2026-10-18/audit.py": "80f266dfd5a50766846b2e22ae03cebadc4ba3a7825025bf5d59fc2b96fb1471"
+}

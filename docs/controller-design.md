@@ -58,6 +58,106 @@ The force model has four main pieces:
 
 Added-air inertia represents the surrounding air that must accelerate with the canopy. It enters the canopy's coupled translational/rotational mass matrix; it is neither another rigid body nor an extra lift arrow. Likewise, the five panels are aerodynamic integration elements on one canopy, not five articulated wing segments.
 
+### What the joint's springs and dampers represent
+
+The point constraint prevents the equivalent attachment positions from separating. **Rotational stiffness and damping are separate from that positional constraint.** They represent the suspension's aggregate resistance to relative attitude and relative angular velocity; there is no literal metal spring or shock absorber in the model.
+
+[Explore the joint springs, dampers and yaw geometry](https://davidingraham.github.io/assets/microagu-viewer/joint-mechanics.html)
+
+*The first animation prescribes a ±15° single-axis rotation with a six-second period, and evaluates the spring and damper torques using the Rust plant's joint routine. It is not a free-response simulation. Pause or scrub to a turning point and to alignment: the spring follows angle, while the damper follows relative rate. The second view is a geometric construction motivating the yaw torque law; its displayed payload rise is not an extra translation simulated by the point joint.*
+
+For a small, isolated relative rotation $\theta_i$ about axis $i$, the torque on the canopy is
+
+$$
+\tau_{c,i}=-k_i\theta_i-c_i\Delta\omega_i,
+\qquad \tau_{p,i}=-\tau_{c,i}.
+$$
+
+Positive $\theta_i$ means the canopy is rotated ahead of the payload about that axis. The spring pulls the bodies toward alignment, stores energy and can return it. The damper opposes their relative angular velocity and dissipates energy. Consequently, spring and damper torques can point in **opposite directions while returning toward alignment**; damping does not always reinforce the spring.
+
+The [as-built Trout Lake SITL preset](../simulation/data/presets/as-built-trout-lake-sitl.json) used in these illustrations has:
+
+| Axis | Stiffness, N·m/rad | Damping, N·m·s/rad | Parameter names |
+|---|---:|---:|---|
+| Relative roll | 4.862204 | 0.001033185 | `joint_k_roll`, `joint_c_roll` |
+| Relative pitch | 0 | 0.045 | `joint_k_pitch`, `joint_c_pitch` |
+| Relative yaw | 0.4348934 | 0.060 | `joint_k_yaw`, `joint_c_yaw` |
+
+Zero pitch-joint stiffness means there is no explicit pitch spring in this preset. It does **not** remove pitch dynamics: aerodynamic moments, motor loads, inertia and the positional constraint still couple the bodies. These are effective coefficients for this model and configuration, not independently measured material constants. In particular, the [rigging study](rigging-refinement.md) found damping/geometry tradeoffs and sensitivity to canopy initialization, rather than a unique identification.
+
+The full three-dimensional implementation uses the rotation vector
+
+$$
+\boldsymbol{\theta}=\operatorname{Log}(R_p^TR_c)^\vee,
+\qquad
+\Delta\boldsymbol{\omega}=R_p^T(\boldsymbol{\omega}_c-\boldsymbol{\omega}_p).
+$$
+
+It maps the elastic potential's gradient through the rotation-vector Jacobian before applying equal-and-opposite world-frame torques. Thus the single-axis diagram should not be interpreted as three independent Euler-angle springs at large combined rotations. With $A(\boldsymbol{\theta})$ defined by $\dot{\boldsymbol{\theta}}=A\Delta\boldsymbol{\omega}$, the actual torque structure is
+
+$$
+\boldsymbol{\tau}_p=R_p\left[A^T\nabla_{\boldsymbol{\theta}}U+C\Delta\boldsymbol{\omega}\right],
+\qquad
+\boldsymbol{\tau}_c=-\boldsymbol{\tau}_p.
+$$
+
+The [joint implementation](../simulation/crates/sim-core/src/joint.rs) is shared by the plant and the [figure's recording generator](../simulation/crates/sim-io/examples/joint_explanation.rs).
+
+For the linear-spring option, $U=\tfrac12\sum_i k_i\theta_i^2$. The damper's net mechanical power across both bodies is
+
+$$
+P_d=-\Delta\boldsymbol{\omega}^TC\Delta\boldsymbol{\omega}\leq0.
+$$
+
+### How geometry supplies a yaw-stiffness estimate
+
+Imagine two taut, fixed-length connections between symmetric upper and lower attachment groups—a **bifilar suspension**. Let $2a$ be the lower attachment spacing, $2b$ the effective upper attachment spacing, and $H$ their vertical separation when aligned. Twisting through relative yaw $\psi$ increases the horizontal distance between corresponding attachments. To keep the connection lengths fixed, the payload must rise:
+
+$$
+\begin{aligned}
+L^2 &= H^2+(b-a)^2,\\
+h(\psi)^2 &= L^2-\left(a^2+b^2-2ab\cos\psi\right)\\
+&=H^2-2ab(1-\cos\psi),\\
+\Delta h(\psi)&=H-h(\psi).
+\end{aligned}
+$$
+
+That rise stores gravitational potential energy. Its derivative supplies a restoring torque, with the small-angle stiffness emerging directly from mass and geometry:
+
+$$
+\begin{aligned}
+U_\psi &= m_p g_0\,[H-h(\psi)],\\
+\tau_{c,\psi} &= -\frac{m_p g_0ab\sin\psi}{h(\psi)},\\
+k_{\psi,0} &= \left.\frac{d^2U_\psi}{d\psi^2}\right|_{\psi=0}
+=\frac{m_p g_0ab}{H}.
+\end{aligned}
+$$
+
+The Rust option `geometry_yaw > 0` substitutes this potential for the linear yaw potential; it **replaces**, rather than adds to, `joint_k_yaw`. In combined rotations it uses the yaw component of the relative rotation vector and the same Jacobian mapping. This is a reduced effective potential, not a full suspension-line solver. The derivation assumes symmetric, taut supports and gravitational loading; it does not resolve transient line tension or fabric deformation.
+
+The illustration uses these inputs:
+
+| Quantity | Preset value | How to obtain or interpret it |
+|---|---:|---|
+| Lower halfspacing $a$ | 66 mm | Half the measured 132 mm loaded riser attachment spacing; `yaw_payload_halfspacing`. |
+| Effective upper halfspacing $b$ | 323.554 mm | Equivalent left/right canopy load-center position; `yaw_canopy_halfspacing`. This value was fitted, not directly measured. |
+| Aligned vertical separation $H$ | 850 mm | Separation between the effective attachment planes; `yaw_vertical_separation`. The retained model value needs loaded-geometry verification. |
+| Supported payload mass $m_p$ | 1.568 kg | Total mass 1.758 kg minus 0.190 kg canopy mass. |
+
+To obtain $b$ from canopy geometry, locate the suspension attachment groups and their loaded cascades. **Do not substitute half the full canopy span.** For a single equivalent attachment on a circular canopy arc, at angle $\gamma$ from its centerline,
+
+$$
+b=R_{\mathrm{arc}}\sin\gamma,
+\qquad
+R_{\mathrm{arc}}=\frac{b_{\mathrm{arc}}}{2\phi},
+$$
+
+where $b_{\mathrm{arc}}$ is arc span and $\phi$ is the canopy half-arc angle. Real line groups distribute load across several pickup points; reducing those to an effective upper pair requires their geometry and load distribution, or an identified effective spacing. Measure $H$ from those effective attachment heights, not from the wing apex or an arbitrary canopy CG.
+
+These stored dimensions give $k_{\psi,0}=0.386312$ N·m/rad. The preset currently has `geometry_yaw = 0` and uses the fitted linear value $0.434893$ N·m/rad—about **12.6% higher**. The [as-built correction](rigging-refinement.md) retained the fitted stiffness product after correcting the lower spacing from 148.6 to 132 mm. The diagram plots both laws without silently treating them as identical or changing the deployed model.
+
+Geometry alone does **not** determine the damping coefficients. A suspended twist-and-release test with known rotational inertia can provide an initial yaw stiffness/damping estimate from oscillation frequency and decay. Flight fitting should then account for aerodynamic damping, coupled modes and sensor location; a payload gyro alone does not directly measure canopy–payload relative motion. The useful path is measured loaded geometry first, a constrained effective-parameter fit second, and independent validation of the resulting motion.
+
 ### How the five-panel canopy produces loads
 
 The canopy is one rigid body, divided into **five equal-area aerodynamic integration regions** along its curved span. The panel centers have different positions and local orientations. Lift and drag are evaluated at each center, then combined into the force and moment on the canopy.

@@ -11,7 +11,9 @@ import { definition as app9 } from "./controller-comparison/definition";
 import { definition as app10 } from "./rigging-comparison/definition";
 import { definition as app11 } from "../simulator/definition";
 import { definition as canopyPanels } from "./canopy-panels/definition";
+import { definition as jointMechanics } from "./joint-mechanics/definition";
 export const applets = [
+  jointMechanics,
   canopyPanels,
   app0,
   app1,

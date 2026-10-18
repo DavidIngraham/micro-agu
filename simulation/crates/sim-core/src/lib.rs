@@ -5,6 +5,7 @@ pub mod atmosphere;
 pub mod config;
 pub mod dynamics;
 pub mod integrator;
+pub mod joint;
 pub mod kernel;
 pub mod launch;
 pub mod propulsion;

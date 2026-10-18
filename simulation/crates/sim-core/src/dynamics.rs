@@ -1,7 +1,7 @@
 //! Curved canopy panels and constrained two-body spatial dynamics.
 use crate::config::Parameters;
 use crate::state::*;
-use nalgebra::{Rotation3, UnitQuaternion};
+use nalgebra::Rotation3;
 
 /// Loads at each aerodynamic integration point, in the canopy FRD frame.
 /// Diagnostics share the force calculation used by the plant.
@@ -188,34 +188,11 @@ pub fn rhs(
         );
         moment_c = rc * (panel_m + q * p.s * dimensions.component_mul(&co));
     }
-    let err = UnitQuaternion::from_rotation_matrix(&Rotation3::from_matrix_unchecked(
-        rp.transpose() * rc,
-    ))
-    .scaled_axis();
-    let dw = rp.transpose() * (wc - wp);
-    let angle = err.norm();
-    let e = skew(err);
-    let coefficient = if angle < 1e-4 {
-        1. / 12. + angle * angle / 720.
-    } else {
-        1. / (angle * angle) - (1. + angle.cos()) / (2. * angle * angle.sin())
+    let Some(joint) = crate::joint::joint_loads(rp, rc, wp, wc, mp, p) else {
+        return State::repeat(f64::NAN);
     };
-    let jacobian = M::identity() - 0.5 * e + coefficient * e * e;
-    let mut grad = V::new(p.joint_k_roll, p.joint_k_pitch, p.joint_k_yaw).component_mul(&err);
-    if p.geometry_yaw > 0. {
-        let hs = p.yaw_vertical_separation * p.yaw_vertical_separation
-            - 2. * p.yaw_payload_halfspacing * p.yaw_canopy_halfspacing * (1. - err.z.cos());
-        if hs <= 0. {
-            return State::repeat(f64::NAN);
-        }
-        grad.z = mp * 9.80665 * p.yaw_payload_halfspacing * p.yaw_canopy_halfspacing * err.z.sin()
-            / hs.sqrt();
-    }
-    let joint = rp
-        * (jacobian.transpose() * grad
-            + V::new(p.joint_c_roll, p.joint_c_pitch, p.joint_c_yaw).component_mul(&dw));
-    moment_p += joint;
-    moment_c -= joint;
+    moment_p += joint.total;
+    moment_c -= joint.total;
     let hc = canopy_inertia(p);
     let mut nu = V6::zeros();
     nu.fixed_rows_mut::<3>(0)

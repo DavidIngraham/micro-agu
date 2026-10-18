@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Suspension springs, dampers and yaw geometry</title>
+  </head>
+  <body>
+    <main>
+      <header>
+        <p class="eyebrow">INSIDE THE SIMULATION</p>
+        <h1>A shared point, with resistance to relative rotation.</h1>
+        <p>
+          The positional constraint holds the attachment together. Effective
+          torsional springs and dampers act between the two bodies.
+        </p>
+      </header>
+      <section>
+        <h2>1 · Spring responds to angle. Damper responds to relative rate.</h2>
+        <div class="controls" aria-label="Relative rotation axis">
+          <button data-axis="0" aria-pressed="false">Roll</button
+          ><button data-axis="1" aria-pressed="false">Pitch</button
+          ><button data-axis="2" aria-pressed="true">Yaw</button
+          ><button id="play">Pause motion</button>
+        </div>
+        <p id="parameters"></p>
+        <div class="pair">
+          <div>
+            <div id="mechanism"></div>
+            <label for="phase"
+              >Cycle position
+              <input
+                id="phase"
+                type="range"
+                min="0"
+                max="360"
+                value="45"
+                step="1"
+            /></label>
+            <p class="caption">
+              Prescribed ±15° rotation, one cycle in 6 s. This illustrates the
+              torque law; it is not a free oscillation or a predicted natural
+              frequency. Horizontal motion in the lower schematic encodes
+              relative angle, not separation of the point joint.
+            </p>
+          </div>
+          <div>
+            <h3>Torque on the canopy</h3>
+            <div id="torques"></div>
+            <p id="phase-note"></p>
+            <p class="caption">
+              The payload receives equal and opposite torques. Spring torque
+              points toward alignment. Damper torque opposes relative motion,
+              including when the bodies pass through alignment.
+            </p>
+            <p id="axis-note"></p>
+          </div>
+        </div>
+      </section>
+      <section>
+        <h2>2 · Yaw stiffness from the suspension geometry</h2>
+        <p>
+          Twisting two separated suspension groups would lift the hanging
+          payload. Gravity then favors the aligned position. This is the
+          <strong>bifilar</strong> construction behind the geometry-based
+          restoring law.
+        </p>
+        <div class="pair">
+          <div>
+            <div
+              id="geometry"
+              role="img"
+              aria-label="Three-dimensional bifilar construction: upper canopy support groups, lower payload attachment bar, and two constant-length connections"
+            >
+              <div id="labels"></div>
+            </div>
+            <div class="controls">
+              <button data-view="oblique" aria-pressed="true">
+                Three-quarter</button
+              ><button data-view="top" aria-pressed="false">Top view</button
+              ><button id="twist-play">Animate twist</button>
+            </div>
+            <label for="yaw"
+              >Relative yaw <output id="yaw-value">30°</output
+              ><input
+                id="yaw"
+                type="range"
+                min="-60"
+                max="60"
+                step="1"
+                value="30"
+            /></label>
+            <p class="caption">
+              Schematic equivalent supports, not individual suspension lines.
+              The rendered rise is true to this reduced geometry. The
+              point-joint plant uses its restoring torque; it does not
+              explicitly impose this vertical rise.
+            </p>
+          </div>
+          <div>
+            <div id="dimensions"></div>
+            <div id="geometry-values"></div>
+            <div id="curve"></div>
+            <p class="caption">
+              Orange: nonlinear geometry law. Blue dashed: fitted linear spring
+              in the preset. Both curves show torque on the canopy; torque on
+              the payload has the opposite sign.
+            </p>
+          </div>
+        </div>
+        <div class="callout">
+          <strong>Measure the load paths, not the wing tips.</strong> Lower
+          spacing comes from the loaded riser attachment centers. Upper spacing
+          represents the effective left/right canopy load centers; it is not
+          full projected span. Measure separation between the effective upper
+          and lower attachment planes in the aligned, loaded configuration.
+        </div>
+        <p id="calibration"></p>
+      </section>
+      <footer>
+        Parameters: as-built Trout Lake SITL preset, 132 mm loaded riser
+        spacing. Motion is prescribed; torque samples come from the same Rust
+        joint routine used by the plant. Geometry does not identify damping or
+        prove the fitted support centers are physical measurements.
+      </footer>
+      <p id="error" role="alert"></p>
+    </main>
+    <script
+      type="module"
+      src="/apps/applets/joint-mechanics/applet.ts"
+    ></script>
+  </body>
+</html>

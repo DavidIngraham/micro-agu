@@ -1,7 +1,0 @@
-{
-  "samples": 27119,
-  "target_max_dps": 24.99999237060547,
-  "actual_max_dps": 30.942283630371094,
-  "rate_error_rms_dps": 7.405183634941499,
-  "mean_abs_integrator": 0.062422966799063416
-}

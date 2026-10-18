@@ -1,0 +1,17 @@
+{
+  "id": 1,
+  "mode": "CRUISE",
+  "speedup": 8,
+  "wind": 1,
+  "from": 90,
+  "weather": {
+    "turbulence": 0.2,
+    "thermalStrength": 1.5,
+    "thermalRadius": 60,
+    "thermalNorth": 300,
+    "thermalEast": 0,
+    "seed": 3127759679
+  },
+  "scales": {},
+  "brakeRateScale": 1
+}

@@ -123,7 +123,7 @@ The selected normalized design adds output costs of 4 for height, 1 for turn rat
 
 The [teaching-data generator](../viewer/apps/applets/lqi-explainer/generate.py) reconstructs the selected feedback matrix from the pinned release plant and these costs, and checks agreement with the deployed gains. It also regenerates the local demonstrations and extracts the recorded comparison from the archived campaign data. Its [README](../viewer/apps/applets/lqi-explainer/README.md) specifies assumptions and provenance.
 
-The [runtime manifest](../viewer/assets/runtime/build.json) identifies the actual binary and source hashes. The [longitudinal reproduction instructions](../research/lqi-longitudinal-2026-10-17/REPRODUCE.md) describe rebuilding and rerunning the final campaign. These reproduce the current artifact and its evaluation; obtaining a suitable model for a different aircraft still requires calibration, linearization and new validation.
+The [runtime manifest](../viewer/assets/runtime/build.json) identifies the actual binary and source hashes. The [longitudinal reproduction instructions](../research/archive/lqi-longitudinal-2026-10-17/REPRODUCE.md) describe rebuilding and rerunning the final campaign. These reproduce the current artifact and its evaluation; obtaining a suitable model for a different aircraft still requires calibration, linearization and new validation.
 
 </details>
 

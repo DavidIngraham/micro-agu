@@ -1,8 +1,0 @@
-{
-  "config": {
-    "name": "joint-g0.5",
-    "joint": 1,
-    "gain": 0.5
-  },
-  "start": 130.564
-}

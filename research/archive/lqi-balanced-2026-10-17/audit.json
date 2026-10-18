@@ -1,0 +1,681 @@
+{
+  "restored_files": 12,
+  "run_count": 66,
+  "complete": 66,
+  "runs": [
+    {
+      "phase": "training",
+      "variant": "vertical",
+      "case": 1,
+      "exit_code": 0,
+      "firmware_sha256": "f0e0bbf8977bb7de293b4d357fd15243a89cef2300c9897dba007c802718c573",
+      "complete": true,
+      "failure": null,
+      "sha256": "9c791b4012248b3bcc9cfa7d7eb20d1284fcddaf68803a830c4470addaf9e63c"
+    },
+    {
+      "phase": "training",
+      "variant": "vertical",
+      "case": 3,
+      "exit_code": 0,
+      "firmware_sha256": "f0e0bbf8977bb7de293b4d357fd15243a89cef2300c9897dba007c802718c573",
+      "complete": true,
+      "failure": null,
+      "sha256": "a6437056e387a5976c51b2ee94fe0aa41b18a9bc0f31e208971379ee0bc9d00e"
+    },
+    {
+      "phase": "training",
+      "variant": "vertical",
+      "case": 13,
+      "exit_code": 0,
+      "firmware_sha256": "f0e0bbf8977bb7de293b4d357fd15243a89cef2300c9897dba007c802718c573",
+      "complete": true,
+      "failure": null,
+      "sha256": "8c9ef2d4b7f8250a8d3affa67b3e7cd7f3d3e5c01da5cbd8736f8dcd7a3066ee"
+    },
+    {
+      "phase": "training",
+      "variant": "responsive",
+      "case": 1,
+      "exit_code": 0,
+      "firmware_sha256": "755e96f7ab423c15bd7196a02c17bc39faf783a6c205f04b9fe1e79889ac089c",
+      "complete": true,
+      "failure": null,
+      "sha256": "b1781865dae88a5ad7df78eddbfa456f16177bc7f8b3accd28a9eb1ad1623801"
+    },
+    {
+      "phase": "training",
+      "variant": "responsive",
+      "case": 3,
+      "exit_code": 0,
+      "firmware_sha256": "755e96f7ab423c15bd7196a02c17bc39faf783a6c205f04b9fe1e79889ac089c",
+      "complete": true,
+      "failure": null,
+      "sha256": "6939327da5624b1daa9ea6ecb116dc3c8f8cf08488a89d0fe79972c5ae249d7b"
+    },
+    {
+      "phase": "training",
+      "variant": "responsive",
+      "case": 13,
+      "exit_code": 0,
+      "firmware_sha256": "755e96f7ab423c15bd7196a02c17bc39faf783a6c205f04b9fe1e79889ac089c",
+      "complete": true,
+      "failure": null,
+      "sha256": "10729b17593effa39a7483159a64efeb3dae2a0749a2e749292d9ea2fd93dc7e"
+    },
+    {
+      "phase": "training",
+      "variant": "balanced",
+      "case": 1,
+      "exit_code": 0,
+      "firmware_sha256": "007669976bc68fc5d47013a12b8b1029a8317cf95780663ff652d4c534180566",
+      "complete": true,
+      "failure": null,
+      "sha256": "4a8890fe5ff8a8e97e72d8c65f74816bf3bfc01b076e098c07f11bfa177d16f1"
+    },
+    {
+      "phase": "training",
+      "variant": "balanced",
+      "case": 3,
+      "exit_code": 0,
+      "firmware_sha256": "007669976bc68fc5d47013a12b8b1029a8317cf95780663ff652d4c534180566",
+      "complete": true,
+      "failure": null,
+      "sha256": "54bd9271b6baa94901ea5fb78ebefce3876bf84802f9ee19cfa9ca669010d22e"
+    },
+    {
+      "phase": "training",
+      "variant": "balanced",
+      "case": 13,
+      "exit_code": 0,
+      "firmware_sha256": "007669976bc68fc5d47013a12b8b1029a8317cf95780663ff652d4c534180566",
+      "complete": true,
+      "failure": null,
+      "sha256": "91a2d85b0ef8106cbd1b457916cbc5381ffa4d8f3b35e22c0b9c42f3052d57ca"
+    },
+    {
+      "phase": "training",
+      "variant": "damped",
+      "case": 1,
+      "exit_code": 0,
+      "firmware_sha256": "2876e786f5826b4e8535629566716a8c3ba605ef1b77a2116c68366d396d18e8",
+      "complete": true,
+      "failure": null,
+      "sha256": "b8d4b7987cbf16d2cfdb382f9ec1ac95eb1115d0396b8b3696dda12265bdfaaa"
+    },
+    {
+      "phase": "training",
+      "variant": "damped",
+      "case": 3,
+      "exit_code": 0,
+      "firmware_sha256": "2876e786f5826b4e8535629566716a8c3ba605ef1b77a2116c68366d396d18e8",
+      "complete": true,
+      "failure": null,
+      "sha256": "f2b4943c45171ada86cf9bba6875ad343edb1bcad58f8e524689959796606aaa"
+    },
+    {
+      "phase": "training",
+      "variant": "damped",
+      "case": 13,
+      "exit_code": 0,
+      "firmware_sha256": "2876e786f5826b4e8535629566716a8c3ba605ef1b77a2116c68366d396d18e8",
+      "complete": true,
+      "failure": null,
+      "sha256": "10f3857beedd55ba8b5475cbaa598fcef2ba37a51c0431ead3bb2dbb32979966"
+    },
+    {
+      "phase": "training",
+      "variant": "fixed",
+      "case": 1,
+      "exit_code": 0,
+      "firmware_sha256": "2a4bd3c455d8632513c39e00a9acd40ee3d556328b80683f09ef8e719ec358dd",
+      "complete": true,
+      "failure": null,
+      "sha256": "2c3a2200162da496b797df82bc310ea8db4afa53c76ee9b165e4de6bc51bf417"
+    },
+    {
+      "phase": "training",
+      "variant": "fixed",
+      "case": 3,
+      "exit_code": 0,
+      "firmware_sha256": "2a4bd3c455d8632513c39e00a9acd40ee3d556328b80683f09ef8e719ec358dd",
+      "complete": true,
+      "failure": null,
+      "sha256": "a4bc4fd020959d18b58d7f5169336bcf59a2a5aa0a0b26453c6c0d74c104628c"
+    },
+    {
+      "phase": "training",
+      "variant": "fixed",
+      "case": 13,
+      "exit_code": 0,
+      "firmware_sha256": "2a4bd3c455d8632513c39e00a9acd40ee3d556328b80683f09ef8e719ec358dd",
+      "complete": true,
+      "failure": null,
+      "sha256": "3b48fd1ce71d905fa09d43b2d806025552dbe3c5ba4386c0a7dad0a7f1788f69"
+    },
+    {
+      "phase": "training",
+      "variant": "standard",
+      "case": 1,
+      "exit_code": 0,
+      "firmware_sha256": "2a4bd3c455d8632513c39e00a9acd40ee3d556328b80683f09ef8e719ec358dd",
+      "complete": true,
+      "failure": null,
+      "sha256": "875bbee1282e58c2f12808475ed82fe4f20b499db099ea3cce2c30dd2369bf11"
+    },
+    {
+      "phase": "training",
+      "variant": "standard",
+      "case": 3,
+      "exit_code": 0,
+      "firmware_sha256": "2a4bd3c455d8632513c39e00a9acd40ee3d556328b80683f09ef8e719ec358dd",
+      "complete": true,
+      "failure": null,
+      "sha256": "1536334bd0c47787c94ac05dcc77403565733f68e076c37ffd63f0f65867566d"
+    },
+    {
+      "phase": "training",
+      "variant": "standard",
+      "case": 13,
+      "exit_code": 0,
+      "firmware_sha256": "2a4bd3c455d8632513c39e00a9acd40ee3d556328b80683f09ef8e719ec358dd",
+      "complete": true,
+      "failure": null,
+      "sha256": "79b36a531ea9be5de6aa367a6c530a3bdfca7b28ad16b3bef15ea7c4d544467c"
+    },
+    {
+      "phase": "validation",
+      "variant": "responsive",
+      "case": 40,
+      "exit_code": 0,
+      "firmware_sha256": "755e96f7ab423c15bd7196a02c17bc39faf783a6c205f04b9fe1e79889ac089c",
+      "complete": true,
+      "failure": null,
+      "sha256": "542edaa2bd243a809be3a30c0407c21bcddc4eb390f89afce6e90e66af181ea3"
+    },
+    {
+      "phase": "validation",
+      "variant": "responsive",
+      "case": 41,
+      "exit_code": 0,
+      "firmware_sha256": "755e96f7ab423c15bd7196a02c17bc39faf783a6c205f04b9fe1e79889ac089c",
+      "complete": true,
+      "failure": null,
+      "sha256": "90ade785f836b81a01e7015e735ff5fd35f3d287b8c2097ebd0bc65f4cc0da9d"
+    },
+    {
+      "phase": "validation",
+      "variant": "responsive",
+      "case": 42,
+      "exit_code": 0,
+      "firmware_sha256": "755e96f7ab423c15bd7196a02c17bc39faf783a6c205f04b9fe1e79889ac089c",
+      "complete": true,
+      "failure": null,
+      "sha256": "b1cb99e3230e7a3b99f67dc10d89006c2bcef1ba1402def4ef67eb301090880d"
+    },
+    {
+      "phase": "validation",
+      "variant": "responsive",
+      "case": 43,
+      "exit_code": 0,
+      "firmware_sha256": "755e96f7ab423c15bd7196a02c17bc39faf783a6c205f04b9fe1e79889ac089c",
+      "complete": true,
+      "failure": null,
+      "sha256": "17a0bae0f643b6752748e7a3773e285caa159836d31417f7bc0ad4768ca22bdc"
+    },
+    {
+      "phase": "validation",
+      "variant": "responsive",
+      "case": 44,
+      "exit_code": 0,
+      "firmware_sha256": "755e96f7ab423c15bd7196a02c17bc39faf783a6c205f04b9fe1e79889ac089c",
+      "complete": true,
+      "failure": null,
+      "sha256": "3050b67c8911a1385159ff316329e67b3d9cfb2e396f530ae5e611d54dfa06b9"
+    },
+    {
+      "phase": "validation",
+      "variant": "responsive",
+      "case": 45,
+      "exit_code": 0,
+      "firmware_sha256": "755e96f7ab423c15bd7196a02c17bc39faf783a6c205f04b9fe1e79889ac089c",
+      "complete": true,
+      "failure": null,
+      "sha256": "3eea15baafd7bb8c800a6794a49370165ea8e0723dc2eba12a2542b9559fb946"
+    },
+    {
+      "phase": "validation",
+      "variant": "responsive",
+      "case": 46,
+      "exit_code": 0,
+      "firmware_sha256": "755e96f7ab423c15bd7196a02c17bc39faf783a6c205f04b9fe1e79889ac089c",
+      "complete": true,
+      "failure": null,
+      "sha256": "4c4d3cef475f27711d04eb6566cc153c38f48d6e49cab2fd8e63a554b76a84b0"
+    },
+    {
+      "phase": "validation",
+      "variant": "responsive",
+      "case": 47,
+      "exit_code": 0,
+      "firmware_sha256": "755e96f7ab423c15bd7196a02c17bc39faf783a6c205f04b9fe1e79889ac089c",
+      "complete": true,
+      "failure": null,
+      "sha256": "ce1de20f379d965875bda6ae304f9bc00637f1793147ad8b2b11a30c36f122be"
+    },
+    {
+      "phase": "validation",
+      "variant": "fixed",
+      "case": 40,
+      "exit_code": 0,
+      "firmware_sha256": "2a4bd3c455d8632513c39e00a9acd40ee3d556328b80683f09ef8e719ec358dd",
+      "complete": true,
+      "failure": null,
+      "sha256": "a0e5e53a0054bfe8b5db2ae02bb19099d7e0f354a095b25b51211de52f750e74"
+    },
+    {
+      "phase": "validation",
+      "variant": "fixed",
+      "case": 41,
+      "exit_code": 0,
+      "firmware_sha256": "2a4bd3c455d8632513c39e00a9acd40ee3d556328b80683f09ef8e719ec358dd",
+      "complete": true,
+      "failure": null,
+      "sha256": "856a6e1bbec11b0932ee904da5e16531ab98237720c42abc1e2e6a181e8d282b"
+    },
+    {
+      "phase": "validation",
+      "variant": "fixed",
+      "case": 42,
+      "exit_code": 0,
+      "firmware_sha256": "2a4bd3c455d8632513c39e00a9acd40ee3d556328b80683f09ef8e719ec358dd",
+      "complete": true,
+      "failure": null,
+      "sha256": "61ccd79ff1e46bb92b49ea807f41bb783c2ce223936e91fa1b63598dc59b3375"
+    },
+    {
+      "phase": "validation",
+      "variant": "fixed",
+      "case": 43,
+      "exit_code": 0,
+      "firmware_sha256": "2a4bd3c455d8632513c39e00a9acd40ee3d556328b80683f09ef8e719ec358dd",
+      "complete": true,
+      "failure": null,
+      "sha256": "47225cdf3fb8426e86c39433b46fe03b77a5f27a097af6e064f31b3ae8e44726"
+    },
+    {
+      "phase": "validation",
+      "variant": "fixed",
+      "case": 44,
+      "exit_code": 0,
+      "firmware_sha256": "2a4bd3c455d8632513c39e00a9acd40ee3d556328b80683f09ef8e719ec358dd",
+      "complete": true,
+      "failure": null,
+      "sha256": "57e716f1de6d40639dfb0ed60e94c884557850b5e0b29a7cca185b22fd290d94"
+    },
+    {
+      "phase": "validation",
+      "variant": "fixed",
+      "case": 45,
+      "exit_code": 0,
+      "firmware_sha256": "2a4bd3c455d8632513c39e00a9acd40ee3d556328b80683f09ef8e719ec358dd",
+      "complete": true,
+      "failure": null,
+      "sha256": "a24b87465c739831338c05ed8b764a3486ca08f39149b943c6c3002b071b5442"
+    },
+    {
+      "phase": "validation",
+      "variant": "fixed",
+      "case": 46,
+      "exit_code": 0,
+      "firmware_sha256": "2a4bd3c455d8632513c39e00a9acd40ee3d556328b80683f09ef8e719ec358dd",
+      "complete": true,
+      "failure": null,
+      "sha256": "22da34dd69ab5a57de46a021ddac81ed724c0474adf6897696a35c9cbdc8446a"
+    },
+    {
+      "phase": "validation",
+      "variant": "fixed",
+      "case": 47,
+      "exit_code": 0,
+      "firmware_sha256": "2a4bd3c455d8632513c39e00a9acd40ee3d556328b80683f09ef8e719ec358dd",
+      "complete": true,
+      "failure": null,
+      "sha256": "9f3a3e1b287634a66a7aa45e0902bc8f8c61b8182975f96e241a7965b9983ff6"
+    },
+    {
+      "phase": "validation",
+      "variant": "standard",
+      "case": 40,
+      "exit_code": 0,
+      "firmware_sha256": "2a4bd3c455d8632513c39e00a9acd40ee3d556328b80683f09ef8e719ec358dd",
+      "complete": true,
+      "failure": null,
+      "sha256": "21067c2592aa79bb5479e476238d0507ecebb95641fa93341cf7329cd4216586"
+    },
+    {
+      "phase": "validation",
+      "variant": "standard",
+      "case": 41,
+      "exit_code": 0,
+      "firmware_sha256": "2a4bd3c455d8632513c39e00a9acd40ee3d556328b80683f09ef8e719ec358dd",
+      "complete": true,
+      "failure": null,
+      "sha256": "19a2345a265e51fe2b592fad8ad023b1d2f50d6d10a93480d72abea7bf26f68a"
+    },
+    {
+      "phase": "validation",
+      "variant": "standard",
+      "case": 42,
+      "exit_code": 0,
+      "firmware_sha256": "2a4bd3c455d8632513c39e00a9acd40ee3d556328b80683f09ef8e719ec358dd",
+      "complete": true,
+      "failure": null,
+      "sha256": "697a9d03397d6896af1a57193d4f793d2ae9705c26b8d69f166142ae807da787"
+    },
+    {
+      "phase": "validation",
+      "variant": "standard",
+      "case": 43,
+      "exit_code": 0,
+      "firmware_sha256": "2a4bd3c455d8632513c39e00a9acd40ee3d556328b80683f09ef8e719ec358dd",
+      "complete": true,
+      "failure": null,
+      "sha256": "121f7d59d65177acb69e25104efa37b0e400aa8323247003f75cfef14e87f057"
+    },
+    {
+      "phase": "validation",
+      "variant": "standard",
+      "case": 44,
+      "exit_code": 0,
+      "firmware_sha256": "2a4bd3c455d8632513c39e00a9acd40ee3d556328b80683f09ef8e719ec358dd",
+      "complete": true,
+      "failure": null,
+      "sha256": "0236f42e53aebbc5d3bf414f86c476d5bf91beb1bd66badd5e4e80993be4970c"
+    },
+    {
+      "phase": "validation",
+      "variant": "standard",
+      "case": 45,
+      "exit_code": 0,
+      "firmware_sha256": "2a4bd3c455d8632513c39e00a9acd40ee3d556328b80683f09ef8e719ec358dd",
+      "complete": true,
+      "failure": null,
+      "sha256": "35f74e2746e08954c17a32af6a2b0f080bdb02c7592d15778a6024889cd8a8bf"
+    },
+    {
+      "phase": "validation",
+      "variant": "standard",
+      "case": 46,
+      "exit_code": 0,
+      "firmware_sha256": "2a4bd3c455d8632513c39e00a9acd40ee3d556328b80683f09ef8e719ec358dd",
+      "complete": true,
+      "failure": null,
+      "sha256": "b1b4881b67e8d3cc03377d74ee034d81bd20fe56f784a682fb2a7859f88b41f0"
+    },
+    {
+      "phase": "validation",
+      "variant": "standard",
+      "case": 47,
+      "exit_code": 0,
+      "firmware_sha256": "2a4bd3c455d8632513c39e00a9acd40ee3d556328b80683f09ef8e719ec358dd",
+      "complete": true,
+      "failure": null,
+      "sha256": "08b76c4ae84011db884232ab063069211f39f3cb5dadf12b62b52a459f4f2a26"
+    },
+    {
+      "phase": "missions",
+      "variant": "responsive",
+      "case": 40,
+      "exit_code": 0,
+      "firmware_sha256": "755e96f7ab423c15bd7196a02c17bc39faf783a6c205f04b9fe1e79889ac089c",
+      "complete": true,
+      "failure": null,
+      "sha256": "9c76c05f4db0023a69a2bf95d1dd302be3b871a3f9e961790befca7135fec5dc"
+    },
+    {
+      "phase": "missions",
+      "variant": "responsive",
+      "case": 41,
+      "exit_code": 0,
+      "firmware_sha256": "755e96f7ab423c15bd7196a02c17bc39faf783a6c205f04b9fe1e79889ac089c",
+      "complete": true,
+      "failure": null,
+      "sha256": "2927c261f3c5390370fdc891f57b163a1d354ce9f924f6d94daec32e6e286a84"
+    },
+    {
+      "phase": "missions",
+      "variant": "responsive",
+      "case": 42,
+      "exit_code": 0,
+      "firmware_sha256": "755e96f7ab423c15bd7196a02c17bc39faf783a6c205f04b9fe1e79889ac089c",
+      "complete": true,
+      "failure": null,
+      "sha256": "2c4346dbca89a3457eab0aee54a777e9b154edd5eae31fe18740544796c715b0"
+    },
+    {
+      "phase": "missions",
+      "variant": "responsive",
+      "case": 43,
+      "exit_code": 0,
+      "firmware_sha256": "755e96f7ab423c15bd7196a02c17bc39faf783a6c205f04b9fe1e79889ac089c",
+      "complete": true,
+      "failure": null,
+      "sha256": "be3a1b75e516ea54b58eeafc989ca5330669436e213edee56b67ea8c249a82b7"
+    },
+    {
+      "phase": "missions",
+      "variant": "responsive",
+      "case": 44,
+      "exit_code": 0,
+      "firmware_sha256": "755e96f7ab423c15bd7196a02c17bc39faf783a6c205f04b9fe1e79889ac089c",
+      "complete": true,
+      "failure": null,
+      "sha256": "e8741aa5e85b7f7f2aa181a6ff2d50c98b39ed6bb0e5519301619522b9ef4176"
+    },
+    {
+      "phase": "missions",
+      "variant": "responsive",
+      "case": 45,
+      "exit_code": 0,
+      "firmware_sha256": "755e96f7ab423c15bd7196a02c17bc39faf783a6c205f04b9fe1e79889ac089c",
+      "complete": true,
+      "failure": null,
+      "sha256": "dd4d2be160ee78c9a963acb5e25f027f7be05301c01ea8eab674688eb225a7ab"
+    },
+    {
+      "phase": "missions",
+      "variant": "responsive",
+      "case": 46,
+      "exit_code": 0,
+      "firmware_sha256": "755e96f7ab423c15bd7196a02c17bc39faf783a6c205f04b9fe1e79889ac089c",
+      "complete": true,
+      "failure": null,
+      "sha256": "e4e75d312c05678709cf973e91893df8372ba22f7db85956cd9fcbae59f24366"
+    },
+    {
+      "phase": "missions",
+      "variant": "responsive",
+      "case": 47,
+      "exit_code": 0,
+      "firmware_sha256": "755e96f7ab423c15bd7196a02c17bc39faf783a6c205f04b9fe1e79889ac089c",
+      "complete": true,
+      "failure": null,
+      "sha256": "cedd254d24f620abc5d3f88ab1c457f13ca80ee137362f47b3e71a735af8d452"
+    },
+    {
+      "phase": "missions",
+      "variant": "fixed",
+      "case": 40,
+      "exit_code": 0,
+      "firmware_sha256": "2a4bd3c455d8632513c39e00a9acd40ee3d556328b80683f09ef8e719ec358dd",
+      "complete": true,
+      "failure": null,
+      "sha256": "ec5efc2ae9c8249cd8362934a1d1f6086c5729ded5e50c32f73fbe73dc591470"
+    },
+    {
+      "phase": "missions",
+      "variant": "fixed",
+      "case": 41,
+      "exit_code": 0,
+      "firmware_sha256": "2a4bd3c455d8632513c39e00a9acd40ee3d556328b80683f09ef8e719ec358dd",
+      "complete": true,
+      "failure": null,
+      "sha256": "8b2294052defd643551145a285e4fb043b0967eecd3468c1a238402e62cd8011"
+    },
+    {
+      "phase": "missions",
+      "variant": "fixed",
+      "case": 42,
+      "exit_code": 0,
+      "firmware_sha256": "2a4bd3c455d8632513c39e00a9acd40ee3d556328b80683f09ef8e719ec358dd",
+      "complete": true,
+      "failure": null,
+      "sha256": "155e5301900f4bff798364a1362657064da0c644897c25b4729b700c5befd1c8"
+    },
+    {
+      "phase": "missions",
+      "variant": "fixed",
+      "case": 43,
+      "exit_code": 0,
+      "firmware_sha256": "2a4bd3c455d8632513c39e00a9acd40ee3d556328b80683f09ef8e719ec358dd",
+      "complete": true,
+      "failure": null,
+      "sha256": "529b4777d7f127993fb030a7ce17616f584310822f06f638f4062d949d41d916"
+    },
+    {
+      "phase": "missions",
+      "variant": "fixed",
+      "case": 44,
+      "exit_code": 0,
+      "firmware_sha256": "2a4bd3c455d8632513c39e00a9acd40ee3d556328b80683f09ef8e719ec358dd",
+      "complete": true,
+      "failure": null,
+      "sha256": "ed4249927d49d23533c8679c8e9d0be490284a68633f6d755136106f830917c9"
+    },
+    {
+      "phase": "missions",
+      "variant": "fixed",
+      "case": 45,
+      "exit_code": 0,
+      "firmware_sha256": "2a4bd3c455d8632513c39e00a9acd40ee3d556328b80683f09ef8e719ec358dd",
+      "complete": true,
+      "failure": null,
+      "sha256": "a8ad9d93075cc3f39a4503028add203adfdf83eac10b4a42416647df908e85c7"
+    },
+    {
+      "phase": "missions",
+      "variant": "fixed",
+      "case": 46,
+      "exit_code": 0,
+      "firmware_sha256": "2a4bd3c455d8632513c39e00a9acd40ee3d556328b80683f09ef8e719ec358dd",
+      "complete": true,
+      "failure": null,
+      "sha256": "c464b2b5a3e51c5216ad31f3759f389215b494c8324d9e3e747ee252fba5322f"
+    },
+    {
+      "phase": "missions",
+      "variant": "fixed",
+      "case": 47,
+      "exit_code": 0,
+      "firmware_sha256": "2a4bd3c455d8632513c39e00a9acd40ee3d556328b80683f09ef8e719ec358dd",
+      "complete": true,
+      "failure": null,
+      "sha256": "102c45fcaf5ad222817668c77496777eaa76793137e9ce7348b0202eba4de86e"
+    },
+    {
+      "phase": "missions",
+      "variant": "standard",
+      "case": 40,
+      "exit_code": 0,
+      "firmware_sha256": "2a4bd3c455d8632513c39e00a9acd40ee3d556328b80683f09ef8e719ec358dd",
+      "complete": true,
+      "failure": null,
+      "sha256": "9e4cb42294f5f56ca96281eb9b7612472d26d849c3a99c913369f61ee965e824"
+    },
+    {
+      "phase": "missions",
+      "variant": "standard",
+      "case": 41,
+      "exit_code": 0,
+      "firmware_sha256": "2a4bd3c455d8632513c39e00a9acd40ee3d556328b80683f09ef8e719ec358dd",
+      "complete": true,
+      "failure": null,
+      "sha256": "7226aeabe3739704e6b588a03eef44d14242b51d272ade2f9ad75ed8bd49f988"
+    },
+    {
+      "phase": "missions",
+      "variant": "standard",
+      "case": 42,
+      "exit_code": 0,
+      "firmware_sha256": "2a4bd3c455d8632513c39e00a9acd40ee3d556328b80683f09ef8e719ec358dd",
+      "complete": true,
+      "failure": null,
+      "sha256": "4a1f1efe5cfe33981c30789a410cc5665275e2575c8c423683f3f2b5d40b33ea"
+    },
+    {
+      "phase": "missions",
+      "variant": "standard",
+      "case": 43,
+      "exit_code": 0,
+      "firmware_sha256": "2a4bd3c455d8632513c39e00a9acd40ee3d556328b80683f09ef8e719ec358dd",
+      "complete": true,
+      "failure": null,
+      "sha256": "f297929ec7e3ca7e0bfcc43584f4cba676b3081711eb51742399b3401ed0be19"
+    },
+    {
+      "phase": "missions",
+      "variant": "standard",
+      "case": 44,
+      "exit_code": 0,
+      "firmware_sha256": "2a4bd3c455d8632513c39e00a9acd40ee3d556328b80683f09ef8e719ec358dd",
+      "complete": true,
+      "failure": null,
+      "sha256": "3761270cef8a4df143adc9345c7d84e782d71e54863e3bc27d7edc1ae480ba4b"
+    },
+    {
+      "phase": "missions",
+      "variant": "standard",
+      "case": 45,
+      "exit_code": 0,
+      "firmware_sha256": "2a4bd3c455d8632513c39e00a9acd40ee3d556328b80683f09ef8e719ec358dd",
+      "complete": true,
+      "failure": null,
+      "sha256": "da73623fd64c59125e6b401c68ede1f90f337eea5bd5d5eeb46395d813ed2ad2"
+    },
+    {
+      "phase": "missions",
+      "variant": "standard",
+      "case": 46,
+      "exit_code": 0,
+      "firmware_sha256": "2a4bd3c455d8632513c39e00a9acd40ee3d556328b80683f09ef8e719ec358dd",
+      "complete": true,
+      "failure": null,
+      "sha256": "35b9c462617a4946e684c86d4439ca8487330e81d089bb0ba7cce383bb6f83d6"
+    },
+    {
+      "phase": "missions",
+      "variant": "standard",
+      "case": 47,
+      "exit_code": 0,
+      "firmware_sha256": "2a4bd3c455d8632513c39e00a9acd40ee3d556328b80683f09ef8e719ec358dd",
+      "complete": true,
+      "failure": null,
+      "sha256": "171ec7ac6f19e210a37b54e695b70dcf78bc6d093c3d1dbbe89852d35f9e297f"
+    }
+  ],
+  "study_sources": {
+    "campaign.py": "078267a462e5c4ecfc7b235ae542a6cc7c09d1c41c6ab7ab98f656c9fd305019",
+    "score.py": "e729cc7033746eabbabd43f31a028504faec1a42ceee014aa99422ee51fe0837",
+    "report.py": "2a8e83b7aa0659e5b68cedee58fb43b744bfa26029bfa3471991b83617681fb9",
+    "case.ts": "29b765f9133d2232f5fb3fb7544036e9c462e3069b924d22c4737567f116fae7",
+    "mission.ts": "a814f37d8e7860e21fa42074163142feb89400d014655f2cd4620a7ee4a58793",
+    "governor.patch": "f6564c85b79518b745b19b22989b33fff68e6a35f18dd3d0e1cd2acd5aaf32ac",
+    "standard-reference-only.patch": "425010b8409b2981a6debb06e71993de0381a46e16d4043134fc259be664a5fd"
+  },
+  "unchanged_physics_assets": {
+    "viewer/assets/runtime/highdof.json": "e30470823ff62bfa8fd03fdd19af4af677321cb6f7f0b1b8d81ee30598428f05",
+    "viewer/generated/physics/sim_wasm_bg.wasm": "f5d479506baad4065fbfa082e985ab2d930018d7bba700b0cc184102b71a636e"
+  },
+  "note": "Research source files include the documented correction after preliminary trials. Candidate source/binary hashes are retained separately."
+}

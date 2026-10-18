@@ -1,0 +1,85 @@
+{
+  "finite_fit_replays": 768,
+  "finite_check_replays": 576,
+  "historical_check_reproduction_max_absolute_error": 3.886668764607748e-12,
+  "constant_wind_bulk_vs_step_max_absolute_error": 0.0,
+  "legacy_reference_max_absolute_error": 0.0,
+  "integration_refinement": [
+    {
+      "variant": "original",
+      "flight": "hood_river",
+      "start": 1020,
+      "alpha": 0.45,
+      "damping": 8.0,
+      "relative_metric_change": {
+        "roll_rate": 1.2208025206295048e-06,
+        "pitch_rate": 2.4618863836423088e-08,
+        "yaw_rate": 3.4716325369998913e-09,
+        "bank": 6.056352974681545e-08,
+        "course": 4.1373102954711527e-07,
+        "climb": 9.624527863572041e-08
+      }
+    },
+    {
+      "variant": "smoothed",
+      "flight": "hood_river",
+      "start": 1020,
+      "alpha": 0.45,
+      "damping": 8.0,
+      "relative_metric_change": {
+        "roll_rate": 1.190677947571217e-06,
+        "pitch_rate": 1.6248153267284238e-08,
+        "yaw_rate": 1.9586732236120952e-10,
+        "bank": 6.358722526300653e-08,
+        "course": 2.0628512076292793e-07,
+        "climb": 4.4002262500342226e-08
+      }
+    },
+    {
+      "variant": "down_minus1",
+      "flight": "hood_river",
+      "start": 1020,
+      "alpha": 0.45,
+      "damping": 6.0,
+      "relative_metric_change": {
+        "roll_rate": 1.0146820528245115e-06,
+        "pitch_rate": 7.073153174275149e-11,
+        "yaw_rate": 1.3636692219876068e-08,
+        "bank": 4.739367143180573e-08,
+        "course": 3.5814413656964916e-09,
+        "climb": 5.879307707346015e-09
+      }
+    },
+    {
+      "variant": "down_plus1",
+      "flight": "hood_river",
+      "start": 1020,
+      "alpha": 0.45,
+      "damping": 8.0,
+      "relative_metric_change": {
+        "roll_rate": 1.0911107988231805e-06,
+        "pitch_rate": 1.5092722738252462e-08,
+        "yaw_rate": 5.134397351724829e-10,
+        "bank": 4.7952789961058784e-08,
+        "course": 5.518003654003678e-08,
+        "climb": 9.533429601304988e-09
+      }
+    }
+  ],
+  "runtime_calibration_unchanged": true,
+  "hashes": {
+    "/home/david/repos/micro-agu/simulation/.venv/lib/python3.12/site-packages/microagu_sim/compat/as-built-calibration.json": "cf0679e30b3ea4d6a2413b834ebfd8867d5b48913c12983d0e418c0aee924409",
+    "/home/david/repos/micro-agu/simulation/.venv/lib/python3.12/site-packages/microagu_sim/_native.abi3.so": "e811adfbbd84733e13381d1a34d3294192df61d93544f10d0248df571c649d2f",
+    "/home/david/repos/micro-agu/research/wind-calibration-2026-10-16/run.py": "1e0a04e5667e81bb45f4cd1fe10765852cd685d1ca12ec8c62981922957e5e32",
+    "/home/david/repos/micro-agu/research/as-built-simulator-2026-10-15/calibrate.py": "68035a6242ef8bc7f04567a3f2d746e247df87441ecc75239cca01a45001bb26",
+    "/home/david/repos/micro-agu/research/rigging-refinement-2026-10-15/study.py": "b07597d032c7ebe8758ed9a4f46145133e1da5f0d0843bbf5579afbbe058b9c4",
+    "/home/david/repos/micro-agu/research/wind-smoother-2026-10-16/run.py": "0274d88924b79d629236a0bef6e94d68134a1ff6a2bcead5ce2b8174fddfd180",
+    "/home/david/repos/micro-agu/research/wind-smoother-2026-10-16/smoother.py": "0104fad6b6c8211d983a59c5a59dc52901fc0064b3b155968cf2423343bb4869",
+    "/mnt/c/Users/davin/OneDrive/Documentos/Mission Planner/analysis/longitudinal-2026-10-09/turn-model-spike/2026-01-03-causal-input.npz": "dd031fd90680d626f48f3ba3a30b69d5c6af5f7781431b55b6b1dc894af305ec",
+    "/mnt/c/Users/davin/OneDrive/Documentos/Mission Planner/analysis/longitudinal-2026-10-09/turn-model-spike/2026-01-03-propulsion-9x45.npz": "620660b1dbc39bdfdbbe7e04af5cbeb8653f75a246ec93a0e8a77af26010a47b",
+    "/home/david/repos/micro-agu/research/wind-smoother-2026-10-16/hood_river-0.npz": "1b3c2e664a26fbbd5faf0f1d57e4ae0e6bcfdbef4ec822bb6ebf9ec6aae1fa06",
+    "/mnt/c/Users/davin/OneDrive/Documentos/Mission Planner/analysis/longitudinal-2026-10-09/turn-model-spike/2026-02-15-causal-input.npz": "25441062d4e328bfa110f8aca88261ffc3fa50c553314d3ef7feaabfa10698f5",
+    "/mnt/c/Users/davin/OneDrive/Documentos/Mission Planner/analysis/longitudinal-2026-10-09/turn-model-spike/2026-02-15-propulsion-9x45.npz": "2a5168520029adc3ef32a64182412466699efb9acffc6df3f088d44b0acae422",
+    "/home/david/repos/micro-agu/research/wind-smoother-2026-10-16/trout_lake-0.npz": "de64c4438657ab8fcfe031242d27405b0652011ac6e54a9a0fb4664bf4b955ee"
+  }
+}

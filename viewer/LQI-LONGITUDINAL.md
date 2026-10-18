@@ -15,6 +15,6 @@ Across eight matched disturbance cases, LQI/PG+TECS ratios were:
 
 These are finite simulator tests, not flight qualification or a statistical reliability estimate. Energy excludes electrical losses and servo consumption. The 3.8–4.4 m/s range is a target clamp, not a guaranteed bound on actual airspeed.
 
-[Full campaign and retained failures](../research/lqi-longitudinal-2026-10-17/README.md).
+[Full campaign and retained failures](../research/archive/lqi-longitudinal-2026-10-17/README.md).
 [Machine-readable validation](assets/runtime/lqi-longitudinal-validation.json).
 [Complete firmware patch](assets/runtime/lqi-longitudinal.patch), applied to ArduPilot 010ada6a4f0b26910fc18ecca176d2e65c5ed9d7, replaces the earlier feasible-turn patch recipe. Do not stack both patches. Exact source and binary hashes are in build.json.

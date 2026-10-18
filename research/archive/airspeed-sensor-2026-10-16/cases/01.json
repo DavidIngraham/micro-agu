@@ -1,0 +1,26 @@
+{
+  "id": 1,
+  "mode": "CRUISE",
+  "speedup": 8,
+  "wind": 1,
+  "from": 90,
+  "weather": {
+    "turbulence": 0.2,
+    "thermalStrength": 1.5,
+    "thermalRadius": 60,
+    "thermalNorth": 300,
+    "thermalEast": 0,
+    "seed": 3127759679
+  },
+  "scales": {},
+  "brakeRateScale": 1,
+  "parameters": {
+    "ARSPD_TYPE": 100,
+    "ARSPD_USE": 1,
+    "ARSPD_SKIP_CAL": 1,
+    "ARSPD_OFFSET": 0,
+    "ARSPD_RATIO": 1.99,
+    "SIM_ARSPD_RATIO": 1.99,
+    "SIM_ARSPD_RND": 2
+  }
+}

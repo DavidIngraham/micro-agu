@@ -1,0 +1,86 @@
+{
+  "schema": 1,
+  "aircraft": "microagu",
+  "configuration": "as-built Trout Lake, 132 mm riser spacing",
+  "physics": {
+    "status": "production; fitted study model not deployed",
+    "configuration": "configurations/browser-physics.json",
+    "source": {
+      "repository": "https://github.com/DavidIngraham/micro-agu",
+      "revision": "90e894e77ab63ec149f07c2b7de7ebfe92c8c26b",
+      "working_tree_dirty": true,
+      "language": "Rust",
+      "source_sha256": {
+        "Cargo.toml": "d44f4d4022048d66dc37b930f1a9de48321592dcb62e489c5f5c792a265c7834",
+        "Cargo.lock": "95e03d07fb8732b18b2aee244d89750a18568689bf6fee1018bfcc95bff9f54b",
+        "crates/sim-cli/src/main.rs": "31f0e8540cd1b8d1beaae31671aac22c8844c649ecd599096e1dc0420da1d4f4",
+        "crates/sim-core/src/actuators.rs": "24fd438cddeb3461e939853f1c419d9a16be8f51d7a650ed7bcf1710a838ba79",
+        "crates/sim-core/src/atmosphere.rs": "d33ef75b05f7072754371acc15ce2faa10d683eb41fbf3347f4a526fe50212e9",
+        "crates/sim-core/src/config.rs": "23ef84e6fb719a06967da268d8b8472497ca7acbb727ea757da320012972c8e2",
+        "crates/sim-core/src/dynamics.rs": "74f751d45aefabaa5a4c2e530e00d782f7e33766c16c6864ee5cc02e66dd104a",
+        "crates/sim-core/src/integrator.rs": "b21ea368c5587484644f0c7add0719b1eafbb9e90028924bb928009c59a438c7",
+        "crates/sim-core/src/kernel.rs": "4caa1b5666c727104b52d15aa43eec8ffb174fe78d86b3176428de1fa6221a5a",
+        "crates/sim-core/src/launch.rs": "97bf986f5d5c241354da2b2ba1ed3201a85ff9168fb983fa8e1ab46a09278ad2",
+        "crates/sim-core/src/lib.rs": "eac17a63cfb779b537ad23a6b8d65f9c33a9f3625435f58aa8d5ff5914e520ae",
+        "crates/sim-core/src/propeller_data.rs": "1897a098858e69611bea1cdcb184fc7e8f6337a60eddf7eb9b4fd7e849530af9",
+        "crates/sim-core/src/propulsion.rs": "497f595fea9bc17e52d3dc0abae0b1e0061a15a227a35766f9e12f38ffc18b60",
+        "crates/sim-core/src/sensors.rs": "8930763c5d6947dd92bf2115fde33520a2eba5194284d115b853f1967205a556",
+        "crates/sim-core/src/simulator.rs": "b4692ade4a2eb710fe734e708911552fb884ff820c7376c8e4fa2a3bf1c08da6",
+        "crates/sim-core/src/state.rs": "5f2005fe9acc4d694e5697d060bd5709124c0d9ba39a7f03834b5bba777bfcf8",
+        "crates/sim-core/src/surface.rs": "9a11b4678381408d02ff0aedef29e9d303c84924ebbe1ad172007cb02d6f9182",
+        "crates/sim-core/tests/contracts.rs": "a6e8a88bc8188975b13993ffb2bedebc0eb098f6db5510086e7b9baa7b33ce58",
+        "crates/sim-core/tests/launch.rs": "7713c765b3f8f92cb200451044113c25535f6ae1ad4080e304e94977b8d369be",
+        "crates/sim-io/src/lib.rs": "7b1b747e5c10003672dc402c05453a05261e408c8744dc31d606d001ac95d6bd",
+        "crates/sim-python/src/bin/stubs.rs": "fd0d35549602676f5765fd8403abeecddd1dab5cc8988ed4f412898c23ac3c7a",
+        "crates/sim-python/src/lib.rs": "4692a97ab1c3a22a01653e1ec04a8f4de1c3f07ec7ac979183d4850b1263eec6",
+        "crates/sim-sitl/src/lib.rs": "1805069c21b26f45050ea7a6f530e9736d0253d2cefbe4a97e2a2fccbac3e750",
+        "crates/sim-sitl/src/main.rs": "2309238c02164131b9ee80f55a8dc670bdb34cf7245c2daee6e30fa34820038d",
+        "crates/sim-sitl/tests/parity.rs": "57b0d0bbb3c66f90a5e1655e6d05ac3b1ddf6cb8011431700817b664574c6ab7",
+        "crates/sim-wasm/src/lib.rs": "dc3403d24621dd6d4b5c8c5e615d978caf2ea479a7a387e18450dc16decef84e",
+        "crates/sim-cli/Cargo.toml": "f252d11968410da4256a18d5271dbaa1928c3cd7ea3ffa9d18006e4ac13a3ddd",
+        "crates/sim-core/Cargo.toml": "cecd7278395e09f7a266183c9ba20d93a4d6b205e4ba2eb97ce305e0fc71df16",
+        "crates/sim-io/Cargo.toml": "8d2d075009bdc8f3be458d6337b22501c57d1173e89e62d33e6817f21c6edfe4",
+        "crates/sim-python/Cargo.toml": "fd6672d0c4a247c341d21cf7bd72b46a30942dc4ca2cc47e029554131ca5900d",
+        "crates/sim-sitl/Cargo.toml": "538d843e71421dc60f5df16d2c72906e32eacef17947d69b7e871150cb5f76a4",
+        "crates/sim-wasm/Cargo.toml": "dcb0d988c5b5e4503c2f914be7940141bb93c40e99bc64c8302953e9d0b11eb1"
+      },
+      "rustc": "rustc 1.99.0 (b940084d7 2026-09-28)",
+      "wasm_bindgen": "0.2.114"
+    }
+  },
+  "measured_inputs": "configurations/measured.json",
+  "controller": {
+    "selected": "refit_damped",
+    "gain_file": "controllers/lqi-gains.bin",
+    "gain_header": "controllers/AP_CustomControl_LQI_gains.h",
+    "firmware_revision": "5e5bba8ee1b3575e04f45d56b8c53e5e6c48ab2f",
+    "firmware_source": "https://github.com/DavidIngraham/ardupilot/tree/5e5bba8ee1b3575e04f45d56b8c53e5e6c48ab2f",
+    "observer": "Compiled model/observer context unchanged; no canopy truth or pitot sensor",
+    "format": "AGULQI01"
+  },
+  "simulation_envelope": {
+    "turn_rate_deg_s": 35,
+    "climb_m_s": 0.75,
+    "descent_m_s": 1,
+    "qualification": "simulation only; practical non-regression, not statistically proven improvement"
+  },
+  "validation": "validation/controller-acceptance.json",
+  "study": "../../research/active/controller-pipeline-2026-10-18/RESULTS.md",
+  "published": {
+    "url": "https://davidingraham.github.io/assets/microagu-viewer/simulator.html",
+    "site_commit": "dad276c582d3a68e2652c731ae79fb6632302287",
+    "firmware_sha256": "466d4d86263d973cc38e850b3a015146e9b98a2cd2ae369fbca7a32eeb9ab504"
+  },
+  "sha256": {
+    "controllers/lqi-gains.bin": "311876eabeb033e55c30c8d556d159495b76e8358cd25a1684c0c3b486ed97f0",
+    "controllers/AP_CustomControl_LQI_gains.h": "c36e2516e617ac03892a212c5af7f2835e5f7997f8cc14400611bf0a26867291",
+    "configurations/browser-physics.json": "51120b5f2d21f0e5d00b0d009c6bb25c7e082a6bdb76d49a05524fec92ec34e4",
+    "configurations/measured.json": "98e000b40aeb559691ec97ac3e094c4825cf3752aeb0a7ab995b0836f6a309f0",
+    "validation/controller-acceptance.json": "575e6e1378c65599b5501969934e3be1c6f8921f773996d9ca9bd949f788b319"
+  },
+  "staged_runtime": {
+    "configurations/browser-physics.json": "viewer/assets/runtime/highdof.json",
+    "controllers/lqi-gains.bin": "viewer/assets/runtime/lqi-gains.bin",
+    "validation/controller-acceptance.json": "viewer/assets/runtime/lqi-pipeline-validation.json"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "original_gain_reconstruction_max_error": 1.6150556239602487e-10,
+  "base_header_sha256": "1213eea4754c31f725b14bf47e6d72e55daf8933151af204874fdb2c5e8b963d",
+  "unchanged": [
+    "A",
+    "B",
+    "L",
+    "TRIM",
+    "XREF",
+    "UREF",
+    "XS",
+    "US"
+  ]
+}

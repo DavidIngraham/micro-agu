@@ -1,0 +1,146 @@
+[
+  {
+    "name": "mission-baseline-0-1.5-1.5",
+    "mean": {
+      "base_drag_W": 6.800251306384919,
+      "induced_drag_W": 16.181480363895517,
+      "brake_drag_W": 0.019979638814304028,
+      "payload_drag_W": 0.8627105031184665,
+      "joint_damping_W": 1.3053364525785465e-11,
+      "extra_moment_power_W": -0.0028346990409415045,
+      "gravity_power_W": 23.864389274617185,
+      "energy_residual_W": 5.702917442975933e-07,
+      "panel_error": 2.006111326440734e-15,
+      "panel_work_error_W": -5.921189464667501e-16,
+      "hinge_velocity_error": 3.876185556055212e-08,
+      "panel_roll_Nm": -0.1350425396104567,
+      "extra_roll_Nm": 0.005558205442138823
+    },
+    "max_abs": {
+      "energy_residual_W": 5.778015719215546e-07,
+      "panel_error": 7.105427357601002e-15,
+      "panel_work_error_W": 7.105427357601002e-15,
+      "hinge_velocity_error": 3.8761860787121865e-08
+    }
+  },
+  {
+    "name": "mission-left-1-1.5-1.5",
+    "mean": {
+      "base_drag_W": 5.475156155605003,
+      "induced_drag_W": 21.45634992702993,
+      "brake_drag_W": 2.9811733249097485,
+      "payload_drag_W": 0.8644900527156033,
+      "joint_damping_W": 2.583631307333945e-14,
+      "extra_moment_power_W": -1.361232943957821,
+      "gravity_power_W": 32.13856283176629,
+      "energy_residual_W": 5.70725648864191e-07,
+      "panel_error": 3.293661639721298e-15,
+      "panel_work_error_W": 6.908054375445419e-16,
+      "hinge_velocity_error": 3.876333576710544e-08,
+      "panel_roll_Nm": 1.6168139246855056,
+      "extra_roll_Nm": -0.07141742483271903
+    },
+    "max_abs": {
+      "energy_residual_W": 6.540555901324296e-07,
+      "panel_error": 7.105427357601002e-15,
+      "panel_work_error_W": 7.105427357601002e-15,
+      "hinge_velocity_error": 3.876484947922867e-08
+    }
+  },
+  {
+    "name": "mission-right-1-1.5-1.5",
+    "mean": {
+      "base_drag_W": 5.462665429575633,
+      "induced_drag_W": 22.22965063108379,
+      "brake_drag_W": 3.8398120248462297,
+      "payload_drag_W": 0.8919374176818788,
+      "joint_damping_W": 9.249088570055261e-15,
+      "extra_moment_power_W": -1.5955242883744802,
+      "gravity_power_W": 34.019749067266474,
+      "energy_residual_W": 5.615553110910948e-07,
+      "panel_error": 2.981796908151245e-15,
+      "panel_work_error_W": -1.8750433304780422e-15,
+      "hinge_velocity_error": 3.875939596030871e-08,
+      "panel_roll_Nm": -1.9191960840747404,
+      "extra_roll_Nm": 0.0811899847648264
+    },
+    "max_abs": {
+      "energy_residual_W": 6.59093998933713e-07,
+      "panel_error": 1.0658141036401503e-14,
+      "panel_work_error_W": 1.0658141036401503e-14,
+      "hinge_velocity_error": 3.8762456856863135e-08
+    }
+  },
+  {
+    "name": "dynamic_roll-baseline-0-1.5-1.5",
+    "mean": {
+      "base_drag_W": 6.8614909707276155,
+      "induced_drag_W": 16.13351647390261,
+      "brake_drag_W": 0.01145974069567233,
+      "payload_drag_W": 0.8702287514188076,
+      "joint_damping_W": 1.3182859626196797e-11,
+      "extra_moment_power_W": -0.0011147385931186667,
+      "gravity_power_W": 23.874818931166672,
+      "energy_residual_W": 5.260830399459829e-07,
+      "panel_error": 2.7292982688701764e-15,
+      "panel_work_error_W": -4.934324553889585e-16,
+      "hinge_velocity_error": 3.5856380743688504e-08,
+      "panel_roll_Nm": -0.1328730770129469,
+      "extra_roll_Nm": 0.006034291024114359
+    },
+    "max_abs": {
+      "energy_residual_W": 5.312732547224641e-07,
+      "panel_error": 7.105427357601002e-15,
+      "panel_work_error_W": 7.105427357601002e-15,
+      "hinge_velocity_error": 3.585638607521159e-08
+    }
+  },
+  {
+    "name": "dynamic_roll-left-1-1.5-1.5",
+    "mean": {
+      "base_drag_W": 5.440472373571619,
+      "induced_drag_W": 21.32111964769094,
+      "brake_drag_W": 2.9816555365806554,
+      "payload_drag_W": 0.8470728724000213,
+      "joint_damping_W": 4.443561677672531e-14,
+      "extra_moment_power_W": -1.245961446853456,
+      "gravity_power_W": 31.836415511520304,
+      "energy_residual_W": 5.315598434505217e-07,
+      "panel_error": 2.639863636330928e-15,
+      "panel_work_error_W": 5.921189464667501e-16,
+      "hinge_velocity_error": 3.585915257741973e-08,
+      "panel_roll_Nm": 1.696693691128546,
+      "extra_roll_Nm": -0.07879534070986513
+    },
+    "max_abs": {
+      "energy_residual_W": 6.027447483347714e-07,
+      "panel_error": 7.105427357601002e-15,
+      "panel_work_error_W": 1.0658141036401503e-14,
+      "hinge_velocity_error": 3.586048372344155e-08
+    }
+  },
+  {
+    "name": "dynamic_roll-right-1-1.5-1.5",
+    "mean": {
+      "base_drag_W": 5.426935123083837,
+      "induced_drag_W": 21.996221156241774,
+      "brake_drag_W": 3.7488069166445825,
+      "payload_drag_W": 0.8705622005264785,
+      "joint_damping_W": 1.4225813907630944e-14,
+      "extra_moment_power_W": -1.4450922593436006,
+      "gravity_power_W": 33.4877557274719,
+      "energy_residual_W": 5.105474449133377e-07,
+      "panel_error": 2.812564995717063e-15,
+      "panel_work_error_W": 1.4802973661668755e-15,
+      "hinge_velocity_error": 3.585609023004986e-08,
+      "panel_roll_Nm": -1.9550728542935214,
+      "extra_roll_Nm": 0.08772914796826285
+    },
+    "max_abs": {
+      "energy_residual_W": 6.088157320505161e-07,
+      "panel_error": 7.105427357601002e-15,
+      "panel_work_error_W": 1.0658141036401503e-14,
+      "hinge_velocity_error": 3.5858533966556976e-08
+    }
+  }
+]

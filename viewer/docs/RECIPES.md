@@ -24,7 +24,7 @@ it is a datum plane, not terrain. Mouse drag orbits; wheel zooms; right drag pan
 ### Existing research traces
 
 ```sh
-python -m pip install -r ../research/viewer-studies/requirements.txt
+python -m pip install -r ../viewer/tools/recording/requirements.txt
 python tools/convert/convert_trace.py \
   /path/to/high-dof-trace.npz /path/to/replay.jsonl --voltage 22.2
 ```
@@ -47,7 +47,7 @@ Start the bridge in another terminal:
 
 ```sh
 cd viewer
-python ../research/viewer-studies/bridge.py --udp 9010 --port 8765 --record /path/to/new-run.jsonl
+python ../viewer/tools/recording/bridge.py --udp 9010 --port 8765 --record /path/to/new-run.jsonl
 ```
 
 Then start the backend on the ArduPilot feature branch:
@@ -159,7 +159,7 @@ Generate a 30-second powered right turn, left reversal and brake release using t
 real physics backend (scripted actuators, without a native autopilot):
 
 ```sh
-python ../research/viewer-studies/make_showcase.py --model-dir /path/to/micro-agu/simulation \
+python ../research/archive/viewer-studies/make_showcase.py --model-dir /path/to/micro-agu/simulation \
   --output /path/to/Mission-Planner/analysis/viewer-showcase/reversing-turn.jsonl
 ```
 
@@ -187,7 +187,7 @@ Use a fresh run directory in the existing research data location:
 PG_GAINS=original PG_VOLTAGE=22.2 \
 ARDUPILOT_ROOT=/path/to/ardupilot PG_CONTROLLER_CONFIG=/path/to/micro-agu/simulation/mission-controller-candidate.json \
 BUILDLOGS=/path/to/research/viewer-auto-mission \
-python /path/to/ArduPilot-tinkering/research/viewer-studies/record_auto.py \
+python /path/to/ArduPilot-tinkering/research/archive/viewer-studies/record_auto.py \
   --model-dir "/path/to/micro-agu/simulation" \
   --output /path/to/research/viewer-auto-mission/truth.jsonl -- \
   --no-check-parameter-leaks --speedup 10 test.Plane.ParagliderAutoMission
@@ -218,7 +218,7 @@ only the first loiter entry, with the heading-rate controller enabled.
 npm test
 npm run build
 python -m unittest discover -s tools -p 'test_*.py'
-python ../research/viewer-studies/check_live.py --model-dir /path/to/micro-agu/simulation
+python ../viewer/tools/recording/check_live.py --model-dir /path/to/micro-agu/simulation
 # Native exporter/protocol checks, from ArduPilot model directory:
 python -m unittest test_json_backend
 ```
@@ -238,7 +238,7 @@ parameters or physics equations were changed.
 ### Repeatable synthetic turbulence
 
 Add `--turbulence` to either `make_showcase.py` or `record_auto.py`. Both use
-`../research/viewer-studies/turbulence.py`: zero mean wind, nominal RMS gust speeds of 0.5 m/s north,
+`../research/archive/viewer-studies/turbulence.py`: zero mean wind, nominal RMS gust speeds of 0.5 m/s north,
 0.5 m/s east and 0.25 m/s down, frequencies 0.08–0.89 Hz, seed 20261011 and a
 five-second cosine ramp after release. “Moderate” describes this demonstration's
 chosen amplitude; it is not a validated atmospheric turbulence category.
@@ -254,7 +254,7 @@ The CAD capstans receive procedural black/white quadrant markings and one orange
 index stripe in `packages/rendering/src/aircraft/mechanisms.ts`. The paint rotates with each drum using the
 existing physical brake-travel mapping; it does not alter the GLB or simulator.
 The exported video uses a side-biased inspection camera to expose the drum face.
-`../research/viewer-studies/analyze_auto_gusts.py ROOT --output DIRECTORY` compares the retained calm
+`../research/archive/viewer-studies/analyze_auto_gusts.py ROOT --output DIRECTORY` compares the retained calm
 and gusty AUTO excerpts and creates the longitudinal diagnostic figure/metrics.
 
 Exported videos include a north-up wind flag pointing **toward** the horizontal
@@ -278,7 +278,7 @@ The published AUTO controls clip uses the two-pole gust-controller run under
 after release. Add `--turbulence` only to superimpose the repeatable gust field.
 The vector reaches the existing aerodynamic/propulsion wind input and is also
 returned as native wind and airspeed sensor data. No controller parameters change.
-`tools/run_gust_native.sh` accepts `calm`, `gust`, or `crosswind` for these cases.
+`research/archive/legacy-tools/run_gust_native.sh` accepts `calm`, `gust`, or `crosswind` for these cases.
 
 `tools/convert/prepare_wind_clip.py RUN OUTPUT [--calm]` prepares a comparison recording
 and metadata. The explicit `--calm` option adds zero-wind annotations to a known
@@ -293,7 +293,7 @@ altitude response. Other recordings expand the axis in 5 m steps as needed.
 
 ### Pitch-sign carriage comparison
 
-`tools/pitch_sign_video.py --states-only` exports the four matched full-state JSONL recordings (including RPM) into the Mission Planner `pitch-sign-video` directory. Link that directory to the ignored `viewer/assets/recordings/pitch-sign` path, start `npm run dev`, then open `/pitch-comparison.html` and select **Record comparison**. The page is a local recording tool, not a published live replay; raw state recordings remain outside Git.
+`research/archive/legacy-tools/pitch_sign_video.py --states-only` exports the four matched full-state JSONL recordings (including RPM) into the Mission Planner `pitch-sign-video` directory. Link that directory to the ignored `viewer/assets/recordings/pitch-sign` path, start `npm run dev`, then open `/pitch-comparison.html` and select **Record comparison**. The page is a local recording tool, not a published live replay; raw state recordings remain outside Git.
 
 The four views use the existing Trout Lake SolidWorks GLB and mechanism rig. The camera has a fixed side-oblique orientation and orthographic scale. Its origin advances at the initial trimmed velocity, independently of every case's actual trajectory; it does not cancel payload translation or rotate with its attitude. All cases share this reference and scale. The orange point is the modeled upper attachment at body FRD `[0.0053, 0, -0.102]` m, with a trailing 0.8-second path relative to nominal flight. The propeller uses integrated simulated RPM and can alias at the video frame rate. The clip plays 0–5.5 seconds at real speed, followed by 2–5.5 seconds at quarter speed, so the initial instability stays in frame at an inspectable scale. Neither displacement nor rotation is amplified.
 
@@ -301,7 +301,7 @@ Encode the downloaded WebM to `docs/assets/viewer/pitch-sign/pitch-sign-carriage
 
 ### Altitude-command comparison
 
-Run `tools/altitude_comparison.py` with `--model`, `--raw` (Mission Planner) and `--output docs/assets/viewer/altitude-comparison`. Link the raw directory to ignored `viewer/assets/recordings/altitude-comparison`, then use `/altitude-comparison.html` under the Vite development server to record the four cases. This is a local recording tool. It reuses the actual carriage rig and schematic canopy; the pitch glyphs display world-referenced Euler pitch, not angle of attack or a full three-axis joint rotation. The pitch difference readout is the difference between those two Euler angles.
+Run `research/archive/legacy-tools/altitude_comparison.py` with `--model`, `--raw` (Mission Planner) and `--output docs/assets/viewer/altitude-comparison`. Link the raw directory to ignored `viewer/assets/recordings/altitude-comparison`, then use `/altitude-comparison.html` under the Vite development server to record the four cases. This is a local recording tool. It reuses the actual carriage rig and schematic canopy; the pitch glyphs display world-referenced Euler pitch, not angle of attack or a full three-axis joint rotation. The pitch difference readout is the difference between those two Euler angles.
 
 The fixed-orientation camera follows a centered one-second boxcar average of translation, keeping the complete glider in view. The reference is interpolated at the same replay timestamp as the aircraft. Linear extrapolation at the recording boundaries preserves constant-velocity travel. This replaces the original rounded 50 Hz camera index and two-endpoint average, which introduced visible tracking jitter. The corrected published asset is `altitude-comparison-smooth-camera.mp4`; simulation trajectories and reported metrics are unchanged. Absolute altitude remains in the plot and readout. All graphs use common ranges that include the observed excursions. The raw WebM and JSONL/NPZ traces stay in Mission Planner; final MP4, poster, summary and scripts go in Git. Encode H.264/yuv420p with faststart, at 30 fps, and use a mid-climb frame for the poster.
 
@@ -340,7 +340,7 @@ using the same log-Jacobian spring law and relative-rate damper as simulation/cr
 Generate final playback samples at 20 Hz while keeping 100 Hz raw output outside Git:
 
 ```sh
-python ../research/viewer-studies/make_joint_tour.py --model-dir /path/to/micro-agu/simulation \
+python ../research/archive/viewer-studies/make_joint_tour.py --model-dir /path/to/micro-agu/simulation \
   --output assets/recordings/joint-tour/responses.json --raw /path/to/Mission-Planner/joint-tour
 ```
 
@@ -368,7 +368,7 @@ available, including the earlier rotor-coupling example. The frozen-command
 shadow remains a raw research diagnostic and is not offered in the widget.
 Camera framing is shared within each body/axis/profile/amplitude comparison.
 
-`research/sitl-studies/make_closed_joint_tour.py` uses the airborne SITL harness and the branch's
+`research/archive/sitl-studies/make_closed_joint_tour.py` uses the airborne SITL harness and the branch's
 `mission-controller-candidate.json`. AUTO flies a straight northbound leg toward
 waypoints 1 km and 2 km from home, at 100 m relative altitude. Physics runs under
 native control for 100 seconds before the disturbance; mission item 1 and AUTO
@@ -383,8 +383,8 @@ logs remain in Mission Planner. Packaged traces record parameter readback, sourc
 revision and executable SHA-256. No firmware/controller changes are required.
 
 ```sh
-python research/sitl-studies/run_closed_joint_tour.py --repo /path/to/ardupilot --raw /path/to/Mission-Planner/joint-tour/auto-suite
-python research/sitl-studies/package_closed_joint_tour.py --repo /path/to/ardupilot --raw /path/to/Mission-Planner/joint-tour/auto-suite --output viewer/assets/recordings/joint-tour/responses.json
+python research/archive/sitl-studies/run_closed_joint_tour.py --repo /path/to/ardupilot --raw /path/to/Mission-Planner/joint-tour/auto-suite
+python research/archive/sitl-studies/package_closed_joint_tour.py --repo /path/to/ardupilot --raw /path/to/Mission-Planner/joint-tour/auto-suite --output viewer/assets/recordings/joint-tour/responses.json
 ```
 
 ## Manual trim and launch illustration
@@ -408,7 +408,7 @@ tracks playback. Prominent readouts show current speeds and changes since entry.
 
 The replay stops at first payload-CG ground-plane crossing, without impact or
 collapse animation. Raw logs stay in Mission Planner. The final-only figure and
-native flare annotation are generated by ../research/viewer-studies/landing_final_report.py after
+native flare annotation are generated by ../research/archive/viewer-studies/landing_final_report.py after
 the replay packaging script. The article uses the interactive applet alone.
 
 Build with npm run build, then run tools/publish_landing.py with the website's
@@ -418,13 +418,13 @@ assets/microagu-viewer destination to publish the bounded viewer bundle.
 The landing applet accepts `?case=before` and `?case=after`. These select a
 bounded matched replay pair (the previously published trial 1), with explicit
 configuration labels. The plain URL shows the selected after configuration.
-`tools/report_landing_lateral.py` at the repository root audits the 12 native
+`research/archive/legacy-tools/report_landing_lateral.py` at the repository root audits the 12 native
 logs and creates the summary plots and bounded replays; `publish_landing.py`
 copies both excerpts with the viewer bundle. Raw logs stay in Mission Planner.
 
 ### Descending spiral research replay
 
-`landing.html?case=spiral` shows the complete native descending-loiter, tangent-exit and flare experiment. [The study](../../research/spiral-swoop-2026-10-13/README.md) includes the matched gentle-gust check, speed-retention plots and failed development cases. This recording is a spiral landing demonstration, not a validated high-energy swoop.
+`landing.html?case=spiral` shows the complete native descending-loiter, tangent-exit and flare experiment. [The study](../../research/archive/spiral-swoop-2026-10-13/README.md) includes the matched gentle-gust check, speed-retention plots and failed development cases. This recording is a spiral landing demonstration, not a validated high-energy swoop.
 
 ### Shared paraglider rendering
 

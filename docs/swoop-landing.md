@@ -44,7 +44,7 @@ In calm air, the soft approach reaches about 11 degrees of bank and the dramatic
 | Bank at ground crossing | 1.5 degrees | 0.5 degrees |
 | Payload pitch rate at ground crossing | -17.2 deg/s | -32.3 deg/s |
 
-![Turning approach tracks, altitude, flare velocities and remaining payload pitch motion](../research/swoop-2026-10-13/styles.png)
+![Turning approach tracks, altitude, flare velocities and remaining payload pitch motion](../research/archive/swoop-2026-10-13/styles.png)
 
 The aircraft rolls nearly level before arrival, but level bank does not mean the payload has settled. The stronger flare reduces forward speed more, while leaving more pitch motion and a higher downward speed at the ground plane. My starting aspirations were a miss below 5 m, horizontal speed below 1 m/s and downward speed below 0.5 m/s. The position objective is met; the two speed objectives are not.
 
@@ -52,7 +52,7 @@ The aircraft rolls nearly level before arrival, but level bank does not mean the
 
 I froze both presets and ran four checks for each: calm air, gentle synthetic gusts, a steady crosswind, and a perturbed entry with slower actuators and command delay. The gust amplitude is 0.25 m/s horizontally and 0.0625 m/s vertically. The crosswind is a 1 m/s northward air velocity, perpendicular to the eastbound final approach. The entry case combines a 2 m lateral offset, 1 m extra height, 5 degrees of heading error, 5% extra speed, a 150 mm/s actuator rate and 60 ms of command delay.
 
-![Final eight-case comparison of target error and ground-crossing speeds](../research/swoop-2026-10-13/validation.png)
+![Final eight-case comparison of target error and ground-crossing speeds](../research/archive/swoop-2026-10-13/validation.png)
 
 All eight runs arrive within 5 m of the target; the largest miss is 3.26 m. Horizontal speed ranges from 2.12 to 2.86 m/s and downward speed from 0.92 to 1.28 m/s. Payload pitch-rate magnitude reaches 33.7 deg/s. These checks show repeatable placement across a small set of conditions, not a statistical reliability estimate.
 
@@ -80,17 +80,17 @@ During the orbit, L1 uses an 8-second period and the heading-rate demand limit i
 
 The gust case uses the same frozen configuration with smooth gusts of 0.25 m/s horizontal amplitude and 0.0625 m/s vertically. Both cases reach the target area, but they still arrive with substantial forward speed and about 18 degrees of payload pitch. Two runs establish a useful demonstration, not a reliability estimate.
 
-![Calm spiral: track, altitude, speeds, attitude and actuator response](../research/spiral-swoop-2026-10-13/spiral06.png)
+![Calm spiral: track, altitude, speeds, attitude and actuator response](../research/archive/spiral-swoop-2026-10-13/spiral06.png)
 
 The key question is whether the spiral itself builds speed. I checked that separately with fourteen open-loop cases: six asymmetric brake pulls and a zero-extra-pull baseline in each of the two retained model profiles. Throttle stays idle, the brake pull is held long enough to settle, then released.
 
-![Sustained spiral and brake-release response in both model profiles](../research/spiral-swoop-2026-10-13/authority.png)
+![Sustained spiral and brake-release response in both model profiles](../research/archive/spiral-swoop-2026-10-13/authority.png)
 
 At the strongest tested pull, the mission model settles at **4.58 m/s airspeed**, compared with **4.55 m/s** in the matched idle-glide baseline. The alternative model gives 4.54 versus 4.56 m/s. Bank and sink increase, but horizontal speed decreases. Releasing the brake briefly raises airspeed to about 5 m/s. The baseline retains the level-trim brake positions and a small turning bias; it is not a separately solved straight-glide trim.
 
 That explains the distinction visible in the replay: the model can make a descending spiral and a transient recovery arc, but this study does not demonstrate sustained high-energy acceleration. The native traces also contain brief throttle and pitch transients around altitude capture and rollout, so their 5.3–5.4 m/s speed peaks cannot all be attributed to energy gained in the spiral. I have kept the model unchanged rather than tuning its aerodynamics to produce the maneuver I hoped to see.
 
-The [spiral study record](../research/spiral-swoop-2026-10-13/README.md) includes the gentle-gust plot, all seven native attempts, configurations and scripts. Two early routes failed to reach LAND; those failures remain in the record alongside the five completed landings.
+The [spiral study record](../research/archive/spiral-swoop-2026-10-13/README.md) includes the gentle-gust plot, all seven native attempts, configurations and scripts. Two early routes failed to reach LAND; those failures remain in the record alongside the five completed landings.
 
 ## What needs a better terminal controller?
 
@@ -102,6 +102,6 @@ The next useful step is to isolate an unpowered recovery arc from TECS altitude 
 
 For now, this is a reproducible precision turning-landing demonstration and a clear target for further control work. A settled swoop still needs improvement in simulation, followed by measurements that establish whether the predicted high-brake response is real.
 
-[Study scripts, configurations and reproduction instructions](../research/swoop-2026-10-13/README.md) · [Complete final metrics](../research/swoop-2026-10-13/results.json)
+[Study scripts, configurations and reproduction instructions](../research/archive/swoop-2026-10-13/README.md) · [Complete final metrics](../research/archive/swoop-2026-10-13/results.json)
 
 Implementation and analysis assisted by Codex.

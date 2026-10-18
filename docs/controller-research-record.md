@@ -16,13 +16,13 @@ The mission plots also made me question the waypoint radius. We could make the r
 
 These earlier simple-model gains and navigation settings are listed in the [appendix](data-and-methods.md#lateral-controller-evidence).
 
-![Mission controller comparison](../scratch/paraglider-tests/yaw-controller/mission-controller-comparison.png)
+![Mission controller comparison](https://github.com/DavidIngraham/micro-agu/blob/archive/pre-layout-2026-10-18/scratch/paraglider-tests/yaw-controller/mission-controller-comparison.png)
 
-![Loiter controller comparison](../scratch/paraglider-tests/yaw-controller/loiter-controller-comparison.png)
+![Loiter controller comparison](https://github.com/DavidIngraham/micro-agu/blob/archive/pre-layout-2026-10-18/scratch/paraglider-tests/yaw-controller/loiter-controller-comparison.png)
 
 In that earlier simulator, we ran the selected gains through the normal calm AUTO mission and controller handover test; both passed. Calm corner overshoot was approximately 0.31 m in the selected validation. Results are not universally robust: the 3 m/s steady-wind case exceeded the 4 m corner limit, and turbulence 0.5 caused altitude aborts with both controllers. Each wind condition had a single comparison flight. Failed tuning candidates are retained.
 
-[Yaw validation and selected comparisons](../scratch/paraglider-tests/yaw-controller/validation.json) records the exact settings and limitations. I also explored a Lua quicktuner based on Plane autotune and the other tuning scripts, including L1 tuning. I decided it had not yet proven its value, so I kept its source and binding patches separately in provenance and out of the durable branch.
+[Yaw validation and selected comparisons](https://github.com/DavidIngraham/micro-agu/blob/archive/pre-layout-2026-10-18/scratch/paraglider-tests/yaw-controller/validation.json) records the exact settings and limitations. I also explored a Lua quicktuner based on Plane autotune and the other tuning scripts, including L1 tuning. I decided it had not yet proven its value, so I kept its source and binding patches separately in provenance and out of the durable branch.
 
 ### Tuning the dedicated loop with separate canopy and payload motion
 
@@ -66,7 +66,7 @@ This separates three jobs: feedforward supplies the expected brake input, headin
 
 The revised lateral settings and the [longitudinal changes](longitudinal-observer.md#returning-to-native-mission-control) passed the existing native AUTO test, with its original altitude, corner, opposing-loiter, home-loiter and controller-handover checks unchanged.
 
-![Settled bank motion and loiter radius across controller generations](../research/flight-log-analysis/figures/turn-model-spike/longitudinal-design/auto-loiter.png)
+![Settled bank motion and loiter radius across controller generations](../research/archive/flight-log-analysis/figures/turn-model-spike/longitudinal-design/auto-loiter.png)
 
 *The final 30 seconds of the first AUTO loiter. Purple is the current candidate; green is the 9-DOF model with original gains; red is an earlier conservative-gain trial. Older simple-model runs provide context, not a claim of equal model fidelity.*
 
@@ -92,7 +92,7 @@ $$
 
 A one-percent brake-command increment therefore produces about 0.98 deg/s of steady heading rate locally. Inverting that gain, including the speed multiplier, gives a feedforward gain of **0.00894**—almost exactly the 0.009 selected in the preceding nonlinear study.
 
-![Linear plant Bode plots checked against nonlinear sine tests](../research/flight-log-analysis/figures/turn-model-spike/classical-lateral/plant-bode.png)
+![Linear plant Bode plots checked against nonlinear sine tests](../research/archive/flight-log-analysis/figures/turn-model-spike/classical-lateral/plant-bode.png)
 
 *The full plant has several coupled modes. Small-amplitude nonlinear sine tests match the sampled linear response within 0.005%; the slight difference from the continuous curve at high frequency is the input hold. This checks the linearization against the simulator.*
 
@@ -119,13 +119,13 @@ The integrator is not speed-scaled. Feedforward affects command response but doe
 
 The selected gains are locally stable, but the original larger feedback gains are unstable in this model. With the selected gains, a lightly damped pair sits at $(-0.986\pm j15.969)\,\mathrm{s}^{-1}$: about 2.54 Hz, with damping ratio 0.062. Scaling all feedback gains together reaches instability at **1.524 times nominal**, a gain margin of **3.66 dB**. Increasing heading-rate P alone reaches the boundary near 0.00791, with I and roll damping held fixed.
 
-![Root locus annotated with physical mode participation and combined-loop zeros](../research/flight-log-analysis/figures/turn-model-spike/classical-lateral/annotated-root-locus.png)
+![Root locus annotated with physical mode participation and combined-loop zeros](../research/archive/flight-log-analysis/figures/turn-model-spike/classical-lateral/annotated-root-locus.png)
 
 *Crosses are open-loop poles, circles are combined-loop zeros, and green squares are the selected closed-loop poles. The mode labels come from eigenvector participation: several motions mix pitch, yaw, and translation. The red star marks the gain-induced instability boundary. The lower-half-plane branches mirror the upper half.*
 
 The slow oscillatory plant mode mixes pitch and forward speed at about 0.34 Hz. Another mixes sideways velocity and canopy yaw around 0.59 Hz; the fastest pair is predominantly relative canopy/payload roll at 5.86 Hz. Feedback changes these coupled motions rather than merely adding damping to a single isolated roll mode.
 
-Zeros need a different interpretation: they describe cancellation in an input–output response, not another natural motion. The combined loop has a right-half-plane zero pair at $(6.944\pm j19.054)\,\mathrm{s}^{-1}$. The individual heading-rate and roll-rate plants have different zeros, so those cannot be substituted as endpoints of this root locus. [The separate pole–zero maps](../research/flight-log-analysis/figures/turn-model-spike/classical-lateral/plant-zero-map.png) show all of them. These are properties of the modeled plant, not modes or zeros identified directly from flight.
+Zeros need a different interpretation: they describe cancellation in an input–output response, not another natural motion. The combined loop has a right-half-plane zero pair at $(6.944\pm j19.054)\,\mathrm{s}^{-1}$. The individual heading-rate and roll-rate plants have different zeros, so those cannot be substituted as endpoints of this root locus. [The separate pole–zero maps](../research/archive/flight-log-analysis/figures/turn-model-spike/classical-lateral/plant-zero-map.png) show all of them. These are properties of the modeled plant, not modes or zeros identified directly from flight.
 
 ### Less feedback at the troublesome frequencies
 
@@ -146,13 +146,13 @@ Both retain unity DC gain. Feedforward bypasses the measurement filters, so redu
 | 1 Hz low-pass | 8.41 dB | 6.87 dB |
 | Broad 2.5 Hz notch | 14.83 dB | 7.04 dB |
 
-![Feedback magnitude and sensitivity with six measurement filters](../research/flight-log-analysis/figures/turn-model-spike/lateral-shaping/shaping-bode.png)
+![Feedback magnitude and sensitivity with six measurement filters](../research/archive/flight-log-analysis/figures/turn-model-spike/lateral-shaping/shaping-bode.png)
 
 *Both candidates reduce the sensitivity peak near the troublesome mode. The notch has the strongest straight-flight margin, but its advantage over the simpler filter narrows in left turns.*
 
 Local command tracking stayed similar. I then ran eighteen nonlinear tests: level flight and both turn directions, each with three filters and either zero or 80 ms of added sensing delay. These used the actual modeled brake travel limits, asymmetric PWM mapping, changing speed scaling, and integral limits. The requested increments were 2 deg/s, continuing in the existing turn direction.
 
-![Nonlinear command tracking and brake effort with zero and 80 ms sensing delay](../research/flight-log-analysis/figures/turn-model-spike/lateral-shaping/nonlinear-shaping.png)
+![Nonlinear command tracking and brake effort with zero and 80 ms sensing delay](../research/archive/flight-log-analysis/figures/turn-model-spike/lateral-shaping/nonlinear-shaping.png)
 
 *Solid lines have no added delay; dashed lines have 80 ms. The existing filter develops a large oscillation in the right turn, while both candidates keep tracking. The left-turn baseline remains well behaved, consistent with the asymmetric plant.*
 
@@ -224,7 +224,7 @@ With the same synthetic gust settings as the scripted clip, the full gust run pa
 
 The earlier damper-off video exposed a weakness that the mission pass did not capture. Payload pitch swings from −11.7° to +26.3°, with a dominant frequency near 0.36 Hz (a 2.75-second period). Climb rate ranges from −1.41 to +1.34 m/s. Height error remains between −0.81 and +1.49 m, so the mission test passes while the aircraft visibly rocks. This is adequate route completion, but poor longitudinal disturbance rejection. The [longitudinal comparison](longitudinal-observer.md#what-the-gust-video-exposed) separates those two outcomes.
 
-The [longitudinal chapter](longitudinal-observer.md) picks up the same experiment from the throttle side. [Data and methods](data-and-methods.md#lateral-controller-evidence) preserves the earlier tuning records. The [current plotting source](../research/flight-log-analysis/scripts/native-sitl/), [figure manifest](../research/flight-log-analysis/manifest.json), and [diagram generator](../tools/draw_control_loops.py) preserve this update. Native implementation and reproduction instructions are recorded at ArduPilot commit `2588ecc44a` on `paraglider-high-dof-control`.
+The [longitudinal chapter](longitudinal-observer.md) picks up the same experiment from the throttle side. [Data and methods](data-and-methods.md#lateral-controller-evidence) preserves the earlier tuning records. The [current plotting source](../research/archive/flight-log-analysis/scripts/native-sitl), [figure manifest](../research/archive/flight-log-analysis/manifest.json), and [diagram generator](../research/archive/legacy-tools/draw_control_loops.py) preserve this update. Native implementation and reproduction instructions are recorded at ArduPilot commit `2588ecc44a` on `paraglider-high-dof-control`.
 
 All three clips use the improved controller from the [gust-control study](longitudinal-observer.md#shaping-the-damper-around-the-gust-response): pitch-rate throttle damping with two 1.5 Hz low-pass stages. During the gust excerpt, pitch standard deviation is 6.78°, climb-rate RMS is 0.44 m/s, and throttle ranges from 39.9% to 52.9%. The study compares complete native AUTO flights against the earlier damper-off baseline. All the videos include a ten-second throttle-command history on a fixed 0–100% scale and left/right actual brake-pull bars on the same 0–100 mm scale. Zero means released. The common scale preserves the real left/right asymmetry alongside the rotating capstans.
 
@@ -246,7 +246,7 @@ Model trim calculations required 44.6% throttle for level flight and 59.9% for a
 
 The descent calibration became 2.5 m/s to fit the local descending-throttle slope. These settings calibrate feedforward to this simulator; they do not replace my flight-derived climb/sink estimates or establish a new full-glide sink limit.
 
-![Matched native controller responses before and after the two revisions](../research/flight-log-analysis/figures/turn-model-spike/longitudinal-design/final-comparison.png)
+![Matched native controller responses before and after the two revisions](../research/archive/flight-log-analysis/figures/turn-model-spike/longitudinal-design/final-comparison.png)
 
 *The same simulated aircraft, before and after controller changes. Across the matched climb phase, height RMS error improved from 0.92 to 0.14 m. The lateral changes remove much of the motion that otherwise feeds into the longitudinal problem.*
 
@@ -264,7 +264,7 @@ $$
 
 The selected time constant is 0.5 seconds. Height feedback and trajectory slew limits stay unchanged. `TECS_PG_HR_TC` defaults to zero, preserving the previous behavior unless explicitly enabled.
 
-![Altitude capture with and without derivative-feedforward smoothing](../research/flight-log-analysis/figures/turn-model-spike/longitudinal-design/capture-smoothing.png)
+![Altitude capture with and without derivative-feedforward smoothing](../research/archive/flight-log-analysis/figures/turn-model-spike/longitudinal-design/capture-smoothing.png)
 
 *Only the smoothing setting changes in this comparison. Peak pitch rate during climb capture falls from 64.1 to 14.7 degrees per second—a 77% reduction.*
 
@@ -276,7 +276,7 @@ The same gains remained well behaved with a softer roll model. The first low-vol
 
 With the existing compensation enabled, reducing supply voltage from 22.2 to 20.4 V now increases the throttle command automatically. We kept 22.2 V as the reference because that is where we calibrated these simulator throttle settings; it is not the full-charge voltage of a 6S pack. In matched native runs at 20.4 V, climb height RMS error fell from **0.486 to 0.250 m**, and level-phase error from **0.633 to 0.016 m**. At 22.2 V, compensation on/off gave essentially the same result.
 
-![Native voltage-compensation comparison, showing altitude error, payload pitch rate, TECS demand and final motor command](../research/flight-log-analysis/figures/turn-model-spike/voltage-compensation/voltage-response.png)
+![Native voltage-compensation comparison, showing altitude error, payload pitch rate, TECS demand and final motor command](../research/archive/flight-log-analysis/figures/turn-model-spike/voltage-compensation/voltage-response.png)
 
 There is a tradeoff: climb-capture height RMS error increased from **0.096 to 0.169 m**. Native compensation also raises the maximum throttle returned to TECS, changing its climb feedforward slope before the final output scaling. The corrected linear and nonlinear analysis includes that interaction. This fixes the missing battery path and improves low-voltage tracking; it does not eliminate every capture transient or justify enabling the pitch damper.
 
@@ -298,7 +298,7 @@ This comparison uses the current 9-DOF plant, Trout Lake mass (1.758 kg), 22.2 V
 
 With gain 0.10 and a single 10 Hz filter, the original minus-sign feedback turns the small disturbance into a sustained, throttle-limited oscillation. Reversing that sign keeps this fast motion small. Turning the damper off also lets the disturbance decay. The fourth panel previews the solution developed below: it retains the minus sign but applies two 1.5 Hz filter stages, and this disturbance decays too. The plant therefore reproduces the sign-sensitive excitation, while also showing why the feedback's frequency response matters alongside its sign.
 
-The large oscillation is a diagnostic result, not a prediction of the exact Hood River amplitude. This isolates the pitch-feedback path; the native mission and gust tests below establish how the selected filtering behaves with the rest of the controller running. The [generation script](../tools/pitch_sign_video.py), [CAD comparison renderer](../viewer/apps/applets/pitch-comparison/applet.ts) and [configuration and results](assets/viewer/pitch-sign/pitch-sign.json) record the experiment, with raw trajectories retained in Mission Planner.
+The large oscillation is a diagnostic result, not a prediction of the exact Hood River amplitude. This isolates the pitch-feedback path; the native mission and gust tests below establish how the selected filtering behaves with the rest of the controller running. The [generation script](../research/archive/legacy-tools/pitch_sign_video.py), [CAD comparison renderer](../viewer/apps/applets/pitch-comparison/applet.ts) and [configuration and results](assets/viewer/pitch-sign/pitch-sign.json) record the experiment, with raw trajectories retained in Mission Planner.
 
 #### Commanding a climb with the four damper configurations
 
@@ -319,7 +319,7 @@ This longer maneuver separates the outcomes more clearly than the short pitch ki
 
 The reversed-sign case reaches 104.88 m before losing height. That is why suppressing the fast payload mode alone is not enough: the same feedback also acts on slower coupled motion. In this calm maneuver the current filter and damper-off cases have essentially the same settled altitude performance; the gust comparisons below establish the additional reason to retain the filtered damper. Large unstable excursions here illustrate the failure mechanism rather than predict precise flight amplitudes.
 
-This is a **standalone, truth-sensed controller diagnostic**, using the height-loop algebra and the current plant, rather than a new native SITL regression. The [experiment script](../tools/altitude_comparison.py), [animation renderer](../viewer/apps/applets/altitude-comparison/applet.ts) and [configuration and results](assets/viewer/altitude-comparison/altitude-comparison.json) preserve the setup. Raw trajectories remain in Mission Planner under `turn-model-spike/altitude-comparison`.
+This is a **standalone, truth-sensed controller diagnostic**, using the height-loop algebra and the current plant, rather than a new native SITL regression. The [experiment script](../research/archive/legacy-tools/altitude_comparison.py), [animation renderer](../viewer/apps/applets/altitude-comparison/applet.ts) and [configuration and results](assets/viewer/altitude-comparison/altitude-comparison.json) preserve the setup. Raw trajectories remain in Mission Planner under `turn-model-spike/altitude-comparison`.
 
 ### What the gust video exposed
 
@@ -340,7 +340,7 @@ In gusts, payload pitch ranges from −11.7° to +26.3° and climb rate from −
 
 The gust generator includes a 0.34 Hz component, close to the modeled slow pitch/forward-speed mode. It continues supplying energy throughout this clip. The response is consistent with excitation near that mode, but this comparison does not establish whether throttle feedback amplifies it or merely responds to it. A passing AUTO mission is therefore evidence of route completion, not evidence of satisfactory longitudinal damping.
 
-I next replayed the same gust history from the same initial state with normal throttle control, fixed trim throttle, and the near-mode gust component removed. The [original comparison script](../research/viewer-studies/analyze_auto_gusts.py) and [summary metrics](assets/viewer/auto-longitudinal-gusts.json) preserve the video diagnosis; the following experiments test the remedy.
+I next replayed the same gust history from the same initial state with normal throttle control, fixed trim throttle, and the near-mode gust component removed. The [original comparison script](../research/archive/viewer-studies/analyze_auto_gusts.py) and [summary metrics](assets/viewer/auto-longitudinal-gusts.json) preserve the video diagnosis; the following experiments test the remedy.
 
 
 ### Shaping the damper around the gust response
@@ -357,13 +357,13 @@ $$
 
 Here $q$ is body pitch rate in rad/s and $u_T$ is throttle fraction. Each stage has a 1.5 Hz cutoff; the combined continuous-time filter reaches −3 dB at about 0.97 Hz. Native code applies the discrete first-order filters at the measured update interval, limits the correction to ±0.25, and retains the final throttle limits. Height feedforward, height feedback, integration, voltage compensation and lateral gains are unchanged. Washout is off.
 
-![Filter magnitude and phase, with movement of the slow pitch/forward-speed poles](../research/flight-log-analysis/figures/turn-model-spike/gust-control/filter-and-poles.png)
+![Filter magnitude and phase, with movement of the slow pitch/forward-speed poles](../research/archive/flight-log-analysis/figures/turn-model-spike/gust-control/filter-and-poles.png)
 
 At nominal level trim, the slow poles move from **−0.248 ± j2.254** to **−0.658 ± j2.186 s⁻¹**. Their damping ratio rises from **0.109 to 0.288**. The selected setting remains locally stable in seven saved plant cases—including climb, descent, lower voltage and softer roll—at lateral airspeed scaling 0.9, 1.15 and 1.4. These are local model checks; they do not include every estimator delay or establish flight robustness.
 
 This does not reverse the conclusion from the original flight damper. The feedback path now has a different frequency response. A sign and a gain alone cannot describe how the throttle loop acts on both the slow motion and the faster canopy–payload modes.
 
-![Matched nonlinear gust histories with the original and selected controllers](../research/flight-log-analysis/figures/turn-model-spike/gust-control/two-pole-comparison.png)
+![Matched nonlinear gust histories with the original and selected controllers](../research/archive/flight-log-analysis/figures/turn-model-spike/gust-control/two-pole-comparison.png)
 
 In the matched nonlinear screen, pitch standard deviation fell from **9.45° to 6.17°**, climb-rate RMS from **0.71 to 0.46 m/s**, and height RMS error from **0.48 to 0.40 m**. Pitch-rate RMS also fell, from **21.57 to 18.03°/s**. The cost was more throttle activity: its standard deviation rose from **1.65 to 2.65 percentage points**, with no saturation. The gusts stop at 80 seconds in the plot; the filtered controller also damps the remaining motion more quickly.
 
@@ -373,7 +373,7 @@ A separate gust realization with 50% higher component amplitudes retained the im
 
 The two-stage controller passed the full gusty AUTO mission with the original checks unchanged. That includes altitude changes, both two-turn loiters, corner checks, home loiter and controller handover. The native BIN confirms gain 0.1, both 1.5 Hz stages and washout disabled; the model backend recorded no errors or clipped input packets.
 
-![Native AUTO loiter entry before and after frequency-shaped pitch damping](../research/flight-log-analysis/figures/turn-model-spike/gust-control/native-comparison.png)
+![Native AUTO loiter entry before and after frequency-shaped pitch damping](../research/archive/flight-log-analysis/figures/turn-model-spike/gust-control/native-comparison.png)
 
 *The same route, model and gust generator, with excerpts aligned independently at the first loiter approach. The route timing changes, so the two excerpts sample different gust phases. The matched screen above isolates the controller change; this comparison checks its native implementation.*
 
@@ -393,7 +393,7 @@ The calm AUTO regression also passed. Settled pitch standard deviation fell from
 
 The feature branch now includes the optional `TECS_PG_PR_FILT2` stage, defaulting to bypass, and the paired mission-development parameter files select the tested 0.1 gain and two 1.5 Hz stages. These are SITL development settings; appreciable forced motion remains in gusts, and the new tuning has not been flown. The low-voltage and softer-roll checks here are linear sensitivity tests, not additional native AUTO runs.
 
-The [matched-screen script](../tools/gust_control_study.py), [linear check](../tools/gust_linear_check.py), [native mission runner](../tools/run_gust_native.sh), [mission summarizer](../tools/summarize_gust_mission.py), [comparison plotter](../tools/plot_gust_control.py) and [filter/pole plotter](../tools/plot_gust_filter.py) preserve the experiment. Raw state histories, BIN logs and the working HTML research log remain in Mission Planner under `turn-model-spike/gust-control`.
+The [matched-screen script](../research/archive/legacy-tools/gust_control_study.py), [linear check](../research/archive/legacy-tools/gust_linear_check.py), [native mission runner](../research/archive/legacy-tools/run_gust_native.sh), [mission summarizer](../research/archive/legacy-tools/summarize_gust_mission.py), [comparison plotter](../research/archive/legacy-tools/plot_gust_control.py) and [filter/pole plotter](../research/archive/legacy-tools/plot_gust_filter.py) preserve the experiment. Raw state histories, BIN logs and the working HTML research log remain in Mission Planner under `turn-model-spike/gust-control`.
 
 The implementation and tested mission settings are in [ArduPilot commit 2588ecc44a](https://github.com/DavidIngraham/ardupilot/commit/2588ecc44a) on the existing controller-development branch.
 

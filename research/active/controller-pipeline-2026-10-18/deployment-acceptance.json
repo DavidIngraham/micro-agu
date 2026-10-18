@@ -1,0 +1,72 @@
+{
+  "decision": "deploy refit_damped on practical non-regression criterion requested by user; no proven overall improvement",
+  "scope": "browser simulator only; production physics, EKF and observer unchanged",
+  "longitudinal_evidence": "published-baseline/metrics.json",
+  "limitations": [
+    "Reference repeat scatter prevents claims of significant improvement",
+    "Crosswind altitude RMS increased by approximately 0.11 m",
+    "No hardware flight qualification or physical SD-card test"
+  ],
+  "envelope": [
+    {
+      "case": "envelope-reference-0",
+      "complete": true,
+      "failure": null,
+      "min_height": 72.03537256700324,
+      "max_roll_deg": 7.052240327477158,
+      "max_pitch_deg": 14.649338505424573,
+      "alt_tracking_rmse": 11.46784142486796
+    },
+    {
+      "case": "envelope-reference-35",
+      "complete": true,
+      "failure": null,
+      "min_height": 72.21453309870897,
+      "max_roll_deg": 39.46394509974157,
+      "max_pitch_deg": 17.710646366897212,
+      "alt_tracking_rmse": 11.496100241994734
+    },
+    {
+      "case": "envelope-refit_damped-0",
+      "complete": true,
+      "failure": null,
+      "min_height": 72.47110606503706,
+      "max_roll_deg": 7.150720129364517,
+      "max_pitch_deg": 14.563660612475934,
+      "alt_tracking_rmse": 11.540720343307584
+    },
+    {
+      "case": "envelope-refit_damped-35",
+      "complete": true,
+      "failure": null,
+      "min_height": 72.14945303148103,
+      "max_roll_deg": 39.24212446116165,
+      "max_pitch_deg": 17.648681183199564,
+      "alt_tracking_rmse": 11.339473748111798
+    }
+  ],
+  "auto": [
+    {
+      "gains": "reference",
+      "complete": true,
+      "failure": null,
+      "duration_s": 240.00499999981272,
+      "min_height_m": 44.66978102879098,
+      "max_roll_deg": 10.103060433479243,
+      "max_pitch_deg": 11.244141718299192,
+      "alt_tracking_rmse_m": 2.80466464432956,
+      "trajectory_sha256": "6a6e1c5c20345ca3ea5349dba14193f97d3271e5030cc50c0154533eaa6c569f"
+    },
+    {
+      "gains": "refit_damped",
+      "complete": true,
+      "failure": null,
+      "duration_s": 240.00499999981344,
+      "min_height_m": 44.65328656448828,
+      "max_roll_deg": 9.735960817479507,
+      "max_pitch_deg": 11.203712121054595,
+      "alt_tracking_rmse_m": 2.7898481484801096,
+      "trajectory_sha256": "f05b988ce7d481794936f6d19f4dd99458c3e90cb0075f9783678d9eaa50ca61"
+    }
+  ]
+}

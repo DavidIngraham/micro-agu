@@ -1,0 +1,34 @@
+{
+  "schema": 1,
+  "python_tests": {
+    "passed": 43,
+    "includes": "simulator, sysid, pipeline, actual AP gain decoder"
+  },
+  "viewer_unit_tests": {
+    "passed": 42
+  },
+  "viewer_production_build": "passed",
+  "standalone_wheel_install": "passed from /tmp with new simulator and control wheels",
+  "recording_unit_tests": {
+    "passed": 2
+  },
+  "recording_live_check": "400 lockstep responses; UDP/WebSocket and bounded-rate recording passed",
+  "gain_regeneration": "All five pipeline gain binaries identical to pre-migration artifacts",
+  "prepared_flight_inputs": "17 existing greybox session segments loaded",
+  "historical_scratch_restore": {
+    "files_verified": 2155,
+    "bytes": 474539635
+  },
+  "compact_study_archives": {
+    "files_verified": 958,
+    "studies": 8,
+    "extraction_smoke": "lqi-filter-retune restored to a new /tmp directory"
+  },
+  "maintained_markdown_links": "passed",
+  "lqi_applet_generator": "regenerated from retained raw-runs.tar.gz; numerical contents unchanged",
+  "deployed_simulator": "unchanged; no Pages publication",
+  "preexisting_edits": "Five unrelated unstaged diffs preserved byte-for-byte; dirty standalone gain designer retained under research/archive/legacy-control with original also in backup",
+  "tracked_files_before": 4281,
+  "tracked_files_after": 2825,
+  "historical_whitespace": "Existing patch/snapshot whitespace retained; not reformatted as part of archival"
+}

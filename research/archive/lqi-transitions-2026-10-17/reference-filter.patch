@@ -1,0 +1,126 @@
+--- a/libraries/AP_CustomControl/AP_CustomControl_LQI.cpp
++++ b/libraries/AP_CustomControl/AP_CustomControl_LQI.cpp
+@@ -9,10 +9,54 @@
+ using namespace AP_CustomControl_MIMO;
+ using namespace MicroAGU_LQI;
+ 
++
++// AI-assisted: configurable reference limits; defaults preserve the prior governor.
++const AP_Param::GroupInfo AP_CustomControl_LQI::var_info[] = {
++    // @Param: HUP
++    // @DisplayName: LQI height reference climb limit
++    // @Description: Maximum climb rate of the LQI internal altitude reference.
++    // @Units: m/s
++    // @Range: 0.1 3
++    // @User: Advanced
++    AP_GROUPINFO("HUP", 1, AP_CustomControl_LQI, _height_up, 0.5f),
++    // @Param: HDN
++    // @DisplayName: LQI height reference descent limit
++    // @Description: Positive maximum descent rate of the LQI internal altitude reference.
++    // @Units: m/s
++    // @Range: 0.1 3
++    // @User: Advanced
++    AP_GROUPINFO("HDN", 2, AP_CustomControl_LQI, _height_down, 0.5f),
++    // @Param: HTC
++    // @DisplayName: LQI height reference time constant
++    // @Description: Time constant for altitude reference approach near the requested height.
++    // @Units: s
++    // @Range: 0.2 10
++    // @User: Advanced
++    AP_GROUPINFO("HTC", 3, AP_CustomControl_LQI, _height_tc, 2.0f),
++    // @Param: HRTC
++    // @DisplayName: LQI climb reference smoothing
++    // @Description: Time constant for climb reference smoothing before altitude integration and equilibrium feedforward. Zero preserves the unfiltered reference.
++    // @Units: s
++    // @Range: 0 3
++    // @User: Advanced
++    AP_GROUPINFO("HRTC", 4, AP_CustomControl_LQI, _height_rate_tc, 0.0f),
++    AP_GROUPEND
++};
++
++AP_CustomControl_LQI::AP_CustomControl_LQI(AP_CustomControl &frontend, float dt) :
++    AP_CustomControl_Backend(frontend, dt)
++{
++    AP_Param::setup_object_defaults(this, var_info);
++}
++
+ bool AP_CustomControl_LQI::valid(const Input &in) const
+ {
+     const auto &s = in.state;
+-    return in.eligible && in.reference.valid && s.attitude_valid && s.navigation_valid &&
++    return isfinite(_height_rate_tc.get()) && _height_rate_tc >= 0 && _height_rate_tc <= 3 &&
++        isfinite(_height_up.get()) && _height_up >= 0.1f && _height_up <= 3.0f &&
++        isfinite(_height_down.get()) && _height_down >= 0.1f && _height_down <= 3.0f &&
++        isfinite(_height_tc.get()) && _height_tc >= 0.2f && _height_tc <= 10.0f &&
++        in.eligible && in.reference.valid && s.attitude_valid && s.navigation_valid &&
+         s.airspeed_valid && s.wind_valid && in.time_ms-s.time_ms <= 100 &&
+         in.time_ms-in.reference.time_ms <= 500 && isfinite(in.dt) && in.dt > 0 && in.dt <= 0.1f &&
+         isfinite(s.attitude_body_to_ned.length_squared()) &&
+@@ -57,6 +101,7 @@
+     memset(_integral, 0, sizeof(_integral));
+     _height_origin = in.state.height_home_m;
+     _height_reference = 0;
++    _smoothed_climb = 0;
+     _turn_reference = 0;
+     _elapsed = 0;
+     _reset_sequence = in.state.reset_sequence;
+@@ -124,8 +169,10 @@
+     }
+     const float climb = in.reference.vertical == VerticalReference::CLIMB_RATE ?
+         in.reference.climb_rate_mps :
+-        (in.reference.height_home_m-_height_origin-_height_reference)*0.5f;
+-    const float governed_climb = constrain_float(climb, -0.5f, 0.5f);
++        (in.reference.height_home_m-_height_origin-_height_reference)/_height_tc;
++    const float requested_climb = constrain_float(climb, -_height_down.get(), _height_up.get());
++    _smoothed_climb += DT/(_height_rate_tc+DT)*(requested_climb-_smoothed_climb);
++    const float governed_climb = _smoothed_climb;
+     _height_reference += DT*governed_climb;
+     const float turn = constrain_float(in.reference.heading_rate_rads, -radians(10), radians(10));
+     _turn_reference += constrain_float(turn-_turn_reference, -radians(40)*DT, radians(40)*DT);
+--- a/libraries/AP_CustomControl/AP_CustomControl_LQI.h
++++ b/libraries/AP_CustomControl/AP_CustomControl_LQI.h
+@@ -4,7 +4,8 @@
+ #if AP_PLANE_CUSTOMCONTROL_LQI_ENABLED
+ class AP_CustomControl_LQI : public AP_CustomControl_Backend {
+ public:
+-    using AP_CustomControl_Backend::AP_CustomControl_Backend;
++    AP_CustomControl_LQI(AP_CustomControl &frontend, float dt);
++    static const AP_Param::GroupInfo var_info[];
+     bool is_mimo() const override { return true; }
+     bool can_run() override;
+     void update() override {}
+@@ -15,6 +16,11 @@
+     void allocation_feedback(const AP_CustomControl_MIMO::Allocation &allocation) override;
+ 
+ private:
++    AP_Float _height_up;
++    AP_Float _height_down;
++    AP_Float _height_tc;
++    AP_Float _height_rate_tc;
++    float _smoothed_climb;
+     bool valid(const AP_CustomControl_MIMO::Input &input) const;
+     void measurements(const AP_CustomControl_MIMO::Input &input, float (&y)[9]) const;
+     float _state[16];
+--- a/libraries/AP_CustomControl/AP_CustomControl.cpp
++++ b/libraries/AP_CustomControl/AP_CustomControl.cpp
+@@ -37,6 +37,12 @@
+     // @Path: ./AP_CustomControl_PID.cpp
+     AP_SUBGROUPVARPTR(_backend, "2_", 7, AP_CustomControl, _backend_var_info[1]),
+ #endif // AP_PLANE_CUSTOMCONTROL_PID_ENABLED
++
++#if AP_PLANE_CUSTOMCONTROL_LQI_ENABLED
++    // @Group: 3_
++    // @Path: ./AP_CustomControl_LQI.cpp
++    AP_SUBGROUPVARPTR(_backend, "3_", 8, AP_CustomControl, _backend_var_info[2]),
++#endif
+ 
+     AP_GROUPEND
+ };
+@@ -71,6 +77,7 @@
+     case CustomControlType::LQI:
+ #if AP_PLANE_CUSTOMCONTROL_LQI_ENABLED
+         _backend = NEW_NOTHROW AP_CustomControl_LQI(*this, _dt);
++        _backend_var_info[get_type()] = AP_CustomControl_LQI::var_info;
+ #endif
+         break;
+     default:

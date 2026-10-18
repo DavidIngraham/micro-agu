@@ -6,6 +6,10 @@ This repository contains the mechanical design, flight-test articles, interactiv
 
 ![Micro-AGU assembled payload](docs/assets/micro-agu/build-assembled.jpg)
 
+## Current configuration
+
+Start with [the current-system manifest](aircraft/microagu/README.md) for the exact aircraft, physics, firmware, observer context, gain file and validation evidence. [Repository organization](docs/repository-organization.md) explains maintained software and research ownership.
+
 ## Project status
 
 The original controller flew autonomous missions at Trout Lake after initial testing in Hood River. Subsequent work uses a 9-degree-of-freedom canopy–payload simulator to develop dedicated steering and longitudinal controllers, approach guidance and brake flare. These newer controller and landing results are simulation studies; they have not yet been validated in flight. The [next flight test card](docs/next-flight-test-card.md) describes the planned validation.
@@ -14,14 +18,13 @@ The original controller flew autonomous missions at Trout Lake after initial tes
 
 | Directory | Contents |
 |---|---|
-| [cad/](cad/) | Native SolidWorks parts, assemblies and file manifest |
-| [docs/](docs/) | Build, flight tests, controller design and landing articles |
-| [viewer/](viewer/) | Three.js replay/live viewer, articulated models and export tools |
-| [simulation/](simulation/) | Rust physics, generated Python/TypeScript bindings, native JSON adapter and regression tests |
-| [research/](research/) | Study scripts, final plots, configurations and compact replay excerpts |
-| [tools/](tools/) | Analysis and archive utilities |
-| [provenance/](provenance/) | Source revisions, artifact manifests and historical implementation records |
-| [scratch/](scratch/) | Historical experiments, including superseded approaches |
+| [cad/](cad) | Native SolidWorks parts, assemblies and file manifest |
+| [docs/](docs) | Build, flight tests, controller design and landing articles |
+| [viewer/](viewer) | Three.js replay/live viewer, articulated models and export tools |
+| [simulation/](simulation) | Rust physics, generated Python/TypeScript bindings, native JSON adapter and regression tests |
+| [research/](research) | Study scripts, final plots, configurations and compact replay excerpts |
+| [tools/](tools) | Analysis and archive utilities |
+| [provenance/](provenance) | Source revisions, artifact manifests and historical implementation records |
 
 ### Read the design story
 
@@ -31,7 +34,7 @@ The original controller flew autonomous missions at Trout Lake after initial tes
 4. [Simulation and controller refinement](docs/controller-design.md): articulated dynamics and classical control analysis.
 5. [Spot landing](docs/spot-landing.md): approach guidance, brake allocation and flare.
 6. [Toward a precision swoop landing](docs/swoop-landing.md): turning approaches and remaining touchdown limitations.
-7. [What state-space analysis added](docs/controller-state-space.md): joint tuning, actuator and sensor diagnostics, and a full-state controller comparison.
+7. [Developing the LQI controller](docs/controller-state-space.md): joint tuning, actuator and sensor diagnostics, and a full-state controller comparison.
 
 [Data and methods](docs/data-and-methods.md) explains the evidence and model assumptions. [Plane trajectory planning](docs/trajectory.md) covers a related investigation into waypoint transitions.
 
@@ -66,15 +69,15 @@ Open `cad/solidworks/microAGU.SLDASM` in SolidWorks, keeping the neighboring par
 
 ## Firmware and simulator
 
-The flight controller, native autotests and lightweight built-in articulated model live in the [paraglider-browser-9dof branch of the ArduPilot fork](https://github.com/DavidIngraham/ardupilot/tree/paraglider-browser-9dof), based directly on upstream master. The browser uses ArduPilot's unchanged JSON socket interface through a local Emscripten socket adapter; it needs no custom native WASM physics interface. This repository owns that adapter, the [reusable external simulator](simulation/README.md) and separate [research experiments](research/README.md), alongside the hardware and Three.js viewer. The older `paraglider-high-dof-control` and `sitl-wasm-json` branches remain historical provenance.
+The flight controller and lightweight built-in articulated model live in the ArduPilot fork. The [current-system manifest](aircraft/microagu/current.json) pins the exact deployed firmware revision and gain-file loader branch. The browser uses ArduPilot's unchanged JSON socket interface through a local Emscripten socket adapter; it needs no custom native WASM physics interface. This repository owns that adapter, the [reusable external simulator](simulation/README.md) and separate [research experiments](research/README.md), alongside the hardware and Three.js viewer. The older `paraglider-high-dof-control` and `sitl-wasm-json` branches remain historical provenance.
 
-For setup and native tests, follow the [simulator README](simulation/README.md). The [browser simulator](https://davidingraham.github.io/assets/microagu-viewer/simulator.html) uses the same external kernel with the as-built 132 mm geometry. See [the latest fit and launch limitations](research/as-built-simulator-2026-10-15/README.md). Individual study directories retain their original configurations and pinned source revisions.
+For setup and native tests, follow the [simulator README](simulation/README.md). The [browser simulator](https://davidingraham.github.io/assets/microagu-viewer/simulator.html) uses the same external kernel with the as-built 132 mm geometry. See [the latest fit and launch limitations](research/archive/as-built-simulator-2026-10-15/README.md). Individual study directories retain their original configurations and pinned source revisions.
 
 ## Research data and reproducibility
 
-Study directories contain the retained scripts, configurations, final plots, summaries and selected replay excerpts. Raw flight logs, full simulation traces and compiled binaries are not included. Some historical scripts require those external inputs or contain machine-specific paths that must be adjusted. Consult each study's reproduction instructions before running it; the repository is not a single turnkey experiment suite.
+Study directories contain the retained scripts, configurations, final plots, summaries and selected replay excerpts. Raw flight logs, full simulation traces and compiled binaries are not included. Archived scripts require their historical checkout and may need external inputs or machine-specific paths. Consult each study's reproduction instructions before running it; the repository is not a single turnkey experiment suite.
 
-The [flight-data figure index](research/flight-log-analysis/index.html) and its [manifest](research/flight-log-analysis/manifest.json) connect retained figures to their generating scripts. Older experiments remain available as evidence, even when superseded by later designs.
+The [flight-data figure index](research/archive/flight-log-analysis/index.html) and its [manifest](research/archive/flight-log-analysis/manifest.json) connect retained figures to their generating scripts. Older experiments remain available as evidence, even when superseded by later designs.
 
 ### Historical archive
 

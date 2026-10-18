@@ -1,0 +1,13 @@
+{
+  "local_promoted": true,
+  "public_release": false,
+  "preserved_unrelated_snapshot_files": 19,
+  "local_runtime_hashes_verified": true,
+  "public_metadata_unchanged": true,
+  "reason": [
+    "training crosswind regression >20%",
+    "validation score improves less than 5%",
+    "validation crosswind regression >20%",
+    "CRUISE shaft power regression >5%"
+  ]
+}

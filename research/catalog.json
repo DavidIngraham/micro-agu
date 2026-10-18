@@ -1,0 +1,327 @@
+{
+  "schema": 1,
+  "studies": [
+    {
+      "study": "airspeed-sensor-2026-10-16",
+      "status": "completed-unresolved",
+      "path": "research/archive/airspeed-sensor-2026-10-16",
+      "summary": "Mode medians except brake (mean of run means) and pitch (maximum). Late=150\u2013180 s; tracking=20\u2013100 s; power=20\u2013180 s.",
+      "execution_policy": "evidence retained; original execution environment is in the pre-layout tag and local snapshot",
+      "reason": "Completed experiment with conclusions still relevant to sensing or model uncertainty."
+    },
+    {
+      "study": "as-built-simulator-2026-10-15",
+      "status": "reference",
+      "path": "research/archive/as-built-simulator-2026-10-15",
+      "summary": "The external simulator now lives in [simulation](../../simulation/README.md), not inside ArduPilot. The built-in ArduPilot model remains lightweight and articulated; the optional external model provides the full two-body nine degrees of freedom. Native UDP JSON and browser shared-memory JSON use the same C++ physics source.",
+      "execution_policy": "evidence retained; original execution environment is in the pre-layout tag and local snapshot",
+      "reason": "Retained measurements, published figures, model lineage or current-envelope evidence."
+    },
+    {
+      "study": "brake-routing-2026-10-15",
+      "status": "reference",
+      "path": "research/archive/brake-routing-2026-10-15",
+      "summary": "",
+      "execution_policy": "evidence retained; original execution environment is in the pre-layout tag and local snapshot",
+      "reason": "Retained measurements, published figures, model lineage or current-envelope evidence."
+    },
+    {
+      "study": "controller-pipeline-2026-10-18",
+      "status": "active",
+      "path": "research/active/controller-pipeline-2026-10-18",
+      "summary": "**Decision: publish `refit_damped` under the user-requested practical non-regression criterion.** The study did not establish a repeatable overall improvement. Additional checks support broadly comparable performance at the current operating limits.",
+      "execution_policy": "maintained for ongoing fidelity/pipeline work"
+    },
+    {
+      "study": "controller-stability-2026-10-16",
+      "status": "superseded",
+      "path": "research/archive/controller-stability-2026-10-16",
+      "summary": "32 runs, 32 completed without a screening stop.",
+      "execution_policy": "evidence retained; original execution environment is in the pre-layout tag and local snapshot",
+      "reason": "Older controller/design iteration; current selected configuration is aircraft/microagu/current.json.",
+      "successor": "research/active/controller-pipeline-2026-10-18"
+    },
+    {
+      "study": "coupled-brake-2026-10-18",
+      "status": "active",
+      "path": "research/active/coupled-brake-2026-10-18",
+      "summary": "**Neither candidate qualifies for promotion.** The combined candidate produces a stronger Hood River powered turn, but worsens the mean check-window score by 12.0% and fails the vertical-motion and cross-flight gates. The deployed model, browser runtime, and LQI gains are unchanged.",
+      "execution_policy": "maintained for ongoing fidelity/pipeline work"
+    },
+    {
+      "study": "coupled-oscillation-2026-10-18",
+      "status": "active",
+      "path": "research/active/coupled-oscillation-2026-10-18",
+      "summary": "**The 1.5\u20131.7 Hz component is supported by both logged gyro and attitude motion, exists in MANUAL, and has a gyroscopic-looking pitch/yaw relationship. The Rust model already contains a nearby coupled mode.** The current evidence points toward a mismatch in excitation, damping, or operating-point dependence, rather than proving that another degree of freedom is needed. No simulator parameters or controller gains were changed.",
+      "execution_policy": "maintained for ongoing fidelity/pipeline work"
+    },
+    {
+      "study": "filtered-brake-2026-10-16",
+      "status": "superseded",
+      "path": "research/archive/filtered-brake-2026-10-16",
+      "summary": "All power numbers are quasi-steady estimated shaft power, not electrical power.",
+      "execution_policy": "evidence retained; original execution environment is in the pre-layout tag and local snapshot",
+      "reason": "Older controller/design iteration; current selected configuration is aircraft/microagu/current.json.",
+      "successor": "research/active/controller-pipeline-2026-10-18"
+    },
+    {
+      "study": "flare-authority-2026-10-13",
+      "status": "deferred",
+      "path": "research/archive/flare-authority-2026-10-13",
+      "summary": "A faster, slightly later flare gives a modest reduction in forward touchdown speed in the model. More maximum pull alone contributes almost nothing beyond the existing 95% setting. Earlier flare can remove substantially more forward speed, but the aircraft then passes its minimum-sink point and hits the ground descending faster. None of these tests establishes a near-zero-speed, near-zero-sink precision landing.",
+      "execution_policy": "evidence retained; original execution environment is in the pre-layout tag and local snapshot",
+      "reason": "Landing/envelope exploration outside the current flight-identification focus."
+    },
+    {
+      "study": "flight-fidelity-2026-10-18",
+      "status": "active",
+      "path": "research/active/flight-fidelity-2026-10-18",
+      "summary": "18 October 2026. Historical 132 mm geometry; existing Hood River and Trout Lake logs only. The planned 185 mm hardware change remains a separate future configuration. No production physics, observer, controller gains or browser runtime were changed.",
+      "execution_policy": "maintained for ongoing fidelity/pipeline work"
+    },
+    {
+      "study": "flight-log-analysis",
+      "status": "reference",
+      "path": "research/archive/flight-log-analysis",
+      "summary": "",
+      "execution_policy": "evidence retained; original execution environment is in the pre-layout tag and local snapshot",
+      "reason": "Retained measurements, published figures, model lineage or current-envelope evidence."
+    },
+    {
+      "study": "gradient-fit-2026-10-18",
+      "status": "active",
+      "path": "research/active/gradient-fit-2026-10-18",
+      "summary": "Research only. No production physics, controller gains, browser runtime or deployment changed.",
+      "execution_policy": "maintained for ongoing fidelity/pipeline work"
+    },
+    {
+      "study": "greybox-pipeline-2026-10-18",
+      "status": "active",
+      "path": "research/active/greybox-pipeline-2026-10-18",
+      "summary": "The direct-response objective improves local validation dynamics modestly; it does not resolve the missing oscillation response. Bounded wind/initial-state corrections help known-physics synthetic recovery but add little on the real flight. No production physics, firmware, LQI gain or browser deployment changed.",
+      "execution_policy": "maintained for ongoing fidelity/pipeline work"
+    },
+    {
+      "study": "hidden-state-map-2026-10-16",
+      "status": "completed-unresolved",
+      "path": "research/archive/hidden-state-map-2026-10-16",
+      "summary": "| Assumption | Pitch multiplier | Yaw multiplier | Training objective reduction | |---|---:|---:|---:| | nominal | 0.500 | 0.500 | 22.7% | | slow_wind | 0.500 | 0.614 | 18.4% | | loose_model | 0.500 | 0.500 | 23.6% |",
+      "execution_policy": "evidence retained; original execution environment is in the pre-layout tag and local snapshot",
+      "reason": "Completed experiment with conclusions still relevant to sensing or model uncertainty."
+    },
+    {
+      "study": "low-speed-ekf-2026-10-16",
+      "status": "completed-unresolved",
+      "path": "research/archive/low-speed-ekf-2026-10-16",
+      "summary": "Fresh sensorless baseline and adaptive estimator, unchanged zero-trim LQI gains. Sensor reference is the prior campaign, not a fresh paired run.",
+      "execution_policy": "evidence retained; original execution environment is in the pre-layout tag and local snapshot",
+      "reason": "Completed experiment with conclusions still relevant to sensing or model uncertainty."
+    },
+    {
+      "study": "lqi-backport-2026-10-17",
+      "status": "superseded",
+      "path": "research/archive/lqi-backport-2026-10-17",
+      "summary": "AI-assisted. Existing gains, original observer, no pitot or canopy sensing. Rate limits remain \u00b10.5 m/s. Only the climb-reference filter changes from 0 to 0.7 s.",
+      "execution_policy": "evidence retained; original execution environment is in the pre-layout tag and local snapshot",
+      "reason": "Older controller/design iteration; current selected configuration is aircraft/microagu/current.json.",
+      "successor": "research/active/controller-pipeline-2026-10-18",
+      "evidence_archive": "research/archive/lqi-backport-2026-10-17/evidence-manifest.json"
+    },
+    {
+      "study": "lqi-balanced-2026-10-17",
+      "status": "superseded",
+      "path": "research/archive/lqi-balanced-2026-10-17",
+      "summary": "AI-assisted. Selection used only the three training physics cases. Eight fresh cases were used afterward for command/gust validation, and the same new physics seeds with new weather were used for four AUTO and four CRUISE mission checks per configuration.",
+      "execution_policy": "evidence retained; original execution environment is in the pre-layout tag and local snapshot",
+      "reason": "Older controller/design iteration; current selected configuration is aircraft/microagu/current.json.",
+      "successor": "research/active/controller-pipeline-2026-10-18",
+      "evidence_archive": "research/archive/lqi-balanced-2026-10-17/evidence-manifest.json"
+    },
+    {
+      "study": "lqi-feasible-turns-2026-10-17",
+      "status": "reference",
+      "path": "research/archive/lqi-feasible-turns-2026-10-17",
+      "summary": "AI-assisted. All candidates retain the exact published K and L gains. Power is modeled shaft power, not battery energy. Absolute turbulent motion screens are retained even where baseline fails.",
+      "execution_policy": "evidence retained; original execution environment is in the pre-layout tag and local snapshot",
+      "reason": "Retained measurements, published figures, model lineage or current-envelope evidence.",
+      "evidence_archive": "research/archive/lqi-feasible-turns-2026-10-17/evidence-manifest.json"
+    },
+    {
+      "study": "lqi-filter-retune-2026-10-17",
+      "status": "superseded",
+      "path": "research/archive/lqi-filter-retune-2026-10-17",
+      "summary": "AI-assisted. Original observer and sensing, existing trim and reference limits. All gain selection precedes fresh validation.",
+      "execution_policy": "evidence retained; original execution environment is in the pre-layout tag and local snapshot",
+      "reason": "Older controller/design iteration; current selected configuration is aircraft/microagu/current.json.",
+      "successor": "research/active/controller-pipeline-2026-10-18",
+      "evidence_archive": "research/archive/lqi-filter-retune-2026-10-17/evidence-manifest.json"
+    },
+    {
+      "study": "lqi-longitudinal-2026-10-17",
+      "status": "reference",
+      "path": "research/archive/lqi-longitudinal-2026-10-17",
+      "summary": "Packaged ArduPlane firmware, EKF airspeed and onboard canopy observer; as-built 132 mm geometry. AI-assisted simulation research.",
+      "execution_policy": "evidence retained; original execution environment is in the pre-layout tag and local snapshot",
+      "reason": "Retained measurements, published figures, model lineage or current-envelope evidence."
+    },
+    {
+      "study": "lqi-transitions-2026-10-17",
+      "status": "superseded",
+      "path": "research/archive/lqi-transitions-2026-10-17",
+      "summary": "Selected on training: **smooth07**. `fixed` is the previous responsive LQI, not the older fixed-gain baseline.",
+      "execution_policy": "evidence retained; original execution environment is in the pre-layout tag and local snapshot",
+      "reason": "Older controller/design iteration; current selected configuration is aircraft/microagu/current.json.",
+      "successor": "research/active/controller-pipeline-2026-10-18",
+      "evidence_archive": "research/archive/lqi-transitions-2026-10-17/evidence-manifest.json"
+    },
+    {
+      "study": "lqi-turn-envelope-2026-10-17",
+      "status": "superseded",
+      "path": "research/archive/lqi-turn-envelope-2026-10-17",
+      "summary": "The fixed published LQI gains were tested through a 25 deg/s command. The 25 deg/s tracking gate failed, so the conditional extension above 25 was not run. Public firmware remains unchanged.",
+      "execution_policy": "evidence retained; original execution environment is in the pre-layout tag and local snapshot",
+      "reason": "Older controller/design iteration; current selected configuration is aircraft/microagu/current.json.",
+      "successor": "research/active/controller-pipeline-2026-10-18",
+      "evidence_archive": "research/archive/lqi-turn-envelope-2026-10-17/evidence-manifest.json"
+    },
+    {
+      "study": "manual-coupling-fit-2026-10-18",
+      "status": "active",
+      "path": "research/active/manual-coupling-fit-2026-10-18",
+      "summary": "This study targets local body-rate response, oscillation amplitude, and pitch/yaw phase. **Accumulated course and earth-frame velocity drift are not acceptance criteria.** Two bounded training searches were completed. First-stage gates pass: **False**. Constrained-stage gates pass: **False**. No production model or LQI gains were changed by these scripts.",
+      "execution_policy": "maintained for ongoing fidelity/pipeline work"
+    },
+    {
+      "study": "native-mimo-2026-10-16",
+      "status": "superseded",
+      "path": "research/archive/native-mimo-2026-10-16",
+      "summary": "AI-assisted implementation and tests. These runs use the packaged ArduPlane WASM, its normal EKF3, and the external Rust `as_built` full-DOF model. They are simulation integration evidence, not flight validation or a claim of LQI superiority.",
+      "execution_policy": "evidence retained; original execution environment is in the pre-layout tag and local snapshot",
+      "reason": "Older controller/design iteration; current selected configuration is aircraft/microagu/current.json.",
+      "successor": "research/active/controller-pipeline-2026-10-18"
+    },
+    {
+      "study": "proprioception-2026-10-17",
+      "status": "completed-unresolved",
+      "path": "research/archive/proprioception-2026-10-17",
+      "summary": "Percentages are median **paired** changes, not ratios of group medians. Ranges are observed P10\u2013P90 across the fixed scenario suite, not confidence intervals.",
+      "execution_policy": "evidence retained; original execution environment is in the pre-layout tag and local snapshot",
+      "reason": "Completed experiment with conclusions still relevant to sensing or model uncertainty.",
+      "evidence_archive": "research/archive/proprioception-2026-10-17/evidence-manifest.json"
+    },
+    {
+      "study": "rigging-refinement-2026-10-15",
+      "status": "reference",
+      "path": "research/archive/rigging-refinement-2026-10-15",
+      "summary": "See [the article](../../docs/rigging-refinement.md) and [protocol](PLAN.md). This is exploratory system identification and hardware sensitivity analysis, not independent validation or flight firmware release.",
+      "execution_policy": "evidence retained; original execution environment is in the pre-layout tag and local snapshot",
+      "reason": "Retained measurements, published figures, model lineage or current-envelope evidence."
+    },
+    {
+      "study": "scheduled-state-feedback-2026-10-15",
+      "status": "superseded",
+      "path": "research/archive/scheduled-state-feedback-2026-10-15",
+      "summary": "AI-assisted controller research and numerical experiments. No firmware, production settings, or hardware are changed. The published narrative is in [the controller article](../../docs/controller-state-space.md). The [original fixed-gain LQI experiment](../state-space-2026-10-14/README.md) remains archived; its tables must not be combined with this comparison.",
+      "execution_policy": "evidence retained; original execution environment is in the pre-layout tag and local snapshot",
+      "reason": "Older controller/design iteration; current selected configuration is aircraft/microagu/current.json.",
+      "successor": "research/active/controller-pipeline-2026-10-18",
+      "evidence_archive": "research/archive/scheduled-state-feedback-2026-10-15/evidence-manifest.json"
+    },
+    {
+      "study": "sitl-studies",
+      "status": "reference",
+      "path": "research/archive/sitl-studies",
+      "summary": "These are experiment drivers and historical records, separate from the reusable [simulator](../../simulation/README.md). They originated in the ArduPilot external model directory; [the migration manifest](../../provenance/simulator-migration.json) preserves original hashes. Files moved with Git retain their history.",
+      "execution_policy": "evidence retained; original execution environment is in the pre-layout tag and local snapshot",
+      "reason": "Retained measurements, published figures, model lineage or current-envelope evidence."
+    },
+    {
+      "study": "spiral-authority-2026-10-13",
+      "status": "deferred",
+      "path": "research/archive/spiral-authority-2026-10-13",
+      "summary": "The retained simulator does not enter an accelerating deep spiral at its configured brake limits. More pull increases sink and produces a moderate bank, but the speed increase remains small. This holds in both turn directions, both retained model profiles, and all tested entry/release ramps. This is evidence about the current model, not a demonstrated limit of the real canopy.",
+      "execution_policy": "evidence retained; original execution environment is in the pre-layout tag and local snapshot",
+      "reason": "Landing/envelope exploration outside the current flight-identification focus."
+    },
+    {
+      "study": "spiral-swoop-2026-10-13",
+      "status": "deferred",
+      "path": "research/archive/spiral-swoop-2026-10-13",
+      "summary": "Native AUTO now demonstrates a sustained descending orbit, tangent exit and scheduled brake flare. The final calm run turns about 826 degrees before LAND and reaches the ground plane 2.15 m from the target. A matched gentle-gust run turns 832 degrees and misses by 1.96 m. This is a spiral landing demonstration, not yet a settled, high-energy swoop.",
+      "execution_policy": "evidence retained; original execution environment is in the pre-layout tag and local snapshot",
+      "reason": "Landing/envelope exploration outside the current flight-identification focus."
+    },
+    {
+      "study": "state-space-2026-10-14",
+      "status": "superseded",
+      "path": "research/archive/state-space-2026-10-14",
+      "summary": "Read [the article](../../docs/controller-state-space.md). No production controller defaults or firmware sources are changed by this study.",
+      "execution_policy": "evidence retained; original execution environment is in the pre-layout tag and local snapshot",
+      "reason": "Older controller/design iteration; current selected configuration is aircraft/microagu/current.json.",
+      "successor": "research/active/controller-pipeline-2026-10-18"
+    },
+    {
+      "study": "swoop-2026-10-13",
+      "status": "deferred",
+      "path": "research/archive/swoop-2026-10-13",
+      "summary": "Objective: demonstrate a 90-degree turning descent, rollout and flare in native SITL with soft and dramatic settings. Touchdown aspirations are 5 m miss, 1 m/s horizontal and 0.5 m/s downward speed. Report the best feasible result if these are incompatible with the present model.",
+      "execution_policy": "evidence retained; original execution environment is in the pre-layout tag and local snapshot",
+      "reason": "Landing/envelope exploration outside the current flight-identification focus."
+    },
+    {
+      "study": "tension-stiffness-2026-10-15",
+      "status": "reference",
+      "path": "research/archive/tension-stiffness-2026-10-15",
+      "summary": "We tested the hypothesis that a fixed suspension spring misses load-dependent restoring torque, causing the model's roll and yaw discrepancies. Scaling the geometric part of that spring with the solved tensile load produced small, mixed changes. It did not improve roll and yaw agreement together and did not meet the criterion in [the frozen plan](PLAN.md). This result concerns a scalar load-dependent spring, not the full mechanics of individual suspension lines.",
+      "execution_policy": "evidence retained; original execution environment is in the pre-layout tag and local snapshot",
+      "reason": "Retained measurements, published figures, model lineage or current-envelope evidence."
+    },
+    {
+      "study": "trout-lake-dynamics-2026-10-18",
+      "status": "active",
+      "path": "research/active/trout-lake-dynamics-2026-10-18",
+      "summary": "**The candidate modestly improves local prediction, but does not yet demonstrate uniformly better control-relevant fidelity.** The decision is to retain it as a research candidate, with no production promotion or LQI retuning. This decision does **not** use accumulated course or earth-frame horizontal velocity error.",
+      "execution_policy": "maintained for ongoing fidelity/pipeline work"
+    },
+    {
+      "study": "trout-lake-fidelity-2026-10-18",
+      "status": "active",
+      "path": "research/active/trout-lake-fidelity-2026-10-18",
+      "summary": "The primary candidate selected using training data alone is **physics**. Its frozen 30-second Trout Lake validation gates **pass**. **It remains provisional because continuous 90-second replays expose a regression.** No production preset, browser runtime, or controller gain was changed by this study.",
+      "execution_policy": "maintained for ongoing fidelity/pipeline work"
+    },
+    {
+      "study": "viewer-studies",
+      "status": "reference",
+      "path": "research/archive/viewer-studies",
+      "summary": "Scenario generators, native truth capture, synthetic gust experiments and analysis live here. These are offline producers of recordings, not dependencies of the web viewer or reusable Rust simulation core.",
+      "execution_policy": "evidence retained; original execution environment is in the pre-layout tag and local snapshot",
+      "reason": "Retained measurements, published figures, model lineage or current-envelope evidence."
+    },
+    {
+      "study": "wind-calibration-2026-10-16",
+      "status": "completed-unresolved",
+      "path": "research/archive/wind-calibration-2026-10-16",
+      "summary": "AI-assisted research, 16 October 2026. No runtime model, controller gain, or deployment changed.",
+      "execution_policy": "evidence retained; original execution environment is in the pre-layout tag and local snapshot",
+      "reason": "Completed experiment with conclusions still relevant to sensing or model uncertainty."
+    },
+    {
+      "study": "wind-smoother-2026-10-16",
+      "status": "completed-unresolved",
+      "path": "research/archive/wind-smoother-2026-10-16",
+      "summary": "AI-assisted research implementation. No simulator parameters, controller gains, or deployment changed.",
+      "execution_policy": "evidence retained; original execution environment is in the pre-layout tag and local snapshot",
+      "reason": "Completed experiment with conclusions still relevant to sensing or model uncertainty."
+    },
+    {
+      "study": "zero-brake-2026-10-16",
+      "status": "superseded",
+      "path": "research/archive/zero-brake-2026-10-16",
+      "summary": "AI-assisted implementation and analysis. The physical common-brake trim is exactly zero; differential steering still pulls one brake. The existing allocator clips common demand to [0, authority] and reports applied commands to both observer and coupled integral anti-windup. Negative requests are retained as allocation residuals, not silently clipped before anti-windup. There is no new negative actuator authority.",
+      "execution_policy": "evidence retained; original execution environment is in the pre-layout tag and local snapshot",
+      "reason": "Older controller/design iteration; current selected configuration is aircraft/microagu/current.json.",
+      "successor": "research/active/controller-pipeline-2026-10-18"
+    }
+  ]
+}

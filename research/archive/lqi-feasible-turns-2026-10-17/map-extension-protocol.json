@@ -1,0 +1,36 @@
+{
+  "rates": [
+    10,
+    15,
+    20,
+    30,
+    35,
+    40
+  ],
+  "parameters": {
+    "CP3_AWMODE": 1,
+    "CP3_TMAP": 1,
+    "CP3_OBSTRIM": 1
+  },
+  "cases": [
+    {
+      "id": 0,
+      "sign": 1,
+      "scales": {},
+      "brakeRateScale": 1,
+      "wind": 0,
+      "turbulence": 0,
+      "seed": 1375099246
+    },
+    {
+      "id": 1,
+      "sign": -1,
+      "scales": {},
+      "brakeRateScale": 1,
+      "wind": 0,
+      "turbulence": 0,
+      "seed": 1227417296
+    }
+  ],
+  "stop": "First original gate failure. Table currently supports up to 40 deg/s; no extrapolation. No feedback/observer gain scheduling."
+}

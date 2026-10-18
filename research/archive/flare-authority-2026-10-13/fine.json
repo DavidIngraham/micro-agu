@@ -1,0 +1,34 @@
+[
+  {
+    "name": "fine-glide-current",
+    "entry": "glide",
+    "height": 1.1,
+    "pull": 95,
+    "rate": 100,
+    "dt": 0.005
+  },
+  {
+    "name": "fine-glide-faster",
+    "entry": "glide",
+    "height": 1,
+    "pull": 95,
+    "rate": 150,
+    "dt": 0.005
+  },
+  {
+    "name": "fine-release-current",
+    "entry": "release",
+    "height": 1.1,
+    "pull": 95,
+    "rate": 100,
+    "dt": 0.005
+  },
+  {
+    "name": "fine-release-faster",
+    "entry": "release",
+    "height": 1,
+    "pull": 95,
+    "rate": 150,
+    "dt": 0.005
+  }
+]

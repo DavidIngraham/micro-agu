@@ -1,0 +1,98 @@
+[
+  {
+    "name": "check-glide-current",
+    "entry": "glide",
+    "height": 1.1,
+    "pull": 95,
+    "rate": 100,
+    "dt": 0.01,
+    "contact": true,
+    "initial_airspeed": 4.545140151765391,
+    "initial_bank": 1.0754028588139368,
+    "duration": 1.002552700290729,
+    "rise_above_trigger": 0.0,
+    "peak_upward_speed": 0.0,
+    "max_payload_pitch": 17.762270150092647,
+    "horizontal": 3.0193401566727265,
+    "sink": 0.8683922806940304,
+    "travel_north": 3.9556575489760983,
+    "travel_east": 0.13287121033530755,
+    "brakes_mm": [
+      59.27574472085741,
+      71.9948316447661
+    ],
+    "touchdown_pitch": 17.762270150092647
+  },
+  {
+    "name": "check-glide-faster",
+    "entry": "glide",
+    "height": 1,
+    "pull": 95,
+    "rate": 150,
+    "dt": 0.01,
+    "contact": true,
+    "initial_airspeed": 4.545140151765391,
+    "initial_bank": 1.0754028588139368,
+    "duration": 0.9434781666407678,
+    "rise_above_trigger": 0.0,
+    "peak_upward_speed": 0.0,
+    "max_payload_pitch": 20.57790685400647,
+    "horizontal": 2.7534524443894584,
+    "sink": 0.8532690390339204,
+    "travel_north": 3.623707849615908,
+    "travel_east": 0.11287802989024856,
+    "brakes_mm": [
+      59.27574472085741,
+      71.9948316447661
+    ],
+    "touchdown_pitch": 17.88134189132103
+  },
+  {
+    "name": "check-release-current",
+    "entry": "release",
+    "height": 1.1,
+    "pull": 95,
+    "rate": 100,
+    "dt": 0.01,
+    "contact": true,
+    "initial_airspeed": 5.416259539412714,
+    "initial_bank": 16.772332068977367,
+    "duration": 1.1604726636982632,
+    "rise_above_trigger": 0.0,
+    "peak_upward_speed": 0.0,
+    "max_payload_pitch": 23.854653151070146,
+    "horizontal": 2.5137790401078965,
+    "sink": 0.7751696399238007,
+    "travel_north": 4.780528298568613,
+    "travel_east": 0.8731255534464378,
+    "brakes_mm": [
+      59.27574472085741,
+      71.9948316447661
+    ],
+    "touchdown_pitch": 20.507969134973408
+  },
+  {
+    "name": "check-release-faster",
+    "entry": "release",
+    "height": 1,
+    "pull": 95,
+    "rate": 150,
+    "dt": 0.01,
+    "contact": true,
+    "initial_airspeed": 5.416259539412714,
+    "initial_bank": 16.772332068977367,
+    "duration": 1.0647764063620815,
+    "rise_above_trigger": 0.0,
+    "peak_upward_speed": 0.0,
+    "max_payload_pitch": 26.715271211711404,
+    "horizontal": 2.4083585412960566,
+    "sink": 0.7607391813841262,
+    "travel_north": 4.325348240298087,
+    "travel_east": 0.7624064608690908,
+    "brakes_mm": [
+      59.27574472085741,
+      71.9948316447661
+    ],
+    "touchdown_pitch": 20.150903515153093
+  }
+]

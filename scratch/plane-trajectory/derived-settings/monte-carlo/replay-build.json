@@ -1,7 +1,0 @@
-{
-  "normal_binary_sha256": "9dc9ee0e97934b7df9994dbc32e2b1deffb0abcb2a8fc110d86df62daf17d9e1",
-  "replay_binary_sha256": "07c80ea8874bce7a8681c2db3ba66519a9bbebfb26a973545a38e4c050080502",
-  "original_sim_source_sha256": "16afd3b7093254f319d84bb867df207e33b57394f857df9c285ff4999022ff62",
-  "replay_sim_source_sha256": "9c6ded9d95a36571a133b9bb30fa11b4a098ed01c5af8f02d555e92872207d7d",
-  "weather_replay_header_sha256": "f84f41bdd8be91cdce18c65193714c24e05d94e299aadf0907c52285048478fe"
-}

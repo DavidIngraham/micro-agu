@@ -1,0 +1,22 @@
+{
+  "projected_singular_values": [
+    9.148941636675376,
+    2.7852321341219914
+  ],
+  "conditional_log_damping_std": [
+    0.3544861216673434,
+    0.12326306308147787
+  ],
+  "correlation": -0.43974545190565345,
+  "projection_diagnostics": [
+    {
+      "stop": 2,
+      "iterations": 510
+    },
+    {
+      "stop": 2,
+      "iterations": 509
+    }
+  ],
+  "caveat": "Local conditional curvature only; ignores navigation correlation and model bias, not calibrated uncertainty."
+}

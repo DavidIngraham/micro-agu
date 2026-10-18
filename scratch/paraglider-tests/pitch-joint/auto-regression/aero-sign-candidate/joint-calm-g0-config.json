@@ -1,8 +1,0 @@
-{
-  "name": "joint-calm-g0",
-  "joint": true,
-  "gain": 0,
-  "wind": 0,
-  "turbulence": 0,
-  "aero_convention": "corrected x-forward z-down incidence and angle of attack"
-}

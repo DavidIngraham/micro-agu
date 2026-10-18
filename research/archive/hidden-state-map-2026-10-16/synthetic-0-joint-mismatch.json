@@ -1,0 +1,15 @@
+{
+  "cost": 2.4133035782077963,
+  "success": true,
+  "status": 2,
+  "message": "`ftol` termination condition is satisfied.",
+  "nfev": 10,
+  "optimality": 0.015643355073410473,
+  "elapsed_s": 10.411118197022006,
+  "damping": [
+    2.180479850835599,
+    4.133960374266835
+  ],
+  "active_bounds": 0,
+  "residual_rms": 0.10597977995653993
+}

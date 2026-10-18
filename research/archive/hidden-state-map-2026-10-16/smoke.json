@@ -1,0 +1,15 @@
+{
+  "cost": 115.47431155129645,
+  "success": false,
+  "status": 0,
+  "message": "The maximum number of function evaluations is exceeded.",
+  "nfev": 3,
+  "optimality": 122.54190799619057,
+  "elapsed_s": 0.5876012920052744,
+  "damping": [
+    3.0,
+    3.0
+  ],
+  "active_bounds": 0,
+  "residual_rms": 3.1165855978656594
+}

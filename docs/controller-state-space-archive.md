@@ -2,7 +2,7 @@
 
 # What state-space analysis added to Micro-AGU’s controller design
 
-*Micro-AGU · 14 October 2026 · Updated 15 October 2026 · [Controller design](controller-design.md) · [Data and methods](data-and-methods.md) · [Study files](../research/state-space-2026-10-14/README.md)*
+*Micro-AGU · 14 October 2026 · Updated 15 October 2026 · [Controller design](controller-design.md) · [Data and methods](data-and-methods.md) · [Study files](../research/archive/state-space-2026-10-14/README.md)*
 
 Micro-AGU uses throttle to control altitude and damp pitch, and differential brake to steer and damp roll. Its canopy and suspended payload can move relative to one another, so an actuator command intended to correct one motion can also excite another. This study asks whether accounting for those interactions can reduce unwanted motion while preserving command tracking and gust rejection.
 
@@ -130,7 +130,7 @@ E_d&=\int_0^{\Delta t}e^{A_c\tau}E_c\,d\tau.
 \end{aligned}
 $$
 
-This study instead differentiates the integrated simulator directly. It uses $\epsilon=10^{-5}$ in each coordinate's units and repeats the calculation with $\epsilon/2$ to check sensitivity to the finite-difference step. The implementation is in `Chart`, `observations` and `prepare` in [study.py](../research/state-space-2026-10-14/study.py); the numerical and nonlinear checks follow below.
+This study instead differentiates the integrated simulator directly. It uses $\epsilon=10^{-5}$ in each coordinate's units and repeats the calculation with $\epsilon/2$ to check sensitivity to the finite-difference step. The implementation is in `Chart`, `observations` and `prepare` in [study.py](../research/archive/state-space-2026-10-14/study.py); the numerical and nonlinear checks follow below.
 
 ## Establishing the baseline and checking the local model
 
@@ -175,7 +175,7 @@ There is an important qualification to that score. The step criterion deliberate
 
 The aggregate score does not say where an improvement occurs. To interpret the candidate, we compared baseline and candidate frequency responses on the same nominal level-flight plant. We examined altitude and heading commands, vertical wind, and additive actuator disturbances. The question was whether the lower score represented reduced unwanted amplification, slower command response, or a mixture of both.
 
-![Command responses, vertical-wind response and coupled actuator sensitivity](../research/state-space-2026-10-14/frequency.png)
+![Command responses, vertical-wind response and coupled actuator sensitivity](../research/archive/state-space-2026-10-14/frequency.png)
 
 *Baseline versus the retuned candidate on the same nominal level-flight plant, sampled at 50 Hz. Controller structure is unchanged; gains and filter cutoffs differ. The plotted wind response is a small-signal gain, not a prediction that a finite 1 m/s high-frequency gust would remain linear.*
 
@@ -205,7 +205,7 @@ These are local modal couplings, not measurements of usable authority under satu
 
 The four-second controllability Gramian adds a related warning: its least reachable normalized state direction combines canopy roll rate, relative yaw and side velocity. Those motions cannot be treated as independent knobs that a full-state controller can adjust cheaply. This is a finite-horizon input-effort result, not a declaration that those states are uncontrollable.
 
-![Finite-horizon measurement information and actuator coupling by mode](../research/state-space-2026-10-14/state-diagnostics.png)
+![Finite-horizon measurement information and actuator coupling by mode](../research/archive/state-space-2026-10-14/state-diagnostics.png)
 
 *Left: four-second observability Gramians, using declared measurement scales. The gyro-only altitude eigenvalue is zero and is shown at the plot floor. Right: normalized input coupling to each oscillatory mode. Connecting lines guide the eye; there are no additional measured modes between the points.*
 
@@ -231,7 +231,7 @@ That number is not tenfold mechanical energy growth. It measures the conversion 
 
 The next hypothesis was that a state-feedback controller could coordinate throttle and brake more effectively if it knew the aircraft's internal motion. A useful comparison also needs the practical features around the existing feedback loops: battery compensation, speed-dependent steering authority, maneuver feedforward, reference shaping and actuator handling. Otherwise an apparent benefit or failure could come from removing those features.
 
-We therefore built a **scheduled LQI controller**, replacing the earlier fixed-gain benchmark in this article. The [earlier experiment remains in the research record](../research/state-space-2026-10-14/README.md#state-benchmark-and-measurement-diagnostics). The new controller still uses linear-quadratic integral feedback, but its gains and equilibrium references change with operating condition. The experiment changes feedback and feedforward together; it does not isolate the value of additional state information alone.
+We therefore built a **scheduled LQI controller**, replacing the earlier fixed-gain benchmark in this article. The [earlier experiment remains in the research record](../research/archive/state-space-2026-10-14/README.md#state-benchmark-and-measurement-diagnostics). The new controller still uses linear-quadratic integral feedback, but its gains and equilibrium references change with operating condition. The experiment changes feedback and feedforward together; it does not isolate the value of additional state information alone.
 
 ### What the new controller changes, and what the comparison shares
 
@@ -289,7 +289,7 @@ For disturbance rejection, we removed the maneuver and applied the same held-out
 
 The scheduled controller reduces height RMS by about 15%, but increases pitch-rate RMS by about 27% and uses more throttle activity. None reaches the throttle ceiling in this nominal gust case. Better altitude regulation therefore still does not mean a quieter payload.
 
-![New matched maneuver, gust and changing-voltage comparison](../research/scheduled-state-feedback-2026-10-15/matched.png)
+![New matched maneuver, gust and changing-voltage comparison](../research/archive/scheduled-state-feedback-2026-10-15/matched.png)
 
 *All curves use the new shared reference and actuator harness. Left: commanded maneuver. Centre: identical nominal gusts. Right: gusts while voltage falls. Height error is relative to the shaped request; the dashed throttle line is the voltage-dependent ceiling.*
 
@@ -305,7 +305,7 @@ For changing speed, we requested sustained climb followed by descent and an over
 
 Finally, we checked behavior after demands exceeded the reference envelope: a 10 m altitude request and a 25°/s turn request, followed by return to level hold. The shared shaper limited what reached the controllers, and gusts ended at 50 seconds to allow a calm recovery check. Scheduled LQI reached the throttle ceiling for 0.75% of the 5–80 s window and returned to **0.010 m** height RMS in the final ten seconds, compared with **0.368 m** for baseline. Its heading error over the full maneuver was slightly worse. This is a bounded recovery test, not proof of arbitrary saturation recovery or safe flight at these demands.
 
-![Changing flight condition and recovery after limited requests](../research/scheduled-state-feedback-2026-10-15/transitions.png)
+![Changing flight condition and recovery after limited requests](../research/archive/scheduled-state-feedback-2026-10-15/transitions.png)
 
 *The dashed line is the shared shaped height reference. The speed changes arise from the climb, descent, turning and wind dynamics; there is no independent airspeed command.*
 
@@ -326,11 +326,11 @@ All three controllers receive the same observer outputs and estimated airspeed i
 
 Some height-tracking benefit remains, but the clean maneuver result does not: heading error and pitch motion worsen substantially. During the voltage ramp, scheduled LQI loses even its height advantage. The replacement therefore needs observer/controller co-design before its perfect-state improvements can justify a flight implementation.
 
-![Comparison using the shared model-based observer](../research/scheduled-state-feedback-2026-10-15/observer.png)
+![Comparison using the shared model-based observer](../research/archive/scheduled-state-feedback-2026-10-15/observer.png)
 
 *Four scenarios repeated for all three controller families with the same noise realizations and sensor update schedule. Conventional curves also use this research observer, not the native autopilot estimator.*
 
-The extension retains **40 nonlinear runs**: 24 with exact states, 12 with the observer and four compensation ablations. All produced finite trajectories within the enforced throttle limits. That execution check is separate from performance: several comparisons are worse, and the scheduled controller has not been installed in firmware or tested on the native AUTO mission. The [new reproduction guide](../research/scheduled-state-feedback-2026-10-15/README.md) records the controller, shared-harness changes, selection criteria, sensor assumptions and all results.
+The extension retains **40 nonlinear runs**: 24 with exact states, 12 with the observer and four compensation ablations. All produced finite trajectories within the enforced throttle limits. That execution check is separate from performance: several comparisons are worse, and the scheduled controller has not been installed in firmware or tested on the native AUTO mission. The [new reproduction guide](../research/archive/scheduled-state-feedback-2026-10-15/README.md) records the controller, shared-harness changes, selection criteria, sensor assumptions and all results.
 
 ## Second iteration: improving estimation and damping before giving up direct feedback
 
@@ -340,7 +340,7 @@ The acceptance criteria were fixed before this development search: height-error 
 
 ### Which estimation errors were actually moving the throttle?
 
-Our first hypothesis was that feedback from uncertain canopy motion caused the regressions. Nine variants reduced those feedback terms and varied additional pitch damping. None met every development criterion. Fifteen further variants added a bounded, filtered state-feedback correction around the existing conventional loops. These reduced the regressions, but still missed the maneuver pitch limit and surrendered much of the direct controller's tracking benefit. The [research record](../research/scheduled-state-feedback-2026-10-15/README.md#second-iteration-bounded-state-feedback-correction) preserves that unsuccessful branch.
+Our first hypothesis was that feedback from uncertain canopy motion caused the regressions. Nine variants reduced those feedback terms and varied additional pitch damping. None met every development criterion. Fifteen further variants added a bounded, filtered state-feedback correction around the existing conventional loops. These reduced the regressions, but still missed the maneuver pitch limit and surrendered much of the direct controller's tracking benefit. The [research record](../research/archive/scheduled-state-feedback-2026-10-15/README.md#second-iteration-bounded-state-feedback-correction) preserves that unsuccessful branch.
 
 We then measured each state's estimation error and its contribution through the feedback gain to throttle-command error. **Vertical velocity was the largest contributor**, ahead of height and canopy-relative pitch. Attenuating only hidden canopy states had targeted the wrong dominant term. Changing process-noise weights alone also failed to meet all criteria.
 
@@ -373,13 +373,13 @@ The table shows baseline → refined direct feedback using the observer. Height 
 
 **Pitch motion decreased in all sixteen scenario/sensing combinations.** With estimated states, falling-voltage height RMS improved by 13.4%, recovering the benefit that disappeared in the first observer experiment. Strong-gust and limited-demand recovery performance improved in all three reported measures. These results show that the original shortcomings were actionable; retreating to a nearly conventional controller was premature.
 
-![Fresh validation of refined direct state feedback](../research/scheduled-state-feedback-2026-10-15/iteration2/final-validation.png)
+![Fresh validation of refined direct state feedback](../research/archive/scheduled-state-feedback-2026-10-15/iteration2/final-validation.png)
 
 *Top: exact states. Bottom: the shared accelerometer-equipped observer. These are fresh validation realizations, so compare controllers within this figure rather than against earlier plots.*
 
 However, **only seven of sixteen comparisons met every acceptance limit**. Ordinary-gust heading-rate error increased by about 26% with the observer, and the changed maneuver's height error increased by about 17%. The climb/descent transition also lost height accuracy with both exact and estimated states. Those exact-state regressions show that remaining work includes feedback objectives and reference tracking, not just estimation.
 
-The next hypotheses are therefore specific: can disturbance-aware steering tuning reduce the gust heading penalty, and can climb/height reference tracking be improved without restoring excess pitch motion? Testing those hypotheses requires a new development set and another untouched validation set. The present results justify further controller work, but not replacing flight defaults. Accelerometer bias, correlated attitude errors, transport delays and native AUTO integration are still untested. The [full refinement record](../research/scheduled-state-feedback-2026-10-15/README.md#direct-feedback-refinement-with-accelerometer-estimation) includes the rejected searches, frozen selection and all validation results.
+The next hypotheses are therefore specific: can disturbance-aware steering tuning reduce the gust heading penalty, and can climb/height reference tracking be improved without restoring excess pitch motion? Testing those hypotheses requires a new development set and another untouched validation set. The present results justify further controller work, but not replacing flight defaults. Accelerometer bias, correlated attitude errors, transport delays and native AUTO integration are still untested. The [full refinement record](../research/archive/scheduled-state-feedback-2026-10-15/README.md#direct-feedback-refinement-with-accelerometer-estimation) includes the rejected searches, frozen selection and all validation results.
 
 ### Explore the improvements and remaining tradeoffs
 
@@ -399,7 +399,7 @@ For each conventional tune, we evaluated **648 combinations**: six plants, indep
 
 Both tunes remained locally stable in every combination. The worst dominant-pole real part was **−0.0397 s⁻¹** for baseline and **−0.0431 s⁻¹** for the candidate. Thus the candidate’s lower nominal sensitivity peak is accompanied by acceptable behavior in this particular combined-uncertainty screen. It does not demonstrate a dramatic improvement in worst-case recovery.
 
-![Worst closed-loop pole across combined uncertainty cases](../research/state-space-2026-10-14/robustness.png)
+![Worst closed-loop pole across combined uncertainty cases](../research/archive/state-space-2026-10-14/robustness.png)
 
 *Negative values mean local perturbations decay. Each bar is the worst combination for that operating plant. Full-state LQI is not included in this grid.*
 
@@ -422,7 +422,7 @@ The settled-loiter measurements show a familiar tradeoff:
 | Maximum waypoint height error | 1.51 m | 2.00 m |
 | Maximum corner overshoot | 2.29 m | 1.41 m |
 
-![Native settled-loiter comparison in gusts](../research/state-space-2026-10-14/native.png)
+![Native settled-loiter comparison in gusts](../research/archive/state-space-2026-10-14/native.png)
 
 *Settled loiter windows start 20 seconds after entering a 60 m radius around the loiter centre. The route and assertions are unchanged.*
 
@@ -430,7 +430,7 @@ The runs share the same gust generator, but different route timing means their l
 
 In calm air, maximum waypoint height error changes little, **1.677 → 1.662 m**, while maximum corner overshoot increases slightly, **0.379 → 0.412 m**. Settled height RMS also increases slightly in both loiters: **0.037 → 0.041 m** and **0.046 → 0.051 m**. The candidate preserves the passing calm mission, but does not offer a general improvement in its accuracy.
 
-The native runs use the existing executable, whose embedded version is `51c8e130`; the current analysis checkout is `c44434dee6`. Those identities are recorded separately with the binary hash. The intervening controller-source changes inspected here concern flare allocation and landing suppression, outside these missions. The [build audit and reproduction notes](../research/state-space-2026-10-14/README.md) preserve that distinction rather than treating the checkout hash as proof of the executable's exact source tree.
+The native runs use the existing executable, whose embedded version is `51c8e130`; the current analysis checkout is `c44434dee6`. Those identities are recorded separately with the binary hash. The intervening controller-source changes inspected here concern flare allocation and landing suppression, outside these missions. The [build audit and reproduction notes](../research/archive/state-space-2026-10-14/README.md) preserve that distinction rather than treating the checkout hash as proof of the executable's exact source tree.
 
 The candidate therefore remains an experimental alternative. Lower settled height error and a smaller worst corner came with greater pitch-rate motion, more throttle activity, and a larger maximum waypoint height error in these gusty runs. A passing mission does not settle which tradeoff is preferable.
 
@@ -451,4 +451,4 @@ Joint retuning found a useful but mixed tradeoff. The initial scheduled controll
 
 For Micro-AGU, I would keep the current defaults, retain the conventional candidate for further comparisons, and use the state analysis to focus the next experiments. The highest-value follow-up is to identify the coupled dynamics and delays that matter around the response peaks, then refine the tuning objective around the motion we actually want to reduce. The scheduled-controller results make estimation quality and disturbance weighting concrete next targets. Compensation and feedforward belong in the comparison, but including them does not establish that state feedback is ready to replace the existing controller.
 
-The [reproduction guide](../research/state-space-2026-10-14/README.md) contains the exact configurations, normalization, search bounds, retained matrices, numerical results and scripts. Development and analysis were assisted by Codex.
+The [reproduction guide](../research/archive/state-space-2026-10-14/README.md) contains the exact configurations, normalization, search bounds, retained matrices, numerical results and scripts. Development and analysis were assisted by Codex.

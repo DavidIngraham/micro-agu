@@ -1,0 +1,280 @@
+diff --git a/ArduPlane/Plane.cpp b/ArduPlane/Plane.cpp
+index 90a55df1c6..456707d463 100644
+--- a/ArduPlane/Plane.cpp
++++ b/ArduPlane/Plane.cpp
+@@ -364,6 +364,8 @@ extern AP_IOMCU iomcu;
+ 
+ void Plane::one_second_loop()
+ {
++    ahrs.set_minimum_flying_airspeed(aparm.airspeed_min);
++
+     // make it possible to change control channel ordering at runtime
+     set_control_channels();
+ 
+diff --git a/Tools/Replay/LR_MsgHandler.cpp b/Tools/Replay/LR_MsgHandler.cpp
+index 4cfca02aaf..b925d9589e 100644
+--- a/Tools/Replay/LR_MsgHandler.cpp
++++ b/Tools/Replay/LR_MsgHandler.cpp
+@@ -69,6 +69,12 @@ void LR_MsgHandler_RFRN::process_message(uint8_t *msgbytes)
+     AP::dal().handle_message(msg);
+ }
+ 
++void LR_MsgHandler_RFWS::process_message(uint8_t *msgbytes)
++{
++    MSG_CREATE(RFWS, msgbytes);
++    AP::dal().handle_message(msg);
++}
++
+ // apply an event to EKF2
+ static void apply_event(NavEKF2 &ekf2, AP_DAL::Event event)
+ {
+diff --git a/Tools/Replay/LR_MsgHandler.h b/Tools/Replay/LR_MsgHandler.h
+index 8181250f98..ee9c6264da 100644
+--- a/Tools/Replay/LR_MsgHandler.h
++++ b/Tools/Replay/LR_MsgHandler.h
+@@ -95,6 +95,13 @@ public:
+     void process_message(uint8_t *msg) override;
+ };
+ 
++class LR_MsgHandler_RFWS : public LR_MsgHandler
++{
++public:
++    using LR_MsgHandler::LR_MsgHandler;
++    void process_message(uint8_t *msg) override;
++};
++
+ class LR_MsgHandler_REV2 : public LR_MsgHandler_EKF
+ {
+ public:
+diff --git a/Tools/Replay/LogReader.cpp b/Tools/Replay/LogReader.cpp
+index 23de9f3b56..289b2ccdae 100644
+--- a/Tools/Replay/LogReader.cpp
++++ b/Tools/Replay/LogReader.cpp
+@@ -68,6 +68,8 @@ bool LogReader::handle_log_format_msg(const struct log_Format &f)
+         msgparser[f.type] = NEW_NOTHROW LR_MsgHandler_RFRF(formats[f.type], ekf2, ekf3);
+     } else if (streq(name, "RFRN")) {
+         msgparser[f.type] = NEW_NOTHROW LR_MsgHandler_RFRN(formats[f.type]);
++    } else if (streq(name, "RFWS")) {
++        msgparser[f.type] = NEW_NOTHROW LR_MsgHandler_RFWS(formats[f.type]);
+     } else if (streq(name, "REV2")) {
+         msgparser[f.type] = NEW_NOTHROW LR_MsgHandler_REV2(formats[f.type], ekf2, ekf3);
+ 	} else if (streq(name, "RSO2")) {
+diff --git a/libraries/AP_AHRS/AP_AHRS.h b/libraries/AP_AHRS/AP_AHRS.h
+index 1d551ab612..324d9b3667 100644
+--- a/libraries/AP_AHRS/AP_AHRS.h
++++ b/libraries/AP_AHRS/AP_AHRS.h
+@@ -737,6 +737,10 @@ public:
+         return fly_forward;
+     }
+ 
++    // Minimum normal forward-flight EAS, not an airspeed measurement. Zero is unspecified.
++    void set_minimum_flying_airspeed(float eas) { minimum_flying_airspeed = eas; }
++    float get_minimum_flying_airspeed() const { return minimum_flying_airspeed; }
++
+     /* we modify our behaviour based on what sort of vehicle the
+      * vehicle code tells us we are.  This information is also pulled
+      * from AP_AHRS by other libraries
+@@ -911,6 +915,7 @@ private:
+      * use to provide additional and/or improved estimates.
+      */
+     bool fly_forward; // true if we can assume the vehicle will be flying forward on its X axis
++    float minimum_flying_airspeed;
+ 
+     // poke AP_Notify based on values from status
+     void update_notify_from_filter_status(const nav_filter_status &status);
+diff --git a/libraries/AP_DAL/AP_DAL.cpp b/libraries/AP_DAL/AP_DAL.cpp
+index bd9ef72d6c..e637ab76ca 100644
+--- a/libraries/AP_DAL/AP_DAL.cpp
++++ b/libraries/AP_DAL/AP_DAL.cpp
+@@ -85,6 +85,10 @@ void AP_DAL::start_frame(AP_DAL::FrameType frametype)
+     _RFRN.ekf_type = int8_t(ahrs.configured_ekf_type());
+     WRITE_REPLAY_BLOCK_IFCHANGED(RFRN, _RFRN, old);
+ 
++    const log_RFWS old_speed = _RFWS;
++    _RFWS.minimum_flying_airspeed = ahrs.get_minimum_flying_airspeed();
++    WRITE_REPLAY_BLOCK_IFCHANGED(RFWS, _RFWS, old_speed);
++
+     // update body conversion
+     _rotation_vehicle_body_to_autopilot_body = ahrs.get_rotation_vehicle_body_to_autopilot_body();
+ 
+diff --git a/libraries/AP_DAL/AP_DAL.h b/libraries/AP_DAL/AP_DAL.h
+index ac67e1dbf6..c46fd8d3f3 100644
+--- a/libraries/AP_DAL/AP_DAL.h
++++ b/libraries/AP_DAL/AP_DAL.h
+@@ -182,6 +182,9 @@ public:
+         return _RFRN.EAS2TAS;
+     }
+ 
++    float get_minimum_flying_airspeed() const { return _RFWS.minimum_flying_airspeed; }
++    void handle_message(const log_RFWS &msg) { _RFWS = msg; }
++
+     VehicleClass get_vehicle_class(void) const {
+         return (VehicleClass)_RFRN.vehicle_class;
+     }
+@@ -375,6 +378,7 @@ private:
+ 
+     // framing structures
+     struct log_RFRH _RFRH;
++    struct log_RFWS _RFWS;
+     struct log_RFRF _RFRF;
+     struct log_RFRN _RFRN;
+ 
+diff --git a/libraries/AP_DAL/LogStructure.h b/libraries/AP_DAL/LogStructure.h
+index bbc9a6b6d8..67e0aab400 100644
+--- a/libraries/AP_DAL/LogStructure.h
++++ b/libraries/AP_DAL/LogStructure.h
+@@ -54,7 +54,16 @@
+     LOG_REVH_MSG, \
+     LOG_RWOH_MSG, \
+     LOG_RBOH_MSG, \
+-    LOG_RTER_MSG
++    LOG_RTER_MSG, \
++    LOG_RFWS_MSG
++
++// @LoggerMessage: RFWS
++// @Description: Replay forward-flight operating speed
++// @Field: MinEAS: Minimum normal forward-flight equivalent airspeed; zero if unspecified
++struct log_RFWS {
++    float minimum_flying_airspeed;
++    uint8_t _end;
++};
+ 
+ // @LoggerMessage: RFRH
+ // @Description: Replay FRame Header
+@@ -643,6 +652,8 @@ struct log_RTER {
+ #define LOG_STRUCTURE_FROM_DAL        \
+     { LOG_RFRH_MSG, RLOG_SIZE(RFRH),                          \
+       "RFRH", "QI", "TimeUS,TF", "s-", "F-" }, \
++    { LOG_RFWS_MSG, RLOG_SIZE(RFWS),                          \
++      "RFWS", "f", "MinEAS", "n", "0" }, \
+     { LOG_RFRF_MSG, RLOG_SIZE(RFRF),                          \
+       "RFRF", "BB", "FTypes,Slow", "--", "--" }, \
+     { LOG_RFRN_MSG, RLOG_SIZE(RFRN),                            \
+diff --git a/libraries/AP_NavEKF3/AP_NavEKF3_AirDataFusion.cpp b/libraries/AP_NavEKF3/AP_NavEKF3_AirDataFusion.cpp
+index 7bbf429b91..22db170ea7 100644
+--- a/libraries/AP_NavEKF3/AP_NavEKF3_AirDataFusion.cpp
++++ b/libraries/AP_NavEKF3/AP_NavEKF3_AirDataFusion.cpp
+@@ -2,6 +2,7 @@
+ 
+ #include "AP_NavEKF3.h"
+ #include "AP_NavEKF3_core.h"
++#include "AP_NavEKF3_LowSpeed.h"
+ #include <AP_DAL/AP_DAL.h>
+ 
+ #define P (const_cast<const Matrix24 &>(Pmut))
+@@ -206,7 +207,20 @@ void NavEKF3_core::SelectBetaDragFusion()
+             // we are required to correct only wind states
+             airDataFusionWindOnly = true;
+         }
++#if AP_NAVEKF3_LOW_SPEED_DIAGNOSTICS && CONFIG_HAL_BOARD == HAL_BOARD_SITL
++        const bool fused = FuseSideslip();
++        const Vector3F air = prevTnb * Vector3F(stateStruct.velocity.x - stateStruct.wind_vel.x,
++                                               stateStruct.velocity.y - stateStruct.wind_vel.y,
++                                               stateStruct.velocity.z);
++        ::printf("N3LD,%u,%u,%u,%.6f,%.6f,%.6f,%.6f,%.6f,%.6f,%.6f,%.6f,%.6f\n",
++                 unsigned(imuSampleTime_ms), unsigned(core_index), unsigned(fused),
++                 double(air.x), double(air.y), double(air.z),
++                 double(stateStruct.wind_vel.x), double(stateStruct.wind_vel.y),
++                 double(P[22][22]), double(P[23][23]), double(innovBeta),
++                 double(EKF3LowSpeed::minimum_forward_tas(dal.get_minimum_flying_airspeed(), dal.get_EAS2TAS())));
++#else
+         FuseSideslip();
++#endif
+         prevBetaDragStep_ms = imuSampleTime_ms;
+     }
+ 
+@@ -224,10 +238,9 @@ void NavEKF3_core::SelectBetaDragFusion()
+  * The script file used to generate these and other equations in this filter can be found here:
+  * https://github.com/PX4/ecl/blob/master/matlab/scripts/Inertial%20Nav%20EKF/GenerateNavFilterEquations.m
+ */
+-void NavEKF3_core::FuseSideslip()
++bool NavEKF3_core::FuseSideslip()
+ {
+     // declarations
+-    const ftype R_BETA = 0.03f; // assume a sideslip angle RMS of ~10 deg
+     Vector13 SH_BETA;
+     Vector8 SK_BETA;
+     Vector3F vel_rel_wind;
+@@ -252,14 +265,18 @@ void NavEKF3_core::FuseSideslip()
+     // rotate into body axes
+     vel_rel_wind = prevTnb * vel_rel_wind;
+ 
++    const float minimum_tas = EKF3LowSpeed::minimum_forward_tas(dal.get_minimum_flying_airspeed(), dal.get_EAS2TAS());
++    const ftype R_BETA = EKF3LowSpeed::sideslip_variance(vel_rel_wind.x, minimum_tas,
++                                                      MAX(gpsSpdAccuracy, frontend->_gpsHorizVelNoise));
++
+     // perform fusion of assumed sideslip  = 0
+-    if (vel_rel_wind.x > 5.0f)
++    if (vel_rel_wind.x > minimum_tas)
+     {
+         // Calculate observation jacobians
+         SH_BETA[0] = (vn - vwn)*(sq(q0) + sq(q1) - sq(q2) - sq(q3)) - vd*(2*q0*q2 - 2*q1*q3) + (ve - vwe)*(2*q0*q3 + 2*q1*q2);
+         if (fabsF(SH_BETA[0]) <= 1e-9f) {
+             faultStatus.bad_sideslip = true;
+-            return;
++            return false;
+         } else {
+             faultStatus.bad_sideslip = false;
+         }
+@@ -299,7 +316,7 @@ void NavEKF3_core::FuseSideslip()
+             // we reset the covariance matrix and try again next measurement
+             CovarianceInit();
+             faultStatus.bad_sideslip = true;
+-            return;
++            return false;
+         }
+         SK_BETA[1] = SH_BETA[5]*(SH_BETA[12] - 2*q1*q2) + SH_BETA[1]*SH_BETA[4]*SH_BETA[7];
+         SK_BETA[2] = SH_BETA[6] - SH_BETA[1]*SH_BETA[4]*(SH_BETA[12] + 2*q1*q2);
+@@ -369,8 +386,9 @@ void NavEKF3_core::FuseSideslip()
+         }
+ 
+         // finish fusion from KHP and Kfusion
+-        FinishFusion(innovBeta, true); // forcing fusion is probably a bug
++        return !FinishFusion(innovBeta, true); // forcing fusion is probably a bug
+     }
++    return false;
+ }
+ 
+ #if EK3_FEATURE_DRAG_FUSION
+diff --git a/libraries/AP_NavEKF3/AP_NavEKF3_Control.cpp b/libraries/AP_NavEKF3/AP_NavEKF3_Control.cpp
+index b86f6d64ed..b982f49d2d 100644
+--- a/libraries/AP_NavEKF3/AP_NavEKF3_Control.cpp
++++ b/libraries/AP_NavEKF3/AP_NavEKF3_Control.cpp
+@@ -2,6 +2,7 @@
+ 
+ #include "AP_NavEKF3.h"
+ #include "AP_NavEKF3_core.h"
++#include "AP_NavEKF3_LowSpeed.h"
+ #include <GCS_MAVLink/GCS.h>
+ 
+ #include "AP_DAL/AP_DAL.h"
+@@ -69,12 +70,15 @@ void NavEKF3_core::setWindMagStateLearningMode()
+     const bool canEstimateWind = ((yawInitialised && dragFusionEnabled) || assume_zero_sideslip()) &&
+                                  !onGround &&
+                                  PV_AidingMode != AID_NONE;
++    const float minimum_tas = EKF3LowSpeed::minimum_forward_tas(dal.get_minimum_flying_airspeed(), dal.get_EAS2TAS());
++    const bool slow_forward_flight = assume_zero_sideslip() && minimum_tas < 5.0f &&
++        EKF3LowSpeed::airborne_evidence(stateStruct.position.z - posDownAtTakeoff, dal.get_time_flying_ms());
+     if (!inhibitWindStates && !canEstimateWind) {
+         inhibitWindStates = true;
+         lastAspdEstIsValid = false;
+         updateStateIndexLim();
+     } else if (inhibitWindStates && canEstimateWind &&
+-               (sq(stateStruct.velocity.x) + sq(stateStruct.velocity.y) > sq(5.0f) || dragFusionEnabled)) {
++               (sq(stateStruct.velocity.x) + sq(stateStruct.velocity.y) > sq(5.0f) || dragFusionEnabled || slow_forward_flight)) {
+         inhibitWindStates = false;
+         updateStateIndexLim();
+         // set states and variances
+diff --git a/libraries/AP_NavEKF3/AP_NavEKF3_core.h b/libraries/AP_NavEKF3/AP_NavEKF3_core.h
+index 018e187226..1346d6dc9a 100644
+--- a/libraries/AP_NavEKF3/AP_NavEKF3_core.h
++++ b/libraries/AP_NavEKF3/AP_NavEKF3_core.h
+@@ -774,7 +774,7 @@ private:
+     void FuseAirspeed();
+ 
+     // fuse synthetic sideslip measurement of zero
+-    void FuseSideslip();
++    bool FuseSideslip();
+ 
+     // zero specified state variances and covariances in state covariance matrix
+     void zeroStatesVarCov(uint8_t first, uint8_t last);

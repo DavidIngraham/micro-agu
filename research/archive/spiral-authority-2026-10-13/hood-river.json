@@ -1,0 +1,34 @@
+{
+  "window_boot_s": [
+    447,
+    456
+  ],
+  "payload_peak_bank_deg": 47.691890716552734,
+  "payload_mean_bank_deg": 21.99417225950294,
+  "yaw_change_deg": 459.1341247558593,
+  "ground_course_change_deg": 443.9232157323308,
+  "mean_groundspeed": 4.605259148407221,
+  "mean_sink": -0.2848599211333527,
+  "mean_throttle": 0.3968666666666666,
+  "throttle_range": [
+    0.329,
+    0.416
+  ],
+  "max_brakes_mm": [
+    26.110125609835173,
+    24.622232422510006
+  ],
+  "mean_brakes_mm": [
+    7.026908886548856,
+    9.787030743294421
+  ],
+  "mean_specific_load_g": 1.1453072444034254,
+  "p95_specific_load_g": 1.5153818493444946,
+  "inferred_mean_airspeed": 4.723017061339967,
+  "mean_assumed_wind": [
+    1.039999999999998,
+    0.5900000000000025,
+    0.0
+  ],
+  "pwm_reconstruction_max_error_mm": 0.0
+}

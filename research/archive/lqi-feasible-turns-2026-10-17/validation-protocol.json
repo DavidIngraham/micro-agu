@@ -1,0 +1,117 @@
+{
+  "rate": 25,
+  "variants": {
+    "reference": {},
+    "aw": {
+      "CP3_AWMODE": 1
+    },
+    "map_aw": {
+      "CP3_AWMODE": 1,
+      "CP3_TMAP": 1
+    },
+    "map_aw_observer": {
+      "CP3_AWMODE": 1,
+      "CP3_TMAP": 1,
+      "CP3_OBSTRIM": 1
+    }
+  },
+  "cases": [
+    {
+      "id": 100,
+      "sign": 1,
+      "scales": {
+        "Cmq": 0.8370684152882701,
+        "joint_c_pitch": 0.9740724205379765,
+        "joint_c_roll": 0.7085329851826634,
+        "joint_c_yaw": 0.8296887206028275,
+        "CLbrake": 0.913280818381119,
+        "CDbrake": 1.2095192341278285
+      },
+      "brakeRateScale": 1.0913816324074292,
+      "wind": 1.6318032600269632,
+      "turbulence": 0.11489509668317285,
+      "seed": 1992906554
+    },
+    {
+      "id": 101,
+      "sign": -1,
+      "scales": {
+        "Cmq": 0.7060343960049817,
+        "joint_c_pitch": 1.092489692544262,
+        "joint_c_roll": 1.0344811909002016,
+        "joint_c_yaw": 0.8128400061091304,
+        "CLbrake": 0.7774421128288915,
+        "CDbrake": 0.8415783763399121
+      },
+      "brakeRateScale": 0.7652481491763075,
+      "wind": 1.412578170508991,
+      "turbulence": 0.2580916779033102,
+      "seed": 2577840914
+    },
+    {
+      "id": 102,
+      "sign": 1,
+      "scales": {
+        "Cmq": 0.9320201630498302,
+        "joint_c_pitch": 1.0398386938410222,
+        "joint_c_roll": 1.1282304656237987,
+        "joint_c_yaw": 0.9188724349624249,
+        "CLbrake": 1.0066195644122231,
+        "CDbrake": 0.9560482109763655
+      },
+      "brakeRateScale": 0.8878545114992127,
+      "wind": 1.300822320207592,
+      "turbulence": 0.16902249705036318,
+      "seed": 2270381029
+    },
+    {
+      "id": 103,
+      "sign": -1,
+      "scales": {
+        "Cmq": 1.0882074335284213,
+        "joint_c_pitch": 1.0873142487621903,
+        "joint_c_roll": 0.737201455158619,
+        "joint_c_yaw": 1.118703810957283,
+        "CLbrake": 0.8962968499245535,
+        "CDbrake": 1.0728844328310094
+      },
+      "brakeRateScale": 0.7762442093330945,
+      "wind": 0.6234980534196701,
+      "turbulence": 0.1378471653342064,
+      "seed": 3207433452
+    },
+    {
+      "id": 104,
+      "sign": 1,
+      "scales": {
+        "Cmq": 0.8807858865713275,
+        "joint_c_pitch": 0.8229229373410953,
+        "joint_c_roll": 0.9542331916951745,
+        "joint_c_yaw": 0.8181203920328277,
+        "CLbrake": 1.143414840450276,
+        "CDbrake": 1.0290142838367098
+      },
+      "brakeRateScale": 0.7957708384051173,
+      "wind": 0.34060884767022226,
+      "turbulence": 0.15167508872293847,
+      "seed": 2419084884
+    },
+    {
+      "id": 105,
+      "sign": -1,
+      "scales": {
+        "Cmq": 1.2416959147391813,
+        "joint_c_pitch": 0.7391216623573857,
+        "joint_c_roll": 1.2971990857539573,
+        "joint_c_yaw": 0.7916959740047644,
+        "CLbrake": 1.25507592632598,
+        "CDbrake": 1.2999627916864296
+      },
+      "brakeRateScale": 0.9199104221365225,
+      "wind": 0.42090782045123043,
+      "turbulence": 0.43164590348173915,
+      "seed": 84467085
+    }
+  ],
+  "interpretation": "Fresh cases never used to modify gains/trim/anti-windup. Retain previous absolute gates, including known turbulence failures. Compare sustained-turn bias, altitude, motion, speed, saturation, recovery and shaft power. No broad qualification from relative improvements alone."
+}

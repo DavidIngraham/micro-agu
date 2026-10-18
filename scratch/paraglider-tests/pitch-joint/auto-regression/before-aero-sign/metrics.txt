@@ -1,9 +1,0 @@
-joint-calm-g0.2 course True error None time 994.8 WP altitude max 1.82 corner max 0.31 q RMS 3.43
-joint-calm-g0 course True error None time 995.4 WP altitude max 1.79 corner max 0.32 q RMS 4.18
-joint-rampwind-g0.2 course False error NotAchievedException('Extended mission exceeded altitude bounds') time 0.2 WP altitude max 39.23 corner max 0 q RMS not recorded
-joint-rampwind-g0 FAILED before valid track samples: NotAchievedException('Extended mission exceeded altitude bounds')
-joint-wind-g0.2 course False error NotAchievedException('Extended mission exceeded altitude bounds') time 30.3 WP altitude max 39.77 corner max 0 q RMS 38.36
-joint-wind-g0 course False error NotAchievedException('Extended mission exceeded altitude bounds') time 7.2 WP altitude max 15.37 corner max 0 q RMS 23.12
-rigid-calm-g0.2 course True error None time 957.8 WP altitude max 1.84 corner max 0.31 q RMS not recorded
-rigid-rampwind-g0.2 FAILED before valid track samples: NotAchievedException('Extended mission exceeded altitude bounds')
-rigid-wind-g0.2 course False error NotAchievedException('Extended mission exceeded altitude bounds') time 14.0 WP altitude max 10.82 corner max 0 q RMS not recorded

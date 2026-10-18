@@ -1,0 +1,671 @@
+[
+  {
+    "variant": "standard",
+    "case": 1,
+    "complete": true,
+    "failure": null,
+    "input": "holistic/transients-valid/standard/01.json",
+    "sha256": "2dd7ecbb3f2e526f478e3034e97ec822fcfab795ddc653446ceba679d4effa78",
+    "steps": {
+      "climb": {
+        "rise_10_90_s": 8.400000000000006,
+        "settling_s": 16.830000000018266,
+        "iae_m_s": 92.40057894060757,
+        "overshoot_m": 0.21786607802386015,
+        "final_error_m": -0.17973775244530785,
+        "mean_speed_m_s": 4.372941384468052,
+        "throttle_ceiling_fraction": 0.02002002002002002,
+        "max_relative_pitch_rate_deg_s": 21.150948734427015
+      },
+      "descent": {
+        "rise_10_90_s": 8.700000000000003,
+        "settling_s": 57.06000000010921,
+        "iae_m_s": 107.81809987745307,
+        "overshoot_m": 0.8769737705173952,
+        "final_error_m": -0.2388631477446532,
+        "mean_speed_m_s": 4.387304223115042,
+        "throttle_ceiling_fraction": 0.0,
+        "max_relative_pitch_rate_deg_s": 41.0497753115435
+      }
+    },
+    "gusts": {
+      "vertical": {
+        "peak_height_excursion_m": 2.9477672017098655,
+        "altitude_iae_m_s": 31.13819243633669,
+        "peak_pitch_excursion_deg": 12.414594667018326,
+        "recovery_after_off_s": 7.935000000204695,
+        "relative_pitch_rate_rms_deg_s": 10.797029083115497,
+        "final_height_error_m": -0.7282527045264544
+      },
+      "crosswind": {
+        "peak_height_excursion_m": 0.6865626257415016,
+        "altitude_iae_m_s": 23.77293576464367,
+        "peak_pitch_excursion_deg": 25.066886632813866,
+        "recovery_after_off_s": 5.545000000241089,
+        "relative_pitch_rate_rms_deg_s": 5.926413227217143,
+        "final_height_error_m": -0.21321902682890226
+      }
+    },
+    "settled_after_s": 34.299999999968804,
+    "initial_error_m": -0.06335437613876138,
+    "mean_truth_speed_m_s": 4.381368896985818,
+    "mean_pitot_eas_m_s": 4.239451116489195,
+    "mean_tecs_speed_error_m_s": -4.238368188488003,
+    "full_brake_longest_s": 0.0,
+    "max_pitch_deg": 24.864933216428117
+  },
+  {
+    "variant": "standard",
+    "case": 3,
+    "complete": true,
+    "failure": null,
+    "input": "holistic/transients-valid/standard/03.json",
+    "sha256": "55f507dce2663dcba4ef20b12f216eddedec413c79e57be6c16871473b2f75ab",
+    "steps": {
+      "climb": {
+        "rise_10_90_s": 8.50000000000001,
+        "settling_s": 17.080000000018224,
+        "iae_m_s": 88.61083711457418,
+        "overshoot_m": 0.2632517139595194,
+        "final_error_m": -0.1464500504712771,
+        "mean_speed_m_s": 4.373106480622934,
+        "throttle_ceiling_fraction": 0.031031031031031032,
+        "max_relative_pitch_rate_deg_s": 21.37334266136369
+      },
+      "descent": {
+        "rise_10_90_s": 8.700000000000003,
+        "settling_s": 53.77000000010919,
+        "iae_m_s": 104.92788286738923,
+        "overshoot_m": 0.8471144668138422,
+        "final_error_m": -0.2008105671971726,
+        "mean_speed_m_s": 4.386477882281152,
+        "throttle_ceiling_fraction": 0.0,
+        "max_relative_pitch_rate_deg_s": 35.93847650008326
+      }
+    },
+    "gusts": {
+      "vertical": {
+        "peak_height_excursion_m": 2.955634587234485,
+        "altitude_iae_m_s": 31.439977070420532,
+        "peak_pitch_excursion_deg": 13.530220102325604,
+        "recovery_after_off_s": 7.8500000002046875,
+        "relative_pitch_rate_rms_deg_s": 9.002883851772982,
+        "final_height_error_m": -0.6978336733331005
+      },
+      "crosswind": {
+        "peak_height_excursion_m": 0.5183152402854319,
+        "altitude_iae_m_s": 21.864694117785486,
+        "peak_pitch_excursion_deg": 14.692839247400101,
+        "recovery_after_off_s": 5.755000000241068,
+        "relative_pitch_rate_rms_deg_s": 3.9347407940703767,
+        "final_height_error_m": -0.16003846347616957
+      }
+    },
+    "settled_after_s": 33.03999999996995,
+    "initial_error_m": -0.022463433767690333,
+    "mean_truth_speed_m_s": 4.379628056463108,
+    "mean_pitot_eas_m_s": 4.236058607581108,
+    "mean_tecs_speed_error_m_s": -4.235860493119826,
+    "full_brake_longest_s": 0.0,
+    "max_pitch_deg": 18.999588076074083
+  },
+  {
+    "variant": "standard",
+    "case": 13,
+    "complete": true,
+    "failure": null,
+    "input": "holistic/transients-valid/standard/13.json",
+    "sha256": "e53d437a3f50d3141c9a11d347133b45389d23d209bcc4e0616c32a88ef68b53",
+    "steps": {
+      "climb": {
+        "rise_10_90_s": 8.400000000000006,
+        "settling_s": 16.975000000018227,
+        "iae_m_s": 92.69235006300275,
+        "overshoot_m": 0.2283789574577213,
+        "final_error_m": -0.18135313240794887,
+        "mean_speed_m_s": 4.372628514631589,
+        "throttle_ceiling_fraction": 0.02902902902902903,
+        "max_relative_pitch_rate_deg_s": 23.360107083552837
+      },
+      "descent": {
+        "rise_10_90_s": 8.700000000000003,
+        "settling_s": 56.86500000010919,
+        "iae_m_s": 108.0737762604555,
+        "overshoot_m": 0.8776590982185013,
+        "final_error_m": -0.2387712647836247,
+        "mean_speed_m_s": 4.3862446813655245,
+        "throttle_ceiling_fraction": 0.0,
+        "max_relative_pitch_rate_deg_s": 43.876081301286675
+      }
+    },
+    "gusts": {
+      "vertical": {
+        "peak_height_excursion_m": 2.9451956145110856,
+        "altitude_iae_m_s": 31.180759959591068,
+        "peak_pitch_excursion_deg": 13.483516205703932,
+        "recovery_after_off_s": 7.8950000002046465,
+        "relative_pitch_rate_rms_deg_s": 8.954139160472277,
+        "final_height_error_m": -0.7305704633576724
+      },
+      "crosswind": {
+        "peak_height_excursion_m": 0.5114106307920636,
+        "altitude_iae_m_s": 22.044040015247496,
+        "peak_pitch_excursion_deg": 16.994060732389848,
+        "recovery_after_off_s": 5.795000000241032,
+        "relative_pitch_rate_rms_deg_s": 4.571460168916092,
+        "final_height_error_m": -0.19924668954392644
+      }
+    },
+    "settled_after_s": 33.46999999996956,
+    "initial_error_m": -0.05257939365677089,
+    "mean_truth_speed_m_s": 4.379374114742105,
+    "mean_pitot_eas_m_s": 4.235920681874479,
+    "mean_tecs_speed_error_m_s": -4.235746094245756,
+    "full_brake_longest_s": 0.0,
+    "max_pitch_deg": 18.76030777923815
+  },
+  {
+    "variant": "airspeed",
+    "case": 1,
+    "complete": true,
+    "failure": null,
+    "input": "holistic/transients-valid/airspeed/01.json",
+    "sha256": "44be9976ab4ec611b5650ad9044eb5958f2629e529cddce2fd0ebaf667c72ddc",
+    "lqi_target_tas_m_s": 4.4,
+    "steps": {
+      "climb": {
+        "rise_10_90_s": 16.10000000000001,
+        "settling_s": 21.665000000018225,
+        "iae_m_s": 134.84857702393742,
+        "overshoot_m": 0.0,
+        "final_error_m": -0.19565529201869922,
+        "mean_speed_m_s": 4.364322870656636,
+        "throttle_ceiling_fraction": 0.0,
+        "max_relative_pitch_rate_deg_s": 45.93345001185494
+      },
+      "descent": {
+        "rise_10_90_s": 16.10000000000001,
+        "settling_s": 20.175000000109193,
+        "iae_m_s": 125.12609807075354,
+        "overshoot_m": 0.2669352006503942,
+        "final_error_m": -0.17167531171117745,
+        "mean_speed_m_s": 4.381216777132943,
+        "throttle_ceiling_fraction": 0.0,
+        "max_relative_pitch_rate_deg_s": 42.7915927370468
+      }
+    },
+    "gusts": {
+      "vertical": {
+        "peak_height_excursion_m": 3.8170967450169613,
+        "altitude_iae_m_s": 35.732208478823594,
+        "peak_pitch_excursion_deg": 13.816615991627792,
+        "recovery_after_off_s": 21.365000000204674,
+        "relative_pitch_rate_rms_deg_s": 9.134108478396428,
+        "final_height_error_m": -0.24594084604784427
+      },
+      "crosswind": {
+        "peak_height_excursion_m": 0.9410772471185567,
+        "altitude_iae_m_s": 8.036647060516126,
+        "peak_pitch_excursion_deg": 20.09152062398858,
+        "recovery_after_off_s": 5.565000000241071,
+        "relative_pitch_rate_rms_deg_s": 3.6870764242367593,
+        "final_height_error_m": -0.1913686946354929
+      }
+    },
+    "settled_after_s": 53.90999999995097,
+    "initial_error_m": -0.17307549559305357,
+    "mean_truth_speed_m_s": 4.358020960536119,
+    "mean_pitot_eas_m_s": 4.214981495458906,
+    "mean_tecs_speed_error_m_s": -4.215363788503439,
+    "full_brake_longest_s": 0.0,
+    "max_pitch_deg": 17.683381467523265
+  },
+  {
+    "variant": "airspeed",
+    "case": 3,
+    "complete": true,
+    "failure": null,
+    "input": "holistic/transients-valid/airspeed/03.json",
+    "sha256": "3f869e6af836e865ef5f9ca629f2c3612e05b52210147c3cb5f770fd71c19adb",
+    "lqi_target_tas_m_s": 4.4,
+    "steps": {
+      "climb": {
+        "rise_10_90_s": 16.20000000000001,
+        "settling_s": 22.135000000018252,
+        "iae_m_s": 139.14527284229456,
+        "overshoot_m": 0.0,
+        "final_error_m": -0.22897719938711616,
+        "mean_speed_m_s": 4.363975844638544,
+        "throttle_ceiling_fraction": 0.0,
+        "max_relative_pitch_rate_deg_s": 28.12952031408483
+      },
+      "descent": {
+        "rise_10_90_s": 16.09999999999998,
+        "settling_s": 20.090000000109157,
+        "iae_m_s": 126.58705376795228,
+        "overshoot_m": 0.2992272682891439,
+        "final_error_m": -0.2120650318215825,
+        "mean_speed_m_s": 4.38035795223729,
+        "throttle_ceiling_fraction": 0.0,
+        "max_relative_pitch_rate_deg_s": 28.718269253730398
+      }
+    },
+    "gusts": {
+      "vertical": {
+        "peak_height_excursion_m": 3.80572960536103,
+        "altitude_iae_m_s": 35.496097245208695,
+        "peak_pitch_excursion_deg": 14.053659769970157,
+        "recovery_after_off_s": 21.375000000204665,
+        "relative_pitch_rate_rms_deg_s": 9.078634954271754,
+        "final_height_error_m": -0.28458825702100654
+      },
+      "crosswind": {
+        "peak_height_excursion_m": 0.9803344741226212,
+        "altitude_iae_m_s": 8.519606655190787,
+        "peak_pitch_excursion_deg": 20.31711209860957,
+        "recovery_after_off_s": 5.575000000241062,
+        "relative_pitch_rate_rms_deg_s": 4.143057864907055,
+        "final_height_error_m": -0.231305740082
+      }
+    },
+    "settled_after_s": 52.439999999952306,
+    "initial_error_m": -0.21010647662570392,
+    "mean_truth_speed_m_s": 4.357025803620892,
+    "mean_pitot_eas_m_s": 4.214777706489456,
+    "mean_tecs_speed_error_m_s": -4.214457544566914,
+    "full_brake_longest_s": 0.0,
+    "max_pitch_deg": 17.98092956494982
+  },
+  {
+    "variant": "airspeed",
+    "case": 13,
+    "complete": true,
+    "failure": null,
+    "input": "holistic/transients-valid/airspeed/13.json",
+    "sha256": "730337a2ca8869569d07539699d217ce5a49bced75e9d2514650eebd781fa6db",
+    "lqi_target_tas_m_s": 4.4,
+    "steps": {
+      "climb": {
+        "rise_10_90_s": 16.10000000000001,
+        "settling_s": 21.5900000000182,
+        "iae_m_s": 134.54592013722055,
+        "overshoot_m": 0.0,
+        "final_error_m": -0.19751117503789387,
+        "mean_speed_m_s": 4.3632470390182645,
+        "throttle_ceiling_fraction": 0.0,
+        "max_relative_pitch_rate_deg_s": 31.595530850908467
+      },
+      "descent": {
+        "rise_10_90_s": 16.099999999999994,
+        "settling_s": 20.440000000109208,
+        "iae_m_s": 127.45360960767107,
+        "overshoot_m": 0.264569379695466,
+        "final_error_m": -0.17630083634750718,
+        "mean_speed_m_s": 4.380028632095357,
+        "throttle_ceiling_fraction": 0.0,
+        "max_relative_pitch_rate_deg_s": 29.310613025117547
+      }
+    },
+    "gusts": {
+      "vertical": {
+        "peak_height_excursion_m": 3.806400032761644,
+        "altitude_iae_m_s": 35.56215300481854,
+        "peak_pitch_excursion_deg": 14.340213574869718,
+        "recovery_after_off_s": 21.38000000020466,
+        "relative_pitch_rate_rms_deg_s": 9.4535463987552,
+        "final_height_error_m": -0.2506141035232474
+      },
+      "crosswind": {
+        "peak_height_excursion_m": 0.9681012389589441,
+        "altitude_iae_m_s": 8.340289034276525,
+        "peak_pitch_excursion_deg": 20.10185422759266,
+        "recovery_after_off_s": 5.490000000241025,
+        "relative_pitch_rate_rms_deg_s": 3.5818026235260376,
+        "final_height_error_m": -0.19444542804247078
+      }
+    },
+    "settled_after_s": 52.47999999995227,
+    "initial_error_m": -0.1734667383664643,
+    "mean_truth_speed_m_s": 4.356670266574197,
+    "mean_pitot_eas_m_s": 4.21410189893461,
+    "mean_tecs_speed_error_m_s": -4.213842705080413,
+    "full_brake_longest_s": 0.0,
+    "max_pitch_deg": 17.746596046313773
+  },
+  {
+    "variant": "sensor",
+    "case": 1,
+    "complete": true,
+    "failure": null,
+    "input": "holistic/transients-valid/sensor/01.json",
+    "sha256": "f97503e399d78d1daf4c193aa6ab8158e8f63cae0ed67c19e370b136a75134aa",
+    "lqi_target_tas_m_s": 4.4,
+    "steps": {
+      "climb": {
+        "rise_10_90_s": 16.00000000000001,
+        "settling_s": 20.795000000018213,
+        "iae_m_s": 123.53251205821711,
+        "overshoot_m": 0.1443968567461127,
+        "final_error_m": 0.09494220622717194,
+        "mean_speed_m_s": 4.364866419652064,
+        "throttle_ceiling_fraction": 0.0,
+        "max_relative_pitch_rate_deg_s": 30.13639703031706
+      },
+      "descent": {
+        "rise_10_90_s": 16.09999999999998,
+        "settling_s": 21.88000000010919,
+        "iae_m_s": 133.2698541877929,
+        "overshoot_m": 0.0,
+        "final_error_m": 0.1217539119192859,
+        "mean_speed_m_s": 4.3807752572209315,
+        "throttle_ceiling_fraction": 0.0,
+        "max_relative_pitch_rate_deg_s": 27.92846399055383
+      }
+    },
+    "gusts": {
+      "vertical": {
+        "peak_height_excursion_m": 3.8125059449769267,
+        "altitude_iae_m_s": 35.79064685786311,
+        "peak_pitch_excursion_deg": 13.691073851956439,
+        "recovery_after_off_s": 21.465000000204697,
+        "relative_pitch_rate_rms_deg_s": 10.195115385171775,
+        "final_height_error_m": 0.04985685253920735
+      },
+      "crosswind": {
+        "peak_height_excursion_m": 0.9672194847739348,
+        "altitude_iae_m_s": 8.208035120491992,
+        "peak_pitch_excursion_deg": 20.871167366172344,
+        "recovery_after_off_s": 5.5650000002411275,
+        "relative_pitch_rate_rms_deg_s": 4.201303363288894,
+        "final_height_error_m": 0.10469962985231973
+      }
+    },
+    "settled_after_s": 54.764999999950206,
+    "initial_error_m": 0.11436537310311934,
+    "mean_truth_speed_m_s": 4.358468401151479,
+    "mean_pitot_eas_m_s": 4.2162798095293175,
+    "mean_tecs_speed_error_m_s": -4.215975142064522,
+    "full_brake_longest_s": 0.0,
+    "max_pitch_deg": 17.955551766469352
+  },
+  {
+    "variant": "sensor",
+    "case": 3,
+    "complete": true,
+    "failure": null,
+    "input": "holistic/transients-valid/sensor/03.json",
+    "sha256": "a2cc87b5be8f5ddced6fc67cf06cfa9afe21ee7665b75cdc30631354976f0991",
+    "lqi_target_tas_m_s": 4.4,
+    "steps": {
+      "climb": {
+        "rise_10_90_s": 16.00000000000001,
+        "settling_s": 20.650000000018238,
+        "iae_m_s": 123.27055640645936,
+        "overshoot_m": 0.14085800602379095,
+        "final_error_m": 0.09384022751586273,
+        "mean_speed_m_s": 4.364395099167535,
+        "throttle_ceiling_fraction": 0.0,
+        "max_relative_pitch_rate_deg_s": 35.311344732821
+      },
+      "descent": {
+        "rise_10_90_s": 16.199999999999974,
+        "settling_s": 21.900000000109245,
+        "iae_m_s": 133.87569558034937,
+        "overshoot_m": 0.0,
+        "final_error_m": 0.1188219093690364,
+        "mean_speed_m_s": 4.380231730179898,
+        "throttle_ceiling_fraction": 0.0,
+        "max_relative_pitch_rate_deg_s": 32.367080992771804
+      }
+    },
+    "gusts": {
+      "vertical": {
+        "peak_height_excursion_m": 3.7738180780629946,
+        "altitude_iae_m_s": 35.20218489290299,
+        "peak_pitch_excursion_deg": 13.837900307499218,
+        "recovery_after_off_s": 21.38000000020466,
+        "relative_pitch_rate_rms_deg_s": 9.0643789088901,
+        "final_height_error_m": 0.045901950395801805
+      },
+      "crosswind": {
+        "peak_height_excursion_m": 0.9994227459787552,
+        "altitude_iae_m_s": 8.7854613241415,
+        "peak_pitch_excursion_deg": 20.69423973747758,
+        "recovery_after_off_s": 6.8700000002410775,
+        "relative_pitch_rate_rms_deg_s": 4.086265095015799,
+        "final_height_error_m": 0.09483687873584756
+      }
+    },
+    "settled_after_s": 51.989999999952715,
+    "initial_error_m": 0.11476822316637936,
+    "mean_truth_speed_m_s": 4.357236073845448,
+    "mean_pitot_eas_m_s": 4.215010460672137,
+    "mean_tecs_speed_error_m_s": -4.214785379816762,
+    "full_brake_longest_s": 0.0,
+    "max_pitch_deg": 18.295073532308244
+  },
+  {
+    "variant": "sensor",
+    "case": 13,
+    "complete": true,
+    "failure": null,
+    "input": "holistic/transients-valid/sensor/13.json",
+    "sha256": "c1bc73b0a3f98c0a55df217de405731b78de2f5f28b44357084b303b59a3cbc7",
+    "lqi_target_tas_m_s": 4.4,
+    "steps": {
+      "climb": {
+        "rise_10_90_s": 16.00000000000001,
+        "settling_s": 20.62500000001826,
+        "iae_m_s": 123.34924109661455,
+        "overshoot_m": 0.1418920214068038,
+        "final_error_m": 0.094101259463947,
+        "mean_speed_m_s": 4.3637924608605765,
+        "throttle_ceiling_fraction": 0.0,
+        "max_relative_pitch_rate_deg_s": 38.54935918996569
+      },
+      "descent": {
+        "rise_10_90_s": 16.199999999999974,
+        "settling_s": 21.9500000001092,
+        "iae_m_s": 133.83719195150914,
+        "overshoot_m": 0.0,
+        "final_error_m": 0.11651915102944066,
+        "mean_speed_m_s": 4.380008274047021,
+        "throttle_ceiling_fraction": 0.0,
+        "max_relative_pitch_rate_deg_s": 35.552002895102255
+      }
+    },
+    "gusts": {
+      "vertical": {
+        "peak_height_excursion_m": 3.8021019470425585,
+        "altitude_iae_m_s": 35.53769884942012,
+        "peak_pitch_excursion_deg": 13.52237343395089,
+        "recovery_after_off_s": 21.340000000204697,
+        "relative_pitch_rate_rms_deg_s": 11.525165268089713,
+        "final_height_error_m": 0.0419260212629311
+      },
+      "crosswind": {
+        "peak_height_excursion_m": 0.9740423394991922,
+        "altitude_iae_m_s": 8.569320915871268,
+        "peak_pitch_excursion_deg": 20.367208701714652,
+        "recovery_after_off_s": 5.570000000241066,
+        "relative_pitch_rate_rms_deg_s": 4.4550559991359195,
+        "final_height_error_m": 0.09228492980417258
+      }
+    },
+    "settled_after_s": 52.18999999995253,
+    "initial_error_m": 0.11627191740728904,
+    "mean_truth_speed_m_s": 4.356667863428706,
+    "mean_pitot_eas_m_s": 4.214442503969955,
+    "mean_tecs_speed_error_m_s": -4.214198977831788,
+    "full_brake_longest_s": 0.0,
+    "max_pitch_deg": 17.855021222905584
+  },
+  {
+    "variant": "damping",
+    "case": 1,
+    "complete": true,
+    "failure": null,
+    "input": "holistic/transients-valid/damping/01.json",
+    "sha256": "2eb3a4c9259bc432c91e4833a7054f9cbceec4a804fcb22d361f83fabee1b6ec",
+    "lqi_target_tas_m_s": 4.4,
+    "steps": {
+      "climb": {
+        "rise_10_90_s": 16.10000000000001,
+        "settling_s": 21.95500000001823,
+        "iae_m_s": 138.82063479131304,
+        "overshoot_m": 0.0,
+        "final_error_m": -0.18949835522044609,
+        "mean_speed_m_s": 4.36661743826951,
+        "throttle_ceiling_fraction": 0.0,
+        "max_relative_pitch_rate_deg_s": 35.62879653996287
+      },
+      "descent": {
+        "rise_10_90_s": 15.999999999999986,
+        "settling_s": 21.07500000010917,
+        "iae_m_s": 133.037473274833,
+        "overshoot_m": 0.2708593830488937,
+        "final_error_m": -0.17182302596136778,
+        "mean_speed_m_s": 4.380736354063201,
+        "throttle_ceiling_fraction": 0.0,
+        "max_relative_pitch_rate_deg_s": 32.61234670377692
+      }
+    },
+    "gusts": {
+      "vertical": {
+        "peak_height_excursion_m": 3.813334837155388,
+        "altitude_iae_m_s": 35.860818854663314,
+        "peak_pitch_excursion_deg": 12.732954011553783,
+        "recovery_after_off_s": 21.490000000204645,
+        "relative_pitch_rate_rms_deg_s": 7.883815752950207,
+        "final_height_error_m": -0.24417214813875887
+      },
+      "crosswind": {
+        "peak_height_excursion_m": 0.47321852307982226,
+        "altitude_iae_m_s": 2.6750520900251944,
+        "peak_pitch_excursion_deg": 7.626902028139836,
+        "recovery_after_off_s": 2.5750000002410616,
+        "relative_pitch_rate_rms_deg_s": 2.152525073963312,
+        "final_height_error_m": -0.18897890438939413
+      }
+    },
+    "settled_after_s": 52.48999999995226,
+    "initial_error_m": -0.1802000764767797,
+    "mean_truth_speed_m_s": 4.376422580168501,
+    "mean_pitot_eas_m_s": 4.2332486021857605,
+    "mean_tecs_speed_error_m_s": -4.232802676505053,
+    "full_brake_longest_s": 0.0,
+    "max_pitch_deg": 15.03702658866299
+  },
+  {
+    "variant": "damping",
+    "case": 3,
+    "complete": true,
+    "failure": null,
+    "input": "holistic/transients-valid/damping/03.json",
+    "sha256": "2296138cb5feb3626c4709d320d1b324bc9469de175a1e935f03593c0d655000",
+    "lqi_target_tas_m_s": 4.4,
+    "steps": {
+      "climb": {
+        "rise_10_90_s": 16.10000000000001,
+        "settling_s": 22.17000000001822,
+        "iae_m_s": 142.5898600238334,
+        "overshoot_m": 0.0,
+        "final_error_m": -0.22643520546039497,
+        "mean_speed_m_s": 4.366112982061804,
+        "throttle_ceiling_fraction": 0.0,
+        "max_relative_pitch_rate_deg_s": 31.592292603405017
+      },
+      "descent": {
+        "rise_10_90_s": 15.999999999999986,
+        "settling_s": 20.860000000109196,
+        "iae_m_s": 134.85675403862447,
+        "overshoot_m": 0.30347032105657235,
+        "final_error_m": -0.21121101463619277,
+        "mean_speed_m_s": 4.379418722093345,
+        "throttle_ceiling_fraction": 0.0,
+        "max_relative_pitch_rate_deg_s": 29.06125362114691
+      }
+    },
+    "gusts": {
+      "vertical": {
+        "peak_height_excursion_m": 3.838991603067022,
+        "altitude_iae_m_s": 36.1599621594721,
+        "peak_pitch_excursion_deg": 13.165861078779564,
+        "recovery_after_off_s": 21.470000000204664,
+        "relative_pitch_rate_rms_deg_s": 7.692951529160797,
+        "final_height_error_m": -0.2833741027820267
+      },
+      "crosswind": {
+        "peak_height_excursion_m": 0.641619386887406,
+        "altitude_iae_m_s": 3.3188944709285897,
+        "peak_pitch_excursion_deg": 10.026405308704057,
+        "recovery_after_off_s": 3.3700000002410775,
+        "relative_pitch_rate_rms_deg_s": 2.2215731151798175,
+        "final_height_error_m": -0.230173145372909
+      }
+    },
+    "settled_after_s": 50.96999999995364,
+    "initial_error_m": -0.21603005663513386,
+    "mean_truth_speed_m_s": 4.37559673010885,
+    "mean_pitot_eas_m_s": 4.2318500991316,
+    "mean_tecs_speed_error_m_s": -4.231479655691551,
+    "full_brake_longest_s": 0.0,
+    "max_pitch_deg": 17.7535142142373
+  },
+  {
+    "variant": "damping",
+    "case": 13,
+    "complete": true,
+    "failure": null,
+    "input": "holistic/transients-valid/damping/13.json",
+    "sha256": "1ae2de3092d1209bb0fa4ddb7eed4e69cd012fcc0aa80445e38032612201dd53",
+    "lqi_target_tas_m_s": 4.4,
+    "steps": {
+      "climb": {
+        "rise_10_90_s": 16.10000000000001,
+        "settling_s": 22.12500000001826,
+        "iae_m_s": 142.48223481825895,
+        "overshoot_m": 0.0,
+        "final_error_m": -0.2282736201939339,
+        "mean_speed_m_s": 4.365750275023063,
+        "throttle_ceiling_fraction": 0.0,
+        "max_relative_pitch_rate_deg_s": 41.50754567713325
+      },
+      "descent": {
+        "rise_10_90_s": 15.999999999999986,
+        "settling_s": 20.925000000109222,
+        "iae_m_s": 135.80844409784777,
+        "overshoot_m": 0.3030751015052573,
+        "final_error_m": -0.21173459337153971,
+        "mean_speed_m_s": 4.379230272159928,
+        "throttle_ceiling_fraction": 0.0,
+        "max_relative_pitch_rate_deg_s": 38.44831431523167
+      }
+    },
+    "gusts": {
+      "vertical": {
+        "peak_height_excursion_m": 3.832452893131773,
+        "altitude_iae_m_s": 36.03664611521485,
+        "peak_pitch_excursion_deg": 13.068058337147093,
+        "recovery_after_off_s": 21.445000000204686,
+        "relative_pitch_rate_rms_deg_s": 10.873237178249436,
+        "final_height_error_m": -0.2859012855432397
+      },
+      "crosswind": {
+        "peak_height_excursion_m": 0.6270235577252308,
+        "altitude_iae_m_s": 3.2337454740882303,
+        "peak_pitch_excursion_deg": 9.76526050776934,
+        "recovery_after_off_s": 2.62500000024113,
+        "relative_pitch_rate_rms_deg_s": 4.151247771680119,
+        "final_height_error_m": -0.23018130009915438
+      }
+    },
+    "settled_after_s": 51.494999999953166,
+    "initial_error_m": -0.21340810313866854,
+    "mean_truth_speed_m_s": 4.375416702941282,
+    "mean_pitot_eas_m_s": 4.232145812503251,
+    "mean_tecs_speed_error_m_s": -4.23245020896485,
+    "full_brake_longest_s": 0.0,
+    "max_pitch_deg": 17.49165300924758
+  }
+]

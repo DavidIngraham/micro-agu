@@ -1,0 +1,462 @@
+{
+  "fixed_gain_max_absolute_difference": 0.0,
+  "shaft_power_native_max_error": 5.684341886080802e-14,
+  "runs": [
+    {
+      "path": "fixed/full/results/09-lqi.json",
+      "complete": true,
+      "airspeed_use": 1.0,
+      "mode": 2
+    },
+    {
+      "path": "fixed/full/results/01-lqi.json",
+      "complete": true,
+      "airspeed_use": 1.0,
+      "mode": 2
+    },
+    {
+      "path": "fixed/full/results/00-lqi.json",
+      "complete": true,
+      "airspeed_use": 1.0,
+      "mode": 2
+    },
+    {
+      "path": "fixed/full/results/06-lqi.json",
+      "complete": true,
+      "airspeed_use": 1.0,
+      "mode": 2
+    },
+    {
+      "path": "fixed/angles/results/09-lqi.json",
+      "complete": true,
+      "airspeed_use": 1.0,
+      "mode": 1
+    },
+    {
+      "path": "fixed/angles/results/01-lqi.json",
+      "complete": true,
+      "airspeed_use": 1.0,
+      "mode": 1
+    },
+    {
+      "path": "fixed/angles/results/00-lqi.json",
+      "complete": true,
+      "airspeed_use": 1.0,
+      "mode": 1
+    },
+    {
+      "path": "fixed/angles/results/06-lqi.json",
+      "complete": true,
+      "airspeed_use": 1.0,
+      "mode": 1
+    },
+    {
+      "path": "fixed/sensor/results/08-lqi.json",
+      "complete": true,
+      "airspeed_use": 1.0,
+      "mode": 3
+    },
+    {
+      "path": "fixed/sensor/results/15-lqi.json",
+      "complete": true,
+      "airspeed_use": 1.0,
+      "mode": 3
+    },
+    {
+      "path": "fixed/sensor/results/12-lqi.json",
+      "complete": true,
+      "airspeed_use": 1.0,
+      "mode": 3
+    },
+    {
+      "path": "fixed/sensor/results/13-lqi.json",
+      "complete": true,
+      "airspeed_use": 1.0,
+      "mode": 3
+    },
+    {
+      "path": "fixed/sensor/results/14-lqi.json",
+      "complete": true,
+      "airspeed_use": 1.0,
+      "mode": 3
+    },
+    {
+      "path": "fixed/sensor/results/09-lqi.json",
+      "complete": true,
+      "airspeed_use": 1.0,
+      "mode": 3
+    },
+    {
+      "path": "fixed/sensor/results/02-lqi.json",
+      "complete": true,
+      "airspeed_use": 1.0,
+      "mode": 3
+    },
+    {
+      "path": "fixed/sensor/results/05-lqi.json",
+      "complete": true,
+      "airspeed_use": 1.0,
+      "mode": 3
+    },
+    {
+      "path": "fixed/sensor/results/07-lqi.json",
+      "complete": true,
+      "airspeed_use": 1.0,
+      "mode": 3
+    },
+    {
+      "path": "fixed/sensor/results/03-lqi.json",
+      "complete": true,
+      "airspeed_use": 1.0,
+      "mode": 3
+    },
+    {
+      "path": "fixed/sensor/results/01-lqi.json",
+      "complete": true,
+      "airspeed_use": 1.0,
+      "mode": 3
+    },
+    {
+      "path": "fixed/sensor/results/10-lqi.json",
+      "complete": true,
+      "airspeed_use": 1.0,
+      "mode": 3
+    },
+    {
+      "path": "fixed/sensor/results/00-lqi.json",
+      "complete": true,
+      "airspeed_use": 1.0,
+      "mode": 3
+    },
+    {
+      "path": "fixed/sensor/results/11-lqi.json",
+      "complete": true,
+      "airspeed_use": 1.0,
+      "mode": 3
+    },
+    {
+      "path": "fixed/sensor/results/04-lqi.json",
+      "complete": true,
+      "airspeed_use": 1.0,
+      "mode": 3
+    },
+    {
+      "path": "fixed/sensor/results/06-lqi.json",
+      "complete": true,
+      "airspeed_use": 1.0,
+      "mode": 3
+    },
+    {
+      "path": "fixed/airspeed/results/08-lqi.json",
+      "complete": true,
+      "airspeed_use": 1.0,
+      "mode": 0
+    },
+    {
+      "path": "fixed/airspeed/results/15-lqi.json",
+      "complete": true,
+      "airspeed_use": 1.0,
+      "mode": 0
+    },
+    {
+      "path": "fixed/airspeed/results/12-lqi.json",
+      "complete": true,
+      "airspeed_use": 1.0,
+      "mode": 0
+    },
+    {
+      "path": "fixed/airspeed/results/13-lqi.json",
+      "complete": true,
+      "airspeed_use": 1.0,
+      "mode": 0
+    },
+    {
+      "path": "fixed/airspeed/results/14-lqi.json",
+      "complete": true,
+      "airspeed_use": 1.0,
+      "mode": 0
+    },
+    {
+      "path": "fixed/airspeed/results/09-lqi.json",
+      "complete": true,
+      "airspeed_use": 1.0,
+      "mode": 0
+    },
+    {
+      "path": "fixed/airspeed/results/02-lqi.json",
+      "complete": true,
+      "airspeed_use": 1.0,
+      "mode": 0
+    },
+    {
+      "path": "fixed/airspeed/results/05-lqi.json",
+      "complete": true,
+      "airspeed_use": 1.0,
+      "mode": 0
+    },
+    {
+      "path": "fixed/airspeed/results/07-lqi.json",
+      "complete": true,
+      "airspeed_use": 1.0,
+      "mode": 0
+    },
+    {
+      "path": "fixed/airspeed/results/03-lqi.json",
+      "complete": true,
+      "airspeed_use": 1.0,
+      "mode": 0
+    },
+    {
+      "path": "fixed/airspeed/results/01-lqi.json",
+      "complete": true,
+      "airspeed_use": 1.0,
+      "mode": 0
+    },
+    {
+      "path": "fixed/airspeed/results/10-lqi.json",
+      "complete": true,
+      "airspeed_use": 1.0,
+      "mode": 0
+    },
+    {
+      "path": "fixed/airspeed/results/00-lqi.json",
+      "complete": true,
+      "airspeed_use": 1.0,
+      "mode": 0
+    },
+    {
+      "path": "fixed/airspeed/results/11-lqi.json",
+      "complete": true,
+      "airspeed_use": 1.0,
+      "mode": 0
+    },
+    {
+      "path": "fixed/airspeed/results/04-lqi.json",
+      "complete": true,
+      "airspeed_use": 1.0,
+      "mode": 0
+    },
+    {
+      "path": "fixed/airspeed/results/06-lqi.json",
+      "complete": true,
+      "airspeed_use": 1.0,
+      "mode": 0
+    },
+    {
+      "path": "fixed/sensorless/results/08-lqi.json",
+      "complete": true,
+      "airspeed_use": 0.0,
+      "mode": 0
+    },
+    {
+      "path": "fixed/sensorless/results/15-lqi.json",
+      "complete": true,
+      "airspeed_use": 0.0,
+      "mode": 0
+    },
+    {
+      "path": "fixed/sensorless/results/12-lqi.json",
+      "complete": true,
+      "airspeed_use": 0.0,
+      "mode": 0
+    },
+    {
+      "path": "fixed/sensorless/results/13-lqi.json",
+      "complete": true,
+      "airspeed_use": 0.0,
+      "mode": 0
+    },
+    {
+      "path": "fixed/sensorless/results/14-lqi.json",
+      "complete": true,
+      "airspeed_use": 0.0,
+      "mode": 0
+    },
+    {
+      "path": "fixed/sensorless/results/09-lqi.json",
+      "complete": true,
+      "airspeed_use": 0.0,
+      "mode": 0
+    },
+    {
+      "path": "fixed/sensorless/results/02-lqi.json",
+      "complete": true,
+      "airspeed_use": 0.0,
+      "mode": 0
+    },
+    {
+      "path": "fixed/sensorless/results/05-lqi.json",
+      "complete": true,
+      "airspeed_use": 0.0,
+      "mode": 0
+    },
+    {
+      "path": "fixed/sensorless/results/07-lqi.json",
+      "complete": true,
+      "airspeed_use": 0.0,
+      "mode": 0
+    },
+    {
+      "path": "fixed/sensorless/results/03-lqi.json",
+      "complete": true,
+      "airspeed_use": 0.0,
+      "mode": 0
+    },
+    {
+      "path": "fixed/sensorless/results/01-lqi.json",
+      "complete": true,
+      "airspeed_use": 0.0,
+      "mode": 0
+    },
+    {
+      "path": "fixed/sensorless/results/10-lqi.json",
+      "complete": true,
+      "airspeed_use": 0.0,
+      "mode": 0
+    },
+    {
+      "path": "fixed/sensorless/results/00-lqi.json",
+      "complete": true,
+      "airspeed_use": 0.0,
+      "mode": 0
+    },
+    {
+      "path": "fixed/sensorless/results/11-lqi.json",
+      "complete": true,
+      "airspeed_use": 0.0,
+      "mode": 0
+    },
+    {
+      "path": "fixed/sensorless/results/04-lqi.json",
+      "complete": true,
+      "airspeed_use": 0.0,
+      "mode": 0
+    },
+    {
+      "path": "fixed/sensorless/results/06-lqi.json",
+      "complete": true,
+      "airspeed_use": 0.0,
+      "mode": 0
+    },
+    {
+      "path": "efficient/sensor/results/09-lqi.json",
+      "complete": true,
+      "airspeed_use": 1.0,
+      "mode": 3
+    },
+    {
+      "path": "efficient/sensor/results/01-lqi.json",
+      "complete": true,
+      "airspeed_use": 1.0,
+      "mode": 3
+    },
+    {
+      "path": "efficient/sensor/results/00-lqi.json",
+      "complete": true,
+      "airspeed_use": 1.0,
+      "mode": 3
+    },
+    {
+      "path": "efficient/sensor/results/06-lqi.json",
+      "complete": true,
+      "airspeed_use": 1.0,
+      "mode": 3
+    },
+    {
+      "path": "damping/sensor/results/08-lqi.json",
+      "complete": true,
+      "airspeed_use": 1.0,
+      "mode": 3
+    },
+    {
+      "path": "damping/sensor/results/15-lqi.json",
+      "complete": true,
+      "airspeed_use": 1.0,
+      "mode": 3
+    },
+    {
+      "path": "damping/sensor/results/12-lqi.json",
+      "complete": true,
+      "airspeed_use": 1.0,
+      "mode": 3
+    },
+    {
+      "path": "damping/sensor/results/13-lqi.json",
+      "complete": true,
+      "airspeed_use": 1.0,
+      "mode": 3
+    },
+    {
+      "path": "damping/sensor/results/14-lqi.json",
+      "complete": true,
+      "airspeed_use": 1.0,
+      "mode": 3
+    },
+    {
+      "path": "damping/sensor/results/09-lqi.json",
+      "complete": true,
+      "airspeed_use": 1.0,
+      "mode": 3
+    },
+    {
+      "path": "damping/sensor/results/02-lqi.json",
+      "complete": true,
+      "airspeed_use": 1.0,
+      "mode": 3
+    },
+    {
+      "path": "damping/sensor/results/05-lqi.json",
+      "complete": true,
+      "airspeed_use": 1.0,
+      "mode": 3
+    },
+    {
+      "path": "damping/sensor/results/07-lqi.json",
+      "complete": true,
+      "airspeed_use": 1.0,
+      "mode": 3
+    },
+    {
+      "path": "damping/sensor/results/03-lqi.json",
+      "complete": true,
+      "airspeed_use": 1.0,
+      "mode": 3
+    },
+    {
+      "path": "damping/sensor/results/01-lqi.json",
+      "complete": true,
+      "airspeed_use": 1.0,
+      "mode": 3
+    },
+    {
+      "path": "damping/sensor/results/10-lqi.json",
+      "complete": true,
+      "airspeed_use": 1.0,
+      "mode": 3
+    },
+    {
+      "path": "damping/sensor/results/00-lqi.json",
+      "complete": true,
+      "airspeed_use": 1.0,
+      "mode": 3
+    },
+    {
+      "path": "damping/sensor/results/11-lqi.json",
+      "complete": true,
+      "airspeed_use": 1.0,
+      "mode": 3
+    },
+    {
+      "path": "damping/sensor/results/04-lqi.json",
+      "complete": true,
+      "airspeed_use": 1.0,
+      "mode": 3
+    },
+    {
+      "path": "damping/sensor/results/06-lqi.json",
+      "complete": true,
+      "airspeed_use": 1.0,
+      "mode": 3
+    }
+  ]
+}

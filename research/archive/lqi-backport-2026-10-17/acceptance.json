@@ -1,0 +1,63 @@
+{
+  "local": {
+    "accepted": true,
+    "reasons": [],
+    "comparisons": {
+      "training": {
+        "score": -22.78695903282323,
+        "energy": -13.24598671810473,
+        "acquisition_time": -0.6211180124223947,
+        "climb_peak": -80.14311346185784,
+        "descent_peak": -80.4215663800666,
+        "acquisition": 2.9996192564588853,
+        "descent": 7.1107730991837315,
+        "updraft": -2.25797949232297,
+        "crosswind": -56.068847469454376
+      },
+      "validation": {
+        "score": -20.16906782026723,
+        "energy": -2.4295874035891676,
+        "acquisition_time": -0.31055900621118626,
+        "climb_peak": -83.82416226340283,
+        "descent_peak": -83.2950909640258,
+        "acquisition": 2.2784729740416787,
+        "descent": 8.021011487914853,
+        "updraft": -1.3811961309434906,
+        "crosswind": -26.164458680100637
+      }
+    }
+  },
+  "deployed": {
+    "accepted": false,
+    "reasons": [
+      "training crosswind regression >20%",
+      "validation score improves less than 5%",
+      "validation crosswind regression >20%",
+      "CRUISE shaft power regression >5%"
+    ],
+    "comparisons": {
+      "training": {
+        "score": -11.91142700521921,
+        "energy": -0.6738258070835834,
+        "acquisition_time": -0.6211180124223503,
+        "climb_peak": -85.84640216479099,
+        "descent_peak": -85.07321445760188,
+        "acquisition": -15.526336328150748,
+        "descent": -11.026971369196703,
+        "updraft": 2.780022152959205,
+        "crosswind": 136.1896219993778
+      },
+      "validation": {
+        "score": -2.648670955966043,
+        "energy": 2.1428784259925893,
+        "acquisition_time": -0.619200981519813,
+        "climb_peak": -83.20854651120938,
+        "descent_peak": -83.16745736586921,
+        "acquisition": 0.02215869070016363,
+        "descent": 5.659230691854189,
+        "updraft": 1.0166545865664012,
+        "crosswind": 76.43523209008208
+      }
+    }
+  }
+}

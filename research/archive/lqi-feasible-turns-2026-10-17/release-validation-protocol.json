@@ -1,0 +1,118 @@
+{
+  "cases": [
+    {
+      "id": 106,
+      "sign": 1,
+      "scales": {
+        "Cmq": 1.0522202556432771,
+        "joint_c_pitch": 1.1256307724569918,
+        "joint_c_roll": 1.2793253304675964,
+        "joint_c_yaw": 0.8820395440382317,
+        "CLbrake": 1.1133362944183136,
+        "CDbrake": 0.7803684903345269
+      },
+      "brakeRateScale": 0.9892969691620599,
+      "wind": 0.5791222950754917,
+      "turbulence": 0.3587177680365171,
+      "seed": 1344430834,
+      "weatherOffRecovery": true
+    },
+    {
+      "id": 107,
+      "sign": -1,
+      "scales": {
+        "Cmq": 1.2560946159247437,
+        "joint_c_pitch": 1.2689156395707224,
+        "joint_c_roll": 1.2579056693526576,
+        "joint_c_yaw": 0.8099339577919223,
+        "CLbrake": 1.0188312264740447,
+        "CDbrake": 1.228342877009053
+      },
+      "brakeRateScale": 0.808854260827211,
+      "wind": 1.504191619029,
+      "turbulence": 0.33633446341996176,
+      "seed": 2022459120,
+      "weatherOffRecovery": true
+    },
+    {
+      "id": 108,
+      "sign": 1,
+      "scales": {
+        "Cmq": 0.8333728096691757,
+        "joint_c_pitch": 1.1899193544263547,
+        "joint_c_roll": 1.0638292013479158,
+        "joint_c_yaw": 0.8312647036372577,
+        "CLbrake": 1.0923899685176646,
+        "CDbrake": 0.8192595774620506
+      },
+      "brakeRateScale": 0.821571733477099,
+      "wind": 1.7654804112270415,
+      "turbulence": 0.18102867984401702,
+      "seed": 242636544,
+      "weatherOffRecovery": true
+    },
+    {
+      "id": 109,
+      "sign": -1,
+      "scales": {
+        "Cmq": 1.1627645059946508,
+        "joint_c_pitch": 1.0628676106516002,
+        "joint_c_roll": 0.7847231327647306,
+        "joint_c_yaw": 0.8380621618002617,
+        "CLbrake": 1.1535778683636524,
+        "CDbrake": 0.8867969531270343
+      },
+      "brakeRateScale": 0.8907881638756121,
+      "wind": 1.7917992955128486,
+      "turbulence": 0.1144981413639842,
+      "seed": 2279820549,
+      "weatherOffRecovery": true
+    },
+    {
+      "id": 110,
+      "sign": 1,
+      "scales": {
+        "Cmq": 1.2348224564068464,
+        "joint_c_pitch": 1.1340148357149984,
+        "joint_c_roll": 0.8991648950785809,
+        "joint_c_yaw": 1.1950286484273185,
+        "CLbrake": 0.9004978124507771,
+        "CDbrake": 0.7334852104615993
+      },
+      "brakeRateScale": 0.8045965482710582,
+      "wind": 1.5590775437308726,
+      "turbulence": 0.4272977442704784,
+      "seed": 3091131795,
+      "weatherOffRecovery": true
+    },
+    {
+      "id": 111,
+      "sign": -1,
+      "scales": {
+        "Cmq": 0.7800034894360776,
+        "joint_c_pitch": 1.2327447271403336,
+        "joint_c_roll": 0.719405051402437,
+        "joint_c_yaw": 1.1778105474948275,
+        "CLbrake": 1.2694917991261505,
+        "CDbrake": 1.203348671834573
+      },
+      "brakeRateScale": 1.0360725505374855,
+      "wind": 1.2927354187797242,
+      "turbulence": 0.3100065771057884,
+      "seed": 2970010163,
+      "weatherOffRecovery": true
+    }
+  ],
+  "candidate": {
+    "CP3_AWMODE": 1,
+    "CP3_TMAP": 1,
+    "CP3_OBSTRIM": 1
+  },
+  "rates": [
+    25,
+    40
+  ],
+  "firmware_sha256": "969cdc57ab522b8f13bed94b6cbb36085ff91a2caaa75426fadebedfe2bf391e",
+  "gates": "Retain every original score.py gate. All candidate cases must pass before production integration or push. Weather removed only at t=200; final ten seconds independently assess unforced recovery. Failures block release; do not relax thresholds after results. If disturbance gate passes, proceed to transition checks and production command/table bounds.",
+  "baseline": "Matched reference at 25 deg/s for attribution, not a waiver of candidate failures."
+}

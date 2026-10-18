@@ -1,8 +1,0 @@
-{
-  "error": null,
-  "normal_route": true,
-  "normal_launch": false,
-  "airborne_preparation": true,
-  "controller": "rate-soft",
-  "binary_sha256": "2f0335244603ea79fd35d38ba5f68c6c755fd5f40663490f9b4bb1ff4979599d"
-}

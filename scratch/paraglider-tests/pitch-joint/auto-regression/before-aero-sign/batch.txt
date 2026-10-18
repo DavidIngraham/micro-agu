@@ -1,5 +1,0 @@
-joint-calm-g0 0
-joint-calm-g0.2 0
-joint-wind-g0 1
-joint-wind-g0.2 1
-rigid-wind-g0.2 1

@@ -1,0 +1,502 @@
+{
+  "selected": "responsive_softspeed",
+  "candidates": {
+    "balanced": {
+      "reasons": [
+        "energy regression >5%"
+      ],
+      "changes": {
+        "score": {
+          "median": -34.96220685187474,
+          "minimum": -39.262704848201665,
+          "maximum": -23.707400693638412,
+          "improved": 6
+        },
+        "energy": {
+          "median": 12.497827327019262,
+          "minimum": -7.78064692641407,
+          "maximum": 18.48692508772305,
+          "improved": 2
+        },
+        "acquisition_time": {
+          "median": -0.619200981519813,
+          "minimum": -1.2345679012345845,
+          "maximum": 0.0,
+          "improved": 5
+        },
+        "acquisition": {
+          "median": -11.326009340964216,
+          "minimum": -23.186942194789317,
+          "maximum": 0.10692349089671538,
+          "improved": 5
+        },
+        "descent": {
+          "median": -11.618056488251483,
+          "minimum": -23.166231710848894,
+          "maximum": -0.36654986959810953,
+          "improved": 6
+        },
+        "updraft": {
+          "median": -25.68076320319463,
+          "minimum": -26.83116121877749,
+          "maximum": -23.842175044708615,
+          "improved": 6
+        },
+        "crosswind": {
+          "median": -79.2558901635218,
+          "minimum": -84.88713291911253,
+          "maximum": -5.482041488084343,
+          "improved": 6
+        }
+      },
+      "rank": 0.6445310498706247
+    },
+    "damped": {
+      "reasons": [
+        "energy regression >5%"
+      ],
+      "changes": {
+        "score": {
+          "median": -24.528211146207283,
+          "minimum": -33.55071926699649,
+          "maximum": -13.736468607499852,
+          "improved": 6
+        },
+        "energy": {
+          "median": 9.436932148407022,
+          "minimum": -6.233347995759464,
+          "maximum": 23.613845857846293,
+          "improved": 3
+        },
+        "acquisition_time": {
+          "median": -1.2345679012345845,
+          "minimum": -2.4539877300613355,
+          "maximum": -0.6172839506172978,
+          "improved": 6
+        },
+        "acquisition": {
+          "median": -11.468447284037996,
+          "minimum": -23.79049241608491,
+          "maximum": -0.5284359464419075,
+          "improved": 6
+        },
+        "descent": {
+          "median": -6.584935314480311,
+          "minimum": -20.497986676346557,
+          "maximum": 6.099876390307202,
+          "improved": 4
+        },
+        "updraft": {
+          "median": 3.2374197792458093,
+          "minimum": 0.5300662016320734,
+          "maximum": 5.003356230285783,
+          "improved": 0
+        },
+        "crosswind": {
+          "median": -79.18885321629429,
+          "minimum": -81.93631351995253,
+          "maximum": -3.5569464138434204,
+          "improved": 6
+        }
+      },
+      "rank": 0.7308657542546744
+    },
+    "efficient": {
+      "reasons": [
+        "energy regression >5%"
+      ],
+      "changes": {
+        "score": {
+          "median": -33.449102836908764,
+          "minimum": -39.03377349536967,
+          "maximum": -26.298157549718116,
+          "improved": 6
+        },
+        "energy": {
+          "median": 5.469719300487041,
+          "minimum": -20.185511693854053,
+          "maximum": 15.740320452749756,
+          "improved": 2
+        },
+        "acquisition_time": {
+          "median": -0.6172839506172811,
+          "minimum": -1.8404907975459905,
+          "maximum": 0.0,
+          "improved": 4
+        },
+        "acquisition": {
+          "median": -10.70491805091578,
+          "minimum": -24.11538908533457,
+          "maximum": 0.20386817745936536,
+          "improved": 5
+        },
+        "descent": {
+          "median": -11.173201633807217,
+          "minimum": -22.711967325431527,
+          "maximum": 4.426273074922071,
+          "improved": 5
+        },
+        "updraft": {
+          "median": -26.05211945398392,
+          "minimum": -29.72099472016495,
+          "maximum": -25.696349601390477,
+          "improved": 6
+        },
+        "crosswind": {
+          "median": -76.98541513130601,
+          "minimum": -81.40268590029801,
+          "maximum": 18.587463026709262,
+          "improved": 5
+        }
+      },
+      "rank": 0.6393170337951679
+    },
+    "efficient_brake10k": {
+      "reasons": [],
+      "changes": {
+        "score": {
+          "median": -34.08285323468391,
+          "minimum": -40.97750864823154,
+          "maximum": -27.472099938570928,
+          "improved": 6
+        },
+        "energy": {
+          "median": 3.2485793051164946,
+          "minimum": -17.156801932151012,
+          "maximum": 6.042366843570046,
+          "improved": 1
+        },
+        "acquisition_time": {
+          "median": -0.6172839506173033,
+          "minimum": -1.2345679012345845,
+          "maximum": 2.220446049250313e-14,
+          "improved": 5
+        },
+        "acquisition": {
+          "median": -11.575714326756547,
+          "minimum": -23.615149919056666,
+          "maximum": -0.5075884185611668,
+          "improved": 6
+        },
+        "descent": {
+          "median": -11.504314792735904,
+          "minimum": -22.9010850530888,
+          "maximum": -0.8425579047658394,
+          "improved": 6
+        },
+        "updraft": {
+          "median": -26.931862196408417,
+          "minimum": -29.02136191381014,
+          "maximum": -26.01134934599313,
+          "improved": 6
+        },
+        "crosswind": {
+          "median": -77.13917608522726,
+          "minimum": -79.56045706651787,
+          "maximum": -7.356539618396496,
+          "improved": 6
+        }
+      },
+      "rank": 0.6313056934276908
+    },
+    "filtered": {
+      "reasons": [
+        "energy regression >5%",
+        "climb mean true speed drops >10%",
+        "descent mean true speed drops >10%"
+      ],
+      "changes": {
+        "score": {
+          "median": -26.41587325160592,
+          "minimum": -31.96913698466076,
+          "maximum": -16.268677076504712,
+          "improved": 6
+        },
+        "energy": {
+          "median": 13.540184030995873,
+          "minimum": -20.742093707029362,
+          "maximum": 29.110225088796682,
+          "improved": 1
+        },
+        "acquisition_time": {
+          "median": -1.238401963039637,
+          "minimum": -2.4539877300613133,
+          "maximum": -0.6172839506172978,
+          "improved": 6
+        },
+        "acquisition": {
+          "median": -15.560530144331608,
+          "minimum": -24.280954107422005,
+          "maximum": 1.449886464655492,
+          "improved": 5
+        },
+        "descent": {
+          "median": -13.155137437178293,
+          "minimum": -20.675506806919408,
+          "maximum": 1.7160155709777802,
+          "improved": 4
+        },
+        "updraft": {
+          "median": 2.8282408461533626,
+          "minimum": 0.8310150855483478,
+          "maximum": 5.672983645580132,
+          "improved": 0
+        },
+        "crosswind": {
+          "median": -78.76807806349058,
+          "minimum": -81.49082902884753,
+          "maximum": 2.6842958475223444,
+          "improved": 5
+        }
+      },
+      "rank": 0.7299610592916084
+    },
+    "relative": {
+      "reasons": [
+        "energy regression >5%",
+        "descent mean true speed drops >10%"
+      ],
+      "changes": {
+        "score": {
+          "median": -24.265892047801497,
+          "minimum": -30.786674822247374,
+          "maximum": -15.903957778862631,
+          "improved": 6
+        },
+        "energy": {
+          "median": 9.216812783144295,
+          "minimum": -20.85669164612388,
+          "maximum": 27.75177281263943,
+          "improved": 3
+        },
+        "acquisition_time": {
+          "median": -0.9278429568284563,
+          "minimum": -2.4539877300613355,
+          "maximum": 0.0,
+          "improved": 5
+        },
+        "acquisition": {
+          "median": -10.851638451179468,
+          "minimum": -21.622841079382336,
+          "maximum": 1.1559325017320266,
+          "improved": 5
+        },
+        "descent": {
+          "median": -5.0636225349025565,
+          "minimum": -19.021547710420595,
+          "maximum": 2.4485403569488584,
+          "improved": 3
+        },
+        "updraft": {
+          "median": 4.124129384072106,
+          "minimum": 0.46854255002015677,
+          "maximum": 4.683162142547137,
+          "improved": 0
+        },
+        "crosswind": {
+          "median": -80.9460198344859,
+          "minimum": -83.26992664869415,
+          "maximum": -18.37840448949457,
+          "improved": 6
+        }
+      },
+      "rank": 0.7319919696467041
+    },
+    "responsive": {
+      "reasons": [
+        "energy regression >5%",
+        "descent mean true speed drops >10%"
+      ],
+      "changes": {
+        "score": {
+          "median": -40.34278446033015,
+          "minimum": -43.1303498455446,
+          "maximum": -33.95075980910916,
+          "improved": 6
+        },
+        "energy": {
+          "median": 9.67094906052985,
+          "minimum": -22.102604491148405,
+          "maximum": 28.602122960902456,
+          "improved": 3
+        },
+        "acquisition_time": {
+          "median": -1.1102230246251565e-14,
+          "minimum": -1.2345679012345845,
+          "maximum": 1.242236024844745,
+          "improved": 3
+        },
+        "acquisition": {
+          "median": -9.762878875202908,
+          "minimum": -23.445669755545772,
+          "maximum": -0.08874790522631626,
+          "improved": 6
+        },
+        "descent": {
+          "median": -10.432585830666152,
+          "minimum": -24.808302439031806,
+          "maximum": -0.4396308576339991,
+          "improved": 6
+        },
+        "updraft": {
+          "median": -47.33548781994516,
+          "minimum": -49.09579585395279,
+          "maximum": -45.206114043098275,
+          "improved": 6
+        },
+        "crosswind": {
+          "median": -80.80361830015475,
+          "minimum": -84.03199775130842,
+          "maximum": -17.448065918091938,
+          "improved": 6
+        }
+      },
+      "rank": 0.5984758318421511
+    },
+    "responsive_brake10k": {
+      "reasons": [],
+      "changes": {
+        "score": {
+          "median": -39.56008024190399,
+          "minimum": -45.0451985971703,
+          "maximum": -32.45030341231123,
+          "improved": 6
+        },
+        "energy": {
+          "median": 4.622782678021742,
+          "minimum": -20.482390123012863,
+          "maximum": 6.850605884122651,
+          "improved": 1
+        },
+        "acquisition_time": {
+          "median": -0.6172839506173033,
+          "minimum": -1.2269938650306456,
+          "maximum": 0.6211180124223725,
+          "improved": 4
+        },
+        "acquisition": {
+          "median": -11.79022311974982,
+          "minimum": -24.551576584152247,
+          "maximum": -0.2425054352057976,
+          "improved": 6
+        },
+        "descent": {
+          "median": -14.723638567502583,
+          "minimum": -25.59976415870683,
+          "maximum": 0.4024789234766901,
+          "improved": 5
+        },
+        "updraft": {
+          "median": -46.728990275946984,
+          "minimum": -47.94180552782529,
+          "maximum": -45.52203516299882,
+          "improved": 6
+        },
+        "crosswind": {
+          "median": -80.2283891022004,
+          "minimum": -83.18700557461895,
+          "maximum": 14.428874044053996,
+          "improved": 5
+        }
+      },
+      "rank": 0.5762582207881094
+    },
+    "responsive_brake3k": {
+      "reasons": [],
+      "changes": {
+        "score": {
+          "median": -41.65385830918933,
+          "minimum": -44.14710856990567,
+          "maximum": -37.74363543235179,
+          "improved": 6
+        },
+        "energy": {
+          "median": 1.8501733109268614,
+          "minimum": -20.824751873214996,
+          "maximum": 14.089024624348024,
+          "improved": 1
+        },
+        "acquisition_time": {
+          "median": -0.6192009815198407,
+          "minimum": -1.2345679012345845,
+          "maximum": 0.0,
+          "improved": 5
+        },
+        "acquisition": {
+          "median": -15.673885368369088,
+          "minimum": -23.92571982482187,
+          "maximum": -2.2444605732588108,
+          "improved": 6
+        },
+        "descent": {
+          "median": -18.448430808817797,
+          "minimum": -25.475404467405504,
+          "maximum": -2.2713479929035607,
+          "improved": 6
+        },
+        "updraft": {
+          "median": -47.34234574690495,
+          "minimum": -48.03949757355171,
+          "maximum": -45.74521465915253,
+          "improved": 6
+        },
+        "crosswind": {
+          "median": -79.82123436926722,
+          "minimum": -81.06404003194632,
+          "maximum": -12.299515989754994,
+          "improved": 6
+        }
+      },
+      "rank": 0.5713739298231456
+    },
+    "responsive_softspeed": {
+      "reasons": [],
+      "changes": {
+        "score": {
+          "median": -40.706056343319304,
+          "minimum": -47.62464386667968,
+          "maximum": -33.80536421725877,
+          "improved": 6
+        },
+        "energy": {
+          "median": 1.6083646199349766,
+          "minimum": -20.580514185035327,
+          "maximum": 2.4665939172781925,
+          "improved": 1
+        },
+        "acquisition_time": {
+          "median": -3.3306690738754696e-14,
+          "minimum": -0.6172839506173089,
+          "maximum": 0.6211180124223725,
+          "improved": 4
+        },
+        "acquisition": {
+          "median": -11.476231417226117,
+          "minimum": -24.24971547575845,
+          "maximum": 0.17263955948205734,
+          "improved": 5
+        },
+        "descent": {
+          "median": -13.873736285075822,
+          "minimum": -26.855152167242334,
+          "maximum": -3.787385013115163,
+          "improved": 6
+        },
+        "updraft": {
+          "median": -46.88717480575687,
+          "minimum": -47.913997328225065,
+          "maximum": -46.41264702675008,
+          "improved": 6
+        },
+        "crosswind": {
+          "median": -80.41917211381971,
+          "minimum": -84.03631967512854,
+          "maximum": -12.761460020307835,
+          "improved": 6
+        }
+      },
+      "rank": 0.5649384884684902
+    }
+  },
+  "rule": "Training only; operational, task, energy and worst-quarter gates before 50% mean + 50% worst score ranking."
+}

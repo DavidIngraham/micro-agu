@@ -1,0 +1,33 @@
+{
+  "id": 15,
+  "mode": "CRUISE",
+  "speedup": 8,
+  "wind": 1.2321065308929933,
+  "from": 190.15433438572953,
+  "weather": {
+    "turbulence": 0.2337806789777389,
+    "thermalStrength": 1.4336184698072998,
+    "thermalRadius": 60,
+    "thermalNorth": 300,
+    "thermalEast": 0,
+    "seed": 555717123
+  },
+  "scales": {
+    "Cmq": 0.9498922798684947,
+    "joint_c_pitch": 0.7874886806897878,
+    "joint_c_roll": 0.713577156009272,
+    "joint_c_yaw": 1.2693168784275786,
+    "CLbrake": 1.0243947026580646,
+    "CDbrake": 0.9074357772554357
+  },
+  "brakeRateScale": 0.8973769285120765,
+  "parameters": {
+    "ARSPD_TYPE": 100,
+    "ARSPD_USE": 1,
+    "ARSPD_SKIP_CAL": 1,
+    "ARSPD_OFFSET": 0,
+    "ARSPD_RATIO": 1.99,
+    "SIM_ARSPD_RATIO": 1.99,
+    "SIM_ARSPD_RND": 2
+  }
+}

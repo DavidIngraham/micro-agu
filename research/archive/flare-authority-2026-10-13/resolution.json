@@ -1,0 +1,34 @@
+[
+  {
+    "name": "check-glide-current",
+    "entry": "glide",
+    "height": 1.1,
+    "pull": 95,
+    "rate": 100,
+    "dt": 0.01
+  },
+  {
+    "name": "check-glide-faster",
+    "entry": "glide",
+    "height": 1,
+    "pull": 95,
+    "rate": 150,
+    "dt": 0.01
+  },
+  {
+    "name": "check-release-current",
+    "entry": "release",
+    "height": 1.1,
+    "pull": 95,
+    "rate": 100,
+    "dt": 0.01
+  },
+  {
+    "name": "check-release-faster",
+    "entry": "release",
+    "height": 1,
+    "pull": 95,
+    "rate": 150,
+    "dt": 0.01
+  }
+]

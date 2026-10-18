@@ -1,0 +1,38 @@
+{
+  "selected": "smooth07",
+  "baseline_score": 0.9628335603140743,
+  "candidates": {
+    "smooth03": {
+      "score": 0.5728962849231647,
+      "reasons": [],
+      "improvement_pct": 40.498928523400544
+    },
+    "smooth07": {
+      "score": 0.5398599973026861,
+      "reasons": [],
+      "improvement_pct": 43.930081007294255
+    },
+    "smooth07_damped": {
+      "score": 0.543891459976831,
+      "reasons": [
+        "descent median regression >20%"
+      ],
+      "improvement_pct": 43.511372848344145
+    },
+    "smooth07_fastobs": {
+      "score": 0.590538599543103,
+      "reasons": [
+        "descent median regression >20%"
+      ],
+      "improvement_pct": 38.666595776899335
+    },
+    "smooth12": {
+      "score": 0.4742887258273051,
+      "reasons": [
+        "descent median regression >20%"
+      ],
+      "improvement_pct": 50.74032051057785
+    }
+  },
+  "rule": "Training only: complete/settled, operational gates, no >20% median task or energy regression vs matched fixed. Rank 50% mean + 50% worst case of dimensional loss, require >=5% improvement."
+}

@@ -1,0 +1,17 @@
+{
+  "ardupilot_commit": "c44434dee6d68340fa463c0341d245f77451cd19",
+  "micro_agu_parent": "a5e0fabf8199eb5243619db8b271b376f02a51c4",
+  "files": {
+    "/home/david/repos/ardupilot-high-dof/Tools/simulation/paraglider/dynamics.cpp": "1093c4641a4c248b468fb3152d28d9270a003b1ec56a1e3f5b7f1b8bceedfdf6",
+    "/home/david/repos/ardupilot-high-dof/Tools/simulation/paraglider/libdynamics.so": "19d488f1d1dc3867e831607cb8b506296db3ed051e615b4566c19afce877092e",
+    "/home/david/repos/ardupilot-high-dof/Tools/simulation/paraglider/simulator.py": "09438d19415d1f1232a5a8b62c012c99eb4b543cecedc186eedaf4b2c11a757a",
+    "/home/david/repos/ardupilot-high-dof/Tools/simulation/paraglider/parameters.json": "408ced75e166d8ad20b7684cd3d3fa9d0c66712fd6a9216983b29f42f58adb1a",
+    "/home/david/repos/ardupilot-high-dof/Tools/simulation/paraglider/modal-calibration.json": "8d8153b5c500612dad12d07c3c368d8b7b7a4f928e2b8db96f0b03056e8c8649",
+    "/home/david/repos/ardupilot-high-dof/Tools/simulation/paraglider/cad_geometry.py": "09ed218349fbdafea3f47c2c4b67c49636e7393e0eda6a9438be8d58a25ccac3",
+    "/home/david/repos/ardupilot-high-dof/Tools/simulation/paraglider/profiles.py": "e3beaace39e5b867e25b3b0505251e5eaef962d6c99734717a7eb37d05c107fb",
+    "/home/david/repos/ardupilot-high-dof/Tools/simulation/paraglider/actuator.py": "1b1dbc9d47cf09807c272d6ea137751c7194a9921544609d439bf75179c6ab2a",
+    "/mnt/c/Users/davin/OneDrive/Documentos/Mission Planner/analysis/longitudinal-2026-10-09/turn-model-spike/2026-01-03-causal-input.npz": "dd031fd90680d626f48f3ba3a30b69d5c6af5f7781431b55b6b1dc894af305ec",
+    "/mnt/c/Users/davin/OneDrive/Documentos/Mission Planner/analysis/longitudinal-2026-10-09/turn-model-spike/2026-01-03.npz": "3b4918f359882e84eb7151bd0135ed2fce9620f04b227c85822342883271da87"
+  },
+  "raw_directory": "/mnt/c/Users/davin/OneDrive/Documentos/Mission Planner/analysis/spiral-authority-2026-10-13"
+}

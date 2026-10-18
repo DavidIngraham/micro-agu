@@ -1,5 +1,5 @@
 from pathlib import Path
-import ast, re, json, hashlib
+import ast, re, json, hashlib, tarfile
 import numpy as np
 from scipy.linalg import solve_discrete_are
 from scipy.spatial.transform import Rotation
@@ -42,7 +42,15 @@ for k in range(401):
  if k%5==0:observer.append([round(t,3),float(x[3]*10),float(prediction[3]*10),float(estimate[3]*10),float(residual[1]*10)])
 replay={};sources={}
 for scheme in ['lqi','baseline']:
- p=r/f'research/lqi-longitudinal-2026-10-17/runs/heldout-0-{scheme}.json';raw=p.read_bytes();d=json.loads(raw);sources[scheme]={'file':str(p.relative_to(r)),'sha256':hashlib.sha256(raw).hexdigest(),'spec':d['spec']}
+ p=r/f'research/archive/lqi-longitudinal-2026-10-17/runs/heldout-0-{scheme}.json'
+ if p.exists():
+  raw=p.read_bytes()
+ else:
+  with tarfile.open(p.parent.parent/'raw-runs.tar.gz','r:gz') as archive:
+   member=archive.extractfile('runs/'+p.name)
+   if member is None:raise FileNotFoundError(p.name)
+   raw=member.read()
+ d=json.loads(raw);sources[scheme]={'file':str(p.relative_to(r)),'sha256':hashlib.sha256(raw).hexdigest(),'spec':d['spec']}
  rows=[]
  for s in d['samples'][::5]:
   state=s['truth'];rot=Rotation.from_quat(state[3:7]);relrate=rot.inv().apply(np.array(state[23:26])-state[10:13])[1]*180/np.pi

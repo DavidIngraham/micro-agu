@@ -1,9 +1,0 @@
-{
-  "config": {
-    "name": "joint-z-0.25-g0",
-    "joint": 1,
-    "gain": 0,
-    "model": "joint-thrust0.25.json"
-  },
-  "start": 137.26500000000001
-}

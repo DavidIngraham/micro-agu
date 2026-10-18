@@ -1,0 +1,33 @@
+{
+  "rates": [
+    30,
+    35,
+    40,
+    45,
+    50
+  ],
+  "parameters": {
+    "CP3_AWMODE": 1
+  },
+  "cases": [
+    {
+      "id": 0,
+      "sign": 1,
+      "scales": {},
+      "brakeRateScale": 1,
+      "wind": 0,
+      "turbulence": 0,
+      "seed": 1375099246
+    },
+    {
+      "id": 1,
+      "sign": -1,
+      "scales": {},
+      "brakeRateScale": 1,
+      "wind": 0,
+      "turbulence": 0,
+      "seed": 1227417296
+    }
+  ],
+  "stop": "First original gate failure. Do not test 60: local linear analysis already identifies unstable nodes there. Exploratory nominal envelope only."
+}

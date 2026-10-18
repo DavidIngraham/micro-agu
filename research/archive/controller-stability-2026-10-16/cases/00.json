@@ -1,0 +1,17 @@
+{
+  "id": 0,
+  "mode": "AUTO",
+  "speedup": 8,
+  "wind": 1,
+  "from": 90,
+  "weather": {
+    "turbulence": 0.2,
+    "thermalStrength": 1.5,
+    "thermalRadius": 60,
+    "thermalNorth": 300,
+    "thermalEast": 0,
+    "seed": 572942860
+  },
+  "scales": {},
+  "brakeRateScale": 1
+}

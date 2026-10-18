@@ -1,8 +1,0 @@
-{
-  "name": "rigid-rampwind-g0.2",
-  "joint": false,
-  "gain": 0.2,
-  "wind": 3,
-  "turbulence": 0.5,
-  "wind_ramp_s": 30
-}

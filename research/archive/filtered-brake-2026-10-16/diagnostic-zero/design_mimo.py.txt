@@ -1,0 +1,231 @@
+"""Generate a three-input LQI and onboard-measurement observer from Rust physics.
+
+AI-assisted. This is controller synthesis, not flight qualification. Commands are
+throttle, common brake and signed differential brake, all normalized. No archived
+experiment is imported. Run with simulation/.venv/bin/python.
+"""
+from __future__ import annotations
+
+import argparse
+import hashlib
+import json
+from pathlib import Path
+
+import numpy as np
+from scipy.linalg import solve_discrete_are
+from scipy.optimize import least_squares
+from scipy.spatial.transform import Rotation
+
+from microagu_sim import compat, _native
+from microagu_sim.compat.profiles import make_simulator
+from microagu_sim.compat.equilibrium import difference, perturb
+
+DT = 0.02
+STROKES = np.array([1300, 1500]) * np.pi * 55 / 360 * 0.1
+XS = np.r_[np.full(5, np.deg2rad(10)), np.full(3, 0.5),
+           np.full(6, np.deg2rad(30)), 1.0, 1.0]
+US = np.array([0.1, 0.1, 0.1])
+
+
+def command(u):
+    throttle, common, differential = u
+    return np.r_[throttle, STROKES * (common + np.maximum([-differential, differential], 0))]
+
+
+class Chart:
+    """Heading-invariant 16-state chart, with body-frame velocities and rates."""
+
+    def __init__(self, sim, state, rpm):
+        self.sim, self.base, self.rpm = sim, state.copy(), rpm
+        self.base[13:16] -= self.base[:3]
+        self.base[:3] = 0
+        payload = Rotation.from_quat(state[3:7])
+        canopy = Rotation.from_quat(state[16:20])
+        self.euler = payload.as_euler('xyz')
+        self.relative = payload.inv() * canopy
+        self.velocity = payload.inv().apply(state[7:10])
+        self.payload_rates = payload.inv().apply(state[10:13])
+        self.canopy_rates = canopy.inv().apply(state[23:26])
+
+    def decode(self, x):
+        payload = Rotation.from_euler('xyz', self.euler + np.r_[x[:2], 0])
+        canopy = payload * self.relative * Rotation.from_rotvec(x[2:5])
+        state = self.base.copy()
+        state[2] = -x[15]
+        state[3:7], state[16:20] = payload.as_quat(), canopy.as_quat()
+        state[7:10] = payload.apply(self.velocity + x[5:8])
+        state[10:13] = payload.apply(self.payload_rates + x[8:11])
+        state[23:26] = canopy.apply(self.canopy_rates + x[11:14])
+        arm_payload = payload.apply(self.sim.geometry['hinge'])
+        arm_canopy = canopy.apply([0, 0, 0.85])
+        state[13:16] = state[:3] + arm_payload - arm_canopy
+        state[20:23] = (state[7:10] + np.cross(state[10:13], arm_payload)
+                        - np.cross(state[23:26], arm_canopy))
+        return state, self.rpm + 1000 * x[14]
+
+    def encode(self, state, rpm):
+        payload = Rotation.from_quat(state[3:7])
+        canopy = Rotation.from_quat(state[16:20])
+        return np.r_[payload.as_euler('xyz')[:2] - self.euler[:2],
+                     (self.relative.inv() * payload.inv() * canopy).as_rotvec(),
+                     payload.inv().apply(state[7:10]) - self.velocity,
+                     payload.inv().apply(state[10:13]) - self.payload_rates,
+                     canopy.inv().apply(state[23:26]) - self.canopy_rates,
+                     (rpm - self.rpm) / 1000, -state[2]]
+
+
+def trim(sim, voltage=22.2, common=0.0):
+    seed = np.load(Path(compat.__file__).parent / 'equilibrium-trim-trout_lake-0.0-0.0.npz')
+    base = seed['state'].copy()
+
+    def unpack(x):
+        state = perturb(base, x[:15], sim.geometry)
+        u = np.array([x[15], common, x[16]])
+        rpm = 743.5778222336925 * voltage * max(u[0] - 0.0005141016498671315, 0) ** 0.9086807307118114
+        return state, u, rpm
+
+    def residual(x):
+        state, u, rpm = unpack(x)
+        next_state, _ = sim.step(state, rpm, command(u), voltage=voltage, dt=0.004)
+        return np.r_[difference(state, next_state) / 0.004, state[9],
+                     Rotation.from_quat(state[3:7]).as_euler('xyz')[2]]
+
+    fit = least_squares(residual, np.r_[np.zeros(15), 0.4, 0.02],
+                        bounds=(np.r_[np.full(15, -3), 0.01, -0.3],
+                                np.r_[np.full(15, 3), 0.8, 0.3]),
+                        max_nfev=300, ftol=1e-11, xtol=1e-11, gtol=1e-10)
+    error = float(np.max(np.abs(residual(fit.x))))
+    if not fit.success or error > 1e-6:
+        raise RuntimeError(f'trim failed: {fit.message}, residual {error}')
+    return (*unpack(fit.x), error)
+
+
+def jacobian(function, value, epsilon=1e-5):
+    return np.column_stack([(function(value + delta) - function(value - delta)) / (2 * epsilon)
+                            for delta in np.eye(len(value)) * epsilon])
+
+
+def design(output, common=0.0, common_effort=1000.0, pitch_weight=30.0,
+           brake_memory_weight=0.0, brake_memory_tau=3.0, diagnostics=False):
+    sim = make_simulator('trout_lake', 'as_built')
+    sim.substeps = 16
+    state, u, rpm, residual = trim(sim, common=common)
+    chart = Chart(sim, state, rpm)
+
+    def advance(x, control):
+        y, rotor = chart.decode(x)
+        y, rotor = sim.step(y, rotor, command(control), dt=DT)
+        return chart.encode(y, rotor)
+
+    def targets(x):
+        y, _ = chart.decode(x)
+        roll, pitch = Rotation.from_quat(y[3:7]).as_euler('xyz')[:2]
+        rates = chart.payload_rates + x[8:11]
+        heading_rate = (rates[1] * np.sin(roll) + rates[2] * np.cos(roll)) / np.cos(pitch)
+        return np.array([-y[2], heading_rate, np.linalg.norm(y[7:10])])
+
+    zero = np.zeros(16)
+    a = jacobian(lambda x: advance(x, u), zero)
+    # At released brake, never evaluate an impossible negative brake command.
+    b = np.column_stack([
+        (advance(zero, u + step) - advance(zero, u)) / 1e-5
+        if common == 0 and i == 1 else
+        (advance(zero, u + step) - advance(zero, u - step)) / 2e-5
+        for i, step in enumerate(np.eye(3) * 1e-5)])
+    c = jacobian(targets, zero)
+    an = a * XS[None, :] / XS[:, None]
+    bn = b * US[None, :] / XS[:, None]
+    target_scales = np.array([1, np.deg2rad(10), 0.5])
+    h = c * XS[None, :] / target_scales[:, None]
+    aa = np.eye(20)
+    aa[:16, :16], aa[16:19, :16] = an, DT * h
+    memory_decay = np.exp(-DT / brake_memory_tau)
+    aa[19, 19] = memory_decay
+    bb = np.zeros((20, 3))
+    bb[:16] = bn
+    bb[19, 1] = 1 - memory_decay
+    q = np.diag(np.r_[np.full(16, 0.02), [3, 3, 3], brake_memory_weight])
+    q[:16, :16] += h.T @ h
+    # Penalize payload and canopy pitch-rate excursions as well as tracking.
+    q[9, 9] += pitch_weight
+    q[12, 12] += pitch_weight
+    effort = np.diag([1000, common_effort, 1000])
+    p = solve_discrete_are(aa, bb, q, effort)
+    k = np.linalg.solve(effort + bb.T @ p @ bb, bb.T @ p @ aa)
+    # Feasible local equilibrium feed-forward: height, turn, airspeed, climb.
+    # Climb is a ramp in the height coordinate rather than a static equilibrium.
+    equilibrium = np.block([[np.eye(16) - an, -bn], [h, np.zeros((3, 3))]])
+    rhs = np.zeros((19, 4))
+    rhs[16:, :3] = np.eye(3)
+    rhs[15, 3] = -DT / XS[15]
+    reference_map = np.linalg.solve(equilibrium, rhs)
+    antiwindup = np.linalg.inv(US[:, None] * k[:, 16:19])
+    poles = np.linalg.eigvals(aa - bb @ k)
+    if np.max(np.abs(poles)) >= 1:
+        raise RuntimeError('unstable LQI synthesis')
+    # Observer consumes payload attitude, body air velocity, body gyro, height.
+    measured = [0, 1, 5, 6, 7, 8, 9, 10, 15]
+    measurement = np.eye(16)[measured]
+    noise = np.diag(np.square(np.r_[np.full(2, np.deg2rad(1)), np.full(3, 0.2),
+                                  np.full(3, np.deg2rad(1)), 0.3] / XS[measured]))
+    covariance = solve_discrete_are(an.T, measurement.T, np.eye(16) * 1e-5, noise)
+    gain = np.linalg.solve(measurement @ covariance @ measurement.T + noise,
+                           measurement @ covariance).T
+    observer_poles = np.linalg.eigvals((np.eye(16) - gain @ measurement) @ an)
+    if np.max(np.abs(observer_poles)) >= 1:
+        raise RuntimeError('unstable observer synthesis')
+    output.mkdir(parents=True, exist_ok=True)
+    np.savez(output / 'design.npz', A=an, B=bn, K=k, L=gain, H=h, XS=XS, US=US,
+             state=state, rpm=rpm, command=u, measured=measured, AA=aa, BB=bb, Q=q, R=effort)
+    arrays = dict(A=an, B=bn, K=k, L=gain, XS=XS, US=US, TRIM=u,
+                  XREF=reference_map[:16], UREF=reference_map[16:], AW=antiwindup,
+                  EULER=chart.euler, VELOCITY=chart.velocity, RATES=chart.payload_rates)
+    lines = ['// Generated by microAGU simulation/tools/design_mimo.py. AI-assisted.',
+             '// Regenerate from the as-built Rust model; do not edit matrices by hand.',
+             '#pragma once', f'#define MICROAGU_LQI_DIAGNOSTICS {int(diagnostics)}',
+             'namespace MicroAGU_LQI {', 'static constexpr float DT = 0.02f;',
+             f'static constexpr float BRAKE_MEMORY_DECAY = {memory_decay:.9e}f;']
+    for name, values in arrays.items():
+        shape = ''.join(f'[{size}]' for size in values.shape)
+        def initializer(value):
+            if value.ndim:
+                return '{' + ', '.join(initializer(item) for item in value) + '}'
+            number = f'{float(value):.9e}'
+            return number + 'f'
+        lines.append(f'static constexpr float {name}{shape} = {initializer(values)};')
+    lines.append('} // namespace MicroAGU_LQI')
+    (output / 'AP_CustomControl_LQI_gains.h').write_text('\n'.join(lines) + '\n')
+    report = dict(dt=DT, profile='as_built', riser_spacing_m=0.132,
+                  common_trim=common, common_effort=common_effort, pitch_weight=pitch_weight,
+                  brake_memory_weight=brake_memory_weight, brake_memory_tau=brake_memory_tau,
+                  diagnostics=diagnostics,
+                  common_derivative='right-sided' if common == 0 else 'central',
+                  trim_residual=residual, trim_command=u.tolist(),
+                  trim_speed_mps=float(targets(zero)[2]),
+                  controller_max_pole=float(max(abs(poles))),
+                  observer_max_pole=float(max(abs(observer_poles))),
+                  zero_drift=float(np.linalg.norm(advance(zero, u))),
+                  generator_sha256=hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
+                  native_sha256=hashlib.sha256(Path(_native.__file__).read_bytes()).hexdigest(),
+                  calibration_sha256=hashlib.sha256(
+                      (Path(compat.__file__).parent / 'as-built-calibration.json').read_bytes()).hexdigest(),
+                  note='Local synthesis checks only; nonlinear and native EKF validation required.')
+    (output / 'design.json').write_text(json.dumps(report, indent=2) + '\n')
+    print(json.dumps(report, indent=2))
+
+
+if __name__ == '__main__':
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--output', type=Path, required=True)
+    parser.add_argument('--common-trim', type=float, default=0.0)
+    parser.add_argument('--common-effort', type=float, default=1000.0)
+    parser.add_argument('--pitch-weight', type=float, default=30.0)
+    parser.add_argument('--brake-memory-weight', type=float, default=0.0)
+    parser.add_argument('--brake-memory-tau', type=float, default=3.0)
+    parser.add_argument('--diagnostics', action='store_true')
+    args = parser.parse_args()
+    if (not 0 <= args.common_trim <= 0.3 or args.common_effort <= 0 or args.pitch_weight < 0
+            or args.brake_memory_weight < 0 or args.brake_memory_tau <= 0):
+        parser.error('invalid trim or cost weight')
+    design(args.output, args.common_trim, args.common_effort, args.pitch_weight,
+           args.brake_memory_weight, args.brake_memory_tau, args.diagnostics)

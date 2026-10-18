@@ -1,0 +1,66 @@
+[
+  {
+    "scheme": "lqi",
+    "rate": 10,
+    "right": 10.927090689112788,
+    "left": -9.888767720528882,
+    "nominal_passes": 2,
+    "cases": 2
+  },
+  {
+    "scheme": "lqi",
+    "rate": 12,
+    "right": 13.632712230941022,
+    "left": -11.924851552681439,
+    "nominal_passes": 2,
+    "cases": 2
+  },
+  {
+    "scheme": "lqi",
+    "rate": 13,
+    "right": 14.995072710480008,
+    "left": -12.95843925745011,
+    "nominal_passes": 0,
+    "cases": 2
+  },
+  {
+    "scheme": "lqi",
+    "rate": 15,
+    "right": 17.728360015703412,
+    "left": -15.059414214549115,
+    "nominal_passes": 0,
+    "cases": 2
+  },
+  {
+    "scheme": "lqi",
+    "rate": 20,
+    "right": 24.633607441790705,
+    "left": -20.259673199499115,
+    "nominal_passes": 0,
+    "cases": 2
+  },
+  {
+    "scheme": "lqi",
+    "rate": 25,
+    "right": 31.566269372322534,
+    "left": -25.685948911997926,
+    "nominal_passes": 0,
+    "cases": 2
+  },
+  {
+    "scheme": "baseline",
+    "rate": 15,
+    "right": 15.127659909929662,
+    "left": -15.170485864925956,
+    "nominal_passes": 2,
+    "cases": 2
+  },
+  {
+    "scheme": "baseline",
+    "rate": 25,
+    "right": 25.273040105433342,
+    "left": -24.925303375913668,
+    "nominal_passes": 2,
+    "cases": 2
+  }
+]

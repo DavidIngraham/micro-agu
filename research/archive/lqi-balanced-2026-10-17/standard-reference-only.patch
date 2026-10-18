@@ -1,0 +1,11 @@
+--- a/libraries/AP_TECS/AP_TECS_Paraglider.cpp
++++ b/libraries/AP_TECS/AP_TECS_Paraglider.cpp
+@@ -93,7 +93,7 @@
+ 
+     // Slew-limit the altitude trajectory
+     const float up_step_max = MAX(_climb_rate_limit, 0.0f) * _DT;
+-    const float dn_step_max = MAX(_sink_rate_limit, 0.0f) * _DT;
++    const float dn_step_max = MIN(MAX(_sink_rate_limit, 0.0f), 1.0f) * _DT; // SITL study reference cap
+ 
+     float step = hgt_in - _hgt_dem_rate_ltd;
+     step = constrain_float(step, -dn_step_max, up_step_max);

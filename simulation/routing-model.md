@@ -8,4 +8,4 @@ Measured/CAD anchors: 132 mm slot-center spacing, 91 mm guide spacing, guides 22
 
 Exploratory pitch/yaw damping is 2.5 times legacy. The fit hit the search boundary and cannot establish a physical damping value. Matching the corrected spacing and fitted support product leaves the current rig's yaw stiffness unchanged. Wider-rig yaw stiffness scales by 185/132. Canopy and induced-drag hypotheses are applied separately in the study; wide_research holds aerodynamics fixed.
 
-Study: micro-agu/research/rigging-refinement-2026-10-15. Tests check disabled-mode exact parity, geometric symmetry and rotation invariance, slack engagement and integration convergence. The data are reused development flights, not independent validation. Firmware/estimator integration of this research profile has not been flight-tested.
+Study: micro-agu/research/archive/rigging-refinement-2026-10-15. Tests check disabled-mode exact parity, geometric symmetry and rotation invariance, slack engagement and integration convergence. The data are reused development flights, not independent validation. Firmware/estimator integration of this research profile has not been flight-tested.

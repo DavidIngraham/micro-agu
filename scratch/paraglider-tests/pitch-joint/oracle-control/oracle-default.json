@@ -1,7 +1,0 @@
-{
-  "name": "oracle-default",
-  "damper": 0,
-  "ka": -2,
-  "kr": 0.2,
-  "parameters": {}
-}

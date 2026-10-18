@@ -1,0 +1,658 @@
+[
+  {
+    "name": "robust-glide-current-nominal",
+    "entry": "glide",
+    "height": 1.1,
+    "pull": 95,
+    "rate": 100,
+    "setting": "current",
+    "condition": "nominal"
+  },
+  {
+    "name": "robust-glide-current-weaker",
+    "entry": "glide",
+    "height": 1.1,
+    "pull": 95,
+    "rate": 100,
+    "setting": "current",
+    "condition": "weaker",
+    "lift": 0.75,
+    "drag": 1.25
+  },
+  {
+    "name": "robust-glide-current-pessimistic",
+    "entry": "glide",
+    "height": 1.1,
+    "pull": 95,
+    "rate": 100,
+    "setting": "current",
+    "condition": "pessimistic",
+    "lift": 0.5,
+    "drag": 1.5
+  },
+  {
+    "name": "robust-glide-current-gust0",
+    "entry": "glide",
+    "height": 1.1,
+    "pull": 95,
+    "rate": 100,
+    "setting": "current",
+    "condition": "gust0",
+    "gust": 0.5,
+    "phase": 0
+  },
+  {
+    "name": "robust-glide-current-gust2",
+    "entry": "glide",
+    "height": 1.1,
+    "pull": 95,
+    "rate": 100,
+    "setting": "current",
+    "condition": "gust2",
+    "gust": 0.5,
+    "phase": 2
+  },
+  {
+    "name": "robust-glide-current-gust4",
+    "entry": "glide",
+    "height": 1.1,
+    "pull": 95,
+    "rate": 100,
+    "setting": "current",
+    "condition": "gust4",
+    "gust": 0.5,
+    "phase": 4
+  },
+  {
+    "name": "robust-glide-current-early_error",
+    "entry": "glide",
+    "height": 1.3,
+    "pull": 95,
+    "rate": 100,
+    "setting": "current",
+    "condition": "early_error"
+  },
+  {
+    "name": "robust-glide-current-late_error",
+    "entry": "glide",
+    "height": 0.9000000000000001,
+    "pull": 95,
+    "rate": 100,
+    "setting": "current",
+    "condition": "late_error"
+  },
+  {
+    "name": "robust-glide-full-nominal",
+    "entry": "glide",
+    "height": 1.1,
+    "pull": 100,
+    "rate": 100,
+    "setting": "full",
+    "condition": "nominal"
+  },
+  {
+    "name": "robust-glide-full-weaker",
+    "entry": "glide",
+    "height": 1.1,
+    "pull": 100,
+    "rate": 100,
+    "setting": "full",
+    "condition": "weaker",
+    "lift": 0.75,
+    "drag": 1.25
+  },
+  {
+    "name": "robust-glide-full-pessimistic",
+    "entry": "glide",
+    "height": 1.1,
+    "pull": 100,
+    "rate": 100,
+    "setting": "full",
+    "condition": "pessimistic",
+    "lift": 0.5,
+    "drag": 1.5
+  },
+  {
+    "name": "robust-glide-full-gust0",
+    "entry": "glide",
+    "height": 1.1,
+    "pull": 100,
+    "rate": 100,
+    "setting": "full",
+    "condition": "gust0",
+    "gust": 0.5,
+    "phase": 0
+  },
+  {
+    "name": "robust-glide-full-gust2",
+    "entry": "glide",
+    "height": 1.1,
+    "pull": 100,
+    "rate": 100,
+    "setting": "full",
+    "condition": "gust2",
+    "gust": 0.5,
+    "phase": 2
+  },
+  {
+    "name": "robust-glide-full-gust4",
+    "entry": "glide",
+    "height": 1.1,
+    "pull": 100,
+    "rate": 100,
+    "setting": "full",
+    "condition": "gust4",
+    "gust": 0.5,
+    "phase": 4
+  },
+  {
+    "name": "robust-glide-full-early_error",
+    "entry": "glide",
+    "height": 1.3,
+    "pull": 100,
+    "rate": 100,
+    "setting": "full",
+    "condition": "early_error"
+  },
+  {
+    "name": "robust-glide-full-late_error",
+    "entry": "glide",
+    "height": 0.9000000000000001,
+    "pull": 100,
+    "rate": 100,
+    "setting": "full",
+    "condition": "late_error"
+  },
+  {
+    "name": "robust-glide-earlier-nominal",
+    "entry": "glide",
+    "height": 1.5,
+    "pull": 95,
+    "rate": 100,
+    "setting": "earlier",
+    "condition": "nominal"
+  },
+  {
+    "name": "robust-glide-earlier-weaker",
+    "entry": "glide",
+    "height": 1.5,
+    "pull": 95,
+    "rate": 100,
+    "setting": "earlier",
+    "condition": "weaker",
+    "lift": 0.75,
+    "drag": 1.25
+  },
+  {
+    "name": "robust-glide-earlier-pessimistic",
+    "entry": "glide",
+    "height": 1.5,
+    "pull": 95,
+    "rate": 100,
+    "setting": "earlier",
+    "condition": "pessimistic",
+    "lift": 0.5,
+    "drag": 1.5
+  },
+  {
+    "name": "robust-glide-earlier-gust0",
+    "entry": "glide",
+    "height": 1.5,
+    "pull": 95,
+    "rate": 100,
+    "setting": "earlier",
+    "condition": "gust0",
+    "gust": 0.5,
+    "phase": 0
+  },
+  {
+    "name": "robust-glide-earlier-gust2",
+    "entry": "glide",
+    "height": 1.5,
+    "pull": 95,
+    "rate": 100,
+    "setting": "earlier",
+    "condition": "gust2",
+    "gust": 0.5,
+    "phase": 2
+  },
+  {
+    "name": "robust-glide-earlier-gust4",
+    "entry": "glide",
+    "height": 1.5,
+    "pull": 95,
+    "rate": 100,
+    "setting": "earlier",
+    "condition": "gust4",
+    "gust": 0.5,
+    "phase": 4
+  },
+  {
+    "name": "robust-glide-earlier-early_error",
+    "entry": "glide",
+    "height": 1.7,
+    "pull": 95,
+    "rate": 100,
+    "setting": "earlier",
+    "condition": "early_error"
+  },
+  {
+    "name": "robust-glide-earlier-late_error",
+    "entry": "glide",
+    "height": 1.3,
+    "pull": 95,
+    "rate": 100,
+    "setting": "earlier",
+    "condition": "late_error"
+  },
+  {
+    "name": "robust-glide-faster-nominal",
+    "entry": "glide",
+    "height": 1.0,
+    "pull": 95,
+    "rate": 150,
+    "setting": "faster",
+    "condition": "nominal"
+  },
+  {
+    "name": "robust-glide-faster-weaker",
+    "entry": "glide",
+    "height": 1.0,
+    "pull": 95,
+    "rate": 150,
+    "setting": "faster",
+    "condition": "weaker",
+    "lift": 0.75,
+    "drag": 1.25
+  },
+  {
+    "name": "robust-glide-faster-pessimistic",
+    "entry": "glide",
+    "height": 1.0,
+    "pull": 95,
+    "rate": 150,
+    "setting": "faster",
+    "condition": "pessimistic",
+    "lift": 0.5,
+    "drag": 1.5
+  },
+  {
+    "name": "robust-glide-faster-gust0",
+    "entry": "glide",
+    "height": 1.0,
+    "pull": 95,
+    "rate": 150,
+    "setting": "faster",
+    "condition": "gust0",
+    "gust": 0.5,
+    "phase": 0
+  },
+  {
+    "name": "robust-glide-faster-gust2",
+    "entry": "glide",
+    "height": 1.0,
+    "pull": 95,
+    "rate": 150,
+    "setting": "faster",
+    "condition": "gust2",
+    "gust": 0.5,
+    "phase": 2
+  },
+  {
+    "name": "robust-glide-faster-gust4",
+    "entry": "glide",
+    "height": 1.0,
+    "pull": 95,
+    "rate": 150,
+    "setting": "faster",
+    "condition": "gust4",
+    "gust": 0.5,
+    "phase": 4
+  },
+  {
+    "name": "robust-glide-faster-early_error",
+    "entry": "glide",
+    "height": 1.2,
+    "pull": 95,
+    "rate": 150,
+    "setting": "faster",
+    "condition": "early_error"
+  },
+  {
+    "name": "robust-glide-faster-late_error",
+    "entry": "glide",
+    "height": 0.8,
+    "pull": 95,
+    "rate": 150,
+    "setting": "faster",
+    "condition": "late_error"
+  },
+  {
+    "name": "robust-release-current-nominal",
+    "entry": "release",
+    "height": 1.1,
+    "pull": 95,
+    "rate": 100,
+    "setting": "current",
+    "condition": "nominal"
+  },
+  {
+    "name": "robust-release-current-weaker",
+    "entry": "release",
+    "height": 1.1,
+    "pull": 95,
+    "rate": 100,
+    "setting": "current",
+    "condition": "weaker",
+    "lift": 0.75,
+    "drag": 1.25
+  },
+  {
+    "name": "robust-release-current-pessimistic",
+    "entry": "release",
+    "height": 1.1,
+    "pull": 95,
+    "rate": 100,
+    "setting": "current",
+    "condition": "pessimistic",
+    "lift": 0.5,
+    "drag": 1.5
+  },
+  {
+    "name": "robust-release-current-gust0",
+    "entry": "release",
+    "height": 1.1,
+    "pull": 95,
+    "rate": 100,
+    "setting": "current",
+    "condition": "gust0",
+    "gust": 0.5,
+    "phase": 0
+  },
+  {
+    "name": "robust-release-current-gust2",
+    "entry": "release",
+    "height": 1.1,
+    "pull": 95,
+    "rate": 100,
+    "setting": "current",
+    "condition": "gust2",
+    "gust": 0.5,
+    "phase": 2
+  },
+  {
+    "name": "robust-release-current-gust4",
+    "entry": "release",
+    "height": 1.1,
+    "pull": 95,
+    "rate": 100,
+    "setting": "current",
+    "condition": "gust4",
+    "gust": 0.5,
+    "phase": 4
+  },
+  {
+    "name": "robust-release-current-early_error",
+    "entry": "release",
+    "height": 1.3,
+    "pull": 95,
+    "rate": 100,
+    "setting": "current",
+    "condition": "early_error"
+  },
+  {
+    "name": "robust-release-current-late_error",
+    "entry": "release",
+    "height": 0.9000000000000001,
+    "pull": 95,
+    "rate": 100,
+    "setting": "current",
+    "condition": "late_error"
+  },
+  {
+    "name": "robust-release-full-nominal",
+    "entry": "release",
+    "height": 1.1,
+    "pull": 100,
+    "rate": 100,
+    "setting": "full",
+    "condition": "nominal"
+  },
+  {
+    "name": "robust-release-full-weaker",
+    "entry": "release",
+    "height": 1.1,
+    "pull": 100,
+    "rate": 100,
+    "setting": "full",
+    "condition": "weaker",
+    "lift": 0.75,
+    "drag": 1.25
+  },
+  {
+    "name": "robust-release-full-pessimistic",
+    "entry": "release",
+    "height": 1.1,
+    "pull": 100,
+    "rate": 100,
+    "setting": "full",
+    "condition": "pessimistic",
+    "lift": 0.5,
+    "drag": 1.5
+  },
+  {
+    "name": "robust-release-full-gust0",
+    "entry": "release",
+    "height": 1.1,
+    "pull": 100,
+    "rate": 100,
+    "setting": "full",
+    "condition": "gust0",
+    "gust": 0.5,
+    "phase": 0
+  },
+  {
+    "name": "robust-release-full-gust2",
+    "entry": "release",
+    "height": 1.1,
+    "pull": 100,
+    "rate": 100,
+    "setting": "full",
+    "condition": "gust2",
+    "gust": 0.5,
+    "phase": 2
+  },
+  {
+    "name": "robust-release-full-gust4",
+    "entry": "release",
+    "height": 1.1,
+    "pull": 100,
+    "rate": 100,
+    "setting": "full",
+    "condition": "gust4",
+    "gust": 0.5,
+    "phase": 4
+  },
+  {
+    "name": "robust-release-full-early_error",
+    "entry": "release",
+    "height": 1.3,
+    "pull": 100,
+    "rate": 100,
+    "setting": "full",
+    "condition": "early_error"
+  },
+  {
+    "name": "robust-release-full-late_error",
+    "entry": "release",
+    "height": 0.9000000000000001,
+    "pull": 100,
+    "rate": 100,
+    "setting": "full",
+    "condition": "late_error"
+  },
+  {
+    "name": "robust-release-earlier-nominal",
+    "entry": "release",
+    "height": 1.5,
+    "pull": 95,
+    "rate": 100,
+    "setting": "earlier",
+    "condition": "nominal"
+  },
+  {
+    "name": "robust-release-earlier-weaker",
+    "entry": "release",
+    "height": 1.5,
+    "pull": 95,
+    "rate": 100,
+    "setting": "earlier",
+    "condition": "weaker",
+    "lift": 0.75,
+    "drag": 1.25
+  },
+  {
+    "name": "robust-release-earlier-pessimistic",
+    "entry": "release",
+    "height": 1.5,
+    "pull": 95,
+    "rate": 100,
+    "setting": "earlier",
+    "condition": "pessimistic",
+    "lift": 0.5,
+    "drag": 1.5
+  },
+  {
+    "name": "robust-release-earlier-gust0",
+    "entry": "release",
+    "height": 1.5,
+    "pull": 95,
+    "rate": 100,
+    "setting": "earlier",
+    "condition": "gust0",
+    "gust": 0.5,
+    "phase": 0
+  },
+  {
+    "name": "robust-release-earlier-gust2",
+    "entry": "release",
+    "height": 1.5,
+    "pull": 95,
+    "rate": 100,
+    "setting": "earlier",
+    "condition": "gust2",
+    "gust": 0.5,
+    "phase": 2
+  },
+  {
+    "name": "robust-release-earlier-gust4",
+    "entry": "release",
+    "height": 1.5,
+    "pull": 95,
+    "rate": 100,
+    "setting": "earlier",
+    "condition": "gust4",
+    "gust": 0.5,
+    "phase": 4
+  },
+  {
+    "name": "robust-release-earlier-early_error",
+    "entry": "release",
+    "height": 1.7,
+    "pull": 95,
+    "rate": 100,
+    "setting": "earlier",
+    "condition": "early_error"
+  },
+  {
+    "name": "robust-release-earlier-late_error",
+    "entry": "release",
+    "height": 1.3,
+    "pull": 95,
+    "rate": 100,
+    "setting": "earlier",
+    "condition": "late_error"
+  },
+  {
+    "name": "robust-release-faster-nominal",
+    "entry": "release",
+    "height": 1.0,
+    "pull": 95,
+    "rate": 150,
+    "setting": "faster",
+    "condition": "nominal"
+  },
+  {
+    "name": "robust-release-faster-weaker",
+    "entry": "release",
+    "height": 1.0,
+    "pull": 95,
+    "rate": 150,
+    "setting": "faster",
+    "condition": "weaker",
+    "lift": 0.75,
+    "drag": 1.25
+  },
+  {
+    "name": "robust-release-faster-pessimistic",
+    "entry": "release",
+    "height": 1.0,
+    "pull": 95,
+    "rate": 150,
+    "setting": "faster",
+    "condition": "pessimistic",
+    "lift": 0.5,
+    "drag": 1.5
+  },
+  {
+    "name": "robust-release-faster-gust0",
+    "entry": "release",
+    "height": 1.0,
+    "pull": 95,
+    "rate": 150,
+    "setting": "faster",
+    "condition": "gust0",
+    "gust": 0.5,
+    "phase": 0
+  },
+  {
+    "name": "robust-release-faster-gust2",
+    "entry": "release",
+    "height": 1.0,
+    "pull": 95,
+    "rate": 150,
+    "setting": "faster",
+    "condition": "gust2",
+    "gust": 0.5,
+    "phase": 2
+  },
+  {
+    "name": "robust-release-faster-gust4",
+    "entry": "release",
+    "height": 1.0,
+    "pull": 95,
+    "rate": 150,
+    "setting": "faster",
+    "condition": "gust4",
+    "gust": 0.5,
+    "phase": 4
+  },
+  {
+    "name": "robust-release-faster-early_error",
+    "entry": "release",
+    "height": 1.2,
+    "pull": 95,
+    "rate": 150,
+    "setting": "faster",
+    "condition": "early_error"
+  },
+  {
+    "name": "robust-release-faster-late_error",
+    "entry": "release",
+    "height": 0.8,
+    "pull": 95,
+    "rate": 150,
+    "setting": "faster",
+    "condition": "late_error"
+  }
+]

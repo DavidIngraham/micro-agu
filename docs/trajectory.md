@@ -28,9 +28,9 @@ Once those changes were in place, we reran the torture course and the raster cas
 | 40 m / 5 m/s from N | 576.7 s | 565.4 s | 99.26% / 100% |
 | 160 m / 10 m/s from N | 273.0 s | 248.3 s | 98.33% / 100% |
 
-![Latest torture comparison](../scratch/plane-trajectory/derived-settings/regression/torture-comparison.png)
+![Latest torture comparison](https://github.com/DavidIngraham/micro-agu/blob/archive/pre-layout-2026-10-18/scratch/plane-trajectory/derived-settings/regression/torture-comparison.png)
 
-![Latest raster comparison](../scratch/plane-trajectory/derived-settings/regression/raster-comparison.png)
+![Latest raster comparison](https://github.com/DavidIngraham/micro-agu/blob/archive/pre-layout-2026-10-18/scratch/plane-trajectory/derived-settings/regression/raster-comparison.png)
 
 I then wanted to know whether the improvements would survive gusts rather than just steady wind. We designed a Monte Carlo experiment with 24 paired scenarios: three courses, eight pairs per course, four weather strata and two replicates per stratum. All 48 flights completed; trajectory runs recorded three fallback events. Mean paired flight-time change was **−3.78%**, with bootstrap 95% interval **[−6.10%, −1.41%]**.
 
@@ -42,19 +42,19 @@ I then wanted to know whether the improvements would survive gusts rather than j
 
 These are medians of individual groups, not the paired percentage statistic. Weather targets were seeded, spatially uniform time-indexed gust schedules replayed on simulation time, with native SITL turbulence. Target schedules matched, but independent sensor/turbulence realizations are not guaranteed bit-identical. The local weather replay harness knows the prescribed weather; the production planner still receives EKF estimates.
 
-![Gust experiment performance](../scratch/plane-trajectory/derived-settings/monte-carlo/performance.png)
+![Gust experiment performance](https://github.com/DavidIngraham/micro-agu/blob/archive/pre-layout-2026-10-18/scratch/plane-trajectory/derived-settings/monte-carlo/performance.png)
 
-![Example gust tracks](../scratch/plane-trajectory/derived-settings/monte-carlo/gust-examples.png)
+![Example gust tracks](https://github.com/DavidIngraham/micro-agu/blob/archive/pre-layout-2026-10-18/scratch/plane-trajectory/derived-settings/monte-carlo/gust-examples.png)
 
 ## Validation and reproducibility
 
 The recorded production validation passed native waypoint tests, raster regression, 18 unit tests, ten disabled-feature translation-unit builds, parameter metadata and Python style checks. Native tests are `WaypointTrajectory`, `WaypointTrajectoryOverfly` and `WaypointTrajectoryStrongWind` in the linked ArduPilot branch. Rebuild that exact commit and use its normal autotest runner; local raster and gust scripts are in the directories below.
 
-- [Production validation](../scratch/plane-trajectory/derived-settings/validation.json)
-- [Regression measurements](../scratch/plane-trajectory/derived-settings/regression/comparison.json)
-- [Monte Carlo summary](../scratch/plane-trajectory/derived-settings/monte-carlo/summary.json)
-- [Scenario definitions](../scratch/plane-trajectory/derived-settings/monte-carlo/scenarios.json)
-- [Monte Carlo runner](../scratch/plane-trajectory/derived-settings/monte-carlo/run.py)
+- [Production validation](https://github.com/DavidIngraham/micro-agu/blob/archive/pre-layout-2026-10-18/scratch/plane-trajectory/derived-settings/validation.json)
+- [Regression measurements](https://github.com/DavidIngraham/micro-agu/blob/archive/pre-layout-2026-10-18/scratch/plane-trajectory/derived-settings/regression/comparison.json)
+- [Monte Carlo summary](https://github.com/DavidIngraham/micro-agu/blob/archive/pre-layout-2026-10-18/scratch/plane-trajectory/derived-settings/monte-carlo/summary.json)
+- [Scenario definitions](https://github.com/DavidIngraham/micro-agu/blob/archive/pre-layout-2026-10-18/scratch/plane-trajectory/derived-settings/monte-carlo/scenarios.json)
+- [Monte Carlo runner](https://github.com/DavidIngraham/micro-agu/blob/archive/pre-layout-2026-10-18/scratch/plane-trajectory/derived-settings/monte-carlo/run.py)
 
 I take these results as evidence that flexible line transitions are worth pursuing: this test set improved course time and dense-raster coverage. I do not yet have evidence of a general advantage across aircraft and weather fields. This is a small stratified engineering experiment, not a reliability estimate; coverage depends on the archived metric and geometry. I still need flight validation of the planner assumptions and feedback reserve.
 

@@ -1,0 +1,20 @@
+{
+  "training_cases": [
+    0,
+    1,
+    6,
+    9
+  ],
+  "candidates": {
+    "efficient": {
+      "score": 1.006382759080487,
+      "rejected_reasons": []
+    },
+    "damping": {
+      "score": 0.9981883556601436,
+      "rejected_reasons": []
+    }
+  },
+  "selected": "damping",
+  "rule": "Require completion, recovery and saturation checks; no >20% altitude/AUTO cross-track regression. Rank geometric mean of paired shaft power, disturbed pitch RMS and altitude RMS ratios; require improvement over fixed gains."
+}

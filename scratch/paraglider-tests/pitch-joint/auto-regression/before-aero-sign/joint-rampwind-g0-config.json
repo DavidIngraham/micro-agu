@@ -1,8 +1,0 @@
-{
-  "name": "joint-rampwind-g0",
-  "joint": true,
-  "gain": 0,
-  "wind": 3,
-  "turbulence": 0.5,
-  "wind_ramp_s": 30
-}

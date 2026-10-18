@@ -1,0 +1,10 @@
+{
+  "conflicts": [],
+  "original_sha256": {
+    "generated/ardupilot/arduplane.js": "893b28e3cbea410e48736d7f7426928cbe8b56f22c1813914aa290172f1e8565",
+    "generated/ardupilot/arduplane.wasm": "c0bdfe61927a36bd88705177d50f139eea5652b74267258e283e843ed5bc058f",
+    "assets/runtime/build.json": "14cff726d130adad81514c416a1465dcf2d21e7ff311359137c60980c7b7f2ea",
+    "assets/runtime/highdof.json": "e30470823ff62bfa8fd03fdd19af4af677321cb6f7f0b1b8d81ee30598428f05",
+    "packages/sim-browser/src/physics/physics.ts": "4b51049f925ff6190872d35c909a3e6de0d7a8e51d85ab4b97824709db636f8d"
+  }
+}

@@ -1,0 +1,58 @@
+# Feasible-turn references and anti-windup results
+
+AI-assisted. All candidates retain the exact published K and L gains. Power is modeled shaft power, not battery energy. Absolute turbulent motion screens are retained even where baseline fails.
+
+| Cohort | Variant | Rate | Case | Pass | Right / left deg/s | Alt peak m | Pitch-rate peak deg/s | Shaft W | Reasons |
+|---|---|---:|---:|---|---|---:|---:|---:|---|
+| ablation | aw | 25 | 0 | True | 25.77 / -26.07 | 0.87 | 5.87 | 79.22 |  |
+| ablation | aw | 25 | 1 | True | 26.06 / -25.55 | 0.76 | 5.55 | 79.39 |  |
+| ablation | map | 25 | 0 | True | 25.37 / -25.41 | 0.78 | 5.13 | 77.53 |  |
+| ablation | map | 25 | 1 | True | 25.77 / -25.60 | 0.75 | 4.87 | 79.44 |  |
+| ablation | map_aw | 25 | 0 | True | 25.38 / -25.46 | 0.79 | 4.88 | 77.55 |  |
+| ablation | map_aw | 25 | 1 | True | 25.52 / -25.18 | 0.73 | 4.26 | 77.13 |  |
+| ablation | map_aw_observer | 25 | 0 | True | 25.43 / -25.42 | 0.45 | 5.06 | 78.04 |  |
+| ablation | map_aw_observer | 25 | 1 | True | 25.45 / -25.18 | 0.38 | 3.69 | 77.13 |  |
+| ablation | reference | 25 | 0 | False | 31.44 / -25.87 | 0.67 | 5.81 | 79.64 | turn1: mean turn tracking; turn1: p90 turn tracking; turn2: mean turn tracking; turn2: p90 turn tracking |
+| ablation | reference | 25 | 1 | False | 31.74 / -25.48 | 0.74 | 5.45 | 79.61 | reverse: mean turn tracking; reverse: p90 turn tracking |
+| extension | aw | 30 | 0 | True | 30.96 / -30.95 | 0.79 | 6.54 | 80.79 |  |
+| extension | aw | 30 | 1 | True | 31.35 / -30.80 | 0.62 | 5.86 | 81.97 |  |
+| extension | aw | 35 | 0 | True | 35.84 / -34.34 | 1.43 | 5.98 | 83.01 |  |
+| extension | aw | 35 | 1 | True | 35.83 / -35.38 | 1.17 | 6.12 | 83.64 |  |
+| extension | aw | 40 | 0 | False | — | — | — | — | Attitude envelope exceeded (60 roll / 45 pitch deg) |
+| extension | aw | 40 | 1 | False | 36.50 / -38.45 | 1.45 | 5.76 | 87.95 | reverse: p90 turn tracking |
+| extension | map_aw_observer | 10 | 0 | True | 10.22 / -10.22 | 0.28 | 2.26 | 75.85 |  |
+| extension | map_aw_observer | 10 | 1 | True | 10.22 / -10.00 | 0.28 | 2.67 | 74.65 |  |
+| extension | map_aw_observer | 15 | 0 | True | 15.18 / -15.33 | 0.37 | 5.39 | 77.04 |  |
+| extension | map_aw_observer | 15 | 1 | True | 15.44 / -15.41 | 0.26 | 3.60 | 78.42 |  |
+| extension | map_aw_observer | 20 | 0 | True | 20.22 / -20.26 | 0.31 | 5.62 | 77.43 |  |
+| extension | map_aw_observer | 20 | 1 | True | 20.37 / -20.22 | 0.25 | 4.32 | 77.36 |  |
+| extension | map_aw_observer | 30 | 0 | True | 30.38 / -30.72 | 0.30 | 4.95 | 81.24 |  |
+| extension | map_aw_observer | 30 | 1 | True | 30.35 / -30.11 | 0.35 | 4.25 | 78.30 |  |
+| extension | map_aw_observer | 35 | 0 | True | 35.35 / -35.52 | 0.53 | 5.08 | 82.98 |  |
+| extension | map_aw_observer | 35 | 1 | True | 35.58 / -35.41 | 0.38 | 6.47 | 83.15 |  |
+| extension | map_aw_observer | 40 | 0 | True | 40.33 / -40.35 | 0.48 | 5.03 | 81.88 |  |
+| extension | map_aw_observer | 40 | 1 | True | 40.42 / -40.24 | 0.43 | 6.89 | 85.23 |  |
+| validation | aw | 25 | 100 | False | 25.78 / -26.04 | 0.75 | 12.94 | 78.79 | turn2: p90 turn tracking; recover1: oscillation recovery; recover2: oscillation recovery |
+| validation | aw | 25 | 101 | False | 25.29 / -24.77 | 0.92 | 37.64 | 77.95 | turn1: p90 turn tracking; turn1: turn oscillation; turn1: relative pitch late RMS; reverse: p90 turn tracking; reverse: turn oscillation; reverse: relative pitch late RMS; turn2: p90 turn tracking; turn2: turn oscillation; turn2: relative pitch peak; turn2: relative pitch late RMS; recover1: heading recovery; recover1: oscillation recovery; recover2: heading recovery; recover2: oscillation recovery |
+| validation | aw | 25 | 102 | False | 25.77 / -25.86 | 0.67 | 19.51 | 78.94 | turn1: p90 turn tracking; turn1: turn oscillation; reverse: p90 turn tracking; reverse: turn oscillation; turn2: p90 turn tracking; turn2: turn oscillation; recover1: heading recovery; recover1: oscillation recovery; recover2: heading recovery; recover2: oscillation recovery |
+| validation | aw | 25 | 103 | False | 25.92 / -25.41 | 0.58 | 17.78 | 79.77 | reverse: p90 turn tracking; recover1: oscillation recovery; recover2: oscillation recovery |
+| validation | aw | 25 | 104 | False | 25.95 / -26.61 | 0.75 | 15.56 | 78.98 | turn1: p90 turn tracking; turn1: turn oscillation; reverse: p90 turn tracking; reverse: relative pitch late RMS; turn2: p90 turn tracking; turn2: turn oscillation; recover1: heading recovery; recover1: oscillation recovery; recover2: heading recovery; recover2: oscillation recovery |
+| validation | aw | 25 | 105 | False | 26.19 / -26.84 | 1.79 | 48.54 | 80.03 | turn1: p90 turn tracking; turn1: turn oscillation; turn1: relative pitch peak; turn1: relative pitch late RMS; reverse: p90 turn tracking; reverse: turn oscillation; reverse: relative pitch peak; reverse: relative pitch late RMS; turn2: p90 turn tracking; turn2: turn oscillation; turn2: relative pitch peak; turn2: relative pitch late RMS; recover1: heading recovery; recover1: oscillation recovery; recover2: heading recovery; recover2: oscillation recovery |
+| validation | map_aw | 25 | 100 | False | 25.40 / -25.92 | 0.61 | 11.67 | 78.60 | turn1: p90 turn tracking; recover1: oscillation recovery; recover2: oscillation recovery |
+| validation | map_aw | 25 | 101 | False | 24.91 / -24.37 | 0.84 | 36.62 | 77.06 | turn1: p90 turn tracking; turn1: turn oscillation; turn1: relative pitch late RMS; reverse: p90 turn tracking; reverse: turn oscillation; reverse: relative pitch peak; reverse: relative pitch late RMS; turn2: p90 turn tracking; turn2: turn oscillation; turn2: relative pitch peak; turn2: relative pitch late RMS; recover1: heading recovery; recover1: oscillation recovery; recover2: heading recovery; recover2: oscillation recovery |
+| validation | map_aw | 25 | 102 | False | 25.35 / -25.12 | 0.76 | 17.05 | 77.40 | turn1: p90 turn tracking; turn1: turn oscillation; turn2: p90 turn tracking; turn2: turn oscillation; turn2: relative pitch late RMS; recover1: oscillation recovery; recover2: heading recovery; recover2: oscillation recovery |
+| validation | map_aw | 25 | 103 | False | 25.62 / -25.28 | 0.61 | 16.53 | 79.08 | reverse: p90 turn tracking; recover1: oscillation recovery; recover2: oscillation recovery |
+| validation | map_aw | 25 | 104 | False | 25.60 / -26.45 | 0.93 | 15.03 | 78.79 | turn1: p90 turn tracking; turn1: turn oscillation; reverse: p90 turn tracking; reverse: relative pitch late RMS; turn2: p90 turn tracking; turn2: turn oscillation; recover1: heading recovery; recover1: oscillation recovery; recover2: heading recovery; recover2: oscillation recovery |
+| validation | map_aw | 25 | 105 | False | 25.94 / -26.57 | 1.62 | 50.44 | 78.19 | turn1: p90 turn tracking; turn1: turn oscillation; turn1: relative pitch peak; turn1: relative pitch late RMS; reverse: p90 turn tracking; reverse: turn oscillation; reverse: relative pitch peak; reverse: relative pitch late RMS; turn2: p90 turn tracking; turn2: turn oscillation; turn2: relative pitch peak; turn2: relative pitch late RMS; recover1: heading recovery; recover1: oscillation recovery; recover2: heading recovery; recover2: oscillation recovery |
+| validation | map_aw_observer | 25 | 100 | False | 25.45 / -25.94 | 0.65 | 11.55 | 78.79 | turn1: p90 turn tracking; turn2: p90 turn tracking; recover1: oscillation recovery; recover2: oscillation recovery |
+| validation | map_aw_observer | 25 | 101 | False | 24.82 / -24.32 | 0.83 | 34.74 | 77.03 | turn1: p90 turn tracking; turn1: turn oscillation; turn1: relative pitch late RMS; reverse: p90 turn tracking; reverse: turn oscillation; reverse: relative pitch peak; reverse: relative pitch late RMS; turn2: p90 turn tracking; turn2: turn oscillation; turn2: relative pitch peak; turn2: relative pitch late RMS; recover1: heading recovery; recover1: oscillation recovery; recover2: heading recovery; recover2: oscillation recovery |
+| validation | map_aw_observer | 25 | 102 | False | 25.28 / -25.11 | 0.83 | 19.58 | 77.08 | turn1: p90 turn tracking; turn1: turn oscillation; turn2: p90 turn tracking; turn2: turn oscillation; turn2: relative pitch late RMS; recover1: oscillation recovery; recover2: heading recovery; recover2: oscillation recovery |
+| validation | map_aw_observer | 25 | 103 | False | 25.24 / -24.92 | 0.54 | 15.46 | 77.56 | recover1: oscillation recovery; recover2: oscillation recovery |
+| validation | map_aw_observer | 25 | 104 | False | 25.57 / -26.14 | 0.88 | 15.67 | 77.35 | turn1: p90 turn tracking; turn1: turn oscillation; reverse: p90 turn tracking; reverse: relative pitch late RMS; turn2: p90 turn tracking; turn2: turn oscillation; recover1: heading recovery; recover1: oscillation recovery; recover2: heading recovery; recover2: oscillation recovery |
+| validation | map_aw_observer | 25 | 105 | False | 25.80 / -26.46 | 1.44 | 45.85 | 76.89 | turn1: p90 turn tracking; turn1: turn oscillation; turn1: relative pitch peak; turn1: relative pitch late RMS; reverse: p90 turn tracking; reverse: turn oscillation; reverse: relative pitch peak; reverse: relative pitch late RMS; turn2: p90 turn tracking; turn2: turn oscillation; turn2: relative pitch peak; turn2: relative pitch late RMS; recover1: heading recovery; recover1: oscillation recovery; recover2: heading recovery; recover2: oscillation recovery |
+| validation | reference | 25 | 100 | False | 31.30 / -26.08 | 0.98 | 11.98 | 79.07 | turn1: mean turn tracking; turn1: p90 turn tracking; turn2: mean turn tracking; turn2: p90 turn tracking; recover1: oscillation recovery |
+| validation | reference | 25 | 101 | False | 30.61 / -24.82 | 1.33 | 27.60 | 78.58 | turn1: p90 turn tracking; turn1: turn oscillation; turn1: relative pitch late RMS; reverse: mean turn tracking; reverse: p90 turn tracking; reverse: turn oscillation; reverse: relative pitch late RMS; turn2: p90 turn tracking; turn2: turn oscillation; turn2: relative pitch late RMS; recover1: heading recovery; recover1: oscillation recovery; recover2: heading recovery; recover2: oscillation recovery |
+| validation | reference | 25 | 102 | False | 31.38 / -25.67 | 0.92 | 17.84 | 79.96 | turn1: mean turn tracking; turn1: p90 turn tracking; turn1: turn oscillation; turn1: relative pitch late RMS; reverse: p90 turn tracking; reverse: turn oscillation; turn2: mean turn tracking; turn2: p90 turn tracking; turn2: turn oscillation; recover1: heading recovery; recover1: oscillation recovery; recover2: heading recovery; recover2: oscillation recovery |
+| validation | reference | 25 | 103 | False | 31.65 / -25.22 | 0.89 | 16.96 | 79.92 | reverse: mean turn tracking; reverse: p90 turn tracking; recover1: oscillation recovery; recover2: oscillation recovery |
+| validation | reference | 25 | 104 | False | 31.65 / -26.43 | 1.01 | 15.63 | 79.47 | turn1: mean turn tracking; turn1: p90 turn tracking; turn1: turn oscillation; reverse: p90 turn tracking; turn2: mean turn tracking; turn2: p90 turn tracking; turn2: turn oscillation; recover1: heading recovery; recover1: oscillation recovery; recover2: heading recovery; recover2: oscillation recovery |
+| validation | reference | 25 | 105 | False | 32.03 / -26.86 | 1.73 | 52.24 | 81.08 | turn1: p90 turn tracking; turn1: turn oscillation; turn1: relative pitch peak; turn1: relative pitch late RMS; reverse: mean turn tracking; reverse: p90 turn tracking; reverse: turn oscillation; reverse: relative pitch peak; reverse: relative pitch late RMS; turn2: p90 turn tracking; turn2: turn oscillation; turn2: relative pitch peak; turn2: relative pitch late RMS; recover1: heading recovery; recover1: oscillation recovery; recover2: heading recovery; recover2: oscillation recovery |

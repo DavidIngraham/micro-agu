@@ -1,9 +1,0 @@
-{
-  "name": "step-gentle",
-  "controller": "gentle",
-  "parameters": {
-    "TECS_TIME_CONST": 2,
-    "TECS_HDEM_TCONST": 2,
-    "TECS_VERT_ACC": 2
-  }
-}

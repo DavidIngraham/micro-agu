@@ -1,0 +1,10 @@
+{
+  "repeatability": {
+    "passed": true,
+    "reasons": []
+  },
+  "selected": null,
+  "candidates": {},
+  "deploy": false,
+  "note": "Training selection only; independent reserved native scenarios and mission checks still required."
+}

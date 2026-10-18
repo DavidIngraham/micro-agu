@@ -18,7 +18,7 @@ simulator. Existing HTML URLs are preserved for blog embeds. Physics lives in
 | `assets` | CAD models, bounded presentation recordings, runtime configuration and pinned asset inventories | Experiment execution |
 | `generated` | Rust JS/WASM/types, ArduPilot WASM and generated MAVLink dialect | Hand edits |
 | `tools/build`, `tools/convert`, `tools/record`, `tools/publish` | Build manifests, data conversion, bounded applet capture and verified publishing | Tuning or flight-study execution |
-| `../research/viewer-studies` | Recording harnesses, gusts, scenario generation and analysis | Runtime imports from the web applications |
+| `../research/archive/viewer-studies` | Recording harnesses, gusts, scenario generation and analysis | Runtime imports from the web applications |
 
 Packages are private npm workspaces with explicit exports and one lockfile.
 

@@ -1,0 +1,428 @@
+[
+  {
+    "rate": 0,
+    "speed": 4.2,
+    "perfect_state_radius": 0.9999343412375694,
+    "fixed_observer_coupled_radius": 0.9999343430915367
+  },
+  {
+    "rate": 0,
+    "speed": 4.0,
+    "perfect_state_radius": 0.9999389281832752,
+    "fixed_observer_coupled_radius": 0.9999389526179226
+  },
+  {
+    "rate": 0,
+    "speed": 3.8,
+    "perfect_state_radius": 0.9999464804843364,
+    "fixed_observer_coupled_radius": 0.9999465134177422
+  },
+  {
+    "rate": 0,
+    "speed": 4.3,
+    "perfect_state_radius": 0.9999334847462524,
+    "fixed_observer_coupled_radius": 0.9999334743184368
+  },
+  {
+    "rate": 10,
+    "speed": 4.2,
+    "perfect_state_radius": 0.9999397356853394,
+    "fixed_observer_coupled_radius": 0.9999397355186939
+  },
+  {
+    "rate": 10,
+    "speed": 4.0,
+    "perfect_state_radius": 0.9999423034108615,
+    "fixed_observer_coupled_radius": 0.9999423257044691
+  },
+  {
+    "rate": 10,
+    "speed": 3.8,
+    "perfect_state_radius": 0.99994903981244,
+    "fixed_observer_coupled_radius": 0.9999490711332052
+  },
+  {
+    "rate": 10,
+    "speed": 4.3,
+    "perfect_state_radius": 0.9999407857422684,
+    "fixed_observer_coupled_radius": 0.9999407741476316
+  },
+  {
+    "rate": -10,
+    "speed": 4.2,
+    "perfect_state_radius": 0.9999295729557369,
+    "fixed_observer_coupled_radius": 0.9999295796429091
+  },
+  {
+    "rate": -10,
+    "speed": 4.0,
+    "perfect_state_radius": 0.999935301127874,
+    "fixed_observer_coupled_radius": 0.9999353339462194
+  },
+  {
+    "rate": -10,
+    "speed": 3.8,
+    "perfect_state_radius": 0.9999442501277697,
+    "fixed_observer_coupled_radius": 0.9999442920076466
+  },
+  {
+    "rate": -10,
+    "speed": 4.3,
+    "perfect_state_radius": 0.9999283833463776,
+    "fixed_observer_coupled_radius": 0.9999283639867562
+  },
+  {
+    "rate": -10,
+    "speed": 4.4,
+    "perfect_state_radius": 0.9999288217143084,
+    "fixed_observer_coupled_radius": 0.9999287801164759
+  },
+  {
+    "rate": 15,
+    "speed": 4.2,
+    "perfect_state_radius": 0.9999416626924684,
+    "fixed_observer_coupled_radius": 0.999941661955484
+  },
+  {
+    "rate": 15,
+    "speed": 4.0,
+    "perfect_state_radius": 0.9999439354459643,
+    "fixed_observer_coupled_radius": 0.9999439547626388
+  },
+  {
+    "rate": 15,
+    "speed": 3.8,
+    "perfect_state_radius": 0.9999506964139352,
+    "fixed_observer_coupled_radius": 0.9999507256755787
+  },
+  {
+    "rate": -15,
+    "speed": 4.2,
+    "perfect_state_radius": 0.999931968750188,
+    "fixed_observer_coupled_radius": 0.9999319698063643
+  },
+  {
+    "rate": -15,
+    "speed": 4.0,
+    "perfect_state_radius": 0.999937313101676,
+    "fixed_observer_coupled_radius": 0.9999373408387696
+  },
+  {
+    "rate": -15,
+    "speed": 3.8,
+    "perfect_state_radius": 0.9999462348388961,
+    "fixed_observer_coupled_radius": 0.9999462726395055
+  },
+  {
+    "rate": -15,
+    "speed": 4.3,
+    "perfect_state_radius": 0.9999312571658737,
+    "fixed_observer_coupled_radius": 0.9999312326923699
+  },
+  {
+    "rate": 20,
+    "speed": 4.2,
+    "perfect_state_radius": 0.999943015279034,
+    "fixed_observer_coupled_radius": 0.9999430099118343
+  },
+  {
+    "rate": 20,
+    "speed": 4.0,
+    "perfect_state_radius": 0.9999455354269937,
+    "fixed_observer_coupled_radius": 0.9999455512397013
+  },
+  {
+    "rate": 20,
+    "speed": 3.8,
+    "perfect_state_radius": 0.9999526329633694,
+    "fixed_observer_coupled_radius": 0.9999526589668735
+  },
+  {
+    "rate": -20,
+    "speed": 4.2,
+    "perfect_state_radius": 0.9999339223665676,
+    "fixed_observer_coupled_radius": 0.9999339172123608
+  },
+  {
+    "rate": -20,
+    "speed": 4.0,
+    "perfect_state_radius": 0.9999394429971223,
+    "fixed_observer_coupled_radius": 0.99993946483077
+  },
+  {
+    "rate": -20,
+    "speed": 3.8,
+    "perfect_state_radius": 0.9999486428568086,
+    "fixed_observer_coupled_radius": 0.9999486748466613
+  },
+  {
+    "rate": -20,
+    "speed": 4.3,
+    "perfect_state_radius": 0.9999332199158386,
+    "fixed_observer_coupled_radius": 0.9999331890784781
+  },
+  {
+    "rate": 25,
+    "speed": 4.2,
+    "perfect_state_radius": 0.9999439173570823,
+    "fixed_observer_coupled_radius": 0.9999439077966515
+  },
+  {
+    "rate": 25,
+    "speed": 4.0,
+    "perfect_state_radius": 0.999947210223252,
+    "fixed_observer_coupled_radius": 0.9999472224181293
+  },
+  {
+    "rate": 25,
+    "speed": 3.8,
+    "perfect_state_radius": 0.9999549353586216,
+    "fixed_observer_coupled_radius": 0.9999549576249863
+  },
+  {
+    "rate": 25,
+    "speed": 4.3,
+    "perfect_state_radius": 0.9999448106068083,
+    "fixed_observer_coupled_radius": 0.9999447832299965
+  },
+  {
+    "rate": -25,
+    "speed": 4.2,
+    "perfect_state_radius": 0.9999356120447029,
+    "fixed_observer_coupled_radius": 0.9999356012727749
+  },
+  {
+    "rate": -25,
+    "speed": 4.0,
+    "perfect_state_radius": 0.9999418191880411,
+    "fixed_observer_coupled_radius": 0.9999418348352684
+  },
+  {
+    "rate": -25,
+    "speed": 3.8,
+    "perfect_state_radius": 0.9999515580763595,
+    "fixed_observer_coupled_radius": 0.999951583558521
+  },
+  {
+    "rate": -25,
+    "speed": 4.3,
+    "perfect_state_radius": 0.9999345088881143,
+    "fixed_observer_coupled_radius": 0.999934472648408
+  },
+  {
+    "rate": -25,
+    "speed": 4.4,
+    "perfect_state_radius": 0.9999353735957774,
+    "fixed_observer_coupled_radius": 0.9999353120475685
+  },
+  {
+    "rate": 30,
+    "speed": 4.2,
+    "perfect_state_radius": 0.9999446327421356,
+    "fixed_observer_coupled_radius": 0.9999446199444592
+  },
+  {
+    "rate": 30,
+    "speed": 4.0,
+    "perfect_state_radius": 0.9999491377469301,
+    "fixed_observer_coupled_radius": 0.9999491464488559
+  },
+  {
+    "rate": 30,
+    "speed": 3.8,
+    "perfect_state_radius": 0.9999577140538941,
+    "fixed_observer_coupled_radius": 0.9999577323543055
+  },
+  {
+    "rate": 30,
+    "speed": 4.3,
+    "perfect_state_radius": 0.9999447063410684,
+    "fixed_observer_coupled_radius": 0.9999446750964635
+  },
+  {
+    "rate": -30,
+    "speed": 4.2,
+    "perfect_state_radius": 0.9999373406020672,
+    "fixed_observer_coupled_radius": 0.9999373254861846
+  },
+  {
+    "rate": -30,
+    "speed": 4.0,
+    "perfect_state_radius": 0.9999446356900429,
+    "fixed_observer_coupled_radius": 0.9999446451602331
+  },
+  {
+    "rate": -30,
+    "speed": 3.8,
+    "perfect_state_radius": 0.9999550855326691,
+    "fixed_observer_coupled_radius": 0.9999551053791707
+  },
+  {
+    "rate": -30,
+    "speed": 4.3,
+    "perfect_state_radius": 0.9999355174654881,
+    "fixed_observer_coupled_radius": 0.999935482028323
+  },
+  {
+    "rate": -30,
+    "speed": 4.4,
+    "perfect_state_radius": 0.9999354537262736,
+    "fixed_observer_coupled_radius": 0.9999353883073173
+  },
+  {
+    "rate": 40,
+    "speed": 4.2,
+    "perfect_state_radius": 0.9999469615874219,
+    "fixed_observer_coupled_radius": 0.999946945626829
+  },
+  {
+    "rate": 40,
+    "speed": 4.0,
+    "perfect_state_radius": 0.9999546227136911,
+    "fixed_observer_coupled_radius": 0.9999546252258225
+  },
+  {
+    "rate": 40,
+    "speed": 3.8,
+    "perfect_state_radius": 0.9999650863286084,
+    "fixed_observer_coupled_radius": 0.9999650986215314
+  },
+  {
+    "rate": 40,
+    "speed": 4.3,
+    "perfect_state_radius": 0.9999448178570023,
+    "fixed_observer_coupled_radius": 0.9999447872168532
+  },
+  {
+    "rate": 40,
+    "speed": 4.4,
+    "perfect_state_radius": 0.999944284729054,
+    "fixed_observer_coupled_radius": 0.9999442329910694
+  },
+  {
+    "rate": -40,
+    "speed": 4.2,
+    "perfect_state_radius": 0.9999424387865958,
+    "fixed_observer_coupled_radius": 0.9999424176782286
+  },
+  {
+    "rate": -40,
+    "speed": 4.0,
+    "perfect_state_radius": 0.999952439898705,
+    "fixed_observer_coupled_radius": 0.9999524387600166
+  },
+  {
+    "rate": -40,
+    "speed": 3.8,
+    "perfect_state_radius": 0.9999643402453476,
+    "fixed_observer_coupled_radius": 0.9999643482800328
+  },
+  {
+    "rate": -40,
+    "speed": 4.3,
+    "perfect_state_radius": 0.9999386830797733,
+    "fixed_observer_coupled_radius": 0.9999386456321925
+  },
+  {
+    "rate": -40,
+    "speed": 4.4,
+    "perfect_state_radius": 0.9999361271537575,
+    "fixed_observer_coupled_radius": 0.9999360675284465
+  },
+  {
+    "rate": 50,
+    "speed": 4.2,
+    "perfect_state_radius": 0.9999527912004719,
+    "fixed_observer_coupled_radius": 0.999952774951813
+  },
+  {
+    "rate": 50,
+    "speed": 4.0,
+    "perfect_state_radius": 0.9999633211960974,
+    "fixed_observer_coupled_radius": 0.9999633216716622
+  },
+  {
+    "rate": 50,
+    "speed": 3.8,
+    "perfect_state_radius": 0.9999750480444325,
+    "fixed_observer_coupled_radius": 0.9999750562830453
+  },
+  {
+    "rate": 50,
+    "speed": 4.3,
+    "perfect_state_radius": 0.999948446629584,
+    "fixed_observer_coupled_radius": 0.9999484185704776
+  },
+  {
+    "rate": 50,
+    "speed": 4.4,
+    "perfect_state_radius": 0.999945045039387,
+    "fixed_observer_coupled_radius": 0.9999450014558907
+  },
+  {
+    "rate": -50,
+    "speed": 4.2,
+    "perfect_state_radius": 0.9999518537508179,
+    "fixed_observer_coupled_radius": 0.9999518295816369
+  },
+  {
+    "rate": -50,
+    "speed": 4.0,
+    "perfect_state_radius": 0.9999639004573945,
+    "fixed_observer_coupled_radius": 0.999963894102795
+  },
+  {
+    "rate": -50,
+    "speed": 4.3,
+    "perfect_state_radius": 0.9999463081507811,
+    "fixed_observer_coupled_radius": 0.9999462714864022
+  },
+  {
+    "rate": -50,
+    "speed": 4.4,
+    "perfect_state_radius": 0.9999414113602921,
+    "fixed_observer_coupled_radius": 0.9999413589646253
+  },
+  {
+    "rate": 60,
+    "speed": 4.2,
+    "perfect_state_radius": 0.9999631627146862,
+    "fixed_observer_coupled_radius": 0.999963152159563
+  },
+  {
+    "rate": 60,
+    "speed": 4.0,
+    "perfect_state_radius": 1.00021754457544,
+    "fixed_observer_coupled_radius": 1.0000009924066469
+  },
+  {
+    "rate": 60,
+    "speed": 4.3,
+    "perfect_state_radius": 0.999957442335355,
+    "fixed_observer_coupled_radius": 0.9999574209752029
+  },
+  {
+    "rate": 60,
+    "speed": 4.4,
+    "perfect_state_radius": 0.9999520789231748,
+    "fixed_observer_coupled_radius": 0.9999520445878304
+  },
+  {
+    "rate": -60,
+    "speed": 4.2,
+    "perfect_state_radius": 1.0003344891713515,
+    "fixed_observer_coupled_radius": 1.0002826342901299
+  },
+  {
+    "rate": -60,
+    "speed": 4.3,
+    "perfect_state_radius": 1.0001813038340237,
+    "fixed_observer_coupled_radius": 1.0001180617334666
+  },
+  {
+    "rate": -60,
+    "speed": 4.4,
+    "perfect_state_radius": 1.0000359585960357,
+    "fixed_observer_coupled_radius": 0.9999611124371249
+  }
+]

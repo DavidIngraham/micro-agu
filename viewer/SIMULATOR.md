@@ -140,7 +140,7 @@ The app adapts `microagu.state.v1` truth to a render pose for the shared
 Three.js canopy, SolidWorks payload and suspension tools: independent payload and canopy positions/quaternions,
 rotor RPM, brake travel and joint rotation/rates. Fabric deformation is illustrative.
 The model uses as-built 132 mm riser spacing and the bounded existing-log fit in
-[the calibration report](../research/as-built-simulator-2026-10-15/README.md).
+[the calibration report](../research/archive/as-built-simulator-2026-10-15/README.md).
 Reduced flat-plane contact retains the two-body constraint. Scalar overhead
 inflation and prescribed hand motion approximate launch; neither cloth pull-up nor
 canopy collapse is modeled. Launch/contact constants are assumptions, not log fits.
@@ -222,7 +222,7 @@ The new LQI uses all three inputs: throttle, symmetric brake and differential
 brake. Its final left/right commands pass through a shared travel/slew allocator
 and servo calibration, bypassing the legacy mixer. It uses onboard estimates
 and an internal canopy observer, never simulator truth. Its matrices are generated
-by `simulation/tools/design_mimo.py` from the 132 mm as-built Rust model. This
+by `research/archive/legacy-control/design_mimo.py` from the 132 mm as-built Rust model. This
 initial fixed operating-point design is distinct from the archived scheduled
 two-input research controller; the switch is for simulation comparison, not a
 claim that it outperforms PG + TECS or is ready for flight.
@@ -232,13 +232,13 @@ filter applied before altitude-reference integration and feedforward. Zero disab
 it; the accepted local research configuration uses 0.7 s with the existing ±0.5 m/s
 limits. Gains and sensing are unchanged by this backport; it does not enable a
 pitot sensor or canopy-truth feedback. See the
-[paired results](../research/lqi-backport-2026-10-17/RESULTS.md).
+[paired results](../research/archive/lqi-backport-2026-10-17/RESULTS.md).
 
 The preceding public simulator release used the separately validated
 `responsive_softspeed` retune with `CP3_HRTC=0.7`. Its observer, sensing, 10% common
 trim and 132 mm physics remain unchanged. Two tuning passes and 168 SITL runs
 included fresh paired cases, AUTO/CRUISE missions and ten-minute recovery checks.
-See the [retune results](../research/lqi-filter-retune-2026-10-17/RESULTS.md).
+See the [retune results](../research/archive/lqi-filter-retune-2026-10-17/RESULTS.md).
 The earlier crosswind comparison had unmatched gust incidence; that test was
 corrected before retuning, and its original results retain an erratum.
 

@@ -1,0 +1,9 @@
+{
+  "commit": "82c34435594a35002a8890627ec6b231c20608b7",
+  "workflow": "https://github.com/DavidIngraham/DavidIngraham.github.io/actions/runs/39071391870",
+  "conclusion": "success",
+  "simulator": "https://davidingraham.github.io/assets/microagu-viewer/simulator.html",
+  "public_hash_verification": "live-hashes.json",
+  "live_browser_verification": "live-browser.json",
+  "packaged_runtime_promotion": "packaged-promotion.json"
+}

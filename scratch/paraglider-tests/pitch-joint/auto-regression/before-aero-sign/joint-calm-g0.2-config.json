@@ -1,7 +1,0 @@
-{
-  "name": "joint-calm-g0.2",
-  "joint": true,
-  "gain": 0.2,
-  "wind": 0,
-  "turbulence": 0
-}

@@ -1,0 +1,1931 @@
+[
+  {
+    "id": 0,
+    "rate": 10,
+    "scheme": "lqi",
+    "complete": true,
+    "failure": null,
+    "passed": true,
+    "reasons": [],
+    "phases": {
+      "turn1": {
+        "mean_rate": 10.948229233973024,
+        "mean_error": 0.9482292339730233,
+        "p90_error": 1.0441195189172485,
+        "rate_std": 0.07896965308516864,
+        "alt_rms": 0.13932929855111936,
+        "alt_peak": 0.2213830784399633,
+        "relative_pitch_rate_peak": 0.7792721114211416,
+        "relative_pitch_rate_late_rms": 0.08389937517429381,
+        "speed_p05": 4.296687264826349,
+        "speed_min": 4.264944922453026,
+        "full_brake_longest": 0.0,
+        "throttle_ceiling_fraction": 0.0
+      },
+      "reverse": {
+        "mean_rate": -9.856875802820037,
+        "mean_error": 0.1431241971799638,
+        "p90_error": 0.18156436823088598,
+        "rate_std": 0.05122099156631955,
+        "alt_rms": 0.28002132441972755,
+        "alt_peak": 0.3256797164019076,
+        "relative_pitch_rate_peak": 2.494071399575167,
+        "relative_pitch_rate_late_rms": 0.07791966766789926,
+        "speed_p05": 4.23376621809913,
+        "speed_min": 4.135856048836942,
+        "full_brake_longest": 0.0,
+        "throttle_ceiling_fraction": 0.0
+      },
+      "turn2": {
+        "mean_rate": 10.90829713449071,
+        "mean_error": 0.9082971344907084,
+        "p90_error": 1.0192831267410614,
+        "rate_std": 0.09379933886555968,
+        "alt_rms": 0.1374931712224033,
+        "alt_peak": 0.21182188646426425,
+        "relative_pitch_rate_peak": 1.3300253489649276,
+        "relative_pitch_rate_late_rms": 0.0828707402872057,
+        "speed_p05": 4.294709336491775,
+        "speed_min": 4.269082798810079,
+        "full_brake_longest": 0.0,
+        "throttle_ceiling_fraction": 0.0
+      },
+      "recover1": {
+        "rate_rms": 0.03711732752398438,
+        "alt_rms": 0.20885566010125095,
+        "relative_pitch_rate_rms": 0.04584624761085886
+      },
+      "recover2": {
+        "rate_rms": 0.0782811576260997,
+        "alt_rms": 0.2383418780859814,
+        "relative_pitch_rate_rms": 0.06266872382860963
+      }
+    },
+    "max_roll": 7.958952715867382,
+    "max_pitch": 9.310252379281296,
+    "cohort": "screen",
+    "file": "screen/lqi-10/000-metrics.json"
+  },
+  {
+    "id": 1,
+    "rate": 10,
+    "scheme": "lqi",
+    "complete": true,
+    "failure": null,
+    "passed": true,
+    "reasons": [],
+    "phases": {
+      "turn1": {
+        "mean_rate": -9.922776556451984,
+        "mean_error": 0.07722344354801555,
+        "p90_error": 0.20130308282071885,
+        "rate_std": 0.09509172492926599,
+        "alt_rms": 0.17218580019985985,
+        "alt_peak": 0.22573193136142322,
+        "relative_pitch_rate_peak": 2.488846443656042,
+        "relative_pitch_rate_late_rms": 0.09888156352908191,
+        "speed_p05": 4.224775072322467,
+        "speed_min": 4.1270050731570755,
+        "full_brake_longest": 0.0,
+        "throttle_ceiling_fraction": 0.0
+      },
+      "reverse": {
+        "mean_rate": 10.924745698874627,
+        "mean_error": 0.9247456988746272,
+        "p90_error": 0.9816324011143784,
+        "rate_std": 0.06474922627084716,
+        "alt_rms": 0.04339877065701119,
+        "alt_peak": 0.17397467705114877,
+        "relative_pitch_rate_peak": 2.930685215242936,
+        "relative_pitch_rate_late_rms": 0.07523818469705458,
+        "speed_p05": 4.288361391032032,
+        "speed_min": 4.244641877525498,
+        "full_brake_longest": 0.0,
+        "throttle_ceiling_fraction": 0.0
+      },
+      "turn2": {
+        "mean_rate": -9.886650802314627,
+        "mean_error": 0.11334919768537234,
+        "p90_error": 0.18802801276445713,
+        "rate_std": 0.06689801508035996,
+        "alt_rms": 0.16240990787820675,
+        "alt_peak": 0.20907452540247107,
+        "relative_pitch_rate_peak": 2.854228871358687,
+        "relative_pitch_rate_late_rms": 0.09682167464144455,
+        "speed_p05": 4.216102848997223,
+        "speed_min": 4.125694877411082,
+        "full_brake_longest": 0.0,
+        "throttle_ceiling_fraction": 0.0
+      },
+      "recover1": {
+        "rate_rms": 0.1164842393139381,
+        "alt_rms": 0.08344959009454046,
+        "relative_pitch_rate_rms": 0.09669046653846261
+      },
+      "recover2": {
+        "rate_rms": 0.04989559899562825,
+        "alt_rms": 0.09716688301900372,
+        "relative_pitch_rate_rms": 0.08087934336740271
+      }
+    },
+    "max_roll": 8.048201961400837,
+    "max_pitch": 9.60409826735283,
+    "cohort": "screen",
+    "file": "screen/lqi-10/001-metrics.json"
+  },
+  {
+    "id": 2,
+    "rate": 10,
+    "scheme": "lqi",
+    "complete": true,
+    "failure": null,
+    "passed": false,
+    "reasons": [
+      "turn1: p90 turn tracking",
+      "turn1: turn oscillation",
+      "turn1: relative pitch late RMS",
+      "reverse: p90 turn tracking",
+      "reverse: turn oscillation",
+      "reverse: relative pitch late RMS",
+      "turn2: p90 turn tracking",
+      "turn2: turn oscillation",
+      "turn2: relative pitch late RMS",
+      "recover1: heading recovery",
+      "recover1: oscillation recovery",
+      "recover2: heading recovery",
+      "recover2: oscillation recovery"
+    ],
+    "phases": {
+      "turn1": {
+        "mean_rate": 11.394075488994062,
+        "mean_error": 1.3940754889940636,
+        "p90_error": 9.540299713877134,
+        "rate_std": 5.966549736181791,
+        "alt_rms": 0.3680839115698693,
+        "alt_peak": 0.9193894503383078,
+        "relative_pitch_rate_peak": 22.6577183225114,
+        "relative_pitch_rate_late_rms": 7.254689471479535,
+        "speed_p05": 3.9225182476264457,
+        "speed_min": 3.4175421975376263,
+        "full_brake_longest": 0.0,
+        "throttle_ceiling_fraction": 0.0
+      },
+      "reverse": {
+        "mean_rate": -10.036833597251443,
+        "mean_error": 0.03683359725144268,
+        "p90_error": 8.397926194060107,
+        "rate_std": 4.96513693589191,
+        "alt_rms": 0.365226469031782,
+        "alt_peak": 0.6567532992977547,
+        "relative_pitch_rate_peak": 21.94806042717369,
+        "relative_pitch_rate_late_rms": 7.415783496136723,
+        "speed_p05": 3.8609125911410405,
+        "speed_min": 3.5195732105482698,
+        "full_brake_longest": 0.0,
+        "throttle_ceiling_fraction": 0.0
+      },
+      "turn2": {
+        "mean_rate": 11.115413736973203,
+        "mean_error": 1.1154137369732018,
+        "p90_error": 9.579447872322348,
+        "rate_std": 5.8719820133866305,
+        "alt_rms": 0.37872090914285805,
+        "alt_peak": 0.9220547973956315,
+        "relative_pitch_rate_peak": 21.429325097548478,
+        "relative_pitch_rate_late_rms": 7.564440866365791,
+        "speed_p05": 3.8866447086268634,
+        "speed_min": 3.494798949477879,
+        "full_brake_longest": 0.0,
+        "throttle_ceiling_fraction": 0.0
+      },
+      "recover1": {
+        "rate_rms": 5.5649382427122855,
+        "alt_rms": 0.2347071653659366,
+        "relative_pitch_rate_rms": 7.897295479655892
+      },
+      "recover2": {
+        "rate_rms": 4.564231933870362,
+        "alt_rms": 0.5055413858857554,
+        "relative_pitch_rate_rms": 6.571637645903399
+      }
+    },
+    "max_roll": 10.237293861502248,
+    "max_pitch": 19.849568453093433,
+    "cohort": "screen",
+    "file": "screen/lqi-10/002-metrics.json"
+  },
+  {
+    "id": 3,
+    "rate": 10,
+    "scheme": "lqi",
+    "complete": true,
+    "failure": null,
+    "passed": false,
+    "reasons": [
+      "turn1: p90 turn tracking",
+      "turn1: turn oscillation",
+      "turn1: relative pitch peak",
+      "turn1: relative pitch late RMS",
+      "reverse: p90 turn tracking",
+      "reverse: turn oscillation",
+      "reverse: relative pitch peak",
+      "reverse: relative pitch late RMS",
+      "turn2: p90 turn tracking",
+      "turn2: turn oscillation",
+      "turn2: relative pitch peak",
+      "turn2: relative pitch late RMS",
+      "recover1: heading recovery",
+      "recover1: oscillation recovery",
+      "recover2: heading recovery",
+      "recover2: oscillation recovery"
+    ],
+    "phases": {
+      "turn1": {
+        "mean_rate": -9.541766641214947,
+        "mean_error": 0.45823335878505117,
+        "p90_error": 8.433205977310845,
+        "rate_std": 5.122613323843917,
+        "alt_rms": 0.4744184204059012,
+        "alt_peak": 0.9085521544853776,
+        "relative_pitch_rate_peak": 36.97580772142318,
+        "relative_pitch_rate_late_rms": 10.853020494422093,
+        "speed_p05": 3.7872887594222346,
+        "speed_min": 3.405238774103225,
+        "full_brake_longest": 0.0,
+        "throttle_ceiling_fraction": 0.0
+      },
+      "reverse": {
+        "mean_rate": 11.408904829540717,
+        "mean_error": 1.4089048295407165,
+        "p90_error": 12.547182383024259,
+        "rate_std": 7.528807502165204,
+        "alt_rms": 0.6996080305382836,
+        "alt_peak": 1.9915246436178222,
+        "relative_pitch_rate_peak": 39.06553221790615,
+        "relative_pitch_rate_late_rms": 11.26193903935612,
+        "speed_p05": 3.733282161252821,
+        "speed_min": 3.4583972375837866,
+        "full_brake_longest": 0.0,
+        "throttle_ceiling_fraction": 0.0
+      },
+      "turn2": {
+        "mean_rate": -11.20488096379652,
+        "mean_error": 1.2048809637965177,
+        "p90_error": 9.116928684084105,
+        "rate_std": 5.237513906300235,
+        "alt_rms": 0.6954980064490133,
+        "alt_peak": 1.4099458069008293,
+        "relative_pitch_rate_peak": 34.683023015371546,
+        "relative_pitch_rate_late_rms": 12.720197072675697,
+        "speed_p05": 3.6226739490092528,
+        "speed_min": 3.2490983369403175,
+        "full_brake_longest": 0.0,
+        "throttle_ceiling_fraction": 0.0
+      },
+      "recover1": {
+        "rate_rms": 6.9499964713153055,
+        "alt_rms": 0.3193969373427773,
+        "relative_pitch_rate_rms": 11.530708329719523
+      },
+      "recover2": {
+        "rate_rms": 7.360305131530832,
+        "alt_rms": 0.35294989224988366,
+        "relative_pitch_rate_rms": 12.961803742016862
+      }
+    },
+    "max_roll": 12.770870535816698,
+    "max_pitch": 23.890031367762816,
+    "cohort": "screen",
+    "file": "screen/lqi-10/003-metrics.json"
+  },
+  {
+    "id": 4,
+    "rate": 10,
+    "scheme": "lqi",
+    "complete": true,
+    "failure": null,
+    "passed": false,
+    "reasons": [
+      "turn1: p90 turn tracking",
+      "turn1: turn oscillation",
+      "turn1: relative pitch peak",
+      "turn1: relative pitch late RMS",
+      "reverse: p90 turn tracking",
+      "reverse: turn oscillation",
+      "reverse: relative pitch peak",
+      "reverse: relative pitch late RMS",
+      "turn2: p90 turn tracking",
+      "turn2: turn oscillation",
+      "turn2: relative pitch peak",
+      "turn2: relative pitch late RMS",
+      "recover1: heading recovery",
+      "recover1: oscillation recovery",
+      "recover2: heading recovery",
+      "recover2: oscillation recovery"
+    ],
+    "phases": {
+      "turn1": {
+        "mean_rate": 11.200928653230267,
+        "mean_error": 1.2009286532302668,
+        "p90_error": 17.689349489990413,
+        "rate_std": 11.326881356746407,
+        "alt_rms": 0.6039871922887307,
+        "alt_peak": 1.4773100713026395,
+        "relative_pitch_rate_peak": 58.26467660405712,
+        "relative_pitch_rate_late_rms": 15.466351299885602,
+        "speed_p05": 3.4125198373106107,
+        "speed_min": 2.6919582332711824,
+        "full_brake_longest": 0.0,
+        "throttle_ceiling_fraction": 0.0
+      },
+      "reverse": {
+        "mean_rate": -9.876071743052648,
+        "mean_error": 0.12392825694735189,
+        "p90_error": 14.911119954339533,
+        "rate_std": 9.179882042183172,
+        "alt_rms": 0.8714044124735886,
+        "alt_peak": 1.9272531864266327,
+        "relative_pitch_rate_peak": 45.55511206593199,
+        "relative_pitch_rate_late_rms": 16.45082423367951,
+        "speed_p05": 3.466951459922514,
+        "speed_min": 2.7766968568556876,
+        "full_brake_longest": 0.0,
+        "throttle_ceiling_fraction": 0.0
+      },
+      "turn2": {
+        "mean_rate": 11.280134939971655,
+        "mean_error": 1.2801349399716528,
+        "p90_error": 16.19873698152473,
+        "rate_std": 10.7441381832702,
+        "alt_rms": 0.7288983925595027,
+        "alt_peak": 1.5632637234372098,
+        "relative_pitch_rate_peak": 47.751899311522266,
+        "relative_pitch_rate_late_rms": 15.243252861936183,
+        "speed_p05": 3.5478858399868116,
+        "speed_min": 3.1515748615567203,
+        "full_brake_longest": 0.0,
+        "throttle_ceiling_fraction": 0.0
+      },
+      "recover1": {
+        "rate_rms": 10.08639155965589,
+        "alt_rms": 1.2373507010127966,
+        "relative_pitch_rate_rms": 16.493525371108912
+      },
+      "recover2": {
+        "rate_rms": 10.200518107335844,
+        "alt_rms": 0.6109006471604284,
+        "relative_pitch_rate_rms": 16.533175160912574
+      }
+    },
+    "max_roll": 17.0684109242009,
+    "max_pitch": 25.333704645807575,
+    "cohort": "screen",
+    "file": "screen/lqi-10/004-metrics.json"
+  },
+  {
+    "id": 5,
+    "rate": 10,
+    "scheme": "lqi",
+    "complete": true,
+    "failure": null,
+    "passed": false,
+    "reasons": [
+      "turn1: p90 turn tracking",
+      "turn1: turn oscillation",
+      "turn1: relative pitch late RMS",
+      "reverse: p90 turn tracking",
+      "reverse: turn oscillation",
+      "reverse: relative pitch late RMS",
+      "turn2: p90 turn tracking",
+      "turn2: turn oscillation",
+      "turn2: relative pitch late RMS",
+      "recover1: heading recovery",
+      "recover1: oscillation recovery",
+      "recover2: heading recovery",
+      "recover2: oscillation recovery"
+    ],
+    "phases": {
+      "turn1": {
+        "mean_rate": -8.968850269832995,
+        "mean_error": 1.0311497301670056,
+        "p90_error": 6.226692472775217,
+        "rate_std": 3.724826631864195,
+        "alt_rms": 0.3334480516660368,
+        "alt_peak": 0.7801052180526327,
+        "relative_pitch_rate_peak": 21.893730128282602,
+        "relative_pitch_rate_late_rms": 6.957368898957334,
+        "speed_p05": 3.969776420958984,
+        "speed_min": 3.6725420867146363,
+        "full_brake_longest": 0.0,
+        "throttle_ceiling_fraction": 0.0
+      },
+      "reverse": {
+        "mean_rate": 10.795146659497233,
+        "mean_error": 0.795146659497233,
+        "p90_error": 8.183875275363492,
+        "rate_std": 4.924313246992906,
+        "alt_rms": 0.4418451447711254,
+        "alt_peak": 0.9219942801184686,
+        "relative_pitch_rate_peak": 23.25754817413514,
+        "relative_pitch_rate_late_rms": 7.004970634265373,
+        "speed_p05": 4.007437181840663,
+        "speed_min": 3.7306739790964585,
+        "full_brake_longest": 0.0,
+        "throttle_ceiling_fraction": 0.0
+      },
+      "turn2": {
+        "mean_rate": -9.826703673953379,
+        "mean_error": 0.1732963260466217,
+        "p90_error": 5.939452770229035,
+        "rate_std": 3.79666884669596,
+        "alt_rms": 0.33781637445584045,
+        "alt_peak": 0.858668017302783,
+        "relative_pitch_rate_peak": 27.992796457362886,
+        "relative_pitch_rate_late_rms": 7.596167003268639,
+        "speed_p05": 3.996276637884767,
+        "speed_min": 3.8455101948979107,
+        "full_brake_longest": 0.0,
+        "throttle_ceiling_fraction": 0.0
+      },
+      "recover1": {
+        "rate_rms": 3.8882173956306207,
+        "alt_rms": 0.32419851444968517,
+        "relative_pitch_rate_rms": 6.559751426206438
+      },
+      "recover2": {
+        "rate_rms": 4.14695787124021,
+        "alt_rms": 0.2669253365981377,
+        "relative_pitch_rate_rms": 7.499498559098893
+      }
+    },
+    "max_roll": 10.13250223050724,
+    "max_pitch": 17.481723675955347,
+    "cohort": "screen",
+    "file": "screen/lqi-10/005-metrics.json"
+  },
+  {
+    "id": 6,
+    "rate": 10,
+    "scheme": "lqi",
+    "complete": true,
+    "failure": null,
+    "passed": false,
+    "reasons": [
+      "turn1: p90 turn tracking",
+      "turn1: turn oscillation",
+      "turn1: relative pitch peak",
+      "turn1: relative pitch late RMS",
+      "reverse: p90 turn tracking",
+      "reverse: turn oscillation",
+      "reverse: relative pitch peak",
+      "reverse: relative pitch late RMS",
+      "turn2: p90 turn tracking",
+      "turn2: turn oscillation",
+      "turn2: relative pitch peak",
+      "turn2: relative pitch late RMS",
+      "recover1: heading recovery",
+      "recover1: oscillation recovery",
+      "recover2: heading recovery",
+      "recover2: oscillation recovery"
+    ],
+    "phases": {
+      "turn1": {
+        "mean_rate": 11.194370382625443,
+        "mean_error": 1.1943703826254426,
+        "p90_error": 15.190486266859814,
+        "rate_std": 9.128329873305995,
+        "alt_rms": 0.6999151228621072,
+        "alt_peak": 1.511270229379214,
+        "relative_pitch_rate_peak": 41.45068626813247,
+        "relative_pitch_rate_late_rms": 12.567325864918825,
+        "speed_p05": 3.723583232238318,
+        "speed_min": 3.418226389510438,
+        "full_brake_longest": 0.0,
+        "throttle_ceiling_fraction": 0.0
+      },
+      "reverse": {
+        "mean_rate": -9.43761879791877,
+        "mean_error": 0.5623812020812297,
+        "p90_error": 11.950320205306982,
+        "rate_std": 7.077579747198242,
+        "alt_rms": 0.5372842172830071,
+        "alt_peak": 1.163039501225299,
+        "relative_pitch_rate_peak": 39.08001669204992,
+        "relative_pitch_rate_late_rms": 12.491711782080886,
+        "speed_p05": 3.6680160044182513,
+        "speed_min": 3.041082575177306,
+        "full_brake_longest": 0.0,
+        "throttle_ceiling_fraction": 0.0
+      },
+      "turn2": {
+        "mean_rate": 11.025848439502518,
+        "mean_error": 1.025848439502515,
+        "p90_error": 14.209914560642526,
+        "rate_std": 8.822132162457502,
+        "alt_rms": 0.8335931293648612,
+        "alt_peak": 1.93933182190613,
+        "relative_pitch_rate_peak": 49.067039179803444,
+        "relative_pitch_rate_late_rms": 12.567934732573564,
+        "speed_p05": 3.5863376720783586,
+        "speed_min": 3.3309339465927046,
+        "full_brake_longest": 0.0,
+        "throttle_ceiling_fraction": 0.0
+      },
+      "recover1": {
+        "rate_rms": 7.782725243593297,
+        "alt_rms": 0.7361247389241596,
+        "relative_pitch_rate_rms": 12.005070634725145
+      },
+      "recover2": {
+        "rate_rms": 8.471785818324644,
+        "alt_rms": 0.4947571341490946,
+        "relative_pitch_rate_rms": 11.664020518721932
+      }
+    },
+    "max_roll": 12.12312741982287,
+    "max_pitch": 24.3324249512046,
+    "cohort": "screen",
+    "file": "screen/lqi-10/006-metrics.json"
+  },
+  {
+    "id": 7,
+    "rate": 10,
+    "scheme": "lqi",
+    "complete": true,
+    "failure": null,
+    "passed": false,
+    "reasons": [
+      "turn1: p90 turn tracking",
+      "turn1: turn oscillation",
+      "turn1: relative pitch peak",
+      "turn1: relative pitch late RMS",
+      "reverse: p90 turn tracking",
+      "reverse: turn oscillation",
+      "reverse: relative pitch peak",
+      "reverse: relative pitch late RMS",
+      "turn2: p90 turn tracking",
+      "turn2: turn oscillation",
+      "turn2: relative pitch peak",
+      "turn2: relative pitch late RMS",
+      "recover1: heading recovery",
+      "recover1: oscillation recovery",
+      "recover2: heading recovery",
+      "recover2: oscillation recovery"
+    ],
+    "phases": {
+      "turn1": {
+        "mean_rate": -9.722911258699119,
+        "mean_error": 0.2770887413008824,
+        "p90_error": 11.63284806843326,
+        "rate_std": 6.732509903550003,
+        "alt_rms": 0.7635000822343421,
+        "alt_peak": 1.8794483760767733,
+        "relative_pitch_rate_peak": 36.80901866856146,
+        "relative_pitch_rate_late_rms": 11.679196771904925,
+        "speed_p05": 3.6858865110192687,
+        "speed_min": 3.094526763427213,
+        "full_brake_longest": 0.0,
+        "throttle_ceiling_fraction": 0.0
+      },
+      "reverse": {
+        "mean_rate": 10.528880987653226,
+        "mean_error": 0.5288809876532282,
+        "p90_error": 13.865649381712894,
+        "rate_std": 8.84470850050548,
+        "alt_rms": 0.7756647937969723,
+        "alt_peak": 2.2454767213463143,
+        "relative_pitch_rate_peak": 38.56008695240389,
+        "relative_pitch_rate_late_rms": 12.829404544202758,
+        "speed_p05": 3.656005434439269,
+        "speed_min": 3.474939791676271,
+        "full_brake_longest": 0.0,
+        "throttle_ceiling_fraction": 0.0
+      },
+      "turn2": {
+        "mean_rate": -9.111710485955689,
+        "mean_error": 0.8882895140443134,
+        "p90_error": 11.799870680297865,
+        "rate_std": 7.2968283101236775,
+        "alt_rms": 0.6034778495289304,
+        "alt_peak": 1.3794160051747184,
+        "relative_pitch_rate_peak": 54.13703593926235,
+        "relative_pitch_rate_late_rms": 12.840393389583538,
+        "speed_p05": 3.612936578616176,
+        "speed_min": 3.2615196426250184,
+        "full_brake_longest": 0.0,
+        "throttle_ceiling_fraction": 0.0
+      },
+      "recover1": {
+        "rate_rms": 7.115359134256369,
+        "alt_rms": 0.3037988504336879,
+        "relative_pitch_rate_rms": 11.342850852781996
+      },
+      "recover2": {
+        "rate_rms": 8.333245307189769,
+        "alt_rms": 0.5190902818570434,
+        "relative_pitch_rate_rms": 12.720931426679511
+      }
+    },
+    "max_roll": 12.61612287680686,
+    "max_pitch": 24.76722415317109,
+    "cohort": "screen",
+    "file": "screen/lqi-10/007-metrics.json"
+  },
+  {
+    "id": 0,
+    "rate": 12,
+    "scheme": "lqi",
+    "complete": true,
+    "failure": null,
+    "passed": true,
+    "reasons": [],
+    "phases": {
+      "turn1": {
+        "mean_rate": 13.617714634613872,
+        "mean_error": 1.6177146346138735,
+        "p90_error": 1.7054194635511883,
+        "rate_std": 0.08236827329802532,
+        "alt_rms": 0.09658406916075361,
+        "alt_peak": 0.21481452052016436,
+        "relative_pitch_rate_peak": 0.9572624348467436,
+        "relative_pitch_rate_late_rms": 0.09456107436269165,
+        "speed_p05": 4.287676939703258,
+        "speed_min": 4.241830940083858,
+        "full_brake_longest": 0.0,
+        "throttle_ceiling_fraction": 0.0
+      },
+      "reverse": {
+        "mean_rate": -11.876084599910783,
+        "mean_error": 0.12391540008921802,
+        "p90_error": 0.22548773980523754,
+        "rate_std": 0.08374598533817028,
+        "alt_rms": 0.29888444837658723,
+        "alt_peak": 0.3505417315390531,
+        "relative_pitch_rate_peak": 3.4981382349127847,
+        "relative_pitch_rate_late_rms": 0.08994035562656524,
+        "speed_p05": 4.192979395169532,
+        "speed_min": 4.066095522828042,
+        "full_brake_longest": 0.0,
+        "throttle_ceiling_fraction": 0.0
+      },
+      "turn2": {
+        "mean_rate": 13.64932066183507,
+        "mean_error": 1.6493206618350698,
+        "p90_error": 1.7170116808466038,
+        "rate_std": 0.07482681180434486,
+        "alt_rms": 0.08938672370603531,
+        "alt_peak": 0.20917080864956006,
+        "relative_pitch_rate_peak": 1.5548831837722439,
+        "relative_pitch_rate_late_rms": 0.09937295358448375,
+        "speed_p05": 4.285481770178983,
+        "speed_min": 4.21936342789587,
+        "full_brake_longest": 0.0,
+        "throttle_ceiling_fraction": 0.0
+      },
+      "recover1": {
+        "rate_rms": 0.05698128075492078,
+        "alt_rms": 0.21040013026072782,
+        "relative_pitch_rate_rms": 0.08696530119349487
+      },
+      "recover2": {
+        "rate_rms": 0.12338911100515551,
+        "alt_rms": 0.22578496629286957,
+        "relative_pitch_rate_rms": 0.08541288635917144
+      }
+    },
+    "max_roll": 9.11737511318329,
+    "max_pitch": 9.90120788641696,
+    "cohort": "nominal",
+    "file": "nominal/lqi-12/000-metrics.json"
+  },
+  {
+    "id": 1,
+    "rate": 12,
+    "scheme": "lqi",
+    "complete": true,
+    "failure": null,
+    "passed": true,
+    "reasons": [],
+    "phases": {
+      "turn1": {
+        "mean_rate": -11.961707597470069,
+        "mean_error": 0.038292402529931734,
+        "p90_error": 0.18736245119980768,
+        "rate_std": 0.11244026114040259,
+        "alt_rms": 0.19720985576286487,
+        "alt_peak": 0.269055957249428,
+        "relative_pitch_rate_peak": 2.8447539226229233,
+        "relative_pitch_rate_late_rms": 0.104630843417196,
+        "speed_p05": 4.195148599057436,
+        "speed_min": 4.0650632196889465,
+        "full_brake_longest": 0.0,
+        "throttle_ceiling_fraction": 0.0
+      },
+      "reverse": {
+        "mean_rate": 13.631101396374124,
+        "mean_error": 1.6311013963741252,
+        "p90_error": 1.696994869737657,
+        "rate_std": 0.06761067711546126,
+        "alt_rms": 0.08107343040346898,
+        "alt_peak": 0.21637730554189716,
+        "relative_pitch_rate_peak": 3.221529710244931,
+        "relative_pitch_rate_late_rms": 0.09157256284139871,
+        "speed_p05": 4.272182584662149,
+        "speed_min": 4.20141463465489,
+        "full_brake_longest": 0.0,
+        "throttle_ceiling_fraction": 0.0
+      },
+      "turn2": {
+        "mean_rate": -11.936762460663465,
+        "mean_error": 0.0632375393365335,
+        "p90_error": 0.14471873927301077,
+        "rate_std": 0.06799930449184548,
+        "alt_rms": 0.19049628812892108,
+        "alt_peak": 0.2559275183366694,
+        "relative_pitch_rate_peak": 2.924336858131568,
+        "relative_pitch_rate_late_rms": 0.09375611557974996,
+        "speed_p05": 4.186347543115957,
+        "speed_min": 4.061012058418072,
+        "full_brake_longest": 0.0,
+        "throttle_ceiling_fraction": 0.0
+      },
+      "recover1": {
+        "rate_rms": 0.1388273741392914,
+        "alt_rms": 0.08131717884334097,
+        "relative_pitch_rate_rms": 0.09184426718930183
+      },
+      "recover2": {
+        "rate_rms": 0.05078333873324267,
+        "alt_rms": 0.09593048995645152,
+        "relative_pitch_rate_rms": 0.06432027327458305
+      }
+    },
+    "max_roll": 9.330847542795153,
+    "max_pitch": 10.230475194583825,
+    "cohort": "nominal",
+    "file": "nominal/lqi-12/001-metrics.json"
+  },
+  {
+    "id": 0,
+    "rate": 13,
+    "scheme": "lqi",
+    "complete": true,
+    "failure": null,
+    "passed": false,
+    "reasons": [
+      "turn2: mean turn tracking"
+    ],
+    "phases": {
+      "turn1": {
+        "mean_rate": 14.96445102532732,
+        "mean_error": 1.96445102532732,
+        "p90_error": 2.0461957182027692,
+        "rate_std": 0.08140749981875191,
+        "alt_rms": 0.08708624483526134,
+        "alt_peak": 0.1272526443640274,
+        "relative_pitch_rate_peak": 1.212165275264201,
+        "relative_pitch_rate_late_rms": 0.10340744994182942,
+        "speed_p05": 4.2858124452246935,
+        "speed_min": 4.228660939308304,
+        "full_brake_longest": 0.0,
+        "throttle_ceiling_fraction": 0.0
+      },
+      "reverse": {
+        "mean_rate": -12.90425092847354,
+        "mean_error": 0.09574907152646085,
+        "p90_error": 0.22920282861620436,
+        "rate_std": 0.09381459877259242,
+        "alt_rms": 0.18647075717368336,
+        "alt_peak": 0.23630983531308658,
+        "relative_pitch_rate_peak": 3.3204952737947666,
+        "relative_pitch_rate_late_rms": 0.08253969332772888,
+        "speed_p05": 4.175772021794814,
+        "speed_min": 4.031884078241634,
+        "full_brake_longest": 0.0,
+        "throttle_ceiling_fraction": 0.0
+      },
+      "turn2": {
+        "mean_rate": 15.017970608537475,
+        "mean_error": 2.0179706085374742,
+        "p90_error": 2.1012535252896107,
+        "rate_std": 0.07058115103233192,
+        "alt_rms": 0.08727381498162995,
+        "alt_peak": 0.13355091326441482,
+        "relative_pitch_rate_peak": 1.8654656583293097,
+        "relative_pitch_rate_late_rms": 0.11940032262093571,
+        "speed_p05": 4.277427562547931,
+        "speed_min": 4.182387713722694,
+        "full_brake_longest": 0.0,
+        "throttle_ceiling_fraction": 0.0
+      },
+      "recover1": {
+        "rate_rms": 0.116157236485807,
+        "alt_rms": 0.09563266688666988,
+        "relative_pitch_rate_rms": 0.07575098083754601
+      },
+      "recover2": {
+        "rate_rms": 0.123208953342957,
+        "alt_rms": 0.09141047054697982,
+        "relative_pitch_rate_rms": 0.055125274393816384
+      }
+    },
+    "max_roll": 9.729620925633817,
+    "max_pitch": 10.24785178264956,
+    "cohort": "nominal",
+    "file": "nominal/lqi-13/000-metrics.json"
+  },
+  {
+    "id": 1,
+    "rate": 13,
+    "scheme": "lqi",
+    "complete": true,
+    "failure": null,
+    "passed": false,
+    "reasons": [
+      "reverse: mean turn tracking"
+    ],
+    "phases": {
+      "turn1": {
+        "mean_rate": -12.985978043434061,
+        "mean_error": 0.01402195656593878,
+        "p90_error": 0.20414852535557698,
+        "rate_std": 0.13458482731848545,
+        "alt_rms": 0.21007808780209833,
+        "alt_peak": 0.29295679706903144,
+        "relative_pitch_rate_peak": 3.316427077142299,
+        "relative_pitch_rate_late_rms": 0.10027592275025973,
+        "speed_p05": 4.181291369643898,
+        "speed_min": 4.032981291923006,
+        "full_brake_longest": 0.0,
+        "throttle_ceiling_fraction": 0.0
+      },
+      "reverse": {
+        "mean_rate": 15.002796497575222,
+        "mean_error": 2.002796497575223,
+        "p90_error": 2.0629952618621936,
+        "rate_std": 0.05559695265190686,
+        "alt_rms": 0.10774859029172609,
+        "alt_peak": 0.2423803549133723,
+        "relative_pitch_rate_peak": 3.7358253272906494,
+        "relative_pitch_rate_late_rms": 0.07559998493375937,
+        "speed_p05": 4.26811699000212,
+        "speed_min": 4.178603300617514,
+        "full_brake_longest": 0.0,
+        "throttle_ceiling_fraction": 0.0
+      },
+      "turn2": {
+        "mean_rate": -12.985088800442725,
+        "mean_error": 0.014911199557272402,
+        "p90_error": 0.13047816516037158,
+        "rate_std": 0.08062824076121779,
+        "alt_rms": 0.20439435397012828,
+        "alt_peak": 0.28335504162615166,
+        "relative_pitch_rate_peak": 3.3517956338269337,
+        "relative_pitch_rate_late_rms": 0.10402196786542112,
+        "speed_p05": 4.186107207471794,
+        "speed_min": 4.044628826401846,
+        "full_brake_longest": 0.0,
+        "throttle_ceiling_fraction": 0.0
+      },
+      "recover1": {
+        "rate_rms": 0.11253784674927515,
+        "alt_rms": 0.08281838355927572,
+        "relative_pitch_rate_rms": 0.07490709078790739
+      },
+      "recover2": {
+        "rate_rms": 0.060520010886162656,
+        "alt_rms": 0.09686367042811793,
+        "relative_pitch_rate_rms": 0.07265609628028999
+      }
+    },
+    "max_roll": 10.014893808761679,
+    "max_pitch": 10.437907406819386,
+    "cohort": "nominal",
+    "file": "nominal/lqi-13/001-metrics.json"
+  },
+  {
+    "id": 0,
+    "rate": 15,
+    "scheme": "lqi",
+    "complete": true,
+    "failure": null,
+    "passed": false,
+    "reasons": [
+      "turn1: mean turn tracking",
+      "turn2: mean turn tracking"
+    ],
+    "phases": {
+      "turn1": {
+        "mean_rate": 17.668360593894104,
+        "mean_error": 2.668360593894104,
+        "p90_error": 2.7542192116039392,
+        "rate_std": 0.07895227456402326,
+        "alt_rms": 0.06634293797817539,
+        "alt_peak": 0.23478435499406913,
+        "relative_pitch_rate_peak": 1.383118608988344,
+        "relative_pitch_rate_late_rms": 0.09611768774129151,
+        "speed_p05": 4.278666552116156,
+        "speed_min": 4.204120318735543,
+        "full_brake_longest": 0.0,
+        "throttle_ceiling_fraction": 0.0
+      },
+      "reverse": {
+        "mean_rate": -15.019479773337453,
+        "mean_error": 0.019479773337454934,
+        "p90_error": 0.1434918959323479,
+        "rate_std": 0.09720128165722361,
+        "alt_rms": 0.33521963601625154,
+        "alt_peak": 0.41288068701044267,
+        "relative_pitch_rate_peak": 3.883533629938999,
+        "relative_pitch_rate_late_rms": 0.0868748021776986,
+        "speed_p05": 4.156731789859736,
+        "speed_min": 3.9637922816419895,
+        "full_brake_longest": 0.0,
+        "throttle_ceiling_fraction": 0.0
+      },
+      "turn2": {
+        "mean_rate": 17.74867983873466,
+        "mean_error": 2.748679838734662,
+        "p90_error": 2.827359673898149,
+        "rate_std": 0.07177099292670758,
+        "alt_rms": 0.06195051258906392,
+        "alt_peak": 0.21909853450107875,
+        "relative_pitch_rate_peak": 1.8323045578559798,
+        "relative_pitch_rate_late_rms": 0.1006065140636013,
+        "speed_p05": 4.271788309016572,
+        "speed_min": 4.157814785320515,
+        "full_brake_longest": 0.0,
+        "throttle_ceiling_fraction": 0.0
+      },
+      "recover1": {
+        "rate_rms": 0.07270058605250375,
+        "alt_rms": 0.22312238034869517,
+        "relative_pitch_rate_rms": 0.0031725432076144455
+      },
+      "recover2": {
+        "rate_rms": 0.06759555135778095,
+        "alt_rms": 0.2373893359254898,
+        "relative_pitch_rate_rms": 0.1122745978732292
+      }
+    },
+    "max_roll": 11.20431108869431,
+    "max_pitch": 10.832260322880796,
+    "cohort": "nominal",
+    "file": "nominal/lqi-15/000-metrics.json"
+  },
+  {
+    "id": 1,
+    "rate": 15,
+    "scheme": "lqi",
+    "complete": true,
+    "failure": null,
+    "passed": false,
+    "reasons": [
+      "reverse: mean turn tracking"
+    ],
+    "phases": {
+      "turn1": {
+        "mean_rate": -15.071300047480003,
+        "mean_error": 0.07130004748000375,
+        "p90_error": 0.2630397697061955,
+        "rate_std": 0.14218456863635734,
+        "alt_rms": 0.35895972410373184,
+        "alt_peak": 0.4371079162953677,
+        "relative_pitch_rate_peak": 3.649772790049522,
+        "relative_pitch_rate_late_rms": 0.09861792034004206,
+        "speed_p05": 4.159798851391035,
+        "speed_min": 3.970663938417551,
+        "full_brake_longest": 0.0,
+        "throttle_ceiling_fraction": 0.0
+      },
+      "reverse": {
+        "mean_rate": 17.768039614481467,
+        "mean_error": 2.7680396144814683,
+        "p90_error": 2.831520881428542,
+        "rate_std": 0.059733842451204854,
+        "alt_rms": 0.09787783339639106,
+        "alt_peak": 0.3906910711368923,
+        "relative_pitch_rate_peak": 3.72514223327032,
+        "relative_pitch_rate_late_rms": 0.07963409059259581,
+        "speed_p05": 4.258077260176971,
+        "speed_min": 4.144787690817092,
+        "full_brake_longest": 0.0,
+        "throttle_ceiling_fraction": 0.0
+      },
+      "turn2": {
+        "mean_rate": -15.087462822829886,
+        "mean_error": 0.08746282282988724,
+        "p90_error": 0.24320184459533684,
+        "rate_std": 0.14103470690301606,
+        "alt_rms": 0.3524850202919422,
+        "alt_peak": 0.4456105992129267,
+        "relative_pitch_rate_peak": 3.950918316746778,
+        "relative_pitch_rate_late_rms": 0.12110445934244278,
+        "speed_p05": 4.17301785709176,
+        "speed_min": 3.998700089245276,
+        "full_brake_longest": 0.0,
+        "throttle_ceiling_fraction": 0.0
+      },
+      "recover1": {
+        "rate_rms": 0.06944983348152976,
+        "alt_rms": 0.21666940400672507,
+        "relative_pitch_rate_rms": 0.08570354642515512
+      },
+      "recover2": {
+        "rate_rms": 0.06410468621660192,
+        "alt_rms": 0.24022683681572274,
+        "relative_pitch_rate_rms": 0.11044211218205854
+      }
+    },
+    "max_roll": 11.293021131407272,
+    "max_pitch": 11.101702803649946,
+    "cohort": "nominal",
+    "file": "nominal/lqi-15/001-metrics.json"
+  },
+  {
+    "id": 0,
+    "rate": 20,
+    "scheme": "lqi",
+    "complete": true,
+    "failure": null,
+    "passed": false,
+    "reasons": [
+      "turn1: mean turn tracking",
+      "turn1: p90 turn tracking",
+      "turn2: mean turn tracking",
+      "turn2: p90 turn tracking"
+    ],
+    "phases": {
+      "turn1": {
+        "mean_rate": 24.609373103587707,
+        "mean_error": 4.609373103587709,
+        "p90_error": 4.81767052699962,
+        "rate_std": 0.1331877255121979,
+        "alt_rms": 0.15741402955927422,
+        "alt_peak": 0.24635070137782833,
+        "relative_pitch_rate_peak": 3.0228563251975444,
+        "relative_pitch_rate_late_rms": 0.08034895332765996,
+        "speed_p05": 4.289418037965984,
+        "speed_min": 4.101379845513322,
+        "full_brake_longest": 0.0,
+        "throttle_ceiling_fraction": 0.0
+      },
+      "reverse": {
+        "mean_rate": -20.387689107924082,
+        "mean_error": 0.38768910792408234,
+        "p90_error": 0.9804988015496672,
+        "rate_std": 0.3506374085559727,
+        "alt_rms": 0.3967682545897829,
+        "alt_peak": 0.5258491112489452,
+        "relative_pitch_rate_peak": 4.501213988093088,
+        "relative_pitch_rate_late_rms": 0.10253270196130422,
+        "speed_p05": 4.08699156546404,
+        "speed_min": 3.7801180833329107,
+        "full_brake_longest": 0.0,
+        "throttle_ceiling_fraction": 0.0
+      },
+      "turn2": {
+        "mean_rate": 24.566493366414985,
+        "mean_error": 4.5664933664149805,
+        "p90_error": 4.651770275633458,
+        "rate_std": 0.07763692516481009,
+        "alt_rms": 0.1534062861486485,
+        "alt_peak": 0.22196562784790785,
+        "relative_pitch_rate_peak": 2.9368235932840596,
+        "relative_pitch_rate_late_rms": 0.05623498287427522,
+        "speed_p05": 4.281900582082699,
+        "speed_min": 4.106783159134765,
+        "full_brake_longest": 0.0,
+        "throttle_ceiling_fraction": 0.0
+      },
+      "recover1": {
+        "rate_rms": 0.2285455352823194,
+        "alt_rms": 0.22116627722404755,
+        "relative_pitch_rate_rms": 0.0774198940028173
+      },
+      "recover2": {
+        "rate_rms": 0.06419085100935613,
+        "alt_rms": 0.22208880838152759,
+        "relative_pitch_rate_rms": 0.08274277191682317
+      }
+    },
+    "max_roll": 15.103846157943412,
+    "max_pitch": 12.679617275510498,
+    "cohort": "diagnostic",
+    "file": "diagnostic/lqi-20/000-metrics.json"
+  },
+  {
+    "id": 1,
+    "rate": 20,
+    "scheme": "lqi",
+    "complete": true,
+    "failure": null,
+    "passed": false,
+    "reasons": [
+      "reverse: mean turn tracking",
+      "reverse: p90 turn tracking"
+    ],
+    "phases": {
+      "turn1": {
+        "mean_rate": -20.021642880691097,
+        "mean_error": 0.02164288069109323,
+        "p90_error": 0.2626671377802452,
+        "rate_std": 0.16519485304359094,
+        "alt_rms": 0.4232575070319655,
+        "alt_peak": 0.5724832416445764,
+        "relative_pitch_rate_peak": 4.293945549276864,
+        "relative_pitch_rate_late_rms": 0.10566432593985514,
+        "speed_p05": 4.181989175101209,
+        "speed_min": 3.9134360558440826,
+        "full_brake_longest": 0.0,
+        "throttle_ceiling_fraction": 0.0
+      },
+      "reverse": {
+        "mean_rate": 24.72495585536943,
+        "mean_error": 4.724955855369427,
+        "p90_error": 5.065041948260271,
+        "rate_std": 0.22068781746129168,
+        "alt_rms": 0.19244347499201908,
+        "alt_peak": 0.4442602494904335,
+        "relative_pitch_rate_peak": 3.6478121605174243,
+        "relative_pitch_rate_late_rms": 0.09505762710920208,
+        "speed_p05": 4.257882578464314,
+        "speed_min": 4.027287308387523,
+        "full_brake_longest": 0.0,
+        "throttle_ceiling_fraction": 0.0
+      },
+      "turn2": {
+        "mean_rate": -20.369687609882167,
+        "mean_error": 0.36968760988216925,
+        "p90_error": 0.6404517794992429,
+        "rate_std": 0.262077866615166,
+        "alt_rms": 0.42646069451908375,
+        "alt_peak": 0.5927824568739339,
+        "relative_pitch_rate_peak": 4.525931873296851,
+        "relative_pitch_rate_late_rms": 0.09706745096660271,
+        "speed_p05": 4.119881421791088,
+        "speed_min": 3.850686191624641,
+        "full_brake_longest": 0.0,
+        "throttle_ceiling_fraction": 0.0
+      },
+      "recover1": {
+        "rate_rms": 0.07231316165954772,
+        "alt_rms": 0.21333394672083525,
+        "relative_pitch_rate_rms": 0.07074948043965894
+      },
+      "recover2": {
+        "rate_rms": 0.25646911618602014,
+        "alt_rms": 0.2207786370879558,
+        "relative_pitch_rate_rms": 0.08386244761753785
+      }
+    },
+    "max_roll": 15.266357675431195,
+    "max_pitch": 12.35957512116494,
+    "cohort": "diagnostic",
+    "file": "diagnostic/lqi-20/001-metrics.json"
+  },
+  {
+    "id": 0,
+    "rate": 25,
+    "scheme": "lqi",
+    "complete": true,
+    "failure": null,
+    "passed": false,
+    "reasons": [
+      "turn1: mean turn tracking",
+      "turn1: p90 turn tracking",
+      "turn2: mean turn tracking",
+      "turn2: p90 turn tracking"
+    ],
+    "phases": {
+      "turn1": {
+        "mean_rate": 31.41073269655458,
+        "mean_error": 6.410732696554579,
+        "p90_error": 6.708494109439085,
+        "rate_std": 0.2212297058175071,
+        "alt_rms": 0.27138014567805446,
+        "alt_peak": 0.31982374037762895,
+        "relative_pitch_rate_peak": 3.186182239789951,
+        "relative_pitch_rate_late_rms": 0.10070231403400937,
+        "speed_p05": 4.332931834060927,
+        "speed_min": 4.053679933671974,
+        "full_brake_longest": 0.0,
+        "throttle_ceiling_fraction": 0.0
+      },
+      "reverse": {
+        "mean_rate": -25.853193192221475,
+        "mean_error": 0.8531931922214787,
+        "p90_error": 2.4640219585326695,
+        "rate_std": 0.8853307805599101,
+        "alt_rms": 0.4652262828096969,
+        "alt_peak": 0.6706293814343098,
+        "relative_pitch_rate_peak": 5.457425928763075,
+        "relative_pitch_rate_late_rms": 0.11030253589155894,
+        "speed_p05": 4.045612328075428,
+        "speed_min": 3.5916324247640095,
+        "full_brake_longest": 0.0,
+        "throttle_ceiling_fraction": 0.0
+      },
+      "turn2": {
+        "mean_rate": 31.487660271047474,
+        "mean_error": 6.48766027104748,
+        "p90_error": 6.821483457301973,
+        "rate_std": 0.2106418452646247,
+        "alt_rms": 0.2700296614936143,
+        "alt_peak": 0.32971866419459417,
+        "relative_pitch_rate_peak": 3.275148059949866,
+        "relative_pitch_rate_late_rms": 0.08153930144603659,
+        "speed_p05": 4.31080528996548,
+        "speed_min": 4.053037520560228,
+        "full_brake_longest": 0.0,
+        "throttle_ceiling_fraction": 0.0
+      },
+      "recover1": {
+        "rate_rms": 0.5730669192708627,
+        "alt_rms": 0.2210885631449663,
+        "relative_pitch_rate_rms": 0.07153424294726209
+      },
+      "recover2": {
+        "rate_rms": 0.06263062176478437,
+        "alt_rms": 0.21646927471986063,
+        "relative_pitch_rate_rms": 0.07310918928872058
+      }
+    },
+    "max_roll": 20.153001924263837,
+    "max_pitch": 14.607376595015397,
+    "cohort": "diagnostic",
+    "file": "diagnostic/lqi-25/000-metrics.json"
+  },
+  {
+    "id": 1,
+    "rate": 25,
+    "scheme": "lqi",
+    "complete": true,
+    "failure": null,
+    "passed": false,
+    "reasons": [
+      "reverse: mean turn tracking",
+      "reverse: p90 turn tracking"
+    ],
+    "phases": {
+      "turn1": {
+        "mean_rate": -25.50488801564545,
+        "mean_error": 0.5048880156454514,
+        "p90_error": 1.1725628045529577,
+        "rate_std": 0.4848914678396257,
+        "alt_rms": 0.5040821093934608,
+        "alt_peak": 0.755954413730997,
+        "relative_pitch_rate_peak": 5.453177814208308,
+        "relative_pitch_rate_late_rms": 0.10202658635665397,
+        "speed_p05": 4.084111021940832,
+        "speed_min": 3.68898321984413,
+        "full_brake_longest": 0.0,
+        "throttle_ceiling_fraction": 0.0
+      },
+      "reverse": {
+        "mean_rate": 31.80041514936554,
+        "mean_error": 6.800415149365544,
+        "p90_error": 7.638616205628139,
+        "rate_std": 0.5141492568247235,
+        "alt_rms": 0.3144238610523922,
+        "alt_peak": 0.5033237751309869,
+        "relative_pitch_rate_peak": 4.169783117116167,
+        "relative_pitch_rate_late_rms": 0.09548846167745074,
+        "speed_p05": 4.222695966208195,
+        "speed_min": 3.9374772110131726,
+        "full_brake_longest": 0.0,
+        "throttle_ceiling_fraction": 0.0
+      },
+      "turn2": {
+        "mean_rate": -25.699765528126857,
+        "mean_error": 0.6997655281268639,
+        "p90_error": 1.4736408580633864,
+        "rate_std": 0.5195245172373395,
+        "alt_rms": 0.5086008879326795,
+        "alt_peak": 0.7455034993331111,
+        "relative_pitch_rate_peak": 5.579529466114624,
+        "relative_pitch_rate_late_rms": 0.09671266023305403,
+        "speed_p05": 4.070801430215791,
+        "speed_min": 3.691071600411997,
+        "full_brake_longest": 0.0,
+        "throttle_ceiling_fraction": 0.0
+      },
+      "recover1": {
+        "rate_rms": 0.19704993535427798,
+        "alt_rms": 0.2086441231505518,
+        "relative_pitch_rate_rms": 0.025995668246180423
+      },
+      "recover2": {
+        "rate_rms": 0.506868582735106,
+        "alt_rms": 0.22728659721099415,
+        "relative_pitch_rate_rms": 0.07850055006451079
+      }
+    },
+    "max_roll": 19.815894289463056,
+    "max_pitch": 13.67608511050358,
+    "cohort": "diagnostic",
+    "file": "diagnostic/lqi-25/001-metrics.json"
+  },
+  {
+    "id": 0,
+    "rate": 15,
+    "scheme": "baseline",
+    "complete": true,
+    "failure": null,
+    "passed": true,
+    "reasons": [],
+    "phases": {
+      "turn1": {
+        "mean_rate": 15.235594957524231,
+        "mean_error": 0.23559495752423024,
+        "p90_error": 1.4585495844981373,
+        "rate_std": 0.9955757836475593,
+        "alt_rms": 0.34033645252647793,
+        "alt_peak": 0.427094520960523,
+        "relative_pitch_rate_peak": 5.01547918438403,
+        "relative_pitch_rate_late_rms": 0.18620071540755187,
+        "speed_p05": 4.285660814026,
+        "speed_min": 4.061084272601827,
+        "full_brake_longest": 0.0,
+        "throttle_ceiling_fraction": 0.0
+      },
+      "reverse": {
+        "mean_rate": -15.179865524678888,
+        "mean_error": 0.1798655246788882,
+        "p90_error": 1.22117058188282,
+        "rate_std": 0.7948764227565432,
+        "alt_rms": 0.18898675720814734,
+        "alt_peak": 0.29526572777562876,
+        "relative_pitch_rate_peak": 7.330842544372801,
+        "relative_pitch_rate_late_rms": 0.13598787097214962,
+        "speed_p05": 4.35001751132692,
+        "speed_min": 4.164545714048317,
+        "full_brake_longest": 0.0,
+        "throttle_ceiling_fraction": 0.0
+      },
+      "turn2": {
+        "mean_rate": 14.868783617264544,
+        "mean_error": 0.13121638273545208,
+        "p90_error": 1.5120496190830146,
+        "rate_std": 0.9973875822735887,
+        "alt_rms": 0.33721675623077385,
+        "alt_peak": 0.4033288461660831,
+        "relative_pitch_rate_peak": 5.506637336495342,
+        "relative_pitch_rate_late_rms": 0.1199508406217376,
+        "speed_p05": 4.275348581877642,
+        "speed_min": 4.0618831497823304,
+        "full_brake_longest": 0.0,
+        "throttle_ceiling_fraction": 0.0
+      },
+      "recover1": {
+        "rate_rms": 0.074538225618326,
+        "alt_rms": 0.06887588532155327,
+        "relative_pitch_rate_rms": 0.1641623867996156
+      },
+      "recover2": {
+        "rate_rms": 0.08118845550573936,
+        "alt_rms": 0.11097995855688665,
+        "relative_pitch_rate_rms": 0.16671032638803035
+      }
+    },
+    "max_roll": 13.091355136968936,
+    "max_pitch": 11.122580806345425,
+    "cohort": "comparison",
+    "file": "comparison/baseline-15/000-metrics.json"
+  },
+  {
+    "id": 1,
+    "rate": 15,
+    "scheme": "baseline",
+    "complete": true,
+    "failure": null,
+    "passed": true,
+    "reasons": [],
+    "phases": {
+      "turn1": {
+        "mean_rate": -15.301128300440137,
+        "mean_error": 0.3011283004401393,
+        "p90_error": 1.4406462957831707,
+        "rate_std": 0.9641351865367399,
+        "alt_rms": 0.31261561624354783,
+        "alt_peak": 0.3905682312534182,
+        "relative_pitch_rate_peak": 5.167303632903679,
+        "relative_pitch_rate_late_rms": 0.19828441497335048,
+        "speed_p05": 4.374870834788129,
+        "speed_min": 4.234445191684864,
+        "full_brake_longest": 0.0,
+        "throttle_ceiling_fraction": 0.0
+      },
+      "reverse": {
+        "mean_rate": 15.27860115500021,
+        "mean_error": 0.278601155000209,
+        "p90_error": 1.6823966326566746,
+        "rate_std": 1.156789985886239,
+        "alt_rms": 0.22430604079407468,
+        "alt_peak": 0.35390304055356836,
+        "relative_pitch_rate_peak": 6.096954368766184,
+        "relative_pitch_rate_late_rms": 0.15102379323461484,
+        "speed_p05": 4.280655300970607,
+        "speed_min": 4.0091586097684315,
+        "full_brake_longest": 0.0,
+        "throttle_ceiling_fraction": 0.0
+      },
+      "turn2": {
+        "mean_rate": -15.030463769658843,
+        "mean_error": 0.03046376965884302,
+        "p90_error": 1.5000119803711556,
+        "rate_std": 1.0279277251009111,
+        "alt_rms": 0.30864959484351934,
+        "alt_peak": 0.37053977332720933,
+        "relative_pitch_rate_peak": 5.000588016435476,
+        "relative_pitch_rate_late_rms": 0.15214749970707872,
+        "speed_p05": 4.371090945845307,
+        "speed_min": 4.232696586055744,
+        "full_brake_longest": 0.0,
+        "throttle_ceiling_fraction": 0.0
+      },
+      "recover1": {
+        "rate_rms": 0.08207325846220097,
+        "alt_rms": 0.05467494377204642,
+        "relative_pitch_rate_rms": 0.10564402224006342
+      },
+      "recover2": {
+        "rate_rms": 0.08798691655876491,
+        "alt_rms": 0.11971624720964412,
+        "relative_pitch_rate_rms": 0.23592303219834068
+      }
+    },
+    "max_roll": 11.689188676949595,
+    "max_pitch": 11.626483708524802,
+    "cohort": "comparison",
+    "file": "comparison/baseline-15/001-metrics.json"
+  },
+  {
+    "id": 2,
+    "rate": 15,
+    "scheme": "baseline",
+    "complete": true,
+    "failure": null,
+    "passed": false,
+    "reasons": [
+      "turn1: p90 turn tracking",
+      "turn1: turn oscillation",
+      "turn1: relative pitch late RMS",
+      "reverse: p90 turn tracking",
+      "reverse: turn oscillation",
+      "reverse: relative pitch peak",
+      "reverse: relative pitch late RMS",
+      "turn2: p90 turn tracking",
+      "turn2: turn oscillation",
+      "turn2: relative pitch peak",
+      "turn2: relative pitch late RMS",
+      "recover1: heading recovery",
+      "recover1: oscillation recovery",
+      "recover2: heading recovery",
+      "recover2: oscillation recovery"
+    ],
+    "phases": {
+      "turn1": {
+        "mean_rate": 15.441762190891943,
+        "mean_error": 0.4417621908919403,
+        "p90_error": 11.421577020254741,
+        "rate_std": 6.960380849425151,
+        "alt_rms": 0.356483463822783,
+        "alt_peak": 0.720550609553797,
+        "relative_pitch_rate_peak": 29.183288007983403,
+        "relative_pitch_rate_late_rms": 8.863764573655068,
+        "speed_p05": 3.9598917111069833,
+        "speed_min": 3.7102543818636806,
+        "full_brake_longest": 0.0,
+        "throttle_ceiling_fraction": 0.0
+      },
+      "reverse": {
+        "mean_rate": -15.324561192318205,
+        "mean_error": 0.3245611923182025,
+        "p90_error": 8.902393607756634,
+        "rate_std": 5.48964712337621,
+        "alt_rms": 0.3755323613477638,
+        "alt_peak": 0.7864525613080176,
+        "relative_pitch_rate_peak": 30.879110516275365,
+        "relative_pitch_rate_late_rms": 10.063351638577892,
+        "speed_p05": 4.0584214196738975,
+        "speed_min": 3.831071908815035,
+        "full_brake_longest": 0.0,
+        "throttle_ceiling_fraction": 0.0
+      },
+      "turn2": {
+        "mean_rate": 15.065947292638114,
+        "mean_error": 0.06594729263811439,
+        "p90_error": 11.074737442472982,
+        "rate_std": 6.84871282235956,
+        "alt_rms": 0.4663992286532702,
+        "alt_peak": 0.948938029878093,
+        "relative_pitch_rate_peak": 31.86709663242178,
+        "relative_pitch_rate_late_rms": 9.461656109652207,
+        "speed_p05": 3.981164887672732,
+        "speed_min": 3.5686503254536497,
+        "full_brake_longest": 0.0,
+        "throttle_ceiling_fraction": 0.0
+      },
+      "recover1": {
+        "rate_rms": 6.99555301556249,
+        "alt_rms": 0.2152710092415621,
+        "relative_pitch_rate_rms": 10.344095989653592
+      },
+      "recover2": {
+        "rate_rms": 5.403063718927748,
+        "alt_rms": 0.31504062576741965,
+        "relative_pitch_rate_rms": 7.705337027160242
+      }
+    },
+    "max_roll": 14.712958125661183,
+    "max_pitch": 18.5947767081115,
+    "cohort": "comparison",
+    "file": "comparison/baseline-15/002-metrics.json"
+  },
+  {
+    "id": 3,
+    "rate": 15,
+    "scheme": "baseline",
+    "complete": true,
+    "failure": null,
+    "passed": false,
+    "reasons": [
+      "turn1: p90 turn tracking",
+      "turn1: turn oscillation",
+      "turn1: relative pitch peak",
+      "turn1: relative pitch late RMS",
+      "reverse: p90 turn tracking",
+      "reverse: turn oscillation",
+      "reverse: relative pitch peak",
+      "reverse: relative pitch late RMS",
+      "turn2: p90 turn tracking",
+      "turn2: turn oscillation",
+      "turn2: relative pitch peak",
+      "turn2: relative pitch late RMS",
+      "recover1: heading recovery",
+      "recover1: oscillation recovery",
+      "recover2: heading recovery",
+      "recover2: oscillation recovery"
+    ],
+    "phases": {
+      "turn1": {
+        "mean_rate": -15.150676650633516,
+        "mean_error": 0.1506766506335182,
+        "p90_error": 9.283086254203551,
+        "rate_std": 5.633118582346636,
+        "alt_rms": 0.47344985185961136,
+        "alt_peak": 1.1789072281106314,
+        "relative_pitch_rate_peak": 49.51347190802809,
+        "relative_pitch_rate_late_rms": 14.462697717189144,
+        "speed_p05": 3.9380712257048347,
+        "speed_min": 3.591288739110293,
+        "full_brake_longest": 0.0,
+        "throttle_ceiling_fraction": 0.0
+      },
+      "reverse": {
+        "mean_rate": 15.269557208960476,
+        "mean_error": 0.2695572089604782,
+        "p90_error": 14.12007653800448,
+        "rate_std": 8.980731284613203,
+        "alt_rms": 0.6534701430390087,
+        "alt_peak": 1.3127738812144756,
+        "relative_pitch_rate_peak": 46.53363734530496,
+        "relative_pitch_rate_late_rms": 14.285691768497179,
+        "speed_p05": 3.77973309357086,
+        "speed_min": 3.3497666995393236,
+        "full_brake_longest": 0.0,
+        "throttle_ceiling_fraction": 0.0
+      },
+      "turn2": {
+        "mean_rate": -15.316293022242297,
+        "mean_error": 0.31629302224229605,
+        "p90_error": 9.935490486915564,
+        "rate_std": 5.765101275613705,
+        "alt_rms": 0.9062600121644624,
+        "alt_peak": 1.9341381773121284,
+        "relative_pitch_rate_peak": 65.0183536922848,
+        "relative_pitch_rate_late_rms": 16.38023475348384,
+        "speed_p05": 3.8312302870902606,
+        "speed_min": 3.387883782870611,
+        "full_brake_longest": 0.0,
+        "throttle_ceiling_fraction": 0.0
+      },
+      "recover1": {
+        "rate_rms": 7.4123640472062835,
+        "alt_rms": 0.5618854980065826,
+        "relative_pitch_rate_rms": 14.87611413194761
+      },
+      "recover2": {
+        "rate_rms": 6.954556581485785,
+        "alt_rms": 0.3599020370224707,
+        "relative_pitch_rate_rms": 13.903915596916214
+      }
+    },
+    "max_roll": 15.187371252371705,
+    "max_pitch": 21.24288153992677,
+    "cohort": "comparison",
+    "file": "comparison/baseline-15/003-metrics.json"
+  },
+  {
+    "id": 0,
+    "rate": 25,
+    "scheme": "baseline",
+    "complete": true,
+    "failure": null,
+    "passed": true,
+    "reasons": [],
+    "phases": {
+      "turn1": {
+        "mean_rate": 25.06530538144479,
+        "mean_error": 0.06530538144479406,
+        "p90_error": 3.5512241313966855,
+        "rate_std": 2.3693495854372464,
+        "alt_rms": 0.588465297815563,
+        "alt_peak": 0.9027675302253115,
+        "relative_pitch_rate_peak": 7.185677607196058,
+        "relative_pitch_rate_late_rms": 0.16933912506871793,
+        "speed_p05": 4.2951609802958775,
+        "speed_min": 3.940944340255156,
+        "full_brake_longest": 0.0,
+        "throttle_ceiling_fraction": 0.0
+      },
+      "reverse": {
+        "mean_rate": -25.028359548984753,
+        "mean_error": 0.02835954898474975,
+        "p90_error": 2.2565053110722344,
+        "rate_std": 1.5280559937704659,
+        "alt_rms": 0.24807197487675153,
+        "alt_peak": 0.43134195895076033,
+        "relative_pitch_rate_peak": 15.841687271410768,
+        "relative_pitch_rate_late_rms": 0.21247008753708135,
+        "speed_p05": 4.371124923646123,
+        "speed_min": 3.8590393260667604,
+        "full_brake_longest": 0.0,
+        "throttle_ceiling_fraction": 0.0
+      },
+      "turn2": {
+        "mean_rate": 25.637690757948896,
+        "mean_error": 0.6376907579488932,
+        "p90_error": 2.8790099054082807,
+        "rate_std": 1.8896880178539108,
+        "alt_rms": 0.5279306448741469,
+        "alt_peak": 0.7530940463284495,
+        "relative_pitch_rate_peak": 6.631636066945617,
+        "relative_pitch_rate_late_rms": 0.19164595926616287,
+        "speed_p05": 4.291127218459659,
+        "speed_min": 3.9505852249935978,
+        "full_brake_longest": 0.0,
+        "throttle_ceiling_fraction": 0.0
+      },
+      "recover1": {
+        "rate_rms": 0.0811284289443777,
+        "alt_rms": 0.1685100487056841,
+        "relative_pitch_rate_rms": 0.12828625830691054
+      },
+      "recover2": {
+        "rate_rms": 0.09747459301876198,
+        "alt_rms": 0.028575385503551404,
+        "relative_pitch_rate_rms": 0.19420472408660938
+      }
+    },
+    "max_roll": 19.677419454370575,
+    "max_pitch": 15.434438963886521,
+    "cohort": "comparison",
+    "file": "comparison/baseline-25/000-metrics.json"
+  },
+  {
+    "id": 1,
+    "rate": 25,
+    "scheme": "baseline",
+    "complete": true,
+    "failure": null,
+    "passed": true,
+    "reasons": [],
+    "phases": {
+      "turn1": {
+        "mean_rate": -25.080340373045672,
+        "mean_error": 0.08034037304567335,
+        "p90_error": 2.580630488859523,
+        "rate_std": 1.6919798056238986,
+        "alt_rms": 0.562553339509542,
+        "alt_peak": 0.7795889354386176,
+        "relative_pitch_rate_peak": 6.908381925961926,
+        "relative_pitch_rate_late_rms": 0.17795101916124278,
+        "speed_p05": 4.37305273118571,
+        "speed_min": 4.101725151179246,
+        "full_brake_longest": 0.0,
+        "throttle_ceiling_fraction": 0.0
+      },
+      "reverse": {
+        "mean_rate": 25.116124176906343,
+        "mean_error": 0.1161241769063431,
+        "p90_error": 3.1420682846677934,
+        "rate_std": 2.1242014823393127,
+        "alt_rms": 0.2443093234215031,
+        "alt_peak": 0.5293770376533402,
+        "relative_pitch_rate_peak": 9.0274929152267,
+        "relative_pitch_rate_late_rms": 0.15989620353255632,
+        "speed_p05": 4.296935589094393,
+        "speed_min": 3.806291456581986,
+        "full_brake_longest": 0.0,
+        "throttle_ceiling_fraction": 0.0
+      },
+      "turn2": {
+        "mean_rate": -24.66721020571057,
+        "mean_error": 0.33278979428943206,
+        "p90_error": 2.5337983944417832,
+        "rate_std": 1.6904735363903973,
+        "alt_rms": 0.5082937666036066,
+        "alt_peak": 0.6985181267408933,
+        "relative_pitch_rate_peak": 8.162534608453175,
+        "relative_pitch_rate_late_rms": 0.1659273263314342,
+        "speed_p05": 4.384284596138633,
+        "speed_min": 4.055524291373404,
+        "full_brake_longest": 0.0,
+        "throttle_ceiling_fraction": 0.0
+      },
+      "recover1": {
+        "rate_rms": 0.14576257357856706,
+        "alt_rms": 0.1621398188334122,
+        "relative_pitch_rate_rms": 0.12269783701932617
+      },
+      "recover2": {
+        "rate_rms": 0.10605343702279434,
+        "alt_rms": 0.03270788615455065,
+        "relative_pitch_rate_rms": 0.17108380720247213
+      }
+    },
+    "max_roll": 18.762188107032998,
+    "max_pitch": 14.066503796581578,
+    "cohort": "comparison",
+    "file": "comparison/baseline-25/001-metrics.json"
+  },
+  {
+    "id": 2,
+    "rate": 25,
+    "scheme": "baseline",
+    "complete": true,
+    "failure": null,
+    "passed": false,
+    "reasons": [
+      "turn1: p90 turn tracking",
+      "turn1: turn oscillation",
+      "turn1: relative pitch peak",
+      "turn1: relative pitch late RMS",
+      "reverse: p90 turn tracking",
+      "reverse: turn oscillation",
+      "reverse: relative pitch peak",
+      "reverse: relative pitch late RMS",
+      "turn2: p90 turn tracking",
+      "turn2: turn oscillation",
+      "turn2: relative pitch late RMS",
+      "recover1: heading recovery",
+      "recover1: oscillation recovery",
+      "recover2: heading recovery",
+      "recover2: oscillation recovery"
+    ],
+    "phases": {
+      "turn1": {
+        "mean_rate": 25.0768938436229,
+        "mean_error": 0.07689384362290128,
+        "p90_error": 12.730528230540523,
+        "rate_std": 7.631617129624367,
+        "alt_rms": 0.5104246550942312,
+        "alt_peak": 1.0664768909795868,
+        "relative_pitch_rate_peak": 30.953941240571705,
+        "relative_pitch_rate_late_rms": 9.52813734141955,
+        "speed_p05": 4.010098783766166,
+        "speed_min": 3.675212476300615,
+        "full_brake_longest": 0.0,
+        "throttle_ceiling_fraction": 0.0
+      },
+      "reverse": {
+        "mean_rate": -25.12357423464878,
+        "mean_error": 0.12357423464878219,
+        "p90_error": 8.845265008612028,
+        "rate_std": 5.551326627180362,
+        "alt_rms": 0.2573339609693107,
+        "alt_peak": 0.654259079895894,
+        "relative_pitch_rate_peak": 37.96672264253915,
+        "relative_pitch_rate_late_rms": 9.908854343979181,
+        "speed_p05": 4.1194836749282535,
+        "speed_min": 3.5471236807151647,
+        "full_brake_longest": 0.0,
+        "throttle_ceiling_fraction": 0.0
+      },
+      "turn2": {
+        "mean_rate": 25.22654806667567,
+        "mean_error": 0.22654806667567542,
+        "p90_error": 12.823347474759293,
+        "rate_std": 8.105416109366791,
+        "alt_rms": 0.5756496870532312,
+        "alt_peak": 1.135105329480787,
+        "relative_pitch_rate_peak": 28.89075727389919,
+        "relative_pitch_rate_late_rms": 10.022347529405636,
+        "speed_p05": 3.9852016516590565,
+        "speed_min": 3.842208827489176,
+        "full_brake_longest": 0.0,
+        "throttle_ceiling_fraction": 0.0
+      },
+      "recover1": {
+        "rate_rms": 6.035227570260023,
+        "alt_rms": 0.4069466942524902,
+        "relative_pitch_rate_rms": 9.159877747482096
+      },
+      "recover2": {
+        "rate_rms": 5.373473579262148,
+        "alt_rms": 0.44548930065157244,
+        "relative_pitch_rate_rms": 8.329522962561763
+      }
+    },
+    "max_roll": 23.452605655204557,
+    "max_pitch": 17.333292715534593,
+    "cohort": "comparison",
+    "file": "comparison/baseline-25/002-metrics.json"
+  },
+  {
+    "id": 3,
+    "rate": 25,
+    "scheme": "baseline",
+    "complete": true,
+    "failure": null,
+    "passed": false,
+    "reasons": [
+      "turn1: p90 turn tracking",
+      "turn1: turn oscillation",
+      "turn1: relative pitch peak",
+      "turn1: relative pitch late RMS",
+      "reverse: p90 turn tracking",
+      "reverse: turn oscillation",
+      "reverse: relative pitch peak",
+      "reverse: relative pitch late RMS",
+      "turn2: p90 turn tracking",
+      "turn2: turn oscillation",
+      "turn2: relative pitch peak",
+      "turn2: relative pitch late RMS",
+      "recover1: heading recovery",
+      "recover1: oscillation recovery",
+      "recover2: heading recovery",
+      "recover2: oscillation recovery"
+    ],
+    "phases": {
+      "turn1": {
+        "mean_rate": -25.089548522036868,
+        "mean_error": 0.08954852203686865,
+        "p90_error": 8.687476104087892,
+        "rate_std": 5.527987624677373,
+        "alt_rms": 0.7051293784209992,
+        "alt_peak": 1.506366037868169,
+        "relative_pitch_rate_peak": 49.074743286186646,
+        "relative_pitch_rate_late_rms": 14.549651729829149,
+        "speed_p05": 3.9410866851678397,
+        "speed_min": 3.6274093415325916,
+        "full_brake_longest": 0.0,
+        "throttle_ceiling_fraction": 0.0
+      },
+      "reverse": {
+        "mean_rate": 24.956371574105706,
+        "mean_error": 0.0436284258942915,
+        "p90_error": 15.627184755905446,
+        "rate_std": 9.92626753821277,
+        "alt_rms": 0.6303964081244915,
+        "alt_peak": 1.2231190707613138,
+        "relative_pitch_rate_peak": 45.4534176716284,
+        "relative_pitch_rate_late_rms": 14.898063711391973,
+        "speed_p05": 3.73377758847501,
+        "speed_min": 3.2416050833278183,
+        "full_brake_longest": 0.0,
+        "throttle_ceiling_fraction": 0.0
+      },
+      "turn2": {
+        "mean_rate": -25.374239952150628,
+        "mean_error": 0.3742399521506267,
+        "p90_error": 9.616393938222327,
+        "rate_std": 5.66870343110508,
+        "alt_rms": 1.1041802991544525,
+        "alt_peak": 1.8299232381959172,
+        "relative_pitch_rate_peak": 49.38371615728309,
+        "relative_pitch_rate_late_rms": 15.287200951758386,
+        "speed_p05": 3.9634260752094783,
+        "speed_min": 3.5749884497241675,
+        "full_brake_longest": 0.0,
+        "throttle_ceiling_fraction": 0.0
+      },
+      "recover1": {
+        "rate_rms": 7.454138165216839,
+        "alt_rms": 0.36089305885783773,
+        "relative_pitch_rate_rms": 14.28861333437888
+      },
+      "recover2": {
+        "rate_rms": 9.767390246688924,
+        "alt_rms": 0.2882882165654222,
+        "relative_pitch_rate_rms": 14.643713949091625
+      }
+    },
+    "max_roll": 24.106829711774456,
+    "max_pitch": 25.627594308256548,
+    "cohort": "comparison",
+    "file": "comparison/baseline-25/003-metrics.json"
+  }
+]

@@ -1,8 +1,0 @@
-{
-  "name": "w1.5-t0",
-  "wind_parameters": {
-    "SIM_WIND_SPD": 1.5,
-    "SIM_WIND_TURB": 0,
-    "SIM_WIND_DIR": 45
-  }
-}

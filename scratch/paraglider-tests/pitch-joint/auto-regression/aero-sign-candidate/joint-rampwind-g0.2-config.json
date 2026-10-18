@@ -1,9 +1,0 @@
-{
-  "name": "joint-rampwind-g0.2",
-  "joint": true,
-  "gain": 0.2,
-  "wind": 3,
-  "turbulence": 0.5,
-  "wind_ramp_s": 30,
-  "aero_convention": "corrected x-forward z-down incidence and angle of attack"
-}

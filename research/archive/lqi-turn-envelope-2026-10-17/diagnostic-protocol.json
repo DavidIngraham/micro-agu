@@ -1,0 +1,27 @@
+{
+  "rates": [
+    20,
+    25
+  ],
+  "cases": [
+    {
+      "id": 0,
+      "sign": 1,
+      "scales": {},
+      "brakeRateScale": 1,
+      "wind": 0,
+      "turbulence": 0,
+      "seed": 1375099246
+    },
+    {
+      "id": 1,
+      "sign": -1,
+      "scales": {},
+      "brakeRateScale": 1,
+      "wind": 0,
+      "turbulence": 0,
+      "seed": 1227417296
+    }
+  ],
+  "purpose": "15 deg/s failed tracking but stayed bounded with good altitude/speed. Diagnose whether the bias grows at 20/25; no release. Do not proceed above 25 unless all original gates pass there."
+}

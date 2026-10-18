@@ -1,0 +1,1298 @@
+[
+  {
+    "variant": "published",
+    "case": 109,
+    "mode": "CRUISE",
+    "complete": true,
+    "failure": null,
+    "disturbed": {
+      "altitude_rms_m": 1.202271643644866,
+      "xtrack_rms_m": 0.4325736615367957,
+      "relative_rate_rms_deg_s": 23.278490132023563,
+      "relative_pitch_rate_rms_deg_s": 15.944954369006433,
+      "relative_pitch_std_deg": 3.9608174590869067
+    },
+    "late": {
+      "altitude_rms_m": 0.26526972555286205,
+      "xtrack_rms_m": 0.04436493315489257,
+      "relative_rate_rms_deg_s": 0.1278951530951804,
+      "relative_pitch_rate_rms_deg_s": 0.059597830853128204,
+      "relative_pitch_std_deg": 0.05934431373900049
+    },
+    "shaft_W": 76.71532044236066,
+    "upper_brake_fraction": 0.0,
+    "min_altitude_m": 36.22499192546209,
+    "max_pitch_deg": 24.94632784877092,
+    "max_roll_deg": 7.37976473847015,
+    "screen_failures": []
+  },
+  {
+    "variant": "published",
+    "case": 101,
+    "mode": "CRUISE",
+    "complete": true,
+    "failure": null,
+    "disturbed": {
+      "altitude_rms_m": 2.241312487087184,
+      "xtrack_rms_m": 0.5004074924610041,
+      "relative_rate_rms_deg_s": 20.37105514654899,
+      "relative_pitch_rate_rms_deg_s": 13.88810504300385,
+      "relative_pitch_std_deg": 5.211302201548961
+    },
+    "late": {
+      "altitude_rms_m": 0.35186692234094763,
+      "xtrack_rms_m": 0.026695432720472728,
+      "relative_rate_rms_deg_s": 0.20057196913498931,
+      "relative_pitch_rate_rms_deg_s": 0.08122450649308363,
+      "relative_pitch_std_deg": 0.030234620537385636
+    },
+    "shaft_W": 62.45213493480092,
+    "upper_brake_fraction": 0.0,
+    "min_altitude_m": 34.36740919745901,
+    "max_pitch_deg": 23.421322086828244,
+    "max_roll_deg": 8.931733419361082,
+    "screen_failures": []
+  },
+  {
+    "variant": "published",
+    "case": 106,
+    "mode": "AUTO",
+    "complete": true,
+    "failure": null,
+    "disturbed": {
+      "altitude_rms_m": 3.0116085751120187,
+      "xtrack_rms_m": 4.454815777081926,
+      "relative_rate_rms_deg_s": 21.910686455304166,
+      "relative_pitch_rate_rms_deg_s": 15.94284421144983,
+      "relative_pitch_std_deg": 4.0422836842407905
+    },
+    "late": {
+      "altitude_rms_m": 0.2931496327094302,
+      "xtrack_rms_m": 0.04858280603339203,
+      "relative_rate_rms_deg_s": 0.13525817175246987,
+      "relative_pitch_rate_rms_deg_s": 0.05235327496308863,
+      "relative_pitch_std_deg": 0.04112971602004793
+    },
+    "shaft_W": 67.25663586531186,
+    "upper_brake_fraction": 0.0,
+    "min_altitude_m": 38.98448873604816,
+    "max_pitch_deg": 29.837187595799236,
+    "max_roll_deg": 8.676185545548593,
+    "screen_failures": []
+  },
+  {
+    "variant": "published",
+    "case": 102,
+    "mode": "AUTO",
+    "complete": true,
+    "failure": null,
+    "disturbed": {
+      "altitude_rms_m": 4.18959692920376,
+      "xtrack_rms_m": 9.706714708852202,
+      "relative_rate_rms_deg_s": 18.994392719558494,
+      "relative_pitch_rate_rms_deg_s": 14.313889486534054,
+      "relative_pitch_std_deg": 3.0928678579905986
+    },
+    "late": {
+      "altitude_rms_m": 0.22387685659746412,
+      "xtrack_rms_m": 0.010095288192084809,
+      "relative_rate_rms_deg_s": 0.10213713681568695,
+      "relative_pitch_rate_rms_deg_s": 0.04655439672441747,
+      "relative_pitch_std_deg": 0.02765451543420166
+    },
+    "shaft_W": 84.07481231548482,
+    "upper_brake_fraction": 0.0,
+    "min_altitude_m": 37.101789292118326,
+    "max_pitch_deg": 24.407949885021033,
+    "max_roll_deg": 10.670692968102086,
+    "screen_failures": []
+  },
+  {
+    "variant": "published",
+    "case": 105,
+    "mode": "CRUISE",
+    "complete": true,
+    "failure": null,
+    "disturbed": {
+      "altitude_rms_m": 0.7037920084225314,
+      "xtrack_rms_m": 0.01979846090735919,
+      "relative_rate_rms_deg_s": 13.436546111997714,
+      "relative_pitch_rate_rms_deg_s": 9.565395980393095,
+      "relative_pitch_std_deg": 1.7691975407212894
+    },
+    "late": {
+      "altitude_rms_m": 0.21224747339031472,
+      "xtrack_rms_m": 0.040031772154660784,
+      "relative_rate_rms_deg_s": 0.11080309984671875,
+      "relative_pitch_rate_rms_deg_s": 0.04855852014212668,
+      "relative_pitch_std_deg": 0.0793466248837699
+    },
+    "shaft_W": 75.75484561849365,
+    "upper_brake_fraction": 0.0,
+    "min_altitude_m": 36.09651924623342,
+    "max_pitch_deg": 29.054407644240634,
+    "max_roll_deg": 6.757348286178679,
+    "screen_failures": []
+  },
+  {
+    "variant": "published",
+    "case": 107,
+    "mode": "CRUISE",
+    "complete": true,
+    "failure": null,
+    "disturbed": {
+      "altitude_rms_m": 0.44998997015315884,
+      "xtrack_rms_m": 0.0,
+      "relative_rate_rms_deg_s": 6.931669003867928,
+      "relative_pitch_rate_rms_deg_s": 4.705089118056042,
+      "relative_pitch_std_deg": 0.8760547772717795
+    },
+    "late": {
+      "altitude_rms_m": 0.23398929925179549,
+      "xtrack_rms_m": 0.0,
+      "relative_rate_rms_deg_s": 0.14265281183178233,
+      "relative_pitch_rate_rms_deg_s": 0.058839758225825885,
+      "relative_pitch_std_deg": 0.03783970617346601
+    },
+    "shaft_W": 74.82340282153065,
+    "upper_brake_fraction": 0.0,
+    "min_altitude_m": 36.43189625069799,
+    "max_pitch_deg": 15.089719521586959,
+    "max_roll_deg": 6.043438476493548,
+    "screen_failures": []
+  },
+  {
+    "variant": "published",
+    "case": 110,
+    "mode": "AUTO",
+    "complete": true,
+    "failure": null,
+    "disturbed": {
+      "altitude_rms_m": 3.2682897145625724,
+      "xtrack_rms_m": 9.60139877810783,
+      "relative_rate_rms_deg_s": 7.3415221186674495,
+      "relative_pitch_rate_rms_deg_s": 5.092093300077674,
+      "relative_pitch_std_deg": 4.102396776468439
+    },
+    "late": {
+      "altitude_rms_m": 0.2341591649087603,
+      "xtrack_rms_m": 0.07071627086671319,
+      "relative_rate_rms_deg_s": 0.19159174459236303,
+      "relative_pitch_rate_rms_deg_s": 0.07295725031363928,
+      "relative_pitch_std_deg": 0.03104680769143084
+    },
+    "shaft_W": 74.98515024293916,
+    "upper_brake_fraction": 0.0,
+    "min_altitude_m": 37.91490285027542,
+    "max_pitch_deg": 15.79392574444696,
+    "max_roll_deg": 7.596611211915792,
+    "screen_failures": []
+  },
+  {
+    "variant": "published",
+    "case": 103,
+    "mode": "CRUISE",
+    "complete": true,
+    "failure": null,
+    "disturbed": {
+      "altitude_rms_m": 3.9829751567372855,
+      "xtrack_rms_m": 0.6626820806397797,
+      "relative_rate_rms_deg_s": 23.511331054267945,
+      "relative_pitch_rate_rms_deg_s": 16.993493817864067,
+      "relative_pitch_std_deg": 7.582446343226942
+    },
+    "late": {
+      "altitude_rms_m": 0.06294639569585023,
+      "xtrack_rms_m": 0.01900616468938137,
+      "relative_rate_rms_deg_s": 0.19569441643670044,
+      "relative_pitch_rate_rms_deg_s": 0.07354769658922782,
+      "relative_pitch_std_deg": 0.024556434529159385
+    },
+    "shaft_W": 72.05024547276403,
+    "upper_brake_fraction": 0.0,
+    "min_altitude_m": 36.30513628189671,
+    "max_pitch_deg": 30.320082413896742,
+    "max_roll_deg": 7.992427681482738,
+    "screen_failures": []
+  },
+  {
+    "variant": "published",
+    "case": 104,
+    "mode": "AUTO",
+    "complete": true,
+    "failure": null,
+    "disturbed": {
+      "altitude_rms_m": 3.4641975416093373,
+      "xtrack_rms_m": 14.31991208666222,
+      "relative_rate_rms_deg_s": 14.421514621148177,
+      "relative_pitch_rate_rms_deg_s": 9.945706966257537,
+      "relative_pitch_std_deg": 4.02200975906736
+    },
+    "late": {
+      "altitude_rms_m": 0.17197640005403725,
+      "xtrack_rms_m": 0.09089559471139298,
+      "relative_rate_rms_deg_s": 0.19861820720059217,
+      "relative_pitch_rate_rms_deg_s": 0.07209629265027007,
+      "relative_pitch_std_deg": 0.04926914891130371
+    },
+    "shaft_W": 72.34006984003253,
+    "upper_brake_fraction": 0.0,
+    "min_altitude_m": 37.3841888078646,
+    "max_pitch_deg": 16.9335285928354,
+    "max_roll_deg": 9.47542778981734,
+    "screen_failures": []
+  },
+  {
+    "variant": "published",
+    "case": 100,
+    "mode": "AUTO",
+    "complete": true,
+    "failure": null,
+    "disturbed": {
+      "altitude_rms_m": 3.3463522535103483,
+      "xtrack_rms_m": 3.506089615351826,
+      "relative_rate_rms_deg_s": 10.895714894926513,
+      "relative_pitch_rate_rms_deg_s": 7.702821231025653,
+      "relative_pitch_std_deg": 2.653045599260733
+    },
+    "late": {
+      "altitude_rms_m": 0.223607601934814,
+      "xtrack_rms_m": 0.05424570930642248,
+      "relative_rate_rms_deg_s": 0.11512319430447239,
+      "relative_pitch_rate_rms_deg_s": 0.04118716955061275,
+      "relative_pitch_std_deg": 0.03150213141188413
+    },
+    "shaft_W": 82.21958849010268,
+    "upper_brake_fraction": 0.0,
+    "min_altitude_m": 38.651184798499976,
+    "max_pitch_deg": 15.394644998920347,
+    "max_roll_deg": 7.116642852253132,
+    "screen_failures": []
+  },
+  {
+    "variant": "published",
+    "case": 111,
+    "mode": "CRUISE",
+    "complete": true,
+    "failure": null,
+    "disturbed": {
+      "altitude_rms_m": 1.1484780913471808,
+      "xtrack_rms_m": 1.0662239504469953,
+      "relative_rate_rms_deg_s": 24.700188479617086,
+      "relative_pitch_rate_rms_deg_s": 18.782555277794636,
+      "relative_pitch_std_deg": 3.346050674892915
+    },
+    "late": {
+      "altitude_rms_m": 0.42033556294538715,
+      "xtrack_rms_m": 0.05571879878064392,
+      "relative_rate_rms_deg_s": 0.1754606197084478,
+      "relative_pitch_rate_rms_deg_s": 0.07307136379241701,
+      "relative_pitch_std_deg": 0.030895035469636845
+    },
+    "shaft_W": 78.55953135258322,
+    "upper_brake_fraction": 0.0,
+    "min_altitude_m": 34.950542223412924,
+    "max_pitch_deg": 28.556665147746077,
+    "max_roll_deg": 9.80434253481928,
+    "screen_failures": []
+  },
+  {
+    "variant": "published",
+    "case": 108,
+    "mode": "AUTO",
+    "complete": true,
+    "failure": null,
+    "disturbed": {
+      "altitude_rms_m": 3.6441441834366683,
+      "xtrack_rms_m": 3.4963358030447633,
+      "relative_rate_rms_deg_s": 8.363659820934163,
+      "relative_pitch_rate_rms_deg_s": 5.3550716731340415,
+      "relative_pitch_std_deg": 2.8480833669445778
+    },
+    "late": {
+      "altitude_rms_m": 0.2379144840660523,
+      "xtrack_rms_m": 0.09819506647536447,
+      "relative_rate_rms_deg_s": 0.21047420744440473,
+      "relative_pitch_rate_rms_deg_s": 0.07893682980814967,
+      "relative_pitch_std_deg": 0.04059136845127686
+    },
+    "shaft_W": 75.39776340559862,
+    "upper_brake_fraction": 0.0,
+    "min_altitude_m": 37.229324676257555,
+    "max_pitch_deg": 22.833551902427267,
+    "max_roll_deg": 11.0297531749974,
+    "screen_failures": []
+  },
+  {
+    "variant": "efficient_brake10k",
+    "case": 109,
+    "mode": "CRUISE",
+    "complete": true,
+    "failure": null,
+    "disturbed": {
+      "altitude_rms_m": 1.0731666304569314,
+      "xtrack_rms_m": 0.39738713039711887,
+      "relative_rate_rms_deg_s": 22.352263403631955,
+      "relative_pitch_rate_rms_deg_s": 14.81098418534492,
+      "relative_pitch_std_deg": 4.12275385605479
+    },
+    "late": {
+      "altitude_rms_m": 0.23804056693388123,
+      "xtrack_rms_m": 0.08270700686368888,
+      "relative_rate_rms_deg_s": 0.24549770652681877,
+      "relative_pitch_rate_rms_deg_s": 0.07408752487965868,
+      "relative_pitch_std_deg": 0.026272202905490462
+    },
+    "shaft_W": 72.7387992405847,
+    "upper_brake_fraction": 0.0,
+    "min_altitude_m": 36.84219748369034,
+    "max_pitch_deg": 23.82982974871162,
+    "max_roll_deg": 7.351362750494278,
+    "screen_failures": []
+  },
+  {
+    "variant": "efficient_brake10k",
+    "case": 101,
+    "mode": "CRUISE",
+    "complete": true,
+    "failure": null,
+    "disturbed": {
+      "altitude_rms_m": 2.1713405436045368,
+      "xtrack_rms_m": 0.59203168218815,
+      "relative_rate_rms_deg_s": 19.562603648191256,
+      "relative_pitch_rate_rms_deg_s": 12.898897754341556,
+      "relative_pitch_std_deg": 5.638064161495843
+    },
+    "late": {
+      "altitude_rms_m": 0.22835339028423493,
+      "xtrack_rms_m": 0.05029888510168312,
+      "relative_rate_rms_deg_s": 0.23602653371111418,
+      "relative_pitch_rate_rms_deg_s": 0.06625995534663301,
+      "relative_pitch_std_deg": 0.02627407159590348
+    },
+    "shaft_W": 64.01230947517163,
+    "upper_brake_fraction": 0.0,
+    "min_altitude_m": 36.90857577644858,
+    "max_pitch_deg": 22.15361973364302,
+    "max_roll_deg": 8.404509022396986,
+    "screen_failures": []
+  },
+  {
+    "variant": "efficient_brake10k",
+    "case": 106,
+    "mode": "AUTO",
+    "complete": true,
+    "failure": null,
+    "disturbed": {
+      "altitude_rms_m": 3.9571204233609936,
+      "xtrack_rms_m": 13.543159065377347,
+      "relative_rate_rms_deg_s": 21.30962872787199,
+      "relative_pitch_rate_rms_deg_s": 15.002606436841495,
+      "relative_pitch_std_deg": 3.947290506649679
+    },
+    "late": {
+      "altitude_rms_m": 0.19996962743091132,
+      "xtrack_rms_m": 2.9860586432144967,
+      "relative_rate_rms_deg_s": 0.6356633139729809,
+      "relative_pitch_rate_rms_deg_s": 0.4156296844163779,
+      "relative_pitch_std_deg": 0.18595003772633648
+    },
+    "shaft_W": 68.56175018625311,
+    "upper_brake_fraction": 0.0,
+    "min_altitude_m": 37.04983612090157,
+    "max_pitch_deg": 29.923813874876483,
+    "max_roll_deg": 8.158072304633546,
+    "screen_failures": []
+  },
+  {
+    "variant": "efficient_brake10k",
+    "case": 102,
+    "mode": "AUTO",
+    "complete": true,
+    "failure": null,
+    "disturbed": {
+      "altitude_rms_m": 4.307185530241913,
+      "xtrack_rms_m": 71.45781269533619,
+      "relative_rate_rms_deg_s": 17.97117170399486,
+      "relative_pitch_rate_rms_deg_s": 12.899313264621673,
+      "relative_pitch_std_deg": 3.248165578252394
+    },
+    "late": {
+      "altitude_rms_m": 0.22029803627490166,
+      "xtrack_rms_m": 0.25220069875466866,
+      "relative_rate_rms_deg_s": 0.31728617242255475,
+      "relative_pitch_rate_rms_deg_s": 0.15046795057645,
+      "relative_pitch_std_deg": 0.06220548410138782
+    },
+    "shaft_W": 78.46856823348442,
+    "upper_brake_fraction": 0.0,
+    "min_altitude_m": 36.98161191328828,
+    "max_pitch_deg": 21.18984476186939,
+    "max_roll_deg": 7.965030093621601,
+    "screen_failures": []
+  },
+  {
+    "variant": "efficient_brake10k",
+    "case": 105,
+    "mode": "CRUISE",
+    "complete": true,
+    "failure": null,
+    "disturbed": {
+      "altitude_rms_m": 0.6335456544069304,
+      "xtrack_rms_m": 0.0,
+      "relative_rate_rms_deg_s": 12.330997624480124,
+      "relative_pitch_rate_rms_deg_s": 8.229263910566644,
+      "relative_pitch_std_deg": 2.001146372281825
+    },
+    "late": {
+      "altitude_rms_m": 0.2302084873461316,
+      "xtrack_rms_m": 0.03051033054960421,
+      "relative_rate_rms_deg_s": 0.2260030868854872,
+      "relative_pitch_rate_rms_deg_s": 0.07854455475566112,
+      "relative_pitch_std_deg": 0.024496062679441207
+    },
+    "shaft_W": 75.45186674303741,
+    "upper_brake_fraction": 0.0,
+    "min_altitude_m": 35.63602148975299,
+    "max_pitch_deg": 29.44218086917076,
+    "max_roll_deg": 7.086543142757412,
+    "screen_failures": []
+  },
+  {
+    "variant": "efficient_brake10k",
+    "case": 107,
+    "mode": "CRUISE",
+    "complete": true,
+    "failure": null,
+    "disturbed": {
+      "altitude_rms_m": 0.31889648760592054,
+      "xtrack_rms_m": 0.0,
+      "relative_rate_rms_deg_s": 6.641673755943661,
+      "relative_pitch_rate_rms_deg_s": 4.346451262880235,
+      "relative_pitch_std_deg": 0.9235151325100376
+    },
+    "late": {
+      "altitude_rms_m": 0.1058780012897959,
+      "xtrack_rms_m": 0.0,
+      "relative_rate_rms_deg_s": 0.13893459799566085,
+      "relative_pitch_rate_rms_deg_s": 0.047349750890596363,
+      "relative_pitch_std_deg": 0.03039276689413236
+    },
+    "shaft_W": 75.49539974690914,
+    "upper_brake_fraction": 0.0,
+    "min_altitude_m": 36.71136112050467,
+    "max_pitch_deg": 14.563089504294435,
+    "max_roll_deg": 5.8653500530851606,
+    "screen_failures": []
+  },
+  {
+    "variant": "efficient_brake10k",
+    "case": 110,
+    "mode": "AUTO",
+    "complete": true,
+    "failure": null,
+    "disturbed": {
+      "altitude_rms_m": 3.5855799288704926,
+      "xtrack_rms_m": 8.083980444878792,
+      "relative_rate_rms_deg_s": 7.0730444940853126,
+      "relative_pitch_rate_rms_deg_s": 4.724714082986474,
+      "relative_pitch_std_deg": 3.7882981457685596
+    },
+    "late": {
+      "altitude_rms_m": 0.2178084708258972,
+      "xtrack_rms_m": 0.11270137071490335,
+      "relative_rate_rms_deg_s": 0.19458899845551822,
+      "relative_pitch_rate_rms_deg_s": 0.07471827458796006,
+      "relative_pitch_std_deg": 0.030002697453580078
+    },
+    "shaft_W": 71.0734119419576,
+    "upper_brake_fraction": 0.0,
+    "min_altitude_m": 37.3644626043183,
+    "max_pitch_deg": 15.85085646932342,
+    "max_roll_deg": 7.713526852932322,
+    "screen_failures": []
+  },
+  {
+    "variant": "efficient_brake10k",
+    "case": 103,
+    "mode": "CRUISE",
+    "complete": true,
+    "failure": null,
+    "disturbed": {
+      "altitude_rms_m": 3.180431989740634,
+      "xtrack_rms_m": 0.7087004056696192,
+      "relative_rate_rms_deg_s": 22.250459146846243,
+      "relative_pitch_rate_rms_deg_s": 15.231889770983216,
+      "relative_pitch_std_deg": 6.830333818475179
+    },
+    "late": {
+      "altitude_rms_m": 0.21777734547544095,
+      "xtrack_rms_m": 0.028264018390049682,
+      "relative_rate_rms_deg_s": 0.21874396167825672,
+      "relative_pitch_rate_rms_deg_s": 0.07434800711184206,
+      "relative_pitch_std_deg": 0.027383894246364882
+    },
+    "shaft_W": 64.82585664995149,
+    "upper_brake_fraction": 0.0,
+    "min_altitude_m": 36.6319746579643,
+    "max_pitch_deg": 29.132870692557685,
+    "max_roll_deg": 8.039189999638177,
+    "screen_failures": []
+  },
+  {
+    "variant": "efficient_brake10k",
+    "case": 104,
+    "mode": "AUTO",
+    "complete": true,
+    "failure": null,
+    "disturbed": {
+      "altitude_rms_m": 3.6552182680428826,
+      "xtrack_rms_m": 7.136235533347947,
+      "relative_rate_rms_deg_s": 14.159411727346292,
+      "relative_pitch_rate_rms_deg_s": 9.184696877195622,
+      "relative_pitch_std_deg": 3.9164233988722303
+    },
+    "late": {
+      "altitude_rms_m": 0.21532417529479894,
+      "xtrack_rms_m": 0.11633469821467428,
+      "relative_rate_rms_deg_s": 0.2525182804485424,
+      "relative_pitch_rate_rms_deg_s": 0.07998414855720189,
+      "relative_pitch_std_deg": 0.031967814793321794
+    },
+    "shaft_W": 70.3381025280868,
+    "upper_brake_fraction": 0.0,
+    "min_altitude_m": 37.3107779319863,
+    "max_pitch_deg": 17.784892945689712,
+    "max_roll_deg": 9.616947252340834,
+    "screen_failures": []
+  },
+  {
+    "variant": "efficient_brake10k",
+    "case": 100,
+    "mode": "AUTO",
+    "complete": true,
+    "failure": null,
+    "disturbed": {
+      "altitude_rms_m": 3.9089022715144317,
+      "xtrack_rms_m": 4.19057760747238,
+      "relative_rate_rms_deg_s": 10.324426057714508,
+      "relative_pitch_rate_rms_deg_s": 6.965574157339367,
+      "relative_pitch_std_deg": 2.302599005118262
+    },
+    "late": {
+      "altitude_rms_m": 0.19763214034977286,
+      "xtrack_rms_m": 0.08827565709747685,
+      "relative_rate_rms_deg_s": 0.21166150697372582,
+      "relative_pitch_rate_rms_deg_s": 0.0658458182016378,
+      "relative_pitch_std_deg": 0.034871723025470674
+    },
+    "shaft_W": 78.81474784344987,
+    "upper_brake_fraction": 0.0,
+    "min_altitude_m": 37.67541238695418,
+    "max_pitch_deg": 14.944783961757414,
+    "max_roll_deg": 7.386278021574906,
+    "screen_failures": []
+  },
+  {
+    "variant": "efficient_brake10k",
+    "case": 111,
+    "mode": "CRUISE",
+    "complete": true,
+    "failure": null,
+    "disturbed": {
+      "altitude_rms_m": 0.9288151325117365,
+      "xtrack_rms_m": 1.7818194782680212,
+      "relative_rate_rms_deg_s": 23.944735679865197,
+      "relative_pitch_rate_rms_deg_s": 16.86526065161161,
+      "relative_pitch_std_deg": 3.4629203237631114
+    },
+    "late": {
+      "altitude_rms_m": 0.2342365389797884,
+      "xtrack_rms_m": 0.04155223723432415,
+      "relative_rate_rms_deg_s": 0.28687681372871876,
+      "relative_pitch_rate_rms_deg_s": 0.08822306756816083,
+      "relative_pitch_std_deg": 0.027115192077150428
+    },
+    "shaft_W": 78.77881059564172,
+    "upper_brake_fraction": 0.0,
+    "min_altitude_m": 37.429875597130234,
+    "max_pitch_deg": 28.18465823006934,
+    "max_roll_deg": 10.487398750695016,
+    "screen_failures": []
+  },
+  {
+    "variant": "efficient_brake10k",
+    "case": 108,
+    "mode": "AUTO",
+    "complete": true,
+    "failure": null,
+    "disturbed": {
+      "altitude_rms_m": 3.412062406780148,
+      "xtrack_rms_m": 13.212057538589507,
+      "relative_rate_rms_deg_s": 6.403278872926322,
+      "relative_pitch_rate_rms_deg_s": 4.247478523326049,
+      "relative_pitch_std_deg": 2.6894958746218793
+    },
+    "late": {
+      "altitude_rms_m": 0.21887153437293796,
+      "xtrack_rms_m": 0.12801885637346694,
+      "relative_rate_rms_deg_s": 0.18350918903413718,
+      "relative_pitch_rate_rms_deg_s": 0.06133778296065364,
+      "relative_pitch_std_deg": 0.03068874777987967
+    },
+    "shaft_W": 73.47374652145069,
+    "upper_brake_fraction": 0.0,
+    "min_altitude_m": 37.90955601518097,
+    "max_pitch_deg": 22.7628199074175,
+    "max_roll_deg": 12.4195602620028,
+    "screen_failures": []
+  },
+  {
+    "variant": "local",
+    "case": 109,
+    "mode": "CRUISE",
+    "complete": true,
+    "failure": null,
+    "disturbed": {
+      "altitude_rms_m": 1.1176362184763664,
+      "xtrack_rms_m": 0.4375355679839679,
+      "relative_rate_rms_deg_s": 23.762694472513104,
+      "relative_pitch_rate_rms_deg_s": 16.42494267113798,
+      "relative_pitch_std_deg": 3.657268188185082
+    },
+    "late": {
+      "altitude_rms_m": 0.310497814272104,
+      "xtrack_rms_m": 0.06916833492776221,
+      "relative_rate_rms_deg_s": 0.20577487916701528,
+      "relative_pitch_rate_rms_deg_s": 0.08089126964973294,
+      "relative_pitch_std_deg": 0.029421727632843238
+    },
+    "shaft_W": 79.74090207642489,
+    "upper_brake_fraction": 0.0,
+    "min_altitude_m": 38.09550055421074,
+    "max_pitch_deg": 26.471350113870017,
+    "max_roll_deg": 7.520896629338113,
+    "screen_failures": []
+  },
+  {
+    "variant": "local",
+    "case": 101,
+    "mode": "CRUISE",
+    "complete": true,
+    "failure": null,
+    "disturbed": {
+      "altitude_rms_m": 2.7254286230783293,
+      "xtrack_rms_m": 0.5509620572196292,
+      "relative_rate_rms_deg_s": 21.16336798858294,
+      "relative_pitch_rate_rms_deg_s": 14.965906511014786,
+      "relative_pitch_std_deg": 5.361921012442659
+    },
+    "late": {
+      "altitude_rms_m": 0.10177092039565756,
+      "xtrack_rms_m": 0.0677186096910419,
+      "relative_rate_rms_deg_s": 0.14344257054999837,
+      "relative_pitch_rate_rms_deg_s": 0.06261167907412019,
+      "relative_pitch_std_deg": 0.09343814903926768
+    },
+    "shaft_W": 66.99597296070796,
+    "upper_brake_fraction": 0.0,
+    "min_altitude_m": 36.04216940108534,
+    "max_pitch_deg": 23.445766613325944,
+    "max_roll_deg": 9.267079233425827,
+    "screen_failures": []
+  },
+  {
+    "variant": "local",
+    "case": 106,
+    "mode": "AUTO",
+    "complete": true,
+    "failure": null,
+    "disturbed": {
+      "altitude_rms_m": 2.8970613960728566,
+      "xtrack_rms_m": 4.559515062110146,
+      "relative_rate_rms_deg_s": 21.839329178892157,
+      "relative_pitch_rate_rms_deg_s": 15.6971323012287,
+      "relative_pitch_std_deg": 4.160991776989067
+    },
+    "late": {
+      "altitude_rms_m": 0.22297350245043326,
+      "xtrack_rms_m": 0.085830049594414,
+      "relative_rate_rms_deg_s": 0.13481711561199483,
+      "relative_pitch_rate_rms_deg_s": 0.06170016759509962,
+      "relative_pitch_std_deg": 0.047769724179010695
+    },
+    "shaft_W": 68.49092225697173,
+    "upper_brake_fraction": 0.0,
+    "min_altitude_m": 39.61352742571883,
+    "max_pitch_deg": 30.762740860265684,
+    "max_roll_deg": 8.098801824940745,
+    "screen_failures": []
+  },
+  {
+    "variant": "local",
+    "case": 102,
+    "mode": "AUTO",
+    "complete": true,
+    "failure": null,
+    "disturbed": {
+      "altitude_rms_m": 3.1462737055181873,
+      "xtrack_rms_m": 3.1519957860433094,
+      "relative_rate_rms_deg_s": 19.429178511593896,
+      "relative_pitch_rate_rms_deg_s": 14.65509581715256,
+      "relative_pitch_std_deg": 3.610414066962475
+    },
+    "late": {
+      "altitude_rms_m": 0.09817686599729816,
+      "xtrack_rms_m": 0.02291877944541744,
+      "relative_rate_rms_deg_s": 0.22251453080538608,
+      "relative_pitch_rate_rms_deg_s": 0.08109643794408301,
+      "relative_pitch_std_deg": 0.06647734779638492
+    },
+    "shaft_W": 82.54820987253649,
+    "upper_brake_fraction": 0.0,
+    "min_altitude_m": 39.89705064621809,
+    "max_pitch_deg": 26.156212216121855,
+    "max_roll_deg": 8.481066882276618,
+    "screen_failures": []
+  },
+  {
+    "variant": "local",
+    "case": 105,
+    "mode": "CRUISE",
+    "complete": true,
+    "failure": null,
+    "disturbed": {
+      "altitude_rms_m": 0.6408741890354541,
+      "xtrack_rms_m": 0.0,
+      "relative_rate_rms_deg_s": 13.236632622438144,
+      "relative_pitch_rate_rms_deg_s": 9.293677941373952,
+      "relative_pitch_std_deg": 1.80155127021418
+    },
+    "late": {
+      "altitude_rms_m": 0.278386555417514,
+      "xtrack_rms_m": 0.13288791824728968,
+      "relative_rate_rms_deg_s": 0.15346833659590917,
+      "relative_pitch_rate_rms_deg_s": 0.04855946299502202,
+      "relative_pitch_std_deg": 0.027776319705361905
+    },
+    "shaft_W": 79.27460233311224,
+    "upper_brake_fraction": 0.0,
+    "min_altitude_m": 38.14019238434225,
+    "max_pitch_deg": 29.392434762223324,
+    "max_roll_deg": 5.80528876365738,
+    "screen_failures": []
+  },
+  {
+    "variant": "local",
+    "case": 107,
+    "mode": "CRUISE",
+    "complete": true,
+    "failure": null,
+    "disturbed": {
+      "altitude_rms_m": 0.36151654359553026,
+      "xtrack_rms_m": 0.0,
+      "relative_rate_rms_deg_s": 6.931528966683109,
+      "relative_pitch_rate_rms_deg_s": 4.882352391918984,
+      "relative_pitch_std_deg": 0.8928145810589624
+    },
+    "late": {
+      "altitude_rms_m": 0.26240012834219756,
+      "xtrack_rms_m": 0.0,
+      "relative_rate_rms_deg_s": 0.16783285798208386,
+      "relative_pitch_rate_rms_deg_s": 0.06812915353610745,
+      "relative_pitch_std_deg": 0.031268505777917
+    },
+    "shaft_W": 81.17753870358975,
+    "upper_brake_fraction": 0.0,
+    "min_altitude_m": 38.834013903064665,
+    "max_pitch_deg": 14.607838154661579,
+    "max_roll_deg": 5.895265766712005,
+    "screen_failures": []
+  },
+  {
+    "variant": "local",
+    "case": 110,
+    "mode": "AUTO",
+    "complete": true,
+    "failure": null,
+    "disturbed": {
+      "altitude_rms_m": 3.1479175484289246,
+      "xtrack_rms_m": 3.2455067111504734,
+      "relative_rate_rms_deg_s": 7.320994589757945,
+      "relative_pitch_rate_rms_deg_s": 5.163636452029817,
+      "relative_pitch_std_deg": 4.327567523624605
+    },
+    "late": {
+      "altitude_rms_m": 0.24999854691845186,
+      "xtrack_rms_m": 0.039458039449143265,
+      "relative_rate_rms_deg_s": 0.17727697555051897,
+      "relative_pitch_rate_rms_deg_s": 0.07767228892911976,
+      "relative_pitch_std_deg": 0.024800608379998063
+    },
+    "shaft_W": 74.46585229906519,
+    "upper_brake_fraction": 0.0,
+    "min_altitude_m": 38.92040100227919,
+    "max_pitch_deg": 16.835973617692904,
+    "max_roll_deg": 7.118599875150189,
+    "screen_failures": []
+  },
+  {
+    "variant": "local",
+    "case": 103,
+    "mode": "CRUISE",
+    "complete": true,
+    "failure": null,
+    "disturbed": {
+      "altitude_rms_m": 3.0739924893438637,
+      "xtrack_rms_m": 0.654859135378906,
+      "relative_rate_rms_deg_s": 23.030904009397197,
+      "relative_pitch_rate_rms_deg_s": 16.812556967211485,
+      "relative_pitch_std_deg": 6.864548587493588
+    },
+    "late": {
+      "altitude_rms_m": 0.01759668994106704,
+      "xtrack_rms_m": 0.018540610252595544,
+      "relative_rate_rms_deg_s": 0.14776901009542914,
+      "relative_pitch_rate_rms_deg_s": 0.062212668568634784,
+      "relative_pitch_std_deg": 0.02686267249615559
+    },
+    "shaft_W": 73.4262619344567,
+    "upper_brake_fraction": 0.0,
+    "min_altitude_m": 36.432664222707935,
+    "max_pitch_deg": 30.567849844431084,
+    "max_roll_deg": 8.554092110826552,
+    "screen_failures": []
+  },
+  {
+    "variant": "local",
+    "case": 104,
+    "mode": "AUTO",
+    "complete": true,
+    "failure": null,
+    "disturbed": {
+      "altitude_rms_m": 3.5321750235897276,
+      "xtrack_rms_m": 3.159858740786014,
+      "relative_rate_rms_deg_s": 14.739357238521182,
+      "relative_pitch_rate_rms_deg_s": 10.264349064366401,
+      "relative_pitch_std_deg": 4.414590754096578
+    },
+    "late": {
+      "altitude_rms_m": 0.19128154530277014,
+      "xtrack_rms_m": 0.044882526192152196,
+      "relative_rate_rms_deg_s": 0.1305751159872331,
+      "relative_pitch_rate_rms_deg_s": 0.05673210241022954,
+      "relative_pitch_std_deg": 0.08830087109631213
+    },
+    "shaft_W": 74.47196124553054,
+    "upper_brake_fraction": 0.0,
+    "min_altitude_m": 37.795740076712704,
+    "max_pitch_deg": 17.927106673829464,
+    "max_roll_deg": 8.426794288742151,
+    "screen_failures": []
+  },
+  {
+    "variant": "local",
+    "case": 100,
+    "mode": "AUTO",
+    "complete": true,
+    "failure": null,
+    "disturbed": {
+      "altitude_rms_m": 3.245811361615757,
+      "xtrack_rms_m": 3.2311915563367557,
+      "relative_rate_rms_deg_s": 10.86562305491269,
+      "relative_pitch_rate_rms_deg_s": 7.575976743820097,
+      "relative_pitch_std_deg": 2.366005089280694
+    },
+    "late": {
+      "altitude_rms_m": 0.08735752963047705,
+      "xtrack_rms_m": 0.06601139682604285,
+      "relative_rate_rms_deg_s": 0.1345805545850688,
+      "relative_pitch_rate_rms_deg_s": 0.05371833450008068,
+      "relative_pitch_std_deg": 0.018573427237895755
+    },
+    "shaft_W": 80.98639275809771,
+    "upper_brake_fraction": 0.0,
+    "min_altitude_m": 39.148690609634876,
+    "max_pitch_deg": 15.514883133158651,
+    "max_roll_deg": 6.846320809298463,
+    "screen_failures": []
+  },
+  {
+    "variant": "local",
+    "case": 111,
+    "mode": "CRUISE",
+    "complete": true,
+    "failure": null,
+    "disturbed": {
+      "altitude_rms_m": 1.0895971776097102,
+      "xtrack_rms_m": 0.46836765111638323,
+      "relative_rate_rms_deg_s": 26.350534683387313,
+      "relative_pitch_rate_rms_deg_s": 19.921778189273493,
+      "relative_pitch_std_deg": 3.251341773687647
+    },
+    "late": {
+      "altitude_rms_m": 0.2906024509230954,
+      "xtrack_rms_m": 0.03570949724423664,
+      "relative_rate_rms_deg_s": 0.1881521896335256,
+      "relative_pitch_rate_rms_deg_s": 0.06866271078548314,
+      "relative_pitch_std_deg": 0.03170328348938143
+    },
+    "shaft_W": 88.55582473618615,
+    "upper_brake_fraction": 0.0,
+    "min_altitude_m": 37.341072873181965,
+    "max_pitch_deg": 27.248946745507375,
+    "max_roll_deg": 8.388470741248831,
+    "screen_failures": []
+  },
+  {
+    "variant": "local",
+    "case": 108,
+    "mode": "AUTO",
+    "complete": true,
+    "failure": null,
+    "disturbed": {
+      "altitude_rms_m": 2.8727238479159416,
+      "xtrack_rms_m": 3.3536804261940256,
+      "relative_rate_rms_deg_s": 8.045363204955999,
+      "relative_pitch_rate_rms_deg_s": 4.948321382497078,
+      "relative_pitch_std_deg": 3.6822027998801836
+    },
+    "late": {
+      "altitude_rms_m": 0.09378010991450146,
+      "xtrack_rms_m": 0.11320345472931996,
+      "relative_rate_rms_deg_s": 0.16685412378123138,
+      "relative_pitch_rate_rms_deg_s": 0.08425674161587562,
+      "relative_pitch_std_deg": 0.16494607157793664
+    },
+    "shaft_W": 75.92666958990328,
+    "upper_brake_fraction": 0.0,
+    "min_altitude_m": 39.857152790059914,
+    "max_pitch_deg": 23.055672583102528,
+    "max_roll_deg": 11.315646292951929,
+    "screen_failures": []
+  },
+  {
+    "variant": "responsive_softspeed",
+    "case": 109,
+    "mode": "CRUISE",
+    "complete": true,
+    "failure": null,
+    "disturbed": {
+      "altitude_rms_m": 0.9068472529866904,
+      "xtrack_rms_m": 0.3798742388867094,
+      "relative_rate_rms_deg_s": 21.765637882727535,
+      "relative_pitch_rate_rms_deg_s": 13.667184088750256,
+      "relative_pitch_std_deg": 4.034871878032
+    },
+    "late": {
+      "altitude_rms_m": 0.21475011415635448,
+      "xtrack_rms_m": 0.0374123536576093,
+      "relative_rate_rms_deg_s": 0.25714881336782713,
+      "relative_pitch_rate_rms_deg_s": 0.08576898350737933,
+      "relative_pitch_std_deg": 0.03131745169981867
+    },
+    "shaft_W": 72.25747877044061,
+    "upper_brake_fraction": 0.0,
+    "min_altitude_m": 36.33413435677176,
+    "max_pitch_deg": 24.509284226169672,
+    "max_roll_deg": 8.707961348984936,
+    "screen_failures": []
+  },
+  {
+    "variant": "responsive_softspeed",
+    "case": 101,
+    "mode": "CRUISE",
+    "complete": true,
+    "failure": null,
+    "disturbed": {
+      "altitude_rms_m": 1.7375116882191601,
+      "xtrack_rms_m": 0.6397844646253144,
+      "relative_rate_rms_deg_s": 19.054748823588536,
+      "relative_pitch_rate_rms_deg_s": 12.515796574285844,
+      "relative_pitch_std_deg": 5.416788078665649
+    },
+    "late": {
+      "altitude_rms_m": 0.2939799266805016,
+      "xtrack_rms_m": 0.024125270649771876,
+      "relative_rate_rms_deg_s": 0.28920152476788114,
+      "relative_pitch_rate_rms_deg_s": 0.08421442289833658,
+      "relative_pitch_std_deg": 0.028515783600036985
+    },
+    "shaft_W": 62.512383037950336,
+    "upper_brake_fraction": 0.0,
+    "min_altitude_m": 35.75679336720044,
+    "max_pitch_deg": 22.991246458020303,
+    "max_roll_deg": 8.660058360991401,
+    "screen_failures": []
+  },
+  {
+    "variant": "responsive_softspeed",
+    "case": 106,
+    "mode": "AUTO",
+    "complete": true,
+    "failure": null,
+    "disturbed": {
+      "altitude_rms_m": 3.5998909388593714,
+      "xtrack_rms_m": 4.521992249012487,
+      "relative_rate_rms_deg_s": 20.124809727049158,
+      "relative_pitch_rate_rms_deg_s": 13.399039411343715,
+      "relative_pitch_std_deg": 4.3210316599846434
+    },
+    "late": {
+      "altitude_rms_m": 0.09052542757874799,
+      "xtrack_rms_m": 0.02016587073286404,
+      "relative_rate_rms_deg_s": 0.29178469269699336,
+      "relative_pitch_rate_rms_deg_s": 0.09052279580797784,
+      "relative_pitch_std_deg": 0.038749316548822715
+    },
+    "shaft_W": 67.17105082902077,
+    "upper_brake_fraction": 0.0,
+    "min_altitude_m": 38.25620170330046,
+    "max_pitch_deg": 31.306109001770775,
+    "max_roll_deg": 7.075913993722558,
+    "screen_failures": []
+  },
+  {
+    "variant": "responsive_softspeed",
+    "case": 102,
+    "mode": "AUTO",
+    "complete": true,
+    "failure": null,
+    "disturbed": {
+      "altitude_rms_m": 4.30216140796077,
+      "xtrack_rms_m": 7.514472719302365,
+      "relative_rate_rms_deg_s": 17.906107478746208,
+      "relative_pitch_rate_rms_deg_s": 12.282759856403056,
+      "relative_pitch_std_deg": 3.320585866025754
+    },
+    "late": {
+      "altitude_rms_m": 0.22903559620469088,
+      "xtrack_rms_m": 0.025955205869624624,
+      "relative_rate_rms_deg_s": 0.21553239335469848,
+      "relative_pitch_rate_rms_deg_s": 0.07729461943302911,
+      "relative_pitch_std_deg": 0.02453366723997232
+    },
+    "shaft_W": 78.31438062732526,
+    "upper_brake_fraction": 0.0,
+    "min_altitude_m": 36.988287617945915,
+    "max_pitch_deg": 24.24993584307429,
+    "max_roll_deg": 12.03744180833713,
+    "screen_failures": []
+  },
+  {
+    "variant": "responsive_softspeed",
+    "case": 105,
+    "mode": "CRUISE",
+    "complete": true,
+    "failure": null,
+    "disturbed": {
+      "altitude_rms_m": 0.5276972434313691,
+      "xtrack_rms_m": 0.0,
+      "relative_rate_rms_deg_s": 12.624556369727737,
+      "relative_pitch_rate_rms_deg_s": 8.293660544585695,
+      "relative_pitch_std_deg": 1.9331363330672058
+    },
+    "late": {
+      "altitude_rms_m": 0.1892509357054699,
+      "xtrack_rms_m": 0.053249270221242234,
+      "relative_rate_rms_deg_s": 0.2023634850745814,
+      "relative_pitch_rate_rms_deg_s": 0.07245453402292433,
+      "relative_pitch_std_deg": 0.025709588679020436
+    },
+    "shaft_W": 73.9998765984132,
+    "upper_brake_fraction": 0.0,
+    "min_altitude_m": 38.31623354233138,
+    "max_pitch_deg": 30.160358589315916,
+    "max_roll_deg": 5.979139734323559,
+    "screen_failures": []
+  },
+  {
+    "variant": "responsive_softspeed",
+    "case": 107,
+    "mode": "CRUISE",
+    "complete": true,
+    "failure": null,
+    "disturbed": {
+      "altitude_rms_m": 0.44614172687080583,
+      "xtrack_rms_m": 0.09254798248857894,
+      "relative_rate_rms_deg_s": 6.178647749894531,
+      "relative_pitch_rate_rms_deg_s": 3.875141476230679,
+      "relative_pitch_std_deg": 1.8395861853092725
+    },
+    "late": {
+      "altitude_rms_m": 0.2285599650393191,
+      "xtrack_rms_m": 0.00515903761883613,
+      "relative_rate_rms_deg_s": 0.26198003610819237,
+      "relative_pitch_rate_rms_deg_s": 0.09342713005828555,
+      "relative_pitch_std_deg": 0.030155149434767742
+    },
+    "shaft_W": 70.10881990504598,
+    "upper_brake_fraction": 0.0,
+    "min_altitude_m": 36.79689080230771,
+    "max_pitch_deg": 16.393217846940423,
+    "max_roll_deg": 6.02032928245354,
+    "screen_failures": []
+  },
+  {
+    "variant": "responsive_softspeed",
+    "case": 110,
+    "mode": "AUTO",
+    "complete": true,
+    "failure": null,
+    "disturbed": {
+      "altitude_rms_m": 3.768477311388984,
+      "xtrack_rms_m": 7.872978615121301,
+      "relative_rate_rms_deg_s": 7.063263082746364,
+      "relative_pitch_rate_rms_deg_s": 4.590374340757409,
+      "relative_pitch_std_deg": 3.403661399814599
+    },
+    "late": {
+      "altitude_rms_m": 0.1818602220913505,
+      "xtrack_rms_m": 0.06089888263329792,
+      "relative_rate_rms_deg_s": 0.2753636542968851,
+      "relative_pitch_rate_rms_deg_s": 0.08519947165996374,
+      "relative_pitch_std_deg": 0.03040926578666627
+    },
+    "shaft_W": 70.80055134699924,
+    "upper_brake_fraction": 0.0,
+    "min_altitude_m": 36.95207934823476,
+    "max_pitch_deg": 15.139558302412388,
+    "max_roll_deg": 7.128444451684069,
+    "screen_failures": []
+  },
+  {
+    "variant": "responsive_softspeed",
+    "case": 103,
+    "mode": "CRUISE",
+    "complete": true,
+    "failure": null,
+    "disturbed": {
+      "altitude_rms_m": 2.0886775586036945,
+      "xtrack_rms_m": 0.8646848456621098,
+      "relative_rate_rms_deg_s": 22.17864958213834,
+      "relative_pitch_rate_rms_deg_s": 15.0086360537517,
+      "relative_pitch_std_deg": 6.068121859146838
+    },
+    "late": {
+      "altitude_rms_m": 0.10753066237060946,
+      "xtrack_rms_m": 0.008342420496994631,
+      "relative_rate_rms_deg_s": 0.17391755733359496,
+      "relative_pitch_rate_rms_deg_s": 0.06255009556788131,
+      "relative_pitch_std_deg": 0.026463708206073952
+    },
+    "shaft_W": 65.41905369518464,
+    "upper_brake_fraction": 0.0,
+    "min_altitude_m": 37.00293184470828,
+    "max_pitch_deg": 28.961319424416427,
+    "max_roll_deg": 8.348233095390414,
+    "screen_failures": []
+  },
+  {
+    "variant": "responsive_softspeed",
+    "case": 104,
+    "mode": "AUTO",
+    "complete": true,
+    "failure": null,
+    "disturbed": {
+      "altitude_rms_m": 3.9767139537171974,
+      "xtrack_rms_m": 8.013006461077852,
+      "relative_rate_rms_deg_s": 13.701876384336998,
+      "relative_pitch_rate_rms_deg_s": 8.740879118457975,
+      "relative_pitch_std_deg": 3.59677450760487
+    },
+    "late": {
+      "altitude_rms_m": 0.18515080978850113,
+      "xtrack_rms_m": 0.11059355574765044,
+      "relative_rate_rms_deg_s": 0.22922749557130648,
+      "relative_pitch_rate_rms_deg_s": 0.07475258738785183,
+      "relative_pitch_std_deg": 0.03026159027506502
+    },
+    "shaft_W": 69.80254414145027,
+    "upper_brake_fraction": 0.0,
+    "min_altitude_m": 36.731872435994184,
+    "max_pitch_deg": 16.661739995021048,
+    "max_roll_deg": 10.297669209822473,
+    "screen_failures": []
+  },
+  {
+    "variant": "responsive_softspeed",
+    "case": 100,
+    "mode": "AUTO",
+    "complete": true,
+    "failure": null,
+    "disturbed": {
+      "altitude_rms_m": 3.4579786399374393,
+      "xtrack_rms_m": 3.7472910549279668,
+      "relative_rate_rms_deg_s": 9.947279900924368,
+      "relative_pitch_rate_rms_deg_s": 6.518554582375541,
+      "relative_pitch_std_deg": 2.306201550961963
+    },
+    "late": {
+      "altitude_rms_m": 0.19882384009908569,
+      "xtrack_rms_m": 0.03161458953736815,
+      "relative_rate_rms_deg_s": 0.22279523211429061,
+      "relative_pitch_rate_rms_deg_s": 0.0666830696317012,
+      "relative_pitch_std_deg": 0.020913867273404156
+    },
+    "shaft_W": 77.51178812546276,
+    "upper_brake_fraction": 0.0,
+    "min_altitude_m": 38.67464201427985,
+    "max_pitch_deg": 14.82366317139046,
+    "max_roll_deg": 7.085462004816332,
+    "screen_failures": []
+  },
+  {
+    "variant": "responsive_softspeed",
+    "case": 111,
+    "mode": "CRUISE",
+    "complete": true,
+    "failure": null,
+    "disturbed": {
+      "altitude_rms_m": 0.7725081086134922,
+      "xtrack_rms_m": 0.6576899741422002,
+      "relative_rate_rms_deg_s": 22.539817337467518,
+      "relative_pitch_rate_rms_deg_s": 15.667155879432842,
+      "relative_pitch_std_deg": 3.0124989275159675
+    },
+    "late": {
+      "altitude_rms_m": 0.20714970488382714,
+      "xtrack_rms_m": 0.05206141173979502,
+      "relative_rate_rms_deg_s": 0.23878485379076503,
+      "relative_pitch_rate_rms_deg_s": 0.08434326476737584,
+      "relative_pitch_std_deg": 0.02526720288539727
+    },
+    "shaft_W": 77.70095176406599,
+    "upper_brake_fraction": 0.0,
+    "min_altitude_m": 37.66410454815022,
+    "max_pitch_deg": 23.531478419122468,
+    "max_roll_deg": 8.262714376254763,
+    "screen_failures": []
+  },
+  {
+    "variant": "responsive_softspeed",
+    "case": 108,
+    "mode": "AUTO",
+    "complete": true,
+    "failure": null,
+    "disturbed": {
+      "altitude_rms_m": 3.8751823355592263,
+      "xtrack_rms_m": 3.5004557621291092,
+      "relative_rate_rms_deg_s": 8.955576591945372,
+      "relative_pitch_rate_rms_deg_s": 4.667162754458187,
+      "relative_pitch_std_deg": 2.347726244224621
+    },
+    "late": {
+      "altitude_rms_m": 0.19230937684090557,
+      "xtrack_rms_m": 0.03957592417989024,
+      "relative_rate_rms_deg_s": 0.30407499945931543,
+      "relative_pitch_rate_rms_deg_s": 0.10166949765172328,
+      "relative_pitch_std_deg": 0.02570938512041179
+    },
+    "shaft_W": 73.05097762815265,
+    "upper_brake_fraction": 0.0,
+    "min_altitude_m": 37.051988224801754,
+    "max_pitch_deg": 22.91387894685388,
+    "max_roll_deg": 11.12731483497967,
+    "screen_failures": []
+  }
+]

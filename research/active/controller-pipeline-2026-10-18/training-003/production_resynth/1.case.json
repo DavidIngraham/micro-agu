@@ -1,0 +1,35 @@
+{
+  "id": 1,
+  "mode": "CRUISE",
+  "speedup": 8,
+  "wind": 0,
+  "weather": {
+    "turbulence": 0,
+    "thermalStrength": 0,
+    "thermalRadius": 60,
+    "thermalNorth": 300,
+    "thermalEast": 0,
+    "seed": 20261018
+  },
+  "scales": {},
+  "brakeRateScale": 1,
+  "model": "response",
+  "from": 90,
+  "firmware": "/home/david/repos/micro-agu/research/controller-pipeline-2026-10-18/training-003/runtime/arduplane.js",
+  "gains": "/home/david/repos/micro-agu/research/controller-pipeline-2026-10-18/run-001/production_resynth/lqi-gains.bin",
+  "theta": [
+    0.8913518789109554,
+    0.8195443626146311,
+    0.20031764256926718,
+    1.2264348665833473,
+    1.0693764991145918,
+    0.11999995263034315
+  ],
+  "parameters": {
+    "CP3_HRTC": 0.7,
+    "CP3_HUP": 0.5,
+    "CP3_HDN": 0.5,
+    "ARSPD_TYPE": 0,
+    "ARSPD_USE": 0
+  }
+}

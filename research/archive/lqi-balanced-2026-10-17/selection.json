@@ -1,0 +1,30 @@
+{
+  "selected": "responsive",
+  "baseline_score": 0.7110400308089451,
+  "candidates": {
+    "balanced": {
+      "score": 0.6184639947313221,
+      "reasons": [],
+      "improvement_pct": 13.01980648998059
+    },
+    "damped": {
+      "score": 0.7495022753997793,
+      "reasons": [
+        "acquisition median regression >20%",
+        "descent median regression >20%"
+      ],
+      "improvement_pct": -5.409293840612039
+    },
+    "responsive": {
+      "score": 0.5426283987386915,
+      "reasons": [],
+      "improvement_pct": 23.68525325903984
+    },
+    "vertical": {
+      "score": 0.5455300168247288,
+      "reasons": [],
+      "improvement_pct": 23.277172425287606
+    }
+  },
+  "rule": "Training only: complete/settled, operational gates, no >20% median task or energy regression vs matched fixed. Rank 50% mean + 50% worst case of dimensional loss, require >=5% improvement."
+}

@@ -1,0 +1,35 @@
+{
+  "changes": [
+    {
+      "path": "viewer/generated/ardupilot/arduplane.js",
+      "before": "893b28e3cbea410e48736d7f7426928cbe8b56f22c1813914aa290172f1e8565",
+      "after": "893b28e3cbea410e48736d7f7426928cbe8b56f22c1813914aa290172f1e8565"
+    },
+    {
+      "path": "viewer/generated/ardupilot/arduplane.wasm",
+      "before": "3c8d2535b30f42eeb6a9314e333454f51b9e4cc718db2d1edd54d97ad255f6e4",
+      "after": "b6acedf6ed9f9729af8a125c7f5a555d854893f693b2ea38dc6609d747acd167"
+    },
+    {
+      "path": "viewer/assets/runtime/build.json",
+      "before": "15fecd63476d705ee80a1420ef23aa05ec7a69656ae584e575a9d4a083d84315",
+      "after": "46099d6defe478e8df8d4310472fcaf29ffdfde6dfde7fa0ea59523cf1aac2f4"
+    },
+    {
+      "path": "viewer/assets/runtime/highdof.json",
+      "before": "7d6c9fe13382fbf809d5fd8586abcc626a1e4f1600f128c41e7f80957104c980",
+      "after": "6bdfab403bb0d56945b93bec196d1e9f3c3abb5073ff120603ba2bf900e3c155"
+    },
+    {
+      "path": "viewer/assets/runtime/lqi-filter-tune.patch",
+      "before": null,
+      "after": "5d84fe7e2dffb8dfb3ecc24b39a5993bcd7283a014ac6b2a21b032fd4cd8e1a3"
+    },
+    {
+      "path": "viewer/assets/runtime/lqi-filter-design.json",
+      "before": null,
+      "after": "88c56e43ad4c0b4aa3a4e444be925c5bae571395169799a10b3da7b4097a7bba"
+    }
+  ],
+  "note": "Packaged viewer matches verified public artifacts. Existing ArduPilot research checkout and its zero-trim gains remain preserved; rebuild public firmware from the recorded base plus bundled patch."
+}

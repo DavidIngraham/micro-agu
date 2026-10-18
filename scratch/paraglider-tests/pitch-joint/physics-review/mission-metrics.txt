@@ -1,6 +1,0 @@
-mission-joint-calm-g0 course True error None time 980.3 WP altitude max 1.8 corner max 1.18 q RMS 5.23
-mission-joint-stock-calm-g0 course True error None time 963.1 WP altitude max 1.77 corner max 0.8 q RMS 4.94
-mission-joint-wind3-t0-g0 course True error None time 1143.1 WP altitude max 1.91 corner max 1.27 q RMS 5.41
-mission-joint-wind3-t0.5-g0 course True error None time 1097.2 WP altitude max 2.32 corner max 1.25 q RMS 35.96
-mission-rigid-calm-g0.2 course True error None time 978.2 WP altitude max 1.84 corner max 0.42 q RMS not recorded
-mission-rigid-stock-calm-g0.2 course True error None time 960.7 WP altitude max 1.87 corner max 0.42 q RMS not recorded

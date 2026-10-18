@@ -1,0 +1,15 @@
+{
+  "restored_files": 21,
+  "unchanged_feedback_observer_gains": true,
+  "unchanged_published_runtime": true,
+  "modeled_nodes": 85,
+  "accepted_table_nodes": 55,
+  "max_table_residual": 8.520961713998076e-13,
+  "runs": 70,
+  "completed": 69,
+  "research_firmware_sha256": "969cdc57ab522b8f13bed94b6cbb36085ff91a2caaa75426fadebedfe2bf391e",
+  "physics_sha256": "f5d479506baad4065fbfa082e985ab2d930018d7bba700b0cc184102b71a636e",
+  "generator_sha256": "3a84c9dbfed172270f7855874eaba534bbf0a8a933383fbf0de33fed088854f0",
+  "controller_transform_sha256": "da68b3bbd4ed103ba79cf0194a1e6ceafc21de0fcf65523a507d0758d87878c2",
+  "harness_sha256": "bf974ee710fce96becc1b10e89b15aa35612e36da05e8277a8ed88228e3ac9d1"
+}

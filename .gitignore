@@ -7,3 +7,12 @@ restored/
 ~$*
 *.sldbak
 *.SWP
+
+# Local dependency and build outputs
+**/.venv/
+**/node_modules/
+**/__pycache__/
+**/*.egg-info/
+control/dist/
+control/build/
+.ruff_cache/

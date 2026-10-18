@@ -1,0 +1,16 @@
+{
+  "git_head": "d3c56d4240ddca093baeb76ac0ccdec9c91d69cb",
+  "note": "Harness changes are uncommitted; exact source hashes below. No firmware retune.",
+  "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+  "sha256": {
+    "viewer/generated/ardupilot/arduplane.wasm": "d8a838c250b937f8fbc13e41219ac8a412e3bacbcb780da00b738f4fae15c045",
+    "viewer/generated/ardupilot/arduplane.js": "893b28e3cbea410e48736d7f7426928cbe8b56f22c1813914aa290172f1e8565",
+    "viewer/generated/physics/sim_wasm_bg.wasm": "f5d479506baad4065fbfa082e985ab2d930018d7bba700b0cc184102b71a636e",
+    "viewer/assets/runtime/highdof.json": "e30470823ff62bfa8fd03fdd19af4af677321cb6f7f0b1b8d81ee30598428f05",
+    "viewer/tests/integration/stability-case.ts": "9bb473efb74d98bf6c37ed57220e852dd6db5d643675be650a3feef8b1652c01",
+    "viewer/packages/sim-browser/src/session/runtime.ts": "5acdb3a2ee4b85b17b54253071da0925329ee676da6573a86181a70073c74d68",
+    "viewer/packages/sim-browser/src/physics/atmosphere.ts": "d0d6899d1abfc874c31b4b7932079b2e345991286941ae7f8e797f43fd011865",
+    "research/controller-stability-2026-10-16/run.py": "6179b77cc73a40bc6b1a208bb3858e1a1aa3ec8a87afbd2b5325f132f4122997",
+    "research/controller-stability-2026-10-16/analyze.py": "2e27b7b5b5fb5841d6ce7755c147a26e8d27d9ccbca69025b0975e483b65ffec"
+  }
+}

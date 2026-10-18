@@ -1,8 +1,0 @@
-{
-  "overrides": {
-    "Ixz": 0.0
-  },
-  "rate_hz": 1200,
-  "pulse_pwm": 1450,
-  "instant_servo": false
-}

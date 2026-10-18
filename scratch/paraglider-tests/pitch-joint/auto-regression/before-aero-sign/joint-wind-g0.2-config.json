@@ -1,7 +1,0 @@
-{
-  "name": "joint-wind-g0.2",
-  "joint": true,
-  "gain": 0.2,
-  "wind": 3,
-  "turbulence": 0.5
-}

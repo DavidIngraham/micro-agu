@@ -1,0 +1,62 @@
+[
+  {
+    "path": "holistic/transients-valid/standard/01.json",
+    "exit_code": 0,
+    "firmware_sha256": "2aea1d81a92bffb7fb01dfd80d0969f48731c5587413b3eda7c748d5950a4d0f"
+  },
+  {
+    "path": "holistic/transients-valid/standard/03.json",
+    "exit_code": 0,
+    "firmware_sha256": "2aea1d81a92bffb7fb01dfd80d0969f48731c5587413b3eda7c748d5950a4d0f"
+  },
+  {
+    "path": "holistic/transients-valid/standard/13.json",
+    "exit_code": 0,
+    "firmware_sha256": "2aea1d81a92bffb7fb01dfd80d0969f48731c5587413b3eda7c748d5950a4d0f"
+  },
+  {
+    "path": "holistic/transients-valid/airspeed/01.json",
+    "exit_code": 0,
+    "firmware_sha256": "2aea1d81a92bffb7fb01dfd80d0969f48731c5587413b3eda7c748d5950a4d0f"
+  },
+  {
+    "path": "holistic/transients-valid/airspeed/03.json",
+    "exit_code": 0,
+    "firmware_sha256": "2aea1d81a92bffb7fb01dfd80d0969f48731c5587413b3eda7c748d5950a4d0f"
+  },
+  {
+    "path": "holistic/transients-valid/airspeed/13.json",
+    "exit_code": 0,
+    "firmware_sha256": "2aea1d81a92bffb7fb01dfd80d0969f48731c5587413b3eda7c748d5950a4d0f"
+  },
+  {
+    "path": "holistic/transients-valid/sensor/01.json",
+    "exit_code": 0,
+    "firmware_sha256": "2aea1d81a92bffb7fb01dfd80d0969f48731c5587413b3eda7c748d5950a4d0f"
+  },
+  {
+    "path": "holistic/transients-valid/sensor/03.json",
+    "exit_code": 0,
+    "firmware_sha256": "2aea1d81a92bffb7fb01dfd80d0969f48731c5587413b3eda7c748d5950a4d0f"
+  },
+  {
+    "path": "holistic/transients-valid/sensor/13.json",
+    "exit_code": 0,
+    "firmware_sha256": "2aea1d81a92bffb7fb01dfd80d0969f48731c5587413b3eda7c748d5950a4d0f"
+  },
+  {
+    "path": "holistic/transients-valid/damping/01.json",
+    "exit_code": 0,
+    "firmware_sha256": "58bbb9ac21bada4de86be9068261e26d5ce1413ae555dcc2f2979b565cb6bbc1"
+  },
+  {
+    "path": "holistic/transients-valid/damping/03.json",
+    "exit_code": 0,
+    "firmware_sha256": "58bbb9ac21bada4de86be9068261e26d5ce1413ae555dcc2f2979b565cb6bbc1"
+  },
+  {
+    "path": "holistic/transients-valid/damping/13.json",
+    "exit_code": 0,
+    "firmware_sha256": "58bbb9ac21bada4de86be9068261e26d5ce1413ae555dcc2f2979b565cb6bbc1"
+  }
+]

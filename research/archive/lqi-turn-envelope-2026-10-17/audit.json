@@ -1,0 +1,14 @@
+{
+  "restored_files": 21,
+  "unchanged_gains_observer_model": true,
+  "published_firmware_unchanged": true,
+  "total_runs": 26,
+  "completed": 26,
+  "research_firmware_sha256": "8ca5afdf98b5cc493563d2dc993cb8776f49618982c234fe4d697f8f4907c3b6",
+  "physics_sha256": {
+    "sim_wasm_bg.wasm": "f5d479506baad4065fbfa082e985ab2d930018d7bba700b0cc184102b71a636e"
+  },
+  "harness_sha256": "465367b22ec477460756fbb32d582dc6b5ac884b6b403ded2484956578f680f7",
+  "gates_sha256": "e92cc21d0ffa061ff1af0cbee9d57fdad51a576711cb7b8739c17adeaeeb7d2f",
+  "configuration_sha256": "6bdfab403bb0d56945b93bec196d1e9f3c3abb5073ff120603ba2bf900e3c155"
+}

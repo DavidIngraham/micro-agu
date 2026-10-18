@@ -1,8 +1,0 @@
-{
-  "config": {
-    "name": "rigid-g0.5",
-    "joint": 0,
-    "gain": 0.5
-  },
-  "start": 127.464
-}

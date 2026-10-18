@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 """Verify archived bytes or restore original scratch paths to a separate directory."""
 import argparse
+import io
+import subprocess
 import concurrent.futures
 import gzip
 import hashlib
@@ -22,8 +24,9 @@ def process(entry,destination):
         if target.exists():
             raise FileExistsError(f'Refusing to overwrite {target}')
     digest=hashlib.sha256();size=0
-    opener=gzip.open if entry['compression']=='gzip' else open
-    with opener(stored,'rb') as source:
+    raw = open(stored, 'rb') if stored.exists() else io.BytesIO(subprocess.check_output(['git', 'show', 'archive/pre-layout-2026-10-18:' + entry['stored_path']], cwd=ROOT))
+    source = gzip.GzipFile(fileobj=raw) if entry['compression']=='gzip' else raw
+    with raw, source:
         if target:
             with target.open('xb') as output:
                 while chunk:=source.read(1024**2):

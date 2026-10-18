@@ -1,0 +1,18 @@
+{
+  "name": "earlier-15",
+  "record_viewer": true,
+  "entry_alt_m": 50,
+  "exit_alt_m": 12,
+  "radius_m": 6,
+  "spiral_degrees": 450,
+  "final_distance_m": 40,
+  "flare_pct": 95,
+  "flare_rate": 100,
+  "flare_alt_m": 1.5,
+  "flare_sink_m_s": 0.5,
+  "turn_rate_limit_dps": 65,
+  "flare_reserve": 5,
+  "turn_l1_period": 8,
+  "wp_radius_m": 1,
+  "route_type": "loiter_to_alt"
+}

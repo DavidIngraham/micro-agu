@@ -1,9 +1,9 @@
 name: Simulator
 on:
   push:
-    paths: ['simulation/**', 'viewer/**', 'research/**', 'tools/**', '.github/workflows/simulation.yml']
+    paths: ['simulation/**', 'control/**', 'aircraft/**', 'viewer/**', 'research/**', 'tools/**', '.github/workflows/simulation.yml']
   pull_request:
-    paths: ['simulation/**', 'viewer/**', 'research/**', 'tools/**', '.github/workflows/simulation.yml']
+    paths: ['simulation/**', 'control/**', 'aircraft/**', 'viewer/**', 'research/**', 'tools/**', '.github/workflows/simulation.yml']
 jobs:
   parity:
     runs-on: ubuntu-latest
@@ -43,11 +43,18 @@ jobs:
           npm test
           npx playwright install --with-deps chromium
           npm run test:browser
-      - name: Research adapters and isolated tension model
+      - name: Control package and selected aircraft
         run: |
-          uv sync --project research --locked
-          uv run --project research python research/rigging-refinement-2026-10-15/verify.py --geometry-only
-          uv run --project simulation python research/tension-stiffness-2026-10-15/prepare.py
-          uv run --project research python research/tension-stiffness-2026-10-15/audit.py --checks-only
-          uv run --project research --group capture python -m unittest discover -s research/viewer-studies -p 'test_*.py'
-          uv run --project research --group capture python research/viewer-studies/check_live.py --model-dir simulation
+          python3 tools/check_repository.py
+          uv sync --project control --locked
+          uv run --project control pytest control/tests -q
+          uv build --project control --out-dir control/dist
+          uv pip install --python /tmp/microagu-wheel-test/bin/python control/dist/*.whl
+          cd /tmp
+          /tmp/microagu-wheel-test/bin/python -m microagu_control.pipeline --help
+          /tmp/microagu-wheel-test/bin/python -m microagu_control.sysid --help
+      - name: Recording tools
+        run: |
+          uv sync --project research --locked --group capture
+          uv run --project research --group capture python -m unittest discover -s viewer/tools/recording -p 'test_*.py'
+          uv run --project research --group capture python viewer/tools/recording/check_live.py --model-dir simulation

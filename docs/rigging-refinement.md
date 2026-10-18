@@ -20,7 +20,7 @@ The manufacturer's manual documents a 2.4 m canopy span but does not explicitly 
 
 *The 266 mm upper-junction spacing is a different dimension from the flybar attachment spacing. Crown-to-bar distance is also different from canopy-center-of-mass-to-joint distance. The model's fitted 647 mm effective support span and 850 mm joint offset cannot simply be replaced by those photograph measurements.*
 
-The [photo audit and pixel landmarks](../research/tension-stiffness-2026-10-15/photo-analysis/README.md) preserve the original images, scale assumptions and alternate interpretation. If 2.4 m meant projected span, the same flight photo would imply about 222 mm stock spacing. That possibility remains part of the uncertainty.
+The [photo audit and pixel landmarks](../research/archive/tension-stiffness-2026-10-15/photo-analysis/README.md) preserve the original images, scale assumptions and alternate interpretation. If 2.4 m meant projected span, the same flight photo would imply about 222 mm stock spacing. That possibility remains part of the uncertainty.
 
 ## Adding the D-ring route before calculating aerodynamic brake forces
 
@@ -146,4 +146,4 @@ The hardware plan is the 185 mm configuration with the existing guide holes, fol
 
 The first sortie should establish trim and small throttle/turn responses with one frozen controller configuration. Repeat both turn directions and preserve the actual servo outputs, voltage, rates and navigation records. Compare software candidates only in a later matched sortie after the wider hardware has a stable baseline. The [revised flight card](next-flight-test-card.md) incorporates this sequence and replaces the obsolete software comparison table.
 
-[Reproduction package and complete results](../research/rigging-refinement-2026-10-15/README.md) include the frozen simulator sources, protocol and extension, all replay metrics, prediction inputs, checks and applet data. The analysis and implementation were developed with AI assistance; the new flight measurements remain the test of the model.
+[Reproduction package and complete results](../research/archive/rigging-refinement-2026-10-15/README.md) include the frozen simulator sources, protocol and extension, all replay metrics, prediction inputs, checks and applet data. The analysis and implementation were developed with AI assistance; the new flight measurements remain the test of the model.

@@ -1,0 +1,5 @@
+{
+  "correction": "Do not reject an increase toward the 4.4 m/s target merely because baseline was slow. The former symmetric speed-ratio check did this on training case 13.",
+  "gate": "No >10% mean true-speed drop versus baseline in any climb/descent; no mean true-speed above 4.84 m/s (10% over fixed maximum target).",
+  "timing": "Training only; no held-out result exists."
+}

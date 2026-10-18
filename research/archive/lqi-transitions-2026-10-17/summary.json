@@ -1,0 +1,82 @@
+{
+  "selected": "smooth07",
+  "comparisons": {
+    "fixed": {
+      "score": -33.46590037084877,
+      "energy": 0.07280816148251823,
+      "climb_peak": -78.30493552579543,
+      "descent_peak": -77.65355436861492,
+      "acquisition_time": -6.976744186046563
+    },
+    "standard": {
+      "score": -19.127548362690295,
+      "energy": 1.6036377343090713,
+      "climb_peak": -50.05130472837493,
+      "descent_peak": -55.9772556303457,
+      "acquisition_time": -5.882352941176472
+    }
+  },
+  "rejections": [],
+  "sensitivity": {
+    "equal_motion_0.1": {
+      "fixed": -17.372407246045928,
+      "standard": -14.989049882785293
+    },
+    "equal_motion_0.2": {
+      "fixed": -33.46590037084877,
+      "standard": -19.12754836269027
+    },
+    "equal_motion_0.35": {
+      "fixed": -51.50110831691611,
+      "standard": -25.66783316162638
+    },
+    "acquisition_motion_0.1": {
+      "fixed": -21.262330170596336,
+      "standard": -13.827430086112653
+    },
+    "acquisition_motion_0.2": {
+      "fixed": -37.24088048661285,
+      "standard": -18.50555511452437
+    },
+    "acquisition_motion_0.35": {
+      "fixed": -54.56619067682452,
+      "standard": -24.963199851007595
+    },
+    "descent_motion_0.1": {
+      "fixed": -14.40439048362645,
+      "standard": -10.140078421711841
+    },
+    "descent_motion_0.2": {
+      "fixed": -32.01471598865179,
+      "standard": -14.996727958014784
+    },
+    "descent_motion_0.35": {
+      "fixed": -51.138007702484096,
+      "standard": -21.793153870683597
+    },
+    "updraft_motion_0.1": {
+      "fixed": -16.795419458561728,
+      "standard": -4.700411485136858
+    },
+    "updraft_motion_0.2": {
+      "fixed": -31.723141768299968,
+      "standard": -9.732428931988535
+    },
+    "updraft_motion_0.35": {
+      "fixed": -49.750579017014786,
+      "standard": -17.177055244127224
+    },
+    "crosswind_motion_0.1": {
+      "fixed": -17.14434835113311,
+      "standard": -27.34207888604086
+    },
+    "crosswind_motion_0.2": {
+      "fixed": -32.48711389724991,
+      "standard": -29.843271577383412
+    },
+    "crosswind_motion_0.35": {
+      "fixed": -50.431265746520964,
+      "standard": -34.31089604981378
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "candidates": {
+    "responsive_brake3k": {
+      "pitch": 90,
+      "height": 4,
+      "integral": 12,
+      "throttle": 500,
+      "common": 3000
+    },
+    "responsive_brake10k": {
+      "pitch": 90,
+      "height": 4,
+      "integral": 12,
+      "throttle": 500,
+      "common": 10000
+    },
+    "efficient_brake10k": {
+      "pitch": 90,
+      "height": 2,
+      "integral": 6,
+      "throttle": 700,
+      "common": 10000
+    },
+    "responsive_softspeed": {
+      "pitch": 90,
+      "height": 4,
+      "integral": 12,
+      "throttle": 500,
+      "common": 3000,
+      "speed": 0.3,
+      "speed_integral": 0.3
+    }
+  },
+  "rationale": "First pass improved tracking but failed energy. Increase common effort; one candidate relaxes speed feedback. Keep speed target, observer and reference maps fixed.",
+  "extra_gate": "Each climb/descent mean true speed must stay within 10% of published in every matched case. No prior release gate relaxed."
+}

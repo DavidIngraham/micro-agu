@@ -1,0 +1,820 @@
+{
+  "schema": 1,
+  "archive": "evidence.tar.gz",
+  "sha256": "e14ab66495dd9bc349dfb770a64f2855d96d32716493dac7f9c580f723fe6dee",
+  "files": [
+    {
+      "path": "damping/RESULTS.md",
+      "sha256": "a7b279c23b06911720b0090898accd88eae6ffaf630a2685331a89e1ef43aafa",
+      "bytes": 613
+    },
+    {
+      "path": "damping/analysis.json",
+      "sha256": "cc70608ffc172e897100e9294c85b7a924e44e5cbbd77127880aef5cdeb93282",
+      "bytes": 45783
+    },
+    {
+      "path": "damping/exit-codes.json",
+      "sha256": "e4bc3fed442a2f6a329149a9dd4a11049a7fa0cd88fbadb2dab1dcadd33fcccb",
+      "bytes": 37
+    },
+    {
+      "path": "damping/sensor/build.json",
+      "sha256": "740653880a49ebd43e3ce3c079a4885c2be3439a2cf831dd26d77cc1d3244e07",
+      "bytes": 5138
+    },
+    {
+      "path": "damping/sensor/cases/00.json",
+      "sha256": "cce4cfabab4c6814e1cf7e092afffddef0e0675405433b38221d71f01312cd50",
+      "bytes": 501
+    },
+    {
+      "path": "damping/sensor/cases/01.json",
+      "sha256": "b88a4dedc3dee4f991ddf2f30bc9bf098bfed3632e0bf5110fde7bf0811e776c",
+      "bytes": 504
+    },
+    {
+      "path": "damping/sensor/cases/02.json",
+      "sha256": "b389c1d6a689b2dfe822b102235434af2cac4209f792eb27af19709109eed086",
+      "bytes": 802
+    },
+    {
+      "path": "damping/sensor/cases/03.json",
+      "sha256": "9f9bb1c18797d97d016bc840aa3f52ea39ab58b24ebfe80126a85d43b562141f",
+      "bytes": 804
+    },
+    {
+      "path": "damping/sensor/cases/04.json",
+      "sha256": "5826bacb923c863fdb897d53f8ede35e7bedc623b26e77cfc9570ed7e47622ac",
+      "bytes": 805
+    },
+    {
+      "path": "damping/sensor/cases/05.json",
+      "sha256": "f9b44f3d1487518203cedc431e4ad35b538702bb600591d3a587bb940b5d066e",
+      "bytes": 806
+    },
+    {
+      "path": "damping/sensor/cases/06.json",
+      "sha256": "1a179a96f60b7c09a0e01b67db541a99882ab5022acb8b0708d9c6088b429a08",
+      "bytes": 802
+    },
+    {
+      "path": "damping/sensor/cases/07.json",
+      "sha256": "8e91fffb23f4972692de092782a3f0334955bb67d8d7ec930c17264cd90772ed",
+      "bytes": 807
+    },
+    {
+      "path": "damping/sensor/cases/08.json",
+      "sha256": "803e24ac5392efce5e397ad077351d4a018f11f9ce9dc2a10d377838d7dfba0e",
+      "bytes": 799
+    },
+    {
+      "path": "damping/sensor/cases/09.json",
+      "sha256": "a2a1709e5526e753435286bc846728ab631734ae99a5e6966c84579535e50375",
+      "bytes": 805
+    },
+    {
+      "path": "damping/sensor/cases/10.json",
+      "sha256": "86e571d169f3804ca5970b775b966b0d992735e4c541cb047a1c0b9ab939b2a0",
+      "bytes": 806
+    },
+    {
+      "path": "damping/sensor/cases/11.json",
+      "sha256": "8fe7dec52c926723698ed19494c597375fb370df36c2706772f68021a0aa335c",
+      "bytes": 807
+    },
+    {
+      "path": "damping/sensor/cases/12.json",
+      "sha256": "36a3817a650fb8f92ab67aca8c98f6d7381bae1ecec1685b6bc4fc57826e65cb",
+      "bytes": 805
+    },
+    {
+      "path": "damping/sensor/cases/13.json",
+      "sha256": "362f50549f332d9cc73f46a5ec9593452f340d066e39ab583017c99e078adbbc",
+      "bytes": 807
+    },
+    {
+      "path": "damping/sensor/cases/14.json",
+      "sha256": "e6ae4fe5f7dbd29cca78c6948ccd81c204aa0e19467cbcb4fb17b0b51134fae4",
+      "bytes": 804
+    },
+    {
+      "path": "damping/sensor/cases/15.json",
+      "sha256": "8b29d4d19ca69908300bc7eaaa45ecf594f5f36531761639bf28a05ea87a7645",
+      "bytes": 806
+    },
+    {
+      "path": "damping-design/AP_CustomControl_LQI_gains.h",
+      "sha256": "4892b9d93a209ded21bb5186126567e3fd894e9db9a41be52264b98d9cb08cf7",
+      "bytes": 12447
+    },
+    {
+      "path": "damping-design/design.json",
+      "sha256": "76be7da8a2c13783dda6b30399fd6a6f4870d1fef9a2e9232372d31365a7b5b9",
+      "bytes": 910
+    },
+    {
+      "path": "efficient/RESULTS.md",
+      "sha256": "375bd9418f357c61cc5a3ff7b070a39c30da34651651dca7bce1f70408ce3426",
+      "bytes": 614
+    },
+    {
+      "path": "efficient/analysis.json",
+      "sha256": "609bfded422ca1b40b4df702485e012d2eb4f7885aecdd2e7692a213ecc90e7b",
+      "bytes": 11434
+    },
+    {
+      "path": "efficient/exit-codes.json",
+      "sha256": "3aa57daa28e035a2491b638cf239f8764af7c73d723f3574fda809410ca00fcb",
+      "bytes": 13
+    },
+    {
+      "path": "efficient/sensor/build.json",
+      "sha256": "e589c5269998c53cfe8f18ba16060fe4eaf74d7fa21f7e09de42d3041bde5809",
+      "bytes": 5138
+    },
+    {
+      "path": "efficient/sensor/cases/00.json",
+      "sha256": "cce4cfabab4c6814e1cf7e092afffddef0e0675405433b38221d71f01312cd50",
+      "bytes": 501
+    },
+    {
+      "path": "efficient/sensor/cases/01.json",
+      "sha256": "b88a4dedc3dee4f991ddf2f30bc9bf098bfed3632e0bf5110fde7bf0811e776c",
+      "bytes": 504
+    },
+    {
+      "path": "efficient/sensor/cases/06.json",
+      "sha256": "1a179a96f60b7c09a0e01b67db541a99882ab5022acb8b0708d9c6088b429a08",
+      "bytes": 802
+    },
+    {
+      "path": "efficient/sensor/cases/09.json",
+      "sha256": "a2a1709e5526e753435286bc846728ab631734ae99a5e6966c84579535e50375",
+      "bytes": 805
+    },
+    {
+      "path": "efficient-design/AP_CustomControl_LQI_gains.h",
+      "sha256": "a47ec84cbb2fe5f6f8ef8ec995a19ae191def3e0b6017aa894d6aa91d15b2f81",
+      "bytes": 12454
+    },
+    {
+      "path": "efficient-design/design.json",
+      "sha256": "cfa783ddf23287645fdb9e1850fce663fa96419284d077e1338d87895f9b83d2",
+      "bytes": 913
+    },
+    {
+      "path": "fixed/airspeed/build.json",
+      "sha256": "224656d1596d3148b32bedf8e3160ae5425e2ce5808f60a442b8b7c1b3719f94",
+      "bytes": 5138
+    },
+    {
+      "path": "fixed/airspeed/cases/00.json",
+      "sha256": "7880c9744af5551ff6e8a204aa5deb2074421ed48ae42d4bfdd5866c8b0db6bc",
+      "bytes": 503
+    },
+    {
+      "path": "fixed/airspeed/cases/01.json",
+      "sha256": "a563bcb678a42af6aadf173bb8f6d105b55d82430c973bac9ac07cb9a986b4e6",
+      "bytes": 506
+    },
+    {
+      "path": "fixed/airspeed/cases/02.json",
+      "sha256": "88ef34c6f08fdca8a596e5819c61efebeb98220538766b2631e8e23a59827e65",
+      "bytes": 804
+    },
+    {
+      "path": "fixed/airspeed/cases/03.json",
+      "sha256": "bf081319fa66e88a5f4b0c3bbe8676a308f1d7ca249525d16a87e615bb58699e",
+      "bytes": 806
+    },
+    {
+      "path": "fixed/airspeed/cases/04.json",
+      "sha256": "6fbd9e4a5ab2726d71aed7c6026b14a8fe5966dc3941043964dc0e65fc6c9204",
+      "bytes": 807
+    },
+    {
+      "path": "fixed/airspeed/cases/05.json",
+      "sha256": "3dfc023f06a8d97da130ed0f86f425e2ca137a9dabf176deca4fec9f70d1b888",
+      "bytes": 808
+    },
+    {
+      "path": "fixed/airspeed/cases/06.json",
+      "sha256": "1db07a9d3f8dfe9f69d60e33ae6d45b559fd87c373fb7738388f9e8e6d440c1c",
+      "bytes": 804
+    },
+    {
+      "path": "fixed/airspeed/cases/07.json",
+      "sha256": "8817ac22abf8d60ffc0e57f7dce3d8683fd86cd9ea00a4fa06c4a6e5694a13ef",
+      "bytes": 809
+    },
+    {
+      "path": "fixed/airspeed/cases/08.json",
+      "sha256": "4bcf8f2464ff21eb4af4003c694aec8814883c7f8589ccd29da15c8e88b690ec",
+      "bytes": 801
+    },
+    {
+      "path": "fixed/airspeed/cases/09.json",
+      "sha256": "7b44bfd824e660af7dabec4b9d6538730208642d7a841a4ebc85335038ce215d",
+      "bytes": 807
+    },
+    {
+      "path": "fixed/airspeed/cases/10.json",
+      "sha256": "46442d93c098d9bcaf985f1e8cc213b939a80fc99ba0b2482946bd63cfb24618",
+      "bytes": 808
+    },
+    {
+      "path": "fixed/airspeed/cases/11.json",
+      "sha256": "2708589a69f2611f85a7625a7d3fc817cf6e562610f721ed5d5de0f6267f4faf",
+      "bytes": 809
+    },
+    {
+      "path": "fixed/airspeed/cases/12.json",
+      "sha256": "b37ad2ff6470030595f2a38e669a1dfef61f3347509e0adb49f736626416259a",
+      "bytes": 807
+    },
+    {
+      "path": "fixed/airspeed/cases/13.json",
+      "sha256": "1a9e4bffd9924610574000b00be7f0a6ae11118c2def8d9d8856a93a271ed311",
+      "bytes": 809
+    },
+    {
+      "path": "fixed/airspeed/cases/14.json",
+      "sha256": "92ff07a8a3adb98c091b2c91369f0f3464b272ceb08997a61880ce06730a0429",
+      "bytes": 806
+    },
+    {
+      "path": "fixed/airspeed/cases/15.json",
+      "sha256": "2d1ce85827013509896cddca81a3a005c244ad094b0b4e4240ab447a8b03c878",
+      "bytes": 808
+    },
+    {
+      "path": "fixed/analysis.json",
+      "sha256": "3005fd5f24f72a6d27def1f08111b19a38744c65dacae3d3d73937f478ba45c8",
+      "bytes": 200472
+    },
+    {
+      "path": "fixed/angles/build.json",
+      "sha256": "224656d1596d3148b32bedf8e3160ae5425e2ce5808f60a442b8b7c1b3719f94",
+      "bytes": 5138
+    },
+    {
+      "path": "fixed/angles/cases/00.json",
+      "sha256": "024bc55d1f1f039ea9412dc113bc79cda2b6ed3314f140e8a39642da3b9e99b8",
+      "bytes": 501
+    },
+    {
+      "path": "fixed/angles/cases/01.json",
+      "sha256": "cb43df09365677ea59837daa144b84f414fe73735596195a70ee62362a047013",
+      "bytes": 504
+    },
+    {
+      "path": "fixed/angles/cases/06.json",
+      "sha256": "8d15ae3e8d9210980009b33d66ff2110ff125dd151f2d3e325b93f65f24b5414",
+      "bytes": 802
+    },
+    {
+      "path": "fixed/angles/cases/09.json",
+      "sha256": "781a0de55ead8dfa445bd7a72b4f02216ba283073d5574f43507c376e55be76c",
+      "bytes": 805
+    },
+    {
+      "path": "fixed/exit-codes.json",
+      "sha256": "73c775ee09f104a58c93467a43842054caee2fd6dc8047c909dcd2db05617102",
+      "bytes": 145
+    },
+    {
+      "path": "fixed/full/build.json",
+      "sha256": "224656d1596d3148b32bedf8e3160ae5425e2ce5808f60a442b8b7c1b3719f94",
+      "bytes": 5138
+    },
+    {
+      "path": "fixed/full/cases/00.json",
+      "sha256": "cf815d4c734a0ff61f0622190e6d1c0842591e4cde2f9d10f712e1743147351e",
+      "bytes": 499
+    },
+    {
+      "path": "fixed/full/cases/01.json",
+      "sha256": "1a72fb1c8f2352dad08f4c135929c5ea2e3e2ed0521110f0cc9e68e14c8a1edb",
+      "bytes": 502
+    },
+    {
+      "path": "fixed/full/cases/06.json",
+      "sha256": "b524d83bc03a624a0e65a11a7a2e875005a82bce62734c4610540aca67b5f7f6",
+      "bytes": 800
+    },
+    {
+      "path": "fixed/full/cases/09.json",
+      "sha256": "e390eea648fed1e02e594ac3a21890ff94e5635cfe374627d9390abd29b02309",
+      "bytes": 803
+    },
+    {
+      "path": "fixed/sensor/build.json",
+      "sha256": "224656d1596d3148b32bedf8e3160ae5425e2ce5808f60a442b8b7c1b3719f94",
+      "bytes": 5138
+    },
+    {
+      "path": "fixed/sensor/cases/00.json",
+      "sha256": "cce4cfabab4c6814e1cf7e092afffddef0e0675405433b38221d71f01312cd50",
+      "bytes": 501
+    },
+    {
+      "path": "fixed/sensor/cases/01.json",
+      "sha256": "b88a4dedc3dee4f991ddf2f30bc9bf098bfed3632e0bf5110fde7bf0811e776c",
+      "bytes": 504
+    },
+    {
+      "path": "fixed/sensor/cases/02.json",
+      "sha256": "b389c1d6a689b2dfe822b102235434af2cac4209f792eb27af19709109eed086",
+      "bytes": 802
+    },
+    {
+      "path": "fixed/sensor/cases/03.json",
+      "sha256": "9f9bb1c18797d97d016bc840aa3f52ea39ab58b24ebfe80126a85d43b562141f",
+      "bytes": 804
+    },
+    {
+      "path": "fixed/sensor/cases/04.json",
+      "sha256": "5826bacb923c863fdb897d53f8ede35e7bedc623b26e77cfc9570ed7e47622ac",
+      "bytes": 805
+    },
+    {
+      "path": "fixed/sensor/cases/05.json",
+      "sha256": "f9b44f3d1487518203cedc431e4ad35b538702bb600591d3a587bb940b5d066e",
+      "bytes": 806
+    },
+    {
+      "path": "fixed/sensor/cases/06.json",
+      "sha256": "1a179a96f60b7c09a0e01b67db541a99882ab5022acb8b0708d9c6088b429a08",
+      "bytes": 802
+    },
+    {
+      "path": "fixed/sensor/cases/07.json",
+      "sha256": "8e91fffb23f4972692de092782a3f0334955bb67d8d7ec930c17264cd90772ed",
+      "bytes": 807
+    },
+    {
+      "path": "fixed/sensor/cases/08.json",
+      "sha256": "803e24ac5392efce5e397ad077351d4a018f11f9ce9dc2a10d377838d7dfba0e",
+      "bytes": 799
+    },
+    {
+      "path": "fixed/sensor/cases/09.json",
+      "sha256": "a2a1709e5526e753435286bc846728ab631734ae99a5e6966c84579535e50375",
+      "bytes": 805
+    },
+    {
+      "path": "fixed/sensor/cases/10.json",
+      "sha256": "86e571d169f3804ca5970b775b966b0d992735e4c541cb047a1c0b9ab939b2a0",
+      "bytes": 806
+    },
+    {
+      "path": "fixed/sensor/cases/11.json",
+      "sha256": "8fe7dec52c926723698ed19494c597375fb370df36c2706772f68021a0aa335c",
+      "bytes": 807
+    },
+    {
+      "path": "fixed/sensor/cases/12.json",
+      "sha256": "36a3817a650fb8f92ab67aca8c98f6d7381bae1ecec1685b6bc4fc57826e65cb",
+      "bytes": 805
+    },
+    {
+      "path": "fixed/sensor/cases/13.json",
+      "sha256": "362f50549f332d9cc73f46a5ec9593452f340d066e39ab583017c99e078adbbc",
+      "bytes": 807
+    },
+    {
+      "path": "fixed/sensor/cases/14.json",
+      "sha256": "e6ae4fe5f7dbd29cca78c6948ccd81c204aa0e19467cbcb4fb17b0b51134fae4",
+      "bytes": 804
+    },
+    {
+      "path": "fixed/sensor/cases/15.json",
+      "sha256": "8b29d4d19ca69908300bc7eaaa45ecf594f5f36531761639bf28a05ea87a7645",
+      "bytes": 806
+    },
+    {
+      "path": "fixed/sensorless/build.json",
+      "sha256": "224656d1596d3148b32bedf8e3160ae5425e2ce5808f60a442b8b7c1b3719f94",
+      "bytes": 5138
+    },
+    {
+      "path": "fixed/sensorless/cases/00.json",
+      "sha256": "ca9d460debe75d5acc75b84aac78395f054a0df35937b465b3dab570fcb51b2f",
+      "bytes": 377
+    },
+    {
+      "path": "fixed/sensorless/cases/01.json",
+      "sha256": "40743f93fbdf686e1a2483bdd82da8a0158904564bf37621622f082287b97498",
+      "bytes": 380
+    },
+    {
+      "path": "fixed/sensorless/cases/02.json",
+      "sha256": "d57a34724b1f586baf6cae467ca983d41c9e614fa044beba081bf9f4a1f318e3",
+      "bytes": 678
+    },
+    {
+      "path": "fixed/sensorless/cases/03.json",
+      "sha256": "771907a9475de8c502dc98c8d9a7a15fc5923626b4e416c3f5b0062a8348504c",
+      "bytes": 680
+    },
+    {
+      "path": "fixed/sensorless/cases/04.json",
+      "sha256": "08054eba272da6a1acd651d85ff41b32905d4c16f9aeacdc44c3560e2272e60a",
+      "bytes": 681
+    },
+    {
+      "path": "fixed/sensorless/cases/05.json",
+      "sha256": "7fa4e5fb2c7594fd7e87eb8e2ea7fe70e6b1759b7adb1f8d3e12850378678032",
+      "bytes": 682
+    },
+    {
+      "path": "fixed/sensorless/cases/06.json",
+      "sha256": "20ad7df1ab7600b5659e1ed12cc238524d06c10b637c473e80e30ea3a8215821",
+      "bytes": 678
+    },
+    {
+      "path": "fixed/sensorless/cases/07.json",
+      "sha256": "70fd0ac55d41881b23102ce3a3c94338c6c1a195776a15eb155661a24f1078c3",
+      "bytes": 683
+    },
+    {
+      "path": "fixed/sensorless/cases/08.json",
+      "sha256": "b5c0c49ebda4277f08c2105394b48641675894e84aac7792d3410d5256d8a101",
+      "bytes": 675
+    },
+    {
+      "path": "fixed/sensorless/cases/09.json",
+      "sha256": "a613cddbf4ca4342725999c6d8b790111e992df67b2d05a92d29d3d7e8f4ee5a",
+      "bytes": 681
+    },
+    {
+      "path": "fixed/sensorless/cases/10.json",
+      "sha256": "5ebd5a82002575f844168813acb52aa4890c49be274d907cfb7dc69bc21265da",
+      "bytes": 682
+    },
+    {
+      "path": "fixed/sensorless/cases/11.json",
+      "sha256": "43413e0fe8abd6feecbfe01a9d938598eace6997abeebc8deb9d59f8c9f69c19",
+      "bytes": 683
+    },
+    {
+      "path": "fixed/sensorless/cases/12.json",
+      "sha256": "be6eb8f8305258507aa4e6019b4e18a126f16d055f64c5d6e01801ce679beb67",
+      "bytes": 681
+    },
+    {
+      "path": "fixed/sensorless/cases/13.json",
+      "sha256": "8d5c3458a9f5677f49e197eccab22824fc889d16ec943e74fba51e4df3ba1142",
+      "bytes": 683
+    },
+    {
+      "path": "fixed/sensorless/cases/14.json",
+      "sha256": "cd0ff27aecca240d6c92414be1863c0ee1b4fd19dd5b1acfafabd499a5d84dbe",
+      "bytes": 680
+    },
+    {
+      "path": "fixed/sensorless/cases/15.json",
+      "sha256": "5d41802ad740962b6554230a28e50cd9da05486a0851464189076db457c8546e",
+      "bytes": 682
+    },
+    {
+      "path": "fixed/standard/build.json",
+      "sha256": "224656d1596d3148b32bedf8e3160ae5425e2ce5808f60a442b8b7c1b3719f94",
+      "bytes": 5138
+    },
+    {
+      "path": "fixed/standard/cases/00.json",
+      "sha256": "0c94584b04357913527d74032a5fc1ce05dd086dfa26aeadaa55644262b6ea3f",
+      "bytes": 503
+    },
+    {
+      "path": "fixed/standard/cases/01.json",
+      "sha256": "e3d13019f52ed6ddc5cef990c12b16667c697c257a6b7e559f6f7b9ed8e024a5",
+      "bytes": 506
+    },
+    {
+      "path": "fixed/standard/cases/02.json",
+      "sha256": "08add45d99f2d7f1571d0ec042a66cba25d1ef9206c79b74daa5e15e408472fb",
+      "bytes": 804
+    },
+    {
+      "path": "fixed/standard/cases/03.json",
+      "sha256": "eacb12e33c46719331be660d45229460dabe7bdfd3937b28f4f1c4b442736612",
+      "bytes": 806
+    },
+    {
+      "path": "fixed/standard/cases/04.json",
+      "sha256": "da4b5ecc17a384c2b79863282758817c402adb207be3fa9dccd030c72bb6ba78",
+      "bytes": 807
+    },
+    {
+      "path": "fixed/standard/cases/05.json",
+      "sha256": "24c2bd3a30754670d7b0ad6cbf8f3ff41ce7ac08e2dc52a8cbc328fe3be03a7a",
+      "bytes": 808
+    },
+    {
+      "path": "fixed/standard/cases/06.json",
+      "sha256": "01e65f04eae2a5d7382ba6a976d18a1851ff7157cf378c5603ce15de7de02802",
+      "bytes": 804
+    },
+    {
+      "path": "fixed/standard/cases/07.json",
+      "sha256": "efdec84c89fd0a80ba92d2f292839a345e804b8ae7fbb8c06d684ae4d40717a1",
+      "bytes": 809
+    },
+    {
+      "path": "fixed/standard/cases/08.json",
+      "sha256": "e4ea6ff2a5202971d1f968f1a55aadeecac9de919dcea854b1f4bbd7761cdf99",
+      "bytes": 801
+    },
+    {
+      "path": "fixed/standard/cases/09.json",
+      "sha256": "20e74a51637279346d00fba1aa2eb8db17f02a1697e3dc48edfc71c71e946c50",
+      "bytes": 807
+    },
+    {
+      "path": "fixed/standard/cases/10.json",
+      "sha256": "e905b39c032341f1c1c4dc7ede237031241e7c40b591b57b84c15b63d967da3e",
+      "bytes": 808
+    },
+    {
+      "path": "fixed/standard/cases/11.json",
+      "sha256": "cfe689f6d2b944a1b915201c27cfe94879bac387f40cc31ce31d7b250b7da20f",
+      "bytes": 809
+    },
+    {
+      "path": "fixed/standard/cases/12.json",
+      "sha256": "98d4851942504acec917ea7eaf04b7e7b5d0f38fb812d3cf2f80a171b9313495",
+      "bytes": 807
+    },
+    {
+      "path": "fixed/standard/cases/13.json",
+      "sha256": "bc64925b07a313dc18bba6eb8611c0d4240b879d58e650e68273eec794f543d8",
+      "bytes": 809
+    },
+    {
+      "path": "fixed/standard/cases/14.json",
+      "sha256": "6adfbe631b30630798f8309e5f9075479acb31da8d334d5c032174031b19fe55",
+      "bytes": 806
+    },
+    {
+      "path": "fixed/standard/cases/15.json",
+      "sha256": "dccac98bc12ceb5e6d08680cc15a3e79c3b6e3d352dc56f66da05acf5873718a",
+      "bytes": 808
+    },
+    {
+      "path": "fixed-design/AP_CustomControl_LQI_gains.h",
+      "sha256": "481eba802a2b4cf7a4028f4495bf0601413983680ac8270a53530c946a8401a2",
+      "bytes": 12451
+    },
+    {
+      "path": "fixed-design/design.json",
+      "sha256": "453ccdf9d766bf999d01195f361f62aae1b18c9b5fad6a20ed27b547936e45dc",
+      "bytes": 910
+    },
+    {
+      "path": "holistic/transients/airspeed/01-case.json",
+      "sha256": "662908e3a1bf1903c6e17e30cc5b969617c0b1f919678d3eff72f083f9bb5386",
+      "bytes": 653
+    },
+    {
+      "path": "holistic/transients/airspeed/01.json",
+      "sha256": "c586ff01a39d9f986352a8b19b1268ecf5c1fa77f7cd99ce04b948adf7676c47",
+      "bytes": 7455
+    },
+    {
+      "path": "holistic/transients/airspeed/03-case.json",
+      "sha256": "51daf64791a1064352335a580a7fecb31eea558a4d2b62dc76d376516a66eeaf",
+      "bytes": 953
+    },
+    {
+      "path": "holistic/transients/airspeed/03.json",
+      "sha256": "126d530d6269135b3c8ba6418b1d8dcfe99c24c346168305f132787859981244",
+      "bytes": 7837
+    },
+    {
+      "path": "holistic/transients/airspeed/13-case.json",
+      "sha256": "9026e67f52e74161a8f526c71a26e2624d45e33f6f7aaafcd07fd0985c5f68c2",
+      "bytes": 956
+    },
+    {
+      "path": "holistic/transients/airspeed/13.json",
+      "sha256": "298d4a28048ff3df93e6b3d97f929bfdf69408385651c568f38cf751cc442ea4",
+      "bytes": 7719
+    },
+    {
+      "path": "holistic/transients/original/build.json",
+      "sha256": "14cff726d130adad81514c416a1465dcf2d21e7ff311359137c60980c7b7f2ea",
+      "bytes": 5139
+    },
+    {
+      "path": "holistic/transients/original/highdof.json",
+      "sha256": "e30470823ff62bfa8fd03fdd19af4af677321cb6f7f0b1b8d81ee30598428f05",
+      "bytes": 7345
+    },
+    {
+      "path": "holistic/transients/original/physics.ts",
+      "sha256": "4b51049f925ff6190872d35c909a3e6de0d7a8e51d85ab4b97824709db636f8d",
+      "bytes": 11621
+    },
+    {
+      "path": "holistic/transients/restoration.json",
+      "sha256": "19e02a9f02719ac6535095e13f4a654abed0361a3862e656cf9431d3739cd0b2",
+      "bytes": 590
+    },
+    {
+      "path": "holistic/transients/runs.json",
+      "sha256": "14ab18d8304cc1c805130727708164d03b9d196b54ebf8149f4c49abab02da8e",
+      "bytes": 1536
+    },
+    {
+      "path": "holistic/transients/sensor/01-case.json",
+      "sha256": "805cc9987027beb005f0cfb867381a7d26b2b08352e896bf9dbb1d5ba928886b",
+      "bytes": 651
+    },
+    {
+      "path": "holistic/transients/sensor/01.json",
+      "sha256": "b30ec34347ccf960662124df3cd255142c040f86438b23887b00ac68dceff488",
+      "bytes": 7574
+    },
+    {
+      "path": "holistic/transients/sensor/03-case.json",
+      "sha256": "9aa6842cff4cb604158f629ba2344f78c83bd596916ce65c745d65693cc43ebb",
+      "bytes": 951
+    },
+    {
+      "path": "holistic/transients/sensor/03.json",
+      "sha256": "ddd5ed9baf66e7a648ebf6248e16ffc65dd5d48b4157e0e62cd71497cd4946e4",
+      "bytes": 7714
+    },
+    {
+      "path": "holistic/transients/sensor/13-case.json",
+      "sha256": "0988fcac4095ccf6a57e2e6ce46707f8493cab03042d2e042c2745bca0b1b679",
+      "bytes": 954
+    },
+    {
+      "path": "holistic/transients/sensor/13.json",
+      "sha256": "5e6e7132c27d67c1259fcb0631f99cc6eb0606d23adf1012e820a9e74c9e2256",
+      "bytes": 7717
+    },
+    {
+      "path": "holistic/transients/standard/01-case.json",
+      "sha256": "aff02818f7ee4d3c52c3525e6cc41d06265992cbc9f82e810f0d708d1cb2e7fa",
+      "bytes": 653
+    },
+    {
+      "path": "holistic/transients/standard/01.json",
+      "sha256": "6365a6caa723f243ec582af3a72e9f990bc41979107f71ca736feb16517a9b3f",
+      "bytes": 7460
+    },
+    {
+      "path": "holistic/transients/standard/03-case.json",
+      "sha256": "a99f85bc2a92e17ac8e70429bd183a4bdc7b54f5ae702ec517ebcb9bc16ceee9",
+      "bytes": 953
+    },
+    {
+      "path": "holistic/transients/standard/03.json",
+      "sha256": "d70a3203a99f9d7a330d431802c3bff9aaa1141e233d71cd37563efd5989ca14",
+      "bytes": 7721
+    },
+    {
+      "path": "holistic/transients/standard/13-case.json",
+      "sha256": "9c856e25bada97f1f2dc7602ff6925577ba3f6f3713f053f54a8704039cefa82",
+      "bytes": 956
+    },
+    {
+      "path": "holistic/transients/standard/13.json",
+      "sha256": "99e20bb20e9034d1a8fddb895715afadaa2145a7fcc44f031702a0c84f9318dc",
+      "bytes": 7845
+    },
+    {
+      "path": "holistic/transients-valid/airspeed/01-case.json",
+      "sha256": "648fb305655a961ef09725b97ce2396a2d540f87c4216c67d604e7ca5a5c8493",
+      "bytes": 651
+    },
+    {
+      "path": "holistic/transients-valid/airspeed/03-case.json",
+      "sha256": "b5d8ca51f4e18edb28ae5c8669c957593a06f0b5a613b2747f05481d56c3a739",
+      "bytes": 951
+    },
+    {
+      "path": "holistic/transients-valid/airspeed/13-case.json",
+      "sha256": "5a7812ae7a852ed47013c8ff19159c5e7412162b96ebcedeae88df7308445c99",
+      "bytes": 954
+    },
+    {
+      "path": "holistic/transients-valid/damping/01-case.json",
+      "sha256": "17f253a9e24c9faef952f721b9f7f5d2ba27d4f9c13c10b9a49e68966670c417",
+      "bytes": 650
+    },
+    {
+      "path": "holistic/transients-valid/damping/03-case.json",
+      "sha256": "3b9f7af93439b8263498fe23d20192996d907720667e06c9c994b208ba475f20",
+      "bytes": 950
+    },
+    {
+      "path": "holistic/transients-valid/damping/13-case.json",
+      "sha256": "e7c300dd2d45ef638c18a27e7c133756ddeba8eaccf060ddf54b2d730e4a3702",
+      "bytes": 953
+    },
+    {
+      "path": "holistic/transients-valid/original/build.json",
+      "sha256": "14cff726d130adad81514c416a1465dcf2d21e7ff311359137c60980c7b7f2ea",
+      "bytes": 5139
+    },
+    {
+      "path": "holistic/transients-valid/original/highdof.json",
+      "sha256": "e30470823ff62bfa8fd03fdd19af4af677321cb6f7f0b1b8d81ee30598428f05",
+      "bytes": 7345
+    },
+    {
+      "path": "holistic/transients-valid/original/physics.ts",
+      "sha256": "4b51049f925ff6190872d35c909a3e6de0d7a8e51d85ab4b97824709db636f8d",
+      "bytes": 11621
+    },
+    {
+      "path": "holistic/transients-valid/sensor/01-case.json",
+      "sha256": "8415da986671df12f69b61a7175840e7f007c2a4d7707c35ed2e23ced6748d2f",
+      "bytes": 649
+    },
+    {
+      "path": "holistic/transients-valid/sensor/03-case.json",
+      "sha256": "606f92995ba5062f33c7df80604b50e267dad9ba938960478ef66a1450dd9ee2",
+      "bytes": 949
+    },
+    {
+      "path": "holistic/transients-valid/sensor/13-case.json",
+      "sha256": "0cbda5118e84573b4866eedd37e5da324de1035d2550966e13ce6cbee6106112",
+      "bytes": 952
+    },
+    {
+      "path": "holistic/transients-valid/standard/01-case.json",
+      "sha256": "e462a9459bf2dffab7cc45e06d90c4c732f954aee5f3a165d3d38a959e21be81",
+      "bytes": 651
+    },
+    {
+      "path": "holistic/transients-valid/standard/03-case.json",
+      "sha256": "b6dc5e8ab9ce11b545bc59caa7030dee86d224e99fe6bc692ddc42ee667ba693",
+      "bytes": 951
+    },
+    {
+      "path": "holistic/transients-valid/standard/13-case.json",
+      "sha256": "fd2b3b6cfdbfb13a7bb134c29b46aa6e321c324f10469982763b9a69b963c9d2",
+      "bytes": 954
+    },
+    {
+      "path": "original/manifest.json",
+      "sha256": "3fd18499823ab0c10704b28fe19d73089e367ad2cba31e5478d1e68bcda6fc25",
+      "bytes": 1985
+    }
+  ],
+  "retained": [
+    "AP_CustomControl_LQI.cpp.experiment.txt",
+    "AP_CustomControl_LQI_gains.h.experiment.txt",
+    "AP_NavEKF3_LowSpeed.h",
+    "README.md",
+    "RESULTS.md",
+    "SIM_JSON.cpp.experiment.txt",
+    "SIM_JSON.h.experiment.txt",
+    "analyze.py",
+    "ardupilot-working-tree.patch",
+    "audit.json",
+    "audit.py",
+    "comparison.png",
+    "fixed/RESULTS.md",
+    "holistic.py",
+    "holistic/README.md",
+    "holistic/REPORT.md",
+    "holistic/components.png",
+    "holistic/metrics.json",
+    "holistic/recovery.png",
+    "holistic/transients-valid/REPORT.md",
+    "holistic/transients-valid/metrics.json",
+    "holistic/transients-valid/responses.png",
+    "holistic/transients-valid/restoration.json",
+    "holistic/transients-valid/runs.json",
+    "install.py",
+    "physics.ts.experiment.txt",
+    "prepare.py",
+    "provenance.json",
+    "provenance.py",
+    "raw-feedback.png",
+    "restored.json",
+    "retune.sh",
+    "run.py",
+    "select.py",
+    "selected.txt",
+    "selection.json",
+    "sensor.test.ts",
+    "sensor.ts",
+    "stability-case.ts.experiment.txt",
+    "summary.json",
+    "summary.py",
+    "test_holistic.py",
+    "transient_analyze.py",
+    "transient_campaign.py",
+    "transient_case.ts",
+    "ARCHIVE.md"
+  ]
+}

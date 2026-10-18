@@ -1,0 +1,42 @@
+{
+  "variants": {
+    "reference": {},
+    "aw": {
+      "CP3_AWMODE": 1
+    },
+    "map": {
+      "CP3_TMAP": 1
+    },
+    "map_aw": {
+      "CP3_TMAP": 1,
+      "CP3_AWMODE": 1
+    },
+    "map_aw_observer": {
+      "CP3_TMAP": 1,
+      "CP3_AWMODE": 1,
+      "CP3_OBSTRIM": 1
+    }
+  },
+  "rate": 25,
+  "cases": [
+    {
+      "id": 0,
+      "sign": 1,
+      "scales": {},
+      "brakeRateScale": 1,
+      "wind": 0,
+      "turbulence": 0,
+      "seed": 1375099246
+    },
+    {
+      "id": 1,
+      "sign": -1,
+      "scales": {},
+      "brakeRateScale": 1,
+      "wind": 0,
+      "turbulence": 0,
+      "seed": 1227417296
+    }
+  ],
+  "gates": "Unchanged prior turn-envelope score.py; all nominal cases must pass. Select simplest passing intervention; assess observer error and local poles separately. No gain retuning."
+}

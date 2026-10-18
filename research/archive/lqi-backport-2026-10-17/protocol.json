@@ -1,0 +1,265 @@
+{
+  "training": [
+    {
+      "id": 1,
+      "mode": "CRUISE",
+      "speedup": 8,
+      "wind": 1,
+      "from": 90,
+      "weather": {
+        "turbulence": 0.2,
+        "thermalStrength": 1.5,
+        "thermalRadius": 60,
+        "thermalNorth": 300,
+        "thermalEast": 0,
+        "seed": 3127759679
+      },
+      "scales": {},
+      "brakeRateScale": 1
+    },
+    {
+      "id": 3,
+      "mode": "CRUISE",
+      "speedup": 8,
+      "wind": 1.9746557716669373,
+      "from": 268.078545299261,
+      "weather": {
+        "turbulence": 0.3799904360317042,
+        "thermalStrength": 1.3121649036028784,
+        "thermalRadius": 60,
+        "thermalNorth": 300,
+        "thermalEast": 0,
+        "seed": 2949981436
+      },
+      "scales": {
+        "Cmq": 0.7019363928331005,
+        "joint_c_pitch": 1.2355570119693593,
+        "joint_c_roll": 0.983257724454716,
+        "joint_c_yaw": 1.0380341682277683,
+        "CLbrake": 1.0986120386786584,
+        "CDbrake": 1.2715006692717437
+      },
+      "brakeRateScale": 0.8438971209284962
+    },
+    {
+      "id": 13,
+      "mode": "CRUISE",
+      "speedup": 8,
+      "wind": 0.7456343204953737,
+      "from": 196.1346086667657,
+      "weather": {
+        "turbulence": 0.5601722870335648,
+        "thermalStrength": 1.1041487484289856,
+        "thermalRadius": 60,
+        "thermalNorth": 300,
+        "thermalEast": 0,
+        "seed": 3149224359
+      },
+      "scales": {
+        "Cmq": 0.9375840976512654,
+        "joint_c_pitch": 0.7651918396581665,
+        "joint_c_roll": 1.2081560260494275,
+        "joint_c_yaw": 0.7974975415493283,
+        "CLbrake": 1.0951752009194147,
+        "CDbrake": 1.0988117169798504
+      },
+      "brakeRateScale": 1.0151183247661029
+    }
+  ],
+  "validation": [
+    {
+      "id": 80,
+      "mode": "CRUISE",
+      "speedup": 8,
+      "wind": 1.266219214588809,
+      "from": 343.3399381685507,
+      "weather": {
+        "turbulence": 0.5101471230078989,
+        "thermalStrength": 1.0691849284863737,
+        "thermalRadius": 60,
+        "thermalNorth": 300,
+        "thermalEast": 0,
+        "seed": 3241491763
+      },
+      "scales": {
+        "Cmq": 1.0936887934666064,
+        "joint_c_pitch": 0.7448095068082086,
+        "joint_c_roll": 1.100753662120674,
+        "joint_c_yaw": 1.0653636413504557,
+        "CLbrake": 0.7083084925676867,
+        "CDbrake": 0.9315481567432459
+      },
+      "brakeRateScale": 0.8619581137693034
+    },
+    {
+      "id": 81,
+      "mode": "CRUISE",
+      "speedup": 8,
+      "wind": 1.0407735215898182,
+      "from": 76.60480958705736,
+      "weather": {
+        "turbulence": 0.42126293495135175,
+        "thermalStrength": 1.189734883430052,
+        "thermalRadius": 60,
+        "thermalNorth": 300,
+        "thermalEast": 0,
+        "seed": 3442860019
+      },
+      "scales": {
+        "Cmq": 0.8376802988142027,
+        "joint_c_pitch": 0.9530420551542225,
+        "joint_c_roll": 0.8525887531075653,
+        "joint_c_yaw": 0.7031163547863873,
+        "CLbrake": 0.9380720841244613,
+        "CDbrake": 1.1512958604131092
+      },
+      "brakeRateScale": 0.9775822018736686
+    },
+    {
+      "id": 82,
+      "mode": "CRUISE",
+      "speedup": 8,
+      "wind": 1.7434502051195955,
+      "from": 85.36984715509494,
+      "weather": {
+        "turbulence": 0.07038661200231323,
+        "thermalStrength": 0.5482524877184325,
+        "thermalRadius": 60,
+        "thermalNorth": 300,
+        "thermalEast": 0,
+        "seed": 278504034
+      },
+      "scales": {
+        "Cmq": 0.7959312683807236,
+        "joint_c_pitch": 1.2478459455064217,
+        "joint_c_roll": 0.8893939635096184,
+        "joint_c_yaw": 0.9199469110980241,
+        "CLbrake": 1.1456619270941337,
+        "CDbrake": 1.2100098402136434
+      },
+      "brakeRateScale": 0.9297371896589973
+    },
+    {
+      "id": 83,
+      "mode": "CRUISE",
+      "speedup": 8,
+      "wind": 1.8462081649883575,
+      "from": 145.3068134867185,
+      "weather": {
+        "turbulence": 0.4558422928792422,
+        "thermalStrength": 0.42191985573675717,
+        "thermalRadius": 60,
+        "thermalNorth": 300,
+        "thermalEast": 0,
+        "seed": 1294319412
+      },
+      "scales": {
+        "Cmq": 0.9240574106316137,
+        "joint_c_pitch": 1.2900904786167713,
+        "joint_c_roll": 0.8688429256880826,
+        "joint_c_yaw": 0.8382383019955706,
+        "CLbrake": 1.260858905265299,
+        "CDbrake": 1.1972342587985239
+      },
+      "brakeRateScale": 0.8270717250976901
+    },
+    {
+      "id": 84,
+      "mode": "CRUISE",
+      "speedup": 8,
+      "wind": 0.3689973471143979,
+      "from": 170.53263206495717,
+      "weather": {
+        "turbulence": 0.5300069687711176,
+        "thermalStrength": 0.320742346261667,
+        "thermalRadius": 60,
+        "thermalNorth": 300,
+        "thermalEast": 0,
+        "seed": 205029694
+      },
+      "scales": {
+        "Cmq": 0.9303019240392555,
+        "joint_c_pitch": 0.9461276082081174,
+        "joint_c_roll": 1.1937204332618188,
+        "joint_c_yaw": 0.8411424216045038,
+        "CLbrake": 1.2649857642569122,
+        "CDbrake": 0.8697174300246878
+      },
+      "brakeRateScale": 0.7272814149970103
+    },
+    {
+      "id": 85,
+      "mode": "CRUISE",
+      "speedup": 8,
+      "wind": 1.047356115066497,
+      "from": 311.40034084087563,
+      "weather": {
+        "turbulence": 0.5663235880462301,
+        "thermalStrength": 0.23326393884822605,
+        "thermalRadius": 60,
+        "thermalNorth": 300,
+        "thermalEast": 0,
+        "seed": 1472998981
+      },
+      "scales": {
+        "Cmq": 0.806105106358632,
+        "joint_c_pitch": 0.8133563475817711,
+        "joint_c_roll": 0.8284910416981213,
+        "joint_c_yaw": 1.2253151830557996,
+        "CLbrake": 0.9424841587556938,
+        "CDbrake": 1.1015126246872735
+      },
+      "brakeRateScale": 1.0816353907868974
+    },
+    {
+      "id": 86,
+      "mode": "CRUISE",
+      "speedup": 8,
+      "wind": 0.5964543540561624,
+      "from": 281.72300586112294,
+      "weather": {
+        "turbulence": 0.11379067111967356,
+        "thermalStrength": 0.9188491740416482,
+        "thermalRadius": 60,
+        "thermalNorth": 300,
+        "thermalEast": 0,
+        "seed": 135073024
+      },
+      "scales": {
+        "Cmq": 1.022169979502729,
+        "joint_c_pitch": 0.8379271837824,
+        "joint_c_roll": 1.2634160264455703,
+        "joint_c_yaw": 0.8088934462521844,
+        "CLbrake": 1.1009126279140888,
+        "CDbrake": 1.1045319833977627
+      },
+      "brakeRateScale": 0.8018313773976772
+    },
+    {
+      "id": 87,
+      "mode": "CRUISE",
+      "speedup": 8,
+      "wind": 1.7782177301766942,
+      "from": 235.32022642484338,
+      "weather": {
+        "turbulence": 0.42573570093648827,
+        "thermalStrength": 1.9706125412966817,
+        "thermalRadius": 60,
+        "thermalNorth": 300,
+        "thermalEast": 0,
+        "seed": 2749913888
+      },
+      "scales": {
+        "Cmq": 0.764553970277558,
+        "joint_c_pitch": 1.0109500236083242,
+        "joint_c_roll": 0.9494781468882966,
+        "joint_c_yaw": 0.7126128080815329,
+        "CLbrake": 0.8062166512574819,
+        "CDbrake": 0.829177458866809
+      },
+      "brakeRateScale": 0.8068457756303534
+    }
+  ],
+  "intervention": "Only CP3_HRTC: 0 vs 0.7. Existing 0.5 m/s rate limits, T=2, existing gains and observer. ARSPD_TYPE=0, no truth proprioception.",
+  "acceptance": "All operational screens; >=5% paired median score improvement; no task median loss >20%, acquisition >10%, energy >5%, mission tracking >20% with 1m floor. No candidate retuning."
+}

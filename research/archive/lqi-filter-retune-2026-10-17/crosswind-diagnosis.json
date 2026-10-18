@@ -1,0 +1,290 @@
+[
+  {
+    "case": 80,
+    "variant": "deployed_off",
+    "heading_before_deg": 8.50086270293956,
+    "pitch_before_deg": 7.691367539787523,
+    "speed_before": 4.380988966096863,
+    "gust_body_xyz": [
+      -0.2534416407872065,
+      -1.935163676090652,
+      -0.4369312090643146
+    ],
+    "peak_throttle": 0.456,
+    "throttle_floor_fraction": 0.0,
+    "throttle_ceiling_fraction": 0.0,
+    "common_brake_before": 0.0,
+    "common_brake_peak": 0.07200000000000001,
+    "pitch_peak_deg": 13.388337993461796
+  },
+  {
+    "case": 80,
+    "variant": "deployed_on",
+    "heading_before_deg": -80.68692390151756,
+    "pitch_before_deg": 7.812880117874823,
+    "speed_before": 4.350651651163949,
+    "gust_body_xyz": [
+      1.9754356269795772,
+      -0.2885152733264612,
+      0.12005424072960812
+    ],
+    "peak_throttle": 0.486,
+    "throttle_floor_fraction": 0.0,
+    "throttle_ceiling_fraction": 0.0,
+    "common_brake_before": 0.028461538461538465,
+    "common_brake_peak": 0.08600000000000001,
+    "pitch_peak_deg": 29.04892981713453
+  },
+  {
+    "case": 81,
+    "variant": "deployed_off",
+    "heading_before_deg": 13.98031872847847,
+    "pitch_before_deg": 7.713164218195048,
+    "speed_before": 4.379456004017985,
+    "gust_body_xyz": [
+      -0.4234879723159231,
+      -1.921272672905308,
+      -0.35967937618251306
+    ],
+    "peak_throttle": 0.464,
+    "throttle_floor_fraction": 0.0,
+    "throttle_ceiling_fraction": 0.0,
+    "common_brake_before": 0.0,
+    "common_brake_peak": 0.09933333333333334,
+    "pitch_peak_deg": 19.339108135585196
+  },
+  {
+    "case": 81,
+    "variant": "deployed_on",
+    "heading_before_deg": 96.66614877956654,
+    "pitch_before_deg": 8.439852229622623,
+    "speed_before": 4.003692070752306,
+    "gust_body_xyz": [
+      -1.9022922736617653,
+      0.31885386269686355,
+      -0.528787594228572
+    ],
+    "peak_throttle": 0.482,
+    "throttle_floor_fraction": 0.0,
+    "throttle_ceiling_fraction": 0.0,
+    "common_brake_before": 0.24230769230769236,
+    "common_brake_peak": 0.24538461538461545,
+    "pitch_peak_deg": 30.234338545556835
+  },
+  {
+    "case": 82,
+    "variant": "deployed_off",
+    "heading_before_deg": 11.836148440251964,
+    "pitch_before_deg": 7.7088626727848,
+    "speed_before": 4.3781488055669415,
+    "gust_body_xyz": [
+      -0.36621245703209027,
+      -1.9448127571478866,
+      -0.28912242380928577
+    ],
+    "peak_throttle": 0.463,
+    "throttle_floor_fraction": 0.0,
+    "throttle_ceiling_fraction": 0.0,
+    "common_brake_before": 0.0,
+    "common_brake_peak": 0.08666666666666668,
+    "pitch_peak_deg": 18.927559075133743
+  },
+  {
+    "case": 82,
+    "variant": "deployed_on",
+    "heading_before_deg": -105.42217398627358,
+    "pitch_before_deg": 7.736720965034509,
+    "speed_before": 4.381881658737944,
+    "gust_body_xyz": [
+      1.902324708033376,
+      0.5493386826043031,
+      0.28175825986171216
+    ],
+    "peak_throttle": 0.486,
+    "throttle_floor_fraction": 0.0,
+    "throttle_ceiling_fraction": 0.0,
+    "common_brake_before": 0.0,
+    "common_brake_peak": 0.11333333333333334,
+    "pitch_peak_deg": 26.27419611995689
+  },
+  {
+    "case": 83,
+    "variant": "deployed_off",
+    "heading_before_deg": 11.624973889196527,
+    "pitch_before_deg": 7.711364561777993,
+    "speed_before": 4.3772461084436225,
+    "gust_body_xyz": [
+      -0.34554048802523124,
+      -1.9339163469806935,
+      -0.3749257713416554
+    ],
+    "peak_throttle": 0.465,
+    "throttle_floor_fraction": 0.0,
+    "throttle_ceiling_fraction": 0.0,
+    "common_brake_before": 0.0,
+    "common_brake_peak": 0.08533333333333334,
+    "pitch_peak_deg": 19.611771469019487
+  },
+  {
+    "case": 83,
+    "variant": "deployed_on",
+    "heading_before_deg": -74.73161160953146,
+    "pitch_before_deg": 7.884496246815493,
+    "speed_before": 4.290834856978887,
+    "gust_body_xyz": [
+      1.93466000548254,
+      -0.5030867098583143,
+      0.0632014679436707
+    ],
+    "peak_throttle": 0.493,
+    "throttle_floor_fraction": 0.0,
+    "throttle_ceiling_fraction": 0.0,
+    "common_brake_before": 0.041153846153846166,
+    "common_brake_peak": 0.19692307692307695,
+    "pitch_peak_deg": 29.072534423946863
+  },
+  {
+    "case": 84,
+    "variant": "deployed_off",
+    "heading_before_deg": 88.2591119654661,
+    "pitch_before_deg": 8.418724504066006,
+    "speed_before": 3.981855128497865,
+    "gust_body_xyz": [
+      -1.9422744274393893,
+      -0.022238043690281473,
+      -0.4765244148286858
+    ],
+    "peak_throttle": 0.477,
+    "throttle_floor_fraction": 0.0,
+    "throttle_ceiling_fraction": 0.0,
+    "common_brake_before": 0.20230769230769233,
+    "common_brake_peak": 0.2038461538461539,
+    "pitch_peak_deg": 29.435223887558337
+  },
+  {
+    "case": 84,
+    "variant": "deployed_on",
+    "heading_before_deg": 98.27617187375319,
+    "pitch_before_deg": 8.586359673655691,
+    "speed_before": 3.9043808065024246,
+    "gust_body_xyz": [
+      -1.9008212796507884,
+      0.354802618820797,
+      -0.510875292517307
+    ],
+    "peak_throttle": 0.487,
+    "throttle_floor_fraction": 0.0,
+    "throttle_ceiling_fraction": 0.0,
+    "common_brake_before": 0.2461538461538462,
+    "common_brake_peak": 0.24923076923076926,
+    "pitch_peak_deg": 29.172337045755803
+  },
+  {
+    "case": 85,
+    "variant": "deployed_off",
+    "heading_before_deg": 16.152114959239192,
+    "pitch_before_deg": 8.480072240922798,
+    "speed_before": 3.9763816650849533,
+    "gust_body_xyz": [
+      -0.5325214142124348,
+      -1.9155885948364204,
+      -0.21665936106667344
+    ],
+    "peak_throttle": 0.485,
+    "throttle_floor_fraction": 0.0,
+    "throttle_ceiling_fraction": 0.0,
+    "common_brake_before": 0.26000000000000006,
+    "common_brake_peak": 0.2893333333333334,
+    "pitch_peak_deg": 22.2310204439595
+  },
+  {
+    "case": 85,
+    "variant": "deployed_on",
+    "heading_before_deg": 87.37330024660255,
+    "pitch_before_deg": 8.315602738508188,
+    "speed_before": 4.055379110082775,
+    "gust_body_xyz": [
+      -1.960264225576498,
+      -0.09316649348882276,
+      -0.38559586410641167
+    ],
+    "peak_throttle": 0.474,
+    "throttle_floor_fraction": 0.0,
+    "throttle_ceiling_fraction": 0.0,
+    "common_brake_before": 0.2084615384615385,
+    "common_brake_peak": 0.21000000000000005,
+    "pitch_peak_deg": 30.442082713172653
+  },
+  {
+    "case": 86,
+    "variant": "deployed_off",
+    "heading_before_deg": 14.898134799707037,
+    "pitch_before_deg": 7.715557243825767,
+    "speed_before": 4.377972836890535,
+    "gust_body_xyz": [
+      -0.5015835880873762,
+      -1.8748301662984899,
+      -0.4831415441654445
+    ],
+    "peak_throttle": 0.467,
+    "throttle_floor_fraction": 0.0,
+    "throttle_ceiling_fraction": 0.0,
+    "common_brake_before": 0.0,
+    "common_brake_peak": 0.10600000000000001,
+    "pitch_peak_deg": 21.009754564503318
+  },
+  {
+    "case": 86,
+    "variant": "deployed_on",
+    "heading_before_deg": 98.07062534356169,
+    "pitch_before_deg": 8.494917738392786,
+    "speed_before": 3.9647581672045416,
+    "gust_body_xyz": [
+      -1.9094674362529955,
+      0.33558151573079387,
+      -0.49124246171237695
+    ],
+    "peak_throttle": 0.482,
+    "throttle_floor_fraction": 0.0,
+    "throttle_ceiling_fraction": 0.0,
+    "common_brake_before": 0.236923076923077,
+    "common_brake_peak": 0.24000000000000005,
+    "pitch_peak_deg": 29.154406746132402
+  },
+  {
+    "case": 87,
+    "variant": "deployed_off",
+    "heading_before_deg": 88.79167839040849,
+    "pitch_before_deg": 8.36589775948967,
+    "speed_before": 4.029978114615918,
+    "gust_body_xyz": [
+      -1.9538284298278703,
+      -0.022821584311212163,
+      -0.42665400746493254
+    ],
+    "peak_throttle": 0.477,
+    "throttle_floor_fraction": 0.0,
+    "throttle_ceiling_fraction": 0.0,
+    "common_brake_before": 0.26153846153846155,
+    "common_brake_peak": 0.26230769230769235,
+    "pitch_peak_deg": 29.628788471268347
+  },
+  {
+    "case": 87,
+    "variant": "deployed_on",
+    "heading_before_deg": 48.736839154430236,
+    "pitch_before_deg": 7.994923847132114,
+    "speed_before": 4.210551142705947,
+    "gust_body_xyz": [
+      -1.4535425602060534,
+      -1.3345078662561713,
+      -0.32604107190664444
+    ],
+    "peak_throttle": 0.46,
+    "throttle_floor_fraction": 0.0,
+    "throttle_ceiling_fraction": 0.0,
+    "common_brake_before": 0.12692307692307694,
+    "common_brake_peak": 0.12769230769230772,
+    "pitch_peak_deg": 18.873526415979615
+  }
+]

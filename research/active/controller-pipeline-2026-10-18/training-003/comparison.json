@@ -1,0 +1,134 @@
+{
+  "selected": null,
+  "candidates": {
+    "production_resynth": {
+      "reasons": [
+        "0: task regression >20%",
+        "0: motion regression >10%",
+        "1: task regression >20%",
+        "1: motion regression >10%",
+        "Tracking improvement below 5%"
+      ],
+      "paired_ratios": [
+        {
+          "climb": 1.018460068179716,
+          "descent": 0.9841490998515425,
+          "vertical": 0.9727384028445603,
+          "crosswind": 2.253906692452953,
+          "relative_pitch_rate_rms": 1.1230269999741975,
+          "relative_pitch_rate_peak": 0.920371444991288,
+          "shaft_W": 1.0003588331214814,
+          "shaft_Wh_per_km": 1.0004200627651365
+        },
+        {
+          "climb": 1.0221372927357577,
+          "descent": 0.9829212816966937,
+          "vertical": 0.9767981443466266,
+          "crosswind": 3.0910186498755183,
+          "relative_pitch_rate_rms": 1.2674985239266234,
+          "relative_pitch_rate_peak": 1.4653059995662205,
+          "shaft_W": 1.000167729496299,
+          "shaft_Wh_per_km": 1.0001640791107416
+        }
+      ],
+      "mean_tracking_ratio": 1.412766203997921,
+      "eligible": false
+    },
+    "refit": {
+      "reasons": [
+        "0: task regression >20%",
+        "1: task regression >20%",
+        "Tracking improvement below 5%"
+      ],
+      "paired_ratios": [
+        {
+          "climb": 1.0166605863577303,
+          "descent": 0.987479350489044,
+          "vertical": 0.990104446142805,
+          "crosswind": 2.2497131682960214,
+          "relative_pitch_rate_rms": 1.0674332306968746,
+          "relative_pitch_rate_peak": 0.9592065288764977,
+          "shaft_W": 1.0000570105287179,
+          "shaft_Wh_per_km": 1.000124897199165
+        },
+        {
+          "climb": 1.0222415180165205,
+          "descent": 0.9832055941133814,
+          "vertical": 0.9810454680728833,
+          "crosswind": 3.089762016903432,
+          "relative_pitch_rate_rms": 1.0389643848694752,
+          "relative_pitch_rate_peak": 0.8519393600602694,
+          "shaft_W": 1.0000246869470473,
+          "shaft_Wh_per_km": 1.0000441011728791
+        }
+      ],
+      "mean_tracking_ratio": 1.4150265185489772,
+      "eligible": false
+    },
+    "refit_damped": {
+      "reasons": [
+        "0: task regression >20%",
+        "Tracking improvement below 5%"
+      ],
+      "paired_ratios": [
+        {
+          "climb": 1.0137671765685627,
+          "descent": 0.9876368442728177,
+          "vertical": 1.016092907255061,
+          "crosswind": 2.1956159885543807,
+          "relative_pitch_rate_rms": 0.9465907765913889,
+          "relative_pitch_rate_peak": 0.7833485100895184,
+          "shaft_W": 1.0000978426523408,
+          "shaft_Wh_per_km": 1.0001387874569623
+        },
+        {
+          "climb": 0.9999519879290312,
+          "descent": 1.0009020588492694,
+          "vertical": 1.0182951469273764,
+          "crosswind": 1.0813508448468672,
+          "relative_pitch_rate_rms": 0.9155876696482098,
+          "relative_pitch_rate_peak": 0.9219254872030549,
+          "shaft_W": 0.999964815251226,
+          "shaft_Wh_per_km": 0.9998210185493577
+        }
+      ],
+      "mean_tracking_ratio": 1.164201619400421,
+      "eligible": false
+    },
+    "refit_soft": {
+      "reasons": [
+        "0: task regression >20%",
+        "0: motion regression >10%",
+        "1: task regression >20%",
+        "1: motion regression >10%",
+        "Tracking improvement below 5%"
+      ],
+      "paired_ratios": [
+        {
+          "climb": 1.0112147223460242,
+          "descent": 0.9940026695955005,
+          "vertical": 1.13720941510493,
+          "crosswind": 1.921458373669364,
+          "relative_pitch_rate_rms": 1.542894748287647,
+          "relative_pitch_rate_peak": 1.5947812556766285,
+          "shaft_W": 0.9999724052572111,
+          "shaft_Wh_per_km": 0.9999503165333246
+        },
+        {
+          "climb": 1.015578896984789,
+          "descent": 0.9859152213099311,
+          "vertical": 1.1234536380205082,
+          "crosswind": 3.116262335683025,
+          "relative_pitch_rate_rms": 1.309648244249793,
+          "relative_pitch_rate_peak": 1.4644683977802506,
+          "shaft_W": 0.9998809573015053,
+          "shaft_Wh_per_km": 0.9996972662143209
+        }
+      ],
+      "mean_tracking_ratio": 1.413136909089259,
+      "eligible": false
+    }
+  },
+  "deploy": false,
+  "note": "Training selection only; independent reserved native scenarios and mission checks still required."
+}

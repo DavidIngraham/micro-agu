@@ -1,0 +1,2114 @@
+[
+  {
+    "id": 0,
+    "mode": "AUTO",
+    "scheme": "baseline",
+    "complete": true,
+    "failure": null,
+    "samples": 1801,
+    "disturbed": {
+      "pitch_ac_deg": 3.3272498442620866,
+      "pitch_peak_to_peak_deg": 18.944202067961232,
+      "roll_ac_deg": 1.9717776550495676,
+      "pitch_rate_deg_s": 8.667187590846225,
+      "roll_rate_deg_s": 5.395956935573561,
+      "yaw_rate_ac_deg_s": 5.277207387146297,
+      "pitch_band_rms_deg": 2.4338703912296644,
+      "pitch_peak_hz": 0.3515625,
+      "altitude_rms_m": 3.98400863151638,
+      "xtrack_rms_m": 3.363935604315806,
+      "brake_endpoint_fraction": 1.0,
+      "throttle_endpoint_fraction": 0.0,
+      "command_travel_per_s": [
+        0.040876095118935675,
+        0.013362857417938405,
+        0.0768293700459604
+      ]
+    },
+    "early_recovery": {
+      "pitch_ac_deg": 0.7389656579932921,
+      "pitch_peak_to_peak_deg": 6.105012039101051,
+      "roll_ac_deg": 2.7491846505948074,
+      "pitch_rate_deg_s": 1.7421924104265551,
+      "roll_rate_deg_s": 1.7552156430307264,
+      "yaw_rate_ac_deg_s": 4.682824664171817,
+      "pitch_band_rms_deg": 0.9848943879710906,
+      "pitch_peak_hz": 0.2734375,
+      "altitude_rms_m": 0.9815688039907801,
+      "xtrack_rms_m": 5.573891986984555,
+      "brake_endpoint_fraction": 1.0,
+      "throttle_endpoint_fraction": 0.0,
+      "command_travel_per_s": [
+        0.0031772575250865022,
+        0.0,
+        0.029542920847295633
+      ]
+    },
+    "late_recovery": {
+      "pitch_ac_deg": 0.022396732981210386,
+      "pitch_peak_to_peak_deg": 0.14906941532517504,
+      "roll_ac_deg": 0.008335447932402418,
+      "pitch_rate_deg_s": 0.11283062431482094,
+      "roll_rate_deg_s": 0.07982632077653119,
+      "yaw_rate_ac_deg_s": 0.04087544328667342,
+      "pitch_band_rms_deg": 0.0233420504491118,
+      "pitch_peak_hz": 0.3515625,
+      "altitude_rms_m": 0.03684969394817895,
+      "xtrack_rms_m": 0.023198736508797706,
+      "brake_endpoint_fraction": 1.0,
+      "throttle_endpoint_fraction": 0.0,
+      "command_travel_per_s": [
+        0.00023411371237479507,
+        0.0,
+        0.0011371237458204363
+      ]
+    },
+    "final_mission": 4
+  },
+  {
+    "id": 0,
+    "mode": "AUTO",
+    "scheme": "lqi",
+    "complete": true,
+    "failure": null,
+    "samples": 1801,
+    "disturbed": {
+      "pitch_ac_deg": 3.2280858523025038,
+      "pitch_peak_to_peak_deg": 16.936758446116592,
+      "roll_ac_deg": 1.91895187923729,
+      "pitch_rate_deg_s": 8.261584856560855,
+      "roll_rate_deg_s": 6.330517205953616,
+      "yaw_rate_ac_deg_s": 4.913875090102374,
+      "pitch_band_rms_deg": 2.3162995856068744,
+      "pitch_peak_hz": 0.3515625,
+      "altitude_rms_m": 3.9521008091919825,
+      "xtrack_rms_m": 3.358265710607347,
+      "brake_endpoint_fraction": 0.0,
+      "throttle_endpoint_fraction": 0.0,
+      "command_travel_per_s": [
+        0.014881101376734372,
+        0.034581688649304686,
+        0.01781393408428821
+      ]
+    },
+    "early_recovery": {
+      "pitch_ac_deg": 0.5362483605566822,
+      "pitch_peak_to_peak_deg": 3.4110958619241822,
+      "roll_ac_deg": 2.8987989125880325,
+      "pitch_rate_deg_s": 1.3095282025326869,
+      "roll_rate_deg_s": 1.43430147725421,
+      "yaw_rate_ac_deg_s": 4.946168406961489,
+      "pitch_band_rms_deg": 0.11649164851100889,
+      "pitch_peak_hz": 0.3125,
+      "altitude_rms_m": 0.12443668815541757,
+      "xtrack_rms_m": 5.554276798503844,
+      "brake_endpoint_fraction": 0.0,
+      "throttle_endpoint_fraction": 0.0,
+      "command_travel_per_s": [
+        0.0006354515050172938,
+        0.017597118600479113,
+        0.009788182831670003
+      ]
+    },
+    "late_recovery": {
+      "pitch_ac_deg": 0.037419887825783746,
+      "pitch_peak_to_peak_deg": 0.23147433266733053,
+      "roll_ac_deg": 0.0196399060358777,
+      "pitch_rate_deg_s": 0.09953798893102074,
+      "roll_rate_deg_s": 0.12612968555489756,
+      "yaw_rate_ac_deg_s": 0.052179595189252345,
+      "pitch_band_rms_deg": 0.0359669672049583,
+      "pitch_peak_hz": 0.3125,
+      "altitude_rms_m": 0.022520656657881596,
+      "xtrack_rms_m": 0.03044427599268563,
+      "brake_endpoint_fraction": 0.0,
+      "throttle_endpoint_fraction": 0.0,
+      "command_travel_per_s": [
+        0.00023411371237479507,
+        0.0007718034473894346,
+        0.0008918617614277938
+      ]
+    },
+    "final_mission": 4
+  },
+  {
+    "id": 1,
+    "mode": "CRUISE",
+    "scheme": "baseline",
+    "complete": true,
+    "failure": null,
+    "samples": 1801,
+    "disturbed": {
+      "pitch_ac_deg": 4.974972873831426,
+      "pitch_peak_to_peak_deg": 26.633945505250306,
+      "roll_ac_deg": 6.33928798393736,
+      "pitch_rate_deg_s": 18.20153030678078,
+      "roll_rate_deg_s": 10.645427267321306,
+      "yaw_rate_ac_deg_s": 14.015600767160926,
+      "pitch_band_rms_deg": 4.690685463199619,
+      "pitch_peak_hz": 0.5078125,
+      "altitude_rms_m": 2.9676416607421476,
+      "xtrack_rms_m": 0.4540423334399882,
+      "brake_endpoint_fraction": 1.0,
+      "throttle_endpoint_fraction": 0.0,
+      "command_travel_per_s": [
+        0.09275344180233709,
+        0.30339847886809135,
+        0.291814768460841
+      ]
+    },
+    "early_recovery": {
+      "pitch_ac_deg": 6.094503179493585,
+      "pitch_peak_to_peak_deg": 21.811915017438327,
+      "roll_ac_deg": 9.355415188690076,
+      "pitch_rate_deg_s": 20.334243473661434,
+      "roll_rate_deg_s": 12.462527144522529,
+      "yaw_rate_ac_deg_s": 17.221213718977285,
+      "pitch_band_rms_deg": 5.9961126371164974,
+      "pitch_peak_hz": 0.5078125,
+      "altitude_rms_m": 0.30157670512688983,
+      "xtrack_rms_m": 0.6958390915953795,
+      "brake_endpoint_fraction": 1.0,
+      "throttle_endpoint_fraction": 0.0,
+      "command_travel_per_s": [
+        0.10561872909708618,
+        0.3656290198099548,
+        0.33545150501702775
+      ]
+    },
+    "late_recovery": {
+      "pitch_ac_deg": 5.812183129177678,
+      "pitch_peak_to_peak_deg": 19.528363511116698,
+      "roll_ac_deg": 9.042841453892738,
+      "pitch_rate_deg_s": 19.748561267127982,
+      "roll_rate_deg_s": 12.306199798358897,
+      "yaw_rate_ac_deg_s": 16.521376136890215,
+      "pitch_band_rms_deg": 5.862233629033481,
+      "pitch_peak_hz": 0.5078125,
+      "altitude_rms_m": 0.08004846208405555,
+      "xtrack_rms_m": 0.6418053073016157,
+      "brake_endpoint_fraction": 1.0,
+      "throttle_endpoint_fraction": 0.0,
+      "command_travel_per_s": [
+        0.1043143812709978,
+        0.3607923848729805,
+        0.35072463768147843
+      ]
+    },
+    "final_mission": 1
+  },
+  {
+    "id": 1,
+    "mode": "CRUISE",
+    "scheme": "lqi",
+    "complete": true,
+    "failure": null,
+    "samples": 1801,
+    "disturbed": {
+      "pitch_ac_deg": 2.7536450939252277,
+      "pitch_peak_to_peak_deg": 14.85549738768857,
+      "roll_ac_deg": 2.056520416315716,
+      "pitch_rate_deg_s": 7.191588191758752,
+      "roll_rate_deg_s": 4.986399674851574,
+      "yaw_rate_ac_deg_s": 4.386477173790198,
+      "pitch_band_rms_deg": 1.7840195203637264,
+      "pitch_peak_hz": 0.2734375,
+      "altitude_rms_m": 3.4622982809900686,
+      "xtrack_rms_m": 0.13535291768015245,
+      "brake_endpoint_fraction": 0.9275,
+      "throttle_endpoint_fraction": 0.0,
+      "command_travel_per_s": [
+        0.014780976220288747,
+        0.0025512660055862254,
+        0.007843137254909087
+      ]
+    },
+    "early_recovery": {
+      "pitch_ac_deg": 0.17890717202755532,
+      "pitch_peak_to_peak_deg": 1.3276227495960464,
+      "roll_ac_deg": 0.2826562334039851,
+      "pitch_rate_deg_s": 0.42626627810381357,
+      "roll_rate_deg_s": 0.3381227580366083,
+      "yaw_rate_ac_deg_s": 0.44940887368865695,
+      "pitch_band_rms_deg": 0.05547221048151191,
+      "pitch_peak_hz": 0.3515625,
+      "altitude_rms_m": 0.06072121976137538,
+      "xtrack_rms_m": 0.13543258333457978,
+      "brake_endpoint_fraction": 1.0,
+      "throttle_endpoint_fraction": 0.0,
+      "command_travel_per_s": [
+        0.00023411371237479518,
+        0.0005659891947522515,
+        0.005016722408031325
+      ]
+    },
+    "late_recovery": {
+      "pitch_ac_deg": 0.035204626605773504,
+      "pitch_peak_to_peak_deg": 0.19950757299883115,
+      "roll_ac_deg": 0.008649598592966668,
+      "pitch_rate_deg_s": 0.09976371614524804,
+      "roll_rate_deg_s": 0.15480154888350262,
+      "yaw_rate_ac_deg_s": 0.046628149553716206,
+      "pitch_band_rms_deg": 0.03363083153236544,
+      "pitch_peak_hz": 0.390625,
+      "altitude_rms_m": 0.06492693188244385,
+      "xtrack_rms_m": 0.049304642970062214,
+      "brake_endpoint_fraction": 1.0,
+      "throttle_endpoint_fraction": 0.0,
+      "command_travel_per_s": [
+        0.0005016722408031323,
+        0.0,
+        0.002408026755855035
+      ]
+    },
+    "final_mission": 1
+  },
+  {
+    "id": 2,
+    "mode": "AUTO",
+    "scheme": "baseline",
+    "complete": true,
+    "failure": null,
+    "samples": 1801,
+    "disturbed": {
+      "pitch_ac_deg": 3.3077634045348296,
+      "pitch_peak_to_peak_deg": 19.885777868970365,
+      "roll_ac_deg": 3.4840848429675253,
+      "pitch_rate_deg_s": 11.438604485870332,
+      "roll_rate_deg_s": 6.096346817090457,
+      "yaw_rate_ac_deg_s": 8.21879757629068,
+      "pitch_band_rms_deg": 2.7341116124084746,
+      "pitch_peak_hz": 0.3125,
+      "altitude_rms_m": 1.4670145486911235,
+      "xtrack_rms_m": 4.318940081619349,
+      "brake_endpoint_fraction": 1.0,
+      "throttle_endpoint_fraction": 0.0,
+      "command_travel_per_s": [
+        0.05299123904885914,
+        0.022008279580264554,
+        0.1139340842721103
+      ]
+    },
+    "early_recovery": {
+      "pitch_ac_deg": 0.07749318129255829,
+      "pitch_peak_to_peak_deg": 0.5927641829725925,
+      "roll_ac_deg": 0.26790699196680606,
+      "pitch_rate_deg_s": 0.26649457280704975,
+      "roll_rate_deg_s": 0.20785775393388023,
+      "yaw_rate_ac_deg_s": 0.4685399545696109,
+      "pitch_band_rms_deg": 0.032898264556356145,
+      "pitch_peak_hz": 0.1171875,
+      "altitude_rms_m": 0.2077259501298024,
+      "xtrack_rms_m": 0.08886355119042547,
+      "brake_endpoint_fraction": 1.0,
+      "throttle_endpoint_fraction": 0.0,
+      "command_travel_per_s": [
+        0.0009698996655527229,
+        0.0,
+        0.003835005574139494
+      ]
+    },
+    "late_recovery": {
+      "pitch_ac_deg": 0.031943618266041585,
+      "pitch_peak_to_peak_deg": 0.21999935563794093,
+      "roll_ac_deg": 0.011421473888959243,
+      "pitch_rate_deg_s": 0.16053105382856575,
+      "roll_rate_deg_s": 0.07907791937791764,
+      "yaw_rate_ac_deg_s": 0.082374450164624,
+      "pitch_band_rms_deg": 0.027808327680665684,
+      "pitch_peak_hz": 0.546875,
+      "altitude_rms_m": 0.0674766360501772,
+      "xtrack_rms_m": 0.04626007319880649,
+      "brake_endpoint_fraction": 1.0,
+      "throttle_endpoint_fraction": 0.0,
+      "command_travel_per_s": [
+        0.0005016722408031323,
+        0.0,
+        0.0011594202898561254
+      ]
+    },
+    "final_mission": 4
+  },
+  {
+    "id": 2,
+    "mode": "AUTO",
+    "scheme": "lqi",
+    "complete": true,
+    "failure": null,
+    "samples": 1801,
+    "disturbed": {
+      "pitch_ac_deg": 3.570165057829026,
+      "pitch_peak_to_peak_deg": 19.64075596576901,
+      "roll_ac_deg": 2.9598391951786573,
+      "pitch_rate_deg_s": 10.925396198364577,
+      "roll_rate_deg_s": 6.06687468977105,
+      "yaw_rate_ac_deg_s": 8.060121012938597,
+      "pitch_band_rms_deg": 3.2206054169268383,
+      "pitch_peak_hz": 0.3125,
+      "altitude_rms_m": 4.1836264972053145,
+      "xtrack_rms_m": 8.19001286841099,
+      "brake_endpoint_fraction": 0.0,
+      "throttle_endpoint_fraction": 0.0,
+      "command_travel_per_s": [
+        0.014468085106396142,
+        0.03441802252819162,
+        0.02075093867336044
+      ]
+    },
+    "early_recovery": {
+      "pitch_ac_deg": 0.5199890439747956,
+      "pitch_peak_to_peak_deg": 3.233275741757793,
+      "roll_ac_deg": 2.8978029141929036,
+      "pitch_rate_deg_s": 1.2823569566843553,
+      "roll_rate_deg_s": 1.5149021604601194,
+      "yaw_rate_ac_deg_s": 5.034735557964894,
+      "pitch_band_rms_deg": 0.4117765474391418,
+      "pitch_peak_hz": 0.390625,
+      "altitude_rms_m": 0.14261453441299216,
+      "xtrack_rms_m": 8.612528987935978,
+      "brake_endpoint_fraction": 0.0,
+      "throttle_endpoint_fraction": 0.0,
+      "command_travel_per_s": [
+        0.001003344481606265,
+        0.01754566503731979,
+        0.011304347826097245
+      ]
+    },
+    "late_recovery": {
+      "pitch_ac_deg": 0.038758398874551334,
+      "pitch_peak_to_peak_deg": 0.2117108604811362,
+      "roll_ac_deg": 0.013075520385420172,
+      "pitch_rate_deg_s": 0.10841123649743228,
+      "roll_rate_deg_s": 0.17542236918009188,
+      "yaw_rate_ac_deg_s": 0.05644653925737121,
+      "pitch_band_rms_deg": 0.03700764124324586,
+      "pitch_peak_hz": 0.3125,
+      "altitude_rms_m": 0.016902169113294417,
+      "xtrack_rms_m": 0.15890704043180567,
+      "brake_endpoint_fraction": 0.0,
+      "throttle_endpoint_fraction": 0.0,
+      "command_travel_per_s": [
+        0.0004013377926425058,
+        0.000977617700026617,
+        0.0007357859531779292
+      ]
+    },
+    "final_mission": 4
+  },
+  {
+    "id": 3,
+    "mode": "CRUISE",
+    "scheme": "baseline",
+    "complete": true,
+    "failure": null,
+    "samples": 1801,
+    "disturbed": {
+      "pitch_ac_deg": 4.5406168956058055,
+      "pitch_peak_to_peak_deg": 27.065098275823786,
+      "roll_ac_deg": 2.2343442722790683,
+      "pitch_rate_deg_s": 16.413033296323842,
+      "roll_rate_deg_s": 11.060804654342602,
+      "yaw_rate_ac_deg_s": 7.575179397406492,
+      "pitch_band_rms_deg": 4.50623633187457,
+      "pitch_peak_hz": 0.4296875,
+      "altitude_rms_m": 3.184719467993304,
+      "xtrack_rms_m": 0.8543723922334572,
+      "brake_endpoint_fraction": 1.0,
+      "throttle_endpoint_fraction": 0.0,
+      "command_travel_per_s": [
+        0.08176470588242724,
+        0.03011456628480644,
+        0.07575302461416972
+      ]
+    },
+    "early_recovery": {
+      "pitch_ac_deg": 0.24088309507675196,
+      "pitch_peak_to_peak_deg": 1.6501853454559265,
+      "roll_ac_deg": 0.6683088609204939,
+      "pitch_rate_deg_s": 0.5590954057375295,
+      "roll_rate_deg_s": 0.6828918727407047,
+      "yaw_rate_ac_deg_s": 1.0475681904294742,
+      "pitch_band_rms_deg": 0.06632396074765423,
+      "pitch_peak_hz": 0.15625,
+      "altitude_rms_m": 0.5704975433051969,
+      "xtrack_rms_m": 0.152208941766551,
+      "brake_endpoint_fraction": 1.0,
+      "throttle_endpoint_fraction": 0.0,
+      "command_travel_per_s": [
+        0.0014381270903023134,
+        0.001955235400053233,
+        0.006176142697887433
+      ]
+    },
+    "late_recovery": {
+      "pitch_ac_deg": 0.02648610706754615,
+      "pitch_peak_to_peak_deg": 0.16189300566246345,
+      "roll_ac_deg": 0.006039249310594922,
+      "pitch_rate_deg_s": 0.1331024784857453,
+      "roll_rate_deg_s": 0.11024007669042649,
+      "yaw_rate_ac_deg_s": 0.04465102908049229,
+      "pitch_band_rms_deg": 0.015400613344918344,
+      "pitch_peak_hz": 0.390625,
+      "altitude_rms_m": 0.04238006519056226,
+      "xtrack_rms_m": 0.009829562056862853,
+      "brake_endpoint_fraction": 1.0,
+      "throttle_endpoint_fraction": 0.0,
+      "command_travel_per_s": [
+        0.0003678929765889637,
+        0.0,
+        0.0016276477146057234
+      ]
+    },
+    "final_mission": 1
+  },
+  {
+    "id": 3,
+    "mode": "CRUISE",
+    "scheme": "lqi",
+    "complete": true,
+    "failure": null,
+    "samples": 1801,
+    "disturbed": {
+      "pitch_ac_deg": 5.180298670817444,
+      "pitch_peak_to_peak_deg": 39.57246064047625,
+      "roll_ac_deg": 1.9885461172970338,
+      "pitch_rate_deg_s": 16.691696390121386,
+      "roll_rate_deg_s": 8.788320989157098,
+      "yaw_rate_ac_deg_s": 9.010605690949223,
+      "pitch_band_rms_deg": 4.916990019612566,
+      "pitch_peak_hz": 0.3125,
+      "altitude_rms_m": 0.8597982018928614,
+      "xtrack_rms_m": 0.6677565081294318,
+      "brake_endpoint_fraction": 0.0,
+      "throttle_endpoint_fraction": 0.0,
+      "command_travel_per_s": [
+        0.01868585732166903,
+        0.044324636564977316,
+        0.023354192740947338
+      ]
+    },
+    "early_recovery": {
+      "pitch_ac_deg": 0.23755396630346093,
+      "pitch_peak_to_peak_deg": 1.8043339459348484,
+      "roll_ac_deg": 0.544886208171707,
+      "pitch_rate_deg_s": 0.533503377029741,
+      "roll_rate_deg_s": 0.6324368725677133,
+      "yaw_rate_ac_deg_s": 0.8414633832401934,
+      "pitch_band_rms_deg": 0.07694849413061296,
+      "pitch_peak_hz": 0.390625,
+      "altitude_rms_m": 0.12032484915130223,
+      "xtrack_rms_m": 0.1455212559559619,
+      "brake_endpoint_fraction": 0.0,
+      "throttle_endpoint_fraction": 0.0,
+      "command_travel_per_s": [
+        0.0006354515050172993,
+        0.007126318497562446,
+        0.004080267558532118
+      ]
+    },
+    "late_recovery": {
+      "pitch_ac_deg": 0.04139591420079786,
+      "pitch_peak_to_peak_deg": 0.24572561713432428,
+      "roll_ac_deg": 0.011617894447686712,
+      "pitch_rate_deg_s": 0.11733543953274009,
+      "roll_rate_deg_s": 0.14250083078858303,
+      "yaw_rate_ac_deg_s": 0.050262993619830394,
+      "pitch_band_rms_deg": 0.04240241217099984,
+      "pitch_peak_hz": 0.390625,
+      "altitude_rms_m": 0.06879583186891514,
+      "xtrack_rms_m": 0.00431815498911624,
+      "brake_endpoint_fraction": 0.0,
+      "throttle_endpoint_fraction": 0.0,
+      "command_travel_per_s": [
+        0.00033444816053542154,
+        0.0011577051710841778,
+        0.0007580824972136141
+      ]
+    },
+    "final_mission": 1
+  },
+  {
+    "id": 4,
+    "mode": "AUTO",
+    "scheme": "baseline",
+    "complete": true,
+    "failure": null,
+    "samples": 1801,
+    "disturbed": {
+      "pitch_ac_deg": 5.306029906666444,
+      "pitch_peak_to_peak_deg": 33.46616983173915,
+      "roll_ac_deg": 2.518097786352844,
+      "pitch_rate_deg_s": 17.110081160206548,
+      "roll_rate_deg_s": 9.217987508645804,
+      "yaw_rate_ac_deg_s": 8.9132927478226,
+      "pitch_band_rms_deg": 4.893961348180596,
+      "pitch_peak_hz": 0.4296875,
+      "altitude_rms_m": 1.7932364224228488,
+      "xtrack_rms_m": 3.89764720121474,
+      "brake_endpoint_fraction": 1.0,
+      "throttle_endpoint_fraction": 0.0,
+      "command_travel_per_s": [
+        0.07963704630795725,
+        0.051140849138392536,
+        0.12339591155622402
+      ]
+    },
+    "early_recovery": {
+      "pitch_ac_deg": 0.8704863472438583,
+      "pitch_peak_to_peak_deg": 6.878234765676575,
+      "roll_ac_deg": 2.6483812385025423,
+      "pitch_rate_deg_s": 1.9321820059638037,
+      "roll_rate_deg_s": 1.9143169510673992,
+      "yaw_rate_ac_deg_s": 4.527146239379968,
+      "pitch_band_rms_deg": 0.7513817245284623,
+      "pitch_peak_hz": 0.1953125,
+      "altitude_rms_m": 0.7012573627940873,
+      "xtrack_rms_m": 5.575626118801349,
+      "brake_endpoint_fraction": 1.0,
+      "throttle_endpoint_fraction": 0.0,
+      "command_travel_per_s": [
+        0.0030769230769258794,
+        0.0,
+        0.03591973244150415
+      ]
+    },
+    "late_recovery": {
+      "pitch_ac_deg": 0.029638083084618908,
+      "pitch_peak_to_peak_deg": 0.16384311104254756,
+      "roll_ac_deg": 0.013445980151947649,
+      "pitch_rate_deg_s": 0.12148617098115802,
+      "roll_rate_deg_s": 0.10589466350234084,
+      "yaw_rate_ac_deg_s": 0.0804701486180071,
+      "pitch_band_rms_deg": 0.027152577751530373,
+      "pitch_peak_hz": 0.3125,
+      "altitude_rms_m": 0.05146273596027404,
+      "xtrack_rms_m": 0.007797113939896547,
+      "brake_endpoint_fraction": 1.0,
+      "throttle_endpoint_fraction": 0.0,
+      "command_travel_per_s": [
+        0.0004013377926425058,
+        0.0,
+        0.0015161649944272454
+      ]
+    },
+    "final_mission": 4
+  },
+  {
+    "id": 4,
+    "mode": "AUTO",
+    "scheme": "lqi",
+    "complete": true,
+    "failure": null,
+    "samples": 1801,
+    "disturbed": {
+      "pitch_ac_deg": 5.3084049456454805,
+      "pitch_peak_to_peak_deg": 25.588696366819462,
+      "roll_ac_deg": 2.345453051363493,
+      "pitch_rate_deg_s": 15.450801703576412,
+      "roll_rate_deg_s": 9.43459082311033,
+      "yaw_rate_ac_deg_s": 8.46182788500329,
+      "pitch_band_rms_deg": 5.031512611984393,
+      "pitch_peak_hz": 0.3125,
+      "altitude_rms_m": 2.890336776337393,
+      "xtrack_rms_m": 3.593464118151805,
+      "brake_endpoint_fraction": 0.0,
+      "throttle_endpoint_fraction": 0.0,
+      "command_travel_per_s": [
+        0.017634543178989704,
+        0.0588427842495962,
+        0.03163120567378756
+      ]
+    },
+    "early_recovery": {
+      "pitch_ac_deg": 0.6771415141257807,
+      "pitch_peak_to_peak_deg": 5.179648182590189,
+      "roll_ac_deg": 3.022492408925246,
+      "pitch_rate_deg_s": 1.5274588081623264,
+      "roll_rate_deg_s": 1.4795665159589588,
+      "yaw_rate_ac_deg_s": 5.109426975078324,
+      "pitch_band_rms_deg": 0.20693115957449976,
+      "pitch_peak_hz": 0.3125,
+      "altitude_rms_m": 0.14321856987072815,
+      "xtrack_rms_m": 5.40182205504969,
+      "brake_endpoint_fraction": 0.0,
+      "throttle_endpoint_fraction": 0.0,
+      "command_travel_per_s": [
+        0.0010033444816062614,
+        0.01916645227683758,
+        0.011928651059096693
+      ]
+    },
+    "late_recovery": {
+      "pitch_ac_deg": 0.029603078486145264,
+      "pitch_peak_to_peak_deg": 0.20609184932954694,
+      "roll_ac_deg": 0.010235083851126776,
+      "pitch_rate_deg_s": 0.07954603007095547,
+      "roll_rate_deg_s": 0.09442323783432188,
+      "yaw_rate_ac_deg_s": 0.04158248671539568,
+      "pitch_band_rms_deg": 0.022403978106101615,
+      "pitch_peak_hz": 0.390625,
+      "altitude_rms_m": 0.052966686627205634,
+      "xtrack_rms_m": 0.12013099855689865,
+      "brake_endpoint_fraction": 1.0,
+      "throttle_endpoint_fraction": 0.0,
+      "command_travel_per_s": [
+        0.00010033444816062645,
+        0.0,
+        0.001315496098105996
+      ]
+    },
+    "final_mission": 4
+  },
+  {
+    "id": 5,
+    "mode": "CRUISE",
+    "scheme": "baseline",
+    "complete": true,
+    "failure": null,
+    "samples": 1801,
+    "disturbed": {
+      "pitch_ac_deg": 3.646657329274626,
+      "pitch_peak_to_peak_deg": 20.353489177388376,
+      "roll_ac_deg": 1.3205304732693697,
+      "pitch_rate_deg_s": 12.55140873846162,
+      "roll_rate_deg_s": 7.496381072916958,
+      "yaw_rate_ac_deg_s": 5.909660342037447,
+      "pitch_band_rms_deg": 3.790702415853388,
+      "pitch_peak_hz": 0.4296875,
+      "altitude_rms_m": 0.5673484589360385,
+      "xtrack_rms_m": 0.3004285659103947,
+      "brake_endpoint_fraction": 1.0,
+      "throttle_endpoint_fraction": 0.0,
+      "command_travel_per_s": [
+        0.057259073842354805,
+        0.014441128333506923,
+        0.10969545264924438
+      ]
+    },
+    "early_recovery": {
+      "pitch_ac_deg": 0.03900283108373762,
+      "pitch_peak_to_peak_deg": 0.2371740532773634,
+      "roll_ac_deg": 0.1051116384611778,
+      "pitch_rate_deg_s": 0.1581821574748672,
+      "roll_rate_deg_s": 0.12303672717652421,
+      "yaw_rate_ac_deg_s": 0.13684967550663132,
+      "pitch_band_rms_deg": 0.03807200302209353,
+      "pitch_peak_hz": 0.5078125,
+      "altitude_rms_m": 0.4360928563627891,
+      "xtrack_rms_m": 0.02727459526032785,
+      "brake_endpoint_fraction": 1.0,
+      "throttle_endpoint_fraction": 0.0,
+      "command_travel_per_s": [
+        0.0005351170568566747,
+        0.0,
+        0.002274247491640875
+      ]
+    },
+    "late_recovery": {
+      "pitch_ac_deg": 0.03382862049350478,
+      "pitch_peak_to_peak_deg": 0.18401031605166018,
+      "roll_ac_deg": 0.009181789376446472,
+      "pitch_rate_deg_s": 0.16505781936734887,
+      "roll_rate_deg_s": 0.07978807788752232,
+      "yaw_rate_ac_deg_s": 0.07609932567295344,
+      "pitch_band_rms_deg": 0.028416629555836386,
+      "pitch_peak_hz": 0.3515625,
+      "altitude_rms_m": 0.06356681301209662,
+      "xtrack_rms_m": 0.01936965572145093,
+      "brake_endpoint_fraction": 1.0,
+      "throttle_endpoint_fraction": 0.0,
+      "command_travel_per_s": [
+        0.0006020066889637587,
+        0.0,
+        0.0016945373467127935
+      ]
+    },
+    "final_mission": 1
+  },
+  {
+    "id": 5,
+    "mode": "CRUISE",
+    "scheme": "lqi",
+    "complete": true,
+    "failure": null,
+    "samples": 1801,
+    "disturbed": {
+      "pitch_ac_deg": 4.109055365292752,
+      "pitch_peak_to_peak_deg": 24.76886304332973,
+      "roll_ac_deg": 1.2708524860785695,
+      "pitch_rate_deg_s": 11.74365614751566,
+      "roll_rate_deg_s": 7.791030238050966,
+      "yaw_rate_ac_deg_s": 6.2073029311324115,
+      "pitch_band_rms_deg": 4.29553573981882,
+      "pitch_peak_hz": 0.3515625,
+      "altitude_rms_m": 0.48310593148032777,
+      "xtrack_rms_m": 0.2488796467812603,
+      "brake_endpoint_fraction": 0.9125,
+      "throttle_endpoint_fraction": 0.0,
+      "command_travel_per_s": [
+        0.013316645807271167,
+        0.0219120053913745,
+        0.06050062578228267
+      ]
+    },
+    "early_recovery": {
+      "pitch_ac_deg": 0.05460921935590898,
+      "pitch_peak_to_peak_deg": 0.3784451295712925,
+      "roll_ac_deg": 0.03249856032922021,
+      "pitch_rate_deg_s": 0.14202481946221804,
+      "roll_rate_deg_s": 0.15718613576603307,
+      "yaw_rate_ac_deg_s": 0.06445588082592398,
+      "pitch_band_rms_deg": 0.04185772987002493,
+      "pitch_peak_hz": 0.3515625,
+      "altitude_rms_m": 0.2671729278753225,
+      "xtrack_rms_m": 0.057729884909806954,
+      "brake_endpoint_fraction": 1.0,
+      "throttle_endpoint_fraction": 0.0,
+      "command_travel_per_s": [
+        0.00036789297658896387,
+        0.0,
+        0.0038350055741395
+      ]
+    },
+    "late_recovery": {
+      "pitch_ac_deg": 0.03813543487282217,
+      "pitch_peak_to_peak_deg": 0.18102955958972888,
+      "roll_ac_deg": 0.010336125852255917,
+      "pitch_rate_deg_s": 0.10118093096125547,
+      "roll_rate_deg_s": 0.15483313063119933,
+      "yaw_rate_ac_deg_s": 0.05222612167815292,
+      "pitch_band_rms_deg": 0.04328039658881558,
+      "pitch_peak_hz": 0.2734375,
+      "altitude_rms_m": 0.1795145451107478,
+      "xtrack_rms_m": 0.011772685373836333,
+      "brake_endpoint_fraction": 1.0,
+      "throttle_endpoint_fraction": 0.0,
+      "command_travel_per_s": [
+        0.00033444816053542154,
+        0.0,
+        0.0030100334448187956
+      ]
+    },
+    "final_mission": 1
+  },
+  {
+    "id": 6,
+    "mode": "AUTO",
+    "scheme": "baseline",
+    "complete": true,
+    "failure": null,
+    "samples": 1801,
+    "disturbed": {
+      "pitch_ac_deg": 4.743667740549936,
+      "pitch_peak_to_peak_deg": 25.977888725069175,
+      "roll_ac_deg": 4.5422971656877635,
+      "pitch_rate_deg_s": 18.06911389554099,
+      "roll_rate_deg_s": 9.378449435944038,
+      "yaw_rate_ac_deg_s": 10.54805501670864,
+      "pitch_band_rms_deg": 4.582111897280678,
+      "pitch_peak_hz": 0.4296875,
+      "altitude_rms_m": 1.9337355015192126,
+      "xtrack_rms_m": 4.448233944919438,
+      "brake_endpoint_fraction": 1.0,
+      "throttle_endpoint_fraction": 0.0,
+      "command_travel_per_s": [
+        0.08023779724663122,
+        0.05323962645619554,
+        0.14040050062590986
+      ]
+    },
+    "early_recovery": {
+      "pitch_ac_deg": 0.09305230202106625,
+      "pitch_peak_to_peak_deg": 0.7080138150144908,
+      "roll_ac_deg": 0.44791059136084443,
+      "pitch_rate_deg_s": 0.3631491478592589,
+      "roll_rate_deg_s": 0.4179583651584132,
+      "yaw_rate_ac_deg_s": 0.6689936368705738,
+      "pitch_band_rms_deg": 0.03704694463490147,
+      "pitch_peak_hz": 0.1171875,
+      "altitude_rms_m": 0.32868415683051316,
+      "xtrack_rms_m": 0.24691571326789724,
+      "brake_endpoint_fraction": 1.0,
+      "throttle_endpoint_fraction": 0.0,
+      "command_travel_per_s": [
+        0.0010702341137133495,
+        0.0,
+        0.004927536231888538
+      ]
+    },
+    "late_recovery": {
+      "pitch_ac_deg": 0.32034647039557107,
+      "pitch_peak_to_peak_deg": 2.88086072554848,
+      "roll_ac_deg": 0.38370891388245315,
+      "pitch_rate_deg_s": 0.9507787351321539,
+      "roll_rate_deg_s": 0.6919392555863347,
+      "yaw_rate_ac_deg_s": 1.9263650321349535,
+      "pitch_band_rms_deg": 0.03825690821750474,
+      "pitch_peak_hz": 0.6640625,
+      "altitude_rms_m": 0.029545049586513255,
+      "xtrack_rms_m": 3.5887488170200443,
+      "brake_endpoint_fraction": 1.0,
+      "throttle_endpoint_fraction": 0.0,
+      "command_travel_per_s": [
+        0.0016053511705700233,
+        0.0,
+        0.010791527313276258
+      ]
+    },
+    "final_mission": 5
+  },
+  {
+    "id": 6,
+    "mode": "AUTO",
+    "scheme": "lqi",
+    "complete": true,
+    "failure": null,
+    "samples": 1801,
+    "disturbed": {
+      "pitch_ac_deg": 4.4091889919484455,
+      "pitch_peak_to_peak_deg": 25.911301627731326,
+      "roll_ac_deg": 3.557673416694662,
+      "pitch_rate_deg_s": 16.384837684973963,
+      "roll_rate_deg_s": 9.45016052105076,
+      "yaw_rate_ac_deg_s": 9.230976616184778,
+      "pitch_band_rms_deg": 4.340512143963079,
+      "pitch_peak_hz": 0.4296875,
+      "altitude_rms_m": 3.387444368591228,
+      "xtrack_rms_m": 11.911370225918514,
+      "brake_endpoint_fraction": 0.0375,
+      "throttle_endpoint_fraction": 0.0,
+      "command_travel_per_s": [
+        0.02264080100127209,
+        0.04429575430831043,
+        0.025907384230311338
+      ]
+    },
+    "early_recovery": {
+      "pitch_ac_deg": 0.4849507915385576,
+      "pitch_peak_to_peak_deg": 3.7577657977011913,
+      "roll_ac_deg": 2.5718226546572094,
+      "pitch_rate_deg_s": 1.093627546583672,
+      "roll_rate_deg_s": 1.3134787927688096,
+      "yaw_rate_ac_deg_s": 4.505259110233311,
+      "pitch_band_rms_deg": 0.526080968025206,
+      "pitch_peak_hz": 0.3125,
+      "altitude_rms_m": 0.06470836950757562,
+      "xtrack_rms_m": 5.1231194550230725,
+      "brake_endpoint_fraction": 0.11,
+      "throttle_endpoint_fraction": 0.0,
+      "command_travel_per_s": [
+        0.0007357859531779277,
+        0.018266014921549913,
+        0.01172798216277544
+      ]
+    },
+    "late_recovery": {
+      "pitch_ac_deg": 0.03590222435099574,
+      "pitch_peak_to_peak_deg": 0.25568128498602327,
+      "roll_ac_deg": 0.017535077406355033,
+      "pitch_rate_deg_s": 0.09608742289300128,
+      "roll_rate_deg_s": 0.11822698061765369,
+      "yaw_rate_ac_deg_s": 0.046079253877196906,
+      "pitch_band_rms_deg": 0.006825242538417343,
+      "pitch_peak_hz": 0.3515625,
+      "altitude_rms_m": 0.021186709081584983,
+      "xtrack_rms_m": 0.14221174525148061,
+      "brake_endpoint_fraction": 0.0,
+      "throttle_endpoint_fraction": 0.0,
+      "command_travel_per_s": [
+        0.0001337792642141686,
+        0.00038590172369472287,
+        0.0005797101449280795
+      ]
+    },
+    "final_mission": 4
+  },
+  {
+    "id": 7,
+    "mode": "CRUISE",
+    "scheme": "baseline",
+    "complete": true,
+    "failure": null,
+    "samples": 1801,
+    "disturbed": {
+      "pitch_ac_deg": 1.724914092503541,
+      "pitch_peak_to_peak_deg": 9.077816863346147,
+      "roll_ac_deg": 0.7601209693438413,
+      "pitch_rate_deg_s": 3.1112463172930327,
+      "roll_rate_deg_s": 2.2600247111657374,
+      "yaw_rate_ac_deg_s": 1.9159195955504191,
+      "pitch_band_rms_deg": 0.3929968022409551,
+      "pitch_peak_hz": 0.2734375,
+      "altitude_rms_m": 5.470501281498252,
+      "xtrack_rms_m": 0.10702343812373898,
+      "brake_endpoint_fraction": 1.0,
+      "throttle_endpoint_fraction": 0.06875,
+      "command_travel_per_s": [
+        0.015381727158962535,
+        0.004120535284493973,
+        0.029820609094728796
+      ]
+    },
+    "early_recovery": {
+      "pitch_ac_deg": 0.2050488167219173,
+      "pitch_peak_to_peak_deg": 2.181596420566226,
+      "roll_ac_deg": 0.08184339800524368,
+      "pitch_rate_deg_s": 0.47903227117113334,
+      "roll_rate_deg_s": 0.23073841601267034,
+      "yaw_rate_ac_deg_s": 0.16307748528235883,
+      "pitch_band_rms_deg": 0.041157041070835926,
+      "pitch_peak_hz": 0.5078125,
+      "altitude_rms_m": 1.0009501946925188,
+      "xtrack_rms_m": 0.01271449131258664,
+      "brake_endpoint_fraction": 1.0,
+      "throttle_endpoint_fraction": 0.0,
+      "command_travel_per_s": [
+        0.0011705685618739758,
+        0.0,
+        0.006354515050173003
+      ]
+    },
+    "late_recovery": {
+      "pitch_ac_deg": 0.039588184967349505,
+      "pitch_peak_to_peak_deg": 0.1802899556494193,
+      "roll_ac_deg": 0.010001602461067165,
+      "pitch_rate_deg_s": 0.1892201423453917,
+      "roll_rate_deg_s": 0.17176815633075487,
+      "yaw_rate_ac_deg_s": 0.10127706540797492,
+      "pitch_band_rms_deg": 0.04068743620692415,
+      "pitch_peak_hz": 0.546875,
+      "altitude_rms_m": 0.07989699394687072,
+      "xtrack_rms_m": 0.00940572068813872,
+      "brake_endpoint_fraction": 1.0,
+      "throttle_endpoint_fraction": 0.0,
+      "command_travel_per_s": [
+        0.0008026755852850116,
+        0.0,
+        0.003076923076925868
+      ]
+    },
+    "final_mission": 1
+  },
+  {
+    "id": 7,
+    "mode": "CRUISE",
+    "scheme": "lqi",
+    "complete": true,
+    "failure": null,
+    "samples": 1801,
+    "disturbed": {
+      "pitch_ac_deg": 1.8284853312421772,
+      "pitch_peak_to_peak_deg": 14.363611630700776,
+      "roll_ac_deg": 0.6085375942755127,
+      "pitch_rate_deg_s": 3.017506349846221,
+      "roll_rate_deg_s": 1.681965621510725,
+      "yaw_rate_ac_deg_s": 1.5577582228095022,
+      "pitch_band_rms_deg": 0.4593511393063195,
+      "pitch_peak_hz": 0.3515625,
+      "altitude_rms_m": 2.5623636648207015,
+      "xtrack_rms_m": 0.5998126470684165,
+      "brake_endpoint_fraction": 0.0,
+      "throttle_endpoint_fraction": 0.0,
+      "command_travel_per_s": [
+        0.00882352941177273,
+        0.008067777028985888,
+        0.004597413433462673
+      ]
+    },
+    "early_recovery": {
+      "pitch_ac_deg": 0.14103672834928327,
+      "pitch_peak_to_peak_deg": 1.542476227085344,
+      "roll_ac_deg": 0.17117084716582112,
+      "pitch_rate_deg_s": 0.3548678206887593,
+      "roll_rate_deg_s": 0.2249463741174567,
+      "yaw_rate_ac_deg_s": 0.2698541452551846,
+      "pitch_band_rms_deg": 0.034232145282978174,
+      "pitch_peak_hz": 0.4296875,
+      "altitude_rms_m": 0.05969187379402415,
+      "xtrack_rms_m": 0.04850795264591696,
+      "brake_endpoint_fraction": 0.0,
+      "throttle_endpoint_fraction": 0.0,
+      "command_travel_per_s": [
+        0.0005351170568566747,
+        0.001826601492154979,
+        0.0013823857302131047
+      ]
+    },
+    "late_recovery": {
+      "pitch_ac_deg": 0.02493183102859111,
+      "pitch_peak_to_peak_deg": 0.15075658063749842,
+      "roll_ac_deg": 0.011129245906441886,
+      "pitch_rate_deg_s": 0.07118397545071936,
+      "roll_rate_deg_s": 0.11067851237676933,
+      "yaw_rate_ac_deg_s": 0.03398812646993835,
+      "pitch_band_rms_deg": 0.01974546879957708,
+      "pitch_peak_hz": 0.3515625,
+      "altitude_rms_m": 0.01447261750597095,
+      "xtrack_rms_m": 0.005207361215032047,
+      "brake_endpoint_fraction": 0.0,
+      "throttle_endpoint_fraction": 0.0,
+      "command_travel_per_s": [
+        0.00010033444816062645,
+        0.0017236943658364703,
+        0.0008918617614278402
+      ]
+    },
+    "final_mission": 1
+  },
+  {
+    "id": 8,
+    "mode": "AUTO",
+    "scheme": "baseline",
+    "complete": true,
+    "failure": null,
+    "samples": 1801,
+    "disturbed": {
+      "pitch_ac_deg": 5.19471370044519,
+      "pitch_peak_to_peak_deg": 34.717660353064865,
+      "roll_ac_deg": 3.942646880903462,
+      "pitch_rate_deg_s": 16.808402148145674,
+      "roll_rate_deg_s": 9.142435650873585,
+      "yaw_rate_ac_deg_s": 9.122066010086673,
+      "pitch_band_rms_deg": 4.586593057492055,
+      "pitch_peak_hz": 0.3125,
+      "altitude_rms_m": 1.2583480291688636,
+      "xtrack_rms_m": 4.4142564741197665,
+      "brake_endpoint_fraction": 1.0,
+      "throttle_endpoint_fraction": 0.0,
+      "command_travel_per_s": [
+        0.07663329161458787,
+        0.03236738230483353,
+        0.14646641635390875
+      ]
+    },
+    "early_recovery": {
+      "pitch_ac_deg": 0.06574852443984465,
+      "pitch_peak_to_peak_deg": 0.5373565203567816,
+      "roll_ac_deg": 0.34200813961621934,
+      "pitch_rate_deg_s": 0.2713125558409134,
+      "roll_rate_deg_s": 0.3491881375924644,
+      "yaw_rate_ac_deg_s": 0.5646386585854398,
+      "pitch_band_rms_deg": 0.03878975521037992,
+      "pitch_peak_hz": 0.1171875,
+      "altitude_rms_m": 0.24000611746032938,
+      "xtrack_rms_m": 0.13718591392513965,
+      "brake_endpoint_fraction": 1.0,
+      "throttle_endpoint_fraction": 0.0,
+      "command_travel_per_s": [
+        0.0011705685618739758,
+        0.0,
+        0.0040579710144964575
+      ]
+    },
+    "late_recovery": {
+      "pitch_ac_deg": 0.5545164956637133,
+      "pitch_peak_to_peak_deg": 5.5500652974249025,
+      "roll_ac_deg": 1.5203587916624466,
+      "pitch_rate_deg_s": 1.2115083654790988,
+      "roll_rate_deg_s": 1.0144843669674666,
+      "yaw_rate_ac_deg_s": 3.5212446595458484,
+      "pitch_band_rms_deg": 0.017429918035425193,
+      "pitch_peak_hz": 0.390625,
+      "altitude_rms_m": 0.08073059922895819,
+      "xtrack_rms_m": 4.704819403931811,
+      "brake_endpoint_fraction": 1.0,
+      "throttle_endpoint_fraction": 0.0,
+      "command_travel_per_s": [
+        0.0018060200668912763,
+        0.0,
+        0.013667781493880891
+      ]
+    },
+    "final_mission": 5
+  },
+  {
+    "id": 8,
+    "mode": "AUTO",
+    "scheme": "lqi",
+    "complete": true,
+    "failure": null,
+    "samples": 1801,
+    "disturbed": {
+      "pitch_ac_deg": 4.947739372125461,
+      "pitch_peak_to_peak_deg": 29.918202477401525,
+      "roll_ac_deg": 3.4550297789789908,
+      "pitch_rate_deg_s": 14.915809249550337,
+      "roll_rate_deg_s": 8.6756313771421,
+      "yaw_rate_ac_deg_s": 8.43491796356508,
+      "pitch_band_rms_deg": 4.668684967669911,
+      "pitch_peak_hz": 0.3125,
+      "altitude_rms_m": 3.69277355722545,
+      "xtrack_rms_m": 6.769845458951223,
+      "brake_endpoint_fraction": 0.0,
+      "throttle_endpoint_fraction": 0.0,
+      "command_travel_per_s": [
+        0.01699624530664871,
+        0.038837007798244755,
+        0.023888193575324138
+      ]
+    },
+    "early_recovery": {
+      "pitch_ac_deg": 0.34587699416412565,
+      "pitch_peak_to_peak_deg": 2.9538728043338827,
+      "roll_ac_deg": 1.17650189289179,
+      "pitch_rate_deg_s": 0.7525796473103181,
+      "roll_rate_deg_s": 1.1129260832763308,
+      "yaw_rate_ac_deg_s": 1.5338087326797498,
+      "pitch_band_rms_deg": 0.04959982048051472,
+      "pitch_peak_hz": 0.1953125,
+      "altitude_rms_m": 0.11962183168261906,
+      "xtrack_rms_m": 0.41687198536464737,
+      "brake_endpoint_fraction": 0.0,
+      "throttle_endpoint_fraction": 0.0,
+      "command_travel_per_s": [
+        0.0004682274247495885,
+        0.0110367892976689,
+        0.005083612040138401
+      ]
+    },
+    "late_recovery": {
+      "pitch_ac_deg": 0.03062673786141215,
+      "pitch_peak_to_peak_deg": 0.1843268943543901,
+      "roll_ac_deg": 0.019537945129995887,
+      "pitch_rate_deg_s": 0.08084808272320272,
+      "roll_rate_deg_s": 0.10940038340382464,
+      "yaw_rate_ac_deg_s": 0.047499959241747935,
+      "pitch_band_rms_deg": 0.04285325044396278,
+      "pitch_peak_hz": 0.3125,
+      "altitude_rms_m": 0.016071921328694852,
+      "xtrack_rms_m": 0.013739125195102588,
+      "brake_endpoint_fraction": 0.0,
+      "throttle_endpoint_fraction": 0.0,
+      "command_travel_per_s": [
+        0.00016722408026771077,
+        0.00038590172369472287,
+        0.00026755852842835206
+      ]
+    },
+    "final_mission": 4
+  },
+  {
+    "id": 9,
+    "mode": "CRUISE",
+    "scheme": "baseline",
+    "complete": true,
+    "failure": null,
+    "samples": 1801,
+    "disturbed": {
+      "pitch_ac_deg": 5.098231101957729,
+      "pitch_peak_to_peak_deg": 42.01656158747497,
+      "roll_ac_deg": 1.2700346624339973,
+      "pitch_rate_deg_s": 16.955302407427617,
+      "roll_rate_deg_s": 8.888073977004662,
+      "yaw_rate_ac_deg_s": 6.774050046509653,
+      "pitch_band_rms_deg": 4.13885582514752,
+      "pitch_peak_hz": 0.390625,
+      "altitude_rms_m": 3.3938580915865977,
+      "xtrack_rms_m": 0.0,
+      "brake_endpoint_fraction": 1.0,
+      "throttle_endpoint_fraction": 0.0,
+      "command_travel_per_s": [
+        0.07914893617028472,
+        0.10116491768566048,
+        0.18097622027550878
+      ]
+    },
+    "early_recovery": {
+      "pitch_ac_deg": 0.5474449306766818,
+      "pitch_peak_to_peak_deg": 3.3862945981561516,
+      "roll_ac_deg": 0.1476483159707126,
+      "pitch_rate_deg_s": 1.5790022014689111,
+      "roll_rate_deg_s": 0.5210040568980288,
+      "yaw_rate_ac_deg_s": 0.7251500418131515,
+      "pitch_band_rms_deg": 0.4043596398083041,
+      "pitch_peak_hz": 0.46875,
+      "altitude_rms_m": 1.5524758405603363,
+      "xtrack_rms_m": 0.06757607754627208,
+      "brake_endpoint_fraction": 1.0,
+      "throttle_endpoint_fraction": 0.0,
+      "command_travel_per_s": [
+        0.0049498327759242376,
+        0.0,
+        0.023099219620979806
+      ]
+    },
+    "late_recovery": {
+      "pitch_ac_deg": 0.035191003981408175,
+      "pitch_peak_to_peak_deg": 0.22680838774532486,
+      "roll_ac_deg": 0.007186408445780089,
+      "pitch_rate_deg_s": 0.18750042286732513,
+      "roll_rate_deg_s": 0.13079936890598284,
+      "yaw_rate_ac_deg_s": 0.07626675048084951,
+      "pitch_band_rms_deg": 0.029182286196251673,
+      "pitch_peak_hz": 0.4296875,
+      "altitude_rms_m": 0.13326396964764867,
+      "xtrack_rms_m": 0.018200971235690713,
+      "brake_endpoint_fraction": 1.0,
+      "throttle_endpoint_fraction": 0.0,
+      "command_travel_per_s": [
+        0.0006688963210708431,
+        0.0,
+        0.005128205128209792
+      ]
+    },
+    "final_mission": 1
+  },
+  {
+    "id": 9,
+    "mode": "CRUISE",
+    "scheme": "lqi",
+    "complete": true,
+    "failure": null,
+    "samples": 1801,
+    "disturbed": {
+      "pitch_ac_deg": 5.136219343396753,
+      "pitch_peak_to_peak_deg": 36.42635095217239,
+      "roll_ac_deg": 1.2161698041887152,
+      "pitch_rate_deg_s": 15.720233262768529,
+      "roll_rate_deg_s": 9.470144325431258,
+      "yaw_rate_ac_deg_s": 7.26439355036599,
+      "pitch_band_rms_deg": 4.336295411484015,
+      "pitch_peak_hz": 0.390625,
+      "altitude_rms_m": 1.7758610807480755,
+      "xtrack_rms_m": 0.0,
+      "brake_endpoint_fraction": 0.28625,
+      "throttle_endpoint_fraction": 0.0,
+      "command_travel_per_s": [
+        0.02037546933668932,
+        0.0050640223356164344,
+        0.006458072590744285
+      ]
+    },
+    "early_recovery": {
+      "pitch_ac_deg": 0.200720924891288,
+      "pitch_peak_to_peak_deg": 1.6614893732452636,
+      "roll_ac_deg": 0.049852722831983935,
+      "pitch_rate_deg_s": 0.4435162718160525,
+      "roll_rate_deg_s": 0.1781198645000803,
+      "yaw_rate_ac_deg_s": 0.13104177931381938,
+      "pitch_band_rms_deg": 0.04481029307590599,
+      "pitch_peak_hz": 0.3125,
+      "altitude_rms_m": 0.3360857914624885,
+      "xtrack_rms_m": 0.0,
+      "brake_endpoint_fraction": 0.0,
+      "throttle_endpoint_fraction": 0.0,
+      "command_travel_per_s": [
+        0.00046822742474959036,
+        7.718034473894647e-05,
+        0.000156075808249861
+      ]
+    },
+    "late_recovery": {
+      "pitch_ac_deg": 0.027107784399542142,
+      "pitch_peak_to_peak_deg": 0.2311261723644602,
+      "roll_ac_deg": 0.006468670243163994,
+      "pitch_rate_deg_s": 0.08226948807804345,
+      "roll_rate_deg_s": 0.09583844566622257,
+      "yaw_rate_ac_deg_s": 0.030324948155905494,
+      "pitch_band_rms_deg": 0.00050324068814915,
+      "pitch_peak_hz": 0.390625,
+      "altitude_rms_m": 0.13392964145714725,
+      "xtrack_rms_m": 0.0,
+      "brake_endpoint_fraction": 0.0,
+      "throttle_endpoint_fraction": 0.0,
+      "command_travel_per_s": [
+        0.00010033444816062645,
+        0.0,
+        0.0
+      ]
+    },
+    "final_mission": 1
+  },
+  {
+    "id": 10,
+    "mode": "AUTO",
+    "scheme": "baseline",
+    "complete": true,
+    "failure": null,
+    "samples": 1801,
+    "disturbed": {
+      "pitch_ac_deg": 3.3627479650884586,
+      "pitch_peak_to_peak_deg": 22.94198749817343,
+      "roll_ac_deg": 2.4959301354176278,
+      "pitch_rate_deg_s": 7.779247392036644,
+      "roll_rate_deg_s": 5.8920425663593585,
+      "yaw_rate_ac_deg_s": 5.31339158490635,
+      "pitch_band_rms_deg": 1.8364000779318064,
+      "pitch_peak_hz": 0.3125,
+      "altitude_rms_m": 6.278485142173513,
+      "xtrack_rms_m": 3.5536518715346994,
+      "brake_endpoint_fraction": 1.0,
+      "throttle_endpoint_fraction": 0.17,
+      "command_travel_per_s": [
+        0.03160200250315758,
+        0.02657167613365272,
+        0.05654568210267959
+      ]
+    },
+    "early_recovery": {
+      "pitch_ac_deg": 1.1300508161040632,
+      "pitch_peak_to_peak_deg": 8.114314440662099,
+      "roll_ac_deg": 2.9776773613111858,
+      "pitch_rate_deg_s": 3.0371297456209683,
+      "roll_rate_deg_s": 2.6447103876583555,
+      "yaw_rate_ac_deg_s": 4.899041075781196,
+      "pitch_band_rms_deg": 0.9121990128435695,
+      "pitch_peak_hz": 0.234375,
+      "altitude_rms_m": 2.3730029887009128,
+      "xtrack_rms_m": 5.420123941069534,
+      "brake_endpoint_fraction": 1.0,
+      "throttle_endpoint_fraction": 0.0,
+      "command_travel_per_s": [
+        0.006722408026761965,
+        0.009621816310788279,
+        0.05418060200673816
+      ]
+    },
+    "late_recovery": {
+      "pitch_ac_deg": 0.035179980424455,
+      "pitch_peak_to_peak_deg": 0.21941068278704634,
+      "roll_ac_deg": 0.008500976895463893,
+      "pitch_rate_deg_s": 0.20533227211109548,
+      "roll_rate_deg_s": 0.1350272781573658,
+      "yaw_rate_ac_deg_s": 0.06353969935850075,
+      "pitch_band_rms_deg": 0.023245935447915807,
+      "pitch_peak_hz": 0.3515625,
+      "altitude_rms_m": 0.18936596390489585,
+      "xtrack_rms_m": 0.017041677850552165,
+      "brake_endpoint_fraction": 1.0,
+      "throttle_endpoint_fraction": 0.0,
+      "command_travel_per_s": [
+        0.0007023411371243852,
+        0.0,
+        0.001783723522855587
+      ]
+    },
+    "final_mission": 4
+  },
+  {
+    "id": 10,
+    "mode": "AUTO",
+    "scheme": "lqi",
+    "complete": true,
+    "failure": null,
+    "samples": 1801,
+    "disturbed": {
+      "pitch_ac_deg": 3.3742970874216374,
+      "pitch_peak_to_peak_deg": 21.349846808241942,
+      "roll_ac_deg": 2.603202598623442,
+      "pitch_rate_deg_s": 6.63070821762626,
+      "roll_rate_deg_s": 4.892264485701437,
+      "yaw_rate_ac_deg_s": 4.974535285231269,
+      "pitch_band_rms_deg": 1.8211914296818075,
+      "pitch_peak_hz": 0.3125,
+      "altitude_rms_m": 5.25725131386688,
+      "xtrack_rms_m": 6.576614346853073,
+      "brake_endpoint_fraction": 0.4675,
+      "throttle_endpoint_fraction": 0.0,
+      "command_travel_per_s": [
+        0.015506883604519631,
+        0.023153942428056195,
+        0.018448060075110597
+      ]
+    },
+    "early_recovery": {
+      "pitch_ac_deg": 0.5218189844240111,
+      "pitch_peak_to_peak_deg": 4.847531615713135,
+      "roll_ac_deg": 2.1062105166100404,
+      "pitch_rate_deg_s": 1.364616163294544,
+      "roll_rate_deg_s": 1.1119030671382362,
+      "yaw_rate_ac_deg_s": 4.214968470764691,
+      "pitch_band_rms_deg": 0.10000078022690467,
+      "pitch_peak_hz": 0.3515625,
+      "altitude_rms_m": 0.09125188386087515,
+      "xtrack_rms_m": 9.542818892243853,
+      "brake_endpoint_fraction": 0.5066666666666667,
+      "throttle_endpoint_fraction": 0.0,
+      "command_travel_per_s": [
+        0.0004347826086960482,
+        0.010933882171350317,
+        0.007848383500564556
+      ]
+    },
+    "late_recovery": {
+      "pitch_ac_deg": 0.03548105570561661,
+      "pitch_peak_to_peak_deg": 0.22788690367233677,
+      "roll_ac_deg": 0.031897808104351645,
+      "pitch_rate_deg_s": 0.10299899572125834,
+      "roll_rate_deg_s": 0.152624588005857,
+      "yaw_rate_ac_deg_s": 0.043268024280183434,
+      "pitch_band_rms_deg": 0.03555093827386616,
+      "pitch_peak_hz": 0.3125,
+      "altitude_rms_m": 0.07298460781996474,
+      "xtrack_rms_m": 0.2133013541946079,
+      "brake_endpoint_fraction": 1.0,
+      "throttle_endpoint_fraction": 0.0,
+      "command_travel_per_s": [
+        0.0003010033444818794,
+        0.0,
+        0.001382385730213069
+      ]
+    },
+    "final_mission": 4
+  },
+  {
+    "id": 11,
+    "mode": "CRUISE",
+    "scheme": "baseline",
+    "complete": true,
+    "failure": null,
+    "samples": 1801,
+    "disturbed": {
+      "pitch_ac_deg": 4.106655417958131,
+      "pitch_peak_to_peak_deg": 23.86049713807225,
+      "roll_ac_deg": 1.3807355370346064,
+      "pitch_rate_deg_s": 14.101930640114656,
+      "roll_rate_deg_s": 9.022488573403985,
+      "yaw_rate_ac_deg_s": 6.151030947728451,
+      "pitch_band_rms_deg": 3.9096666134758835,
+      "pitch_peak_hz": 0.4296875,
+      "altitude_rms_m": 1.4561528218256647,
+      "xtrack_rms_m": 0.3563893316168907,
+      "brake_endpoint_fraction": 1.0,
+      "throttle_endpoint_fraction": 0.0,
+      "command_travel_per_s": [
+        0.0674217772215882,
+        0.02177722152692844,
+        0.10261994159375193
+      ]
+    },
+    "early_recovery": {
+      "pitch_ac_deg": 0.07671430205543607,
+      "pitch_peak_to_peak_deg": 0.7609363865266046,
+      "roll_ac_deg": 0.2492268174929697,
+      "pitch_rate_deg_s": 0.25918621758264976,
+      "roll_rate_deg_s": 0.2647571171548811,
+      "yaw_rate_ac_deg_s": 0.39250069783309244,
+      "pitch_band_rms_deg": 0.03337602050786643,
+      "pitch_peak_hz": 0.46875,
+      "altitude_rms_m": 0.5604964140921186,
+      "xtrack_rms_m": 0.048175292473702794,
+      "brake_endpoint_fraction": 1.0,
+      "throttle_endpoint_fraction": 0.0,
+      "command_travel_per_s": [
+        0.0008026755852850121,
+        0.0,
+        0.004593088071353109
+      ]
+    },
+    "late_recovery": {
+      "pitch_ac_deg": 0.03686632559209363,
+      "pitch_peak_to_peak_deg": 0.19578981380211768,
+      "roll_ac_deg": 0.008432970435314966,
+      "pitch_rate_deg_s": 0.2038220632273494,
+      "roll_rate_deg_s": 0.15531986198261097,
+      "yaw_rate_ac_deg_s": 0.0700353375739271,
+      "pitch_band_rms_deg": 0.038657721050634426,
+      "pitch_peak_hz": 0.546875,
+      "altitude_rms_m": 0.07961683039079917,
+      "xtrack_rms_m": 0.03924291227731204,
+      "brake_endpoint_fraction": 1.0,
+      "throttle_endpoint_fraction": 0.0,
+      "command_travel_per_s": [
+        0.0007357859531779274,
+        0.0,
+        0.0015607580824986342
+      ]
+    },
+    "final_mission": 1
+  },
+  {
+    "id": 11,
+    "mode": "CRUISE",
+    "scheme": "lqi",
+    "complete": true,
+    "failure": null,
+    "samples": 1801,
+    "disturbed": {
+      "pitch_ac_deg": 4.3559373530244,
+      "pitch_peak_to_peak_deg": 23.709063940927294,
+      "roll_ac_deg": 1.5808349488947655,
+      "pitch_rate_deg_s": 12.995947190946305,
+      "roll_rate_deg_s": 8.400001879277465,
+      "yaw_rate_ac_deg_s": 6.795119560341483,
+      "pitch_band_rms_deg": 4.11947588924628,
+      "pitch_peak_hz": 0.3515625,
+      "altitude_rms_m": 1.4764445393399896,
+      "xtrack_rms_m": 0.3679746387976649,
+      "brake_endpoint_fraction": 0.795,
+      "throttle_endpoint_fraction": 0.0,
+      "command_travel_per_s": [
+        0.01639549436797481,
+        0.04558582843943681,
+        0.07299123904887708
+      ]
+    },
+    "early_recovery": {
+      "pitch_ac_deg": 0.27000575331819665,
+      "pitch_peak_to_peak_deg": 1.9523905686894913,
+      "roll_ac_deg": 0.6112621043252077,
+      "pitch_rate_deg_s": 0.6890409581234069,
+      "roll_rate_deg_s": 0.6037315283521506,
+      "yaw_rate_ac_deg_s": 0.7640670328717891,
+      "pitch_band_rms_deg": 0.09538764718221841,
+      "pitch_peak_hz": 0.3515625,
+      "altitude_rms_m": 0.3526836923580363,
+      "xtrack_rms_m": 0.3717426691363683,
+      "brake_endpoint_fraction": 0.95,
+      "throttle_endpoint_fraction": 0.0,
+      "command_travel_per_s": [
+        0.0005685618729102169,
+        0.005556984821203926,
+        0.011304347826097239
+      ]
+    },
+    "late_recovery": {
+      "pitch_ac_deg": 0.035861346535227885,
+      "pitch_peak_to_peak_deg": 0.19402779971212603,
+      "roll_ac_deg": 0.009817443666972257,
+      "pitch_rate_deg_s": 0.1020885102497943,
+      "roll_rate_deg_s": 0.16176388776310935,
+      "yaw_rate_ac_deg_s": 0.05212952384871674,
+      "pitch_band_rms_deg": 0.0361758692424662,
+      "pitch_peak_hz": 0.234375,
+      "altitude_rms_m": 0.17393161128637144,
+      "xtrack_rms_m": 0.03849921440497686,
+      "brake_endpoint_fraction": 1.0,
+      "throttle_endpoint_fraction": 0.0,
+      "command_travel_per_s": [
+        0.0003678929765889637,
+        0.0,
+        0.0028985507246403097
+      ]
+    },
+    "final_mission": 1
+  },
+  {
+    "id": 12,
+    "mode": "AUTO",
+    "scheme": "baseline",
+    "complete": true,
+    "failure": null,
+    "samples": 1801,
+    "disturbed": {
+      "pitch_ac_deg": 4.934018500933383,
+      "pitch_peak_to_peak_deg": 29.490437245425017,
+      "roll_ac_deg": 3.1025393905632175,
+      "pitch_rate_deg_s": 14.425329386570775,
+      "roll_rate_deg_s": 8.120977157255616,
+      "yaw_rate_ac_deg_s": 8.888497503376131,
+      "pitch_band_rms_deg": 4.2755085116638964,
+      "pitch_peak_hz": 0.3125,
+      "altitude_rms_m": 5.827104498733155,
+      "xtrack_rms_m": 4.506091175418972,
+      "brake_endpoint_fraction": 1.0,
+      "throttle_endpoint_fraction": 0.115,
+      "command_travel_per_s": [
+        0.06252816020030712,
+        0.06538942909411935,
+        0.1366708385483095
+      ]
+    },
+    "early_recovery": {
+      "pitch_ac_deg": 0.040696628061976214,
+      "pitch_peak_to_peak_deg": 0.4250661202892845,
+      "roll_ac_deg": 0.18887139681777232,
+      "pitch_rate_deg_s": 0.16790536103273176,
+      "roll_rate_deg_s": 0.23469742643105185,
+      "yaw_rate_ac_deg_s": 0.2054032282646771,
+      "pitch_band_rms_deg": 0.02998840580956837,
+      "pitch_peak_hz": 0.46875,
+      "altitude_rms_m": 1.3160244111191584,
+      "xtrack_rms_m": 0.10624211046350089,
+      "brake_endpoint_fraction": 1.0,
+      "throttle_endpoint_fraction": 0.0,
+      "command_travel_per_s": [
+        0.0007023411371243855,
+        0.0,
+        0.002430323299890733
+      ]
+    },
+    "late_recovery": {
+      "pitch_ac_deg": 0.037677574463829314,
+      "pitch_peak_to_peak_deg": 0.20964410408232048,
+      "roll_ac_deg": 0.0115256487597171,
+      "pitch_rate_deg_s": 0.1846985272312424,
+      "roll_rate_deg_s": 0.1753044419707227,
+      "yaw_rate_ac_deg_s": 0.08114376080228329,
+      "pitch_band_rms_deg": 0.03664395920673022,
+      "pitch_peak_hz": 0.6640625,
+      "altitude_rms_m": 0.10959094809009609,
+      "xtrack_rms_m": 0.010326700997587535,
+      "brake_endpoint_fraction": 1.0,
+      "throttle_endpoint_fraction": 0.0,
+      "command_travel_per_s": [
+        0.0009030100334456382,
+        0.0,
+        0.001783723522855586
+      ]
+    },
+    "final_mission": 4
+  },
+  {
+    "id": 12,
+    "mode": "AUTO",
+    "scheme": "lqi",
+    "complete": true,
+    "failure": null,
+    "samples": 1801,
+    "disturbed": {
+      "pitch_ac_deg": 4.972969640060186,
+      "pitch_peak_to_peak_deg": 32.621876020830484,
+      "roll_ac_deg": 2.6720188383874177,
+      "pitch_rate_deg_s": 13.012149255649275,
+      "roll_rate_deg_s": 7.535372664278645,
+      "yaw_rate_ac_deg_s": 6.979871434437406,
+      "pitch_band_rms_deg": 4.332980498345231,
+      "pitch_peak_hz": 0.3125,
+      "altitude_rms_m": 5.075913601788516,
+      "xtrack_rms_m": 5.00281072975755,
+      "brake_endpoint_fraction": 0.0,
+      "throttle_endpoint_fraction": 0.06875,
+      "command_travel_per_s": [
+        0.019937421777239624,
+        0.05552132473288974,
+        0.02539841468504602
+      ]
+    },
+    "early_recovery": {
+      "pitch_ac_deg": 0.5577443664230044,
+      "pitch_peak_to_peak_deg": 4.240636925879263,
+      "roll_ac_deg": 2.7416437799405355,
+      "pitch_rate_deg_s": 1.3476676781119763,
+      "roll_rate_deg_s": 1.4070528472754629,
+      "yaw_rate_ac_deg_s": 4.799544979111426,
+      "pitch_band_rms_deg": 0.6998422575368356,
+      "pitch_peak_hz": 0.390625,
+      "altitude_rms_m": 0.13265477407174273,
+      "xtrack_rms_m": 6.3292497469938365,
+      "brake_endpoint_fraction": 0.2866666666666667,
+      "throttle_endpoint_fraction": 0.0,
+      "command_travel_per_s": [
+        0.0007692307692314698,
+        0.016670954463611762,
+        0.010769230769240565
+      ]
+    },
+    "late_recovery": {
+      "pitch_ac_deg": 0.04240395459607102,
+      "pitch_peak_to_peak_deg": 0.36004249136163224,
+      "roll_ac_deg": 0.012736910881467698,
+      "pitch_rate_deg_s": 0.11888821916648828,
+      "roll_rate_deg_s": 0.1508247978156387,
+      "yaw_rate_ac_deg_s": 0.04996095988665844,
+      "pitch_band_rms_deg": 0.0402950002809229,
+      "pitch_peak_hz": 0.3125,
+      "altitude_rms_m": 0.09014158980289948,
+      "xtrack_rms_m": 0.10582023848717276,
+      "brake_endpoint_fraction": 0.0,
+      "throttle_endpoint_fraction": 0.0,
+      "command_travel_per_s": [
+        0.00026755852842833537,
+        0.0018780550553142861,
+        0.0018060200668912727
+      ]
+    },
+    "final_mission": 4
+  },
+  {
+    "id": 13,
+    "mode": "CRUISE",
+    "scheme": "baseline",
+    "complete": true,
+    "failure": null,
+    "samples": 1801,
+    "disturbed": {
+      "pitch_ac_deg": 6.622931194507991,
+      "pitch_peak_to_peak_deg": 41.55757111455625,
+      "roll_ac_deg": 2.509048249294319,
+      "pitch_rate_deg_s": 24.987348604975537,
+      "roll_rate_deg_s": 15.109320230035626,
+      "yaw_rate_ac_deg_s": 12.935461414833998,
+      "pitch_band_rms_deg": 6.701735698761173,
+      "pitch_peak_hz": 0.46875,
+      "altitude_rms_m": 2.286925605608705,
+      "xtrack_rms_m": 0.6986044907298432,
+      "brake_endpoint_fraction": 1.0,
+      "throttle_endpoint_fraction": 0.0,
+      "command_travel_per_s": [
+        0.12205256570724496,
+        0.06508135168967116,
+        0.1564705882354363
+      ]
+    },
+    "early_recovery": {
+      "pitch_ac_deg": 0.08725464767219901,
+      "pitch_peak_to_peak_deg": 0.7705489884134282,
+      "roll_ac_deg": 0.12850366241584185,
+      "pitch_rate_deg_s": 0.23028838235099786,
+      "roll_rate_deg_s": 0.17972163849463815,
+      "yaw_rate_ac_deg_s": 0.22687127628894505,
+      "pitch_band_rms_deg": 0.02585438195352704,
+      "pitch_peak_hz": 0.1171875,
+      "altitude_rms_m": 0.30360899531711694,
+      "xtrack_rms_m": 0.06563325356604151,
+      "brake_endpoint_fraction": 1.0,
+      "throttle_endpoint_fraction": 0.0,
+      "command_travel_per_s": [
+        0.0006354515050173012,
+        0.0,
+        0.002006688963212525
+      ]
+    },
+    "late_recovery": {
+      "pitch_ac_deg": 0.0368271136907602,
+      "pitch_peak_to_peak_deg": 0.209877337048491,
+      "roll_ac_deg": 0.006237334616238027,
+      "pitch_rate_deg_s": 0.17846050429050972,
+      "roll_rate_deg_s": 0.16358225627361955,
+      "yaw_rate_ac_deg_s": 0.11799306920590659,
+      "pitch_band_rms_deg": 0.04352358896972552,
+      "pitch_peak_hz": 0.5078125,
+      "altitude_rms_m": 0.012354216280284727,
+      "xtrack_rms_m": 0.004922697844494115,
+      "brake_endpoint_fraction": 1.0,
+      "throttle_endpoint_fraction": 0.0,
+      "command_travel_per_s": [
+        0.0007357859531779274,
+        0.0,
+        0.0016499442586414169
+      ]
+    },
+    "final_mission": 1
+  },
+  {
+    "id": 13,
+    "mode": "CRUISE",
+    "scheme": "lqi",
+    "complete": true,
+    "failure": null,
+    "samples": 1801,
+    "disturbed": {
+      "pitch_ac_deg": 6.619448838243013,
+      "pitch_peak_to_peak_deg": 45.666269572080076,
+      "roll_ac_deg": 2.6663924579236733,
+      "pitch_rate_deg_s": 22.260231134432058,
+      "roll_rate_deg_s": 14.235173816826299,
+      "yaw_rate_ac_deg_s": 13.146485177846541,
+      "pitch_band_rms_deg": 6.424368295530217,
+      "pitch_peak_hz": 0.3515625,
+      "altitude_rms_m": 2.248398680441144,
+      "xtrack_rms_m": 0.7567030144240326,
+      "brake_endpoint_fraction": 0.75125,
+      "throttle_endpoint_fraction": 0.0,
+      "command_travel_per_s": [
+        0.030050062578250034,
+        0.06658322903635586,
+        0.07871506049235323
+      ]
+    },
+    "early_recovery": {
+      "pitch_ac_deg": 0.2166665375629735,
+      "pitch_peak_to_peak_deg": 2.2452119710847107,
+      "roll_ac_deg": 0.15239755379329398,
+      "pitch_rate_deg_s": 0.49543786656720884,
+      "roll_rate_deg_s": 0.3344002765398559,
+      "yaw_rate_ac_deg_s": 0.43178836463127196,
+      "pitch_band_rms_deg": 0.03418222514692294,
+      "pitch_peak_hz": 0.390625,
+      "altitude_rms_m": 0.22036285460828775,
+      "xtrack_rms_m": 0.07858423894042145,
+      "brake_endpoint_fraction": 1.0,
+      "throttle_endpoint_fraction": 0.0,
+      "command_travel_per_s": [
+        0.0009698996655527211,
+        0.0,
+        0.007580824972136252
+      ]
+    },
+    "late_recovery": {
+      "pitch_ac_deg": 0.04137846258119314,
+      "pitch_peak_to_peak_deg": 0.21623166845556874,
+      "roll_ac_deg": 0.009164873978735602,
+      "pitch_rate_deg_s": 0.11422794723625486,
+      "roll_rate_deg_s": 0.20772083374592046,
+      "yaw_rate_ac_deg_s": 0.065753236767426,
+      "pitch_band_rms_deg": 0.04156362203256976,
+      "pitch_peak_hz": 0.2734375,
+      "altitude_rms_m": 0.2190275492479269,
+      "xtrack_rms_m": 0.030632335242369035,
+      "brake_endpoint_fraction": 1.0,
+      "throttle_endpoint_fraction": 0.0,
+      "command_travel_per_s": [
+        0.00046822742474959014,
+        0.0,
+        0.0052396878483882805
+      ]
+    },
+    "final_mission": 1
+  },
+  {
+    "id": 14,
+    "mode": "AUTO",
+    "scheme": "baseline",
+    "complete": true,
+    "failure": null,
+    "samples": 1801,
+    "disturbed": {
+      "pitch_ac_deg": 2.411116523801324,
+      "pitch_peak_to_peak_deg": 21.30616701147335,
+      "roll_ac_deg": 2.7722278282153856,
+      "pitch_rate_deg_s": 6.74254758173637,
+      "roll_rate_deg_s": 5.572018190602036,
+      "yaw_rate_ac_deg_s": 5.476729968662779,
+      "pitch_band_rms_deg": 1.6564437488380028,
+      "pitch_peak_hz": 0.46875,
+      "altitude_rms_m": 1.2561686025308743,
+      "xtrack_rms_m": 4.159675579765606,
+      "brake_endpoint_fraction": 1.0,
+      "throttle_endpoint_fraction": 0.0,
+      "command_travel_per_s": [
+        0.028285356695895453,
+        0.037816501396010144,
+        0.09588652482278184
+      ]
+    },
+    "early_recovery": {
+      "pitch_ac_deg": 0.7071134747662132,
+      "pitch_peak_to_peak_deg": 5.735370040226344,
+      "roll_ac_deg": 2.8707923344047996,
+      "pitch_rate_deg_s": 1.601644585797404,
+      "roll_rate_deg_s": 1.704983829361578,
+      "yaw_rate_ac_deg_s": 4.978615526476179,
+      "pitch_band_rms_deg": 1.164963185800848,
+      "pitch_peak_hz": 0.2734375,
+      "altitude_rms_m": 0.31828170811807144,
+      "xtrack_rms_m": 5.479648325839314,
+      "brake_endpoint_fraction": 1.0,
+      "throttle_endpoint_fraction": 0.0,
+      "command_travel_per_s": [
+        0.0030434782608723373,
+        0.0,
+        0.029944258639938087
+      ]
+    },
+    "late_recovery": {
+      "pitch_ac_deg": 0.03908816457027646,
+      "pitch_peak_to_peak_deg": 0.18964286378676753,
+      "roll_ac_deg": 0.010551754517500166,
+      "pitch_rate_deg_s": 0.19155539691147538,
+      "roll_rate_deg_s": 0.1718454807208647,
+      "yaw_rate_ac_deg_s": 0.06521725524647433,
+      "pitch_band_rms_deg": 0.03955660500358915,
+      "pitch_peak_hz": 0.5859375,
+      "altitude_rms_m": 0.04151553797119812,
+      "xtrack_rms_m": 0.008292605331611694,
+      "brake_endpoint_fraction": 1.0,
+      "throttle_endpoint_fraction": 0.0,
+      "command_travel_per_s": [
+        0.000869565217392096,
+        0.0,
+        0.001649944258641407
+      ]
+    },
+    "final_mission": 4
+  },
+  {
+    "id": 14,
+    "mode": "AUTO",
+    "scheme": "lqi",
+    "complete": true,
+    "failure": null,
+    "samples": 1801,
+    "disturbed": {
+      "pitch_ac_deg": 1.9892808964094997,
+      "pitch_peak_to_peak_deg": 15.55247516225587,
+      "roll_ac_deg": 1.6388547361003698,
+      "pitch_rate_deg_s": 5.286411583453084,
+      "roll_rate_deg_s": 5.040450440202652,
+      "yaw_rate_ac_deg_s": 3.6827755551307435,
+      "pitch_band_rms_deg": 1.2815585040208661,
+      "pitch_peak_hz": 0.3125,
+      "altitude_rms_m": 3.4361953155389195,
+      "xtrack_rms_m": 3.6846308675660753,
+      "brake_endpoint_fraction": 0.66875,
+      "throttle_endpoint_fraction": 0.0,
+      "command_travel_per_s": [
+        0.006558197747189946,
+        0.012188312313479808,
+        0.03252398831876111
+      ]
+    },
+    "early_recovery": {
+      "pitch_ac_deg": 0.548011382223964,
+      "pitch_peak_to_peak_deg": 3.5811610732693984,
+      "roll_ac_deg": 3.184775285520572,
+      "pitch_rate_deg_s": 1.3284865150728744,
+      "roll_rate_deg_s": 1.4394918998176127,
+      "yaw_rate_ac_deg_s": 5.457780600764827,
+      "pitch_band_rms_deg": 0.10041641644273243,
+      "pitch_peak_hz": 0.3515625,
+      "altitude_rms_m": 0.11292097275633921,
+      "xtrack_rms_m": 5.364449818945945,
+      "brake_endpoint_fraction": 0.0,
+      "throttle_endpoint_fraction": 0.0,
+      "command_travel_per_s": [
+        0.0010033444816062633,
+        0.017339850784682614,
+        0.011371237458204326
+      ]
+    },
+    "late_recovery": {
+      "pitch_ac_deg": 0.03528733714972931,
+      "pitch_peak_to_peak_deg": 0.20529948263948938,
+      "roll_ac_deg": 0.015111770329188312,
+      "pitch_rate_deg_s": 0.09781210063227284,
+      "roll_rate_deg_s": 0.13861933165584864,
+      "yaw_rate_ac_deg_s": 0.04139690516474017,
+      "pitch_band_rms_deg": 0.02864633286785275,
+      "pitch_peak_hz": 0.3125,
+      "altitude_rms_m": 0.02510225657711235,
+      "xtrack_rms_m": 0.056040624870250334,
+      "brake_endpoint_fraction": 0.0,
+      "throttle_endpoint_fraction": 0.0,
+      "command_travel_per_s": [
+        0.00023411371237479507,
+        0.00030872137895577456,
+        0.0006465997770351749
+      ]
+    },
+    "final_mission": 4
+  },
+  {
+    "id": 15,
+    "mode": "CRUISE",
+    "scheme": "baseline",
+    "complete": true,
+    "failure": null,
+    "samples": 1801,
+    "disturbed": {
+      "pitch_ac_deg": 4.784038725258278,
+      "pitch_peak_to_peak_deg": 35.59969416361166,
+      "roll_ac_deg": 6.129091400152156,
+      "pitch_rate_deg_s": 17.095789924444592,
+      "roll_rate_deg_s": 9.416159745694104,
+      "yaw_rate_ac_deg_s": 12.3163918402062,
+      "pitch_band_rms_deg": 3.9155375134751282,
+      "pitch_peak_hz": 0.4296875,
+      "altitude_rms_m": 3.0672865866731867,
+      "xtrack_rms_m": 0.5715111051183748,
+      "brake_endpoint_fraction": 1.0,
+      "throttle_endpoint_fraction": 0.0,
+      "command_travel_per_s": [
+        0.07638297872347365,
+        0.19189371329563992,
+        0.23304964539028264
+      ]
+    },
+    "early_recovery": {
+      "pitch_ac_deg": 5.8313936728393525,
+      "pitch_peak_to_peak_deg": 19.56834653369614,
+      "roll_ac_deg": 8.698905508242492,
+      "pitch_rate_deg_s": 20.112255303299563,
+      "roll_rate_deg_s": 11.891276325271793,
+      "yaw_rate_ac_deg_s": 15.907245238642052,
+      "pitch_band_rms_deg": 5.7634300291572345,
+      "pitch_peak_hz": 0.5078125,
+      "altitude_rms_m": 0.3851442570371621,
+      "xtrack_rms_m": 0.6212669589137106,
+      "brake_endpoint_fraction": 1.0,
+      "throttle_endpoint_fraction": 0.0,
+      "command_travel_per_s": [
+        0.09555183946496999,
+        0.3242346282483013,
+        0.34599777034591134
+      ]
+    },
+    "late_recovery": {
+      "pitch_ac_deg": 5.728097832495108,
+      "pitch_peak_to_peak_deg": 18.982068522971492,
+      "roll_ac_deg": 8.556966537547996,
+      "pitch_rate_deg_s": 19.580281177598838,
+      "roll_rate_deg_s": 11.99432074988288,
+      "yaw_rate_ac_deg_s": 16.100001183655824,
+      "pitch_band_rms_deg": 5.726791010924876,
+      "pitch_peak_hz": 0.5078125,
+      "altitude_rms_m": 0.07121706084399573,
+      "xtrack_rms_m": 0.6036888188391643,
+      "brake_endpoint_fraction": 1.0,
+      "throttle_endpoint_fraction": 0.0,
+      "command_travel_per_s": [
+        0.09478260869573842,
+        0.32539233341938534,
+        0.34501672240834064
+      ]
+    },
+    "final_mission": 1
+  },
+  {
+    "id": 15,
+    "mode": "CRUISE",
+    "scheme": "lqi",
+    "complete": true,
+    "failure": null,
+    "samples": 1801,
+    "disturbed": {
+      "pitch_ac_deg": 3.214913212196336,
+      "pitch_peak_to_peak_deg": 28.95424573567975,
+      "roll_ac_deg": 1.1335157159090303,
+      "pitch_rate_deg_s": 10.800732501958144,
+      "roll_rate_deg_s": 5.708106631426028,
+      "yaw_rate_ac_deg_s": 4.700305533395116,
+      "pitch_band_rms_deg": 2.702713738349678,
+      "pitch_peak_hz": 0.390625,
+      "altitude_rms_m": 1.526062283452109,
+      "xtrack_rms_m": 0.5325432010115823,
+      "brake_endpoint_fraction": 0.0,
+      "throttle_endpoint_fraction": 0.0,
+      "command_travel_per_s": [
+        0.014217772215282002,
+        0.03209781457594146,
+        0.01742177722154275
+      ]
+    },
+    "early_recovery": {
+      "pitch_ac_deg": 0.4788846292046717,
+      "pitch_peak_to_peak_deg": 5.1121166624895364,
+      "roll_ac_deg": 0.17492776263811866,
+      "pitch_rate_deg_s": 1.213732362294357,
+      "roll_rate_deg_s": 0.2796645741695347,
+      "yaw_rate_ac_deg_s": 0.4526323789896777,
+      "pitch_band_rms_deg": 0.07789798206010193,
+      "pitch_peak_hz": 0.390625,
+      "altitude_rms_m": 0.11724303533941369,
+      "xtrack_rms_m": 0.178532858357764,
+      "brake_endpoint_fraction": 0.0,
+      "throttle_endpoint_fraction": 0.0,
+      "command_travel_per_s": [
+        0.0009364548494991789,
+        0.004373552868540125,
+        0.004325529542924783
+      ]
+    },
+    "late_recovery": {
+      "pitch_ac_deg": 0.03919293964615137,
+      "pitch_peak_to_peak_deg": 0.25249101704198385,
+      "roll_ac_deg": 0.008316855694557505,
+      "pitch_rate_deg_s": 0.1060855511020555,
+      "roll_rate_deg_s": 0.12008876764947943,
+      "yaw_rate_ac_deg_s": 0.04107134869678892,
+      "pitch_band_rms_deg": 0.03117641817989043,
+      "pitch_peak_hz": 0.3515625,
+      "altitude_rms_m": 0.028315189271956562,
+      "xtrack_rms_m": 0.07355045925182473,
+      "brake_endpoint_fraction": 0.14333333333333334,
+      "throttle_endpoint_fraction": 0.0,
+      "command_travel_per_s": [
+        0.00023411371237479507,
+        0.001955235400053234,
+        0.0017391304347841893
+      ]
+    },
+    "final_mission": 1
+  }
+]

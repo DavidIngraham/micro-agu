@@ -1,8 +1,0 @@
-{
-  "overrides": {
-    "roll_damp_Nm_per_rps": 1.2
-  },
-  "rate_hz": 1200,
-  "pulse_pwm": 1450,
-  "instant_servo": false
-}

@@ -222,7 +222,7 @@ I checked this by replaying both releases with the rotor angular-momentum terms 
 | Payload only, +9° | 7.1° | 0.7° |
 | Canopy only, +9° | 11.7° | 0.8° |
 
-That large reduction identifies gyroscopic coupling as the dominant source of the visible yaw in these cases. A canopy disturbance also drives payload pitch, which then excites the rotor coupling. The smaller remaining yaw comes from the rest of the coupled model. This establishes the mechanism in the simulator; its magnitude depends on the estimated rotor inertia and has not been isolated in flight data. The intervention removes both gyroscopic and spin-acceleration reaction terms, rather than switching off propeller thrust or shaft torque. [Numerical results](assets/viewer/joint-tour/pitch-yaw-coupling.json) and the [reproduction script](https://github.com/DavidIngraham/micro-agu/blob/main/research/viewer-studies/check_pitch_yaw_coupling.py) record the comparison.
+That large reduction identifies gyroscopic coupling as the dominant source of the visible yaw in these cases. A canopy disturbance also drives payload pitch, which then excites the rotor coupling. The smaller remaining yaw comes from the rest of the coupled model. This establishes the mechanism in the simulator; its magnitude depends on the estimated rotor inertia and has not been isolated in flight data. The intervention removes both gyroscopic and spin-acceleration reaction terms, rather than switching off propeller thrust or shaft torque. [Numerical results](assets/viewer/joint-tour/pitch-yaw-coupling.json) and the [reproduction script](https://github.com/DavidIngraham/micro-agu/blob/main/research/archive/viewer-studies/check_pitch_yaw_coupling.py) record the comparison.
 
 </details>
 
@@ -360,7 +360,7 @@ $$
 
 A one-percent brake-command increment therefore produces about 0.98 deg/s of steady heading rate locally. Inverting that gain, including the speed multiplier, gives a feedforward gain of **0.00894**—almost exactly the selected 0.009. The linear plant therefore gives a physical basis for the feedforward setting, rather than leaving it as an empirical gain.
 
-![Linear plant Bode plots checked against nonlinear sine tests](../research/flight-log-analysis/figures/turn-model-spike/classical-lateral/plant-bode.png)
+![Linear plant Bode plots checked against nonlinear sine tests](../research/archive/flight-log-analysis/figures/turn-model-spike/classical-lateral/plant-bode.png)
 
 *The full plant has several coupled modes. Small-amplitude nonlinear sine tests match the sampled linear response within 0.005%; the slight difference from the continuous curve at high frequency is the input hold. This checks the linearization against the simulator.*
 
@@ -387,7 +387,7 @@ The integrator is not speed-scaled. Feedforward affects command response but doe
 
 The selected gains are locally stable, but the original larger feedback gains are unstable in this model. With the selected gains, a lightly damped pair sits at $(-0.986\pm j15.969)\,\mathrm{s}^{-1}$: about 2.54 Hz, with damping ratio 0.062. Scaling all feedback gains together reaches instability at **1.524 times nominal**, a gain margin of **3.66 dB**. Increasing heading-rate P alone reaches the boundary near 0.00791, with I and roll damping held fixed.
 
-![Root locus annotated with physical mode participation and combined-loop zeros](../research/flight-log-analysis/figures/turn-model-spike/classical-lateral/annotated-root-locus.png)
+![Root locus annotated with physical mode participation and combined-loop zeros](../research/archive/flight-log-analysis/figures/turn-model-spike/classical-lateral/annotated-root-locus.png)
 
 *Crosses are open-loop poles, circles are combined-loop zeros, and green squares are the selected closed-loop poles. The mode labels come from eigenvector participation: several motions mix pitch, yaw, and translation. The red star marks the gain-induced instability boundary. The lower-half-plane branches mirror the upper half.*
 
@@ -395,7 +395,7 @@ The slow oscillatory plant mode mixes pitch and forward speed at about 0.34 Hz. 
 
 Zeros need a different interpretation: they describe cancellation in an input–output response, not another natural motion. The combined loop has a right-half-plane zero pair at $(6.944\pm j19.054)\,\mathrm{s}^{-1}$. The individual heading-rate and roll-rate plants have different zeros, so those cannot be substituted as endpoints of this root locus. The output-specific maps below show the distinction. These are properties of the modeled plant, not modes or zeros identified directly from flight.
 
-![Heading-rate and roll-rate plant poles and zeros](../research/flight-log-analysis/figures/turn-model-spike/classical-lateral/plant-zero-map.png)
+![Heading-rate and roll-rate plant poles and zeros](../research/archive/flight-log-analysis/figures/turn-model-spike/classical-lateral/plant-zero-map.png)
 
 ### Shape feedback without sacrificing feedforward
 
@@ -416,13 +416,13 @@ Both retain unity DC gain. Feedforward bypasses the measurement filters, so redu
 | 1 Hz low-pass | 8.41 dB | 6.87 dB |
 | Broad 2.5 Hz notch | 14.83 dB | 7.04 dB |
 
-![Feedback magnitude and sensitivity with six measurement filters](../research/flight-log-analysis/figures/turn-model-spike/lateral-shaping/shaping-bode.png)
+![Feedback magnitude and sensitivity with six measurement filters](../research/archive/flight-log-analysis/figures/turn-model-spike/lateral-shaping/shaping-bode.png)
 
 *Both candidates reduce the sensitivity peak near the troublesome mode. The notch has the strongest straight-flight margin, but its advantage over the simpler filter narrows in left turns.*
 
 Local command tracking stayed similar. Eighteen nonlinear tests check that result: level flight and both turn directions, each with three filters and either zero or 80 ms of added sensing delay. These used the actual modeled brake travel limits, asymmetric PWM mapping, changing speed scaling, and integral limits. The requested increments were 2 deg/s, continuing in the existing turn direction.
 
-![Nonlinear command tracking and brake effort with zero and 80 ms sensing delay](../research/flight-log-analysis/figures/turn-model-spike/lateral-shaping/nonlinear-shaping.png)
+![Nonlinear command tracking and brake effort with zero and 80 ms sensing delay](../research/archive/flight-log-analysis/figures/turn-model-spike/lateral-shaping/nonlinear-shaping.png)
 
 *Solid lines have no added delay; dashed lines have 80 ms. The existing filter develops a large oscillation in the right turn, while both candidates keep tracking. The left-turn baseline remains well behaved, consistent with the asymmetric plant.*
 

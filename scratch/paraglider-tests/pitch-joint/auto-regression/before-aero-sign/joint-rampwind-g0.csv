@@ -1,1 +1,0 @@
-seq,time_s,latitude_deg,longitude_deg,relative_alt_m,target_distance_m,groundspeed_mps,roll_rad,pitch_rad,yaw_rate_radps,left_brake_pwm,right_brake_pwm,throttle_pwm,nav_roll_deg,nav_cross_track_error_m

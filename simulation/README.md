@@ -21,8 +21,8 @@ the high-fidelity external simulator is optional, like JSBSim for Plane.
 | `tests/parity` | Immutable numerical outputs from the retired C++ implementation |
 | `../research` | Experiments, fitting, controller studies and historical evidence |
 
-Root Python modules are temporary import/command shims for existing scripts.
-New code imports `microagu_sim`; historical SciPy utilities are explicitly under
+Root Python import shims have been retired. Code imports `microagu_sim`;
+historical SciPy utilities are explicitly under
 `microagu_sim.compat`. Their packaged data retains historical profiles and trim
 references. No runtime imports experiments or modifies `sys.path`.
 
@@ -116,7 +116,7 @@ generated declarations for drift. See [viewer build and deployment](../viewer/SI
 
 The port retains the as-built **132 mm** spacing, propeller tables, RK4 method,
 existing-log calibration and firmware tune. No physics retuning accompanied the
-language migration. The [calibration study](../research/as-built-simulator-2026-10-15/README.md)
+language migration. The [calibration study](../research/archive/as-built-simulator-2026-10-15/README.md)
 uses Hood River and Trout Lake logs only. The C++ extraction's original hashes
 remain in [the migration manifest](../provenance/simulator-migration.json).
 
@@ -167,13 +167,15 @@ Reference: https://www.mathworks.com/help/aeroblks/drydenwindturbulencemodelcont
 
 # Offline grey-box identification
 
-The reusable [`microagu_sim.sysid`](crates/sim-python/python/microagu_sim/sysid/README.md)
+The reusable [`microagu_control.sysid`](../control/src/microagu_control/sysid/README.md)
 package provides prepared-log session validation, Rust recorded-input replay,
 bounded fitting, optional initial-state/wind corrections, residual diagnostics,
 and separate reserved-episode validation through a CLI. See the
-[Trout Lake comparison](../research/greybox-pipeline-2026-10-18/README.md) for
+[Trout Lake comparison](../research/active/greybox-pipeline-2026-10-18/README.md) for
 baseline reproduction, synthetic parameter recovery and measured limitations.
 
 ## Offline controller pipeline
 
-The [CLI pipeline and diagram](crates/sim-python/python/microagu_sim/pipeline/README.md) connect measured aircraft profiles, existing sysid, gain synthesis, observer-in-loop screening and paired ArduPilot/EKF campaigns. It exports compatible gain files without modifying the deployed simulator. The [initial pipeline study](../research/controller-pipeline-2026-10-18/RESULTS.md) records the current tuning decision and repeatability limits.
+The [CLI pipeline and diagram](../control/src/microagu_control/pipeline/README.md) connect measured aircraft profiles, existing sysid, gain synthesis, observer-in-loop screening and paired ArduPilot/EKF campaigns. It exports compatible gain files without modifying the deployed simulator. The [initial pipeline study](../research/active/controller-pipeline-2026-10-18/RESULTS.md) records the current tuning decision and repeatability limits.
+
+Offline identification and gain synthesis now belong to the separately installable [control package](../control/README.md), using `microagu_control.sysid` and `microagu_control.pipeline`. Selected aircraft inputs and gains live in [aircraft/microagu](../aircraft/microagu/README.md).

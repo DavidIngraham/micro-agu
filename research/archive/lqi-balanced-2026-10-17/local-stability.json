@@ -1,0 +1,62 @@
+{
+  "vertical": {
+    "max_local_pole": 0.999653572245145,
+    "parameters": {
+      "pitch": 90,
+      "height": 2,
+      "integral": 6,
+      "throttle": 300,
+      "vertical": 4,
+      "max_local_pole": 0.999653572245145,
+      "note": "Same archived linearization/trim/observer; local DARE poles do not prove nonlinear stability."
+    }
+  },
+  "responsive": {
+    "max_local_pole": 0.9996536491970212,
+    "parameters": {
+      "pitch": 90,
+      "height": 4,
+      "integral": 12,
+      "throttle": 500,
+      "vertical": 0,
+      "max_local_pole": 0.9996536491970212,
+      "note": "Same archived linearization/trim/observer; local DARE poles do not prove nonlinear stability."
+    }
+  },
+  "balanced": {
+    "max_local_pole": 0.9996537246489337,
+    "parameters": {
+      "pitch": 90,
+      "height": 2,
+      "integral": 6,
+      "throttle": 700,
+      "vertical": 0,
+      "max_local_pole": 0.9996537246489337,
+      "note": "Same archived linearization/trim/observer; local DARE poles do not prove nonlinear stability."
+    }
+  },
+  "damped": {
+    "max_local_pole": 0.9996538375301465,
+    "parameters": {
+      "pitch": 90,
+      "height": 1,
+      "integral": 3,
+      "throttle": 1000,
+      "vertical": 0,
+      "max_local_pole": 0.9996538375301465,
+      "note": "Same archived linearization/trim/observer; local DARE poles do not prove nonlinear stability."
+    }
+  },
+  "fixed": {
+    "max_local_pole": 0.9996538374915345,
+    "parameters": {
+      "pitch": 30,
+      "height": 1,
+      "integral": 3,
+      "throttle": 1000,
+      "vertical": 0,
+      "max_local_pole": 0.9996538374915345,
+      "note": "Same archived linearization/trim/observer; local DARE poles do not prove nonlinear stability."
+    }
+  }
+}

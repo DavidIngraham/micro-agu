@@ -1,0 +1,68 @@
+[
+  {
+    "label": "reference",
+    "parameter": "CDbrake",
+    "scale": 1,
+    "airspeed": 4.5959904245539684,
+    "speed_std": 3.496685601556299e-05,
+    "bank_std": 0.0005996615251722026,
+    "sink": 1.973293209157106,
+    "canopy_bank": 21.477840764904048,
+    "exit_peak_airspeed": 5.083357109138997
+  },
+  {
+    "label": "no_explicit_brake_drag",
+    "parameter": "CDbrake",
+    "scale": 0,
+    "airspeed": 4.153282724992345,
+    "speed_std": 8.822612827311188e-05,
+    "bank_std": 0.0005616144439757299,
+    "sink": 1.5245110375685256,
+    "canopy_bank": 11.92114750268703,
+    "exit_peak_airspeed": 4.80372509578687
+  },
+  {
+    "label": "half_induced_drag",
+    "parameter": "k_drag",
+    "scale": 0.5,
+    "airspeed": 4.700561558216426,
+    "speed_std": 0.0037038908584767455,
+    "bank_std": 0.08034811826989428,
+    "sink": 1.399906853184392,
+    "canopy_bank": 16.643622194761573,
+    "exit_peak_airspeed": 5.379845989197805
+  },
+  {
+    "label": "half_brake_lift",
+    "parameter": "CLbrake",
+    "scale": 0.5,
+    "airspeed": 4.9024864597566795,
+    "speed_std": 7.293520767970895e-05,
+    "bank_std": 0.0013355996550977823,
+    "sink": 2.0631278938238014,
+    "canopy_bank": 24.777492974338262,
+    "exit_peak_airspeed": 5.2058276203112195
+  },
+  {
+    "label": "double_brake_lift",
+    "parameter": "CLbrake",
+    "scale": 2,
+    "airspeed": 4.132466202763041,
+    "speed_std": 8.01393329968966e-06,
+    "bank_std": 0.0002359440631282049,
+    "sink": 1.848958654267637,
+    "canopy_bank": 17.339711913680695,
+    "exit_peak_airspeed": 5.086518750257216
+  },
+  {
+    "label": "tenth_roll_stiffness",
+    "parameter": "joint_k_roll",
+    "scale": 0.1,
+    "airspeed": 4.549559630550678,
+    "speed_std": 3.338448401559862e-05,
+    "bank_std": 0.0005911898008713326,
+    "sink": 1.944218591022414,
+    "canopy_bank": 19.689203386200607,
+    "exit_peak_airspeed": 5.040528038347466
+  }
+]

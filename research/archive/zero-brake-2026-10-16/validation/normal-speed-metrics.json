@@ -1,0 +1,89 @@
+{
+  "id": 1,
+  "mode": "CRUISE",
+  "scheme": "lqi",
+  "complete": true,
+  "failure": null,
+  "source": "zero-brake-2026-10-16/validation/normal-speed-lqi.json",
+  "final_mission": 1,
+  "disturbed": {
+    "pitch_ac_deg": 2.843435120655557,
+    "pitch_peak_to_peak_deg": 14.95347717416657,
+    "roll_ac_deg": 1.9451794144721155,
+    "pitch_rate_deg_s": 7.492030851717385,
+    "roll_rate_deg_s": 5.129541864555366,
+    "yaw_rate_ac_deg_s": 4.419386899435293,
+    "pitch_band_rms_deg": 1.9334142531616563,
+    "pitch_peak_hz": 0.3125,
+    "altitude_rms_m": 3.779233046179509,
+    "xtrack_rms_m": 0.17472364597986795,
+    "brake_endpoint_fraction": 0.9725,
+    "throttle_endpoint_fraction": 0.0,
+    "command_travel_per_s": [
+      0.01529411764707267,
+      0.0023490902089171265,
+      0.01674593241553463
+    ],
+    "power": {
+      "duration_s": 79.89999999992735,
+      "mean_throttle": 0.3370513141426783,
+      "estimated_shaft_W": 50.52743212067366,
+      "estimated_shaft_Wh": 1.1214282851217097,
+      "ground_path_m": 333.440278568986,
+      "estimated_shaft_Wh_per_ground_km": 3.3632058188485936,
+      "mean_ground_speed_m_s": 4.173220007125021,
+      "mean_airspeed_m_s": 4.406194691740338,
+      "delta_height_m": 0.34944192411582264,
+      "delta_ground_speed_m_s": 0.39979394920093636,
+      "mean_common_brake_fraction": 0.018811061904303455
+    },
+    "additional_common_fraction": 0.000715576923076923
+  },
+  "late": {
+    "pitch_ac_deg": 0.039393546487910915,
+    "pitch_peak_to_peak_deg": 0.2105283207433173,
+    "roll_ac_deg": 0.00975529480181541,
+    "pitch_rate_deg_s": 0.10616013866930535,
+    "roll_rate_deg_s": 0.16641452076325103,
+    "yaw_rate_ac_deg_s": 0.052072709503418003,
+    "pitch_band_rms_deg": 0.043877310848970584,
+    "pitch_peak_hz": 0.234375,
+    "altitude_rms_m": 0.02380273028157825,
+    "xtrack_rms_m": 0.064896869281337,
+    "brake_endpoint_fraction": 1.0,
+    "throttle_endpoint_fraction": 0.0,
+    "command_travel_per_s": [
+      0.00033444816053542154,
+      0.0,
+      0.002608695652176285
+    ],
+    "power": {
+      "duration_s": 29.899999999972806,
+      "mean_throttle": 0.4456153846153847,
+      "estimated_shaft_W": 73.53559084180998,
+      "estimated_shaft_Wh": 0.6107539350466996,
+      "ground_path_m": 131.04987756867376,
+      "estimated_shaft_Wh_per_ground_km": 4.660469329524155,
+      "mean_ground_speed_m_s": 4.38293904912351,
+      "mean_airspeed_m_s": 4.382941373134657,
+      "delta_height_m": -0.05321694208772243,
+      "delta_ground_speed_m_s": 0.00034263951792823377,
+      "mean_common_brake_fraction": 0.02597491638795987
+    },
+    "additional_common_fraction": 0.0
+  },
+  "combined_power": {
+    "duration_s": 159.89999999985457,
+    "mean_throttle": 0.3912032520325203,
+    "estimated_shaft_W": 61.967127563098636,
+    "estimated_shaft_Wh": 2.7523732492584614,
+    "ground_path_m": 683.9645291005716,
+    "estimated_shaft_Wh_per_ground_km": 4.024146183250019,
+    "mean_ground_speed_m_s": 4.2774517142038375,
+    "mean_airspeed_m_s": 4.393573121706784,
+    "delta_height_m": 0.050304431534634375,
+    "delta_ground_speed_m_s": 0.0013963948473616483,
+    "mean_common_brake_fraction": 0.02347651577107487
+  },
+  "minimum_applied_brake_mm": 0
+}

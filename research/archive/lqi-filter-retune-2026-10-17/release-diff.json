@@ -1,0 +1,34 @@
+{
+  "changed": [
+    "wasm/arduplane.wasm",
+    "wasm/build.json",
+    "wasm/highdof.json",
+    "wasm/lqi-filter-tune.patch",
+    "wasm/lqi-filter-design.json"
+  ],
+  "files": {
+    "assets/OrbitControls-DC3bA9or.js": "aed6301f2eede578cb46ecf6ca7ccdad925214d26260c7cf41f1c0ec9c2c3c6c",
+    "assets/index-CP7ewW92.css": "88569bbc45e2ebd2706e425e12133feb602409fc20792acda1728a7a6dc505d9",
+    "assets/index-CmMRDuOf.js": "31a73a1800d11212546a16a84d3bf8cb89706a907770ae6dac1315b28ed1c037",
+    "assets/math-P8kuyxM6.js": "d100be9f007bc6a51c0c1e5f5103c99ae0db235c409fab011832894d05bd517b",
+    "assets/mechanisms-vOWu3rXn.js": "9049a931bf601dd798898876e47f9baf7c4f515071287c8c7d5f7cdf66f78ba8",
+    "assets/models-BT7UtUfU.js": "68875682af19f243937faf23d5efa16ae916eedbd8d030dd0a53f27d0d863b53",
+    "assets/paraglider-U-Pwh3Sp.js": "1b21a2ae1e76f0714b757c75cdd23986e92fa0e248d0d198cd46354d62581b34",
+    "assets/recordings-DzXGklQC.js": "f699abfd38963c856b25bef3a4719123d782d5425c683ecb17ad33a1854c17c1",
+    "assets/three-CgABN-FB.js": "32236c94c2fb962bd98e7573d98ab5434fdfc847ec435a7fa904b2c946561fc6",
+    "assets/worker-C5UHZ07k.js": "9aeeaa4a78f455529a575fcd81406b7347bff796426d87ebfbf1034a1cc39bee",
+    "models/microagu-payload-tl.glb": "10cd498d78de60020ad97f4febc46010a585496b124575c25bc9ec6998596288",
+    "simulator-sw.js": "330dad7e7098d68a7ceaed89cb5543e0d8511205b4a160a8e60dcc85e025672a",
+    "simulator.html": "a3a312416ae840c0a87034900e0ae1482b9e54f99057d6058c37b1db68b61c77",
+    "wasm/COPYING.txt": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903",
+    "wasm/RUST-NOTICES.txt": "f5e9c70192d8e79a97ca305a2fbf637f7fb9471f42e10e23e74404edefdebfb7",
+    "wasm/arduplane.js": "893b28e3cbea410e48736d7f7426928cbe8b56f22c1813914aa290172f1e8565",
+    "wasm/arduplane.wasm": "b6acedf6ed9f9729af8a125c7f5a555d854893f693b2ea38dc6609d747acd167",
+    "wasm/build.json": "46099d6defe478e8df8d4310472fcaf29ffdfde6dfde7fa0ea59523cf1aac2f4",
+    "wasm/highdof.json": "6bdfab403bb0d56945b93bec196d1e9f3c3abb5073ff120603ba2bf900e3c155",
+    "wasm/sim_wasm.js": "400f027b6e8f2968179d2070c9157fa913bad58aa1d1d54e5db034eb19ea6097",
+    "wasm/sim_wasm_bg.wasm": "f5d479506baad4065fbfa082e985ab2d930018d7bba700b0cc184102b71a636e",
+    "wasm/lqi-filter-tune.patch": "5d84fe7e2dffb8dfb3ecc24b39a5993bcd7283a014ac6b2a21b032fd4cd8e1a3",
+    "wasm/lqi-filter-design.json": "88c56e43ad4c0b4aa3a4e444be925c5bae571395169799a10b3da7b4097a7bba"
+  }
+}

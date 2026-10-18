@@ -1,0 +1,13 @@
+{
+  "wind_rmse": 0.0061075254581019495,
+  "angle_rmse_deg": 0.5683698415196762,
+  "relative_rate_rmse": 0.01507893609626328,
+  "true_damping": [
+    2.0,
+    4.0
+  ],
+  "fitted_damping": [
+    2.0,
+    4.0
+  ]
+}

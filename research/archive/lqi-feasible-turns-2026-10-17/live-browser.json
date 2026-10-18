@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "url": "https://davidingraham.github.io/assets/microagu-viewer/",
+  "firmware": "7288fcc2de2da91965ce6ea9eaf66be520859042f9be9a7906ace2a090793238",
+  "checks": [
+    "AUTO launch",
+    "LQI engagement",
+    "MANUAL ownership",
+    "CRUISE re-engagement",
+    "baseline handover",
+    "configured filter",
+    "no page errors"
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "rates": [
+    12,
+    13,
+    14
+  ],
+  "cases": [
+    {
+      "id": 0,
+      "sign": 1,
+      "scales": {},
+      "brakeRateScale": 1,
+      "wind": 0,
+      "turbulence": 0,
+      "seed": 1375099246
+    },
+    {
+      "id": 1,
+      "sign": -1,
+      "scales": {},
+      "brakeRateScale": 1,
+      "wind": 0,
+      "turbulence": 0,
+      "seed": 1227417296
+    }
+  ],
+  "classical_rates": [
+    15,
+    25
+  ],
+  "reason": "15 deg/s nominal tracking failed before instability; refine below failure without relaxing qualification gates. No release."
+}

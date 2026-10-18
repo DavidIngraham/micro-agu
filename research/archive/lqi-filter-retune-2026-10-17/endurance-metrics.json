@@ -1,0 +1,176 @@
+[
+  {
+    "variant": "published",
+    "case": 109,
+    "mode": "CRUISE",
+    "complete": true,
+    "failure": null,
+    "disturbed": {
+      "altitude_rms_m": 0.8937653084470497,
+      "xtrack_rms_m": 0.5209384360442039,
+      "relative_rate_rms_deg_s": 22.439757325362045,
+      "relative_pitch_rate_rms_deg_s": 14.890007214149573,
+      "relative_pitch_std_deg": 3.0830143934222183
+    },
+    "late": {
+      "altitude_rms_m": 0.4703004504743479,
+      "xtrack_rms_m": 0.07623871723688656,
+      "relative_pitch_rate_rms_deg_s": 0.06124361159707857,
+      "relative_pitch_std_deg": 0.034978048915217885
+    },
+    "shaft_W": 73.80462496666388,
+    "upper_brake_fraction": 0.0,
+    "min_altitude_m": 35.5002292546988,
+    "max_pitch_deg": 22.530356370585007,
+    "max_roll_deg": 8.513608736150722,
+    "screen_failures": [],
+    "final_shaft_W": 73.62545204963766,
+    "final_true_airspeed_m_s": 4.382107925646201,
+    "final_common_brake_fraction": 0.0
+  },
+  {
+    "variant": "published",
+    "case": 101,
+    "mode": "CRUISE",
+    "complete": true,
+    "failure": null,
+    "disturbed": {
+      "altitude_rms_m": 2.2801588132808592,
+      "xtrack_rms_m": 0.5448938845089771,
+      "relative_rate_rms_deg_s": 20.36901067151914,
+      "relative_pitch_rate_rms_deg_s": 14.062168109233081,
+      "relative_pitch_std_deg": 5.236023130806364
+    },
+    "late": {
+      "altitude_rms_m": 0.3166017248284647,
+      "xtrack_rms_m": 0.07768176183741278,
+      "relative_pitch_rate_rms_deg_s": 0.06266217305848797,
+      "relative_pitch_std_deg": 0.029651234094931332
+    },
+    "shaft_W": 70.5826890169419,
+    "upper_brake_fraction": 0.0,
+    "min_altitude_m": 34.2543939507922,
+    "max_pitch_deg": 22.91481904307729,
+    "max_roll_deg": 8.702730229565907,
+    "screen_failures": [],
+    "final_shaft_W": 73.62651245626652,
+    "final_true_airspeed_m_s": 4.382687272603646,
+    "final_common_brake_fraction": 0.0
+  },
+  {
+    "variant": "published",
+    "case": 105,
+    "mode": "CRUISE",
+    "complete": true,
+    "failure": null,
+    "disturbed": {
+      "altitude_rms_m": 0.7274889813057137,
+      "xtrack_rms_m": 0.02353382194653173,
+      "relative_rate_rms_deg_s": 13.000088074751325,
+      "relative_pitch_rate_rms_deg_s": 8.880816411338333,
+      "relative_pitch_std_deg": 1.7576485597492022
+    },
+    "late": {
+      "altitude_rms_m": 0.26507733289461677,
+      "xtrack_rms_m": 0.06792906468935972,
+      "relative_pitch_rate_rms_deg_s": 0.06305060664463108,
+      "relative_pitch_std_deg": 0.034009314162388
+    },
+    "shaft_W": 83.34035384549082,
+    "upper_brake_fraction": 0.0,
+    "min_altitude_m": 35.61871160560463,
+    "max_pitch_deg": 29.113572788375894,
+    "max_roll_deg": 6.695452052367212,
+    "screen_failures": [],
+    "final_shaft_W": 85.41501906400653,
+    "final_true_airspeed_m_s": 3.9268221188082943,
+    "final_common_brake_fraction": 0.2618546013055164
+  },
+  {
+    "variant": "responsive_softspeed",
+    "case": 109,
+    "mode": "CRUISE",
+    "complete": true,
+    "failure": null,
+    "disturbed": {
+      "altitude_rms_m": 0.9347052700813139,
+      "xtrack_rms_m": 0.4103267277260089,
+      "relative_rate_rms_deg_s": 21.925898015112022,
+      "relative_pitch_rate_rms_deg_s": 13.818408331564951,
+      "relative_pitch_std_deg": 4.113008967631276
+    },
+    "late": {
+      "altitude_rms_m": 0.21359748046433663,
+      "xtrack_rms_m": 0.08001410643537413,
+      "relative_pitch_rate_rms_deg_s": 0.06683327510635217,
+      "relative_pitch_std_deg": 0.0377856761635045
+    },
+    "shaft_W": 74.14609223144242,
+    "upper_brake_fraction": 0.0,
+    "min_altitude_m": 37.08958039970656,
+    "max_pitch_deg": 22.99270615288286,
+    "max_roll_deg": 7.612176980462131,
+    "screen_failures": [],
+    "final_shaft_W": 74.70125726658684,
+    "final_true_airspeed_m_s": 4.313401502605336,
+    "final_common_brake_fraction": 0.038214514271086665
+  },
+  {
+    "variant": "responsive_softspeed",
+    "case": 101,
+    "mode": "CRUISE",
+    "complete": true,
+    "failure": null,
+    "disturbed": {
+      "altitude_rms_m": 1.7498779185107867,
+      "xtrack_rms_m": 0.650443069625402,
+      "relative_rate_rms_deg_s": 18.959412730210527,
+      "relative_pitch_rate_rms_deg_s": 12.472972974124291,
+      "relative_pitch_std_deg": 5.435734169777565
+    },
+    "late": {
+      "altitude_rms_m": 0.27246972141945724,
+      "xtrack_rms_m": 0.07643230701558441,
+      "relative_pitch_rate_rms_deg_s": 0.09544639624031677,
+      "relative_pitch_std_deg": 0.037785687457475195
+    },
+    "shaft_W": 70.58162475651348,
+    "upper_brake_fraction": 0.0,
+    "min_altitude_m": 35.39153576409375,
+    "max_pitch_deg": 22.968160934693557,
+    "max_roll_deg": 8.629275571320068,
+    "screen_failures": [],
+    "final_shaft_W": 73.62717534412646,
+    "final_true_airspeed_m_s": 4.3826204708875744,
+    "final_common_brake_fraction": 0.0
+  },
+  {
+    "variant": "responsive_softspeed",
+    "case": 105,
+    "mode": "CRUISE",
+    "complete": true,
+    "failure": null,
+    "disturbed": {
+      "altitude_rms_m": 0.5379886374288476,
+      "xtrack_rms_m": 0.0,
+      "relative_rate_rms_deg_s": 12.799857545730307,
+      "relative_pitch_rate_rms_deg_s": 8.480141922066002,
+      "relative_pitch_std_deg": 1.9313610289561194
+    },
+    "late": {
+      "altitude_rms_m": 0.2129528268419645,
+      "xtrack_rms_m": 0.08089495749576546,
+      "relative_pitch_rate_rms_deg_s": 0.08414370096881614,
+      "relative_pitch_std_deg": 0.037433791400476944
+    },
+    "shaft_W": 74.56685721496862,
+    "upper_brake_fraction": 0.0,
+    "min_altitude_m": 38.66948237938344,
+    "max_pitch_deg": 30.08587578846369,
+    "max_roll_deg": 5.909686135669818,
+    "screen_failures": [],
+    "final_shaft_W": 74.74601171763821,
+    "final_true_airspeed_m_s": 4.313421220158228,
+    "final_common_brake_fraction": 0.03818763599129657
+  }
+]

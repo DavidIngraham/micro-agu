@@ -1,0 +1,6 @@
+from pathlib import Path
+import numpy as np,json
+import matplotlib
+matplotlib.use('Agg')
+import matplotlib.pyplot as plt
+O=Path(__file__).parent;j=json.loads((O/'force-inferred-alpha.json').read_text());f,axs=plt.subplots(1,2,figsize=(12,4.5));rows=j['validation'];x=np.arange(len(rows));labels=[('HR' if r['day'].endswith('03') else 'TL')+' '+str(r['start']) for r in rows];axs[0].bar(x-.18,[r['initial_specific_force_error_before'] for r in rows],width=.36,label='Fixed 20° initial angle');axs[0].bar(x+.18,[r['initial_specific_force_error_after'] for r in rows],width=.36,label='Inferred from current acceleration');axs[0].set_xticks(x,labels,rotation=30);axs[0].set_ylabel('Initial acceleration vector error (m/s²)');axs[0].legend(fontsize=8);axs[0].grid(axis='y',alpha=.2);axs[1].plot(x,[r['initial_alpha_deg'] for r in rows],'o');axs[1].axhline(np.rad2deg(.35),color='gray',ls=':',label='Previous assumption');axs[1].axhline(np.rad2deg(.45),color='tab:red',ls='--',label='Inference upper bound');axs[1].set_xticks(x,labels,rotation=30);axs[1].set_ylabel('Inferred initial angle of attack (deg)');axs[1].legend(fontsize=8);axs[1].grid(alpha=.2);f.suptitle('A fixed initial canopy angle produces a large force mismatch');f.tight_layout();f.savefig(O/'iteration-initial-canopy-force.png',dpi=160)

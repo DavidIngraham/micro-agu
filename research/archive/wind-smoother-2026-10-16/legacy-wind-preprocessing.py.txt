@@ -1,0 +1,10 @@
+from pathlib import Path
+import json,numpy as np
+from scipy.ndimage import gaussian_filter1d
+O=Path(__file__).parent
+for day,name in [('2026-01-03','2026-01-03 15-41-42'),('2026-02-15','2026-02-15 15-38-50')]:
+ a=np.load(O/(day+'-physical-input.npz'));t=a['t'];y=a['Y'];raw=json.loads((O.parent/name/'IMU.json').read_text());raw=[r for r in raw if r.get('I')==0];rt=np.array([r['TimeUS']/1e6 for r in raw]);idx=np.clip(np.searchsorted(rt,t,side='right')-1,0,len(rt)-1);acc=np.array([[r[k] for k in ['AccX','AccY','AccZ']] for r in raw])[idx]
+ ph,th,ps=y[:,:3].T;sp,cp=np.sin(ph),np.cos(ph);st,ct=np.sin(th),np.cos(th);ss,cs=np.sin(ps),np.cos(ps);rot=np.empty((len(t),3,3));rot[:,0,:]=np.column_stack([ct*cs,sp*st*cs-cp*ss,cp*st*cs+sp*ss]);rot[:,1,:]=np.column_stack([ct*ss,sp*st*ss+cp*cs,cp*st*ss-sp*cs]);rot[:,2,:]=np.column_stack([-st,sp*ct,cp*ct]);force=np.einsum('nij,nj->ni',rot,acc)
+ wind=np.tile([1.04,.59,0] if day.endswith('03') else [.1,.086,0],(len(t),1));
+ if not day.endswith('03'):wind[t>=2500]=[.217,-1.139,0]
+ v=y[:,6:9]-wind;Vh=np.linalg.norm(v[:,:2],axis=1);right=np.column_stack([-v[:,1],v[:,0]])/np.maximum(Vh[:,None],.1);lat=np.sum(force[:,:2]*right,axis=1);tilt=np.arctan2(lat,-force[:,2]);smforce=gaussian_filter1d(force,3,axis=0);smooth=np.arctan2(np.sum(smforce[:,:2]*right,axis=1),-smforce[:,2]);np.savez_compressed(O/(day+'-force-state.npz'),t=t,tilt=tilt,smoothed_tilt=smooth,force=force,wind=wind)

@@ -1,0 +1,486 @@
+{
+  "fixed": {
+    "hood_river-300": {
+      "all_success": true,
+      "mean_wind": [
+        -0.45364131340977243,
+        1.5042758048651097
+      ],
+      "previous_smoother_difference_rms": 3.068136532989073,
+      "multistart_max_cost_fraction": 1.979534013596407e-06,
+      "sensitivity_wind_max_m_s": 1.7326131682061874,
+      "sensitivity_angle_max_deg": 17.45092065427315,
+      "max_absolute_relative_angle_deg": 15.299735547908146
+    },
+    "hood_river-480": {
+      "all_success": true,
+      "mean_wind": [
+        1.9882367176889142,
+        0.4339352158131208
+      ],
+      "previous_smoother_difference_rms": 0.8198282610218385,
+      "multistart_max_cost_fraction": 4.329592423357731e-06,
+      "sensitivity_wind_max_m_s": 0.14195306087552675,
+      "sensitivity_angle_max_deg": 3.8712900398610004,
+      "max_absolute_relative_angle_deg": 13.640588298574945
+    },
+    "hood_river-690": {
+      "all_success": true,
+      "mean_wind": [
+        0.9584140832417861,
+        -0.20766241224904408
+      ],
+      "previous_smoother_difference_rms": 0.47662719179823315,
+      "multistart_max_cost_fraction": 4.555320687549269e-06,
+      "sensitivity_wind_max_m_s": 0.3397278524547043,
+      "sensitivity_angle_max_deg": 5.516488945850436,
+      "max_absolute_relative_angle_deg": 10.977092843788007
+    },
+    "hood_river-930": {
+      "all_success": true,
+      "mean_wind": [
+        1.1850100362383713,
+        -0.6815651510810731
+      ],
+      "previous_smoother_difference_rms": 0.25521898922779007,
+      "multistart_max_cost_fraction": 2.9000653671840126e-06,
+      "sensitivity_wind_max_m_s": 0.18485193488885612,
+      "sensitivity_angle_max_deg": 2.68065429390339,
+      "max_absolute_relative_angle_deg": 12.615838731443946
+    },
+    "trout_lake-600": {
+      "all_success": true,
+      "mean_wind": [
+        0.482987592021955,
+        -0.6211334641148928
+      ],
+      "previous_smoother_difference_rms": 0.2152006592774723,
+      "multistart_max_cost_fraction": 0.0008446945153489649,
+      "sensitivity_wind_max_m_s": 0.21700599975799176,
+      "sensitivity_angle_max_deg": 26.232925884594458,
+      "max_absolute_relative_angle_deg": 37.07307055702837
+    },
+    "trout_lake-900": {
+      "all_success": true,
+      "mean_wind": [
+        0.10922646854586446,
+        0.10007393695164776
+      ],
+      "previous_smoother_difference_rms": 0.4339610276519577,
+      "multistart_max_cost_fraction": 2.8586618083803472e-06,
+      "sensitivity_wind_max_m_s": 0.16931906393166027,
+      "sensitivity_angle_max_deg": 3.79481788104167,
+      "max_absolute_relative_angle_deg": 20.96652383504802
+    },
+    "trout_lake-1920": {
+      "all_success": true,
+      "mean_wind": [
+        0.4748454876598126,
+        -0.22773398772077907
+      ],
+      "previous_smoother_difference_rms": 0.23752920477194517,
+      "multistart_max_cost_fraction": 3.531568403269958e-07,
+      "sensitivity_wind_max_m_s": 0.12606814224718488,
+      "sensitivity_angle_max_deg": 1.0190778247198757,
+      "max_absolute_relative_angle_deg": 16.3215411948949
+    },
+    "trout_lake-2790": {
+      "all_success": true,
+      "mean_wind": [
+        -0.1407094208474504,
+        -1.2355302853666186
+      ],
+      "previous_smoother_difference_rms": 0.1790260528024826,
+      "multistart_max_cost_fraction": 2.3838608295134733e-06,
+      "sensitivity_wind_max_m_s": 0.24610087796452387,
+      "sensitivity_angle_max_deg": 1.9168598973278614,
+      "max_absolute_relative_angle_deg": 14.775773138864741
+    }
+  },
+  "joint": {
+    "nominal": {
+      "cost": 889.9727666183724,
+      "success": true,
+      "status": 2,
+      "message": "`ftol` termination condition is satisfied.",
+      "nfev": 28,
+      "optimality": 7.516347398666771,
+      "elapsed_s": 232.02072479200433,
+      "damping": [
+        0.5000000000032215,
+        0.5002086483225847
+      ],
+      "active_bounds": 1,
+      "residual_rms": 1.0194558880102016,
+      "fixed_damping_cost": 1151.2385489812293,
+      "training_cost_reduction_percent": 22.694321919124416
+    },
+    "slow_wind": {
+      "cost": 1013.175492846255,
+      "success": true,
+      "status": 2,
+      "message": "`ftol` termination condition is satisfied.",
+      "nfev": 24,
+      "optimality": 37.13254482660347,
+      "elapsed_s": 229.79671514299116,
+      "damping": [
+        0.5001906840917747,
+        0.6143388553994502
+      ],
+      "active_bounds": 0,
+      "residual_rms": 1.0730813207486023,
+      "fixed_damping_cost": 1240.939227762221,
+      "training_cost_reduction_percent": 18.35414094586172
+    },
+    "loose_model": {
+      "cost": 333.7705317532711,
+      "success": true,
+      "status": 2,
+      "message": "`ftol` termination condition is satisfied.",
+      "nfev": 22,
+      "optimality": 2.908999892310488,
+      "elapsed_s": 219.74537990201497,
+      "damping": [
+        0.5000002460480987,
+        0.5002766619284783
+      ],
+      "active_bounds": 1,
+      "residual_rms": 0.5110175402268401,
+      "fixed_damping_cost": 437.0593906970586,
+      "training_cost_reduction_percent": 23.632682683937723
+    }
+  },
+  "synthetic": {
+    "synthetic-0-fixed-truth": {
+      "wind_rmse": 0.024975683243352656,
+      "angle_rmse_deg": 0.5744865236732292,
+      "relative_rate_rmse": 0.019101509944357907,
+      "true_damping": [
+        2.0,
+        4.0
+      ],
+      "fitted_damping": [
+        2.0,
+        4.0
+      ]
+    },
+    "synthetic-0-joint-mismatch-truth": {
+      "wind_rmse": 0.08125516985747525,
+      "angle_rmse_deg": 1.1319862498766984,
+      "relative_rate_rmse": 0.03394102969201558,
+      "true_damping": [
+        2.0,
+        4.0
+      ],
+      "fitted_damping": [
+        2.180479850835599,
+        4.133960374266835
+      ]
+    },
+    "synthetic-0-joint-truth": {
+      "wind_rmse": 0.026396655629679626,
+      "angle_rmse_deg": 0.5975189901662623,
+      "relative_rate_rmse": 0.021301932590214907,
+      "true_damping": [
+        2.0,
+        4.0
+      ],
+      "fitted_damping": [
+        2.21864981871764,
+        3.9840779312147383
+      ]
+    },
+    "synthetic-0-joint-varying-truth": {
+      "wind_rmse": 0.0811941997985657,
+      "angle_rmse_deg": 1.182730565066512,
+      "relative_rate_rmse": 0.027880414170923472,
+      "true_damping": [
+        2.0,
+        4.0
+      ],
+      "fitted_damping": [
+        2.2481929132090945,
+        4.068369634737848
+      ]
+    },
+    "synthetic-1-fixed-truth": {
+      "wind_rmse": 0.0061075254581019495,
+      "angle_rmse_deg": 0.5683698415196762,
+      "relative_rate_rmse": 0.01507893609626328,
+      "true_damping": [
+        2.0,
+        4.0
+      ],
+      "fitted_damping": [
+        2.0,
+        4.0
+      ]
+    },
+    "synthetic-1-joint-truth": {
+      "wind_rmse": 0.005414301074801552,
+      "angle_rmse_deg": 0.5626039558436321,
+      "relative_rate_rmse": 0.015915769732210174,
+      "true_damping": [
+        2.0,
+        4.0
+      ],
+      "fitted_damping": [
+        2.2320647123569812,
+        4.001217166818763
+      ]
+    }
+  },
+  "predictive": {
+    "fixed": {
+      "inferred": {
+        "0": {
+          "roll": 5.561283848282257,
+          "pitch": 4.590979493773105,
+          "yaw": 53.269421008268324,
+          "roll_rate": 12.431171354946017,
+          "pitch_rate": 14.720079166386395,
+          "yaw_rate": 23.279042769208708,
+          "vn": 2.1822167600706135,
+          "ve": 2.002795613552759,
+          "vd": 0.33340535793138415
+        },
+        "2": {
+          "roll": 5.627258012382031,
+          "pitch": 4.614800350657303,
+          "yaw": 55.04212502647034,
+          "roll_rate": 12.139714252109641,
+          "pitch_rate": 14.484088611704886,
+          "yaw_rate": 23.12443814461801,
+          "vn": 2.253716140887298,
+          "ve": 2.064433243153716,
+          "vd": 0.33239590713901745
+        },
+        "5": {
+          "roll": 5.613079966818013,
+          "pitch": 4.640196517044661,
+          "yaw": 57.71118814507446,
+          "roll_rate": 12.106775185651088,
+          "pitch_rate": 14.516138980511814,
+          "yaw_rate": 22.877462296134926,
+          "vn": 2.343923244227641,
+          "ve": 2.1469771514209532,
+          "vd": 0.33348430482469915
+        },
+        "10": {
+          "roll": 5.661119779512773,
+          "pitch": 4.831857186594339,
+          "yaw": 62.9887279142464,
+          "roll_rate": 12.198744777376557,
+          "pitch_rate": 15.11963385570517,
+          "yaw_rate": 23.252100712599166,
+          "vn": 2.5055331949475854,
+          "ve": 2.2840749363174973,
+          "vd": 0.3392518182377581
+        }
+      },
+      "historical": {
+        "0": {
+          "roll": 5.672880702011056,
+          "pitch": 4.802107911900363,
+          "yaw": 56.98491958213249,
+          "roll_rate": 13.131920088777086,
+          "pitch_rate": 17.019737054201702,
+          "yaw_rate": 23.634993911640453,
+          "vn": 2.26807348899451,
+          "ve": 2.3810179256635147,
+          "vd": 0.3390809950259248
+        },
+        "2": {
+          "roll": 5.627974938316289,
+          "pitch": 4.632715728422039,
+          "yaw": 58.78674295830339,
+          "roll_rate": 12.156950813199021,
+          "pitch_rate": 14.51684667177081,
+          "yaw_rate": 23.115446391424157,
+          "vn": 2.334494066923096,
+          "ve": 2.4575123760301905,
+          "vd": 0.3340945098643512
+        },
+        "5": {
+          "roll": 5.620639683394373,
+          "pitch": 4.66366500079817,
+          "yaw": 61.375300849708225,
+          "roll_rate": 12.103176655476656,
+          "pitch_rate": 14.546271582895764,
+          "yaw_rate": 22.8859259119628,
+          "vn": 2.4013423649761965,
+          "ve": 2.565289972958272,
+          "vd": 0.33430939649478475
+        },
+        "10": {
+          "roll": 5.652053561912824,
+          "pitch": 4.8292941988019695,
+          "yaw": 66.48897280266259,
+          "roll_rate": 12.199071009576159,
+          "pitch_rate": 15.114378008836518,
+          "yaw_rate": 23.246974890325063,
+          "vn": 2.5726664062860456,
+          "ve": 2.7170034561334697,
+          "vd": 0.33913788276477863
+        }
+      }
+    },
+    "joint": {
+      "inferred": {
+        "0": {
+          "roll": 5.5799900475021005,
+          "pitch": 4.603491647925116,
+          "yaw": 53.77494181405498,
+          "roll_rate": 12.691775450469942,
+          "pitch_rate": 14.30972485028423,
+          "yaw_rate": 24.018036309584282,
+          "vn": 2.2060178570146527,
+          "ve": 2.0529518517751737,
+          "vd": 0.3340855244440384
+        },
+        "2": {
+          "roll": 5.635437119567505,
+          "pitch": 4.610786638473644,
+          "yaw": 55.528710396150466,
+          "roll_rate": 12.142818861437695,
+          "pitch_rate": 13.798913581154737,
+          "yaw_rate": 23.404414850857137,
+          "vn": 2.2776501376935316,
+          "ve": 2.115397975519847,
+          "vd": 0.3325834776891293
+        },
+        "5": {
+          "roll": 5.623976804390201,
+          "pitch": 4.631685122054758,
+          "yaw": 58.16719148680777,
+          "roll_rate": 12.103925872173111,
+          "pitch_rate": 13.805147628828177,
+          "yaw_rate": 23.28011020723598,
+          "vn": 2.3669732806322994,
+          "ve": 2.1991088353192074,
+          "vd": 0.333598108616023
+        },
+        "10": {
+          "roll": 5.66995504027676,
+          "pitch": 4.818740445762876,
+          "yaw": 63.41850585708734,
+          "roll_rate": 12.206501824766931,
+          "pitch_rate": 14.305499541829581,
+          "yaw_rate": 23.81235534039513,
+          "vn": 2.5336036901561654,
+          "ve": 2.3318945700547324,
+          "vd": 0.33935743420501746
+        }
+      },
+      "historical": {
+        "0": {
+          "roll": 5.680314927401113,
+          "pitch": 4.843010523912361,
+          "yaw": 57.17380535091493,
+          "roll_rate": 13.321353167138016,
+          "pitch_rate": 19.733791001144194,
+          "yaw_rate": 29.1013488842109,
+          "vn": 2.2786485734886783,
+          "ve": 2.3785442985900356,
+          "vd": 0.3395358368743118
+        },
+        "2": {
+          "roll": 5.635141698822977,
+          "pitch": 4.620257398274478,
+          "yaw": 58.956210815939194,
+          "roll_rate": 12.159334582381033,
+          "pitch_rate": 13.835699816740501,
+          "yaw_rate": 23.38943179246113,
+          "vn": 2.345417370509182,
+          "ve": 2.4549706071188333,
+          "vd": 0.334088069334515
+        },
+        "5": {
+          "roll": 5.630130930305389,
+          "pitch": 4.6546872391326195,
+          "yaw": 61.56389064595749,
+          "roll_rate": 12.099527720024366,
+          "pitch_rate": 13.84025729593764,
+          "yaw_rate": 23.285102492766477,
+          "vn": 2.4143131825560857,
+          "ve": 2.5623603024663946,
+          "vd": 0.33440913166293956
+        },
+        "10": {
+          "roll": 5.662431056509671,
+          "pitch": 4.816706461057567,
+          "yaw": 66.7383122771839,
+          "roll_rate": 12.206579162472677,
+          "pitch_rate": 14.299979372624952,
+          "yaw_rate": 23.807278210508006,
+          "vn": 2.5876347835315308,
+          "ve": 2.7159661226451632,
+          "vd": 0.3392482483410708
+        }
+      }
+    }
+  },
+  "initialization": {
+    "fixed": {
+      "0-2": 10.92392379081819,
+      "2-5": 0.7077635249197061,
+      "5-10": 0.1724561908522814,
+      "10-20": 0.020571873708311247,
+      "20-30": 0.0006382458740991844
+    },
+    "joint": {
+      "0-2": 27.574182455065937,
+      "2-5": 0.7219453140518534,
+      "5-10": 0.17047810667352556,
+      "10-20": 0.019994320707071852,
+      "20-30": 0.0005914806006200128
+    }
+  },
+  "diagnostics": {
+    "diagnostic-1": {
+      "cost": 889.948847278943,
+      "success": true,
+      "status": 2,
+      "message": "`ftol` termination condition is satisfied.",
+      "nfev": 23,
+      "optimality": 4.419066794366778,
+      "elapsed_s": 189.95514669601107,
+      "damping": [
+        0.5000000000003659,
+        0.5001244080637549
+      ],
+      "active_bounds": 1,
+      "residual_rms": 1.0194386061276228
+    },
+    "diagnostic-8": {
+      "cost": 889.9278711345169,
+      "success": true,
+      "status": 2,
+      "message": "`ftol` termination condition is satisfied.",
+      "nfev": 26,
+      "optimality": 3.563432160244517,
+      "elapsed_s": 226.45413789097802,
+      "damping": [
+        0.5004031432767044,
+        0.500001461715372
+      ],
+      "active_bounds": 1,
+      "residual_rms": 1.0197873167875942
+    },
+    "diagnostic-strict": {
+      "cost": 889.8936586859368,
+      "success": true,
+      "status": 2,
+      "message": "`ftol` termination condition is satisfied.",
+      "nfev": 6,
+      "optimality": 1.0095637392227133,
+      "elapsed_s": 59.74048932400183,
+      "damping": [
+        0.5000000000008613,
+        0.5000090236927027
+      ],
+      "active_bounds": 1,
+      "residual_rms": 1.0195135006292972
+    }
+  }
+}

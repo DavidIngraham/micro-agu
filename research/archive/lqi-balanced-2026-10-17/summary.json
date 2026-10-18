@@ -1,0 +1,153 @@
+{
+  "selection": {
+    "selected": "responsive",
+    "baseline_score": 0.7110400308089451,
+    "candidates": {
+      "balanced": {
+        "score": 0.6184639947313221,
+        "reasons": [],
+        "improvement_pct": 13.01980648998059
+      },
+      "damped": {
+        "score": 0.7495022753997793,
+        "reasons": [
+          "acquisition median regression >20%",
+          "descent median regression >20%"
+        ],
+        "improvement_pct": -5.409293840612039
+      },
+      "responsive": {
+        "score": 0.5426283987386915,
+        "reasons": [],
+        "improvement_pct": 23.68525325903984
+      },
+      "vertical": {
+        "score": 0.5455300168247288,
+        "reasons": [],
+        "improvement_pct": 23.277172425287606
+      }
+    },
+    "rule": "Training only: complete/settled, operational gates, no >20% median task or energy regression vs matched fixed. Rank 50% mean + 50% worst case of dimensional loss, require >=5% improvement."
+  },
+  "validation_paired": {
+    "fixed": {
+      "acquisition": {
+        "median": -15.245234840890392,
+        "mean": -11.963291116341152,
+        "worst": 13.703221291086741,
+        "worst_quarter": -0.26148511424075593
+      },
+      "descent": {
+        "median": -35.06883448925136,
+        "mean": -29.075601958943086,
+        "worst": 13.001271736385632,
+        "worst_quarter": -10.516508376638551
+      },
+      "updraft": {
+        "median": -47.29433110894817,
+        "mean": -47.11246829643933,
+        "worst": -46.193687842528,
+        "worst_quarter": -46.20892117498899
+      },
+      "crosswind": {
+        "median": -5.17484514873755,
+        "mean": -4.758387689945577,
+        "worst": -0.20151709674489648,
+        "worst_quarter": -0.528004556313888
+      },
+      "score": {
+        "median": -27.17652517979198,
+        "mean": -26.22886768996543,
+        "worst": -17.221665626978655,
+        "worst_quarter": -21.201858914815354
+      },
+      "energy": {
+        "median": 0.08134997284600098,
+        "mean": 0.08331126389048982,
+        "worst": 0.10387664488147319,
+        "worst_quarter": 0.10220912185421316
+      }
+    },
+    "standard": {
+      "acquisition": {
+        "median": 6.8361054191545705,
+        "mean": 7.159701846434724,
+        "worst": 8.672734837686491,
+        "worst_quarter": 8.598446399188974
+      },
+      "descent": {
+        "median": -0.13957776351345985,
+        "mean": 7.04011876160031,
+        "worst": 77.01638191339721,
+        "worst_quarter": 39.53037477538176
+      },
+      "updraft": {
+        "median": 18.494159234454102,
+        "mean": 18.264288656463002,
+        "worst": 20.963254933634534,
+        "worst_quarter": 20.900118297317327
+      },
+      "crosswind": {
+        "median": -38.35503128643616,
+        "mean": -40.02499000266466,
+        "worst": -35.39980072919982,
+        "worst_quarter": -35.591462057845405
+      },
+      "score": {
+        "median": -11.41063611086231,
+        "mean": -12.817890173034868,
+        "worst": -8.893768007811243,
+        "worst_quarter": -9.597492002189728
+      },
+      "energy": {
+        "median": 1.4810745881474463,
+        "mean": 1.5826093499970577,
+        "worst": 2.291194037553046,
+        "worst_quarter": 1.9079708992109756
+      }
+    }
+  },
+  "validation_rejection_reasons": [],
+  "sensitivity": {
+    "equal_tasks": {
+      "fixed": -27.17652517979198,
+      "standard": -11.410636110862304
+    },
+    "acquisition_first": {
+      "fixed": -23.313151145974675,
+      "standard": -7.69818217658067
+    },
+    "descent_first": {
+      "fixed": -28.739969230281858,
+      "standard": -9.024514993382304
+    },
+    "updraft_first": {
+      "fixed": -35.14150419172966,
+      "standard": -2.455751825496899
+    },
+    "crosswind_first": {
+      "fixed": -19.32461100411936,
+      "standard": -24.527500217497803
+    }
+  },
+  "groups": {
+    "standard": {
+      "median": 0.6072236061485237,
+      "mean": 0.6133011333404252,
+      "worst": 0.6929244860990705,
+      "worst_quarter": 0.6518671582871697
+    },
+    "fixed": {
+      "median": 0.7384579579917154,
+      "mean": 0.7248760149211946,
+      "worst": 0.7438569641913156,
+      "worst_quarter": 0.7422905821558599
+    },
+    "responsive": {
+      "median": 0.5301986483961292,
+      "mean": 0.5335540763878635,
+      "worst": 0.5534342291553886,
+      "worst_quarter": 0.549389861918283
+    }
+  }
+}

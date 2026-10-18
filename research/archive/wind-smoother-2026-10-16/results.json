@@ -1,0 +1,214 @@
+{
+  "hood_river": {
+    "segments": 1,
+    "samples": 778,
+    "discrepancy": {
+      "median": 0.6972660037526708,
+      "p90": 1.2907665832772104,
+      "maximum": 12.043658644509758
+    },
+    "sensitivity": {
+      "median": 0.3153012340119117,
+      "p90": 0.4202999586527676,
+      "maximum": 0.7727971114064648
+    },
+    "calibration_discrepancy": {
+      "median": 0.9471467475622137,
+      "p90": 1.1845625732461638,
+      "maximum": 1.390161973496027
+    },
+    "supported_discrepancy": {
+      "median": 0.6972660037526708,
+      "p90": 1.2907665832772104,
+      "maximum": 12.043658644509758
+    },
+    "conditional_major_sigma": {
+      "median": 0.17799529627110905,
+      "p90": 0.19934552564111913,
+      "maximum": 0.29684084073352407
+    },
+    "post_first_minute_discrepancy": {
+      "median": 0.6840737534170037,
+      "p90": 1.0219748351755438,
+      "maximum": 1.8072797323411989
+    },
+    "weak_heading_fraction": 0.0,
+    "speed_change": {
+      "median": 0.0798743079508426,
+      "p90": 0.8479128250442953,
+      "maximum": 1.1876178017644787
+    },
+    "windows": [
+      {
+        "start": 300,
+        "discrepancy": 11.120936116994477,
+        "calibration_speed": 3.277720848471495,
+        "smoother_speed": 2.4974624847528717,
+        "dynamic_pressure_ratio": 0.543333963746775,
+        "sensitivity": 0.7727971114064648
+      },
+      {
+        "start": 360,
+        "discrepancy": 0.5034122754176373,
+        "calibration_speed": 4.283534758025487,
+        "smoother_speed": 4.2182366481664175,
+        "dynamic_pressure_ratio": 0.9701128600241145,
+        "sensitivity": 0.3805133370736578
+      },
+      {
+        "start": 480,
+        "discrepancy": 0.3183460146542646,
+        "calibration_speed": 3.7534985836544523,
+        "smoother_speed": 4.487532454031892,
+        "dynamic_pressure_ratio": 1.4787778783810608,
+        "sensitivity": 0.3404059751873679
+      },
+      {
+        "start": 600,
+        "discrepancy": 0.6673387508599202,
+        "calibration_speed": 3.961609928541403,
+        "smoother_speed": 4.508201645461731,
+        "dynamic_pressure_ratio": 1.3151611339123142,
+        "sensitivity": 0.37182167942661865
+      },
+      {
+        "start": 690,
+        "discrepancy": 0.28235420343325673,
+        "calibration_speed": 3.363430412260686,
+        "smoother_speed": 3.2940248791901063,
+        "dynamic_pressure_ratio": 0.9628144640825604,
+        "sensitivity": 0.3522696532874016
+      },
+      {
+        "start": 720,
+        "discrepancy": 0.8286768945036831,
+        "calibration_speed": 4.274197320883231,
+        "smoother_speed": 3.790307261177751,
+        "dynamic_pressure_ratio": 0.7931076345783373,
+        "sensitivity": 0.19035780701746788
+      },
+      {
+        "start": 930,
+        "discrepancy": 0.541539205750363,
+        "calibration_speed": 4.003376889553779,
+        "smoother_speed": 3.8506142053771684,
+        "dynamic_pressure_ratio": 1.0523027631224475,
+        "sensitivity": 0.3949651672055055
+      },
+      {
+        "start": 1020,
+        "discrepancy": 0.9603209537888988,
+        "calibration_speed": 4.412427152615461,
+        "smoother_speed": 3.319029576414812,
+        "dynamic_pressure_ratio": 0.5651935676462674,
+        "sensitivity": 0.2950693329244771
+      }
+    ]
+  },
+  "trout_lake": {
+    "segments": 1,
+    "samples": 3274,
+    "discrepancy": {
+      "median": 0.3606495538774649,
+      "p90": 0.6545494693911397,
+      "maximum": 1.785413567694776
+    },
+    "sensitivity": {
+      "median": 0.13248117606690848,
+      "p90": 0.19082097508452023,
+      "maximum": 0.46479124802138894
+    },
+    "calibration_discrepancy": {
+      "median": 0.41538867947970637,
+      "p90": 0.8550827227688832,
+      "maximum": 1.471804063830428
+    },
+    "supported_discrepancy": {
+      "median": 0.3628251759931181,
+      "p90": 0.658788071748434,
+      "maximum": 1.785413567694776
+    },
+    "conditional_major_sigma": {
+      "median": 0.16936499479234773,
+      "p90": 0.19886822995007888,
+      "maximum": 0.272995592520587
+    },
+    "post_first_minute_discrepancy": {
+      "median": 0.35866961388658003,
+      "p90": 0.6287388510641995,
+      "maximum": 1.3014013028391833
+    },
+    "weak_heading_fraction": 0.011301160659743433,
+    "speed_change": {
+      "median": 0.01975545243916299,
+      "p90": 0.514013573494904,
+      "maximum": 1.4086329619422164
+    },
+    "windows": [
+      {
+        "start": 600,
+        "discrepancy": 0.31507142284658884,
+        "calibration_speed": 4.6040507219808955,
+        "smoother_speed": 4.312737807017135,
+        "dynamic_pressure_ratio": 0.8816120931059179,
+        "sensitivity": 0.14187555330503093
+      },
+      {
+        "start": 840,
+        "discrepancy": 0.19410848776685713,
+        "calibration_speed": 4.207358481429539,
+        "smoother_speed": 4.6156083048038985,
+        "dynamic_pressure_ratio": 1.203829836524569,
+        "sensitivity": 0.11663015072964146
+      },
+      {
+        "start": 900,
+        "discrepancy": 0.8084613646161516,
+        "calibration_speed": 4.555944385227287,
+        "smoother_speed": 4.780595010668265,
+        "dynamic_pressure_ratio": 1.1296396369147677,
+        "sensitivity": 0.11665572967181907
+      },
+      {
+        "start": 1350,
+        "discrepancy": 0.1304324470832464,
+        "calibration_speed": 5.009645003355331,
+        "smoother_speed": 4.735936395026865,
+        "dynamic_pressure_ratio": 0.893534815299477,
+        "sensitivity": 0.06633898144375008
+      },
+      {
+        "start": 1920,
+        "discrepancy": 0.2429911810123638,
+        "calibration_speed": 4.816235425435165,
+        "smoother_speed": 4.385481414274061,
+        "dynamic_pressure_ratio": 0.8303432062924117,
+        "sensitivity": 0.21710764458500423
+      },
+      {
+        "start": 2400,
+        "discrepancy": 0.41424837926455516,
+        "calibration_speed": 4.579996735100821,
+        "smoother_speed": 4.934258521969013,
+        "dynamic_pressure_ratio": 1.1760232269516073,
+        "sensitivity": 0.08931166101876593
+      },
+      {
+        "start": 2790,
+        "discrepancy": 0.21622130317889518,
+        "calibration_speed": 4.127267439063129,
+        "smoother_speed": 4.249057459993138,
+        "dynamic_pressure_ratio": 1.0619645807771176,
+        "sensitivity": 0.18032532517948363
+      },
+      {
+        "start": 2910,
+        "discrepancy": 0.5655761069111601,
+        "calibration_speed": 4.534977748621975,
+        "smoother_speed": 4.5281479654812395,
+        "dynamic_pressure_ratio": 0.9969547004450415,
+        "sensitivity": 0.18193994534125707
+      }
+    ]
+  }
+}

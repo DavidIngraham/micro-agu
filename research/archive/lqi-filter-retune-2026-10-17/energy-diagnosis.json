@@ -1,0 +1,338 @@
+[
+  {
+    "variant": "published",
+    "case": 80,
+    "true_airspeed": 4.3848348748171,
+    "hud_estimated_EAS": 1.2878518760204316,
+    "common_brake": 0.0,
+    "throttle": 0.445945
+  },
+  {
+    "variant": "published",
+    "case": 83,
+    "true_airspeed": 4.382160169088897,
+    "hud_estimated_EAS": 1.4308735847473144,
+    "common_brake": 0.0,
+    "throttle": 0.44591499999999995
+  },
+  {
+    "variant": "published",
+    "case": 13,
+    "true_airspeed": 3.9258587057311773,
+    "hud_estimated_EAS": 4.294850480556488,
+    "common_brake": 0.26153846153846155,
+    "throttle": 0.4704849999999999
+  },
+  {
+    "variant": "published",
+    "case": 1,
+    "true_airspeed": 4.382719590079549,
+    "hud_estimated_EAS": 2.9249892115592955,
+    "common_brake": 0.0,
+    "throttle": 0.4458875
+  },
+  {
+    "variant": "published",
+    "case": 3,
+    "true_airspeed": 4.382921726861005,
+    "hud_estimated_EAS": 1.3893892920017243,
+    "common_brake": 0.0,
+    "throttle": 0.4459025
+  },
+  {
+    "variant": "published",
+    "case": 87,
+    "true_airspeed": 4.38348437107405,
+    "hud_estimated_EAS": 3.9116458493471145,
+    "common_brake": 0.0,
+    "throttle": 0.44589
+  },
+  {
+    "variant": "filtered",
+    "case": 80,
+    "true_airspeed": 4.083161810958287,
+    "hud_estimated_EAS": 4.284863780736924,
+    "common_brake": 0.24490769230769235,
+    "throttle": 0.462015
+  },
+  {
+    "variant": "filtered",
+    "case": 83,
+    "true_airspeed": 3.8942527619961154,
+    "hud_estimated_EAS": 4.267241257429123,
+    "common_brake": 0.2487634615384616,
+    "throttle": 0.4718899999999999
+  },
+  {
+    "variant": "filtered",
+    "case": 13,
+    "true_airspeed": 4.345649237489723,
+    "hud_estimated_EAS": 4.293093866109848,
+    "common_brake": 0.01976538461538462,
+    "throttle": 0.4471025
+  },
+  {
+    "variant": "filtered",
+    "case": 1,
+    "true_airspeed": 4.027827799492468,
+    "hud_estimated_EAS": 4.277681599855423,
+    "common_brake": 0.2165115384615385,
+    "throttle": 0.4634850000000001
+  },
+  {
+    "variant": "filtered",
+    "case": 3,
+    "true_airspeed": 4.354951733753523,
+    "hud_estimated_EAS": 4.290858175754547,
+    "common_brake": 0.014942307692307692,
+    "throttle": 0.44681
+  },
+  {
+    "variant": "filtered",
+    "case": 87,
+    "true_airspeed": 4.137108981444984,
+    "hud_estimated_EAS": 4.288750029802323,
+    "common_brake": 0.180698076923077,
+    "throttle": 0.45725
+  },
+  {
+    "variant": "relative",
+    "case": 80,
+    "true_airspeed": 4.389738895674998,
+    "hud_estimated_EAS": 3.7991132169961928,
+    "common_brake": 0.0,
+    "throttle": 0.4457575
+  },
+  {
+    "variant": "relative",
+    "case": 83,
+    "true_airspeed": 3.9113921919262804,
+    "hud_estimated_EAS": 4.267680604457855,
+    "common_brake": 0.23897500000000002,
+    "throttle": 0.470645
+  },
+  {
+    "variant": "relative",
+    "case": 13,
+    "true_airspeed": 4.34900488808761,
+    "hud_estimated_EAS": 4.291193063259125,
+    "common_brake": 0.01797307692307693,
+    "throttle": 0.4469825
+  },
+  {
+    "variant": "relative",
+    "case": 1,
+    "true_airspeed": 4.0398544440406665,
+    "hud_estimated_EAS": 4.276751240491867,
+    "common_brake": 0.20877692307692314,
+    "throttle": 0.46264500000000003
+  },
+  {
+    "variant": "relative",
+    "case": 3,
+    "true_airspeed": 4.000847504497909,
+    "hud_estimated_EAS": 4.2692992925643924,
+    "common_brake": 0.21285769230769236,
+    "throttle": 0.4655825
+  },
+  {
+    "variant": "relative",
+    "case": 87,
+    "true_airspeed": 4.387080353943383,
+    "hud_estimated_EAS": 3.9543203365802766,
+    "common_brake": 0.0,
+    "throttle": 0.4457899999999999
+  },
+  {
+    "variant": "efficient",
+    "case": 80,
+    "true_airspeed": 4.204949580663357,
+    "hud_estimated_EAS": 4.450325608253479,
+    "common_brake": 0.14769230769230773,
+    "throttle": 0.45401250000000004
+  },
+  {
+    "variant": "efficient",
+    "case": 83,
+    "true_airspeed": 4.079153879216328,
+    "hud_estimated_EAS": 4.410581761598587,
+    "common_brake": 0.14836346153846153,
+    "throttle": 0.4594775
+  },
+  {
+    "variant": "efficient",
+    "case": 13,
+    "true_airspeed": 4.328040522516481,
+    "hud_estimated_EAS": 4.325591500997543,
+    "common_brake": 0.029361538461538467,
+    "throttle": 0.4476650000000001
+  },
+  {
+    "variant": "efficient",
+    "case": 1,
+    "true_airspeed": 4.137426540305511,
+    "hud_estimated_EAS": 4.36145298242569,
+    "common_brake": 0.14769230769230773,
+    "throttle": 0.45661750000000006
+  },
+  {
+    "variant": "efficient",
+    "case": 3,
+    "true_airspeed": 4.331124158091946,
+    "hud_estimated_EAS": 4.320790941715241,
+    "common_brake": 0.02805000000000001,
+    "throttle": 0.44762500000000005
+  },
+  {
+    "variant": "efficient",
+    "case": 87,
+    "true_airspeed": 4.3814118190707845,
+    "hud_estimated_EAS": 4.2846990442276,
+    "common_brake": 0.002007692307692308,
+    "throttle": 0.4458825
+  },
+  {
+    "variant": "responsive",
+    "case": 80,
+    "true_airspeed": 4.062101947192238,
+    "hud_estimated_EAS": 4.395942656993866,
+    "common_brake": 0.26230769230769235,
+    "throttle": 0.46364000000000005
+  },
+  {
+    "variant": "responsive",
+    "case": 83,
+    "true_airspeed": 4.38102638693355,
+    "hud_estimated_EAS": 4.250516629219055,
+    "common_brake": 0.0006923076923076924,
+    "throttle": 0.44586
+  },
+  {
+    "variant": "responsive",
+    "case": 13,
+    "true_airspeed": 4.380498913145782,
+    "hud_estimated_EAS": 4.264405970573425,
+    "common_brake": 0.0009326923076923079,
+    "throttle": 0.44591499999999995
+  },
+  {
+    "variant": "responsive",
+    "case": 1,
+    "true_airspeed": 4.022201407799484,
+    "hud_estimated_EAS": 4.275473403930664,
+    "common_brake": 0.22010576923076924,
+    "throttle": 0.46383250000000004
+  },
+  {
+    "variant": "responsive",
+    "case": 3,
+    "true_airspeed": 3.9192738310967856,
+    "hud_estimated_EAS": 4.279457755088806,
+    "common_brake": 0.26230769230769235,
+    "throttle": 0.4717425
+  },
+  {
+    "variant": "responsive",
+    "case": 87,
+    "true_airspeed": 4.386168229690479,
+    "hud_estimated_EAS": 4.083663119673729,
+    "common_brake": 0.0,
+    "throttle": 0.4457825
+  },
+  {
+    "variant": "balanced",
+    "case": 80,
+    "true_airspeed": 4.160723395231634,
+    "hud_estimated_EAS": 4.562174005508423,
+    "common_brake": 0.1830769230769231,
+    "throttle": 0.45676
+  },
+  {
+    "variant": "balanced",
+    "case": 83,
+    "true_airspeed": 4.38222281296286,
+    "hud_estimated_EAS": 4.244579660892486,
+    "common_brake": 0.0,
+    "throttle": 0.44585499999999995
+  },
+  {
+    "variant": "balanced",
+    "case": 13,
+    "true_airspeed": 4.054887983130286,
+    "hud_estimated_EAS": 4.40201823592186,
+    "common_brake": 0.1830769230769231,
+    "throttle": 0.46145250000000004
+  },
+  {
+    "variant": "balanced",
+    "case": 1,
+    "true_airspeed": 4.080840206608685,
+    "hud_estimated_EAS": 4.276326726675034,
+    "common_brake": 0.18277884615384618,
+    "throttle": 0.46001499999999995
+  },
+  {
+    "variant": "balanced",
+    "case": 3,
+    "true_airspeed": 4.052043025345064,
+    "hud_estimated_EAS": 4.369805889129639,
+    "common_brake": 0.1830769230769231,
+    "throttle": 0.46206500000000006
+  },
+  {
+    "variant": "balanced",
+    "case": 87,
+    "true_airspeed": 4.134616690696789,
+    "hud_estimated_EAS": 4.588838175535202,
+    "common_brake": 0.1830769230769231,
+    "throttle": 0.4573675
+  },
+  {
+    "variant": "damped",
+    "case": 80,
+    "true_airspeed": 4.0625343758881005,
+    "hud_estimated_EAS": 4.389780467748642,
+    "common_brake": 0.2619980769230769,
+    "throttle": 0.4635475000000001
+  },
+  {
+    "variant": "damped",
+    "case": 83,
+    "true_airspeed": 3.961176972975251,
+    "hud_estimated_EAS": 4.266412031650543,
+    "common_brake": 0.21110000000000004,
+    "throttle": 0.46704749999999995
+  },
+  {
+    "variant": "damped",
+    "case": 13,
+    "true_airspeed": 4.021207852568508,
+    "hud_estimated_EAS": 4.272002968788147,
+    "common_brake": 0.2030153846153847,
+    "throttle": 0.46363000000000015
+  },
+  {
+    "variant": "damped",
+    "case": 1,
+    "true_airspeed": 4.386394800424608,
+    "hud_estimated_EAS": 3.9194907331466675,
+    "common_brake": 0.0,
+    "throttle": 0.4457725
+  },
+  {
+    "variant": "damped",
+    "case": 3,
+    "true_airspeed": 4.387063066731769,
+    "hud_estimated_EAS": 3.82443138897419,
+    "common_brake": 0.0,
+    "throttle": 0.44574250000000004
+  },
+  {
+    "variant": "damped",
+    "case": 87,
+    "true_airspeed": 4.030310033789872,
+    "hud_estimated_EAS": 4.386440116167068,
+    "common_brake": 0.2616711538461538,
+    "throttle": 0.4642500000000001
+  }
+]

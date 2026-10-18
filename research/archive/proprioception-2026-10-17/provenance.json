@@ -1,0 +1,483 @@
+{
+  "archived_binaries": {
+    "58bbb9ac21bada4de86be9068261e26d5ce1413ae555dcc2f2979b565cb6bbc1": "damping-design/runtime/arduplane.wasm",
+    "2aea1d81a92bffb7fb01dfd80d0969f48731c5587413b3eda7c748d5950a4d0f": "fixed-design/runtime/arduplane.wasm",
+    "d47908c924a44ab6ffa43cd3f9455f592b50088578f8e70461f3f142268f9136": "efficient-design/runtime/arduplane.wasm"
+  },
+  "runs": [
+    {
+      "path": "fixed/full/results/09-lqi.json",
+      "sha256": "2aea1d81a92bffb7fb01dfd80d0969f48731c5587413b3eda7c748d5950a4d0f",
+      "complete": true
+    },
+    {
+      "path": "fixed/full/results/01-lqi.json",
+      "sha256": "2aea1d81a92bffb7fb01dfd80d0969f48731c5587413b3eda7c748d5950a4d0f",
+      "complete": true
+    },
+    {
+      "path": "fixed/full/results/00-lqi.json",
+      "sha256": "2aea1d81a92bffb7fb01dfd80d0969f48731c5587413b3eda7c748d5950a4d0f",
+      "complete": true
+    },
+    {
+      "path": "fixed/full/results/06-lqi.json",
+      "sha256": "2aea1d81a92bffb7fb01dfd80d0969f48731c5587413b3eda7c748d5950a4d0f",
+      "complete": true
+    },
+    {
+      "path": "fixed/angles/results/09-lqi.json",
+      "sha256": "2aea1d81a92bffb7fb01dfd80d0969f48731c5587413b3eda7c748d5950a4d0f",
+      "complete": true
+    },
+    {
+      "path": "fixed/angles/results/01-lqi.json",
+      "sha256": "2aea1d81a92bffb7fb01dfd80d0969f48731c5587413b3eda7c748d5950a4d0f",
+      "complete": true
+    },
+    {
+      "path": "fixed/angles/results/00-lqi.json",
+      "sha256": "2aea1d81a92bffb7fb01dfd80d0969f48731c5587413b3eda7c748d5950a4d0f",
+      "complete": true
+    },
+    {
+      "path": "fixed/angles/results/06-lqi.json",
+      "sha256": "2aea1d81a92bffb7fb01dfd80d0969f48731c5587413b3eda7c748d5950a4d0f",
+      "complete": true
+    },
+    {
+      "path": "fixed/sensor/results/08-lqi.json",
+      "sha256": "2aea1d81a92bffb7fb01dfd80d0969f48731c5587413b3eda7c748d5950a4d0f",
+      "complete": true
+    },
+    {
+      "path": "fixed/sensor/results/15-lqi.json",
+      "sha256": "2aea1d81a92bffb7fb01dfd80d0969f48731c5587413b3eda7c748d5950a4d0f",
+      "complete": true
+    },
+    {
+      "path": "fixed/sensor/results/12-lqi.json",
+      "sha256": "2aea1d81a92bffb7fb01dfd80d0969f48731c5587413b3eda7c748d5950a4d0f",
+      "complete": true
+    },
+    {
+      "path": "fixed/sensor/results/13-lqi.json",
+      "sha256": "2aea1d81a92bffb7fb01dfd80d0969f48731c5587413b3eda7c748d5950a4d0f",
+      "complete": true
+    },
+    {
+      "path": "fixed/sensor/results/14-lqi.json",
+      "sha256": "2aea1d81a92bffb7fb01dfd80d0969f48731c5587413b3eda7c748d5950a4d0f",
+      "complete": true
+    },
+    {
+      "path": "fixed/sensor/results/09-lqi.json",
+      "sha256": "2aea1d81a92bffb7fb01dfd80d0969f48731c5587413b3eda7c748d5950a4d0f",
+      "complete": true
+    },
+    {
+      "path": "fixed/sensor/results/02-lqi.json",
+      "sha256": "2aea1d81a92bffb7fb01dfd80d0969f48731c5587413b3eda7c748d5950a4d0f",
+      "complete": true
+    },
+    {
+      "path": "fixed/sensor/results/05-lqi.json",
+      "sha256": "2aea1d81a92bffb7fb01dfd80d0969f48731c5587413b3eda7c748d5950a4d0f",
+      "complete": true
+    },
+    {
+      "path": "fixed/sensor/results/07-lqi.json",
+      "sha256": "2aea1d81a92bffb7fb01dfd80d0969f48731c5587413b3eda7c748d5950a4d0f",
+      "complete": true
+    },
+    {
+      "path": "fixed/sensor/results/03-lqi.json",
+      "sha256": "2aea1d81a92bffb7fb01dfd80d0969f48731c5587413b3eda7c748d5950a4d0f",
+      "complete": true
+    },
+    {
+      "path": "fixed/sensor/results/01-lqi.json",
+      "sha256": "2aea1d81a92bffb7fb01dfd80d0969f48731c5587413b3eda7c748d5950a4d0f",
+      "complete": true
+    },
+    {
+      "path": "fixed/sensor/results/10-lqi.json",
+      "sha256": "2aea1d81a92bffb7fb01dfd80d0969f48731c5587413b3eda7c748d5950a4d0f",
+      "complete": true
+    },
+    {
+      "path": "fixed/sensor/results/00-lqi.json",
+      "sha256": "2aea1d81a92bffb7fb01dfd80d0969f48731c5587413b3eda7c748d5950a4d0f",
+      "complete": true
+    },
+    {
+      "path": "fixed/sensor/results/11-lqi.json",
+      "sha256": "2aea1d81a92bffb7fb01dfd80d0969f48731c5587413b3eda7c748d5950a4d0f",
+      "complete": true
+    },
+    {
+      "path": "fixed/sensor/results/04-lqi.json",
+      "sha256": "2aea1d81a92bffb7fb01dfd80d0969f48731c5587413b3eda7c748d5950a4d0f",
+      "complete": true
+    },
+    {
+      "path": "fixed/sensor/results/06-lqi.json",
+      "sha256": "2aea1d81a92bffb7fb01dfd80d0969f48731c5587413b3eda7c748d5950a4d0f",
+      "complete": true
+    },
+    {
+      "path": "fixed/airspeed/results/08-lqi.json",
+      "sha256": "2aea1d81a92bffb7fb01dfd80d0969f48731c5587413b3eda7c748d5950a4d0f",
+      "complete": true
+    },
+    {
+      "path": "fixed/airspeed/results/15-lqi.json",
+      "sha256": "2aea1d81a92bffb7fb01dfd80d0969f48731c5587413b3eda7c748d5950a4d0f",
+      "complete": true
+    },
+    {
+      "path": "fixed/airspeed/results/12-lqi.json",
+      "sha256": "2aea1d81a92bffb7fb01dfd80d0969f48731c5587413b3eda7c748d5950a4d0f",
+      "complete": true
+    },
+    {
+      "path": "fixed/airspeed/results/13-lqi.json",
+      "sha256": "2aea1d81a92bffb7fb01dfd80d0969f48731c5587413b3eda7c748d5950a4d0f",
+      "complete": true
+    },
+    {
+      "path": "fixed/airspeed/results/14-lqi.json",
+      "sha256": "2aea1d81a92bffb7fb01dfd80d0969f48731c5587413b3eda7c748d5950a4d0f",
+      "complete": true
+    },
+    {
+      "path": "fixed/airspeed/results/09-lqi.json",
+      "sha256": "2aea1d81a92bffb7fb01dfd80d0969f48731c5587413b3eda7c748d5950a4d0f",
+      "complete": true
+    },
+    {
+      "path": "fixed/airspeed/results/02-lqi.json",
+      "sha256": "2aea1d81a92bffb7fb01dfd80d0969f48731c5587413b3eda7c748d5950a4d0f",
+      "complete": true
+    },
+    {
+      "path": "fixed/airspeed/results/05-lqi.json",
+      "sha256": "2aea1d81a92bffb7fb01dfd80d0969f48731c5587413b3eda7c748d5950a4d0f",
+      "complete": true
+    },
+    {
+      "path": "fixed/airspeed/results/07-lqi.json",
+      "sha256": "2aea1d81a92bffb7fb01dfd80d0969f48731c5587413b3eda7c748d5950a4d0f",
+      "complete": true
+    },
+    {
+      "path": "fixed/airspeed/results/03-lqi.json",
+      "sha256": "2aea1d81a92bffb7fb01dfd80d0969f48731c5587413b3eda7c748d5950a4d0f",
+      "complete": true
+    },
+    {
+      "path": "fixed/airspeed/results/01-lqi.json",
+      "sha256": "2aea1d81a92bffb7fb01dfd80d0969f48731c5587413b3eda7c748d5950a4d0f",
+      "complete": true
+    },
+    {
+      "path": "fixed/airspeed/results/10-lqi.json",
+      "sha256": "2aea1d81a92bffb7fb01dfd80d0969f48731c5587413b3eda7c748d5950a4d0f",
+      "complete": true
+    },
+    {
+      "path": "fixed/airspeed/results/00-lqi.json",
+      "sha256": "2aea1d81a92bffb7fb01dfd80d0969f48731c5587413b3eda7c748d5950a4d0f",
+      "complete": true
+    },
+    {
+      "path": "fixed/airspeed/results/11-lqi.json",
+      "sha256": "2aea1d81a92bffb7fb01dfd80d0969f48731c5587413b3eda7c748d5950a4d0f",
+      "complete": true
+    },
+    {
+      "path": "fixed/airspeed/results/04-lqi.json",
+      "sha256": "2aea1d81a92bffb7fb01dfd80d0969f48731c5587413b3eda7c748d5950a4d0f",
+      "complete": true
+    },
+    {
+      "path": "fixed/airspeed/results/06-lqi.json",
+      "sha256": "2aea1d81a92bffb7fb01dfd80d0969f48731c5587413b3eda7c748d5950a4d0f",
+      "complete": true
+    },
+    {
+      "path": "fixed/sensorless/results/08-lqi.json",
+      "sha256": "2aea1d81a92bffb7fb01dfd80d0969f48731c5587413b3eda7c748d5950a4d0f",
+      "complete": true
+    },
+    {
+      "path": "fixed/sensorless/results/15-lqi.json",
+      "sha256": "2aea1d81a92bffb7fb01dfd80d0969f48731c5587413b3eda7c748d5950a4d0f",
+      "complete": true
+    },
+    {
+      "path": "fixed/sensorless/results/12-lqi.json",
+      "sha256": "2aea1d81a92bffb7fb01dfd80d0969f48731c5587413b3eda7c748d5950a4d0f",
+      "complete": true
+    },
+    {
+      "path": "fixed/sensorless/results/13-lqi.json",
+      "sha256": "2aea1d81a92bffb7fb01dfd80d0969f48731c5587413b3eda7c748d5950a4d0f",
+      "complete": true
+    },
+    {
+      "path": "fixed/sensorless/results/14-lqi.json",
+      "sha256": "2aea1d81a92bffb7fb01dfd80d0969f48731c5587413b3eda7c748d5950a4d0f",
+      "complete": true
+    },
+    {
+      "path": "fixed/sensorless/results/09-lqi.json",
+      "sha256": "2aea1d81a92bffb7fb01dfd80d0969f48731c5587413b3eda7c748d5950a4d0f",
+      "complete": true
+    },
+    {
+      "path": "fixed/sensorless/results/02-lqi.json",
+      "sha256": "2aea1d81a92bffb7fb01dfd80d0969f48731c5587413b3eda7c748d5950a4d0f",
+      "complete": true
+    },
+    {
+      "path": "fixed/sensorless/results/05-lqi.json",
+      "sha256": "2aea1d81a92bffb7fb01dfd80d0969f48731c5587413b3eda7c748d5950a4d0f",
+      "complete": true
+    },
+    {
+      "path": "fixed/sensorless/results/07-lqi.json",
+      "sha256": "2aea1d81a92bffb7fb01dfd80d0969f48731c5587413b3eda7c748d5950a4d0f",
+      "complete": true
+    },
+    {
+      "path": "fixed/sensorless/results/03-lqi.json",
+      "sha256": "2aea1d81a92bffb7fb01dfd80d0969f48731c5587413b3eda7c748d5950a4d0f",
+      "complete": true
+    },
+    {
+      "path": "fixed/sensorless/results/01-lqi.json",
+      "sha256": "2aea1d81a92bffb7fb01dfd80d0969f48731c5587413b3eda7c748d5950a4d0f",
+      "complete": true
+    },
+    {
+      "path": "fixed/sensorless/results/10-lqi.json",
+      "sha256": "2aea1d81a92bffb7fb01dfd80d0969f48731c5587413b3eda7c748d5950a4d0f",
+      "complete": true
+    },
+    {
+      "path": "fixed/sensorless/results/00-lqi.json",
+      "sha256": "2aea1d81a92bffb7fb01dfd80d0969f48731c5587413b3eda7c748d5950a4d0f",
+      "complete": true
+    },
+    {
+      "path": "fixed/sensorless/results/11-lqi.json",
+      "sha256": "2aea1d81a92bffb7fb01dfd80d0969f48731c5587413b3eda7c748d5950a4d0f",
+      "complete": true
+    },
+    {
+      "path": "fixed/sensorless/results/04-lqi.json",
+      "sha256": "2aea1d81a92bffb7fb01dfd80d0969f48731c5587413b3eda7c748d5950a4d0f",
+      "complete": true
+    },
+    {
+      "path": "fixed/sensorless/results/06-lqi.json",
+      "sha256": "2aea1d81a92bffb7fb01dfd80d0969f48731c5587413b3eda7c748d5950a4d0f",
+      "complete": true
+    },
+    {
+      "path": "fixed/standard/results/02-baseline.json",
+      "sha256": "2aea1d81a92bffb7fb01dfd80d0969f48731c5587413b3eda7c748d5950a4d0f",
+      "complete": true
+    },
+    {
+      "path": "fixed/standard/results/01-baseline.json",
+      "sha256": "2aea1d81a92bffb7fb01dfd80d0969f48731c5587413b3eda7c748d5950a4d0f",
+      "complete": true
+    },
+    {
+      "path": "fixed/standard/results/10-baseline.json",
+      "sha256": "2aea1d81a92bffb7fb01dfd80d0969f48731c5587413b3eda7c748d5950a4d0f",
+      "complete": true
+    },
+    {
+      "path": "fixed/standard/results/06-baseline.json",
+      "sha256": "2aea1d81a92bffb7fb01dfd80d0969f48731c5587413b3eda7c748d5950a4d0f",
+      "complete": true
+    },
+    {
+      "path": "fixed/standard/results/05-baseline.json",
+      "sha256": "2aea1d81a92bffb7fb01dfd80d0969f48731c5587413b3eda7c748d5950a4d0f",
+      "complete": true
+    },
+    {
+      "path": "fixed/standard/results/14-baseline.json",
+      "sha256": "2aea1d81a92bffb7fb01dfd80d0969f48731c5587413b3eda7c748d5950a4d0f",
+      "complete": true
+    },
+    {
+      "path": "fixed/standard/results/12-baseline.json",
+      "sha256": "2aea1d81a92bffb7fb01dfd80d0969f48731c5587413b3eda7c748d5950a4d0f",
+      "complete": true
+    },
+    {
+      "path": "fixed/standard/results/04-baseline.json",
+      "sha256": "2aea1d81a92bffb7fb01dfd80d0969f48731c5587413b3eda7c748d5950a4d0f",
+      "complete": true
+    },
+    {
+      "path": "fixed/standard/results/03-baseline.json",
+      "sha256": "2aea1d81a92bffb7fb01dfd80d0969f48731c5587413b3eda7c748d5950a4d0f",
+      "complete": true
+    },
+    {
+      "path": "fixed/standard/results/08-baseline.json",
+      "sha256": "2aea1d81a92bffb7fb01dfd80d0969f48731c5587413b3eda7c748d5950a4d0f",
+      "complete": true
+    },
+    {
+      "path": "fixed/standard/results/07-baseline.json",
+      "sha256": "2aea1d81a92bffb7fb01dfd80d0969f48731c5587413b3eda7c748d5950a4d0f",
+      "complete": true
+    },
+    {
+      "path": "fixed/standard/results/13-baseline.json",
+      "sha256": "2aea1d81a92bffb7fb01dfd80d0969f48731c5587413b3eda7c748d5950a4d0f",
+      "complete": true
+    },
+    {
+      "path": "fixed/standard/results/15-baseline.json",
+      "sha256": "2aea1d81a92bffb7fb01dfd80d0969f48731c5587413b3eda7c748d5950a4d0f",
+      "complete": true
+    },
+    {
+      "path": "fixed/standard/results/11-baseline.json",
+      "sha256": "2aea1d81a92bffb7fb01dfd80d0969f48731c5587413b3eda7c748d5950a4d0f",
+      "complete": true
+    },
+    {
+      "path": "fixed/standard/results/00-baseline.json",
+      "sha256": "2aea1d81a92bffb7fb01dfd80d0969f48731c5587413b3eda7c748d5950a4d0f",
+      "complete": true
+    },
+    {
+      "path": "fixed/standard/results/09-baseline.json",
+      "sha256": "2aea1d81a92bffb7fb01dfd80d0969f48731c5587413b3eda7c748d5950a4d0f",
+      "complete": true
+    },
+    {
+      "path": "efficient/sensor/results/09-lqi.json",
+      "sha256": "d47908c924a44ab6ffa43cd3f9455f592b50088578f8e70461f3f142268f9136",
+      "complete": true
+    },
+    {
+      "path": "efficient/sensor/results/01-lqi.json",
+      "sha256": "d47908c924a44ab6ffa43cd3f9455f592b50088578f8e70461f3f142268f9136",
+      "complete": true
+    },
+    {
+      "path": "efficient/sensor/results/00-lqi.json",
+      "sha256": "d47908c924a44ab6ffa43cd3f9455f592b50088578f8e70461f3f142268f9136",
+      "complete": true
+    },
+    {
+      "path": "efficient/sensor/results/06-lqi.json",
+      "sha256": "d47908c924a44ab6ffa43cd3f9455f592b50088578f8e70461f3f142268f9136",
+      "complete": true
+    },
+    {
+      "path": "damping/sensor/results/08-lqi.json",
+      "sha256": "58bbb9ac21bada4de86be9068261e26d5ce1413ae555dcc2f2979b565cb6bbc1",
+      "complete": true
+    },
+    {
+      "path": "damping/sensor/results/15-lqi.json",
+      "sha256": "58bbb9ac21bada4de86be9068261e26d5ce1413ae555dcc2f2979b565cb6bbc1",
+      "complete": true
+    },
+    {
+      "path": "damping/sensor/results/12-lqi.json",
+      "sha256": "58bbb9ac21bada4de86be9068261e26d5ce1413ae555dcc2f2979b565cb6bbc1",
+      "complete": true
+    },
+    {
+      "path": "damping/sensor/results/13-lqi.json",
+      "sha256": "58bbb9ac21bada4de86be9068261e26d5ce1413ae555dcc2f2979b565cb6bbc1",
+      "complete": true
+    },
+    {
+      "path": "damping/sensor/results/14-lqi.json",
+      "sha256": "58bbb9ac21bada4de86be9068261e26d5ce1413ae555dcc2f2979b565cb6bbc1",
+      "complete": true
+    },
+    {
+      "path": "damping/sensor/results/09-lqi.json",
+      "sha256": "58bbb9ac21bada4de86be9068261e26d5ce1413ae555dcc2f2979b565cb6bbc1",
+      "complete": true
+    },
+    {
+      "path": "damping/sensor/results/02-lqi.json",
+      "sha256": "58bbb9ac21bada4de86be9068261e26d5ce1413ae555dcc2f2979b565cb6bbc1",
+      "complete": true
+    },
+    {
+      "path": "damping/sensor/results/05-lqi.json",
+      "sha256": "58bbb9ac21bada4de86be9068261e26d5ce1413ae555dcc2f2979b565cb6bbc1",
+      "complete": true
+    },
+    {
+      "path": "damping/sensor/results/07-lqi.json",
+      "sha256": "58bbb9ac21bada4de86be9068261e26d5ce1413ae555dcc2f2979b565cb6bbc1",
+      "complete": true
+    },
+    {
+      "path": "damping/sensor/results/03-lqi.json",
+      "sha256": "58bbb9ac21bada4de86be9068261e26d5ce1413ae555dcc2f2979b565cb6bbc1",
+      "complete": true
+    },
+    {
+      "path": "damping/sensor/results/01-lqi.json",
+      "sha256": "58bbb9ac21bada4de86be9068261e26d5ce1413ae555dcc2f2979b565cb6bbc1",
+      "complete": true
+    },
+    {
+      "path": "damping/sensor/results/10-lqi.json",
+      "sha256": "58bbb9ac21bada4de86be9068261e26d5ce1413ae555dcc2f2979b565cb6bbc1",
+      "complete": true
+    },
+    {
+      "path": "damping/sensor/results/00-lqi.json",
+      "sha256": "58bbb9ac21bada4de86be9068261e26d5ce1413ae555dcc2f2979b565cb6bbc1",
+      "complete": true
+    },
+    {
+      "path": "damping/sensor/results/11-lqi.json",
+      "sha256": "58bbb9ac21bada4de86be9068261e26d5ce1413ae555dcc2f2979b565cb6bbc1",
+      "complete": true
+    },
+    {
+      "path": "damping/sensor/results/04-lqi.json",
+      "sha256": "58bbb9ac21bada4de86be9068261e26d5ce1413ae555dcc2f2979b565cb6bbc1",
+      "complete": true
+    },
+    {
+      "path": "damping/sensor/results/06-lqi.json",
+      "sha256": "58bbb9ac21bada4de86be9068261e26d5ce1413ae555dcc2f2979b565cb6bbc1",
+      "complete": true
+    }
+  ],
+  "experiment_source_sha256": {
+    "install.py": "485d1a7330ab906a5a5bf935610bd886c2487af06ec282788b97bfe56f29f496",
+    "retune.sh": "9f05051371130085b6e439bbcfcf2d052f288c1e83de81ac300a2a49f46c363f",
+    "prepare.py": "3c448ca770006f7c7e3a25a511ec987414b9a476b78334d5024b36b30b875211",
+    "summary.py": "6a6caecb5a549a086e01b4bd02981f0d8c5ed95b26bd933b079352a7e16aed86",
+    "analyze.py": "d664ed1d530ca97c693b3ef8b9305fe57eb1ab92037b8cf96eae26601bd934b4",
+    "run.py": "432bb505bb60f4eb34b3ca2b399829caf4e9cbddde36a49292420d1add6fc2e5",
+    "select.py": "56e584fdf2d4097db7ad289955e2c3fb9577348a500c07d111ffed2e3d6f1a8f",
+    "provenance.py": "1e74542720738bbec70be59c1ca35f53e94622068291d7e27fafff78d8f75942",
+    "audit.py": "5c61bfaa75544622cf098ff2a7405323218d2b5eb6a2464617c660f26d6b8fa9",
+    "sensor.ts": "91236ead582eccbd43c99a6137a58d8bd387db87b14a67881607d5d7b1171595",
+    "sensor.test.ts": "3e2be4ef476bb40e24bfeb6e3ecbb2ee6b55083b50ed23239f414613ad32ad89"
+  },
+  "runtime_physics_sha256": "e30470823ff62bfa8fd03fdd19af4af677321cb6f7f0b1b8d81ee30598428f05"
+}

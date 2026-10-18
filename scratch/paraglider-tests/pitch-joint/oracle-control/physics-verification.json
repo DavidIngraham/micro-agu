@@ -1,9 +1,0 @@
-{
-  "compute_forces_bf": true,
-  "compute_torque_bf": true,
-  "pitch_geometry": true,
-  "pitch_accelerations": true,
-  "inertia_mul": true,
-  "inertia_inv_mul": true,
-  "eval_parafoil_coeffs": true
-}

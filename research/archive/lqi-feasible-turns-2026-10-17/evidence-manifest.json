@@ -1,0 +1,680 @@
+{
+  "schema": 1,
+  "archive": "evidence.tar.gz",
+  "sha256": "89532bbf70f1598f71b5e084d81a7494b8faae31b61b555a6d9e6d37094f364f",
+  "files": [
+    {
+      "path": "ablation/aw/lqi-25/000-metrics.json",
+      "sha256": "c62d06308648fd65186839e08bcaba717e4566d401f7e7a376a1d03c1a51897b",
+      "bytes": 2058
+    },
+    {
+      "path": "ablation/aw/lqi-25/000-spec.json",
+      "sha256": "cf3c489e4ad09298f5a735bd33cc4ac2849a423ae7678eb23c8cf5be1fffe65e",
+      "bytes": 286
+    },
+    {
+      "path": "ablation/aw/lqi-25/001-metrics.json",
+      "sha256": "c4f428a9851ee0ea3437c7e7310bf8834d626b8c97f191ac250e950928b6ad33",
+      "bytes": 2054
+    },
+    {
+      "path": "ablation/aw/lqi-25/001-spec.json",
+      "sha256": "4380bee97085b6db74a5c755aeab27f66d2bc55c8ec8dbc18d1cc807650d6b80",
+      "bytes": 287
+    },
+    {
+      "path": "ablation/aw/lqi-25/summary.json",
+      "sha256": "bafbe21571cdd9967a9073c270967e16a6cf9c658d9bf1a325d3a2c406987ddd",
+      "bytes": 4378
+    },
+    {
+      "path": "ablation/map/lqi-25/000-metrics.json",
+      "sha256": "5159e91f3e87db9194e5b865c96fef64f876cb7c8805a76077e454d9931aab15",
+      "bytes": 2064
+    },
+    {
+      "path": "ablation/map/lqi-25/000-spec.json",
+      "sha256": "c337d69e9b366c3686185b40db2c16557a796bc43e4907c9a0ca33fe5d5bfb80",
+      "bytes": 284
+    },
+    {
+      "path": "ablation/map/lqi-25/001-metrics.json",
+      "sha256": "71928d2c58923b80ed496dc2bcfebbb46399f6c9fb67b5f942faed5bfc2c0184",
+      "bytes": 2058
+    },
+    {
+      "path": "ablation/map/lqi-25/001-spec.json",
+      "sha256": "890ef48df10502076d274ca4070f2496a1cf198a6ef737b5988f05b6594d6835",
+      "bytes": 285
+    },
+    {
+      "path": "ablation/map/lqi-25/summary.json",
+      "sha256": "cab31719ef64d190f2ba5858310501130454e1982e199d22d19fdbcc569ecdda",
+      "bytes": 4388
+    },
+    {
+      "path": "ablation/map_aw/lqi-25/000-metrics.json",
+      "sha256": "9cad5c28f452a082c8ca5f96751e41efb8f3ef31a579ae610e8cb20a3baf3dd4",
+      "bytes": 2063
+    },
+    {
+      "path": "ablation/map_aw/lqi-25/000-spec.json",
+      "sha256": "79adb689e1f1202bd7aa3bfa746774b2799c332f14ab4ca8a8a193d1ff0cf82c",
+      "bytes": 305
+    },
+    {
+      "path": "ablation/map_aw/lqi-25/001-metrics.json",
+      "sha256": "33a89b0de00bdac88fe45a9e736c9e14c3022f1232dcfeaf34f448dbfcf3020d",
+      "bytes": 2066
+    },
+    {
+      "path": "ablation/map_aw/lqi-25/001-spec.json",
+      "sha256": "f39c0f333cc4f996ff0e1b6681dc0e00cada47ded193924c73e4bd65dd576349",
+      "bytes": 306
+    },
+    {
+      "path": "ablation/map_aw/lqi-25/summary.json",
+      "sha256": "55dc7a4276b1066f164286ff0ad3403d3338f70174c2cd7f384706cc4411cd50",
+      "bytes": 4395
+    },
+    {
+      "path": "ablation/map_aw_observer/lqi-25/000-metrics.json",
+      "sha256": "9e7c6bb3875ff30fb48773aeeec51024039143a1c28d1b68e1fc9a2c6fd3809f",
+      "bytes": 2055
+    },
+    {
+      "path": "ablation/map_aw_observer/lqi-25/000-spec.json",
+      "sha256": "67966e720fa166bdd0c32e5e7c176145a3db0006cd391035196a1ff86c63fa40",
+      "bytes": 327
+    },
+    {
+      "path": "ablation/map_aw_observer/lqi-25/001-metrics.json",
+      "sha256": "2bcfe12c6a20f08a6694412d8dbaf005f805d9bac9347db87530814f75f8355a",
+      "bytes": 2061
+    },
+    {
+      "path": "ablation/map_aw_observer/lqi-25/001-spec.json",
+      "sha256": "c543a0bcbbf133d7ecb885a35808840c8c3075956d7f837c768175728ddc6377",
+      "bytes": 328
+    },
+    {
+      "path": "ablation/map_aw_observer/lqi-25/summary.json",
+      "sha256": "96c7edaf0fa09fe998c6232cf021d59346eb642a81d0f90bba45192dfdfafc3d",
+      "bytes": 4382
+    },
+    {
+      "path": "ablation/reference/lqi-25/000-metrics.json",
+      "sha256": "6cec48109fe0863071dd3e5e5f8581dd3044f406b709bf81c0ce11cc75facf78",
+      "bytes": 2192
+    },
+    {
+      "path": "ablation/reference/lqi-25/000-spec.json",
+      "sha256": "3fab6440e722bb19d87e8be9fe9ee5d402ff34a87723753dc59e93aad02a8854",
+      "bytes": 263
+    },
+    {
+      "path": "ablation/reference/lqi-25/001-metrics.json",
+      "sha256": "2c98dc9f63056c0dadcba0ed622fed4fc8bddd59dbd9f0998807b9f868b60ce6",
+      "bytes": 2129
+    },
+    {
+      "path": "ablation/reference/lqi-25/001-spec.json",
+      "sha256": "57fcdeb6fef20d99b7493381fa8408646052be3c6ea0be1a14316d495d121d4a",
+      "bytes": 264
+    },
+    {
+      "path": "ablation/reference/lqi-25/summary.json",
+      "sha256": "066f4fd6e006c7b3243868bb6374bce779a1e9e5600f5deda89d1e948d1c7718",
+      "bytes": 4603
+    },
+    {
+      "path": "extension/aw/lqi-30/000-metrics.json",
+      "sha256": "5159405397aa8e50818cebe6f36963c522bf5e923dcbc4a5be1af0b24ad7940b",
+      "bytes": 2057
+    },
+    {
+      "path": "extension/aw/lqi-30/000-spec.json",
+      "sha256": "8ce5405b4583ecb5643c2b400790dd614186262364e326427c96f75f2e16c889",
+      "bytes": 286
+    },
+    {
+      "path": "extension/aw/lqi-30/001-metrics.json",
+      "sha256": "d6b8a812629d55df7a0193031c9fd086804d4ca5a2165bab7d78caf05f275a4c",
+      "bytes": 2057
+    },
+    {
+      "path": "extension/aw/lqi-30/001-spec.json",
+      "sha256": "77768a8b5bae7d6697cade811d1a59cfa57e61dab3ae0af2a228eabb66720b71",
+      "bytes": 287
+    },
+    {
+      "path": "extension/aw/lqi-30/summary.json",
+      "sha256": "8b3cb28cc67d965cdf718b69f686125b88b1f42b8156ea21e1d8a869c7e86896",
+      "bytes": 4380
+    },
+    {
+      "path": "extension/aw/lqi-35/000-metrics.json",
+      "sha256": "806e3f86714f24055a81d85cab50a4050bcd0f1e53fa31e6976cac6583dff0c3",
+      "bytes": 2053
+    },
+    {
+      "path": "extension/aw/lqi-35/000-spec.json",
+      "sha256": "bde8cedc4cb309c1ab3440eaee8d28d17098094d0dd8550f0b47f125f51f6930",
+      "bytes": 286
+    },
+    {
+      "path": "extension/aw/lqi-35/001-metrics.json",
+      "sha256": "ce3a73ecdb9310f9ed9039d1fd6f626d7f3525a169a0f98f7237b19f133f251c",
+      "bytes": 2052
+    },
+    {
+      "path": "extension/aw/lqi-35/001-spec.json",
+      "sha256": "bfba9bf052e0e06a8d16135456ae7fbb8b704ff506cfec217a44f7acb688d6d6",
+      "bytes": 287
+    },
+    {
+      "path": "extension/aw/lqi-35/summary.json",
+      "sha256": "48a2d4aa376780be5e9a727db736bfe4dbbfda00198f08c8341a7252c79a645c",
+      "bytes": 4371
+    },
+    {
+      "path": "extension/aw/lqi-40/000-metrics.json",
+      "sha256": "4b4211d0f3d14342b07d37e0d6758b8c0978c1ee128a4d068b227dfeb693f4a2",
+      "bytes": 232
+    },
+    {
+      "path": "extension/aw/lqi-40/000-spec.json",
+      "sha256": "fa101fda6289e5d9ff39dbc5c23c26e5eaa1db7908e43b6d09a8953e3b0ef724",
+      "bytes": 286
+    },
+    {
+      "path": "extension/aw/lqi-40/001-metrics.json",
+      "sha256": "a530e86b7615f93db5e15fab4028fb098b3f559e40a6c837c178f54d56fe78e1",
+      "bytes": 2083
+    },
+    {
+      "path": "extension/aw/lqi-40/001-spec.json",
+      "sha256": "237a73cf3d3045e83a488a6d0b56a29cbb50038073c2e0b89c86bce5416732ba",
+      "bytes": 287
+    },
+    {
+      "path": "extension/aw/lqi-40/summary.json",
+      "sha256": "0710d7bedc13f24fa7eb864c8de93299e7eb8592fceb96310ec7c08bf0fd1a23",
+      "bytes": 2477
+    },
+    {
+      "path": "extension/map_aw_observer/lqi-10/000-metrics.json",
+      "sha256": "0ba47c39c2286b555219852e9dfa39d8e22123567d846af61afaa7d216177f19",
+      "bytes": 2065
+    },
+    {
+      "path": "extension/map_aw_observer/lqi-10/000-spec.json",
+      "sha256": "25089e3aee240ae8e953b1a5c063e34d434cf956bc32a3ca223c583dee6611d4",
+      "bytes": 327
+    },
+    {
+      "path": "extension/map_aw_observer/lqi-10/001-metrics.json",
+      "sha256": "a4ccf36fb8b91922028a1a0f0cba078067cea70f02fa57c766402c15335cb32e",
+      "bytes": 2068
+    },
+    {
+      "path": "extension/map_aw_observer/lqi-10/001-spec.json",
+      "sha256": "2f3d7cde2137c4c0adff989d50cd69738df98f0f76bace40d1996921492cb1db",
+      "bytes": 328
+    },
+    {
+      "path": "extension/map_aw_observer/lqi-10/summary.json",
+      "sha256": "8d21368df11058cb231a9c67417abf812757f4accb0f4b059d2b5e6c800a745b",
+      "bytes": 4399
+    },
+    {
+      "path": "extension/map_aw_observer/lqi-15/000-metrics.json",
+      "sha256": "9eedc4d8c8322384be20ab9dee3f0cfe1fd7858b5f6ba0f3beb5747ce7574447",
+      "bytes": 2063
+    },
+    {
+      "path": "extension/map_aw_observer/lqi-15/000-spec.json",
+      "sha256": "872c9f42cb4f80651264299824263298d5ec64ac53049c9a469685f460d9b4cd",
+      "bytes": 327
+    },
+    {
+      "path": "extension/map_aw_observer/lqi-15/001-metrics.json",
+      "sha256": "b86ed2889e4f6629a29aff10e26ecc866f9ca875abe690670665986a9d1c18c6",
+      "bytes": 2060
+    },
+    {
+      "path": "extension/map_aw_observer/lqi-15/001-spec.json",
+      "sha256": "82ff17df950aa4d03a4b74f2e1f05271a9c9e6024df9d0308d6b41df2a33074b",
+      "bytes": 328
+    },
+    {
+      "path": "extension/map_aw_observer/lqi-15/summary.json",
+      "sha256": "98fb14d28a7d6bc3e082abd216a39f3882b06ce2b958bc7040cd8ef068d62c2e",
+      "bytes": 4389
+    },
+    {
+      "path": "extension/map_aw_observer/lqi-20/000-metrics.json",
+      "sha256": "457708994d29535cf20330d7344ed0f8622e5175b8e6815299f1ad7497684877",
+      "bytes": 2068
+    },
+    {
+      "path": "extension/map_aw_observer/lqi-20/000-spec.json",
+      "sha256": "5a92d2638d25a771847fd4b5a22fd10952cacb125e36c022ae9a94ea97004ea1",
+      "bytes": 327
+    },
+    {
+      "path": "extension/map_aw_observer/lqi-20/001-metrics.json",
+      "sha256": "d9420370356726e023d243d59a07fcba30148173f1a5ebbe04c3bcd9ef88e4cd",
+      "bytes": 2071
+    },
+    {
+      "path": "extension/map_aw_observer/lqi-20/001-spec.json",
+      "sha256": "dc9a6aae3d8b57d7353a48bdb0470c3ad0f8d53d58ad7beb4e469b35e14a148c",
+      "bytes": 328
+    },
+    {
+      "path": "extension/map_aw_observer/lqi-20/summary.json",
+      "sha256": "c4b10c0403071f34fffae09d9803b121db0162adae6fdcee8ff6daab61b687ae",
+      "bytes": 4405
+    },
+    {
+      "path": "extension/map_aw_observer/lqi-30/000-metrics.json",
+      "sha256": "c179fa08ebb91d9f431ba408d322396531a90207b97befde93b2520453ede1e4",
+      "bytes": 2059
+    },
+    {
+      "path": "extension/map_aw_observer/lqi-30/000-spec.json",
+      "sha256": "2f4a10ca20d55815f459cb87e0e6ca9bc7ff787d003e6f19ddb9306b282034a2",
+      "bytes": 327
+    },
+    {
+      "path": "extension/map_aw_observer/lqi-30/001-metrics.json",
+      "sha256": "b913da8ed0c8ae406465e882b6bd8c9d2cc89bf78dfaf5a973969bcddf5ed673",
+      "bytes": 2063
+    },
+    {
+      "path": "extension/map_aw_observer/lqi-30/001-spec.json",
+      "sha256": "6d97005ce7495759e952d45e3af218bed337d3fac944d67fc141c87cce1468f2",
+      "bytes": 328
+    },
+    {
+      "path": "extension/map_aw_observer/lqi-30/summary.json",
+      "sha256": "9e548b14d5e0e51933ba99290f09f1b6621632ad3880dac70fd17c60eadd5a76",
+      "bytes": 4388
+    },
+    {
+      "path": "extension/map_aw_observer/lqi-35/000-metrics.json",
+      "sha256": "cd23d5953d47e18bdfc3ac26df9cdcfab4b0984d2f798e641d99d9e2812bbca0",
+      "bytes": 2060
+    },
+    {
+      "path": "extension/map_aw_observer/lqi-35/000-spec.json",
+      "sha256": "aad95f58b37ca2517d4a3b5e61cfbe92ca6a8f0489ed7aab12ef54482a94e0ff",
+      "bytes": 327
+    },
+    {
+      "path": "extension/map_aw_observer/lqi-35/001-metrics.json",
+      "sha256": "913537384721d643a8e79417c9ecc4cb3efe8d9135c1c685eb0e87a5a7ea08e5",
+      "bytes": 2064
+    },
+    {
+      "path": "extension/map_aw_observer/lqi-35/001-spec.json",
+      "sha256": "44faf662f184233ccb481d0e897063152ff39b13bd1dee892fa5a6faadfbd4d4",
+      "bytes": 328
+    },
+    {
+      "path": "extension/map_aw_observer/lqi-35/summary.json",
+      "sha256": "1014f04a58284f83326b529f5e754ffe1ac06af79b117663a338906d4633ceea",
+      "bytes": 4390
+    },
+    {
+      "path": "extension/map_aw_observer/lqi-40/000-metrics.json",
+      "sha256": "5adbfc6d7bf719e0b4d1025cccc7a3075dffc276d8d2ed97d93fcaeec6be9601",
+      "bytes": 2063
+    },
+    {
+      "path": "extension/map_aw_observer/lqi-40/000-spec.json",
+      "sha256": "1cae111613ff833d973d22c7d13a7267e7e7b3cd242336e8d9c0e8f8b1d35e22",
+      "bytes": 327
+    },
+    {
+      "path": "extension/map_aw_observer/lqi-40/001-metrics.json",
+      "sha256": "0f7a3be5e2576d314e8107cb3eb4f9ae996cccd741d977ade22e49e7017c135d",
+      "bytes": 2064
+    },
+    {
+      "path": "extension/map_aw_observer/lqi-40/001-spec.json",
+      "sha256": "246d546168fdec14fead68c46721d582ed625b01d3f800f0dbb364b3569c5a0c",
+      "bytes": 328
+    },
+    {
+      "path": "extension/map_aw_observer/lqi-40/summary.json",
+      "sha256": "1ce905cd4677151f6db724ec4d1dd1058b1764fe7ef97d630c1cf64f040ac772",
+      "bytes": 4393
+    },
+    {
+      "path": "original/manifest.json",
+      "sha256": "7c77d88d1cc11417bb8edc5e74c8ab6f65938e5b19af90f631c1125198dc8904",
+      "bytes": 4222
+    },
+    {
+      "path": "validation/aw/lqi-25/100-metrics.json",
+      "sha256": "046276379c1f906d8e5bdb94e34efe51e8da2b743795f20047df728084d629d3",
+      "bytes": 2152
+    },
+    {
+      "path": "validation/aw/lqi-25/100-spec.json",
+      "sha256": "be86df1b0727e0e6afe4320f49e3fe5bf6a394bcbb6b1f8896f35ab90beb0846",
+      "bytes": 562
+    },
+    {
+      "path": "validation/aw/lqi-25/101-metrics.json",
+      "sha256": "4f90113c81cf1b3a8611ca70c6e90e8efa549390ccd3a80a2dad570b87ad65aa",
+      "bytes": 2535
+    },
+    {
+      "path": "validation/aw/lqi-25/101-spec.json",
+      "sha256": "1c1c0123375e794141b6e17be86dc9735ce32c4958b806bc241a12f38f95a913",
+      "bytes": 561
+    },
+    {
+      "path": "validation/aw/lqi-25/102-metrics.json",
+      "sha256": "32b43f98462d8c02da186c1bd27d18549238f33597644ca16fd2fd0568f05f38",
+      "bytes": 2386
+    },
+    {
+      "path": "validation/aw/lqi-25/102-spec.json",
+      "sha256": "dae3032a40eb7aea31f084676f3095dfdde4c515364d93b70a9dcf559a6ac54b",
+      "bytes": 562
+    },
+    {
+      "path": "validation/aw/lqi-25/103-metrics.json",
+      "sha256": "d2ff1e9d66a16bbc7b25f83b2ae272de726a102ac077f7555e38eb57be20ab67",
+      "bytes": 2161
+    },
+    {
+      "path": "validation/aw/lqi-25/103-spec.json",
+      "sha256": "8d479b87b599bc179df56ea8eb72eac1bc4237eb35b7bccd6732cf2d803e893a",
+      "bytes": 561
+    },
+    {
+      "path": "validation/aw/lqi-25/104-metrics.json",
+      "sha256": "2af43d4cccb6ab05a0c25f14645dac38e5da2939740b6cf3be5426afde0ae12b",
+      "bytes": 2396
+    },
+    {
+      "path": "validation/aw/lqi-25/104-spec.json",
+      "sha256": "4da0c172bf089e67debe4d76b0bc3b21cab53d0b1a461dd1434a78810ff1623f",
+      "bytes": 563
+    },
+    {
+      "path": "validation/aw/lqi-25/105-metrics.json",
+      "sha256": "decab427dd98b62fd1a2c7b4ddc2a52b5786f5593b3b777069ff404ec962b532",
+      "bytes": 2607
+    },
+    {
+      "path": "validation/aw/lqi-25/105-spec.json",
+      "sha256": "5f12ea7582dcca40ea7287863848e69520324aeead55f8fe5baba87a2bd32098",
+      "bytes": 561
+    },
+    {
+      "path": "validation/aw/lqi-25/summary.json",
+      "sha256": "9ff5a5663ae09d4ef162b3c2070d06a7786837a3f019a1fc497613c1aff6afc5",
+      "bytes": 15155
+    },
+    {
+      "path": "validation/map_aw/lqi-25/100-metrics.json",
+      "sha256": "b3ba7d5f655ba0da6daf0212fafcda3aeb56ad87d29858de23ed536113e37e2c",
+      "bytes": 2159
+    },
+    {
+      "path": "validation/map_aw/lqi-25/100-spec.json",
+      "sha256": "608676210f0480ab135135acf56d267a8d2452708ce5ae0b1dcc5b334d94c1dd",
+      "bytes": 581
+    },
+    {
+      "path": "validation/map_aw/lqi-25/101-metrics.json",
+      "sha256": "f8458d744b83025fd383347b47bdc82fbb7b6995539ed9fbe9fb20de1b0477a7",
+      "bytes": 2575
+    },
+    {
+      "path": "validation/map_aw/lqi-25/101-spec.json",
+      "sha256": "6363070c8db7a7e76cec637065fed7216452702c47cc43afeda78a2b5dbabb4d",
+      "bytes": 580
+    },
+    {
+      "path": "validation/map_aw/lqi-25/102-metrics.json",
+      "sha256": "63aa2d8c6e1d663f59f37319be8dc64e585058b19089596f92cb1f6df18f4f65",
+      "bytes": 2323
+    },
+    {
+      "path": "validation/map_aw/lqi-25/102-spec.json",
+      "sha256": "736a0b61ad9c1be2124be18cb206f4b0bb9edd5bdd8cf0c6b317991802b9be56",
+      "bytes": 581
+    },
+    {
+      "path": "validation/map_aw/lqi-25/103-metrics.json",
+      "sha256": "6bc1d5abdd892a983f0877fc9fd9b7d9d64fd88d623b6929a471d6e47023edc5",
+      "bytes": 2166
+    },
+    {
+      "path": "validation/map_aw/lqi-25/103-spec.json",
+      "sha256": "d08d0979e47ae993e782cc70e96a3d9b62dca678b2d2cf9c6c7983cb0f00d824",
+      "bytes": 580
+    },
+    {
+      "path": "validation/map_aw/lqi-25/104-metrics.json",
+      "sha256": "01687d3fc987edeac0e1466c4b75a028d7b5e90ee62cc2a3df0c78ce76bb91a7",
+      "bytes": 2391
+    },
+    {
+      "path": "validation/map_aw/lqi-25/104-spec.json",
+      "sha256": "817121685ac01aab7364412372fede11a09017647bc8d9188e30097e46a7acd5",
+      "bytes": 582
+    },
+    {
+      "path": "validation/map_aw/lqi-25/105-metrics.json",
+      "sha256": "7747ea5bf6317803330ef4cb19454e29164cc953e505bd3f82c793c91971b8ce",
+      "bytes": 2612
+    },
+    {
+      "path": "validation/map_aw/lqi-25/105-spec.json",
+      "sha256": "bcf368333401355bba95aa39065af93546b9d3495d9e7f4233f1e63f899e8b1e",
+      "bytes": 580
+    },
+    {
+      "path": "validation/map_aw/lqi-25/summary.json",
+      "sha256": "895d01fc39e22e8884ac9e65b9671fecb2fd88dd5535a6afe450eae7b0b44cc2",
+      "bytes": 15142
+    },
+    {
+      "path": "validation/map_aw_observer/lqi-25/100-metrics.json",
+      "sha256": "8e5b5f8e2d9afaf8f60e35830482587151107013589f4065058ff1a34b9defe1",
+      "bytes": 2192
+    },
+    {
+      "path": "validation/map_aw_observer/lqi-25/100-spec.json",
+      "sha256": "e27b35bba0af2abc5f74f3f3a9bb0d35ebbc9c9b4fc9c463038e84ba509ffa77",
+      "bytes": 603
+    },
+    {
+      "path": "validation/map_aw_observer/lqi-25/101-metrics.json",
+      "sha256": "e98874b2721e29bbbfd2de93ac55ecdb992bbd1af260d13d8e3daf3f96e973d6",
+      "bytes": 2574
+    },
+    {
+      "path": "validation/map_aw_observer/lqi-25/101-spec.json",
+      "sha256": "b838e6009bc92d40114ab79df0222f835f0af9cd2bde47108e588369afbf1430",
+      "bytes": 602
+    },
+    {
+      "path": "validation/map_aw_observer/lqi-25/102-metrics.json",
+      "sha256": "e51fd6a2a7dc13ab4e6b1bc7f1886fe0925bbb805c06e43adcbabbe8183fad4b",
+      "bytes": 2324
+    },
+    {
+      "path": "validation/map_aw_observer/lqi-25/102-spec.json",
+      "sha256": "1b8319219d108ac60a466015d0cf58ca90195a33a7acc71df0569d13bead00a9",
+      "bytes": 603
+    },
+    {
+      "path": "validation/map_aw_observer/lqi-25/103-metrics.json",
+      "sha256": "7a0481cc474aeb5279c8608c78f7262e1e766ff34c9123e8e3d7f6f54ce53e26",
+      "bytes": 2134
+    },
+    {
+      "path": "validation/map_aw_observer/lqi-25/103-spec.json",
+      "sha256": "36fefebc07a32905fdceb01db1a795a259dba2f31ebbe003e0290a53cc6028ea",
+      "bytes": 602
+    },
+    {
+      "path": "validation/map_aw_observer/lqi-25/104-metrics.json",
+      "sha256": "8d12118dc893ba17386f9348e7c9f4d11747e8979d9cda765810773214672197",
+      "bytes": 2392
+    },
+    {
+      "path": "validation/map_aw_observer/lqi-25/104-spec.json",
+      "sha256": "055d1e13d11249607bb955f5c9fcb8c8277115e4c3e1a1fde8403c13d1873969",
+      "bytes": 604
+    },
+    {
+      "path": "validation/map_aw_observer/lqi-25/105-metrics.json",
+      "sha256": "7d15f48a2c23e4180db826b204d12a42be06c729f6f45a00dd38382276983992",
+      "bytes": 2611
+    },
+    {
+      "path": "validation/map_aw_observer/lqi-25/105-spec.json",
+      "sha256": "132ba66b8c47182d8f3a7946726d447a12fae570ab29b7c77dfe039af115357d",
+      "bytes": 602
+    },
+    {
+      "path": "validation/map_aw_observer/lqi-25/summary.json",
+      "sha256": "12f15e78b368d823960fecd82ac8dc292ec088b9ab5da6dfeab8721c0b306eab",
+      "bytes": 15143
+    },
+    {
+      "path": "validation/reference/lqi-25/100-metrics.json",
+      "sha256": "8cd38a21d65a5184de0512b0a586b278ce9c609709ceb7f609e7af41063148e6",
+      "bytes": 2213
+    },
+    {
+      "path": "validation/reference/lqi-25/100-spec.json",
+      "sha256": "c558ffdc8b2758c5ac8d32e6286476d955c1e92bf14d7e7e1bb204de71128ce8",
+      "bytes": 539
+    },
+    {
+      "path": "validation/reference/lqi-25/101-metrics.json",
+      "sha256": "2ab9e408cae117b346d36c79a9196d06b9cfee54024fb9530826519a54ebda58",
+      "bytes": 2537
+    },
+    {
+      "path": "validation/reference/lqi-25/101-spec.json",
+      "sha256": "cd8c7f8d8ec0bb7abace6b2fe7b2707a03e229b69644e15f0dd178955502c9f1",
+      "bytes": 538
+    },
+    {
+      "path": "validation/reference/lqi-25/102-metrics.json",
+      "sha256": "6ef109058ce29d12f73cd164be31b11192d23a030ab6703444146680a56e6757",
+      "bytes": 2489
+    },
+    {
+      "path": "validation/reference/lqi-25/102-spec.json",
+      "sha256": "43da59276333a5a91f7ac4de821ab18497db3884202d29464c2daf1b7b3b8515",
+      "bytes": 539
+    },
+    {
+      "path": "validation/reference/lqi-25/103-metrics.json",
+      "sha256": "559fc1aede2104ddc48d04cf6d0175b865930a8982ee6e225a2afd04e131f483",
+      "bytes": 2200
+    },
+    {
+      "path": "validation/reference/lqi-25/103-spec.json",
+      "sha256": "32d5912f576cde6faa9f58e439dfe7086a86f130daa0c340c6aaa56c6cf58a76",
+      "bytes": 538
+    },
+    {
+      "path": "validation/reference/lqi-25/104-metrics.json",
+      "sha256": "d5a1ed11b5f1030cb854d9b828aaafefbfe252b535e57e14199253f763df7b47",
+      "bytes": 2415
+    },
+    {
+      "path": "validation/reference/lqi-25/104-spec.json",
+      "sha256": "6e04b6d44154f302af2af55fe281425bfd1ce542c5e1fb28ee540a065127d210",
+      "bytes": 540
+    },
+    {
+      "path": "validation/reference/lqi-25/105-metrics.json",
+      "sha256": "65f48c67b46d19d280e929d2e17f96737e50ec3815c2ca229de12ec58d37d2a4",
+      "bytes": 2638
+    },
+    {
+      "path": "validation/reference/lqi-25/105-spec.json",
+      "sha256": "cc78fb0e707bcefd4ce3278126c1731d3382c06ae9bb6b6d7f1635030754a3c5",
+      "bytes": 538
+    },
+    {
+      "path": "validation/reference/lqi-25/summary.json",
+      "sha256": "bae06b239d353e0b20683ca385a8995a63f65b492ffb83a13c932f9872db66c9",
+      "bytes": 15426
+    }
+  ],
+  "retained": [
+    "README.md",
+    "REASSESSMENT.md",
+    "RELEASE-VALIDATION.md",
+    "RESULTS.md",
+    "ablation.json",
+    "ablation.png",
+    "assess_observer.py",
+    "audit.json",
+    "audit.py",
+    "audit_release.py",
+    "browser-smoke.mts",
+    "build.py",
+    "build_release.py",
+    "campaign.py",
+    "case.mts",
+    "extend.py",
+    "extend_map.py",
+    "extension-protocol.json",
+    "live-browser.json",
+    "live-browser.png",
+    "live-hashes.json",
+    "local-browser.json",
+    "local-browser.png",
+    "local-poles.json",
+    "local_analysis.py",
+    "map-extension-protocol.json",
+    "modify.py",
+    "observer-errors.json",
+    "package.json",
+    "pitch_peaks.py",
+    "prepare_deployment.py",
+    "promote_packaged.py",
+    "protocol.json",
+    "qualify.py",
+    "reassess.py",
+    "reassessment.json",
+    "release-validation-protocol.json",
+    "release-validation.json",
+    "release_report.py",
+    "release_validate.py",
+    "report.py",
+    "report35.py",
+    "restoration.json",
+    "results.json",
+    "run.py",
+    "score.py",
+    "summary.json",
+    "transition_diagnosis.py",
+    "trim_grid.py",
+    "trims.json",
+    "validate.py",
+    "validate35.py",
+    "validation-protocol.json",
+    "validation.json",
+    "verify_live.py",
+    "ARCHIVE.md"
+  ]
+}

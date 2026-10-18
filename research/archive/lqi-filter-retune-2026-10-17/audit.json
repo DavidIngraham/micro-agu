@@ -1,0 +1,11 @@
+{
+  "runs": 168,
+  "completed": 168,
+  "restored_files": 25,
+  "fixed_observer_and_model": true,
+  "runtime_hashes_verified": true,
+  "source_patch_reproduces_compiled_sources": true,
+  "no_extra_sensors": true,
+  "selection_precedes_holdouts": true,
+  "max_gust_incidence_error_deg": 0.09843781660826352
+}

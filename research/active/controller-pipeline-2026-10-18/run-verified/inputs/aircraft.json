@@ -1,0 +1,214 @@
+{
+  "schema": 1,
+  "flight": "trout_lake",
+  "profile": "as_built",
+  "measurements": {
+    "mass": {
+      "value": 1.758,
+      "units": "kg",
+      "source": "Flight configuration total mass",
+      "uncertainty": null,
+      "fixed": true
+    },
+    "payload_mass": {
+      "value": 1.568,
+      "units": "kg",
+      "source": "CAD-informed ballast configuration",
+      "uncertainty": null,
+      "fixed": true
+    },
+    "canopy_mass": {
+      "value": 0.19,
+      "units": "kg",
+      "source": "Canopy mass in aircraft profile",
+      "uncertainty": null,
+      "fixed": true
+    },
+    "Ixx": {
+      "value": 0.004531667645148981,
+      "units": "kg m^2",
+      "source": "CAD estimate",
+      "uncertainty": null,
+      "fixed": true
+    },
+    "Iyy": {
+      "value": 0.00478985392513478,
+      "units": "kg m^2",
+      "source": "CAD estimate",
+      "uncertainty": null,
+      "fixed": true
+    },
+    "Izz": {
+      "value": 0.001765463657077636,
+      "units": "kg m^2",
+      "source": "CAD estimate",
+      "uncertainty": null,
+      "fixed": true
+    },
+    "yaw_payload_halfspacing": {
+      "value": 0.066,
+      "units": "m",
+      "source": "As-built 132 mm riser spacing / 2",
+      "uncertainty": null,
+      "fixed": true
+    },
+    "hinge_x": {
+      "value": 0.005275293367346938,
+      "units": "m",
+      "source": "CAD estimate",
+      "uncertainty": null,
+      "fixed": true
+    },
+    "hinge_y": {
+      "value": -8.380102040816326e-05,
+      "units": "m",
+      "source": "CAD estimate",
+      "uncertainty": null,
+      "fixed": true
+    },
+    "hinge_z": {
+      "value": -0.09801844387755101,
+      "units": "m",
+      "source": "CAD estimate",
+      "uncertainty": null,
+      "fixed": true
+    }
+  },
+  "parameters": {
+    "rho": 1.225,
+    "S": 1.16,
+    "b": 2.15,
+    "c": 0.54,
+    "CL0": 0.7930571614569453,
+    "CLa": 3.7500452620462257,
+    "CD0": 0.10197592019959645,
+    "k_drag": 0.14480215620335352,
+    "CYbeta": 0.0,
+    "CLbrake": 0.7540989784138509,
+    "CDbrake": 0.25062036103489294,
+    "Clbeta": -0.03,
+    "Clp": 0.0,
+    "Cldelta": 0.0,
+    "Cm0": -0.042447256879107435,
+    "Cma": -1.9933377903419933,
+    "Cmq": -1.1054372158394723,
+    "payload_CDA": 0.015,
+    "thrust_max": 12.15,
+    "thrust_z": -0.058,
+    "prop_torque": -0.02,
+    "joint_k_roll": 4.862204090535876,
+    "joint_k_pitch": 0.0,
+    "joint_k_yaw": 0.43489340043192554,
+    "joint_c_roll": 0.0010331850005169947,
+    "joint_c_pitch": 0.045,
+    "joint_c_yaw": 0.06,
+    "Cnbeta": 0.0075,
+    "Cnr": -0.0125,
+    "Cndelta": 0.0,
+    "added_mx": 0.01,
+    "added_my": 0.1,
+    "added_mz": 0.5,
+    "added_Jx": 0.01,
+    "added_Jy": 0.005,
+    "added_Jz": 0.005,
+    "added_z1": 0.0,
+    "added_z2": 0.5,
+    "canopy_half_arc": 0.9459856901122734,
+    "hinge_x": 0.005275293367346938,
+    "hinge_y": -8.380102040816326e-05,
+    "hinge_z": -0.09801844387755101,
+    "Ixx": 0.004531667645148981,
+    "Iyy": 0.00478985392513478,
+    "Izz": 0.001765463657077636,
+    "Ixy": -8.902735484693947e-07,
+    "Ixz": -0.0006109220014841836,
+    "Iyz": 6.0468235255101976e-06,
+    "thrust_x": -0.03872470663265306,
+    "thrust_y": -8.380102040816326e-05,
+    "thrust_arm_z": -0.07301844387755102,
+    "canopy_mass": 0.19,
+    "brake_tilt_rad_per_m": 0.0,
+    "rotor_spin_inertia": 4.2164374870231074e-05,
+    "rotor_spin_sign": 1.0,
+    "geometry_yaw": 0.0,
+    "yaw_payload_halfspacing": 0.066,
+    "yaw_canopy_halfspacing": 0.3235535694002066,
+    "yaw_vertical_separation": 0.85,
+    "spin_acceleration_scale": 1.0,
+    "routing_enabled": 1.0,
+    "riser_halfspacing": 0.066,
+    "guide_halfspacing": 0.0455,
+    "guide_x": -0.0225,
+    "ring_height": 0.06,
+    "support_halfspacing": 0.3235535694002066,
+    "support_height": 0.85,
+    "cascade_x": -0.1,
+    "route_reference_left": 0.9058767862136052,
+    "route_reference_right": 0.905430247479104,
+    "brake_cp_shift": 0.0,
+    "brake_outboard_fraction": 0.0,
+    "left_offset": 0.0,
+    "right_offset": -0.0,
+    "added_scale": 0.5262397269532798
+  },
+  "geometry": {
+    "mass": 1.758,
+    "payload_mass": 1.568,
+    "canopy_mass": 0.19,
+    "inertia": [
+      [
+        0.004531667645148981,
+        -8.902735484693947e-07,
+        -0.0006109220014841836
+      ],
+      [
+        -8.902735484693947e-07,
+        0.00478985392513478,
+        6.0468235255101976e-06
+      ],
+      [
+        -0.0006109220014841836,
+        6.0468235255101976e-06,
+        0.001765463657077636
+      ]
+    ],
+    "hinge": [
+      0.005275293367346938,
+      -8.380102040816326e-05,
+      -0.09801844387755101
+    ],
+    "thrust": [
+      -0.03872470663265306,
+      -8.380102040816326e-05,
+      -0.07301844387755102
+    ],
+    "imu": [
+      -0.001224706632653061,
+      -8.380102040816326e-05,
+      -0.058018443877551014
+    ],
+    "parameters": {
+      "hinge_x": 0.005275293367346938,
+      "hinge_y": -8.380102040816326e-05,
+      "hinge_z": -0.09801844387755101,
+      "Ixx": 0.004531667645148981,
+      "Iyy": 0.00478985392513478,
+      "Izz": 0.001765463657077636,
+      "Ixy": -8.902735484693947e-07,
+      "Ixz": -0.0006109220014841836,
+      "Iyz": 6.0468235255101976e-06,
+      "thrust_x": -0.03872470663265306,
+      "thrust_y": -8.380102040816326e-05,
+      "thrust_arm_z": -0.07301844387755102,
+      "canopy_mass": 0.19
+    }
+  },
+  "actuators": {
+    "left_travel_mm": 62.395520758797275,
+    "right_travel_mm": 71.9948316447661,
+    "brake_rate_mm_s": 221.522558906,
+    "source": "Existing servo geometry and rate model",
+    "uncertainty": null
+  },
+  "note": "Null uncertainty means unquantified, never zero. Coefficients below are prior estimates, not all measured."
+}

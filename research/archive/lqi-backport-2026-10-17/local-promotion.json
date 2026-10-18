@@ -1,0 +1,6 @@
+{
+  "patch_sha256": "43f30ad82e0a273f84f6de3a94d582271e7f450f49c90c1aa641049fac2c4b2e",
+  "firmware_sha256": "3c8d2535b30f42eeb6a9314e333454f51b9e4cc718db2d1edd54d97ad255f6e4",
+  "config_sha256": "7d6c9fe13382fbf809d5fd8586abcc626a1e4f1600f128c41e7f80957104c980",
+  "note": "Local research source and runtime retained; website uses the independently tested deployed cohort."
+}

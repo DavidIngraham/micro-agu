@@ -35,3 +35,5 @@ uv run --project research python research/active/greybox-pipeline-2026-10-18/stu
 ```
 
 Studies may require flight inputs described in their own instructions. A successful package build is not a claim that every historical campaign is reproducible without those inputs.
+
+- [Pitch inertia and damping study](active/pitch-inertia-damping-2026-10-18/README.md): 450 replays, mode/decay and initialization checks; missing coupled oscillation remains unresolved.

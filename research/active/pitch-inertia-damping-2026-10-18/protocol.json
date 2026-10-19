@@ -1,0 +1,221 @@
+{
+  "variants": {
+    "baseline": {},
+    "J0.25-C0.25-D0.1": {
+      "added_Jy": 0.25,
+      "Cmq": 0.25,
+      "joint_c_pitch": 0.1
+    },
+    "J0.25-C0.25-D1.0": {
+      "added_Jy": 0.25,
+      "Cmq": 0.25,
+      "joint_c_pitch": 1.0
+    },
+    "J0.25-C0.25-D3.0": {
+      "added_Jy": 0.25,
+      "Cmq": 0.25,
+      "joint_c_pitch": 3.0
+    },
+    "J0.25-C1.0-D0.1": {
+      "added_Jy": 0.25,
+      "Cmq": 1.0,
+      "joint_c_pitch": 0.1
+    },
+    "J0.25-C1.0-D1.0": {
+      "added_Jy": 0.25,
+      "Cmq": 1.0,
+      "joint_c_pitch": 1.0
+    },
+    "J0.25-C1.0-D3.0": {
+      "added_Jy": 0.25,
+      "Cmq": 1.0,
+      "joint_c_pitch": 3.0
+    },
+    "J0.25-C4.0-D0.1": {
+      "added_Jy": 0.25,
+      "Cmq": 4.0,
+      "joint_c_pitch": 0.1
+    },
+    "J0.25-C4.0-D1.0": {
+      "added_Jy": 0.25,
+      "Cmq": 4.0,
+      "joint_c_pitch": 1.0
+    },
+    "J0.25-C4.0-D3.0": {
+      "added_Jy": 0.25,
+      "Cmq": 4.0,
+      "joint_c_pitch": 3.0
+    },
+    "J1.0-C0.25-D0.1": {
+      "added_Jy": 1.0,
+      "Cmq": 0.25,
+      "joint_c_pitch": 0.1
+    },
+    "J1.0-C0.25-D1.0": {
+      "added_Jy": 1.0,
+      "Cmq": 0.25,
+      "joint_c_pitch": 1.0
+    },
+    "J1.0-C0.25-D3.0": {
+      "added_Jy": 1.0,
+      "Cmq": 0.25,
+      "joint_c_pitch": 3.0
+    },
+    "J1.0-C1.0-D0.1": {
+      "added_Jy": 1.0,
+      "Cmq": 1.0,
+      "joint_c_pitch": 0.1
+    },
+    "J1.0-C1.0-D1.0": {
+      "added_Jy": 1.0,
+      "Cmq": 1.0,
+      "joint_c_pitch": 1.0
+    },
+    "J1.0-C1.0-D3.0": {
+      "added_Jy": 1.0,
+      "Cmq": 1.0,
+      "joint_c_pitch": 3.0
+    },
+    "J1.0-C4.0-D0.1": {
+      "added_Jy": 1.0,
+      "Cmq": 4.0,
+      "joint_c_pitch": 0.1
+    },
+    "J1.0-C4.0-D1.0": {
+      "added_Jy": 1.0,
+      "Cmq": 4.0,
+      "joint_c_pitch": 1.0
+    },
+    "J1.0-C4.0-D3.0": {
+      "added_Jy": 1.0,
+      "Cmq": 4.0,
+      "joint_c_pitch": 3.0
+    },
+    "J4.0-C0.25-D0.1": {
+      "added_Jy": 4.0,
+      "Cmq": 0.25,
+      "joint_c_pitch": 0.1
+    },
+    "J4.0-C0.25-D1.0": {
+      "added_Jy": 4.0,
+      "Cmq": 0.25,
+      "joint_c_pitch": 1.0
+    },
+    "J4.0-C0.25-D3.0": {
+      "added_Jy": 4.0,
+      "Cmq": 0.25,
+      "joint_c_pitch": 3.0
+    },
+    "J4.0-C1.0-D0.1": {
+      "added_Jy": 4.0,
+      "Cmq": 1.0,
+      "joint_c_pitch": 0.1
+    },
+    "J4.0-C1.0-D1.0": {
+      "added_Jy": 4.0,
+      "Cmq": 1.0,
+      "joint_c_pitch": 1.0
+    },
+    "J4.0-C1.0-D3.0": {
+      "added_Jy": 4.0,
+      "Cmq": 1.0,
+      "joint_c_pitch": 3.0
+    },
+    "J4.0-C4.0-D0.1": {
+      "added_Jy": 4.0,
+      "Cmq": 4.0,
+      "joint_c_pitch": 0.1
+    },
+    "J4.0-C4.0-D1.0": {
+      "added_Jy": 4.0,
+      "Cmq": 4.0,
+      "joint_c_pitch": 1.0
+    },
+    "J4.0-C4.0-D3.0": {
+      "added_Jy": 4.0,
+      "Cmq": 4.0,
+      "joint_c_pitch": 3.0
+    },
+    "offset0.0": {
+      "added_z2_value": 0.0
+    },
+    "offset0.25": {
+      "added_z2_value": 0.25
+    },
+    "offset0.75": {
+      "added_z2_value": 0.75
+    },
+    "payload0.7": {
+      "payload_scale": 0.7
+    },
+    "payload1.3": {
+      "payload_scale": 1.3
+    },
+    "coupled-offset0.0-D0.1": {
+      "added_Jy": 4.0,
+      "Cmq": 0.25,
+      "joint_c_pitch": 0.1,
+      "added_z2_value": 0.0
+    },
+    "coupled-offset0.0-D1.0": {
+      "added_Jy": 4.0,
+      "Cmq": 0.25,
+      "joint_c_pitch": 1.0,
+      "added_z2_value": 0.0
+    },
+    "coupled-offset0.25-D0.1": {
+      "added_Jy": 4.0,
+      "Cmq": 0.25,
+      "joint_c_pitch": 0.1,
+      "added_z2_value": 0.25
+    },
+    "coupled-offset0.25-D1.0": {
+      "added_Jy": 4.0,
+      "Cmq": 0.25,
+      "joint_c_pitch": 1.0,
+      "added_z2_value": 0.25
+    },
+    "coupled-offset0.75-D0.1": {
+      "added_Jy": 4.0,
+      "Cmq": 0.25,
+      "joint_c_pitch": 0.1,
+      "added_z2_value": 0.75
+    },
+    "coupled-offset0.75-D1.0": {
+      "added_Jy": 4.0,
+      "Cmq": 0.25,
+      "joint_c_pitch": 1.0,
+      "added_z2_value": 0.75
+    },
+    "pitch-offset-0.5": {
+      "added_z1_value": -0.5
+    },
+    "coupled-pitch-offset-0.5": {
+      "added_Jy": 4.0,
+      "Cmq": 0.25,
+      "joint_c_pitch": 0.1,
+      "added_z1_value": -0.5
+    },
+    "pitch-offset0.25": {
+      "added_z1_value": 0.25
+    },
+    "coupled-pitch-offset0.25": {
+      "added_Jy": 4.0,
+      "Cmq": 0.25,
+      "joint_c_pitch": 0.1,
+      "added_z1_value": 0.25
+    },
+    "pitch-offset0.5": {
+      "added_z1_value": 0.5
+    },
+    "coupled-pitch-offset0.5": {
+      "added_Jy": 4.0,
+      "Cmq": 0.25,
+      "joint_c_pitch": 0.1,
+      "added_z1_value": 0.5
+    }
+  },
+  "selection": "Exploratory common-parameter sweep across both flights; all windows previously inspected; no held-out flight.",
+  "initialization_alpha": 0.35,
+  "substeps": 32
+}

@@ -222,6 +222,13 @@
       "successor": "research/active/controller-pipeline-2026-10-18"
     },
     {
+      "study": "pitch-inertia-damping-2026-10-18",
+      "status": "active",
+      "path": "research/active/pitch-inertia-damping-2026-10-18",
+      "summary": "Joint canopy pitch inertia/damping and added-mass location sweep across both flight configurations; no qualified replacement model.",
+      "execution_policy": "maintained for ongoing fidelity/pipeline work"
+    },
+    {
       "study": "proprioception-2026-10-17",
       "status": "completed-unresolved",
       "path": "research/archive/proprioception-2026-10-17",

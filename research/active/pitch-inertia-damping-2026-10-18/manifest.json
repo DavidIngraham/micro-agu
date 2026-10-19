@@ -1,0 +1,13 @@
+{
+  "parent_commit": "5ca7eb4d41dbdb1635f153fc304ab773c433197b",
+  "source_hashes": {
+    "modal.py": "13773914e33048979c059e93df90a598929e4e384a759ac597456cb9617f4dac",
+    "trim.py": "1fa468ec381a5b47f7c504864743cb2d4e18bb63c21ea14fd73dfa61508bc258",
+    "report.py": "32c1eaca1a34b756e38ab869cf07c3ae0446b7c9a92d520e2325732e98870045",
+    "run.py": "e7c1be9186bd43002642797e6edf01378937938a56107deebee101465f713c78",
+    "checks.py": "a75731c06627776c99904bf2649fb1b009227bba7f31e7ee5b1f8ffe03a8278a"
+  },
+  "decision": "No model selection or deployment; missing oscillation unresolved",
+  "replays": 450,
+  "errors": 0
+}

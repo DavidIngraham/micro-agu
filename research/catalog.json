@@ -238,6 +238,13 @@
       "evidence_archive": "research/archive/proprioception-2026-10-17/evidence-manifest.json"
     },
     {
+      "study": "propulsion-rpm-audit-2026-10-18",
+      "status": "active",
+      "path": "research/active/propulsion-rpm-audit-2026-10-18",
+      "summary": "Measured ESC RPM versus causal propulsion model, separating telemetry slew and steady/transient error.",
+      "execution_policy": "maintained for ongoing fidelity/pipeline work"
+    },
+    {
       "study": "rigging-refinement-2026-10-15",
       "status": "reference",
       "path": "research/archive/rigging-refinement-2026-10-15",

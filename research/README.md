@@ -39,3 +39,5 @@ Studies may require flight inputs described in their own instructions. A success
 - [Pitch inertia and damping study](active/pitch-inertia-damping-2026-10-18/README.md): 450 replays, mode/decay and initialization checks; missing coupled oscillation remains unresolved.
 
 - [ESC RPM harmonic audit](active/rpm-harmonics-2026-10-18/README.md): shaft/blade-pass alias comparisons, original binary log inventory, and measurement limitations.
+
+- [Propulsion RPM audit](active/propulsion-rpm-audit-2026-10-18/README.md): measured versus predicted RPM, telemetry slew, and native replay checks.

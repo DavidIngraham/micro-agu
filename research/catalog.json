@@ -131,6 +131,13 @@
       "execution_policy": "maintained for ongoing fidelity/pipeline work"
     },
     {
+      "study": "inertia-profile-2026-10-18",
+      "status": "active",
+      "path": "research/active/inertia-profile-2026-10-18",
+      "summary": "Inertia-profile fits show damping/stiffness compensation and worse rate fidelity despite improved spectral cost; no promotion.",
+      "execution_policy": "maintained for ongoing fidelity/pipeline work"
+    },
+    {
       "study": "low-speed-ekf-2026-10-16",
       "status": "completed-unresolved",
       "path": "research/archive/low-speed-ekf-2026-10-16",

@@ -51,3 +51,5 @@ Studies may require flight inputs described in their own instructions. A success
 - [Unpowered yaw replay](active/unpowered-yaw-2026-10-18/README.md): recorded-brake forcing, yaw parameter sweep, nuisance sensitivity and powered transfer.
 
 - [Continuous power-transition fitting](active/power-transition-fit-2026-10-18/README.md): measured-RPM replay, shared mechanical fit, transition transfer and stability checks.
+
+- [Inertia profile](active/inertia-profile-2026-10-18/README.md): fixed-inertia refits, transition transfer, and stability checks.

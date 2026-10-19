@@ -1,0 +1,15 @@
+{
+  "payload_yaw_inertia_multipliers": [
+    0.85,
+    1.0,
+    1.15
+  ],
+  "rotor_spin_inertia_multipliers": [
+    0.75,
+    1.0,
+    1.25,
+    1.5
+  ],
+  "selection": "Lowest first-transition objective; identical previous objective. Second transition and Hood River excluded from all fitting/selection.",
+  "limits": "Engineering sensitivity grid, not measured uncertainty bounds; rotor and payload inertia are fixed within each cell; no claim of global optimum."
+}

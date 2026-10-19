@@ -47,3 +47,5 @@ Studies may require flight inputs described in their own instructions. A success
 - [Asymmetric canopy-twist experiment](active/canopy-twist-2026-10-18/README.md): deformation feedback, cross-flight comparisons and stability checks; no production promotion.
 
 - [Powered versus stopped-prop modes](active/power-off-modes-2026-10-18/README.md): flight spectra, trim sweep, gyro ablation, and numerical checks.
+
+- [Unpowered yaw replay](active/unpowered-yaw-2026-10-18/README.md): recorded-brake forcing, yaw parameter sweep, nuisance sensitivity and powered transfer.

@@ -1,0 +1,19 @@
+{
+  "parent_commit": "95c146553c9eef73230e9cf2495c956f955a288f",
+  "source_hashes": {
+    "validate.py": "f2f1b28eef46613f43fc0a404be36a8900f22955aab2c9a56c829bb3347463ed",
+    "run.py": "0e3bb57fe564344e71b938369786ea0752c21feeddde5729234a63d514c83558",
+    "checks.py": "22583fc88d2382a881923cd63d16848951ac811d963f3452f877d4c0a347879e",
+    "modes.py": "185e05846509779c5544a8a97ff296ed9f8b44af02a80f7df544a50cc485a559",
+    "plot.py": "823a6983268a28eceba5c8d3324dc6cfaac30676dbfc0be7c87135d85fc9dc02"
+  },
+  "input_hashes": {
+    "/mnt/c/Users/davin/OneDrive/Documentos/Mission Planner/analysis/longitudinal-2026-10-09/turn-model-spike/2026-01-03-causal-input.npz": "dd031fd90680d626f48f3ba3a30b69d5c6af5f7781431b55b6b1dc894af305ec",
+    "/mnt/c/Users/davin/OneDrive/Documentos/Mission Planner/analysis/longitudinal-2026-10-09/turn-model-spike/2026-01-03-propulsion-9x45.npz": "620660b1dbc39bdfdbbe7e04af5cbeb8653f75a246ec93a0e8a77af26010a47b",
+    "/mnt/c/Users/davin/OneDrive/Documentos/Mission Planner/analysis/longitudinal-2026-10-09/turn-model-spike/2026-02-15-causal-input.npz": "25441062d4e328bfa110f8aca88261ffc3fa50c553314d3ef7feaabfa10698f5",
+    "/mnt/c/Users/davin/OneDrive/Documentos/Mission Planner/analysis/longitudinal-2026-10-09/turn-model-spike/2026-02-15-propulsion-9x45.npz": "2a5168520029adc3ef32a64182412466699efb9acffc6df3f088d44b0acae422"
+  },
+  "replays": 316,
+  "modal_equilibria": 12,
+  "decision": "Diagnostic lead only; no parameter promotion or deployment"
+}

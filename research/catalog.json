@@ -354,6 +354,13 @@
       "execution_policy": "maintained for ongoing fidelity/pipeline work"
     },
     {
+      "study": "unpowered-yaw-2026-10-18",
+      "status": "active",
+      "path": "research/active/unpowered-yaw-2026-10-18",
+      "summary": "Recorded brakes excite a 2 Hz resonance with sharply reduced yaw damping; amplitude and powered transfer remain insufficient for promotion.",
+      "execution_policy": "maintained for ongoing fidelity/pipeline work"
+    },
+    {
       "study": "viewer-studies",
       "status": "reference",
       "path": "research/archive/viewer-studies",

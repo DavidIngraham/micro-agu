@@ -1,0 +1,8 @@
+{
+  "id": "deployed-crosswind",
+  "variant": "deployed",
+  "weather": "default",
+  "seed": 73,
+  "north": 0,
+  "east": 1.5
+}

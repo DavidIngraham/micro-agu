@@ -1,0 +1,39 @@
+{
+  "archive": "evidence.tar.gz",
+  "sha256": "c5784f9f8c999d33ef5e3d13dc70f735f1974cae34d3cd2a5a18150d3965d1c6",
+  "files": {
+    "runs/candidate-calm.json": "b1f54c47f1de0738762bf2e6929d64be666c5cf749a0e026a81cf92dadb5dc4d",
+    "runs/candidate-crosswind.json": "a3242a5a0e345fdeb931cd0de68b10b7e194ab16b3f848ff91381966f82b7489",
+    "runs/candidate-dryden-17.json": "73d46ead649cf337c4621603b7659a583e87ecdfe66282938712c366bf9a024d",
+    "runs/candidate-dryden-2026.json": "db60cd9c68704ca611b81a24bc70032ad34f285733f79e8d7f8eb7a7f16f79cb",
+    "runs/candidate-dryden-73.json": "4f8fe4d07207f8926d8e5ccf2d31cb2e56dbc8db1c9dc1d936d62e19ca74eff0",
+    "runs/candidate-headwind-probe.json": "deaffaf35fb6db67074a5f5cc3dd2cb92ec221d7b25d16273900eed0fbcaeeff",
+    "runs/candidate-headwind.json": "d4eb399c0064b4a358701339dd3b3dcb9a6d1bb03f87fbc3a641781afc13f545",
+    "runs/candidate-switch.json": "808d1303852a2573cb8795de14f31fc968f0ffed9be0e896e28bde4340f6428a",
+    "runs/deployed-calm.json": "1157f81234e1a3ac813e96893b9bd71b2b1825bc4edf2089cabd86242ce2c07d",
+    "runs/deployed-crosswind.json": "d340f724263552bca16dad744e056a1cf9b3414876abb8a9395e701b0a19dd3d",
+    "runs/deployed-dryden-17.json": "596b280e3836420f6c73d2ec74e3fc8e28778a2d810918c3596b637001b5480e",
+    "runs/deployed-dryden-2026.json": "7ab1d65d26b1c94b6c87e0d189532e88b3a1eb8ecba68529bcd1751241ff1136",
+    "runs/deployed-dryden-73.json": "fbaed0283db2c2d3cf0d1651be05503bebafdc31f63deffa3d0e7756656ffbb3",
+    "runs/deployed-headwind.json": "877d9ac9e3fca6664bbcae96eed75bd0d9bc7c71e25d9ed444aa182b97911f9a"
+  },
+  "firmware_by_run": {
+    "candidate-calm": "63670a3db8ffc7bdc7075b992bf1ff7cfdb1c49d4d5f035aaa359645c2a955e4",
+    "candidate-crosswind": "63670a3db8ffc7bdc7075b992bf1ff7cfdb1c49d4d5f035aaa359645c2a955e4",
+    "candidate-dryden-17": "63670a3db8ffc7bdc7075b992bf1ff7cfdb1c49d4d5f035aaa359645c2a955e4",
+    "candidate-dryden-2026": "63670a3db8ffc7bdc7075b992bf1ff7cfdb1c49d4d5f035aaa359645c2a955e4",
+    "candidate-dryden-73": "63670a3db8ffc7bdc7075b992bf1ff7cfdb1c49d4d5f035aaa359645c2a955e4",
+    "candidate-headwind-probe": "915103e0155af7895ad3598f777643250655c9d2cf133516cd5aef4a0a4b4f01",
+    "candidate-headwind": "63670a3db8ffc7bdc7075b992bf1ff7cfdb1c49d4d5f035aaa359645c2a955e4",
+    "candidate-switch": "63670a3db8ffc7bdc7075b992bf1ff7cfdb1c49d4d5f035aaa359645c2a955e4",
+    "deployed-calm": "466d4d86263d973cc38e850b3a015146e9b98a2cd2ae369fbca7a32eeb9ab504",
+    "deployed-crosswind": "466d4d86263d973cc38e850b3a015146e9b98a2cd2ae369fbca7a32eeb9ab504",
+    "deployed-dryden-17": "466d4d86263d973cc38e850b3a015146e9b98a2cd2ae369fbca7a32eeb9ab504",
+    "deployed-dryden-2026": "466d4d86263d973cc38e850b3a015146e9b98a2cd2ae369fbca7a32eeb9ab504",
+    "deployed-dryden-73": "466d4d86263d973cc38e850b3a015146e9b98a2cd2ae369fbca7a32eeb9ab504",
+    "deployed-headwind": "466d4d86263d973cc38e850b3a015146e9b98a2cd2ae369fbca7a32eeb9ab504"
+  },
+  "gain_sha256": "311876eabeb033e55c30c8d556d159495b76e8358cd25a1684c0c3b486ed97f0",
+  "physics_sha256": "ceae58a55b4585e85b86a142a15c1f5b9bcfbf3e51f21cddbdf741ac4a75c158",
+  "configuration_sha256": "51120b5f2d21f0e5d00b0d009c6bb25c7e082a6bdb76d49a05524fec92ec34e4"
+}

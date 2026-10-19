@@ -1,0 +1,72 @@
+[
+  {
+    "id": "deployed-dryden-17",
+    "exit": 0,
+    "complete": true,
+    "failure": null,
+    "wall_s": 13.827461957931519
+  },
+  {
+    "id": "deployed-dryden-73",
+    "exit": 0,
+    "complete": true,
+    "failure": null,
+    "wall_s": 13.978180646896362
+  },
+  {
+    "id": "deployed-dryden-2026",
+    "exit": 0,
+    "complete": true,
+    "failure": null,
+    "wall_s": 13.77773141860962
+  },
+  {
+    "id": "deployed-headwind",
+    "exit": 1,
+    "complete": false,
+    "failure": "Error: Weather settings are outside their supported ranges.",
+    "wall_s": 6.1845104694366455
+  },
+  {
+    "id": "deployed-crosswind",
+    "exit": 0,
+    "complete": true,
+    "failure": null,
+    "wall_s": 13.942109823226929
+  },
+  {
+    "id": "candidate-dryden-17",
+    "exit": 0,
+    "complete": true,
+    "failure": null,
+    "wall_s": 13.789192199707031
+  },
+  {
+    "id": "candidate-dryden-73",
+    "exit": 0,
+    "complete": true,
+    "failure": null,
+    "wall_s": 13.840104579925537
+  },
+  {
+    "id": "candidate-dryden-2026",
+    "exit": 0,
+    "complete": true,
+    "failure": null,
+    "wall_s": 13.671223878860474
+  },
+  {
+    "id": "candidate-headwind",
+    "exit": 1,
+    "complete": false,
+    "failure": "Error: Weather settings are outside their supported ranges.",
+    "wall_s": 6.134753704071045
+  },
+  {
+    "id": "candidate-crosswind",
+    "exit": 0,
+    "complete": true,
+    "failure": null,
+    "wall_s": 13.826383829116821
+  }
+]

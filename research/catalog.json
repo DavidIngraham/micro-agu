@@ -200,6 +200,13 @@
       "reason": "Retained measurements, published figures, model lineage or current-envelope evidence."
     },
     {
+      "study": "lqi-takeoff-2026-10-19",
+      "status": "active",
+      "path": "research/active/lqi-takeoff-2026-10-19",
+      "summary": "Isolated LQI TAKEOFF trial: current gains work in calm/turbulence/crosswind; larger roll transient and wind-validity fallback retained.",
+      "execution_policy": "research-only firmware patch; selected deployment unchanged"
+    },
+    {
       "study": "lqi-transitions-2026-10-17",
       "status": "superseded",
       "path": "research/archive/lqi-transitions-2026-10-17",

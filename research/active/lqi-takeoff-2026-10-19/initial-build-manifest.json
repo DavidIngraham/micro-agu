@@ -1,0 +1,7 @@
+{
+  "base": "5e5bba8ee1b3575e04f45d56b8c53e5e6c48ab2f",
+  "patch_sha256": "4cbc30fb50408e625544cbf213f66cfbc37c61369b35a97ea783d683db2fb0e7",
+  "patched_source_sha256": "664cdd4d8c33aef278765599d1a6e5f8da6faac0cd228f0003e6e93cb0870f6c",
+  "firmware_sha256": "63670a3db8ffc7bdc7075b992bf1ff7cfdb1c49d4d5f035aaa359645c2a955e4",
+  "ai_assisted": true
+}

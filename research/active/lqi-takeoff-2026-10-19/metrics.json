@@ -1,0 +1,544 @@
+[
+  {
+    "spec": {
+      "id": "candidate-calm",
+      "variant": "candidate",
+      "weather": "calm",
+      "seed": 17
+    },
+    "complete": true,
+    "failure": null,
+    "first_free_s": 5.8049999999998985,
+    "first_active_s": 7.15499999999987,
+    "first_active_alt_m": 1.293481024203822,
+    "height_15_s": 20.605000000000185,
+    "min_free_height_m": 1.2724100489900971,
+    "climb_active_fraction": 0.912,
+    "active_during_takeoff_stage": true,
+    "active_before_power_ready": false,
+    "climb_attitude_peak_deg": [
+      13.709663173267273,
+      29.89675062956146
+    ],
+    "climb_rate_peak_deg_s": [
+      16.29757074113302,
+      92.13192599818902,
+      43.88806734278744
+    ],
+    "climb_throttle_mean": 0.5851199999999999,
+    "climb_throttle_max": 0.6,
+    "late_active_fraction": 1.0,
+    "final_alt_m": 37.39483202866629,
+    "gain_file_loaded": true,
+    "ekf_active": true,
+    "suspensions": [
+      {
+        "time": 50.33967816135979,
+        "text": "Custom controller suspended"
+      }
+    ]
+  },
+  {
+    "spec": {
+      "id": "candidate-crosswind",
+      "variant": "candidate",
+      "weather": "default",
+      "seed": 73,
+      "north": 0,
+      "east": 1.5
+    },
+    "complete": true,
+    "failure": null,
+    "first_free_s": 5.8049999999998985,
+    "first_active_s": 7.104999999999871,
+    "first_active_alt_m": 1.3611320020122288,
+    "height_15_s": 21.355000000000036,
+    "min_free_height_m": 1.3483916615988238,
+    "climb_active_fraction": 0.918918918918919,
+    "active_during_takeoff_stage": true,
+    "active_before_power_ready": false,
+    "climb_attitude_peak_deg": [
+      14.17132815993609,
+      29.235370683875516
+    ],
+    "climb_rate_peak_deg_s": [
+      43.21945312403808,
+      87.06228212305773,
+      51.58453262577872
+    ],
+    "climb_throttle_mean": 0.5870270270270269,
+    "climb_throttle_max": 0.6,
+    "late_active_fraction": 1.0,
+    "final_alt_m": 37.68060425920115,
+    "gain_file_loaded": true,
+    "ekf_active": true,
+    "suspensions": [
+      {
+        "time": 51.104678161360184,
+        "text": "Custom controller suspended"
+      }
+    ]
+  },
+  {
+    "spec": {
+      "id": "candidate-dryden-17",
+      "variant": "candidate",
+      "weather": "default",
+      "seed": 17
+    },
+    "complete": true,
+    "failure": null,
+    "first_free_s": 5.8049999999998985,
+    "first_active_s": 7.054999999999872,
+    "first_active_alt_m": 1.368542222972042,
+    "height_15_s": 21.704999999999966,
+    "min_free_height_m": 1.287375777837556,
+    "climb_active_fraction": 0.9196787148594378,
+    "active_during_takeoff_stage": true,
+    "active_before_power_ready": false,
+    "climb_attitude_peak_deg": [
+      12.576917470969201,
+      29.50182368419487
+    ],
+    "climb_rate_peak_deg_s": [
+      15.203868273415855,
+      94.42658798515811,
+      44.49893919245047
+    ],
+    "climb_throttle_mean": 0.5855421686746989,
+    "climb_throttle_max": 0.6,
+    "late_active_fraction": 1.0,
+    "final_alt_m": 37.03378522504836,
+    "gain_file_loaded": true,
+    "ekf_active": true,
+    "suspensions": [
+      {
+        "time": 50.304678161359774,
+        "text": "Custom controller suspended"
+      }
+    ]
+  },
+  {
+    "spec": {
+      "id": "candidate-dryden-2026",
+      "variant": "candidate",
+      "weather": "default",
+      "seed": 2026
+    },
+    "complete": true,
+    "failure": null,
+    "first_free_s": 5.8049999999998985,
+    "first_active_s": 7.2549999999998676,
+    "first_active_alt_m": 1.4928429455634358,
+    "height_15_s": 20.155000000000275,
+    "min_free_height_m": 1.4884984704656914,
+    "climb_active_fraction": 0.9008264462809917,
+    "active_during_takeoff_stage": true,
+    "active_before_power_ready": false,
+    "climb_attitude_peak_deg": [
+      12.014321863470306,
+      29.711622382768137
+    ],
+    "climb_rate_peak_deg_s": [
+      16.02738171357808,
+      88.07118666917573,
+      34.52627652692601
+    ],
+    "climb_throttle_mean": 0.5856198347107436,
+    "climb_throttle_max": 0.6,
+    "late_active_fraction": 1.0,
+    "final_alt_m": 37.27336434718745,
+    "gain_file_loaded": true,
+    "ekf_active": true,
+    "suspensions": [
+      {
+        "time": 49.53467816135938,
+        "text": "Custom controller suspended"
+      }
+    ]
+  },
+  {
+    "spec": {
+      "id": "candidate-dryden-73",
+      "variant": "candidate",
+      "weather": "default",
+      "seed": 73
+    },
+    "complete": true,
+    "failure": null,
+    "first_free_s": 5.8049999999998985,
+    "first_active_s": 7.15499999999987,
+    "first_active_alt_m": 1.3133338394364957,
+    "height_15_s": 21.854999999999936,
+    "min_free_height_m": 1.3055576916562655,
+    "climb_active_fraction": 0.9138576779026217,
+    "active_during_takeoff_stage": true,
+    "active_before_power_ready": false,
+    "climb_attitude_peak_deg": [
+      14.189477652895972,
+      29.49711298581127
+    ],
+    "climb_rate_peak_deg_s": [
+      27.962149301758792,
+      95.87705701202529,
+      45.66009242723948
+    ],
+    "climb_throttle_mean": 0.5856179775280899,
+    "climb_throttle_max": 0.6,
+    "late_active_fraction": 1.0,
+    "final_alt_m": 37.50962654064399,
+    "gain_file_loaded": true,
+    "ekf_active": true,
+    "suspensions": [
+      {
+        "time": 51.03967816136015,
+        "text": "Custom controller suspended"
+      }
+    ]
+  },
+  {
+    "spec": {
+      "id": "candidate-headwind-probe",
+      "variant": "candidate",
+      "weather": "default",
+      "seed": 73,
+      "north": -1.5,
+      "east": 0
+    },
+    "complete": true,
+    "failure": null,
+    "first_free_s": 5.8049999999998985,
+    "first_active_s": 37.10500000000053,
+    "first_active_alt_m": 23.528354071277956,
+    "height_15_s": 21.854999999999936,
+    "min_free_height_m": 2.0430395120957474,
+    "climb_active_fraction": 0.0,
+    "active_during_takeoff_stage": false,
+    "active_before_power_ready": false,
+    "climb_attitude_peak_deg": [
+      12.833831421109593,
+      33.88213618428872
+    ],
+    "climb_rate_peak_deg_s": [
+      15.404547051797307,
+      92.56519676631265,
+      30.798526539060163
+    ],
+    "climb_throttle_mean": 0.5846808510638296,
+    "climb_throttle_max": 0.6,
+    "late_active_fraction": 1.0,
+    "final_alt_m": 31.98264675346489,
+    "gain_file_loaded": true,
+    "ekf_active": true,
+    "suspensions": []
+  },
+  {
+    "spec": {
+      "id": "candidate-headwind",
+      "variant": "candidate",
+      "weather": "default",
+      "seed": 73,
+      "north": -1.5,
+      "east": 0
+    },
+    "complete": true,
+    "failure": null,
+    "first_free_s": 5.8049999999998985,
+    "first_active_s": 36.75500000000035,
+    "first_active_alt_m": 23.29958611431223,
+    "height_15_s": 20.505000000000205,
+    "min_free_height_m": 2.0430378674514187,
+    "climb_active_fraction": 0.0,
+    "active_during_takeoff_stage": false,
+    "active_before_power_ready": false,
+    "climb_attitude_peak_deg": [
+      12.869395557163301,
+      33.947837274476115
+    ],
+    "climb_rate_peak_deg_s": [
+      17.40010689054267,
+      88.4324294777252,
+      30.725549992598484
+    ],
+    "climb_throttle_mean": 0.5860944206008583,
+    "climb_throttle_max": 0.6,
+    "late_active_fraction": 1.0,
+    "final_alt_m": 31.483811780002302,
+    "gain_file_loaded": true,
+    "ekf_active": true,
+    "suspensions": []
+  },
+  {
+    "spec": {
+      "id": "candidate-switch",
+      "variant": "candidate",
+      "weather": "default",
+      "seed": 73,
+      "switchTest": true
+    },
+    "complete": true,
+    "failure": null,
+    "first_free_s": 5.8049999999998985,
+    "first_active_s": 7.15499999999987,
+    "first_active_alt_m": 1.2759996162456997,
+    "height_15_s": 21.954999999999917,
+    "min_free_height_m": 1.2645127476407705,
+    "climb_active_fraction": 0.6222222222222222,
+    "active_during_takeoff_stage": true,
+    "active_before_power_ready": false,
+    "climb_attitude_peak_deg": [
+      14.505251061208348,
+      29.707099605684007
+    ],
+    "climb_rate_peak_deg_s": [
+      23.619911089913995,
+      95.82542390662167,
+      47.8284271862732
+    ],
+    "climb_throttle_mean": 0.587111111111111,
+    "climb_throttle_max": 0.6,
+    "late_active_fraction": 1.0,
+    "final_alt_m": 37.50540703268618,
+    "gain_file_loaded": true,
+    "ekf_active": true,
+    "suspensions": [
+      {
+        "time": 51.11467816136019,
+        "text": "Custom controller suspended"
+      }
+    ]
+  },
+  {
+    "spec": {
+      "id": "deployed-calm",
+      "variant": "deployed",
+      "weather": "calm",
+      "seed": 17
+    },
+    "complete": true,
+    "failure": null,
+    "first_free_s": 5.8049999999998985,
+    "first_active_s": 19.855000000000334,
+    "first_active_alt_m": 14.239024811705429,
+    "height_15_s": 20.505000000000205,
+    "min_free_height_m": 1.3610599780430412,
+    "climb_active_fraction": 0.0,
+    "active_during_takeoff_stage": false,
+    "active_before_power_ready": false,
+    "climb_attitude_peak_deg": [
+      6.7130304060404065,
+      31.30955878041972
+    ],
+    "climb_rate_peak_deg_s": [
+      19.26908117747565,
+      93.05128426681422,
+      43.207403269798476
+    ],
+    "climb_throttle_mean": 0.5868825910931171,
+    "climb_throttle_max": 0.6,
+    "late_active_fraction": 1.0,
+    "final_alt_m": 37.89767378380204,
+    "gain_file_loaded": true,
+    "ekf_active": true,
+    "suspensions": [
+      {
+        "time": 50.324678161359785,
+        "text": "Custom controller suspended"
+      }
+    ]
+  },
+  {
+    "spec": {
+      "id": "deployed-crosswind",
+      "variant": "deployed",
+      "weather": "default",
+      "seed": 73,
+      "north": 0,
+      "east": 1.5
+    },
+    "complete": true,
+    "failure": null,
+    "first_free_s": 5.8049999999998985,
+    "first_active_s": 20.905000000000125,
+    "first_active_alt_m": 14.572035987187677,
+    "height_15_s": 21.355000000000036,
+    "min_free_height_m": 1.2734115157104968,
+    "climb_active_fraction": 0.0,
+    "active_during_takeoff_stage": false,
+    "active_before_power_ready": false,
+    "climb_attitude_peak_deg": [
+      12.150249039465798,
+      30.84782325023671
+    ],
+    "climb_rate_peak_deg_s": [
+      44.958834006769784,
+      103.53134816981598,
+      74.07561725342319
+    ],
+    "climb_throttle_mean": 0.5879693486590037,
+    "climb_throttle_max": 0.6,
+    "late_active_fraction": 1.0,
+    "final_alt_m": 37.96395504870394,
+    "gain_file_loaded": true,
+    "ekf_active": true,
+    "suspensions": [
+      {
+        "time": 51.08467816136017,
+        "text": "Custom controller suspended"
+      }
+    ]
+  },
+  {
+    "spec": {
+      "id": "deployed-dryden-17",
+      "variant": "deployed",
+      "weather": "default",
+      "seed": 17
+    },
+    "complete": true,
+    "failure": null,
+    "first_free_s": 5.8049999999998985,
+    "first_active_s": 19.755000000000354,
+    "first_active_alt_m": 13.396457615503145,
+    "height_15_s": 21.105000000000086,
+    "min_free_height_m": 1.280446590173559,
+    "climb_active_fraction": 0.0,
+    "active_during_takeoff_stage": false,
+    "active_before_power_ready": false,
+    "climb_attitude_peak_deg": [
+      7.877413423301657,
+      32.12346947067567
+    ],
+    "climb_rate_peak_deg_s": [
+      17.32214115591358,
+      93.2198512640038,
+      42.85424143466513
+    ],
+    "climb_throttle_mean": 0.5860240963855421,
+    "climb_throttle_max": 0.6,
+    "late_active_fraction": 1.0,
+    "final_alt_m": 37.243033211890335,
+    "gain_file_loaded": true,
+    "ekf_active": true,
+    "suspensions": [
+      {
+        "time": 50.32967816135979,
+        "text": "Custom controller suspended"
+      }
+    ]
+  },
+  {
+    "spec": {
+      "id": "deployed-dryden-2026",
+      "variant": "deployed",
+      "weather": "default",
+      "seed": 2026
+    },
+    "complete": true,
+    "failure": null,
+    "first_free_s": 5.8049999999998985,
+    "first_active_s": 19.855000000000334,
+    "first_active_alt_m": 14.60574859094453,
+    "height_15_s": 20.205000000000265,
+    "min_free_height_m": 1.4783723460599165,
+    "climb_active_fraction": 0.0,
+    "active_during_takeoff_stage": false,
+    "active_before_power_ready": false,
+    "climb_attitude_peak_deg": [
+      7.755743808835457,
+      31.259707641209367
+    ],
+    "climb_rate_peak_deg_s": [
+      14.474381808126083,
+      87.3572076339506,
+      29.592737028114723
+    ],
+    "climb_throttle_mean": 0.5856198347107436,
+    "climb_throttle_max": 0.6,
+    "late_active_fraction": 1.0,
+    "final_alt_m": 37.17858104400229,
+    "gain_file_loaded": true,
+    "ekf_active": true,
+    "suspensions": [
+      {
+        "time": 49.59467816135941,
+        "text": "Custom controller suspended"
+      }
+    ]
+  },
+  {
+    "spec": {
+      "id": "deployed-dryden-73",
+      "variant": "deployed",
+      "weather": "default",
+      "seed": 73
+    },
+    "complete": true,
+    "failure": null,
+    "first_free_s": 5.8049999999998985,
+    "first_active_s": 21.205000000000066,
+    "first_active_alt_m": 14.566233297797348,
+    "height_15_s": 22.004999999999907,
+    "min_free_height_m": 1.1919931890454634,
+    "climb_active_fraction": 0.0,
+    "active_during_takeoff_stage": false,
+    "active_before_power_ready": false,
+    "climb_attitude_peak_deg": [
+      8.041328087682464,
+      32.42572259563738
+    ],
+    "climb_rate_peak_deg_s": [
+      17.677288647201642,
+      96.19554515666272,
+      45.558692892320266
+    ],
+    "climb_throttle_mean": 0.585985401459854,
+    "climb_throttle_max": 0.6,
+    "late_active_fraction": 1.0,
+    "final_alt_m": 37.48344445702599,
+    "gain_file_loaded": true,
+    "ekf_active": true,
+    "suspensions": [
+      {
+        "time": 51.1346781613602,
+        "text": "Custom controller suspended"
+      }
+    ]
+  },
+  {
+    "spec": {
+      "id": "deployed-headwind",
+      "variant": "deployed",
+      "weather": "default",
+      "seed": 73,
+      "north": -1.5,
+      "east": 0
+    },
+    "complete": true,
+    "failure": null,
+    "first_free_s": 5.8049999999998985,
+    "first_active_s": 39.50500000000176,
+    "first_active_alt_m": 23.279003892429714,
+    "height_15_s": 22.154999999999877,
+    "min_free_height_m": 2.0430395120957474,
+    "climb_active_fraction": 0.0,
+    "active_during_takeoff_stage": false,
+    "active_before_power_ready": false,
+    "climb_attitude_peak_deg": [
+      12.56411179847094,
+      33.87250105629207
+    ],
+    "climb_rate_peak_deg_s": [
+      19.837667747861087,
+      93.54572541812612,
+      30.895040093184484
+    ],
+    "climb_throttle_mean": 0.5843037974683543,
+    "climb_throttle_max": 0.6,
+    "late_active_fraction": 1.0,
+    "final_alt_m": 30.837620992055303,
+    "gain_file_loaded": true,
+    "ekf_active": true,
+    "suspensions": []
+  }
+]

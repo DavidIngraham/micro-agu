@@ -1,0 +1,10 @@
+[
+  {
+    "id": "candidate-headwind-probe",
+    "variant": "candidate",
+    "weather": "default",
+    "seed": 73,
+    "north": -1.5,
+    "east": 0
+  }
+]

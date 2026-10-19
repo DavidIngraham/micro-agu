@@ -1,0 +1,34 @@
+[
+  {
+    "id": "deployed-headwind",
+    "variant": "deployed",
+    "weather": "default",
+    "seed": 73,
+    "north": -1.5,
+    "east": 0
+  },
+  {
+    "id": "deployed-crosswind",
+    "variant": "deployed",
+    "weather": "default",
+    "seed": 73,
+    "north": 0,
+    "east": 1.5
+  },
+  {
+    "id": "candidate-headwind",
+    "variant": "candidate",
+    "weather": "default",
+    "seed": 73,
+    "north": -1.5,
+    "east": 0
+  },
+  {
+    "id": "candidate-crosswind",
+    "variant": "candidate",
+    "weather": "default",
+    "seed": 73,
+    "north": 0,
+    "east": 1.5
+  }
+]

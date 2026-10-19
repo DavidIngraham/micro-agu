@@ -1,0 +1,30 @@
+[
+  {
+    "id": "deployed-headwind",
+    "exit": 0,
+    "complete": true,
+    "failure": null,
+    "wall_s": 13.938256978988647
+  },
+  {
+    "id": "deployed-crosswind",
+    "exit": 0,
+    "complete": true,
+    "failure": null,
+    "wall_s": 13.938328504562378
+  },
+  {
+    "id": "candidate-headwind",
+    "exit": 0,
+    "complete": true,
+    "failure": null,
+    "wall_s": 13.62631368637085
+  },
+  {
+    "id": "candidate-crosswind",
+    "exit": 0,
+    "complete": true,
+    "failure": null,
+    "wall_s": 13.828102111816406
+  }
+]

@@ -1,0 +1,14 @@
+[
+  {
+    "id": "deployed-calm",
+    "variant": "deployed",
+    "weather": "calm",
+    "seed": 17
+  },
+  {
+    "id": "candidate-calm",
+    "variant": "candidate",
+    "weather": "calm",
+    "seed": 17
+  }
+]

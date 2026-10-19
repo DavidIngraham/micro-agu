@@ -1,0 +1,70 @@
+[
+  {
+    "id": "deployed-dryden-17",
+    "variant": "deployed",
+    "weather": "default",
+    "seed": 17
+  },
+  {
+    "id": "deployed-dryden-73",
+    "variant": "deployed",
+    "weather": "default",
+    "seed": 73
+  },
+  {
+    "id": "deployed-dryden-2026",
+    "variant": "deployed",
+    "weather": "default",
+    "seed": 2026
+  },
+  {
+    "id": "deployed-headwind",
+    "variant": "deployed",
+    "weather": "default",
+    "seed": 73,
+    "north": -1.5,
+    "east": 0
+  },
+  {
+    "id": "deployed-crosswind",
+    "variant": "deployed",
+    "weather": "default",
+    "seed": 73,
+    "north": 0,
+    "east": 1.5
+  },
+  {
+    "id": "candidate-dryden-17",
+    "variant": "candidate",
+    "weather": "default",
+    "seed": 17
+  },
+  {
+    "id": "candidate-dryden-73",
+    "variant": "candidate",
+    "weather": "default",
+    "seed": 73
+  },
+  {
+    "id": "candidate-dryden-2026",
+    "variant": "candidate",
+    "weather": "default",
+    "seed": 2026
+  },
+  {
+    "id": "candidate-headwind",
+    "variant": "candidate",
+    "weather": "default",
+    "seed": 73,
+    "north": -1.5,
+    "east": 0
+  },
+  {
+    "id": "candidate-crosswind",
+    "variant": "candidate",
+    "weather": "default",
+    "seed": 73,
+    "north": 0,
+    "east": 1.5
+  }
+]

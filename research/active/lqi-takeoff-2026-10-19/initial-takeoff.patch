@@ -1,0 +1,20 @@
+--- a/ArduPlane/Plane.cpp
++++ b/ArduPlane/Plane.cpp
+@@ -613,6 +613,7 @@
+ #if AP_PLANE_CUSTOMCONTROL_ENABLED
+     custom_control.mimo_input.reference.valid = false;
+     gcs().send_named_float("MIMO", custom_control.mimo_running() ? 1.0f : 0.0f);
++    gcs().send_named_float("TKST", flight_stage == AP_FixedWing::FlightStage::TAKEOFF ? 1.0f : 0.0f);
+ #endif
+     barometer.update();
+ 
+@@ -1160,7 +1161,8 @@
+     input.reference.heading_rate_rads = radians(pg_heading_rate_target_dps);
+     input.eligible = pg_heading_rate_valid && control_mode->does_auto_throttle() &&
+         ahrs.healthy() &&
+-        flight_stage == AP_FixedWing::FlightStage::NORMAL &&
++        (flight_stage == AP_FixedWing::FlightStage::NORMAL ||
++         (control_mode == &mode_takeoff && flight_stage == AP_FixedWing::FlightStage::TAKEOFF)) &&
+         arming.is_armed_and_safety_off() && !throttle_suppressed &&
+         !failsafe.rc_failsafe && failsafe.throttle_counter == 0;
+ #endif

@@ -243,6 +243,13 @@
       "execution_policy": "maintained for ongoing fidelity/pipeline work"
     },
     {
+      "study": "power-off-modes-2026-10-18",
+      "status": "active",
+      "path": "research/active/power-off-modes-2026-10-18",
+      "summary": "Powered/stopped-prop modal diagnostic: gyro coupling present, unpowered yaw frequency and powered mode shape remain mismatched.",
+      "execution_policy": "maintained for ongoing fidelity/pipeline work"
+    },
+    {
       "study": "proprioception-2026-10-17",
       "status": "completed-unresolved",
       "path": "research/archive/proprioception-2026-10-17",

@@ -1,0 +1,12 @@
+{
+  "parent_commit": "493f63d866d539cbeaaa80c2c94bd84a0cfa5c24",
+  "source_hashes": {
+    "flight.py": "17d1f7e004d7ad676980567ac2351a0192fe385dcb8b2e15e268b47c998f6038",
+    "trim.py": "e43f03f9d6c4bbe03876d463511b33549e13e7b25af097c616493fe5e638d5cd",
+    "run.py": "9783deb4c850b6390db26b394b5ff40d9d6bca133500ffbd110e12ecf1650e69",
+    "plot.py": "7ffe52c9a78473555f4c985d659dce83fe529598716dd650aeb35c3b1cf549b3"
+  },
+  "equilibria": 40,
+  "linearizations": 80,
+  "decision": "Diagnostic only; no production changes"
+}

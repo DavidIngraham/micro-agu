@@ -250,6 +250,13 @@
       "execution_policy": "maintained for ongoing fidelity/pipeline work"
     },
     {
+      "study": "power-transition-fit-2026-10-18",
+      "status": "active",
+      "path": "research/active/power-transition-fit-2026-10-18",
+      "summary": "Continuous measured-RPM power-transition fitting: lower damping improves frequency/amplitude but not waveform transfer; no support for tested positive RPM damping term.",
+      "execution_policy": "maintained for ongoing fidelity/pipeline work"
+    },
+    {
       "study": "proprioception-2026-10-17",
       "status": "completed-unresolved",
       "path": "research/archive/proprioception-2026-10-17",

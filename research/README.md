@@ -49,3 +49,5 @@ Studies may require flight inputs described in their own instructions. A success
 - [Powered versus stopped-prop modes](active/power-off-modes-2026-10-18/README.md): flight spectra, trim sweep, gyro ablation, and numerical checks.
 
 - [Unpowered yaw replay](active/unpowered-yaw-2026-10-18/README.md): recorded-brake forcing, yaw parameter sweep, nuisance sensitivity and powered transfer.
+
+- [Continuous power-transition fitting](active/power-transition-fit-2026-10-18/README.md): measured-RPM replay, shared mechanical fit, transition transfer and stability checks.

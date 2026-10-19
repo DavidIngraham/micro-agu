@@ -1,0 +1,16 @@
+{
+  "parent_commit": "2900a2744762e9283d47c798fed8e2af9832ed16",
+  "source_hashes": {
+    "research/active/power-transition-fit-2026-10-18/validate.py": "dabc2de3b3ef69c2ebb7db81c214013bf8a1c887343e175ccbbe53269a578caf",
+    "research/active/power-transition-fit-2026-10-18/stability.py": "2321131c9cacf81a0f4e327c1e3761cc4a59bebaa63d655ecbb537b24d04de29",
+    "research/active/power-transition-fit-2026-10-18/plot.py": "a601dbbb2acd53934b5c1f30f164d45da91c21cad6d993f28a55d9ec998068f1",
+    "research/active/power-transition-fit-2026-10-18/study.py": "10f67a8156199f5fa25f3246616d584b0f52bad816f067e34e5ec9375d93c357",
+    "research/active/power-transition-fit-2026-10-18/test_backend.py": "c5eaa1e393bc96eb2618d204ad591d3ef036f6430bf099eaac9ae389b137da9c",
+    "research/active/power-transition-fit-2026-10-18/src/main.rs": "8c3147de5ec60d07ad421424bf5363dbbe5eb5a84eb8035443e4cfa3bb3c3f7f",
+    "research/active/power-transition-fit-2026-10-18/Cargo.toml": "db5fed49f83aaa2b44b7b5f4ff3a19c3a722c8cf1211171a6a2e2fc30a6b657b",
+    "research/active/power-transition-fit-2026-10-18/Cargo.lock": "2ced15e45fca0b7b730ce5bd9ebbc3c2436a136aaf8992a59db01cafcaf6de90",
+    "research/active/power-off-modes-2026-10-18/trim.py": "e43f03f9d6c4bbe03876d463511b33549e13e7b25af097c616493fe5e638d5cd"
+  },
+  "binary_sha256": "1083bb3490a031043043feb8f83a7505f77ef8ca2f9835e554f9dfa2593273af",
+  "decision": "No promotion; frequency/amplitude gains with timing and parameter-identification failures"
+}

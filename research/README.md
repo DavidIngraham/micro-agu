@@ -8,6 +8,7 @@ Maintained software lives in [simulation](../simulation/README.md), [control](..
 
 | Study | Location |
 |---|---|
+| brake-tension-feedback-2026-10-18 | [brake-tension-feedback-2026-10-18](active/brake-tension-feedback-2026-10-18/) |
 | controller-pipeline-2026-10-18 | [controller-pipeline-2026-10-18](active/controller-pipeline-2026-10-18/) |
 | coupled-brake-2026-10-18 | [coupled-brake-2026-10-18](active/coupled-brake-2026-10-18/) |
 | coupled-oscillation-2026-10-18 | [coupled-oscillation-2026-10-18](active/coupled-oscillation-2026-10-18/) |

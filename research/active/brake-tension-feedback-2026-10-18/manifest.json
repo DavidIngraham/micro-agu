@@ -1,0 +1,47 @@
+{
+  "input_hashes": {
+    "/mnt/c/Users/davin/OneDrive/Documentos/Mission Planner/analysis/longitudinal-2026-10-09/turn-model-spike/2026-01-03-causal-input.npz": "dd031fd90680d626f48f3ba3a30b69d5c6af5f7781431b55b6b1dc894af305ec",
+    "/mnt/c/Users/davin/OneDrive/Documentos/Mission Planner/analysis/longitudinal-2026-10-09/turn-model-spike/2026-01-03-propulsion-9x45.npz": "620660b1dbc39bdfdbbe7e04af5cbeb8653f75a246ec93a0e8a77af26010a47b",
+    "/mnt/c/Users/davin/OneDrive/Documentos/Mission Planner/analysis/longitudinal-2026-10-09/turn-model-spike/2026-02-15-causal-input.npz": "25441062d4e328bfa110f8aca88261ffc3fa50c553314d3ef7feaabfa10698f5",
+    "/mnt/c/Users/davin/OneDrive/Documentos/Mission Planner/analysis/longitudinal-2026-10-09/turn-model-spike/2026-02-15-propulsion-9x45.npz": "2a5168520029adc3ef32a64182412466699efb9acffc6df3f088d44b0acae422"
+  },
+  "source_hashes": {
+    "/home/david/repos/micro-agu/research/active/brake-tension-feedback-2026-10-18/src/main.rs": "26af6dfb2dcc0a1fa5d45469651ade8a2d68dbeeebb64f3623796e6d1e477235",
+    "/home/david/repos/micro-agu/research/active/brake-tension-feedback-2026-10-18/run.py": "0153dddac4adbed481bea4acbb83f2ede0de07b139cf2419562993e8c8ae4d54",
+    "/home/david/repos/micro-agu/research/active/brake-tension-feedback-2026-10-18/protocol.json": "039a284d9f0e3124529f1863977b1c4c56923f06f37455c3f6a3775961c76a4e",
+    "/home/david/repos/micro-agu/research/active/brake-tension-feedback-2026-10-18/session.json": "b658bbee97d0f7d174033280e61ac273978e0cfac49ae465dc2f4e5078c79419",
+    "/home/david/repos/micro-agu/simulation/crates/sim-core/src/sensors.rs": "8930763c5d6947dd92bf2115fde33520a2eba5194284d115b853f1967205a556",
+    "/home/david/repos/micro-agu/simulation/crates/sim-core/src/propulsion.rs": "497f595fea9bc17e52d3dc0abae0b1e0061a15a227a35766f9e12f38ffc18b60",
+    "/home/david/repos/micro-agu/simulation/crates/sim-core/src/surface.rs": "9a11b4678381408d02ff0aedef29e9d303c84924ebbe1ad172007cb02d6f9182",
+    "/home/david/repos/micro-agu/simulation/crates/sim-core/src/kernel.rs": "4caa1b5666c727104b52d15aa43eec8ffb174fe78d86b3176428de1fa6221a5a",
+    "/home/david/repos/micro-agu/simulation/crates/sim-core/src/dynamics.rs": "f75065842c5cc26b8f4e304f97a12f63aed7e837b7ffbd5f6880a0200b592f56",
+    "/home/david/repos/micro-agu/simulation/crates/sim-core/src/actuators.rs": "24fd438cddeb3461e939853f1c419d9a16be8f51d7a650ed7bcf1710a838ba79",
+    "/home/david/repos/micro-agu/simulation/crates/sim-core/src/atmosphere.rs": "d33ef75b05f7072754371acc15ce2faa10d683eb41fbf3347f4a526fe50212e9",
+    "/home/david/repos/micro-agu/simulation/crates/sim-core/src/config.rs": "804e0bdfe8cd2e631d7e807d23414ef84899952479e82f5c749d89b94398d4ae",
+    "/home/david/repos/micro-agu/simulation/crates/sim-core/src/joint.rs": "e73dac37b46c685a4d81eaae76df1322dec7c645e0f70cceb42947e929d3ddc3",
+    "/home/david/repos/micro-agu/simulation/crates/sim-core/src/integrator.rs": "b21ea368c5587484644f0c7add0719b1eafbb9e90028924bb928009c59a438c7",
+    "/home/david/repos/micro-agu/simulation/crates/sim-core/src/launch.rs": "97bf986f5d5c241354da2b2ba1ed3201a85ff9168fb983fa8e1ab46a09278ad2",
+    "/home/david/repos/micro-agu/simulation/crates/sim-core/src/state.rs": "5f2005fe9acc4d694e5697d060bd5709124c0d9ba39a7f03834b5bba777bfcf8",
+    "/home/david/repos/micro-agu/simulation/crates/sim-core/src/lib.rs": "de6c854b7c2365044b8008e42cdf65a6c88dc234736097e20d2edf74594ff8f6",
+    "/home/david/repos/micro-agu/simulation/crates/sim-core/src/propeller_data.rs": "1897a098858e69611bea1cdcb184fc7e8f6337a60eddf7eb9b4fd7e849530af9",
+    "/home/david/repos/micro-agu/simulation/crates/sim-core/src/simulator.rs": "b4692ade4a2eb710fe734e708911552fb884ff820c7376c8e4fa2a3bf1c08da6"
+  },
+  "binary_sha256": "7a0ff9ade8e3c119fa95fbc78df106b8079a29286ff3d22ce7754d2fd697b2ce",
+  "final_source_hashes": {
+    "research/active/brake-tension-feedback-2026-10-18/constant.py": "76230a18177eea317e8a50f086b6cb83df25ef97b868d615dc37391e775df46e",
+    "research/active/brake-tension-feedback-2026-10-18/report.py": "e2a4bddabce95db2242f153f66f877b6e4f163f30cb45955f03f0457bb388580",
+    "research/active/brake-tension-feedback-2026-10-18/run.py": "0153dddac4adbed481bea4acbb83f2ede0de07b139cf2419562993e8c8ae4d54",
+    "research/active/brake-tension-feedback-2026-10-18/checks.py": "53243cccd7df3258c38161b84e07eefe602d70f2af93be0244357ec707f7a2ea",
+    "research/active/brake-tension-feedback-2026-10-18/src/main.rs": "532d3de9b38cfa204273e00bf2706cc059823960040b87f7eb12b41c1e8aae56",
+    "research/active/brake-tension-feedback-2026-10-18/protocol.json": "80a58a2defe7dfca90e4b459e0ece031f88f08833ac65f38a08e82328cabcecb",
+    "research/active/brake-tension-feedback-2026-10-18/Cargo.toml": "6a417d625af4ba79edbf4ce4beaeae9d4ba0db9ba626e64cec185b8784820a14",
+    "research/active/brake-tension-feedback-2026-10-18/Cargo.lock": "5d517efa8626f16313d76025b9249773057636a2b381e231330696b1fe0ca85c",
+    "simulation/crates/sim-core/src/dynamics.rs": "f48b86d610bfd5b9841f152d206463d8ea5d73aaac2036bf522167c3b2fc283e"
+  },
+  "validation": {
+    "core_tests_passed": 15,
+    "research_tests_passed": 3,
+    "selected_release_changed": false
+  },
+  "note": "Execution source hashes retained; final source hashes include Rust formatting and later diagnostic scripts/protocol expansion."
+}

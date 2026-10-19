@@ -1,0 +1,2452 @@
+[
+  {
+    "flight": "hood_river",
+    "variant": "baseline",
+    "common": 0.02,
+    "family": "prior",
+    "error": "trim failed: `ftol` termination condition is satisfied., residual 0.006114121060801156"
+  },
+  {
+    "flight": "hood_river",
+    "variant": "frozen_aero",
+    "common": 0.02,
+    "family": "prior",
+    "error": "trim failed: `ftol` termination condition is satisfied., residual 0.006116313201927053"
+  },
+  {
+    "flight": "hood_river",
+    "variant": "tension25",
+    "common": 0.02,
+    "family": "prior",
+    "error": "trim failed: `ftol` termination condition is satisfied., residual 0.005800886859090214"
+  },
+  {
+    "flight": "hood_river",
+    "variant": "tension100",
+    "common": 0.02,
+    "family": "prior",
+    "error": "trim failed: `ftol` termination condition is satisfied., residual 0.004851756086736561"
+  },
+  {
+    "flight": "hood_river",
+    "variant": "tension300",
+    "common": 0.02,
+    "family": "prior",
+    "error": "trim failed: `ftol` termination condition is satisfied., residual 0.002359466294151786"
+  },
+  {
+    "flight": "hood_river",
+    "variant": "baseline",
+    "common": 0.1,
+    "family": "prior",
+    "amplitude_deg": 0,
+    "trim_residual": 1.040834085586084e-13,
+    "command": [
+      0.39936046835185396,
+      0.1,
+      -0.2155068210409419
+    ],
+    "early_relative_angle_rms_deg": 0.0,
+    "late_relative_angle_rms_deg": 0.0,
+    "late_over_early": 0.0,
+    "max_relative_angle_deg": 0.0
+  },
+  {
+    "flight": "hood_river",
+    "variant": "baseline",
+    "common": 0.1,
+    "family": "prior",
+    "amplitude_deg": 1,
+    "trim_residual": 1.040834085586084e-13,
+    "command": [
+      0.39936046835185396,
+      0.1,
+      -0.2155068210409419
+    ],
+    "early_relative_angle_rms_deg": 0.030483422015455577,
+    "late_relative_angle_rms_deg": 9.556311646088799e-07,
+    "late_over_early": 3.1349208895391064e-05,
+    "max_relative_angle_deg": 0.9999827046911763
+  },
+  {
+    "flight": "hood_river",
+    "variant": "baseline",
+    "common": 0.1,
+    "family": "prior",
+    "amplitude_deg": 5,
+    "trim_residual": 1.040834085586084e-13,
+    "command": [
+      0.39936046835185396,
+      0.1,
+      -0.2155068210409419
+    ],
+    "early_relative_angle_rms_deg": 0.14993846923829715,
+    "late_relative_angle_rms_deg": 4.67909131289274e-06,
+    "late_over_early": 3.120674325050139e-05,
+    "max_relative_angle_deg": 4.999913492855617
+  },
+  {
+    "flight": "hood_river",
+    "variant": "baseline",
+    "common": 0.1,
+    "family": "prior",
+    "amplitude_deg": 15,
+    "trim_residual": 1.040834085586084e-13,
+    "command": [
+      0.39936046835185396,
+      0.1,
+      -0.2155068210409419
+    ],
+    "early_relative_angle_rms_deg": 0.43511630470189644,
+    "late_relative_angle_rms_deg": 1.3190200415580598e-05,
+    "late_over_early": 3.03141947866499e-05,
+    "max_relative_angle_deg": 14.999739878495099
+  },
+  {
+    "flight": "hood_river",
+    "variant": "frozen_aero",
+    "common": 0.1,
+    "family": "prior",
+    "amplitude_deg": 0,
+    "trim_residual": 1.6298121481539576e-13,
+    "command": [
+      0.3993604683518865,
+      0.1,
+      -0.21550682104086988
+    ],
+    "early_relative_angle_rms_deg": 0.0,
+    "late_relative_angle_rms_deg": 0.0,
+    "late_over_early": 0.0,
+    "max_relative_angle_deg": 0.0
+  },
+  {
+    "flight": "hood_river",
+    "variant": "frozen_aero",
+    "common": 0.1,
+    "family": "prior",
+    "amplitude_deg": 1,
+    "trim_residual": 1.6298121481539576e-13,
+    "command": [
+      0.3993604683518865,
+      0.1,
+      -0.21550682104086988
+    ],
+    "early_relative_angle_rms_deg": 0.030435655277575118,
+    "late_relative_angle_rms_deg": 1.7029958543793677e-06,
+    "late_over_early": 5.595397368145804e-05,
+    "max_relative_angle_deg": 0.999982704691177
+  },
+  {
+    "flight": "hood_river",
+    "variant": "frozen_aero",
+    "common": 0.1,
+    "family": "prior",
+    "amplitude_deg": 5,
+    "trim_residual": 1.6298121481539576e-13,
+    "command": [
+      0.3993604683518865,
+      0.1,
+      -0.21550682104086988
+    ],
+    "early_relative_angle_rms_deg": 0.14931645829355047,
+    "late_relative_angle_rms_deg": 8.4256758629343e-06,
+    "late_over_early": 5.642831312252091e-05,
+    "max_relative_angle_deg": 4.999913492855625
+  },
+  {
+    "flight": "hood_river",
+    "variant": "frozen_aero",
+    "common": 0.1,
+    "family": "prior",
+    "amplitude_deg": 15,
+    "trim_residual": 1.6298121481539576e-13,
+    "command": [
+      0.3993604683518865,
+      0.1,
+      -0.21550682104086988
+    ],
+    "early_relative_angle_rms_deg": 0.430162827753297,
+    "late_relative_angle_rms_deg": 2.36698073231275e-05,
+    "late_over_early": 5.5025227183745384e-05,
+    "max_relative_angle_deg": 14.999739878495111
+  },
+  {
+    "flight": "hood_river",
+    "variant": "tension25",
+    "common": 0.1,
+    "family": "prior",
+    "amplitude_deg": 0,
+    "trim_residual": 1.1130237639928672e-13,
+    "command": [
+      0.39955818993517916,
+      0.1,
+      -0.21346479835906346
+    ],
+    "early_relative_angle_rms_deg": 0.0,
+    "late_relative_angle_rms_deg": 0.0,
+    "late_over_early": 0.0,
+    "max_relative_angle_deg": 0.0
+  },
+  {
+    "flight": "hood_river",
+    "variant": "tension25",
+    "common": 0.1,
+    "family": "prior",
+    "amplitude_deg": 1,
+    "trim_residual": 1.1130237639928672e-13,
+    "command": [
+      0.39955818993517916,
+      0.1,
+      -0.21346479835906346
+    ],
+    "early_relative_angle_rms_deg": 0.030245181887118198,
+    "late_relative_angle_rms_deg": 9.535960936832109e-07,
+    "late_over_early": 3.1528859612821815e-05,
+    "max_relative_angle_deg": 0.999981951137344
+  },
+  {
+    "flight": "hood_river",
+    "variant": "tension25",
+    "common": 0.1,
+    "family": "prior",
+    "amplitude_deg": 5,
+    "trim_residual": 1.1130237639928672e-13,
+    "command": [
+      0.39955818993517916,
+      0.1,
+      -0.21346479835906346
+    ],
+    "early_relative_angle_rms_deg": 0.14898160037767255,
+    "late_relative_angle_rms_deg": 4.659604313497542e-06,
+    "late_over_early": 3.127637440922445e-05,
+    "max_relative_angle_deg": 4.999909717641037
+  },
+  {
+    "flight": "hood_river",
+    "variant": "tension25",
+    "common": 0.1,
+    "family": "prior",
+    "amplitude_deg": 15,
+    "trim_residual": 1.1130237639928672e-13,
+    "command": [
+      0.39955818993517916,
+      0.1,
+      -0.21346479835906346
+    ],
+    "early_relative_angle_rms_deg": 0.43287111665433464,
+    "late_relative_angle_rms_deg": 1.3075763498551707e-05,
+    "late_over_early": 3.020705931967561e-05,
+    "max_relative_angle_deg": 14.999728480586697
+  },
+  {
+    "flight": "hood_river",
+    "variant": "tension100",
+    "common": 0.1,
+    "family": "prior",
+    "amplitude_deg": 0,
+    "trim_residual": 3.8470965423965434e-13,
+    "command": [
+      0.40017024939490853,
+      0.1,
+      -0.20721619633050462
+    ],
+    "early_relative_angle_rms_deg": 0.0,
+    "late_relative_angle_rms_deg": 0.0,
+    "late_over_early": 0.0,
+    "max_relative_angle_deg": 0.0
+  },
+  {
+    "flight": "hood_river",
+    "variant": "tension100",
+    "common": 0.1,
+    "family": "prior",
+    "amplitude_deg": 1,
+    "trim_residual": 3.8470965423965434e-13,
+    "command": [
+      0.40017024939490853,
+      0.1,
+      -0.20721619633050462
+    ],
+    "early_relative_angle_rms_deg": 0.029577383588330296,
+    "late_relative_angle_rms_deg": 9.539738713383207e-07,
+    "late_over_early": 3.225349086369862e-05,
+    "max_relative_angle_deg": 0.9999760850309158
+  },
+  {
+    "flight": "hood_river",
+    "variant": "tension100",
+    "common": 0.1,
+    "family": "prior",
+    "amplitude_deg": 5,
+    "trim_residual": 3.8470965423965434e-13,
+    "command": [
+      0.40017024939490853,
+      0.1,
+      -0.20721619633050462
+    ],
+    "early_relative_angle_rms_deg": 0.14585884485726533,
+    "late_relative_angle_rms_deg": 4.636681145838746e-06,
+    "late_over_early": 3.1788823985107747e-05,
+    "max_relative_angle_deg": 4.999880352524865
+  },
+  {
+    "flight": "hood_river",
+    "variant": "tension100",
+    "common": 0.1,
+    "family": "prior",
+    "amplitude_deg": 15,
+    "trim_residual": 3.8470965423965434e-13,
+    "command": [
+      0.40017024939490853,
+      0.1,
+      -0.20721619633050462
+    ],
+    "early_relative_angle_rms_deg": 0.4251714099780209,
+    "late_relative_angle_rms_deg": 1.281373597569026e-05,
+    "late_over_early": 3.013781189180303e-05,
+    "max_relative_angle_deg": 14.999639998942754
+  },
+  {
+    "flight": "hood_river",
+    "variant": "tension300",
+    "common": 0.1,
+    "family": "prior",
+    "amplitude_deg": 0,
+    "trim_residual": 4.083552303199256e-13,
+    "command": [
+      0.40176197462353364,
+      0.1,
+      -0.19011607941567468
+    ],
+    "early_relative_angle_rms_deg": 0.0,
+    "late_relative_angle_rms_deg": 0.0,
+    "late_over_early": 0.0,
+    "max_relative_angle_deg": 0.0
+  },
+  {
+    "flight": "hood_river",
+    "variant": "tension300",
+    "common": 0.1,
+    "family": "prior",
+    "amplitude_deg": 1,
+    "trim_residual": 4.083552303199256e-13,
+    "command": [
+      0.40176197462353364,
+      0.1,
+      -0.19011607941567468
+    ],
+    "early_relative_angle_rms_deg": 0.027524997462740508,
+    "late_relative_angle_rms_deg": 9.77558356983507e-07,
+    "late_over_early": 3.5515293264124324e-05,
+    "max_relative_angle_deg": 0.999933975255419
+  },
+  {
+    "flight": "hood_river",
+    "variant": "tension300",
+    "common": 0.1,
+    "family": "prior",
+    "amplitude_deg": 5,
+    "trim_residual": 4.083552303199256e-13,
+    "command": [
+      0.40176197462353364,
+      0.1,
+      -0.19011607941567468
+    ],
+    "early_relative_angle_rms_deg": 0.13584208445753407,
+    "late_relative_angle_rms_deg": 4.632242951392327e-06,
+    "late_over_early": 3.410020517493181e-05,
+    "max_relative_angle_deg": 4.9996695479761035
+  },
+  {
+    "flight": "hood_river",
+    "variant": "tension300",
+    "common": 0.1,
+    "family": "prior",
+    "amplitude_deg": 15,
+    "trim_residual": 4.083552303199256e-13,
+    "command": [
+      0.40176197462353364,
+      0.1,
+      -0.19011607941567468
+    ],
+    "early_relative_angle_rms_deg": 0.39845448489873386,
+    "late_relative_angle_rms_deg": 1.2103384850499854e-05,
+    "late_over_early": 3.03758278779969e-05,
+    "max_relative_angle_deg": 14.999004754696074
+  },
+  {
+    "flight": "hood_river",
+    "variant": "baseline",
+    "common": 0.3,
+    "family": "prior",
+    "amplitude_deg": 0,
+    "trim_residual": 4.5430149603643723e-14,
+    "command": [
+      0.4202296344324925,
+      0.3,
+      -0.2434695547340134
+    ],
+    "early_relative_angle_rms_deg": 0.0,
+    "late_relative_angle_rms_deg": 0.0,
+    "late_over_early": 0.0,
+    "max_relative_angle_deg": 0.0
+  },
+  {
+    "flight": "hood_river",
+    "variant": "baseline",
+    "common": 0.3,
+    "family": "prior",
+    "amplitude_deg": 1,
+    "trim_residual": 4.5430149603643723e-14,
+    "command": [
+      0.4202296344324925,
+      0.3,
+      -0.2434695547340134
+    ],
+    "early_relative_angle_rms_deg": 0.0315963235731064,
+    "late_relative_angle_rms_deg": 3.6874588049071663e-06,
+    "late_over_early": 0.00011670531213466217,
+    "max_relative_angle_deg": 0.9999875679564494
+  },
+  {
+    "flight": "hood_river",
+    "variant": "baseline",
+    "common": 0.3,
+    "family": "prior",
+    "amplitude_deg": 5,
+    "trim_residual": 4.5430149603643723e-14,
+    "command": [
+      0.4202296344324925,
+      0.3,
+      -0.2434695547340134
+    ],
+    "early_relative_angle_rms_deg": 0.15596824242041063,
+    "late_relative_angle_rms_deg": 1.5887463264010658e-05,
+    "late_over_early": 0.00010186345000404749,
+    "max_relative_angle_deg": 4.999937804706482
+  },
+  {
+    "flight": "hood_river",
+    "variant": "baseline",
+    "common": 0.3,
+    "family": "prior",
+    "amplitude_deg": 15,
+    "trim_residual": 4.5430149603643723e-14,
+    "command": [
+      0.4202296344324925,
+      0.3,
+      -0.2434695547340134
+    ],
+    "early_relative_angle_rms_deg": 0.4597379715889491,
+    "late_relative_angle_rms_deg": 2.346733988512311e-05,
+    "late_over_early": 5.1045032899969414e-05,
+    "max_relative_angle_deg": 14.999812884042667
+  },
+  {
+    "flight": "hood_river",
+    "variant": "frozen_aero",
+    "common": 0.3,
+    "family": "prior",
+    "amplitude_deg": 0,
+    "trim_residual": 1.1685344741258278e-13,
+    "command": [
+      0.4202296344324754,
+      0.3,
+      -0.24346955473402992
+    ],
+    "early_relative_angle_rms_deg": 0.0,
+    "late_relative_angle_rms_deg": 0.0,
+    "late_over_early": 0.0,
+    "max_relative_angle_deg": 0.0
+  },
+  {
+    "flight": "hood_river",
+    "variant": "frozen_aero",
+    "common": 0.3,
+    "family": "prior",
+    "amplitude_deg": 1,
+    "trim_residual": 1.1685344741258278e-13,
+    "command": [
+      0.4202296344324754,
+      0.3,
+      -0.24346955473402992
+    ],
+    "early_relative_angle_rms_deg": 0.03166294407373031,
+    "late_relative_angle_rms_deg": 1.7489773781899708e-05,
+    "late_over_early": 0.000552373580333308,
+    "max_relative_angle_deg": 0.9999875679564512
+  },
+  {
+    "flight": "hood_river",
+    "variant": "frozen_aero",
+    "common": 0.3,
+    "family": "prior",
+    "amplitude_deg": 5,
+    "trim_residual": 1.1685344741258278e-13,
+    "command": [
+      0.4202296344324754,
+      0.3,
+      -0.24346955473402992
+    ],
+    "early_relative_angle_rms_deg": 0.15580420552484414,
+    "late_relative_angle_rms_deg": 8.112409810577549e-05,
+    "late_over_early": 0.0005206797713354384,
+    "max_relative_angle_deg": 4.99993780470648
+  },
+  {
+    "flight": "hood_river",
+    "variant": "frozen_aero",
+    "common": 0.3,
+    "family": "prior",
+    "amplitude_deg": 15,
+    "trim_residual": 1.1685344741258278e-13,
+    "command": [
+      0.4202296344324754,
+      0.3,
+      -0.24346955473402992
+    ],
+    "early_relative_angle_rms_deg": 0.4556818865507234,
+    "late_relative_angle_rms_deg": 0.0001746936641816669,
+    "late_over_early": 0.0003833675845753004,
+    "max_relative_angle_deg": 14.999812884042672
+  },
+  {
+    "flight": "hood_river",
+    "variant": "tension25",
+    "common": 0.3,
+    "family": "prior",
+    "amplitude_deg": 0,
+    "trim_residual": 7.371137853934997e-14,
+    "command": [
+      0.4207323798550655,
+      0.3,
+      -0.240283868676265
+    ],
+    "early_relative_angle_rms_deg": 0.0,
+    "late_relative_angle_rms_deg": 0.0,
+    "late_over_early": 0.0,
+    "max_relative_angle_deg": 0.0
+  },
+  {
+    "flight": "hood_river",
+    "variant": "tension25",
+    "common": 0.3,
+    "family": "prior",
+    "amplitude_deg": 1,
+    "trim_residual": 7.371137853934997e-14,
+    "command": [
+      0.4207323798550655,
+      0.3,
+      -0.240283868676265
+    ],
+    "early_relative_angle_rms_deg": 0.03178624895988044,
+    "late_relative_angle_rms_deg": 4.1065704136145545e-06,
+    "late_over_early": 0.0001291933004991477,
+    "max_relative_angle_deg": 0.9999878197126524
+  },
+  {
+    "flight": "hood_river",
+    "variant": "tension25",
+    "common": 0.3,
+    "family": "prior",
+    "amplitude_deg": 5,
+    "trim_residual": 7.371137853934997e-14,
+    "command": [
+      0.4207323798550655,
+      0.3,
+      -0.240283868676265
+    ],
+    "early_relative_angle_rms_deg": 0.1570480849740616,
+    "late_relative_angle_rms_deg": 1.7744622379901632e-05,
+    "late_over_early": 0.00011298846708530302,
+    "max_relative_angle_deg": 4.999939054524576
+  },
+  {
+    "flight": "hood_river",
+    "variant": "tension25",
+    "common": 0.3,
+    "family": "prior",
+    "amplitude_deg": 15,
+    "trim_residual": 7.371137853934997e-14,
+    "command": [
+      0.4207323798550655,
+      0.3,
+      -0.240283868676265
+    ],
+    "early_relative_angle_rms_deg": 0.4641322124422494,
+    "late_relative_angle_rms_deg": 2.7127635627939422e-05,
+    "late_over_early": 5.8448077725945024e-05,
+    "max_relative_angle_deg": 14.999816571129264
+  },
+  {
+    "flight": "hood_river",
+    "variant": "tension100",
+    "common": 0.3,
+    "family": "prior",
+    "amplitude_deg": 0,
+    "trim_residual": 1.202431492843816e-13,
+    "command": [
+      0.42254965181652415,
+      0.3,
+      -0.2299264052237478
+    ],
+    "early_relative_angle_rms_deg": 0.0,
+    "late_relative_angle_rms_deg": 0.0,
+    "late_over_early": 0.0,
+    "max_relative_angle_deg": 0.0
+  },
+  {
+    "flight": "hood_river",
+    "variant": "tension100",
+    "common": 0.3,
+    "family": "prior",
+    "amplitude_deg": 1,
+    "trim_residual": 1.202431492843816e-13,
+    "command": [
+      0.42254965181652415,
+      0.3,
+      -0.2299264052237478
+    ],
+    "early_relative_angle_rms_deg": 0.032380404908958035,
+    "late_relative_angle_rms_deg": 5.438146867019865e-06,
+    "late_over_early": 0.0001679456103872068,
+    "max_relative_angle_deg": 0.9999825509965037
+  },
+  {
+    "flight": "hood_river",
+    "variant": "tension100",
+    "common": 0.3,
+    "family": "prior",
+    "amplitude_deg": 5,
+    "trim_residual": 1.202431492843816e-13,
+    "command": [
+      0.42254965181652415,
+      0.3,
+      -0.2299264052237478
+    ],
+    "early_relative_angle_rms_deg": 0.16043538987799622,
+    "late_relative_angle_rms_deg": 2.377238330281643e-05,
+    "late_over_early": 0.00014817418601278834,
+    "max_relative_angle_deg": 4.99991265358882
+  },
+  {
+    "flight": "hood_river",
+    "variant": "tension100",
+    "common": 0.3,
+    "family": "prior",
+    "amplitude_deg": 15,
+    "trim_residual": 1.202431492843816e-13,
+    "command": [
+      0.42254965181652415,
+      0.3,
+      -0.2299264052237478
+    ],
+    "early_relative_angle_rms_deg": 0.47708057682631155,
+    "late_relative_angle_rms_deg": 3.943066585259874e-05,
+    "late_over_early": 8.264990814529444e-05,
+    "max_relative_angle_deg": 14.99973682205384
+  },
+  {
+    "flight": "hood_river",
+    "variant": "tension300",
+    "common": 0.3,
+    "family": "prior",
+    "amplitude_deg": 0,
+    "trim_residual": 5.822226123149036e-13,
+    "command": [
+      0.4284462643368302,
+      0.3,
+      -0.19726569203049465
+    ],
+    "early_relative_angle_rms_deg": 0.0,
+    "late_relative_angle_rms_deg": 0.0,
+    "late_over_early": 0.0,
+    "max_relative_angle_deg": 0.0
+  },
+  {
+    "flight": "hood_river",
+    "variant": "tension300",
+    "common": 0.3,
+    "family": "prior",
+    "amplitude_deg": 1,
+    "trim_residual": 5.822226123149036e-13,
+    "command": [
+      0.4284462643368302,
+      0.3,
+      -0.19726569203049465
+    ],
+    "early_relative_angle_rms_deg": 0.03289920872971038,
+    "late_relative_angle_rms_deg": 9.325532435367896e-06,
+    "late_over_early": 0.00028345765127616156,
+    "max_relative_angle_deg": 0.999914972265266
+  },
+  {
+    "flight": "hood_river",
+    "variant": "tension300",
+    "common": 0.3,
+    "family": "prior",
+    "amplitude_deg": 5,
+    "trim_residual": 5.822226123149036e-13,
+    "command": [
+      0.4284462643368302,
+      0.3,
+      -0.19726569203049465
+    ],
+    "early_relative_angle_rms_deg": 0.1638546512741055,
+    "late_relative_angle_rms_deg": 4.170796658778347e-05,
+    "late_over_early": 0.0002545424634788791,
+    "max_relative_angle_deg": 4.999573975262205
+  },
+  {
+    "flight": "hood_river",
+    "variant": "tension300",
+    "common": 0.3,
+    "family": "prior",
+    "amplitude_deg": 15,
+    "trim_residual": 5.822226123149036e-13,
+    "command": [
+      0.4284462643368302,
+      0.3,
+      -0.19726569203049465
+    ],
+    "early_relative_angle_rms_deg": 0.49277283720595955,
+    "late_relative_angle_rms_deg": 7.975472292686577e-05,
+    "late_over_early": 0.00016184886200115665,
+    "max_relative_angle_deg": 14.998713397302968
+  },
+  {
+    "flight": "trout_lake",
+    "variant": "baseline",
+    "common": 0.02,
+    "family": "prior",
+    "amplitude_deg": 0,
+    "trim_residual": 1.609275919550075e-13,
+    "command": [
+      0.44700591444032056,
+      0.02,
+      0.04836516021606769
+    ],
+    "early_relative_angle_rms_deg": 0.0,
+    "late_relative_angle_rms_deg": 0.0,
+    "late_over_early": 0.0,
+    "max_relative_angle_deg": 0.0
+  },
+  {
+    "flight": "trout_lake",
+    "variant": "baseline",
+    "common": 0.02,
+    "family": "prior",
+    "amplitude_deg": 1,
+    "trim_residual": 1.609275919550075e-13,
+    "command": [
+      0.44700591444032056,
+      0.02,
+      0.04836516021606769
+    ],
+    "early_relative_angle_rms_deg": 0.025941070777873453,
+    "late_relative_angle_rms_deg": 8.56400024705101e-07,
+    "late_over_early": 3.301328738656274e-05,
+    "max_relative_angle_deg": 0.999994002805733
+  },
+  {
+    "flight": "trout_lake",
+    "variant": "baseline",
+    "common": 0.02,
+    "family": "prior",
+    "amplitude_deg": 5,
+    "trim_residual": 1.609275919550075e-13,
+    "command": [
+      0.44700591444032056,
+      0.02,
+      0.04836516021606769
+    ],
+    "early_relative_angle_rms_deg": 0.1279979781579097,
+    "late_relative_angle_rms_deg": 4.236229739862612e-06,
+    "late_over_early": 3.3096067616290174e-05,
+    "max_relative_angle_deg": 4.9999699956426085
+  },
+  {
+    "flight": "trout_lake",
+    "variant": "baseline",
+    "common": 0.02,
+    "family": "prior",
+    "amplitude_deg": 15,
+    "trim_residual": 1.609275919550075e-13,
+    "command": [
+      0.44700591444032056,
+      0.02,
+      0.04836516021606769
+    ],
+    "early_relative_angle_rms_deg": 0.38126796616928005,
+    "late_relative_angle_rms_deg": 1.2612420357599607e-05,
+    "late_over_early": 3.3080199431178516e-05,
+    "max_relative_angle_deg": 14.999909720147377
+  },
+  {
+    "flight": "trout_lake",
+    "variant": "frozen_aero",
+    "common": 0.02,
+    "family": "prior",
+    "amplitude_deg": 0,
+    "trim_residual": 1.4832634803557935e-13,
+    "command": [
+      0.44700591444033244,
+      0.02,
+      0.04836516021608009
+    ],
+    "early_relative_angle_rms_deg": 0.0,
+    "late_relative_angle_rms_deg": 0.0,
+    "late_over_early": 0.0,
+    "max_relative_angle_deg": 0.0
+  },
+  {
+    "flight": "trout_lake",
+    "variant": "frozen_aero",
+    "common": 0.02,
+    "family": "prior",
+    "amplitude_deg": 1,
+    "trim_residual": 1.4832634803557935e-13,
+    "command": [
+      0.44700591444033244,
+      0.02,
+      0.04836516021608009
+    ],
+    "early_relative_angle_rms_deg": 0.025578045357254973,
+    "late_relative_angle_rms_deg": 9.103854068305899e-07,
+    "late_over_early": 3.5592454158048775e-05,
+    "max_relative_angle_deg": 0.9999940028057339
+  },
+  {
+    "flight": "trout_lake",
+    "variant": "frozen_aero",
+    "common": 0.02,
+    "family": "prior",
+    "amplitude_deg": 5,
+    "trim_residual": 1.4832634803557935e-13,
+    "command": [
+      0.44700591444033244,
+      0.02,
+      0.04836516021608009
+    ],
+    "early_relative_angle_rms_deg": 0.12564984200312418,
+    "late_relative_angle_rms_deg": 4.458921369985203e-06,
+    "late_over_early": 3.548688401752495e-05,
+    "max_relative_angle_deg": 4.9999699956426085
+  },
+  {
+    "flight": "trout_lake",
+    "variant": "frozen_aero",
+    "common": 0.02,
+    "family": "prior",
+    "amplitude_deg": 15,
+    "trim_residual": 1.4832634803557935e-13,
+    "command": [
+      0.44700591444033244,
+      0.02,
+      0.04836516021608009
+    ],
+    "early_relative_angle_rms_deg": 0.3658290412374627,
+    "late_relative_angle_rms_deg": 1.288048486697845e-05,
+    "late_over_early": 3.520902775626722e-05,
+    "max_relative_angle_deg": 14.999909720147375
+  },
+  {
+    "flight": "trout_lake",
+    "variant": "tension25",
+    "common": 0.02,
+    "family": "prior",
+    "amplitude_deg": 0,
+    "trim_residual": 8.346306139326321e-14,
+    "command": [
+      0.4471067218378216,
+      0.02,
+      0.048827043551172435
+    ],
+    "early_relative_angle_rms_deg": 0.0,
+    "late_relative_angle_rms_deg": 0.0,
+    "late_over_early": 0.0,
+    "max_relative_angle_deg": 0.0
+  },
+  {
+    "flight": "trout_lake",
+    "variant": "tension25",
+    "common": 0.02,
+    "family": "prior",
+    "amplitude_deg": 1,
+    "trim_residual": 8.346306139326321e-14,
+    "command": [
+      0.4471067218378216,
+      0.02,
+      0.048827043551172435
+    ],
+    "early_relative_angle_rms_deg": 0.025718417833536285,
+    "late_relative_angle_rms_deg": 8.397468286692283e-07,
+    "late_over_early": 3.2651574218310416e-05,
+    "max_relative_angle_deg": 0.9999929595632673
+  },
+  {
+    "flight": "trout_lake",
+    "variant": "tension25",
+    "common": 0.02,
+    "family": "prior",
+    "amplitude_deg": 5,
+    "trim_residual": 8.346306139326321e-14,
+    "command": [
+      0.4471067218378216,
+      0.02,
+      0.048827043551172435
+    ],
+    "early_relative_angle_rms_deg": 0.1269053527950979,
+    "late_relative_angle_rms_deg": 4.153847968274849e-06,
+    "late_over_early": 3.273185785143102e-05,
+    "max_relative_angle_deg": 4.999964775754643
+  },
+  {
+    "flight": "trout_lake",
+    "variant": "tension25",
+    "common": 0.02,
+    "family": "prior",
+    "amplitude_deg": 15,
+    "trim_residual": 8.346306139326321e-14,
+    "command": [
+      0.4471067218378216,
+      0.02,
+      0.048827043551172435
+    ],
+    "early_relative_angle_rms_deg": 0.3781507334223681,
+    "late_relative_angle_rms_deg": 1.2369565568887187e-05,
+    "late_over_early": 3.271067454223669e-05,
+    "max_relative_angle_deg": 14.999894010469193
+  },
+  {
+    "flight": "trout_lake",
+    "variant": "tension100",
+    "common": 0.02,
+    "family": "prior",
+    "amplitude_deg": 0,
+    "trim_residual": 3.1738249269216497e-13,
+    "command": [
+      0.4474075075034692,
+      0.02,
+      0.05018255431914908
+    ],
+    "early_relative_angle_rms_deg": 0.0,
+    "late_relative_angle_rms_deg": 0.0,
+    "late_over_early": 0.0,
+    "max_relative_angle_deg": 0.0
+  },
+  {
+    "flight": "trout_lake",
+    "variant": "tension100",
+    "common": 0.02,
+    "family": "prior",
+    "amplitude_deg": 1,
+    "trim_residual": 3.1738249269216497e-13,
+    "command": [
+      0.4474075075034692,
+      0.02,
+      0.05018255431914908
+    ],
+    "early_relative_angle_rms_deg": 0.025073579072779836,
+    "late_relative_angle_rms_deg": 7.925817587851054e-07,
+    "late_over_early": 3.161023627638151e-05,
+    "max_relative_angle_deg": 0.9999892994444752
+  },
+  {
+    "flight": "trout_lake",
+    "variant": "tension100",
+    "common": 0.02,
+    "family": "prior",
+    "amplitude_deg": 5,
+    "trim_residual": 3.1738249269216497e-13,
+    "command": [
+      0.4474075075034692,
+      0.02,
+      0.05018255431914908
+    ],
+    "early_relative_angle_rms_deg": 0.12373903116705892,
+    "late_relative_angle_rms_deg": 3.9205944498326095e-06,
+    "late_over_early": 3.168437972121708e-05,
+    "max_relative_angle_deg": 4.999946461563884
+  },
+  {
+    "flight": "trout_lake",
+    "variant": "tension100",
+    "common": 0.02,
+    "family": "prior",
+    "amplitude_deg": 15,
+    "trim_residual": 3.1738249269216497e-13,
+    "command": [
+      0.4474075075034692,
+      0.02,
+      0.05018255431914908
+    ],
+    "early_relative_angle_rms_deg": 0.3691143665893006,
+    "late_relative_angle_rms_deg": 1.1682168619790708e-05,
+    "late_over_early": 3.1649184310371234e-05,
+    "max_relative_angle_deg": 14.999838887126828
+  },
+  {
+    "flight": "trout_lake",
+    "variant": "tension300",
+    "common": 0.02,
+    "family": "prior",
+    "amplitude_deg": 0,
+    "trim_residual": 1.2377406758072529e-13,
+    "command": [
+      0.4481954227125179,
+      0.02,
+      0.053599236792768755
+    ],
+    "early_relative_angle_rms_deg": 0.0,
+    "late_relative_angle_rms_deg": 0.0,
+    "late_over_early": 0.0,
+    "max_relative_angle_deg": 0.0
+  },
+  {
+    "flight": "trout_lake",
+    "variant": "tension300",
+    "common": 0.02,
+    "family": "prior",
+    "amplitude_deg": 1,
+    "trim_residual": 1.2377406758072529e-13,
+    "command": [
+      0.4481954227125179,
+      0.02,
+      0.053599236792768755
+    ],
+    "early_relative_angle_rms_deg": 0.02350678303787016,
+    "late_relative_angle_rms_deg": 6.845358034992221e-07,
+    "late_over_early": 2.9120777708987808e-05,
+    "max_relative_angle_deg": 0.9999763239447121
+  },
+  {
+    "flight": "trout_lake",
+    "variant": "tension300",
+    "common": 0.02,
+    "family": "prior",
+    "amplitude_deg": 5,
+    "trim_residual": 1.2377406758072529e-13,
+    "command": [
+      0.4481954227125179,
+      0.02,
+      0.053599236792768755
+    ],
+    "early_relative_angle_rms_deg": 0.11603696300758984,
+    "late_relative_angle_rms_deg": 3.3865549649916096e-06,
+    "late_over_early": 2.9185139607368898e-05,
+    "max_relative_angle_deg": 4.999881529012109
+  },
+  {
+    "flight": "trout_lake",
+    "variant": "tension300",
+    "common": 0.02,
+    "family": "prior",
+    "amplitude_deg": 15,
+    "trim_residual": 1.2377406758072529e-13,
+    "command": [
+      0.4481954227125179,
+      0.02,
+      0.053599236792768755
+    ],
+    "early_relative_angle_rms_deg": 0.3470749204155932,
+    "late_relative_angle_rms_deg": 1.0107619082860232e-05,
+    "late_over_early": 2.912229748769287e-05,
+    "max_relative_angle_deg": 14.999643396813672
+  },
+  {
+    "flight": "trout_lake",
+    "variant": "baseline",
+    "common": 0.1,
+    "family": "prior",
+    "amplitude_deg": 0,
+    "trim_residual": 8.599288604511389e-14,
+    "command": [
+      0.45256198556276245,
+      0.1,
+      0.035844864221223426
+    ],
+    "early_relative_angle_rms_deg": 0.0,
+    "late_relative_angle_rms_deg": 0.0,
+    "late_over_early": 0.0,
+    "max_relative_angle_deg": 0.0
+  },
+  {
+    "flight": "trout_lake",
+    "variant": "baseline",
+    "common": 0.1,
+    "family": "prior",
+    "amplitude_deg": 1,
+    "trim_residual": 8.599288604511389e-14,
+    "command": [
+      0.45256198556276245,
+      0.1,
+      0.035844864221223426
+    ],
+    "early_relative_angle_rms_deg": 0.026776676801182807,
+    "late_relative_angle_rms_deg": 5.688500392606887e-07,
+    "late_over_early": 2.1244235925331885e-05,
+    "max_relative_angle_deg": 0.9999940697399223
+  },
+  {
+    "flight": "trout_lake",
+    "variant": "baseline",
+    "common": 0.1,
+    "family": "prior",
+    "amplitude_deg": 5,
+    "trim_residual": 8.599288604511389e-14,
+    "command": [
+      0.45256198556276245,
+      0.1,
+      0.035844864221223426
+    ],
+    "early_relative_angle_rms_deg": 0.1328051161501486,
+    "late_relative_angle_rms_deg": 2.799430649538173e-06,
+    "late_over_early": 2.107923798939459e-05,
+    "max_relative_angle_deg": 4.999970328664977
+  },
+  {
+    "flight": "trout_lake",
+    "variant": "baseline",
+    "common": 0.1,
+    "family": "prior",
+    "amplitude_deg": 15,
+    "trim_residual": 8.599288604511389e-14,
+    "command": [
+      0.45256198556276245,
+      0.1,
+      0.035844864221223426
+    ],
+    "early_relative_angle_rms_deg": 0.39017420510525136,
+    "late_relative_angle_rms_deg": 8.108116897045887e-06,
+    "late_over_early": 2.0780760980492505e-05,
+    "max_relative_angle_deg": 14.999910708182519
+  },
+  {
+    "flight": "trout_lake",
+    "variant": "frozen_aero",
+    "common": 0.1,
+    "family": "prior",
+    "amplitude_deg": 0,
+    "trim_residual": 1.0408340855860843e-13,
+    "command": [
+      0.4525619855626487,
+      0.1,
+      0.0358448642211791
+    ],
+    "early_relative_angle_rms_deg": 0.0,
+    "late_relative_angle_rms_deg": 0.0,
+    "late_over_early": 0.0,
+    "max_relative_angle_deg": 0.0
+  },
+  {
+    "flight": "trout_lake",
+    "variant": "frozen_aero",
+    "common": 0.1,
+    "family": "prior",
+    "amplitude_deg": 1,
+    "trim_residual": 1.0408340855860843e-13,
+    "command": [
+      0.4525619855626487,
+      0.1,
+      0.0358448642211791
+    ],
+    "early_relative_angle_rms_deg": 0.02644887245302214,
+    "late_relative_angle_rms_deg": 8.199723829046098e-07,
+    "late_over_early": 3.100216783762806e-05,
+    "max_relative_angle_deg": 0.9999940697399201
+  },
+  {
+    "flight": "trout_lake",
+    "variant": "frozen_aero",
+    "common": 0.1,
+    "family": "prior",
+    "amplitude_deg": 5,
+    "trim_residual": 1.0408340855860843e-13,
+    "command": [
+      0.4525619855626487,
+      0.1,
+      0.0358448642211791
+    ],
+    "early_relative_angle_rms_deg": 0.13075684033165832,
+    "late_relative_angle_rms_deg": 4.068382295146664e-06,
+    "late_over_early": 3.111410680181176e-05,
+    "max_relative_angle_deg": 4.999970328664972
+  },
+  {
+    "flight": "trout_lake",
+    "variant": "frozen_aero",
+    "common": 0.1,
+    "family": "prior",
+    "amplitude_deg": 15,
+    "trim_residual": 1.0408340855860843e-13,
+    "command": [
+      0.4525619855626487,
+      0.1,
+      0.0358448642211791
+    ],
+    "early_relative_angle_rms_deg": 0.38136823720601887,
+    "late_relative_angle_rms_deg": 1.1985219411915616e-05,
+    "late_over_early": 3.1426894645767476e-05,
+    "max_relative_angle_deg": 14.999910708182515
+  },
+  {
+    "flight": "trout_lake",
+    "variant": "tension25",
+    "common": 0.1,
+    "family": "prior",
+    "amplitude_deg": 0,
+    "trim_residual": 7.258628457186921e-14,
+    "command": [
+      0.45282235175261076,
+      0.1,
+      0.03667970079987434
+    ],
+    "early_relative_angle_rms_deg": 0.0,
+    "late_relative_angle_rms_deg": 0.0,
+    "late_over_early": 0.0,
+    "max_relative_angle_deg": 0.0
+  },
+  {
+    "flight": "trout_lake",
+    "variant": "tension25",
+    "common": 0.1,
+    "family": "prior",
+    "amplitude_deg": 1,
+    "trim_residual": 7.258628457186921e-14,
+    "command": [
+      0.45282235175261076,
+      0.1,
+      0.03667970079987434
+    ],
+    "early_relative_angle_rms_deg": 0.026676843139491424,
+    "late_relative_angle_rms_deg": 5.59839270200185e-07,
+    "late_over_early": 2.09859640165376e-05,
+    "max_relative_angle_deg": 0.9999932040901158
+  },
+  {
+    "flight": "trout_lake",
+    "variant": "tension25",
+    "common": 0.1,
+    "family": "prior",
+    "amplitude_deg": 5,
+    "trim_residual": 7.258628457186921e-14,
+    "command": [
+      0.45282235175261076,
+      0.1,
+      0.03667970079987434
+    ],
+    "early_relative_angle_rms_deg": 0.13230155084441889,
+    "late_relative_angle_rms_deg": 2.7551346013592637e-06,
+    "late_over_early": 2.0824658394210264e-05,
+    "max_relative_angle_deg": 4.9999659963232865
+  },
+  {
+    "flight": "trout_lake",
+    "variant": "tension25",
+    "common": 0.1,
+    "family": "prior",
+    "amplitude_deg": 15,
+    "trim_residual": 7.258628457186921e-14,
+    "command": [
+      0.45282235175261076,
+      0.1,
+      0.03667970079987434
+    ],
+    "early_relative_angle_rms_deg": 0.3889948437490972,
+    "late_relative_angle_rms_deg": 7.985150457756321e-06,
+    "late_over_early": 2.0527651165748528e-05,
+    "max_relative_angle_deg": 14.999897661774046
+  },
+  {
+    "flight": "trout_lake",
+    "variant": "tension100",
+    "common": 0.1,
+    "family": "prior",
+    "amplitude_deg": 0,
+    "trim_residual": 1.2229924253461085e-13,
+    "command": [
+      0.4536090034750963,
+      0.1,
+      0.0391582047048765
+    ],
+    "early_relative_angle_rms_deg": 0.0,
+    "late_relative_angle_rms_deg": 0.0,
+    "late_over_early": 0.0,
+    "max_relative_angle_deg": 0.0
+  },
+  {
+    "flight": "trout_lake",
+    "variant": "tension100",
+    "common": 0.1,
+    "family": "prior",
+    "amplitude_deg": 1,
+    "trim_residual": 1.2229924253461085e-13,
+    "command": [
+      0.4536090034750963,
+      0.1,
+      0.0391582047048765
+    ],
+    "early_relative_angle_rms_deg": 0.02637312791868788,
+    "late_relative_angle_rms_deg": 5.34220983033749e-07,
+    "late_over_early": 2.0256261778308154e-05,
+    "max_relative_angle_deg": 0.9999900082465594
+  },
+  {
+    "flight": "trout_lake",
+    "variant": "tension100",
+    "common": 0.1,
+    "family": "prior",
+    "amplitude_deg": 5,
+    "trim_residual": 1.2229924253461085e-13,
+    "command": [
+      0.4536090034750963,
+      0.1,
+      0.0391582047048765
+    ],
+    "early_relative_angle_rms_deg": 0.13077553451861923,
+    "late_relative_angle_rms_deg": 2.629729529677689e-06,
+    "late_over_early": 2.0108727059366598e-05,
+    "max_relative_angle_deg": 4.999950000745812
+  },
+  {
+    "flight": "trout_lake",
+    "variant": "tension100",
+    "common": 0.1,
+    "family": "prior",
+    "amplitude_deg": 15,
+    "trim_residual": 1.2229924253461085e-13,
+    "command": [
+      0.4536090034750963,
+      0.1,
+      0.0391582047048765
+    ],
+    "early_relative_angle_rms_deg": 0.38533002455997695,
+    "late_relative_angle_rms_deg": 7.642786022395596e-06,
+    "late_over_early": 1.9834390094888622e-05,
+    "max_relative_angle_deg": 14.999849483260247
+  },
+  {
+    "flight": "trout_lake",
+    "variant": "tension300",
+    "common": 0.1,
+    "family": "prior",
+    "amplitude_deg": 0,
+    "trim_residual": 1.436004485581053e-13,
+    "command": [
+      0.45573510168249703,
+      0.1,
+      0.04559514271649566
+    ],
+    "early_relative_angle_rms_deg": 0.0,
+    "late_relative_angle_rms_deg": 0.0,
+    "late_over_early": 0.0,
+    "max_relative_angle_deg": 0.0
+  },
+  {
+    "flight": "trout_lake",
+    "variant": "tension300",
+    "common": 0.1,
+    "family": "prior",
+    "amplitude_deg": 1,
+    "trim_residual": 1.436004485581053e-13,
+    "command": [
+      0.45573510168249703,
+      0.1,
+      0.04559514271649566
+    ],
+    "early_relative_angle_rms_deg": 0.02553373706604426,
+    "late_relative_angle_rms_deg": 4.7452072742409477e-07,
+    "late_over_early": 1.8584068841812056e-05,
+    "max_relative_angle_deg": 0.999977014934613
+  },
+  {
+    "flight": "trout_lake",
+    "variant": "tension300",
+    "common": 0.1,
+    "family": "prior",
+    "amplitude_deg": 5,
+    "trim_residual": 1.436004485581053e-13,
+    "command": [
+      0.45573510168249703,
+      0.1,
+      0.04559514271649566
+    ],
+    "early_relative_angle_rms_deg": 0.12661123038052965,
+    "late_relative_angle_rms_deg": 2.339309420509184e-06,
+    "late_over_early": 1.8476318518336778e-05,
+    "max_relative_angle_deg": 4.99988495292543
+  },
+  {
+    "flight": "trout_lake",
+    "variant": "tension300",
+    "common": 0.1,
+    "family": "prior",
+    "amplitude_deg": 15,
+    "trim_residual": 1.436004485581053e-13,
+    "command": [
+      0.45573510168249703,
+      0.1,
+      0.04559514271649566
+    ],
+    "early_relative_angle_rms_deg": 0.37479858121186155,
+    "late_relative_angle_rms_deg": 6.851037783117911e-06,
+    "late_over_early": 1.8279252181174186e-05,
+    "max_relative_angle_deg": 14.999653448326626
+  },
+  {
+    "flight": "trout_lake",
+    "variant": "baseline",
+    "common": 0.3,
+    "family": "prior",
+    "amplitude_deg": 0,
+    "trim_residual": 8.659544642383619e-14,
+    "command": [
+      0.47275173913260937,
+      0.3,
+      0.013234671744567147
+    ],
+    "early_relative_angle_rms_deg": 0.0,
+    "late_relative_angle_rms_deg": 0.0,
+    "late_over_early": 0.0,
+    "max_relative_angle_deg": 0.0
+  },
+  {
+    "flight": "trout_lake",
+    "variant": "baseline",
+    "common": 0.3,
+    "family": "prior",
+    "amplitude_deg": 1,
+    "trim_residual": 8.659544642383619e-14,
+    "command": [
+      0.47275173913260937,
+      0.3,
+      0.013234671744567147
+    ],
+    "early_relative_angle_rms_deg": 0.028528454294403115,
+    "late_relative_angle_rms_deg": 2.1428438212206793e-07,
+    "late_over_early": 7.511251044684448e-06,
+    "max_relative_angle_deg": 0.9999930064156413
+  },
+  {
+    "flight": "trout_lake",
+    "variant": "baseline",
+    "common": 0.3,
+    "family": "prior",
+    "amplitude_deg": 5,
+    "trim_residual": 8.659544642383619e-14,
+    "command": [
+      0.47275173913260937,
+      0.3,
+      0.013234671744567147
+    ],
+    "early_relative_angle_rms_deg": 0.14114960429112292,
+    "late_relative_angle_rms_deg": 1.0515784870475366e-06,
+    "late_over_early": 7.450098725595022e-06,
+    "max_relative_angle_deg": 4.999965001816676
+  },
+  {
+    "flight": "trout_lake",
+    "variant": "baseline",
+    "common": 0.3,
+    "family": "prior",
+    "amplitude_deg": 15,
+    "trim_residual": 8.659544642383619e-14,
+    "command": [
+      0.47275173913260937,
+      0.3,
+      0.013234671744567147
+    ],
+    "early_relative_angle_rms_deg": 0.41888273120994135,
+    "late_relative_angle_rms_deg": 3.0539348436294988e-06,
+    "late_over_early": 7.2906678076898e-06,
+    "max_relative_angle_deg": 14.999894627647778
+  },
+  {
+    "flight": "trout_lake",
+    "variant": "frozen_aero",
+    "common": 0.3,
+    "family": "prior",
+    "amplitude_deg": 0,
+    "trim_residual": 1.2088467989702626e-13,
+    "command": [
+      0.4727517391326012,
+      0.3,
+      0.013234671744567463
+    ],
+    "early_relative_angle_rms_deg": 0.0,
+    "late_relative_angle_rms_deg": 0.0,
+    "late_over_early": 0.0,
+    "max_relative_angle_deg": 0.0
+  },
+  {
+    "flight": "trout_lake",
+    "variant": "frozen_aero",
+    "common": 0.3,
+    "family": "prior",
+    "amplitude_deg": 1,
+    "trim_residual": 1.2088467989702626e-13,
+    "command": [
+      0.4727517391326012,
+      0.3,
+      0.013234671744567463
+    ],
+    "early_relative_angle_rms_deg": 0.028342662741488635,
+    "late_relative_angle_rms_deg": 3.6642021982217917e-07,
+    "late_over_early": 1.2928221429449707e-05,
+    "max_relative_angle_deg": 0.9999930064156439
+  },
+  {
+    "flight": "trout_lake",
+    "variant": "frozen_aero",
+    "common": 0.3,
+    "family": "prior",
+    "amplitude_deg": 5,
+    "trim_residual": 1.2088467989702626e-13,
+    "command": [
+      0.4727517391326012,
+      0.3,
+      0.013234671744567463
+    ],
+    "early_relative_angle_rms_deg": 0.13972701323341719,
+    "late_relative_angle_rms_deg": 1.8103822518359634e-06,
+    "late_over_early": 1.2956565877577862e-05,
+    "max_relative_angle_deg": 4.999965001816682
+  },
+  {
+    "flight": "trout_lake",
+    "variant": "frozen_aero",
+    "common": 0.3,
+    "family": "prior",
+    "amplitude_deg": 15,
+    "trim_residual": 1.2088467989702626e-13,
+    "command": [
+      0.4727517391326012,
+      0.3,
+      0.013234671744567463
+    ],
+    "early_relative_angle_rms_deg": 0.4115898948770078,
+    "late_relative_angle_rms_deg": 5.333568591960799e-06,
+    "late_over_early": 1.2958453689818084e-05,
+    "max_relative_angle_deg": 14.999894627647784
+  },
+  {
+    "flight": "trout_lake",
+    "variant": "tension25",
+    "common": 0.3,
+    "family": "prior",
+    "amplitude_deg": 0,
+    "trim_residual": 1.1371104266140648e-13,
+    "command": [
+      0.47340553338560043,
+      0.3,
+      0.01477900916177904
+    ],
+    "early_relative_angle_rms_deg": 0.0,
+    "late_relative_angle_rms_deg": 0.0,
+    "late_over_early": 0.0,
+    "max_relative_angle_deg": 0.0
+  },
+  {
+    "flight": "trout_lake",
+    "variant": "tension25",
+    "common": 0.3,
+    "family": "prior",
+    "amplitude_deg": 1,
+    "trim_residual": 1.1371104266140648e-13,
+    "command": [
+      0.47340553338560043,
+      0.3,
+      0.01477900916177904
+    ],
+    "early_relative_angle_rms_deg": 0.028683550022185776,
+    "late_relative_angle_rms_deg": 2.1285944221291484e-07,
+    "late_over_early": 7.420958774219896e-06,
+    "max_relative_angle_deg": 0.9999922026696133
+  },
+  {
+    "flight": "trout_lake",
+    "variant": "tension25",
+    "common": 0.3,
+    "family": "prior",
+    "amplitude_deg": 5,
+    "trim_residual": 1.1371104266140648e-13,
+    "command": [
+      0.47340553338560043,
+      0.3,
+      0.01477900916177904
+    ],
+    "early_relative_angle_rms_deg": 0.1420086522792849,
+    "late_relative_angle_rms_deg": 1.0460918494902038e-06,
+    "late_over_early": 7.366395164661381e-06,
+    "max_relative_angle_deg": 4.999960976222343
+  },
+  {
+    "flight": "trout_lake",
+    "variant": "tension25",
+    "common": 0.3,
+    "family": "prior",
+    "amplitude_deg": 15,
+    "trim_residual": 1.1371104266140648e-13,
+    "command": [
+      0.47340553338560043,
+      0.3,
+      0.01477900916177904
+    ],
+    "early_relative_angle_rms_deg": 0.422101320552283,
+    "late_relative_angle_rms_deg": 3.051141424097886e-06,
+    "late_over_early": 7.228457423695647e-06,
+    "max_relative_angle_deg": 14.999882481813717
+  },
+  {
+    "flight": "trout_lake",
+    "variant": "tension100",
+    "common": 0.3,
+    "family": "prior",
+    "amplitude_deg": 0,
+    "trim_residual": 9.524006381893574e-14,
+    "command": [
+      0.4754872945668776,
+      0.3,
+      0.01941743697063392
+    ],
+    "early_relative_angle_rms_deg": 0.0,
+    "late_relative_angle_rms_deg": 0.0,
+    "late_over_early": 0.0,
+    "max_relative_angle_deg": 0.0
+  },
+  {
+    "flight": "trout_lake",
+    "variant": "tension100",
+    "common": 0.3,
+    "family": "prior",
+    "amplitude_deg": 1,
+    "trim_residual": 9.524006381893574e-14,
+    "command": [
+      0.4754872945668776,
+      0.3,
+      0.01941743697063392
+    ],
+    "early_relative_angle_rms_deg": 0.029170365237613922,
+    "late_relative_angle_rms_deg": 2.132891854304593e-07,
+    "late_over_early": 7.311844870404027e-06,
+    "max_relative_angle_deg": 0.9999889097860697
+  },
+  {
+    "flight": "trout_lake",
+    "variant": "tension100",
+    "common": 0.3,
+    "family": "prior",
+    "amplitude_deg": 5,
+    "trim_residual": 9.524006381893574e-14,
+    "command": [
+      0.4754872945668776,
+      0.3,
+      0.01941743697063392
+    ],
+    "early_relative_angle_rms_deg": 0.14468288922312925,
+    "late_relative_angle_rms_deg": 1.0536106824475372e-06,
+    "late_over_early": 7.282206542217055e-06,
+    "max_relative_angle_deg": 4.999944482113475
+  },
+  {
+    "flight": "trout_lake",
+    "variant": "tension100",
+    "common": 0.3,
+    "family": "prior",
+    "amplitude_deg": 15,
+    "trim_residual": 9.524006381893574e-14,
+    "command": [
+      0.4754872945668776,
+      0.3,
+      0.01941743697063392
+    ],
+    "early_relative_angle_rms_deg": 0.4319759519923043,
+    "late_relative_angle_rms_deg": 3.116676709044364e-06,
+    "late_over_early": 7.214931050374508e-06,
+    "max_relative_angle_deg": 14.99983270460503
+  },
+  {
+    "flight": "trout_lake",
+    "variant": "tension300",
+    "common": 0.3,
+    "family": "prior",
+    "amplitude_deg": 0,
+    "trim_residual": 3.5512357403974655e-13,
+    "command": [
+      0.481783923132857,
+      0.3,
+      0.03189568213055034
+    ],
+    "early_relative_angle_rms_deg": 0.0,
+    "late_relative_angle_rms_deg": 0.0,
+    "late_over_early": 0.0,
+    "max_relative_angle_deg": 0.0
+  },
+  {
+    "flight": "trout_lake",
+    "variant": "tension300",
+    "common": 0.3,
+    "family": "prior",
+    "amplitude_deg": 1,
+    "trim_residual": 3.5512357403974655e-13,
+    "command": [
+      0.481783923132857,
+      0.3,
+      0.03189568213055034
+    ],
+    "early_relative_angle_rms_deg": 0.030294399664434004,
+    "late_relative_angle_rms_deg": 2.387411217759912e-07,
+    "late_over_early": 7.88070152967171e-06,
+    "max_relative_angle_deg": 0.9999732659972569
+  },
+  {
+    "flight": "trout_lake",
+    "variant": "tension300",
+    "common": 0.3,
+    "family": "prior",
+    "amplitude_deg": 5,
+    "trim_residual": 3.5512357403974655e-13,
+    "command": [
+      0.481783923132857,
+      0.3,
+      0.03189568213055034
+    ],
+    "early_relative_angle_rms_deg": 0.15092241396593323,
+    "late_relative_angle_rms_deg": 1.1925150223891543e-06,
+    "late_over_early": 7.901510392341944e-06,
+    "max_relative_angle_deg": 4.999866086109451
+  },
+  {
+    "flight": "trout_lake",
+    "variant": "tension300",
+    "common": 0.3,
+    "family": "prior",
+    "amplitude_deg": 15,
+    "trim_residual": 3.5512357403974655e-13,
+    "command": [
+      0.481783923132857,
+      0.3,
+      0.03189568213055034
+    ],
+    "early_relative_angle_rms_deg": 0.45539072285216725,
+    "late_relative_angle_rms_deg": 3.617939285672184e-06,
+    "late_over_early": 7.944692555466638e-06,
+    "max_relative_angle_deg": 14.99959584123665
+  },
+  {
+    "flight": "hood_river",
+    "variant": "baseline",
+    "common": 0.02,
+    "family": "fitted",
+    "error": "trim failed: `ftol` termination condition is satisfied., residual 0.01283783781460163"
+  },
+  {
+    "flight": "hood_river",
+    "variant": "frozen_aero",
+    "common": 0.02,
+    "family": "fitted",
+    "error": "trim failed: `ftol` termination condition is satisfied., residual 0.012843092569625764"
+  },
+  {
+    "flight": "hood_river",
+    "variant": "tension25",
+    "common": 0.02,
+    "family": "fitted",
+    "error": "trim failed: `ftol` termination condition is satisfied., residual 0.012409559012298111"
+  },
+  {
+    "flight": "hood_river",
+    "variant": "tension100",
+    "common": 0.02,
+    "family": "fitted",
+    "error": "trim failed: `ftol` termination condition is satisfied., residual 0.011099684211095032"
+  },
+  {
+    "flight": "hood_river",
+    "variant": "tension300",
+    "common": 0.02,
+    "family": "fitted",
+    "error": "trim failed: `ftol` termination condition is satisfied., residual 0.007609132237233408"
+  },
+  {
+    "flight": "hood_river",
+    "variant": "baseline",
+    "common": 0.1,
+    "family": "fitted",
+    "amplitude_deg": 0,
+    "trim_residual": 1.1046499022377015e-13,
+    "command": [
+      0.40191907133685556,
+      0.1,
+      -0.22746242291134108
+    ],
+    "early_relative_angle_rms_deg": 0.0,
+    "late_relative_angle_rms_deg": 0.0,
+    "late_over_early": 0.0,
+    "max_relative_angle_deg": 0.0
+  },
+  {
+    "flight": "hood_river",
+    "variant": "baseline",
+    "common": 0.1,
+    "family": "fitted",
+    "amplitude_deg": 1,
+    "trim_residual": 1.1046499022377015e-13,
+    "command": [
+      0.40191907133685556,
+      0.1,
+      -0.22746242291134108
+    ],
+    "early_relative_angle_rms_deg": 0.03680175226498348,
+    "late_relative_angle_rms_deg": 9.360024371105474e-07,
+    "late_over_early": 2.5433637789066496e-05,
+    "max_relative_angle_deg": 1.2354297683283653
+  },
+  {
+    "flight": "hood_river",
+    "variant": "baseline",
+    "common": 0.1,
+    "family": "fitted",
+    "amplitude_deg": 5,
+    "trim_residual": 1.1046499022377015e-13,
+    "command": [
+      0.40191907133685556,
+      0.1,
+      -0.22746242291134108
+    ],
+    "early_relative_angle_rms_deg": 0.18536527464818034,
+    "late_relative_angle_rms_deg": 4.379684228941942e-06,
+    "late_over_early": 2.3627317669150797e-05,
+    "max_relative_angle_deg": 6.3278772038403
+  },
+  {
+    "flight": "hood_river",
+    "variant": "baseline",
+    "common": 0.1,
+    "family": "fitted",
+    "amplitude_deg": 15,
+    "trim_residual": 1.1046499022377015e-13,
+    "command": [
+      0.40191907133685556,
+      0.1,
+      -0.22746242291134108
+    ],
+    "early_relative_angle_rms_deg": 0.5713279927055167,
+    "late_relative_angle_rms_deg": 1.1354452365057446e-05,
+    "late_over_early": 1.9873789679529925e-05,
+    "max_relative_angle_deg": 19.34317972388864
+  },
+  {
+    "flight": "hood_river",
+    "variant": "frozen_aero",
+    "common": 0.1,
+    "family": "fitted",
+    "amplitude_deg": 0,
+    "trim_residual": 7.864555362789901e-14,
+    "command": [
+      0.4019190713368616,
+      0.1,
+      -0.22746242291127816
+    ],
+    "early_relative_angle_rms_deg": 0.0,
+    "late_relative_angle_rms_deg": 0.0,
+    "late_over_early": 0.0,
+    "max_relative_angle_deg": 0.0
+  },
+  {
+    "flight": "hood_river",
+    "variant": "frozen_aero",
+    "common": 0.1,
+    "family": "fitted",
+    "amplitude_deg": 1,
+    "trim_residual": 7.864555362789901e-14,
+    "command": [
+      0.4019190713368616,
+      0.1,
+      -0.22746242291127816
+    ],
+    "early_relative_angle_rms_deg": 0.03780826516686442,
+    "late_relative_angle_rms_deg": 2.4767345944238352e-06,
+    "late_over_early": 6.550775560563071e-05,
+    "max_relative_angle_deg": 1.247608360550985
+  },
+  {
+    "flight": "hood_river",
+    "variant": "frozen_aero",
+    "common": 0.1,
+    "family": "fitted",
+    "amplitude_deg": 5,
+    "trim_residual": 7.864555362789901e-14,
+    "command": [
+      0.4019190713368616,
+      0.1,
+      -0.22746242291127816
+    ],
+    "early_relative_angle_rms_deg": 0.19005905434381692,
+    "late_relative_angle_rms_deg": 1.2122354595574874e-05,
+    "late_over_early": 6.37820420470236e-05,
+    "max_relative_angle_deg": 6.414643335741163
+  },
+  {
+    "flight": "hood_river",
+    "variant": "frozen_aero",
+    "common": 0.1,
+    "family": "fitted",
+    "amplitude_deg": 15,
+    "trim_residual": 7.864555362789901e-14,
+    "command": [
+      0.4019190713368616,
+      0.1,
+      -0.22746242291127816
+    ],
+    "early_relative_angle_rms_deg": 0.5844635267992843,
+    "late_relative_angle_rms_deg": 3.5320512745621095e-05,
+    "late_over_early": 6.043236425555571e-05,
+    "max_relative_angle_deg": 19.806061975753096
+  },
+  {
+    "flight": "hood_river",
+    "variant": "tension25",
+    "common": 0.1,
+    "family": "fitted",
+    "amplitude_deg": 0,
+    "trim_residual": 8.694946998946893e-14,
+    "command": [
+      0.4021494617103571,
+      0.1,
+      -0.22552508067689236
+    ],
+    "early_relative_angle_rms_deg": 0.0,
+    "late_relative_angle_rms_deg": 0.0,
+    "late_over_early": 0.0,
+    "max_relative_angle_deg": 0.0
+  },
+  {
+    "flight": "hood_river",
+    "variant": "tension25",
+    "common": 0.1,
+    "family": "fitted",
+    "amplitude_deg": 1,
+    "trim_residual": 8.694946998946893e-14,
+    "command": [
+      0.4021494617103571,
+      0.1,
+      -0.22552508067689236
+    ],
+    "early_relative_angle_rms_deg": 0.03643212520140086,
+    "late_relative_angle_rms_deg": 9.461994130920309e-07,
+    "late_over_early": 2.5971567891286465e-05,
+    "max_relative_angle_deg": 1.2612871813852695
+  },
+  {
+    "flight": "hood_river",
+    "variant": "tension25",
+    "common": 0.1,
+    "family": "fitted",
+    "amplitude_deg": 5,
+    "trim_residual": 8.694946998946893e-14,
+    "command": [
+      0.4021494617103571,
+      0.1,
+      -0.22552508067689236
+    ],
+    "early_relative_angle_rms_deg": 0.18370897870917294,
+    "late_relative_angle_rms_deg": 4.370078884094518e-06,
+    "late_over_early": 2.3788052793068582e-05,
+    "max_relative_angle_deg": 6.441009243120017
+  },
+  {
+    "flight": "hood_river",
+    "variant": "tension25",
+    "common": 0.1,
+    "family": "fitted",
+    "amplitude_deg": 15,
+    "trim_residual": 8.694946998946893e-14,
+    "command": [
+      0.4021494617103571,
+      0.1,
+      -0.22552508067689236
+    ],
+    "early_relative_angle_rms_deg": 0.5681039102351503,
+    "late_relative_angle_rms_deg": 1.1092050419086656e-05,
+    "late_over_early": 1.9524685923206233e-05,
+    "max_relative_angle_deg": 19.573048249327815
+  },
+  {
+    "flight": "hood_river",
+    "variant": "tension100",
+    "common": 0.1,
+    "family": "fitted",
+    "amplitude_deg": 0,
+    "trim_residual": 6.833335186640264e-14,
+    "command": [
+      0.40288317289655357,
+      0.1,
+      -0.21945479203685053
+    ],
+    "early_relative_angle_rms_deg": 0.0,
+    "late_relative_angle_rms_deg": 0.0,
+    "late_over_early": 0.0,
+    "max_relative_angle_deg": 0.0
+  },
+  {
+    "flight": "hood_river",
+    "variant": "tension100",
+    "common": 0.1,
+    "family": "fitted",
+    "amplitude_deg": 1,
+    "trim_residual": 6.833335186640264e-14,
+    "command": [
+      0.40288317289655357,
+      0.1,
+      -0.21945479203685053
+    ],
+    "early_relative_angle_rms_deg": 0.035371510979071034,
+    "late_relative_angle_rms_deg": 9.863878417421508e-07,
+    "late_over_early": 2.7886505677571607e-05,
+    "max_relative_angle_deg": 1.3150488609793176
+  },
+  {
+    "flight": "hood_river",
+    "variant": "tension100",
+    "common": 0.1,
+    "family": "fitted",
+    "amplitude_deg": 5,
+    "trim_residual": 6.833335186640264e-14,
+    "command": [
+      0.40288317289655357,
+      0.1,
+      -0.21945479203685053
+    ],
+    "early_relative_angle_rms_deg": 0.17894051371149727,
+    "late_relative_angle_rms_deg": 4.348643724781771e-06,
+    "late_over_early": 2.430217525692932e-05,
+    "max_relative_angle_deg": 6.656171873169092
+  },
+  {
+    "flight": "hood_river",
+    "variant": "tension100",
+    "common": 0.1,
+    "family": "fitted",
+    "amplitude_deg": 15,
+    "trim_residual": 6.833335186640264e-14,
+    "command": [
+      0.40288317289655357,
+      0.1,
+      -0.21945479203685053
+    ],
+    "early_relative_angle_rms_deg": 0.5582293927814184,
+    "late_relative_angle_rms_deg": 1.0314786657900682e-05,
+    "late_over_early": 1.847768460651366e-05,
+    "max_relative_angle_deg": 19.86822625251797
+  },
+  {
+    "flight": "hood_river",
+    "variant": "tension300",
+    "common": 0.1,
+    "family": "fitted",
+    "amplitude_deg": 0,
+    "trim_residual": 2.8630918369260346e-13,
+    "command": [
+      0.40489167115732205,
+      0.1,
+      -0.2019802492071367
+    ],
+    "early_relative_angle_rms_deg": 0.0,
+    "late_relative_angle_rms_deg": 0.0,
+    "late_over_early": 0.0,
+    "max_relative_angle_deg": 0.0
+  },
+  {
+    "flight": "hood_river",
+    "variant": "tension300",
+    "common": 0.1,
+    "family": "fitted",
+    "amplitude_deg": 1,
+    "trim_residual": 2.8630918369260346e-13,
+    "command": [
+      0.40489167115732205,
+      0.1,
+      -0.2019802492071367
+    ],
+    "early_relative_angle_rms_deg": 0.03301678085325148,
+    "late_relative_angle_rms_deg": 1.163745246934336e-06,
+    "late_over_early": 3.524708396335771e-05,
+    "max_relative_angle_deg": 1.3570535107747883
+  },
+  {
+    "flight": "hood_river",
+    "variant": "tension300",
+    "common": 0.1,
+    "family": "fitted",
+    "amplitude_deg": 5,
+    "trim_residual": 2.8630918369260346e-13,
+    "command": [
+      0.40489167115732205,
+      0.1,
+      -0.2019802492071367
+    ],
+    "early_relative_angle_rms_deg": 0.16823879765789063,
+    "late_relative_angle_rms_deg": 4.463974162719785e-06,
+    "late_over_early": 2.6533559588301174e-05,
+    "max_relative_angle_deg": 7.0436055620619
+  },
+  {
+    "flight": "hood_river",
+    "variant": "tension300",
+    "common": 0.1,
+    "family": "fitted",
+    "amplitude_deg": 15,
+    "trim_residual": 2.8630918369260346e-13,
+    "command": [
+      0.40489167115732205,
+      0.1,
+      -0.2019802492071367
+    ],
+    "early_relative_angle_rms_deg": 0.5340967800649273,
+    "late_relative_angle_rms_deg": 8.555646021465774e-06,
+    "late_over_early": 1.601890582531823e-05,
+    "max_relative_angle_deg": 21.828540382380645
+  },
+  {
+    "flight": "hood_river",
+    "variant": "baseline",
+    "common": 0.3,
+    "family": "fitted",
+    "amplitude_deg": 0,
+    "trim_residual": 3.071306371654672e-14,
+    "command": [
+      0.4267359373839272,
+      0.3,
+      -0.2521317982155349
+    ],
+    "early_relative_angle_rms_deg": 0.0,
+    "late_relative_angle_rms_deg": 0.0,
+    "late_over_early": 0.0,
+    "max_relative_angle_deg": 0.0
+  },
+  {
+    "flight": "hood_river",
+    "variant": "baseline",
+    "common": 0.3,
+    "family": "fitted",
+    "amplitude_deg": 1,
+    "trim_residual": 3.071306371654672e-14,
+    "command": [
+      0.4267359373839272,
+      0.3,
+      -0.2521317982155349
+    ],
+    "early_relative_angle_rms_deg": 0.03746380598690906,
+    "late_relative_angle_rms_deg": 9.138064094088975e-06,
+    "late_over_early": 0.00024391713157179173,
+    "max_relative_angle_deg": 1.1893496023543277
+  },
+  {
+    "flight": "hood_river",
+    "variant": "baseline",
+    "common": 0.3,
+    "family": "fitted",
+    "amplitude_deg": 5,
+    "trim_residual": 3.071306371654672e-14,
+    "command": [
+      0.4267359373839272,
+      0.3,
+      -0.2521317982155349
+    ],
+    "early_relative_angle_rms_deg": 0.18959174116322708,
+    "late_relative_angle_rms_deg": 3.4059765351742e-05,
+    "late_over_early": 0.00017964793794693088,
+    "max_relative_angle_deg": 6.076765315178054
+  },
+  {
+    "flight": "hood_river",
+    "variant": "baseline",
+    "common": 0.3,
+    "family": "fitted",
+    "amplitude_deg": 15,
+    "trim_residual": 3.071306371654672e-14,
+    "command": [
+      0.4267359373839272,
+      0.3,
+      -0.2521317982155349
+    ],
+    "early_relative_angle_rms_deg": 0.5935537355004522,
+    "late_relative_angle_rms_deg": 1.0607556923504735e-05,
+    "late_over_early": 1.7871266389320286e-05,
+    "max_relative_angle_deg": 18.483845744221377
+  },
+  {
+    "flight": "hood_river",
+    "variant": "frozen_aero",
+    "common": 0.3,
+    "family": "fitted",
+    "amplitude_deg": 0,
+    "trim_residual": 1.5576427836107886e-13,
+    "command": [
+      0.4267359373838898,
+      0.3,
+      -0.2521317982155663
+    ],
+    "early_relative_angle_rms_deg": 0.0,
+    "late_relative_angle_rms_deg": 0.0,
+    "late_over_early": 0.0,
+    "max_relative_angle_deg": 0.0
+  },
+  {
+    "flight": "hood_river",
+    "variant": "frozen_aero",
+    "common": 0.3,
+    "family": "fitted",
+    "amplitude_deg": 1,
+    "trim_residual": 1.5576427836107886e-13,
+    "command": [
+      0.4267359373838898,
+      0.3,
+      -0.2521317982155663
+    ],
+    "early_relative_angle_rms_deg": 0.03836555847680832,
+    "late_relative_angle_rms_deg": 4.2798588392049695e-05,
+    "late_over_early": 0.0011155471232856184,
+    "max_relative_angle_deg": 1.2022828402405472
+  },
+  {
+    "flight": "hood_river",
+    "variant": "frozen_aero",
+    "common": 0.3,
+    "family": "fitted",
+    "amplitude_deg": 5,
+    "trim_residual": 1.5576427836107886e-13,
+    "command": [
+      0.4267359373838898,
+      0.3,
+      -0.2521317982155663
+    ],
+    "early_relative_angle_rms_deg": 0.1934554660858519,
+    "late_relative_angle_rms_deg": 0.0002007999783653772,
+    "late_over_early": 0.0010379648734053653,
+    "max_relative_angle_deg": 6.1640189229010725
+  },
+  {
+    "flight": "hood_river",
+    "variant": "frozen_aero",
+    "common": 0.3,
+    "family": "fitted",
+    "amplitude_deg": 15,
+    "trim_residual": 1.5576427836107886e-13,
+    "command": [
+      0.4267359373838898,
+      0.3,
+      -0.2521317982155663
+    ],
+    "early_relative_angle_rms_deg": 0.6025969838939262,
+    "late_relative_angle_rms_deg": 0.0005319708539852959,
+    "late_over_early": 0.000882797073672273,
+    "max_relative_angle_deg": 18.909919559107905
+  },
+  {
+    "flight": "hood_river",
+    "variant": "tension25",
+    "common": 0.3,
+    "family": "fitted",
+    "amplitude_deg": 0,
+    "trim_residual": 7.58479722107036e-14,
+    "command": [
+      0.4273665667291165,
+      0.3,
+      -0.24923244028353178
+    ],
+    "early_relative_angle_rms_deg": 0.0,
+    "late_relative_angle_rms_deg": 0.0,
+    "late_over_early": 0.0,
+    "max_relative_angle_deg": 0.0
+  },
+  {
+    "flight": "hood_river",
+    "variant": "tension25",
+    "common": 0.3,
+    "family": "fitted",
+    "amplitude_deg": 1,
+    "trim_residual": 7.58479722107036e-14,
+    "command": [
+      0.4273665667291165,
+      0.3,
+      -0.24923244028353178
+    ],
+    "early_relative_angle_rms_deg": 0.03730022318354097,
+    "late_relative_angle_rms_deg": 1.0290437508766967e-05,
+    "late_over_early": 0.00027588139240163333,
+    "max_relative_angle_deg": 1.245564236159852
+  },
+  {
+    "flight": "hood_river",
+    "variant": "tension25",
+    "common": 0.3,
+    "family": "fitted",
+    "amplitude_deg": 5,
+    "trim_residual": 7.58479722107036e-14,
+    "command": [
+      0.4273665667291165,
+      0.3,
+      -0.24923244028353178
+    ],
+    "early_relative_angle_rms_deg": 0.1893762089157472,
+    "late_relative_angle_rms_deg": 3.709041099772859e-05,
+    "late_over_early": 0.000195855705476869,
+    "max_relative_angle_deg": 6.329361565331813
+  },
+  {
+    "flight": "hood_river",
+    "variant": "tension25",
+    "common": 0.3,
+    "family": "fitted",
+    "amplitude_deg": 15,
+    "trim_residual": 7.58479722107036e-14,
+    "command": [
+      0.4273665667291165,
+      0.3,
+      -0.24923244028353178
+    ],
+    "early_relative_angle_rms_deg": 0.596745528222417,
+    "late_relative_angle_rms_deg": 4.168025209264433e-06,
+    "late_over_early": 6.9845939552829634e-06,
+    "max_relative_angle_deg": 19.061966785408444
+  },
+  {
+    "flight": "hood_river",
+    "variant": "tension100",
+    "common": 0.3,
+    "family": "fitted",
+    "amplitude_deg": 0,
+    "trim_residual": 4.703455223407702e-14,
+    "command": [
+      0.4296961324551286,
+      0.3,
+      -0.23934466778466248
+    ],
+    "early_relative_angle_rms_deg": 0.0,
+    "late_relative_angle_rms_deg": 0.0,
+    "late_over_early": 0.0,
+    "max_relative_angle_deg": 0.0
+  },
+  {
+    "flight": "hood_river",
+    "variant": "tension100",
+    "common": 0.3,
+    "family": "fitted",
+    "amplitude_deg": 1,
+    "trim_residual": 4.703455223407702e-14,
+    "command": [
+      0.4296961324551286,
+      0.3,
+      -0.23934466778466248
+    ],
+    "early_relative_angle_rms_deg": 0.037665271891952304,
+    "late_relative_angle_rms_deg": 1.3576171255938377e-05,
+    "late_over_early": 0.00036044267236098486,
+    "max_relative_angle_deg": 1.3496825407057154
+  },
+  {
+    "flight": "hood_river",
+    "variant": "tension100",
+    "common": 0.3,
+    "family": "fitted",
+    "amplitude_deg": 5,
+    "trim_residual": 4.703455223407702e-14,
+    "command": [
+      0.4296961324551286,
+      0.3,
+      -0.23934466778466248
+    ],
+    "early_relative_angle_rms_deg": 0.19252095831339783,
+    "late_relative_angle_rms_deg": 4.5182708598542326e-05,
+    "late_over_early": 0.0002346898176404828,
+    "max_relative_angle_deg": 6.754200596305361
+  },
+  {
+    "flight": "hood_river",
+    "variant": "tension100",
+    "common": 0.3,
+    "family": "fitted",
+    "amplitude_deg": 15,
+    "trim_residual": 4.703455223407702e-14,
+    "command": [
+      0.4296961324551286,
+      0.3,
+      -0.23934466778466248
+    ],
+    "early_relative_angle_rms_deg": 0.6163870207446568,
+    "late_relative_angle_rms_deg": 2.699201530343501e-05,
+    "late_over_early": 4.379069382548966e-05,
+    "max_relative_angle_deg": 19.76957906829821
+  },
+  {
+    "flight": "hood_river",
+    "variant": "tension300",
+    "common": 0.3,
+    "family": "fitted",
+    "amplitude_deg": 0,
+    "trim_residual": 5.99563801384484e-13,
+    "command": [
+      0.43743625319184515,
+      0.3,
+      -0.205977749901239
+    ],
+    "early_relative_angle_rms_deg": 0.0,
+    "late_relative_angle_rms_deg": 0.0,
+    "late_over_early": 0.0,
+    "max_relative_angle_deg": 0.0
+  },
+  {
+    "flight": "hood_river",
+    "variant": "tension300",
+    "common": 0.3,
+    "family": "fitted",
+    "amplitude_deg": 1,
+    "trim_residual": 5.99563801384484e-13,
+    "command": [
+      0.43743625319184515,
+      0.3,
+      -0.205977749901239
+    ],
+    "early_relative_angle_rms_deg": 0.03765312203497493,
+    "late_relative_angle_rms_deg": 2.2687664024799046e-05,
+    "late_over_early": 0.000602544033499403,
+    "max_relative_angle_deg": 1.4955016782897845
+  },
+  {
+    "flight": "hood_river",
+    "variant": "tension300",
+    "common": 0.3,
+    "family": "fitted",
+    "amplitude_deg": 5,
+    "trim_residual": 5.99563801384484e-13,
+    "command": [
+      0.43743625319184515,
+      0.3,
+      -0.205977749901239
+    ],
+    "early_relative_angle_rms_deg": 0.19415894366712,
+    "late_relative_angle_rms_deg": 7.090323752159378e-05,
+    "late_over_early": 0.00036518141365228773,
+    "max_relative_angle_deg": 7.5542950056611975
+  },
+  {
+    "flight": "hood_river",
+    "variant": "tension300",
+    "common": 0.3,
+    "family": "fitted",
+    "amplitude_deg": 15,
+    "trim_residual": 5.99563801384484e-13,
+    "command": [
+      0.43743625319184515,
+      0.3,
+      -0.205977749901239
+    ],
+    "early_relative_angle_rms_deg": 0.6341549522203624,
+    "late_relative_angle_rms_deg": 9.787638668598696e-05,
+    "late_over_early": 0.0001543414371255685,
+    "max_relative_angle_deg": 22.19434878096655
+  }
+]

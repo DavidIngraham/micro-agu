@@ -128,6 +128,33 @@ pub fn rhs(
     rpm_rate: f64,
     shaft_torque: Option<f64>,
 ) -> State {
+    rhs_with_joint_torque(
+        y,
+        input,
+        p,
+        mass,
+        wind,
+        rpm,
+        rpm_rate,
+        shaft_torque,
+        V::zeros(),
+    )
+}
+
+/// Extra internal world-frame torque on payload, with opposite torque on canopy.
+/// Applied before the point-constraint solve so suspension reactions remain consistent.
+#[allow(clippy::too_many_arguments)]
+pub fn rhs_with_joint_torque(
+    y: &State,
+    input: &[f64; 3],
+    p: &Parameters,
+    mass: f64,
+    wind: V,
+    rpm: f64,
+    rpm_rate: f64,
+    shaft_torque: Option<f64>,
+    extra_joint_torque: V,
+) -> State {
     let rp = rotation(y, PAYLOAD);
     let rc = rotation(y, CANOPY);
     let mut u = *input;
@@ -198,8 +225,8 @@ pub fn rhs(
     let Some(joint) = crate::joint::joint_loads(rp, rc, wp, wc, mp, p) else {
         return State::repeat(f64::NAN);
     };
-    moment_p += joint.total;
-    moment_c -= joint.total;
+    moment_p += joint.total + extra_joint_torque;
+    moment_c -= joint.total + extra_joint_torque;
     let hc = canopy_inertia(p);
     let mut nu = V6::zeros();
     nu.fixed_rows_mut::<3>(0)

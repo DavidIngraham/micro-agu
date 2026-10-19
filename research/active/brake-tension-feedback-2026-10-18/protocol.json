@@ -1,0 +1,62 @@
+{
+  "question": "Can geometric brake feedback and passive tension reaction explain the coupled oscillation?",
+  "variants": {
+    "baseline": {},
+    "frozen_aero": {
+      "frozen": true
+    },
+    "tension25": {
+      "stiffness": 25
+    },
+    "tension100": {
+      "stiffness": 100
+    },
+    "tension300": {
+      "stiffness": 300
+    }
+  },
+  "law": "T=k*max(0,command_pull+route_length-reference_length); potential=0.5*k*positive_pull^2",
+  "stiffness_units": "N/m",
+  "status": "hypothesis sweep, not identified material stiffness",
+  "scope": "prior as-built physics for each flight; no fitting, no promotion",
+  "metrics": "body-rate RMSE, 1.2-1.9 Hz RMS/phase, powered-turn means, passive-load and effective-pull ranges",
+  "constant_input": "separately trim each variant, perturb relative pitch and compare late/early motion",
+  "limitations": [
+    "quasi-static effective trailing-edge resistance; not a resolved flexible canopy",
+    "existing effective suspension damping is retained; possible double counting",
+    "same geometry before/after; stiffness unmeasured",
+    "existing previously examined windows; no independent holdout"
+  ],
+  "constant_input_details": {
+    "flights": [
+      "hood_river",
+      "trout_lake"
+    ],
+    "families": [
+      "prior as-built for both",
+      "recent fitted coefficients for Hood River"
+    ],
+    "common_command_fractions": [
+      0.02,
+      0.1,
+      0.3
+    ],
+    "pitch_perturbations_deg": [
+      0,
+      1,
+      5,
+      15
+    ],
+    "duration_s": 40,
+    "early_interval_s": [
+      1,
+      5
+    ],
+    "late_interval_s": [
+      30,
+      40
+    ],
+    "equilibrium_residual_limit": 1e-06,
+    "note": "preload and fitted-coefficient checks added after nominal-condition replay/decay results; diagnostic expansion, not frozen validation"
+  }
+}

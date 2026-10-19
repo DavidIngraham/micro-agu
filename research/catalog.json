@@ -26,6 +26,13 @@
       "reason": "Retained measurements, published figures, model lineage or current-envelope evidence."
     },
     {
+      "study": "brake-tension-feedback-2026-10-18",
+      "status": "active",
+      "path": "research/active/brake-tension-feedback-2026-10-18",
+      "summary": "Diagnostic test of routing feedback and passive brake-tension reactions; no production change.",
+      "execution_policy": "maintained for ongoing fidelity/pipeline work"
+    },
+    {
       "study": "controller-pipeline-2026-10-18",
       "status": "active",
       "path": "research/active/controller-pipeline-2026-10-18",

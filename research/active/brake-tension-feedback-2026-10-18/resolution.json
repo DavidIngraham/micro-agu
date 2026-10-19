@@ -1,0 +1,22 @@
+[
+  {
+    "name": "hood_river-438",
+    "stiffness": 0,
+    "max_state_difference": 6.037760065802367e-07
+  },
+  {
+    "name": "hood_river-438",
+    "stiffness": 300,
+    "max_state_difference": 1.4239362440826575e-06
+  },
+  {
+    "name": "trout_lake-2100",
+    "stiffness": 0,
+    "max_state_difference": 5.522703339977397e-06
+  },
+  {
+    "name": "trout_lake-2100",
+    "stiffness": 300,
+    "max_state_difference": 8.887567075954728e-06
+  }
+]

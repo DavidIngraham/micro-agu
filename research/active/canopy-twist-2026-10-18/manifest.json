@@ -1,0 +1,16 @@
+{
+  "parent_commit": "ae709e2dfc30a8dcc06f4e915f1889060bc3a16b",
+  "source_hashes": {
+    "trim.py": "1fa468ec381a5b47f7c504864743cb2d4e18bb63c21ea14fd73dfa61508bc258",
+    "constant.py": "db4b3d2ca97ccb0209be5035b52c6083f08f1f512358483b65ae96f7f5db275c",
+    "report.py": "a34cbe110c17e38921e7407e1d9023ac50327ec77c2ed1d3c530002e6ba0f3ef",
+    "run.py": "02a9ff290a4b487d78dced603dc62f7c48229159b0667cd90f784a159a2d796e",
+    "checks.py": "ffdcce92501f73c63d5c04ed32255f5c5c20c88bd2d8ee5413c8632881543509",
+    "src/main.rs": "743aa0b42448f2d584df0a563eaffcd6372a23635ae42be029d03701f97a2ca7"
+  },
+  "binary_sha256": "36db472dd218ef2c2a6e940efcca0d42220bbe54e38bb9aefec9afa93333446d",
+  "replays": 890,
+  "failed": 60,
+  "decision": "No qualified physics candidate; no deployment",
+  "build_note": "Rust formatting and an additional virtual-work test were applied after the replay sweep; production calculation unchanged."
+}

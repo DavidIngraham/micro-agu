@@ -1,0 +1,630 @@
+{
+  "variants": {
+    "baseline": {
+      "enabled": false,
+      "frequency": 1.6,
+      "damping": 0.3,
+      "arm_fraction": 0.0,
+      "beta_gain": 0.0
+    },
+    "f1.0-d0.15-a-0.08-b-0.2": {
+      "enabled": true,
+      "frequency": 1.0,
+      "damping": 0.15,
+      "arm_fraction": -0.08,
+      "beta_gain": -0.2
+    },
+    "f1.0-d0.15-a-0.08-b0.0": {
+      "enabled": true,
+      "frequency": 1.0,
+      "damping": 0.15,
+      "arm_fraction": -0.08,
+      "beta_gain": 0.0
+    },
+    "f1.0-d0.15-a-0.08-b0.2": {
+      "enabled": true,
+      "frequency": 1.0,
+      "damping": 0.15,
+      "arm_fraction": -0.08,
+      "beta_gain": 0.2
+    },
+    "f1.0-d0.15-a-0.03-b-0.2": {
+      "enabled": true,
+      "frequency": 1.0,
+      "damping": 0.15,
+      "arm_fraction": -0.03,
+      "beta_gain": -0.2
+    },
+    "f1.0-d0.15-a-0.03-b0.0": {
+      "enabled": true,
+      "frequency": 1.0,
+      "damping": 0.15,
+      "arm_fraction": -0.03,
+      "beta_gain": 0.0
+    },
+    "f1.0-d0.15-a-0.03-b0.2": {
+      "enabled": true,
+      "frequency": 1.0,
+      "damping": 0.15,
+      "arm_fraction": -0.03,
+      "beta_gain": 0.2
+    },
+    "f1.0-d0.15-a0.03-b-0.2": {
+      "enabled": true,
+      "frequency": 1.0,
+      "damping": 0.15,
+      "arm_fraction": 0.03,
+      "beta_gain": -0.2
+    },
+    "f1.0-d0.15-a0.03-b0.0": {
+      "enabled": true,
+      "frequency": 1.0,
+      "damping": 0.15,
+      "arm_fraction": 0.03,
+      "beta_gain": 0.0
+    },
+    "f1.0-d0.15-a0.03-b0.2": {
+      "enabled": true,
+      "frequency": 1.0,
+      "damping": 0.15,
+      "arm_fraction": 0.03,
+      "beta_gain": 0.2
+    },
+    "f1.0-d0.15-a0.08-b-0.2": {
+      "enabled": true,
+      "frequency": 1.0,
+      "damping": 0.15,
+      "arm_fraction": 0.08,
+      "beta_gain": -0.2
+    },
+    "f1.0-d0.15-a0.08-b0.0": {
+      "enabled": true,
+      "frequency": 1.0,
+      "damping": 0.15,
+      "arm_fraction": 0.08,
+      "beta_gain": 0.0
+    },
+    "f1.0-d0.15-a0.08-b0.2": {
+      "enabled": true,
+      "frequency": 1.0,
+      "damping": 0.15,
+      "arm_fraction": 0.08,
+      "beta_gain": 0.2
+    },
+    "f1.0-d0.5-a-0.08-b-0.2": {
+      "enabled": true,
+      "frequency": 1.0,
+      "damping": 0.5,
+      "arm_fraction": -0.08,
+      "beta_gain": -0.2
+    },
+    "f1.0-d0.5-a-0.08-b0.0": {
+      "enabled": true,
+      "frequency": 1.0,
+      "damping": 0.5,
+      "arm_fraction": -0.08,
+      "beta_gain": 0.0
+    },
+    "f1.0-d0.5-a-0.08-b0.2": {
+      "enabled": true,
+      "frequency": 1.0,
+      "damping": 0.5,
+      "arm_fraction": -0.08,
+      "beta_gain": 0.2
+    },
+    "f1.0-d0.5-a-0.03-b-0.2": {
+      "enabled": true,
+      "frequency": 1.0,
+      "damping": 0.5,
+      "arm_fraction": -0.03,
+      "beta_gain": -0.2
+    },
+    "f1.0-d0.5-a-0.03-b0.0": {
+      "enabled": true,
+      "frequency": 1.0,
+      "damping": 0.5,
+      "arm_fraction": -0.03,
+      "beta_gain": 0.0
+    },
+    "f1.0-d0.5-a-0.03-b0.2": {
+      "enabled": true,
+      "frequency": 1.0,
+      "damping": 0.5,
+      "arm_fraction": -0.03,
+      "beta_gain": 0.2
+    },
+    "f1.0-d0.5-a0.03-b-0.2": {
+      "enabled": true,
+      "frequency": 1.0,
+      "damping": 0.5,
+      "arm_fraction": 0.03,
+      "beta_gain": -0.2
+    },
+    "f1.0-d0.5-a0.03-b0.0": {
+      "enabled": true,
+      "frequency": 1.0,
+      "damping": 0.5,
+      "arm_fraction": 0.03,
+      "beta_gain": 0.0
+    },
+    "f1.0-d0.5-a0.03-b0.2": {
+      "enabled": true,
+      "frequency": 1.0,
+      "damping": 0.5,
+      "arm_fraction": 0.03,
+      "beta_gain": 0.2
+    },
+    "f1.0-d0.5-a0.08-b-0.2": {
+      "enabled": true,
+      "frequency": 1.0,
+      "damping": 0.5,
+      "arm_fraction": 0.08,
+      "beta_gain": -0.2
+    },
+    "f1.0-d0.5-a0.08-b0.0": {
+      "enabled": true,
+      "frequency": 1.0,
+      "damping": 0.5,
+      "arm_fraction": 0.08,
+      "beta_gain": 0.0
+    },
+    "f1.0-d0.5-a0.08-b0.2": {
+      "enabled": true,
+      "frequency": 1.0,
+      "damping": 0.5,
+      "arm_fraction": 0.08,
+      "beta_gain": 0.2
+    },
+    "f1.6-d0.15-a-0.08-b-0.2": {
+      "enabled": true,
+      "frequency": 1.6,
+      "damping": 0.15,
+      "arm_fraction": -0.08,
+      "beta_gain": -0.2
+    },
+    "f1.6-d0.15-a-0.08-b0.0": {
+      "enabled": true,
+      "frequency": 1.6,
+      "damping": 0.15,
+      "arm_fraction": -0.08,
+      "beta_gain": 0.0
+    },
+    "f1.6-d0.15-a-0.08-b0.2": {
+      "enabled": true,
+      "frequency": 1.6,
+      "damping": 0.15,
+      "arm_fraction": -0.08,
+      "beta_gain": 0.2
+    },
+    "f1.6-d0.15-a-0.03-b-0.2": {
+      "enabled": true,
+      "frequency": 1.6,
+      "damping": 0.15,
+      "arm_fraction": -0.03,
+      "beta_gain": -0.2
+    },
+    "f1.6-d0.15-a-0.03-b0.0": {
+      "enabled": true,
+      "frequency": 1.6,
+      "damping": 0.15,
+      "arm_fraction": -0.03,
+      "beta_gain": 0.0
+    },
+    "f1.6-d0.15-a-0.03-b0.2": {
+      "enabled": true,
+      "frequency": 1.6,
+      "damping": 0.15,
+      "arm_fraction": -0.03,
+      "beta_gain": 0.2
+    },
+    "f1.6-d0.15-a0.03-b-0.2": {
+      "enabled": true,
+      "frequency": 1.6,
+      "damping": 0.15,
+      "arm_fraction": 0.03,
+      "beta_gain": -0.2
+    },
+    "f1.6-d0.15-a0.03-b0.0": {
+      "enabled": true,
+      "frequency": 1.6,
+      "damping": 0.15,
+      "arm_fraction": 0.03,
+      "beta_gain": 0.0
+    },
+    "f1.6-d0.15-a0.03-b0.2": {
+      "enabled": true,
+      "frequency": 1.6,
+      "damping": 0.15,
+      "arm_fraction": 0.03,
+      "beta_gain": 0.2
+    },
+    "f1.6-d0.15-a0.08-b-0.2": {
+      "enabled": true,
+      "frequency": 1.6,
+      "damping": 0.15,
+      "arm_fraction": 0.08,
+      "beta_gain": -0.2
+    },
+    "f1.6-d0.15-a0.08-b0.0": {
+      "enabled": true,
+      "frequency": 1.6,
+      "damping": 0.15,
+      "arm_fraction": 0.08,
+      "beta_gain": 0.0
+    },
+    "f1.6-d0.15-a0.08-b0.2": {
+      "enabled": true,
+      "frequency": 1.6,
+      "damping": 0.15,
+      "arm_fraction": 0.08,
+      "beta_gain": 0.2
+    },
+    "f1.6-d0.5-a-0.08-b-0.2": {
+      "enabled": true,
+      "frequency": 1.6,
+      "damping": 0.5,
+      "arm_fraction": -0.08,
+      "beta_gain": -0.2
+    },
+    "f1.6-d0.5-a-0.08-b0.0": {
+      "enabled": true,
+      "frequency": 1.6,
+      "damping": 0.5,
+      "arm_fraction": -0.08,
+      "beta_gain": 0.0
+    },
+    "f1.6-d0.5-a-0.08-b0.2": {
+      "enabled": true,
+      "frequency": 1.6,
+      "damping": 0.5,
+      "arm_fraction": -0.08,
+      "beta_gain": 0.2
+    },
+    "f1.6-d0.5-a-0.03-b-0.2": {
+      "enabled": true,
+      "frequency": 1.6,
+      "damping": 0.5,
+      "arm_fraction": -0.03,
+      "beta_gain": -0.2
+    },
+    "f1.6-d0.5-a-0.03-b0.0": {
+      "enabled": true,
+      "frequency": 1.6,
+      "damping": 0.5,
+      "arm_fraction": -0.03,
+      "beta_gain": 0.0
+    },
+    "f1.6-d0.5-a-0.03-b0.2": {
+      "enabled": true,
+      "frequency": 1.6,
+      "damping": 0.5,
+      "arm_fraction": -0.03,
+      "beta_gain": 0.2
+    },
+    "f1.6-d0.5-a0.03-b-0.2": {
+      "enabled": true,
+      "frequency": 1.6,
+      "damping": 0.5,
+      "arm_fraction": 0.03,
+      "beta_gain": -0.2
+    },
+    "f1.6-d0.5-a0.03-b0.0": {
+      "enabled": true,
+      "frequency": 1.6,
+      "damping": 0.5,
+      "arm_fraction": 0.03,
+      "beta_gain": 0.0
+    },
+    "f1.6-d0.5-a0.03-b0.2": {
+      "enabled": true,
+      "frequency": 1.6,
+      "damping": 0.5,
+      "arm_fraction": 0.03,
+      "beta_gain": 0.2
+    },
+    "f1.6-d0.5-a0.08-b-0.2": {
+      "enabled": true,
+      "frequency": 1.6,
+      "damping": 0.5,
+      "arm_fraction": 0.08,
+      "beta_gain": -0.2
+    },
+    "f1.6-d0.5-a0.08-b0.0": {
+      "enabled": true,
+      "frequency": 1.6,
+      "damping": 0.5,
+      "arm_fraction": 0.08,
+      "beta_gain": 0.0
+    },
+    "f1.6-d0.5-a0.08-b0.2": {
+      "enabled": true,
+      "frequency": 1.6,
+      "damping": 0.5,
+      "arm_fraction": 0.08,
+      "beta_gain": 0.2
+    },
+    "f2.5-d0.15-a-0.08-b-0.2": {
+      "enabled": true,
+      "frequency": 2.5,
+      "damping": 0.15,
+      "arm_fraction": -0.08,
+      "beta_gain": -0.2
+    },
+    "f2.5-d0.15-a-0.08-b0.0": {
+      "enabled": true,
+      "frequency": 2.5,
+      "damping": 0.15,
+      "arm_fraction": -0.08,
+      "beta_gain": 0.0
+    },
+    "f2.5-d0.15-a-0.08-b0.2": {
+      "enabled": true,
+      "frequency": 2.5,
+      "damping": 0.15,
+      "arm_fraction": -0.08,
+      "beta_gain": 0.2
+    },
+    "f2.5-d0.15-a-0.03-b-0.2": {
+      "enabled": true,
+      "frequency": 2.5,
+      "damping": 0.15,
+      "arm_fraction": -0.03,
+      "beta_gain": -0.2
+    },
+    "f2.5-d0.15-a-0.03-b0.0": {
+      "enabled": true,
+      "frequency": 2.5,
+      "damping": 0.15,
+      "arm_fraction": -0.03,
+      "beta_gain": 0.0
+    },
+    "f2.5-d0.15-a-0.03-b0.2": {
+      "enabled": true,
+      "frequency": 2.5,
+      "damping": 0.15,
+      "arm_fraction": -0.03,
+      "beta_gain": 0.2
+    },
+    "f2.5-d0.15-a0.03-b-0.2": {
+      "enabled": true,
+      "frequency": 2.5,
+      "damping": 0.15,
+      "arm_fraction": 0.03,
+      "beta_gain": -0.2
+    },
+    "f2.5-d0.15-a0.03-b0.0": {
+      "enabled": true,
+      "frequency": 2.5,
+      "damping": 0.15,
+      "arm_fraction": 0.03,
+      "beta_gain": 0.0
+    },
+    "f2.5-d0.15-a0.03-b0.2": {
+      "enabled": true,
+      "frequency": 2.5,
+      "damping": 0.15,
+      "arm_fraction": 0.03,
+      "beta_gain": 0.2
+    },
+    "f2.5-d0.15-a0.08-b-0.2": {
+      "enabled": true,
+      "frequency": 2.5,
+      "damping": 0.15,
+      "arm_fraction": 0.08,
+      "beta_gain": -0.2
+    },
+    "f2.5-d0.15-a0.08-b0.0": {
+      "enabled": true,
+      "frequency": 2.5,
+      "damping": 0.15,
+      "arm_fraction": 0.08,
+      "beta_gain": 0.0
+    },
+    "f2.5-d0.15-a0.08-b0.2": {
+      "enabled": true,
+      "frequency": 2.5,
+      "damping": 0.15,
+      "arm_fraction": 0.08,
+      "beta_gain": 0.2
+    },
+    "f2.5-d0.5-a-0.08-b-0.2": {
+      "enabled": true,
+      "frequency": 2.5,
+      "damping": 0.5,
+      "arm_fraction": -0.08,
+      "beta_gain": -0.2
+    },
+    "f2.5-d0.5-a-0.08-b0.0": {
+      "enabled": true,
+      "frequency": 2.5,
+      "damping": 0.5,
+      "arm_fraction": -0.08,
+      "beta_gain": 0.0
+    },
+    "f2.5-d0.5-a-0.08-b0.2": {
+      "enabled": true,
+      "frequency": 2.5,
+      "damping": 0.5,
+      "arm_fraction": -0.08,
+      "beta_gain": 0.2
+    },
+    "f2.5-d0.5-a-0.03-b-0.2": {
+      "enabled": true,
+      "frequency": 2.5,
+      "damping": 0.5,
+      "arm_fraction": -0.03,
+      "beta_gain": -0.2
+    },
+    "f2.5-d0.5-a-0.03-b0.0": {
+      "enabled": true,
+      "frequency": 2.5,
+      "damping": 0.5,
+      "arm_fraction": -0.03,
+      "beta_gain": 0.0
+    },
+    "f2.5-d0.5-a-0.03-b0.2": {
+      "enabled": true,
+      "frequency": 2.5,
+      "damping": 0.5,
+      "arm_fraction": -0.03,
+      "beta_gain": 0.2
+    },
+    "f2.5-d0.5-a0.03-b-0.2": {
+      "enabled": true,
+      "frequency": 2.5,
+      "damping": 0.5,
+      "arm_fraction": 0.03,
+      "beta_gain": -0.2
+    },
+    "f2.5-d0.5-a0.03-b0.0": {
+      "enabled": true,
+      "frequency": 2.5,
+      "damping": 0.5,
+      "arm_fraction": 0.03,
+      "beta_gain": 0.0
+    },
+    "f2.5-d0.5-a0.03-b0.2": {
+      "enabled": true,
+      "frequency": 2.5,
+      "damping": 0.5,
+      "arm_fraction": 0.03,
+      "beta_gain": 0.2
+    },
+    "f2.5-d0.5-a0.08-b-0.2": {
+      "enabled": true,
+      "frequency": 2.5,
+      "damping": 0.5,
+      "arm_fraction": 0.08,
+      "beta_gain": -0.2
+    },
+    "f2.5-d0.5-a0.08-b0.0": {
+      "enabled": true,
+      "frequency": 2.5,
+      "damping": 0.5,
+      "arm_fraction": 0.08,
+      "beta_gain": 0.0
+    },
+    "f2.5-d0.5-a0.08-b0.2": {
+      "enabled": true,
+      "frequency": 2.5,
+      "damping": 0.5,
+      "arm_fraction": 0.08,
+      "beta_gain": 0.2
+    },
+    "f2.5-d0.3-a-0.01-b0.0": {
+      "enabled": true,
+      "frequency": 2.5,
+      "damping": 0.3,
+      "arm_fraction": -0.01,
+      "beta_gain": 0.0
+    },
+    "f2.5-d0.3-a-0.005-b0.0": {
+      "enabled": true,
+      "frequency": 2.5,
+      "damping": 0.3,
+      "arm_fraction": -0.005,
+      "beta_gain": 0.0
+    },
+    "f2.5-d0.3-a0.005-b0.0": {
+      "enabled": true,
+      "frequency": 2.5,
+      "damping": 0.3,
+      "arm_fraction": 0.005,
+      "beta_gain": 0.0
+    },
+    "f2.5-d0.3-a0.01-b0.0": {
+      "enabled": true,
+      "frequency": 2.5,
+      "damping": 0.3,
+      "arm_fraction": 0.01,
+      "beta_gain": 0.0
+    },
+    "f2.5-d0.7-a-0.01-b0.0": {
+      "enabled": true,
+      "frequency": 2.5,
+      "damping": 0.7,
+      "arm_fraction": -0.01,
+      "beta_gain": 0.0
+    },
+    "f2.5-d0.7-a-0.005-b0.0": {
+      "enabled": true,
+      "frequency": 2.5,
+      "damping": 0.7,
+      "arm_fraction": -0.005,
+      "beta_gain": 0.0
+    },
+    "f2.5-d0.7-a0.005-b0.0": {
+      "enabled": true,
+      "frequency": 2.5,
+      "damping": 0.7,
+      "arm_fraction": 0.005,
+      "beta_gain": 0.0
+    },
+    "f2.5-d0.7-a0.01-b0.0": {
+      "enabled": true,
+      "frequency": 2.5,
+      "damping": 0.7,
+      "arm_fraction": 0.01,
+      "beta_gain": 0.0
+    },
+    "f4.0-d0.3-a-0.01-b0.0": {
+      "enabled": true,
+      "frequency": 4.0,
+      "damping": 0.3,
+      "arm_fraction": -0.01,
+      "beta_gain": 0.0
+    },
+    "f4.0-d0.3-a-0.005-b0.0": {
+      "enabled": true,
+      "frequency": 4.0,
+      "damping": 0.3,
+      "arm_fraction": -0.005,
+      "beta_gain": 0.0
+    },
+    "f4.0-d0.3-a0.005-b0.0": {
+      "enabled": true,
+      "frequency": 4.0,
+      "damping": 0.3,
+      "arm_fraction": 0.005,
+      "beta_gain": 0.0
+    },
+    "f4.0-d0.3-a0.01-b0.0": {
+      "enabled": true,
+      "frequency": 4.0,
+      "damping": 0.3,
+      "arm_fraction": 0.01,
+      "beta_gain": 0.0
+    },
+    "f4.0-d0.7-a-0.01-b0.0": {
+      "enabled": true,
+      "frequency": 4.0,
+      "damping": 0.7,
+      "arm_fraction": -0.01,
+      "beta_gain": 0.0
+    },
+    "f4.0-d0.7-a-0.005-b0.0": {
+      "enabled": true,
+      "frequency": 4.0,
+      "damping": 0.7,
+      "arm_fraction": -0.005,
+      "beta_gain": 0.0
+    },
+    "f4.0-d0.7-a0.005-b0.0": {
+      "enabled": true,
+      "frequency": 4.0,
+      "damping": 0.7,
+      "arm_fraction": 0.005,
+      "beta_gain": 0.0
+    },
+    "f4.0-d0.7-a0.01-b0.0": {
+      "enabled": true,
+      "frequency": 4.0,
+      "damping": 0.7,
+      "arm_fraction": 0.01,
+      "beta_gain": 0.0
+    }
+  },
+  "modal_inertia": 0.001,
+  "soft_angle": 0.35,
+  "selection": "Shared canopy parameters across both flights; exploratory reused data; no deployment."
+}

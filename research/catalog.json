@@ -33,6 +33,13 @@
       "execution_policy": "maintained for ongoing fidelity/pipeline work"
     },
     {
+      "study": "canopy-twist-2026-10-18",
+      "status": "active",
+      "path": "research/active/canopy-twist-2026-10-18",
+      "summary": "Research-only asymmetric canopy twist feedback: 890 replays, equilibrium/stability and numerical checks; no qualified replacement physics.",
+      "execution_policy": "maintained for ongoing fidelity/pipeline work"
+    },
+    {
       "study": "controller-pipeline-2026-10-18",
       "status": "active",
       "path": "research/active/controller-pipeline-2026-10-18",

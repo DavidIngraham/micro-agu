@@ -43,3 +43,5 @@ Studies may require flight inputs described in their own instructions. A success
 - [Propulsion RPM audit](active/propulsion-rpm-audit-2026-10-18/README.md): measured versus predicted RPM, telemetry slew, and native replay checks.
 
 - [Whole-flight oscillation timing](active/oscillation-timing-2026-10-18/README.md): full-flight FFT, time histories and command-excitation association.
+
+- [Asymmetric canopy-twist experiment](active/canopy-twist-2026-10-18/README.md): deformation feedback, cross-flight comparisons and stability checks; no production promotion.

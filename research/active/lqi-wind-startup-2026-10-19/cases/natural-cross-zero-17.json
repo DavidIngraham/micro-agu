@@ -1,0 +1,9 @@
+{
+  "id": "natural-cross-zero-17",
+  "strategy": "zero",
+  "weather": "default",
+  "north": 0,
+  "east": 1.5,
+  "seed": 17,
+  "group": "natural"
+}

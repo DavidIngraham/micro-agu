@@ -1,0 +1,218 @@
+[
+  {
+    "id": "smooth-natural-calm-weighted-17",
+    "strategy": "weighted",
+    "weather": "default",
+    "north": 0,
+    "east": 0,
+    "seed": 17,
+    "group": "natural",
+    "revision": "smooth"
+  },
+  {
+    "id": "smooth-natural-calm-weighted-73",
+    "strategy": "weighted",
+    "weather": "default",
+    "north": 0,
+    "east": 0,
+    "seed": 73,
+    "group": "natural",
+    "revision": "smooth"
+  },
+  {
+    "id": "smooth-delayed-calm-weighted",
+    "strategy": "weighted",
+    "weather": "default",
+    "north": 0,
+    "east": 0,
+    "seed": 73,
+    "windDelay": 12,
+    "group": "delayed",
+    "revision": "smooth"
+  },
+  {
+    "id": "smooth-natural-head-weighted-17",
+    "strategy": "weighted",
+    "weather": "default",
+    "north": -1.5,
+    "east": 0,
+    "seed": 17,
+    "group": "natural",
+    "revision": "smooth"
+  },
+  {
+    "id": "smooth-natural-head-weighted-73",
+    "strategy": "weighted",
+    "weather": "default",
+    "north": -1.5,
+    "east": 0,
+    "seed": 73,
+    "group": "natural",
+    "revision": "smooth"
+  },
+  {
+    "id": "smooth-delayed-head-weighted",
+    "strategy": "weighted",
+    "weather": "default",
+    "north": -1.5,
+    "east": 0,
+    "seed": 73,
+    "windDelay": 12,
+    "group": "delayed",
+    "revision": "smooth"
+  },
+  {
+    "id": "smooth-natural-tail-weighted-17",
+    "strategy": "weighted",
+    "weather": "default",
+    "north": 1.5,
+    "east": 0,
+    "seed": 17,
+    "group": "natural",
+    "revision": "smooth"
+  },
+  {
+    "id": "smooth-natural-tail-weighted-73",
+    "strategy": "weighted",
+    "weather": "default",
+    "north": 1.5,
+    "east": 0,
+    "seed": 73,
+    "group": "natural",
+    "revision": "smooth"
+  },
+  {
+    "id": "smooth-delayed-tail-weighted",
+    "strategy": "weighted",
+    "weather": "default",
+    "north": 1.5,
+    "east": 0,
+    "seed": 73,
+    "windDelay": 12,
+    "group": "delayed",
+    "revision": "smooth"
+  },
+  {
+    "id": "smooth-natural-cross-weighted-17",
+    "strategy": "weighted",
+    "weather": "default",
+    "north": 0,
+    "east": 1.5,
+    "seed": 17,
+    "group": "natural",
+    "revision": "smooth"
+  },
+  {
+    "id": "smooth-natural-cross-weighted-73",
+    "strategy": "weighted",
+    "weather": "default",
+    "north": 0,
+    "east": 1.5,
+    "seed": 73,
+    "group": "natural",
+    "revision": "smooth"
+  },
+  {
+    "id": "smooth-delayed-cross-weighted",
+    "strategy": "weighted",
+    "weather": "default",
+    "north": 0,
+    "east": 1.5,
+    "seed": 73,
+    "windDelay": 12,
+    "group": "delayed",
+    "revision": "smooth"
+  },
+  {
+    "id": "smooth-prior-correct",
+    "strategy": "weighted",
+    "weather": "default",
+    "north": -1.5,
+    "east": 0,
+    "seed": 73,
+    "priorNorth": -1.5,
+    "priorEast": 0,
+    "group": "prior",
+    "revision": "smooth"
+  },
+  {
+    "id": "smooth-prior-reversed",
+    "strategy": "weighted",
+    "weather": "default",
+    "north": -1.5,
+    "east": 0,
+    "seed": 73,
+    "priorNorth": 1.5,
+    "priorEast": 0,
+    "group": "prior",
+    "revision": "smooth"
+  },
+  {
+    "id": "smooth-prior-rotated",
+    "strategy": "weighted",
+    "weather": "default",
+    "north": -1.5,
+    "east": 0,
+    "seed": 73,
+    "priorNorth": 0,
+    "priorEast": 3,
+    "group": "prior",
+    "revision": "smooth"
+  },
+  {
+    "id": "smooth-prior-too-strong",
+    "strategy": "weighted",
+    "weather": "default",
+    "north": -1.5,
+    "east": 0,
+    "seed": 73,
+    "priorNorth": -4,
+    "priorEast": 0,
+    "group": "prior",
+    "revision": "smooth"
+  },
+  {
+    "id": "smooth-timeout-weighted",
+    "strategy": "weighted",
+    "weather": "default",
+    "north": 0,
+    "east": 0,
+    "seed": 73,
+    "windDelay": 60,
+    "group": "timeout",
+    "revision": "smooth"
+  },
+  {
+    "id": "late-valid-gate",
+    "strategy": "gate",
+    "weather": "default",
+    "north": 0,
+    "east": 0,
+    "seed": 73,
+    "windDelay": 44,
+    "group": "late-valid",
+    "revision": "smooth"
+  },
+  {
+    "id": "late-valid-zero",
+    "strategy": "zero",
+    "weather": "default",
+    "north": 0,
+    "east": 0,
+    "seed": 73,
+    "windDelay": 44,
+    "group": "late-valid",
+    "revision": "smooth"
+  },
+  {
+    "id": "late-valid-weighted",
+    "strategy": "weighted",
+    "weather": "default",
+    "north": 0,
+    "east": 0,
+    "seed": 73,
+    "windDelay": 44,
+    "group": "late-valid",
+    "revision": "smooth"
+  }
+]

@@ -1,0 +1,44 @@
+[
+  {
+    "id": "repeat-tail-gate-1",
+    "exit": 1,
+    "complete": false,
+    "failure": "Ground contact after release",
+    "wall_s": 10.408159732818604
+  },
+  {
+    "id": "repeat-tail-zero-1",
+    "exit": 0,
+    "complete": true,
+    "failure": null,
+    "wall_s": 18.036492586135864
+  },
+  {
+    "id": "repeat-tail-weighted-1",
+    "exit": 0,
+    "complete": true,
+    "failure": null,
+    "wall_s": 18.036296129226685
+  },
+  {
+    "id": "repeat-tail-gate-2",
+    "exit": 0,
+    "complete": true,
+    "failure": null,
+    "wall_s": 17.688166856765747
+  },
+  {
+    "id": "repeat-tail-zero-2",
+    "exit": 0,
+    "complete": true,
+    "failure": null,
+    "wall_s": 17.856138467788696
+  },
+  {
+    "id": "repeat-tail-weighted-2",
+    "exit": 1,
+    "complete": false,
+    "failure": "Ground contact after release",
+    "wall_s": 10.312861680984497
+  }
+]

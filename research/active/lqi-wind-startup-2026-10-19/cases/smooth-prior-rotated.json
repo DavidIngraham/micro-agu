@@ -1,0 +1,12 @@
+{
+  "id": "smooth-prior-rotated",
+  "strategy": "weighted",
+  "weather": "default",
+  "north": -1.5,
+  "east": 0,
+  "seed": 73,
+  "priorNorth": 0,
+  "priorEast": 3,
+  "group": "prior",
+  "revision": "smooth"
+}

@@ -1,0 +1,303 @@
+[
+  {
+    "id": "natural-calm-gate-17",
+    "exit": 0,
+    "complete": true,
+    "failure": null,
+    "wall_s": 17.909278869628906
+  },
+  {
+    "id": "natural-calm-gate-73",
+    "exit": 0,
+    "complete": true,
+    "failure": null,
+    "wall_s": 18.08187222480774
+  },
+  {
+    "id": "delayed-calm-gate",
+    "exit": 0,
+    "complete": true,
+    "failure": null,
+    "wall_s": 18.05288338661194
+  },
+  {
+    "id": "natural-calm-zero-17",
+    "exit": 0,
+    "complete": true,
+    "failure": null,
+    "wall_s": 17.95310139656067
+  },
+  {
+    "id": "natural-calm-zero-73",
+    "exit": 0,
+    "complete": true,
+    "failure": null,
+    "wall_s": 17.722350358963013
+  },
+  {
+    "id": "delayed-calm-zero",
+    "exit": 0,
+    "complete": true,
+    "failure": null,
+    "wall_s": 17.811833143234253
+  },
+  {
+    "id": "natural-calm-weighted-17",
+    "exit": 0,
+    "complete": true,
+    "failure": null,
+    "wall_s": 17.709248542785645
+  },
+  {
+    "id": "natural-calm-weighted-73",
+    "exit": 0,
+    "complete": true,
+    "failure": null,
+    "wall_s": 17.76218008995056
+  },
+  {
+    "id": "delayed-calm-weighted",
+    "exit": 0,
+    "complete": true,
+    "failure": null,
+    "wall_s": 17.76123881340027
+  },
+  {
+    "id": "natural-head-gate-17",
+    "exit": 0,
+    "complete": true,
+    "failure": null,
+    "wall_s": 17.54417371749878
+  },
+  {
+    "id": "natural-head-gate-73",
+    "exit": 0,
+    "complete": true,
+    "failure": null,
+    "wall_s": 17.774845600128174
+  },
+  {
+    "id": "delayed-head-gate",
+    "exit": 0,
+    "complete": true,
+    "failure": null,
+    "wall_s": 17.59277844429016
+  },
+  {
+    "id": "natural-head-zero-17",
+    "exit": 0,
+    "complete": true,
+    "failure": null,
+    "wall_s": 17.597845792770386
+  },
+  {
+    "id": "natural-head-zero-73",
+    "exit": 0,
+    "complete": true,
+    "failure": null,
+    "wall_s": 17.665482759475708
+  },
+  {
+    "id": "delayed-head-zero",
+    "exit": 0,
+    "complete": true,
+    "failure": null,
+    "wall_s": 17.666780948638916
+  },
+  {
+    "id": "natural-head-weighted-17",
+    "exit": 0,
+    "complete": true,
+    "failure": null,
+    "wall_s": 17.564589023590088
+  },
+  {
+    "id": "natural-head-weighted-73",
+    "exit": 0,
+    "complete": true,
+    "failure": null,
+    "wall_s": 18.055094718933105
+  },
+  {
+    "id": "delayed-head-weighted",
+    "exit": 0,
+    "complete": true,
+    "failure": null,
+    "wall_s": 17.94138264656067
+  },
+  {
+    "id": "natural-tail-gate-17",
+    "exit": 0,
+    "complete": true,
+    "failure": null,
+    "wall_s": 18.25239062309265
+  },
+  {
+    "id": "natural-tail-gate-73",
+    "exit": 0,
+    "complete": true,
+    "failure": null,
+    "wall_s": 18.27390170097351
+  },
+  {
+    "id": "delayed-tail-gate",
+    "exit": 0,
+    "complete": true,
+    "failure": null,
+    "wall_s": 18.360552072525024
+  },
+  {
+    "id": "natural-tail-zero-17",
+    "exit": 0,
+    "complete": true,
+    "failure": null,
+    "wall_s": 18.143301725387573
+  },
+  {
+    "id": "natural-tail-zero-73",
+    "exit": 0,
+    "complete": true,
+    "failure": null,
+    "wall_s": 18.423826456069946
+  },
+  {
+    "id": "delayed-tail-zero",
+    "exit": 0,
+    "complete": true,
+    "failure": null,
+    "wall_s": 18.281330585479736
+  },
+  {
+    "id": "natural-tail-weighted-17",
+    "exit": 1,
+    "complete": false,
+    "failure": "Ground contact after release",
+    "wall_s": 10.537716388702393
+  },
+  {
+    "id": "natural-tail-weighted-73",
+    "exit": 0,
+    "complete": true,
+    "failure": null,
+    "wall_s": 18.145798921585083
+  },
+  {
+    "id": "delayed-tail-weighted",
+    "exit": 0,
+    "complete": true,
+    "failure": null,
+    "wall_s": 18.032599687576294
+  },
+  {
+    "id": "natural-cross-gate-17",
+    "exit": 0,
+    "complete": true,
+    "failure": null,
+    "wall_s": 17.743109226226807
+  },
+  {
+    "id": "natural-cross-gate-73",
+    "exit": 0,
+    "complete": true,
+    "failure": null,
+    "wall_s": 17.649457693099976
+  },
+  {
+    "id": "delayed-cross-gate",
+    "exit": 0,
+    "complete": true,
+    "failure": null,
+    "wall_s": 17.930237531661987
+  },
+  {
+    "id": "natural-cross-zero-17",
+    "exit": 0,
+    "complete": true,
+    "failure": null,
+    "wall_s": 17.72787308692932
+  },
+  {
+    "id": "natural-cross-zero-73",
+    "exit": 0,
+    "complete": true,
+    "failure": null,
+    "wall_s": 17.760993719100952
+  },
+  {
+    "id": "delayed-cross-zero",
+    "exit": 0,
+    "complete": true,
+    "failure": null,
+    "wall_s": 17.768290519714355
+  },
+  {
+    "id": "natural-cross-weighted-17",
+    "exit": 0,
+    "complete": true,
+    "failure": null,
+    "wall_s": 17.669233322143555
+  },
+  {
+    "id": "natural-cross-weighted-73",
+    "exit": 0,
+    "complete": true,
+    "failure": null,
+    "wall_s": 17.825180053710938
+  },
+  {
+    "id": "delayed-cross-weighted",
+    "exit": 0,
+    "complete": true,
+    "failure": null,
+    "wall_s": 17.833603858947754
+  },
+  {
+    "id": "prior-correct",
+    "exit": 0,
+    "complete": true,
+    "failure": null,
+    "wall_s": 17.579309225082397
+  },
+  {
+    "id": "prior-reversed",
+    "exit": 0,
+    "complete": true,
+    "failure": null,
+    "wall_s": 17.723882913589478
+  },
+  {
+    "id": "prior-rotated",
+    "exit": 0,
+    "complete": true,
+    "failure": null,
+    "wall_s": 17.72760009765625
+  },
+  {
+    "id": "prior-too-strong",
+    "exit": 0,
+    "complete": true,
+    "failure": null,
+    "wall_s": 17.719605445861816
+  },
+  {
+    "id": "timeout-gate",
+    "exit": 0,
+    "complete": true,
+    "failure": null,
+    "wall_s": 17.767104387283325
+  },
+  {
+    "id": "timeout-zero",
+    "exit": 0,
+    "complete": true,
+    "failure": null,
+    "wall_s": 17.833114624023438
+  },
+  {
+    "id": "timeout-weighted",
+    "exit": 0,
+    "complete": true,
+    "failure": null,
+    "wall_s": 17.77289319038391
+  }
+]

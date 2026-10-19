@@ -1,0 +1,8 @@
+{
+  "id": "gate-headwind-smoke",
+  "strategy": "gate",
+  "weather": "default",
+  "seed": 73,
+  "north": -1.5,
+  "east": 0
+}

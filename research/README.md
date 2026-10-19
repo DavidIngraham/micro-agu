@@ -8,6 +8,7 @@ Maintained software lives in [simulation](../simulation/README.md), [control](..
 
 | Study | Location |
 |---|---|
+| lqi-wind-startup-2026-10-19 | [lqi-wind-startup-2026-10-19](active/lqi-wind-startup-2026-10-19/) |
 | lqi-takeoff-2026-10-19 | [lqi-takeoff-2026-10-19](active/lqi-takeoff-2026-10-19/) |
 | controller-robustness-2026-10-18 | [controller-robustness-2026-10-18](active/controller-robustness-2026-10-18/) |
 | brake-tension-feedback-2026-10-18 | [brake-tension-feedback-2026-10-18](active/brake-tension-feedback-2026-10-18/) |

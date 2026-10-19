@@ -1,0 +1,10 @@
+{
+  "id": "smooth-natural-cross-weighted-17",
+  "strategy": "weighted",
+  "weather": "default",
+  "north": 0,
+  "east": 1.5,
+  "seed": 17,
+  "group": "natural",
+  "revision": "smooth"
+}

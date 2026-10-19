@@ -1,0 +1,10 @@
+{
+  "id": "timeout-zero",
+  "strategy": "zero",
+  "weather": "default",
+  "north": 0,
+  "east": 0,
+  "seed": 73,
+  "windDelay": 60,
+  "group": "timeout"
+}

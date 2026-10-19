@@ -1,0 +1,12 @@
+{
+  "runs": 72,
+  "complete": 68,
+  "screen_pass": 68,
+  "failed": [
+    "natural-tail-weighted-17",
+    "repeat-tail-gate-1",
+    "repeat-tail-weighted-2",
+    "smooth-natural-tail-weighted-17"
+  ],
+  "note": "Counts include unequal scenarios, repeats and two firmware revisions; not failure probabilities."
+}

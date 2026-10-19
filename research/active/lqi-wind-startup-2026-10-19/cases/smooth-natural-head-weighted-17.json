@@ -1,0 +1,10 @@
+{
+  "id": "smooth-natural-head-weighted-17",
+  "strategy": "weighted",
+  "weather": "default",
+  "north": -1.5,
+  "east": 0,
+  "seed": 17,
+  "group": "natural",
+  "revision": "smooth"
+}

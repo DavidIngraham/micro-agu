@@ -1,0 +1,422 @@
+{
+  "cases": [
+    {
+      "id": "natural-calm-gate-17",
+      "strategy": "gate",
+      "weather": "default",
+      "north": 0,
+      "east": 0,
+      "seed": 17,
+      "group": "natural"
+    },
+    {
+      "id": "natural-calm-gate-73",
+      "strategy": "gate",
+      "weather": "default",
+      "north": 0,
+      "east": 0,
+      "seed": 73,
+      "group": "natural"
+    },
+    {
+      "id": "delayed-calm-gate",
+      "strategy": "gate",
+      "weather": "default",
+      "north": 0,
+      "east": 0,
+      "seed": 73,
+      "windDelay": 12,
+      "group": "delayed"
+    },
+    {
+      "id": "natural-calm-zero-17",
+      "strategy": "zero",
+      "weather": "default",
+      "north": 0,
+      "east": 0,
+      "seed": 17,
+      "group": "natural"
+    },
+    {
+      "id": "natural-calm-zero-73",
+      "strategy": "zero",
+      "weather": "default",
+      "north": 0,
+      "east": 0,
+      "seed": 73,
+      "group": "natural"
+    },
+    {
+      "id": "delayed-calm-zero",
+      "strategy": "zero",
+      "weather": "default",
+      "north": 0,
+      "east": 0,
+      "seed": 73,
+      "windDelay": 12,
+      "group": "delayed"
+    },
+    {
+      "id": "natural-calm-weighted-17",
+      "strategy": "weighted",
+      "weather": "default",
+      "north": 0,
+      "east": 0,
+      "seed": 17,
+      "group": "natural"
+    },
+    {
+      "id": "natural-calm-weighted-73",
+      "strategy": "weighted",
+      "weather": "default",
+      "north": 0,
+      "east": 0,
+      "seed": 73,
+      "group": "natural"
+    },
+    {
+      "id": "delayed-calm-weighted",
+      "strategy": "weighted",
+      "weather": "default",
+      "north": 0,
+      "east": 0,
+      "seed": 73,
+      "windDelay": 12,
+      "group": "delayed"
+    },
+    {
+      "id": "natural-head-gate-17",
+      "strategy": "gate",
+      "weather": "default",
+      "north": -1.5,
+      "east": 0,
+      "seed": 17,
+      "group": "natural"
+    },
+    {
+      "id": "natural-head-gate-73",
+      "strategy": "gate",
+      "weather": "default",
+      "north": -1.5,
+      "east": 0,
+      "seed": 73,
+      "group": "natural"
+    },
+    {
+      "id": "delayed-head-gate",
+      "strategy": "gate",
+      "weather": "default",
+      "north": -1.5,
+      "east": 0,
+      "seed": 73,
+      "windDelay": 12,
+      "group": "delayed"
+    },
+    {
+      "id": "natural-head-zero-17",
+      "strategy": "zero",
+      "weather": "default",
+      "north": -1.5,
+      "east": 0,
+      "seed": 17,
+      "group": "natural"
+    },
+    {
+      "id": "natural-head-zero-73",
+      "strategy": "zero",
+      "weather": "default",
+      "north": -1.5,
+      "east": 0,
+      "seed": 73,
+      "group": "natural"
+    },
+    {
+      "id": "delayed-head-zero",
+      "strategy": "zero",
+      "weather": "default",
+      "north": -1.5,
+      "east": 0,
+      "seed": 73,
+      "windDelay": 12,
+      "group": "delayed"
+    },
+    {
+      "id": "natural-head-weighted-17",
+      "strategy": "weighted",
+      "weather": "default",
+      "north": -1.5,
+      "east": 0,
+      "seed": 17,
+      "group": "natural"
+    },
+    {
+      "id": "natural-head-weighted-73",
+      "strategy": "weighted",
+      "weather": "default",
+      "north": -1.5,
+      "east": 0,
+      "seed": 73,
+      "group": "natural"
+    },
+    {
+      "id": "delayed-head-weighted",
+      "strategy": "weighted",
+      "weather": "default",
+      "north": -1.5,
+      "east": 0,
+      "seed": 73,
+      "windDelay": 12,
+      "group": "delayed"
+    },
+    {
+      "id": "natural-tail-gate-17",
+      "strategy": "gate",
+      "weather": "default",
+      "north": 1.5,
+      "east": 0,
+      "seed": 17,
+      "group": "natural"
+    },
+    {
+      "id": "natural-tail-gate-73",
+      "strategy": "gate",
+      "weather": "default",
+      "north": 1.5,
+      "east": 0,
+      "seed": 73,
+      "group": "natural"
+    },
+    {
+      "id": "delayed-tail-gate",
+      "strategy": "gate",
+      "weather": "default",
+      "north": 1.5,
+      "east": 0,
+      "seed": 73,
+      "windDelay": 12,
+      "group": "delayed"
+    },
+    {
+      "id": "natural-tail-zero-17",
+      "strategy": "zero",
+      "weather": "default",
+      "north": 1.5,
+      "east": 0,
+      "seed": 17,
+      "group": "natural"
+    },
+    {
+      "id": "natural-tail-zero-73",
+      "strategy": "zero",
+      "weather": "default",
+      "north": 1.5,
+      "east": 0,
+      "seed": 73,
+      "group": "natural"
+    },
+    {
+      "id": "delayed-tail-zero",
+      "strategy": "zero",
+      "weather": "default",
+      "north": 1.5,
+      "east": 0,
+      "seed": 73,
+      "windDelay": 12,
+      "group": "delayed"
+    },
+    {
+      "id": "natural-tail-weighted-17",
+      "strategy": "weighted",
+      "weather": "default",
+      "north": 1.5,
+      "east": 0,
+      "seed": 17,
+      "group": "natural"
+    },
+    {
+      "id": "natural-tail-weighted-73",
+      "strategy": "weighted",
+      "weather": "default",
+      "north": 1.5,
+      "east": 0,
+      "seed": 73,
+      "group": "natural"
+    },
+    {
+      "id": "delayed-tail-weighted",
+      "strategy": "weighted",
+      "weather": "default",
+      "north": 1.5,
+      "east": 0,
+      "seed": 73,
+      "windDelay": 12,
+      "group": "delayed"
+    },
+    {
+      "id": "natural-cross-gate-17",
+      "strategy": "gate",
+      "weather": "default",
+      "north": 0,
+      "east": 1.5,
+      "seed": 17,
+      "group": "natural"
+    },
+    {
+      "id": "natural-cross-gate-73",
+      "strategy": "gate",
+      "weather": "default",
+      "north": 0,
+      "east": 1.5,
+      "seed": 73,
+      "group": "natural"
+    },
+    {
+      "id": "delayed-cross-gate",
+      "strategy": "gate",
+      "weather": "default",
+      "north": 0,
+      "east": 1.5,
+      "seed": 73,
+      "windDelay": 12,
+      "group": "delayed"
+    },
+    {
+      "id": "natural-cross-zero-17",
+      "strategy": "zero",
+      "weather": "default",
+      "north": 0,
+      "east": 1.5,
+      "seed": 17,
+      "group": "natural"
+    },
+    {
+      "id": "natural-cross-zero-73",
+      "strategy": "zero",
+      "weather": "default",
+      "north": 0,
+      "east": 1.5,
+      "seed": 73,
+      "group": "natural"
+    },
+    {
+      "id": "delayed-cross-zero",
+      "strategy": "zero",
+      "weather": "default",
+      "north": 0,
+      "east": 1.5,
+      "seed": 73,
+      "windDelay": 12,
+      "group": "delayed"
+    },
+    {
+      "id": "natural-cross-weighted-17",
+      "strategy": "weighted",
+      "weather": "default",
+      "north": 0,
+      "east": 1.5,
+      "seed": 17,
+      "group": "natural"
+    },
+    {
+      "id": "natural-cross-weighted-73",
+      "strategy": "weighted",
+      "weather": "default",
+      "north": 0,
+      "east": 1.5,
+      "seed": 73,
+      "group": "natural"
+    },
+    {
+      "id": "delayed-cross-weighted",
+      "strategy": "weighted",
+      "weather": "default",
+      "north": 0,
+      "east": 1.5,
+      "seed": 73,
+      "windDelay": 12,
+      "group": "delayed"
+    },
+    {
+      "id": "prior-correct",
+      "strategy": "weighted",
+      "weather": "default",
+      "north": -1.5,
+      "east": 0,
+      "seed": 73,
+      "priorNorth": -1.5,
+      "priorEast": 0,
+      "group": "prior"
+    },
+    {
+      "id": "prior-reversed",
+      "strategy": "weighted",
+      "weather": "default",
+      "north": -1.5,
+      "east": 0,
+      "seed": 73,
+      "priorNorth": 1.5,
+      "priorEast": 0,
+      "group": "prior"
+    },
+    {
+      "id": "prior-rotated",
+      "strategy": "weighted",
+      "weather": "default",
+      "north": -1.5,
+      "east": 0,
+      "seed": 73,
+      "priorNorth": 0,
+      "priorEast": 3,
+      "group": "prior"
+    },
+    {
+      "id": "prior-too-strong",
+      "strategy": "weighted",
+      "weather": "default",
+      "north": -1.5,
+      "east": 0,
+      "seed": 73,
+      "priorNorth": -4,
+      "priorEast": 0,
+      "group": "prior"
+    },
+    {
+      "id": "timeout-gate",
+      "strategy": "gate",
+      "weather": "default",
+      "north": 0,
+      "east": 0,
+      "seed": 73,
+      "windDelay": 60,
+      "group": "timeout"
+    },
+    {
+      "id": "timeout-zero",
+      "strategy": "zero",
+      "weather": "default",
+      "north": 0,
+      "east": 0,
+      "seed": 73,
+      "windDelay": 60,
+      "group": "timeout"
+    },
+    {
+      "id": "timeout-weighted",
+      "strategy": "weighted",
+      "weather": "default",
+      "north": 0,
+      "east": 0,
+      "seed": 73,
+      "windDelay": 60,
+      "group": "timeout"
+    }
+  ],
+  "criteria": {
+    "completion": true,
+    "no_ground_recontact": true,
+    "no_premature_engagement": true,
+    "max_true_roll_deg": 45,
+    "max_true_pitch_deg": 45,
+    "note": "Attitude bounds apply after free-flight release; descriptive screening, not certification."
+  }
+}

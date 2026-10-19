@@ -1,0 +1,142 @@
+[
+  {
+    "id": "smooth-natural-calm-weighted-17",
+    "exit": 0,
+    "complete": true,
+    "failure": null,
+    "wall_s": 17.75323796272278
+  },
+  {
+    "id": "smooth-natural-calm-weighted-73",
+    "exit": 0,
+    "complete": true,
+    "failure": null,
+    "wall_s": 17.899834156036377
+  },
+  {
+    "id": "smooth-delayed-calm-weighted",
+    "exit": 0,
+    "complete": true,
+    "failure": null,
+    "wall_s": 17.802079916000366
+  },
+  {
+    "id": "smooth-natural-head-weighted-17",
+    "exit": 0,
+    "complete": true,
+    "failure": null,
+    "wall_s": 17.59901452064514
+  },
+  {
+    "id": "smooth-natural-head-weighted-73",
+    "exit": 0,
+    "complete": true,
+    "failure": null,
+    "wall_s": 17.65547490119934
+  },
+  {
+    "id": "smooth-delayed-head-weighted",
+    "exit": 0,
+    "complete": true,
+    "failure": null,
+    "wall_s": 17.578649520874023
+  },
+  {
+    "id": "smooth-natural-tail-weighted-17",
+    "exit": 1,
+    "complete": false,
+    "failure": "Ground contact after release",
+    "wall_s": 10.255290746688843
+  },
+  {
+    "id": "smooth-natural-tail-weighted-73",
+    "exit": 0,
+    "complete": true,
+    "failure": null,
+    "wall_s": 17.912038564682007
+  },
+  {
+    "id": "smooth-delayed-tail-weighted",
+    "exit": 0,
+    "complete": true,
+    "failure": null,
+    "wall_s": 17.81429934501648
+  },
+  {
+    "id": "smooth-natural-cross-weighted-17",
+    "exit": 0,
+    "complete": true,
+    "failure": null,
+    "wall_s": 17.66596555709839
+  },
+  {
+    "id": "smooth-natural-cross-weighted-73",
+    "exit": 0,
+    "complete": true,
+    "failure": null,
+    "wall_s": 17.76931095123291
+  },
+  {
+    "id": "smooth-delayed-cross-weighted",
+    "exit": 0,
+    "complete": true,
+    "failure": null,
+    "wall_s": 17.62084150314331
+  },
+  {
+    "id": "smooth-prior-correct",
+    "exit": 0,
+    "complete": true,
+    "failure": null,
+    "wall_s": 17.620543718338013
+  },
+  {
+    "id": "smooth-prior-reversed",
+    "exit": 0,
+    "complete": true,
+    "failure": null,
+    "wall_s": 18.023524284362793
+  },
+  {
+    "id": "smooth-prior-rotated",
+    "exit": 0,
+    "complete": true,
+    "failure": null,
+    "wall_s": 17.714540004730225
+  },
+  {
+    "id": "smooth-prior-too-strong",
+    "exit": 0,
+    "complete": true,
+    "failure": null,
+    "wall_s": 17.5592303276062
+  },
+  {
+    "id": "smooth-timeout-weighted",
+    "exit": 0,
+    "complete": true,
+    "failure": null,
+    "wall_s": 17.91618251800537
+  },
+  {
+    "id": "late-valid-gate",
+    "exit": 0,
+    "complete": true,
+    "failure": null,
+    "wall_s": 17.808813333511353
+  },
+  {
+    "id": "late-valid-zero",
+    "exit": 0,
+    "complete": true,
+    "failure": null,
+    "wall_s": 17.818156480789185
+  },
+  {
+    "id": "late-valid-weighted",
+    "exit": 0,
+    "complete": true,
+    "failure": null,
+    "wall_s": 17.860516786575317
+  }
+]

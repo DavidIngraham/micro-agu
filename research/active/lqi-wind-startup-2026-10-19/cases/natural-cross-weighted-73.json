@@ -1,0 +1,9 @@
+{
+  "id": "natural-cross-weighted-73",
+  "strategy": "weighted",
+  "weather": "default",
+  "north": 0,
+  "east": 1.5,
+  "seed": 73,
+  "group": "natural"
+}

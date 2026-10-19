@@ -1,0 +1,9 @@
+{
+  "id": "natural-tail-gate-17",
+  "strategy": "gate",
+  "weather": "default",
+  "north": 1.5,
+  "east": 0,
+  "seed": 17,
+  "group": "natural"
+}

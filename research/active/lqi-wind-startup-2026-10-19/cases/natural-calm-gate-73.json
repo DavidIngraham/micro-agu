@@ -1,0 +1,9 @@
+{
+  "id": "natural-calm-gate-73",
+  "strategy": "gate",
+  "weather": "default",
+  "north": 0,
+  "east": 0,
+  "seed": 73,
+  "group": "natural"
+}

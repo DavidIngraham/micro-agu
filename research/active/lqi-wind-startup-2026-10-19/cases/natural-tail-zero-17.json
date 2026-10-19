@@ -1,0 +1,9 @@
+{
+  "id": "natural-tail-zero-17",
+  "strategy": "zero",
+  "weather": "default",
+  "north": 1.5,
+  "east": 0,
+  "seed": 17,
+  "group": "natural"
+}

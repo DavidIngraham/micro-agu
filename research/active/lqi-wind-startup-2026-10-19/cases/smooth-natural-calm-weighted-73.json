@@ -1,0 +1,10 @@
+{
+  "id": "smooth-natural-calm-weighted-73",
+  "strategy": "weighted",
+  "weather": "default",
+  "north": 0,
+  "east": 0,
+  "seed": 73,
+  "group": "natural",
+  "revision": "smooth"
+}

@@ -1,0 +1,12 @@
+{
+  "base": "5e5bba8ee1b3575e04f45d56b8c53e5e6c48ab2f",
+  "patch_sha256": "967786ec190168feeb934ffcbb7bd7a6571a25f25e020100ee01c12a5e0d7a9a",
+  "patched_source_sha256": {
+    "ArduPlane/Plane.cpp": "1dc3eb6b1611abef73c8e74eb720090e91e1d74c9420d27c7a8871732c9e7a6e",
+    "libraries/AP_CustomControl/AP_CustomControl_MIMO.h": "1f7d1e35dda79c2c5d4fcd78d4c0fd6adc9cb4a04fe1703c8053b1e0fc07ba01",
+    "libraries/AP_CustomControl/AP_CustomControl_LQI.h": "d55aeae8eb717c393ef61b41989751b6fa51799dd38294bfde03d09a5b1de33a",
+    "libraries/AP_CustomControl/AP_CustomControl_LQI.cpp": "8e3466866c252c9a0b166ce5125f18f4a7558e4942951de27e1bea0b3c68ec5f"
+  },
+  "firmware_sha256": "88bed44173afc05dc5682d20fe9f2a53a9ee83de23588249ae8a4fe24ab5139f",
+  "ai_assisted": true
+}

@@ -1,0 +1,11 @@
+{
+  "id": "prior-correct",
+  "strategy": "weighted",
+  "weather": "default",
+  "north": -1.5,
+  "east": 0,
+  "seed": 73,
+  "priorNorth": -1.5,
+  "priorEast": 0,
+  "group": "prior"
+}

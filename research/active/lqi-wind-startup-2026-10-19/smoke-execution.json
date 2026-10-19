@@ -1,0 +1,23 @@
+[
+  {
+    "id": "gate-headwind-smoke",
+    "exit": 0,
+    "complete": true,
+    "failure": null,
+    "wall_s": 17.949002504348755
+  },
+  {
+    "id": "zero-headwind-smoke",
+    "exit": 0,
+    "complete": true,
+    "failure": null,
+    "wall_s": 17.701823472976685
+  },
+  {
+    "id": "weighted-headwind-smoke",
+    "exit": 0,
+    "complete": true,
+    "failure": null,
+    "wall_s": 17.752334117889404
+  }
+]

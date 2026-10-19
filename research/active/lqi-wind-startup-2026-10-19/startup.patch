@@ -1,0 +1,286 @@
+--- a/ArduPlane/Plane.cpp
++++ b/ArduPlane/Plane.cpp
+@@ -613,6 +613,7 @@
+ #if AP_PLANE_CUSTOMCONTROL_ENABLED
+     custom_control.mimo_input.reference.valid = false;
+     gcs().send_named_float("MIMO", custom_control.mimo_running() ? 1.0f : 0.0f);
++    gcs().send_named_float("TKST", flight_stage == AP_FixedWing::FlightStage::TAKEOFF ? 1.0f : 0.0f);
+ #endif
+     barometer.update();
+ 
+@@ -1130,6 +1131,8 @@
+     state.attitude_valid = ahrs.get_quaternion(state.attitude_body_to_ned);
+     state.navigation_valid = ahrs.get_velocity_NED(state.velocity_ned_mps);
+     state.wind_valid = ahrs.get_wind(state.wind_ned_mps);
++    state.wind_assumed = false;
++    state.wind_confidence = 1.0f;
+     state.airspeed_valid = ahrs.airspeed_TAS(state.true_airspeed_mps);
+     state.eas_to_tas = ahrs.get_EAS2TAS();
+     state.body_rate_rads = ahrs.get_gyro();
+@@ -1160,7 +1163,8 @@
+     input.reference.heading_rate_rads = radians(pg_heading_rate_target_dps);
+     input.eligible = pg_heading_rate_valid && control_mode->does_auto_throttle() &&
+         ahrs.healthy() &&
+-        flight_stage == AP_FixedWing::FlightStage::NORMAL &&
++        (flight_stage == AP_FixedWing::FlightStage::NORMAL ||
++         (control_mode == &mode_takeoff && flight_stage == AP_FixedWing::FlightStage::TAKEOFF)) &&
+         arming.is_armed_and_safety_off() && !throttle_suppressed &&
+         !failsafe.rc_failsafe && failsafe.throttle_counter == 0;
+ #endif
+--- a/libraries/AP_CustomControl/AP_CustomControl_MIMO.h
++++ b/libraries/AP_CustomControl/AP_CustomControl_MIMO.h
+@@ -37,6 +37,8 @@
+     bool navigation_valid;
+     bool airspeed_valid;
+     bool wind_valid;
++    bool wind_assumed;
++    float wind_confidence;
+     Quaternion attitude_body_to_ned;
+     Vector3f body_rate_rads;
+     Vector3f velocity_ned_mps;
+--- a/libraries/AP_CustomControl/AP_CustomControl_LQI.h
++++ b/libraries/AP_CustomControl/AP_CustomControl_LQI.h
+@@ -17,6 +17,20 @@
+     void allocation_feedback(const AP_CustomControl_MIMO::Allocation &allocation) override;
+ 
+ private:
++    // Research-only takeoff initialization; selected gain file is unchanged.
++    AP_Int8 _startup_mode;
++    AP_Float _wind_prior_n;
++    AP_Float _wind_prior_e;
++    AP_Float _wind_delay;
++    bool _startup_started;
++    uint32_t _startup_start_ms;
++    uint32_t _startup_last_ms;
++    uint32_t _startup_valid_ms;
++    uint32_t _startup_log_ms;
++    float _startup_confidence;
++    Vector3f _startup_wind;
++    void prepare_startup(AP_CustomControl_MIMO::Input &input);
++    void weight_velocity(float *value, const AP_CustomControl_MIMO::Input &input) const;
+     AP_Int8 _use_file;
+     bool _file_valid;
+     bool _active_file;
+--- a/libraries/AP_CustomControl/AP_CustomControl_LQI.cpp
++++ b/libraries/AP_CustomControl/AP_CustomControl_LQI.cpp
+@@ -101,6 +101,33 @@
+     // @RebootRequired: True
+     // @User: Advanced
+     AP_GROUPINFO("FILE", 9, AP_CustomControl_LQI, _use_file, 0),
++    // @Param: STMODE
++    // @DisplayName: Research startup STMODE
++    // @Description: Research-only takeoff startup policy. Retains checks except explicit temporary wind assumption.
++    // @Values: 0:Classical fallback,1:Zero wind full confidence,2:Weighted wind prior
++    // @User: Advanced
++    AP_GROUPINFO("STMODE", 10, AP_CustomControl_LQI, _startup_mode, 0),
++    // @Param: WPRN
++    // @DisplayName: Research startup WPRN
++    // @Description: Research-only north wind prior, positive toward north. Used only by weighted startup.
++    // @Units: m/s
++    // @Range: -10 10
++    // @User: Advanced
++    AP_GROUPINFO("WPRN", 11, AP_CustomControl_LQI, _wind_prior_n, 0),
++    // @Param: WPRE
++    // @DisplayName: Research startup WPRE
++    // @Description: Research-only east wind prior, positive toward east. Used only by weighted startup.
++    // @Units: m/s
++    // @Range: -10 10
++    // @User: Advanced
++    AP_GROUPINFO("WPRE", 12, AP_CustomControl_LQI, _wind_prior_e, 0),
++    // @Param: WDLY
++    // @DisplayName: Research startup WDLY
++    // @Description: Research-only withholding of controller wind availability after takeoff eligibility. Does not modify EKF states.
++    // @Units: s
++    // @Range: 0 60
++    // @User: Advanced
++    AP_GROUPINFO("WDLY", 13, AP_CustomControl_LQI, _wind_delay, 0),
+     AP_GROUPEND
+ };
+ 
+@@ -120,7 +147,8 @@
+         isfinite(_height_down.get()) && _height_down >= 0.1f && _height_down <= 3.0f &&
+         isfinite(_height_tc.get()) && _height_tc >= 0.2f && _height_tc <= 10.0f &&
+         in.eligible && in.reference.valid && s.attitude_valid && s.navigation_valid &&
+-        s.airspeed_valid && s.wind_valid && in.time_ms-s.time_ms <= 100 &&
++        s.airspeed_valid && (s.wind_valid || s.wind_assumed) &&
++        isfinite(s.wind_confidence) && s.wind_confidence >= 0 && s.wind_confidence <= 1 && in.time_ms-s.time_ms <= 100 &&
+         in.time_ms-in.reference.time_ms <= 500 && isfinite(in.dt) && in.dt > 0 && in.dt <= 0.1f &&
+         isfinite(s.attitude_body_to_ned.length_squared()) &&
+         fabsf(s.attitude_body_to_ned.length_squared()-1) < 0.01f &&
+@@ -136,6 +164,7 @@
+ 
+ bool AP_CustomControl_LQI::can_run()
+ {
++    prepare_startup(_frontend.mimo_input);
+     return (_use_file == 0 || (_use_file == 1 && _file_valid)) && valid(_frontend.mimo_input);
+ }
+ 
+@@ -175,6 +204,7 @@
+     _reset_sequence = in.state.reset_sequence;
+     float y[9];
+     measurements(in, y);
++    weight_velocity(&y[2], in);
+     const uint8_t indices[9] = {0, 1, 5, 6, 7, 8, 9, 10, 15};
+     for (uint8_t j = 0; j < 9; j++) {
+         _state[indices[j]] = y[j];
+@@ -228,7 +258,10 @@
+     if (_observer_trim) {
+         float r,p,y; in.state.attitude_body_to_ned.to_euler(r,p,y);
+         const float turn=(in.state.body_rate_rads.y*sinf(r)+in.state.body_rate_rads.z*cosf(r))/MAX(cosf(p),0.3f);
+-        turn_trim(degrees(turn),in.state.true_airspeed_mps,observer_x,observer_u);
++        const float confidence = in.state.wind_confidence;
++        const float observer_speed = confidence*in.state.true_airspeed_mps +
++            (1-confidence)*in.reference.equivalent_airspeed_mps*in.state.eas_to_tas;
++        turn_trim(degrees(turn),observer_speed,observer_x,observer_u);
+     }
+     float predicted[16]{};
+     for (uint8_t i = 0; i < 16; i++) {
+@@ -243,10 +276,15 @@
+     float y[9];
+     measurements(in, y);
+     const uint8_t indices[9] = {0, 1, 5, 6, 7, 8, 9, 10, 15};
++    float innovation[9];
++    for (uint8_t j = 0; j < 9; j++) {
++        innovation[j] = y[j]-predicted[indices[j]];
++    }
++    weight_velocity(&innovation[2], in);
+     for (uint8_t i = 0; i < 16; i++) {
+         _state[i] = predicted[i];
+         for (uint8_t j = 0; j < 9; j++) {
+-            _state[i] += L[i][j]*(y[j]-predicted[indices[j]]);
++            _state[i] += L[i][j]*innovation[j];
+         }
+         if (!isfinite(_state[i])) {
+             return false;
+@@ -259,7 +297,8 @@
+     _smoothed_climb += DT/(_height_rate_tc+DT)*(requested_climb-_smoothed_climb);
+     const float governed_climb = _smoothed_climb;
+     _height_reference += DT*governed_climb;
+-    const float turn = constrain_float(in.reference.heading_rate_rads, -radians(_turn_max), radians(_turn_max));
++    const float turn_limit = MIN(_turn_max.get(), 10.0f+25.0f*in.state.wind_confidence);
++    const float turn = constrain_float(in.reference.heading_rate_rads, -radians(turn_limit), radians(turn_limit));
+     _turn_reference += constrain_float(turn-_turn_reference, -radians(40)*DT, radians(40)*DT);
+     float roll, pitch, yaw;
+     in.state.attitude_body_to_ned.to_euler(roll, pitch, yaw);
+@@ -272,7 +311,7 @@
+     const float errors[3] = {
+         _state[15]-_height_reference,
+         (heading_rate-_turn_reference)/radians(10),
+-        (in.state.true_airspeed_mps-speed_target)/0.5f
++        in.state.wind_confidence*(in.state.true_airspeed_mps-speed_target)/0.5f
+     };
+     // Map the entire allocation residual back through the integral gain matrix.
+     // Saturating common brake must not freeze the independent turn integral.
+@@ -302,10 +341,15 @@
+     if (_trim_map) {
+         for (uint8_t j=0; j<16; j++) { target_state[j]=trim_x[j]+XREF[j][0]*references[0]+XREF[j][3]*references[3]; }
+     }
++    float feedback_state[16];
++    for (uint8_t j = 0; j < 16; j++) {
++        feedback_state[j] = _state[j]-target_state[j];
++    }
++    weight_velocity(&feedback_state[5], in);
+     for (uint8_t i = 0; i < 3; i++) {
+         float feedback = 0;
+         for (uint8_t j = 0; j < 16; j++) {
+-            feedback += feedback_gain(i, j)*(_state[j]-target_state[j]);
++            feedback += feedback_gain(i, j)*feedback_state[j];
+         }
+         for (uint8_t j = 0; j < 3; j++) {
+             feedback += feedback_gain(i, 16+j)*_integral[j];
+@@ -379,4 +423,94 @@
+ {
+     return _active_file ? _file_gains.aw[row][col] : AW[row][col];
+ }
+-#endif
++
++
++// AI-assisted isolated research policy. Confidence is a heuristic, not covariance.
++void AP_CustomControl_LQI::prepare_startup(Input &in)
++{
++    auto &s = in.state;
++    const bool raw_valid = s.wind_valid;
++    const bool supported_mode = in.flight_mode == 13 || in.flight_mode == 10;
++    if (!supported_mode) {
++        _startup_started = false;
++    }
++    if (!_startup_started && in.flight_mode == 13 && in.eligible) {
++        _startup_started = true;
++        _startup_start_ms = in.time_ms;
++        _startup_last_ms = in.time_ms;
++        _startup_valid_ms = 0;
++        _startup_confidence = 0.15f;
++        _startup_wind = Vector3f(_wind_prior_n, _wind_prior_e, 0);
++    }
++    const float dt = constrain_float((in.time_ms-_startup_last_ms)*0.001f, 0.0f, 0.1f);
++    _startup_last_ms = in.time_ms;
++    const float age = (in.time_ms-_startup_start_ms)*0.001f;
++    const bool policy_valid = _startup_mode >= 0 && _startup_mode <= 2 &&
++        isfinite(_wind_prior_n.get()) && fabsf(_wind_prior_n.get()) <= 10 &&
++        isfinite(_wind_prior_e.get()) && fabsf(_wind_prior_e.get()) <= 10 &&
++        isfinite(_wind_delay.get()) && _wind_delay >= 0 && _wind_delay <= 60;
++    if (!policy_valid) {
++        in.eligible = false;
++    }
++    if (_startup_started && age < _wind_delay) {
++        s.wind_valid = false; // Controller-side test delay; EKF is unchanged.
++    }
++    const bool completing_blend = _startup_mode == 2 && s.wind_valid && _startup_confidence < 1.0f;
++    if (policy_valid && _startup_started && _startup_mode > 0 && (age < 45 || completing_blend)) {
++        if (_startup_mode == 1) {
++            if (!s.wind_valid) {
++                s.wind_ned_mps.zero();
++                s.wind_assumed = true;
++                s.true_airspeed_mps = s.velocity_ned_mps.length();
++            }
++        } else {
++            const float raw_airspeed = s.true_airspeed_mps;
++            if (s.wind_valid) {
++                if (_startup_valid_ms == 0) {
++                    _startup_valid_ms = in.time_ms;
++                }
++                _startup_wind += (s.wind_ned_mps-_startup_wind)*(dt/(2.0f+dt));
++                if (in.time_ms-_startup_valid_ms >= 1000) {
++                    _startup_confidence = MIN(1.0f, _startup_confidence+dt/3.0f);
++                }
++            } else {
++                _startup_valid_ms = 0;
++                _startup_confidence = 0.15f;
++            }
++            s.wind_assumed = !s.wind_valid;
++            s.wind_confidence = _startup_confidence;
++            const float blend = s.wind_valid ? constrain_float((_startup_confidence-0.15f)/0.85f, 0.0f, 1.0f) : 0.0f;
++            s.wind_ned_mps = _startup_wind+(s.wind_ned_mps-_startup_wind)*blend;
++            const float prior_airspeed = (s.velocity_ned_mps-s.wind_ned_mps).length();
++            s.true_airspeed_mps = s.wind_valid ?
++                (1-blend)*prior_airspeed+blend*raw_airspeed :
++                prior_airspeed;
++        }
++    }
++    if (in.time_ms-_startup_log_ms >= 100) {
++        _startup_log_ms = in.time_ms;
++        gcs().send_named_float("TKRAW", raw_valid ? 1.0f : 0.0f);
++        gcs().send_named_float("TKWQ", s.wind_confidence);
++        gcs().send_named_float("TKUSE", s.wind_assumed ? 1.0f : 0.0f);
++        gcs().send_named_float("TKWN", s.wind_ned_mps.x);
++        gcs().send_named_float("TKWE", s.wind_ned_mps.y);
++    }
++}
++
++void AP_CustomControl_LQI::weight_velocity(float *value, const Input &in) const
++{
++    if (in.state.wind_confidence >= 1.0f) {
++        return;
++    }
++    Matrix3f rotation;
++    in.state.attitude_body_to_ned.rotation_matrix(rotation);
++    Vector3f ned = rotation*Vector3f(value[0]*XS[5], value[1]*XS[6], value[2]*XS[7]);
++    ned.x *= in.state.wind_confidence;
++    ned.y *= in.state.wind_confidence;
++    const Vector3f body = rotation.transposed()*ned;
++    value[0] = body.x/XS[5];
++    value[1] = body.y/XS[6];
++    value[2] = body.z/XS[7];
++}
++
++#endif // AP_PLANE_CUSTOMCONTROL_LQI_ENABLED

@@ -1,0 +1,9 @@
+{
+  "id": "repeat-tail-weighted-1",
+  "strategy": "weighted",
+  "weather": "default",
+  "north": 1.5,
+  "east": 0,
+  "seed": 17,
+  "group": "repeat"
+}

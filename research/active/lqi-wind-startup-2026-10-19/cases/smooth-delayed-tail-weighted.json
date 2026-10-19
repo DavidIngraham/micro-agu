@@ -1,0 +1,11 @@
+{
+  "id": "smooth-delayed-tail-weighted",
+  "strategy": "weighted",
+  "weather": "default",
+  "north": 1.5,
+  "east": 0,
+  "seed": 73,
+  "windDelay": 12,
+  "group": "delayed",
+  "revision": "smooth"
+}

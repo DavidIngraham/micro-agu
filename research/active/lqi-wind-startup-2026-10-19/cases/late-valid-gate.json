@@ -1,0 +1,11 @@
+{
+  "id": "late-valid-gate",
+  "strategy": "gate",
+  "weather": "default",
+  "north": 0,
+  "east": 0,
+  "seed": 73,
+  "windDelay": 44,
+  "group": "late-valid",
+  "revision": "smooth"
+}

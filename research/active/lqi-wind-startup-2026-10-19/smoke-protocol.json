@@ -1,0 +1,26 @@
+[
+  {
+    "id": "gate-headwind-smoke",
+    "strategy": "gate",
+    "weather": "default",
+    "seed": 73,
+    "north": -1.5,
+    "east": 0
+  },
+  {
+    "id": "zero-headwind-smoke",
+    "strategy": "zero",
+    "weather": "default",
+    "seed": 73,
+    "north": -1.5,
+    "east": 0
+  },
+  {
+    "id": "weighted-headwind-smoke",
+    "strategy": "weighted",
+    "weather": "default",
+    "seed": 73,
+    "north": -1.5,
+    "east": 0
+  }
+]

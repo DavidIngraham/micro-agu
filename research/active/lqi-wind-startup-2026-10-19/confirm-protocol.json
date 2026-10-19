@@ -1,0 +1,56 @@
+[
+  {
+    "id": "repeat-tail-gate-1",
+    "strategy": "gate",
+    "weather": "default",
+    "north": 1.5,
+    "east": 0,
+    "seed": 17,
+    "group": "repeat"
+  },
+  {
+    "id": "repeat-tail-zero-1",
+    "strategy": "zero",
+    "weather": "default",
+    "north": 1.5,
+    "east": 0,
+    "seed": 17,
+    "group": "repeat"
+  },
+  {
+    "id": "repeat-tail-weighted-1",
+    "strategy": "weighted",
+    "weather": "default",
+    "north": 1.5,
+    "east": 0,
+    "seed": 17,
+    "group": "repeat"
+  },
+  {
+    "id": "repeat-tail-gate-2",
+    "strategy": "gate",
+    "weather": "default",
+    "north": 1.5,
+    "east": 0,
+    "seed": 17,
+    "group": "repeat"
+  },
+  {
+    "id": "repeat-tail-zero-2",
+    "strategy": "zero",
+    "weather": "default",
+    "north": 1.5,
+    "east": 0,
+    "seed": 17,
+    "group": "repeat"
+  },
+  {
+    "id": "repeat-tail-weighted-2",
+    "strategy": "weighted",
+    "weather": "default",
+    "north": 1.5,
+    "east": 0,
+    "seed": 17,
+    "group": "repeat"
+  }
+]

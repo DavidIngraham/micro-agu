@@ -227,6 +227,13 @@
       "evidence_archive": "research/archive/lqi-turn-envelope-2026-10-17/evidence-manifest.json"
     },
     {
+      "study": "lqi-wind-startup-2026-10-19",
+      "status": "active",
+      "path": "research/active/lqi-wind-startup-2026-10-19",
+      "summary": "72 isolated takeoff startup tests: zero-wind fallback improves engagement; weighted observer lacks consistent benefit; marginal tailwind contacts retained.",
+      "execution_policy": "two pinned research firmware patches; no production or deployment change"
+    },
+    {
       "study": "manual-coupling-fit-2026-10-18",
       "status": "active",
       "path": "research/active/manual-coupling-fit-2026-10-18",

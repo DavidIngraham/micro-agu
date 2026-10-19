@@ -1,0 +1,10 @@
+{
+  "id": "delayed-calm-weighted",
+  "strategy": "weighted",
+  "weather": "default",
+  "north": 0,
+  "east": 0,
+  "seed": 73,
+  "windDelay": 12,
+  "group": "delayed"
+}

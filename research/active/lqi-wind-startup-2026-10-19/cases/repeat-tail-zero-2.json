@@ -1,0 +1,9 @@
+{
+  "id": "repeat-tail-zero-2",
+  "strategy": "zero",
+  "weather": "default",
+  "north": 1.5,
+  "east": 0,
+  "seed": 17,
+  "group": "repeat"
+}

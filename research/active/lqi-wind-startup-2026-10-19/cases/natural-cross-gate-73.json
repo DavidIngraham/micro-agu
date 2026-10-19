@@ -1,0 +1,9 @@
+{
+  "id": "natural-cross-gate-73",
+  "strategy": "gate",
+  "weather": "default",
+  "north": 0,
+  "east": 1.5,
+  "seed": 73,
+  "group": "natural"
+}

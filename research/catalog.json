@@ -246,6 +246,13 @@
       "reason": "Retained measurements, published figures, model lineage or current-envelope evidence."
     },
     {
+      "study": "rpm-harmonics-2026-10-18",
+      "status": "active",
+      "path": "research/active/rpm-harmonics-2026-10-18",
+      "summary": "ESC shaft-order and alias audit across 199 flight windows; no simple rotational alias explaining the low-frequency coupled mode.",
+      "execution_policy": "maintained for ongoing fidelity/pipeline work"
+    },
+    {
       "study": "scheduled-state-feedback-2026-10-15",
       "status": "superseded",
       "path": "research/archive/scheduled-state-feedback-2026-10-15",

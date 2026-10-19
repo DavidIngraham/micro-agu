@@ -1,0 +1,10 @@
+{
+  "parent_commit": "5fee86066389f77df349c49a26d81a82ca53224a",
+  "source_hashes": {
+    "inventory.py": "fc3926d0a881b5b3ce30e76bd1c785080a62c29c5ee7a3634c3292fa394da0ef",
+    "report.py": "4d615445a8131fc266ce53ef1f8130ffb962241fee963487946ee0147ee61e23",
+    "analyze.py": "9a8709b1011b63c93323a9e74ceb0c6f70c4a7b8656c089cbfe7cfaf0470f472",
+    "checks.py": "d54a72ec3a3bc9a80a8f448ce9cbfcd3b4fd45d2658c1e5facc3168b56119161"
+  },
+  "decision": "No simple shaft/blade-pass alias identification; high-rate source data absent"
+}

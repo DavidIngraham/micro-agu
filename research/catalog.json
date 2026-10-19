@@ -222,6 +222,13 @@
       "successor": "research/active/controller-pipeline-2026-10-18"
     },
     {
+      "study": "oscillation-timing-2026-10-18",
+      "status": "active",
+      "path": "research/active/oscillation-timing-2026-10-18",
+      "summary": "Whole-flight FFT, time-frequency persistence and excitation timing; separates pervasive ~1.6 Hz motion from episodic ~1.16 Hz CRUISE behavior.",
+      "execution_policy": "maintained for ongoing fidelity/pipeline work"
+    },
+    {
       "study": "pitch-inertia-damping-2026-10-18",
       "status": "active",
       "path": "research/active/pitch-inertia-damping-2026-10-18",

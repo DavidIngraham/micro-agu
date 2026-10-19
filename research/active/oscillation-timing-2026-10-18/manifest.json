@@ -1,0 +1,4 @@
+{
+  "source_sha256": "008c428b33b04e77173679b2b26d1ac89a57df134d24a3556b9903708affa35f",
+  "decision": "Separate persistent ~1.6 Hz response from episodic ~1.16 Hz CRUISE behavior; no deployment"
+}

@@ -41,3 +41,5 @@ Studies may require flight inputs described in their own instructions. A success
 - [ESC RPM harmonic audit](active/rpm-harmonics-2026-10-18/README.md): shaft/blade-pass alias comparisons, original binary log inventory, and measurement limitations.
 
 - [Propulsion RPM audit](active/propulsion-rpm-audit-2026-10-18/README.md): measured versus predicted RPM, telemetry slew, and native replay checks.
+
+- [Whole-flight oscillation timing](active/oscillation-timing-2026-10-18/README.md): full-flight FFT, time histories and command-excitation association.

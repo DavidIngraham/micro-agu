@@ -1,0 +1,75 @@
+{
+  "question": "Can transverse propeller loads, offset payload drag, or compliant two-riser suspension explain missing coupled dynamics?",
+  "variants": {
+    "baseline": {},
+    "prop-0.1": {
+      "prop_normal": 0.1
+    },
+    "prop-0.3": {
+      "prop_normal": 0.3
+    },
+    "prop-0.6": {
+      "prop_normal": 0.6
+    },
+    "drag-x--1": {
+      "drag_center": [
+        -0.05,
+        0.0,
+        0.0
+      ]
+    },
+    "drag-x-1": {
+      "drag_center": [
+        0.05,
+        0.0,
+        0.0
+      ]
+    },
+    "drag-z--1": {
+      "drag_center": [
+        0.0,
+        0.0,
+        -0.05
+      ]
+    },
+    "drag-z-1": {
+      "drag_center": [
+        0.0,
+        0.0,
+        0.05
+      ]
+    },
+    "risers-500-0.5": {
+      "suspension_k": 500,
+      "suspension_c": 0.5
+    },
+    "risers-500-2": {
+      "suspension_k": 500,
+      "suspension_c": 2
+    },
+    "risers-2000-0.5": {
+      "suspension_k": 2000,
+      "suspension_c": 0.5
+    },
+    "risers-2000-2": {
+      "suspension_k": 2000,
+      "suspension_c": 2
+    }
+  },
+  "scope": "prior as-built HR and TL; same existing ten diagnostic windows; no coefficient fitting or promotion",
+  "propeller": "in-plane force opposes transverse velocity at disk; scales with positive mapped thrust and axial/induced velocity; 9-inch diameter; no intrinsic disk moment",
+  "drag": "same isotropic CdA moved +/-50mm fore/aft or vertically; includes local rotational velocity; replaces rather than duplicates original CG drag",
+  "risers": "two axial tension-only springs/dampers replace point constraint and effective rotational springs; existing rotational damping retained; rest lengths fixed from each flight reference geometry with static preload",
+  "initialization": "free suspension initialized to approximately support payload weight at observed attitudes; position/velocity correction enforces target line lengths and zero initial line speed; uncertain canopy state",
+  "stiffness_units": "N/m",
+  "damping_units": "N s/m",
+  "coefficient_status": "exploratory bounds, not measurements",
+  "checks": [
+    "baseline parity",
+    "force and moment balance",
+    "passive load power",
+    "resolution doubling",
+    "independently trimmed constant-command perturbations"
+  ],
+  "decision": "must match frequency/amplitude/phase and instantaneous rates across both flights; increased oscillation alone is not success"
+}

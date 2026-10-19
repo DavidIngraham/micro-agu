@@ -155,6 +155,48 @@ pub fn rhs_with_joint_torque(
     shaft_torque: Option<f64>,
     extra_joint_torque: V,
 ) -> State {
+    rhs_with_loads(
+        y,
+        input,
+        p,
+        mass,
+        wind,
+        rpm,
+        rpm_rate,
+        shaft_torque,
+        &BodyLoads {
+            payload_moment: extra_joint_torque,
+            canopy_moment: -extra_joint_torque,
+            ..BodyLoads::default()
+        },
+        true,
+    )
+}
+
+/// Additional world-frame external wrenches, applied before optional point closure.
+#[derive(Clone, Debug, Default)]
+pub struct BodyLoads {
+    pub payload_force: V,
+    pub payload_moment: V,
+    pub canopy_force: V,
+    pub canopy_moment: V,
+}
+
+/// Research backends may supply explicit suspension loads instead of point closure.
+/// With point_constraint=false, the caller owns suspension and initialization.
+#[allow(clippy::too_many_arguments)]
+pub fn rhs_with_loads(
+    y: &State,
+    input: &[f64; 3],
+    p: &Parameters,
+    mass: f64,
+    wind: V,
+    rpm: f64,
+    rpm_rate: f64,
+    shaft_torque: Option<f64>,
+    loads: &BodyLoads,
+    point_constraint: bool,
+) -> State {
     let rp = rotation(y, PAYLOAD);
     let rc = rotation(y, CANOPY);
     let mut u = *input;
@@ -177,7 +219,8 @@ pub fn rhs_with_joint_torque(
     let ipi = ip.try_inverse().unwrap_or_else(|| M::repeat(f64::NAN));
     let va = vp - wind;
     let thrust = rp * V::new(p.thrust_max * u[0], 0., 0.);
-    let fp = V::new(0., 0., mp * 9.80665) + thrust - 0.5 * p.rho * p.payload_cda * va.norm() * va;
+    let fp = V::new(0., 0., mp * 9.80665) + thrust - 0.5 * p.rho * p.payload_cda * va.norm() * va
+        + loads.payload_force;
     let mut moment_p = (rp * V::new(p.thrust_x, p.thrust_y, p.thrust_arm_z)).cross(&thrust)
         + rp * V::new(p.prop_torque * p.thrust_max * u[0], 0., 0.);
     if let Some(t) = shaft_torque {
@@ -195,7 +238,7 @@ pub fn rhs_with_joint_torque(
         p.rotor_spin_sign * rpm,
         p.spin_acceleration_scale * p.rotor_spin_sign * rpm_rate,
     );
-    let mut fc = V::new(0., 0., mc * 9.80665);
+    let mut fc = V::new(0., 0., mc * 9.80665) + loads.canopy_force;
     let mut moment_c = V::zeros();
     let vb = rc.transpose() * (vc - wind);
     let speed = vb.norm();
@@ -225,8 +268,8 @@ pub fn rhs_with_joint_torque(
     let Some(joint) = crate::joint::joint_loads(rp, rc, wp, wc, mp, p) else {
         return State::repeat(f64::NAN);
     };
-    moment_p += joint.total + extra_joint_torque;
-    moment_c -= joint.total + extra_joint_torque;
+    moment_p += joint.total + loads.payload_moment;
+    moment_c += -joint.total + loads.canopy_moment;
     let hc = canopy_inertia(p);
     let mut nu = V6::zeros();
     nu.fixed_rows_mut::<3>(0)
@@ -261,16 +304,19 @@ pub fn rhs_with_joint_torque(
     cp.fixed_rows_mut::<3>(3)
         .copy_from(&(ipi * (moment_p - wp.cross(&(ip * wp)))));
     let mut cc = r6 * local;
-    let gp = constraint(arm_p);
-    let gc = constraint(arm_c);
-    let a = gp * hpi * gp.transpose() + gc * hci * gc.transpose();
-    let mismatch = gp * cp + wp.cross(&wp.cross(&arm_p)) - gc * cc - wc.cross(&wc.cross(&arm_c));
-    let Some(solve) = a.cholesky() else {
-        return State::repeat(f64::NAN);
-    };
-    let reaction = solve.solve(&-mismatch);
-    cp += hpi * gp.transpose() * reaction;
-    cc -= hci * gc.transpose() * reaction;
+    if point_constraint {
+        let gp = constraint(arm_p);
+        let gc = constraint(arm_c);
+        let a = gp * hpi * gp.transpose() + gc * hci * gc.transpose();
+        let mismatch =
+            gp * cp + wp.cross(&wp.cross(&arm_p)) - gc * cc - wc.cross(&wc.cross(&arm_c));
+        let Some(solve) = a.cholesky() else {
+            return State::repeat(f64::NAN);
+        };
+        let reaction = solve.solve(&-mismatch);
+        cp += hpi * gp.transpose() * reaction;
+        cc -= hci * gc.transpose() * reaction;
+    }
     let mut dy = State::zeros();
     for (k, acceleration) in [(PAYLOAD, cp), (CANOPY, cc)] {
         let w = vector(y, k + 10);

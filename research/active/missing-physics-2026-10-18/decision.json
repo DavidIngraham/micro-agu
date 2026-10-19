@@ -1,0 +1,27 @@
+{
+  "selected": null,
+  "deploy": false,
+  "gain_retune": false,
+  "propeller": {
+    "status": "not_supported_with_tested_force_law",
+    "reason": "small effect; large fast-motion amplitude deficit remains; intrinsic disk moments not tested"
+  },
+  "payload_drag": {
+    "status": "not_supported_with_tested_force_law",
+    "reason": "50 mm center shifts do not materially improve coupled response; isotropic CdA unchanged"
+  },
+  "suspension": {
+    "status": "inconclusive_unqualified",
+    "reason": "all eight trim attempts fail; replay errors much worse; long-horizon step convergence not established; actual bridle geometry unmeasured"
+  },
+  "validation": {
+    "replays": 130,
+    "valid_equilibria": 18,
+    "failed_equilibria": 8,
+    "decaying_nonzero_disturbances": 54,
+    "research_unit_tests": 4,
+    "prior_tension_tests": 3,
+    "core_tests": 15
+  },
+  "scope": "diagnostic hypotheses, not calibrated physical models; existing flight windows reused"
+}

@@ -1,0 +1,22 @@
+{
+  "source_sha256": {
+    "research/active/missing-physics-2026-10-18/constant.py": "4f2a04ba99d7cca64e2365e0399eed8e3145c12185219c4cf699a95558d73610",
+    "research/active/missing-physics-2026-10-18/report.py": "f6b3d079d9e619b7af58a9a32615736a5ca03377f523ed34699aa0a0b03a7d07",
+    "research/active/missing-physics-2026-10-18/run.py": "a26be44251b93307fe97840a5ed9e2cae33eb83ff161a1eb6ee0f9f2e86a75fe",
+    "research/active/missing-physics-2026-10-18/checks.py": "32debb5e372da35c9b0f5f11c5c3d82ee5757664079310cb331619124fd3ca5a",
+    "research/active/missing-physics-2026-10-18/src/main.rs": "226d9be9d62dd9522e77b3660965e5e12aad585f9108439da7e01e5aaf98e632",
+    "research/active/missing-physics-2026-10-18/Cargo.toml": "e5a0e30e966ae43c7161245f135dae7192638de8cf0821369d17bfe8472f0c9a",
+    "research/active/missing-physics-2026-10-18/Cargo.lock": "9675d83f9035bce1c9d1031d687ff4cdb0f07d30070846512ea4a2565da902d3",
+    "research/active/missing-physics-2026-10-18/protocol.json": "c7b2b29be44f18256b2f9c5592d73924322328f6aaf4a6e5d59d5d0f4270a220",
+    "research/active/missing-physics-2026-10-18/session.json": "b658bbee97d0f7d174033280e61ac273978e0cfac49ae465dc2f4e5078c79419",
+    "simulation/crates/sim-core/src/dynamics.rs": "8dd55c811c7bd5fbebba6f2a569da49f9825cccafd39814503c876d78050f6f5"
+  },
+  "binary_sha256": "e18f818fd6df287d95f990821466bac4f7e4d22d7db4c096380484fa05cf1247",
+  "tests": {
+    "missing-core-tests.log": 15,
+    "missing-brake-regression.log": 3,
+    "missing-final-tests.log": 4
+  },
+  "deployed_changed": false,
+  "note": "Rust source was formatted after replay binary build; no semantic changes. Binary hash identifies actual replay executable."
+}

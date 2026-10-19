@@ -1,0 +1,82 @@
+{
+  "question": "Can transverse propeller loads, offset payload drag, or compliant two-riser suspension explain missing coupled dynamics?",
+  "variants": {
+    "baseline": {},
+    "prop-0.1": {
+      "prop_normal": 0.1
+    },
+    "prop-0.3": {
+      "prop_normal": 0.3
+    },
+    "prop-0.6": {
+      "prop_normal": 0.6
+    },
+    "drag-x--1": {
+      "drag_center": [
+        -0.05,
+        0.0,
+        0.0
+      ]
+    },
+    "drag-x-1": {
+      "drag_center": [
+        0.05,
+        0.0,
+        0.0
+      ]
+    },
+    "drag-z--1": {
+      "drag_center": [
+        0.0,
+        0.0,
+        -0.05
+      ]
+    },
+    "drag-z-1": {
+      "drag_center": [
+        0.0,
+        0.0,
+        0.05
+      ]
+    },
+    "risers-500-0.5": {
+      "suspension_k": 500,
+      "suspension_c": 0.5
+    },
+    "risers-500-2": {
+      "suspension_k": 500,
+      "suspension_c": 2
+    },
+    "risers-2000-0.5": {
+      "suspension_k": 2000,
+      "suspension_c": 0.5
+    },
+    "risers-2000-2": {
+      "suspension_k": 2000,
+      "suspension_c": 2
+    },
+    "baseline-reference-init": {
+      "reference_init": true
+    }
+  },
+  "scope": "prior as-built HR and TL; same existing ten diagnostic windows; no coefficient fitting or promotion",
+  "propeller": "in-plane force opposes transverse velocity at disk; scales with positive mapped thrust and axial/induced velocity; 9-inch diameter; no intrinsic disk moment",
+  "drag": "same isotropic CdA moved +/-50mm fore/aft or vertically; includes local rotational velocity; replaces rather than duplicates original CG drag",
+  "risers": "two risers with four fore/aft canopy branches (+/-0.15m chordwise); tension-only springs/dampers replace point constraint and rotational springs; prior rotational damping retained",
+  "initialization": "one flight-specific reference canopy pose rotated with observed payload, same angular velocity and fixed relative position; fixed canonical preload; baseline-reference-init isolates this change",
+  "stiffness_units": "N/m",
+  "damping_units": "N s/m",
+  "coefficient_status": "exploratory bounds, not measurements",
+  "checks": [
+    "baseline parity",
+    "force and moment balance",
+    "passive load power",
+    "resolution doubling",
+    "independently trimmed constant-command perturbations"
+  ],
+  "decision": "must match frequency/amplitude/phase and instantaneous rates across both flights; increased oscillation alone is not success",
+  "development_notes": [
+    "initial two-link version omitted fore/aft support and was rejected",
+    "attempt to independently prescribe four initial tensions proved incompatible in many attitudes; replaced by geometrically compatible fixed reference pose, retaining earlier failures"
+  ]
+}

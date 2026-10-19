@@ -17,6 +17,7 @@ Maintained software lives in [simulation](../simulation/README.md), [control](..
 | greybox-pipeline-2026-10-18 | [greybox-pipeline-2026-10-18](active/greybox-pipeline-2026-10-18/) |
 | hood-river-pipeline-2026-10-18 | [hood-river-pipeline-2026-10-18](active/hood-river-pipeline-2026-10-18/) |
 | manual-coupling-fit-2026-10-18 | [manual-coupling-fit-2026-10-18](active/manual-coupling-fit-2026-10-18/) |
+| missing-physics-2026-10-18 | [missing-physics-2026-10-18](active/missing-physics-2026-10-18/) |
 | trout-lake-dynamics-2026-10-18 | [trout-lake-dynamics-2026-10-18](active/trout-lake-dynamics-2026-10-18/) |
 | trout-lake-fidelity-2026-10-18 | [trout-lake-fidelity-2026-10-18](active/trout-lake-fidelity-2026-10-18/) |
 

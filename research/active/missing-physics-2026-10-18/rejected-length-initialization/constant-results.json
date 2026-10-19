@@ -1,0 +1,1002 @@
+[
+  {
+    "flight": "hood_river",
+    "variant": "baseline",
+    "amplitude": 0,
+    "trim_residual": 5.684341886080802e-14,
+    "trim_command": [
+      0.39936046835187183,
+      0.1,
+      -0.2155068210409144
+    ],
+    "early_rms_deg": 0.0,
+    "late_rms_deg": 0.0,
+    "ratio": 0.0,
+    "max_relative_angle_deg": 0.0
+  },
+  {
+    "flight": "hood_river",
+    "variant": "baseline",
+    "amplitude": 1,
+    "trim_residual": 5.684341886080802e-14,
+    "trim_command": [
+      0.39936046835187183,
+      0.1,
+      -0.2155068210409144
+    ],
+    "early_rms_deg": 0.030483422015408247,
+    "late_rms_deg": 9.55631158257457e-07,
+    "ratio": 3.1349208687083125e-05,
+    "max_relative_angle_deg": 0.9999827046911796
+  },
+  {
+    "flight": "hood_river",
+    "variant": "baseline",
+    "amplitude": 5,
+    "trim_residual": 5.684341886080802e-14,
+    "trim_command": [
+      0.39936046835187183,
+      0.1,
+      -0.2155068210409144
+    ],
+    "early_rms_deg": 0.14993846923824505,
+    "late_rms_deg": 4.679091309233695e-06,
+    "ratio": 3.120674322610859e-05,
+    "max_relative_angle_deg": 4.999913492855623
+  },
+  {
+    "flight": "hood_river",
+    "variant": "baseline",
+    "amplitude": 15,
+    "trim_residual": 5.684341886080802e-14,
+    "trim_command": [
+      0.39936046835187183,
+      0.1,
+      -0.2155068210409144
+    ],
+    "early_rms_deg": 0.4351163047018575,
+    "late_rms_deg": 1.3190200411447572e-05,
+    "ratio": 3.031419477715394e-05,
+    "max_relative_angle_deg": 14.999739878495108
+  },
+  {
+    "flight": "hood_river",
+    "variant": "prop-0.1",
+    "amplitude": 0,
+    "trim_residual": 2.2737367544323206e-13,
+    "trim_command": [
+      0.39904639978378215,
+      0.1,
+      -0.21342852736807857
+    ],
+    "early_rms_deg": 0.0,
+    "late_rms_deg": 0.0,
+    "ratio": 0.0,
+    "max_relative_angle_deg": 0.0
+  },
+  {
+    "flight": "hood_river",
+    "variant": "prop-0.1",
+    "amplitude": 1,
+    "trim_residual": 2.2737367544323206e-13,
+    "trim_command": [
+      0.39904639978378215,
+      0.1,
+      -0.21342852736807857
+    ],
+    "early_rms_deg": 0.0301440791350801,
+    "late_rms_deg": 1.0119299596459528e-06,
+    "ratio": 3.356977518242784e-05,
+    "max_relative_angle_deg": 0.999985886494303
+  },
+  {
+    "flight": "hood_river",
+    "variant": "prop-0.1",
+    "amplitude": 5,
+    "trim_residual": 2.2737367544323206e-13,
+    "trim_command": [
+      0.39904639978378215,
+      0.1,
+      -0.21342852736807857
+    ],
+    "early_rms_deg": 0.14831648483941023,
+    "late_rms_deg": 4.947478724356841e-06,
+    "ratio": 3.335757808522584e-05,
+    "max_relative_angle_deg": 4.999929406545353
+  },
+  {
+    "flight": "hood_river",
+    "variant": "prop-0.1",
+    "amplitude": 15,
+    "trim_residual": 2.2737367544323206e-13,
+    "trim_command": [
+      0.39904639978378215,
+      0.1,
+      -0.21342852736807857
+    ],
+    "early_rms_deg": 0.430653395746277,
+    "late_rms_deg": 1.3844119687416814e-05,
+    "ratio": 3.214677934543257e-05,
+    "max_relative_angle_deg": 14.99978772275034
+  },
+  {
+    "flight": "hood_river",
+    "variant": "prop-0.3",
+    "amplitude": 0,
+    "trim_residual": 1.2434497875801753e-13,
+    "trim_command": [
+      0.39842112975745614,
+      0.1,
+      -0.20939092078718696
+    ],
+    "early_rms_deg": 0.0,
+    "late_rms_deg": 0.0,
+    "ratio": 0.0,
+    "max_relative_angle_deg": 0.0
+  },
+  {
+    "flight": "hood_river",
+    "variant": "prop-0.3",
+    "amplitude": 1,
+    "trim_residual": 1.2434497875801753e-13,
+    "trim_command": [
+      0.39842112975745614,
+      0.1,
+      -0.20939092078718696
+    ],
+    "early_rms_deg": 0.02954548735481805,
+    "late_rms_deg": 1.1560549954015122e-06,
+    "ratio": 3.912797177850552e-05,
+    "max_relative_angle_deg": 0.9999910329474815
+  },
+  {
+    "flight": "hood_river",
+    "variant": "prop-0.3",
+    "amplitude": 5,
+    "trim_residual": 1.2434497875801753e-13,
+    "trim_command": [
+      0.39842112975745614,
+      0.1,
+      -0.20939092078718696
+    ],
+    "early_rms_deg": 0.14546183157740963,
+    "late_rms_deg": 5.637174118873196e-06,
+    "ratio": 3.875363081670872e-05,
+    "max_relative_angle_deg": 4.99995514709157
+  },
+  {
+    "flight": "hood_river",
+    "variant": "prop-0.3",
+    "amplitude": 15,
+    "trim_residual": 1.2434497875801753e-13,
+    "trim_command": [
+      0.39842112975745614,
+      0.1,
+      -0.20939092078718696
+    ],
+    "early_rms_deg": 0.42282100504891224,
+    "late_rms_deg": 1.5538829701356217e-05,
+    "ratio": 3.6750373126705645e-05,
+    "max_relative_angle_deg": 14.99986511672144
+  },
+  {
+    "flight": "hood_river",
+    "variant": "prop-0.6",
+    "amplitude": 0,
+    "trim_residual": 5.684341886080802e-14,
+    "trim_command": [
+      0.3974929655577203,
+      0.1,
+      -0.2035957728852542
+    ],
+    "early_rms_deg": 0.0,
+    "late_rms_deg": 0.0,
+    "ratio": 0.0,
+    "max_relative_angle_deg": 0.0
+  },
+  {
+    "flight": "hood_river",
+    "variant": "prop-0.6",
+    "amplitude": 1,
+    "trim_residual": 5.684341886080802e-14,
+    "trim_command": [
+      0.3974929655577203,
+      0.1,
+      -0.2035957728852542
+    ],
+    "early_rms_deg": 0.02880903862342865,
+    "late_rms_deg": 1.4655861977247623e-06,
+    "ratio": 5.087244377994931e-05,
+    "max_relative_angle_deg": 0.9999961912680102
+  },
+  {
+    "flight": "hood_river",
+    "variant": "prop-0.6",
+    "amplitude": 5,
+    "trim_residual": 5.684341886080802e-14,
+    "trim_command": [
+      0.3974929655577203,
+      0.1,
+      -0.2035957728852542
+    ],
+    "early_rms_deg": 0.14196635901225646,
+    "late_rms_deg": 7.135717316972584e-06,
+    "ratio": 5.0263438230155163e-05,
+    "max_relative_angle_deg": 4.999980948137716
+  },
+  {
+    "flight": "hood_river",
+    "variant": "prop-0.6",
+    "amplitude": 15,
+    "trim_residual": 5.684341886080802e-14,
+    "trim_command": [
+      0.3974929655577203,
+      0.1,
+      -0.2035957728852542
+    ],
+    "early_rms_deg": 0.41327468739965256,
+    "late_rms_deg": 1.928074128271276e-05,
+    "ratio": 4.665357417370094e-05,
+    "max_relative_angle_deg": 14.999942701221812
+  },
+  {
+    "flight": "hood_river",
+    "variant": "drag-x--1",
+    "amplitude": 0,
+    "trim_residual": 3.5135484082918984e-12,
+    "trim_command": [
+      0.39935611261643267,
+      0.1,
+      -0.215043057154461
+    ],
+    "early_rms_deg": 0.0,
+    "late_rms_deg": 0.0,
+    "ratio": 0.0,
+    "max_relative_angle_deg": 0.0
+  },
+  {
+    "flight": "hood_river",
+    "variant": "drag-x--1",
+    "amplitude": 1,
+    "trim_residual": 3.5135484082918984e-12,
+    "trim_command": [
+      0.39935611261643267,
+      0.1,
+      -0.215043057154461
+    ],
+    "early_rms_deg": 0.02999348462749847,
+    "late_rms_deg": 9.170968941653037e-07,
+    "ratio": 3.057653705646778e-05,
+    "max_relative_angle_deg": 0.9999851569504145
+  },
+  {
+    "flight": "hood_river",
+    "variant": "drag-x--1",
+    "amplitude": 5,
+    "trim_residual": 3.5135484082918984e-12,
+    "trim_command": [
+      0.39935611261643267,
+      0.1,
+      -0.215043057154461
+    ],
+    "early_rms_deg": 0.1475404955867416,
+    "late_rms_deg": 4.4944215276664425e-06,
+    "ratio": 3.0462291113995175e-05,
+    "max_relative_angle_deg": 4.999925757930236
+  },
+  {
+    "flight": "hood_river",
+    "variant": "drag-x--1",
+    "amplitude": 15,
+    "trim_residual": 3.5135484082918984e-12,
+    "trim_command": [
+      0.39935611261643267,
+      0.1,
+      -0.215043057154461
+    ],
+    "early_rms_deg": 0.428032017648399,
+    "late_rms_deg": 1.270554271030654e-05,
+    "ratio": 2.968362689340528e-05,
+    "max_relative_angle_deg": 14.999776754573965
+  },
+  {
+    "flight": "hood_river",
+    "variant": "drag-x-1",
+    "amplitude": 0,
+    "trim_residual": 1.7053025658242404e-13,
+    "trim_command": [
+      0.3993662357462514,
+      0.1,
+      -0.2159873366064925
+    ],
+    "early_rms_deg": 0.0,
+    "late_rms_deg": 0.0,
+    "ratio": 0.0,
+    "max_relative_angle_deg": 0.0
+  },
+  {
+    "flight": "hood_river",
+    "variant": "drag-x-1",
+    "amplitude": 1,
+    "trim_residual": 1.7053025658242404e-13,
+    "trim_command": [
+      0.3993662357462514,
+      0.1,
+      -0.2159873366064925
+    ],
+    "early_rms_deg": 0.030946358448224794,
+    "late_rms_deg": 1.0273003671222695e-06,
+    "ratio": 3.3196163252649184e-05,
+    "max_relative_angle_deg": 0.9999799297553019
+  },
+  {
+    "flight": "hood_river",
+    "variant": "drag-x-1",
+    "amplitude": 5,
+    "trim_residual": 1.7053025658242404e-13,
+    "trim_command": [
+      0.3993662357462514,
+      0.1,
+      -0.2159873366064925
+    ],
+    "early_rms_deg": 0.1522063771771152,
+    "late_rms_deg": 4.995080234495104e-06,
+    "ratio": 3.2817811757536096e-05,
+    "max_relative_angle_deg": 4.999899614029576
+  },
+  {
+    "flight": "hood_river",
+    "variant": "drag-x-1",
+    "amplitude": 15,
+    "trim_residual": 1.7053025658242404e-13,
+    "trim_command": [
+      0.3993662357462514,
+      0.1,
+      -0.2159873366064925
+    ],
+    "early_rms_deg": 0.44182684681870216,
+    "late_rms_deg": 1.3991009261149958e-05,
+    "ratio": 3.166627234603284e-05,
+    "max_relative_angle_deg": 14.99969815149541
+  },
+  {
+    "flight": "hood_river",
+    "variant": "drag-z--1",
+    "amplitude": 0,
+    "trim_residual": 1.5276668818842154e-13,
+    "trim_command": [
+      0.39927390532925766,
+      0.1,
+      -0.2161911922436313
+    ],
+    "early_rms_deg": 0.0,
+    "late_rms_deg": 0.0,
+    "ratio": 0.0,
+    "max_relative_angle_deg": 0.0
+  },
+  {
+    "flight": "hood_river",
+    "variant": "drag-z--1",
+    "amplitude": 1,
+    "trim_residual": 1.5276668818842154e-13,
+    "trim_command": [
+      0.39927390532925766,
+      0.1,
+      -0.2161911922436313
+    ],
+    "early_rms_deg": 0.031064422584911364,
+    "late_rms_deg": 1.0598350535752199e-06,
+    "ratio": 3.411732668387031e-05,
+    "max_relative_angle_deg": 0.999982483671599
+  },
+  {
+    "flight": "hood_river",
+    "variant": "drag-z--1",
+    "amplitude": 5,
+    "trim_residual": 1.5276668818842154e-13,
+    "trim_command": [
+      0.39927390532925766,
+      0.1,
+      -0.2161911922436313
+    ],
+    "early_rms_deg": 0.1527651275417042,
+    "late_rms_deg": 5.1664116962232206e-06,
+    "ratio": 3.381931321212567e-05,
+    "max_relative_angle_deg": 4.999912391018281
+  },
+  {
+    "flight": "hood_river",
+    "variant": "drag-z--1",
+    "amplitude": 15,
+    "trim_residual": 1.5276668818842154e-13,
+    "trim_command": [
+      0.39927390532925766,
+      0.1,
+      -0.2161911922436313
+    ],
+    "early_rms_deg": 0.4433295044379386,
+    "late_rms_deg": 1.4581283690162155e-05,
+    "ratio": 3.289039764824265e-05,
+    "max_relative_angle_deg": 14.999736592858882
+  },
+  {
+    "flight": "hood_river",
+    "variant": "drag-z-1",
+    "amplitude": 0,
+    "trim_residual": 6.394884621840902e-14,
+    "trim_command": [
+      0.3994567649586386,
+      0.1,
+      -0.21480854716361608
+    ],
+    "early_rms_deg": 0.0,
+    "late_rms_deg": 0.0,
+    "ratio": 0.0,
+    "max_relative_angle_deg": 0.0
+  },
+  {
+    "flight": "hood_river",
+    "variant": "drag-z-1",
+    "amplitude": 1,
+    "trim_residual": 6.394884621840902e-14,
+    "trim_command": [
+      0.3994567649586386,
+      0.1,
+      -0.21480854716361608
+    ],
+    "early_rms_deg": 0.02981995653306778,
+    "late_rms_deg": 8.96133294677446e-07,
+    "ratio": 3.005146213689852e-05,
+    "max_relative_angle_deg": 0.9999829195109344
+  },
+  {
+    "flight": "hood_river",
+    "variant": "drag-z-1",
+    "amplitude": 5,
+    "trim_residual": 6.394884621840902e-14,
+    "trim_command": [
+      0.3994567649586386,
+      0.1,
+      -0.21480854716361608
+    ],
+    "early_rms_deg": 0.14680357927209256,
+    "late_rms_deg": 4.37793826980019e-06,
+    "ratio": 2.982174066536836e-05,
+    "max_relative_angle_deg": 4.9999145637399645
+  },
+  {
+    "flight": "hood_river",
+    "variant": "drag-z-1",
+    "amplitude": 15,
+    "trim_residual": 6.394884621840902e-14,
+    "trim_command": [
+      0.3994567649586386,
+      0.1,
+      -0.21480854716361608
+    ],
+    "early_rms_deg": 0.4260583619417763,
+    "late_rms_deg": 1.226571542054586e-05,
+    "ratio": 2.8788815139419918e-05,
+    "max_relative_angle_deg": 14.999743071480763
+  },
+  {
+    "flight": "hood_river",
+    "variant": "risers-500-0.5",
+    "error": "initial bridle lengths infeasible"
+  },
+  {
+    "flight": "hood_river",
+    "variant": "risers-500-2",
+    "error": "initial bridle lengths infeasible"
+  },
+  {
+    "flight": "hood_river",
+    "variant": "risers-2000-0.5",
+    "error": "initial bridle lengths infeasible"
+  },
+  {
+    "flight": "hood_river",
+    "variant": "risers-2000-2",
+    "error": "initial bridle lengths infeasible"
+  },
+  {
+    "flight": "trout_lake",
+    "variant": "baseline",
+    "amplitude": 0,
+    "trim_residual": 2.2368773500147654e-12,
+    "trim_command": [
+      0.45256198556287464,
+      0.1,
+      0.035844864221278146
+    ],
+    "early_rms_deg": 0.0,
+    "late_rms_deg": 0.0,
+    "ratio": 0.0,
+    "max_relative_angle_deg": 0.0
+  },
+  {
+    "flight": "trout_lake",
+    "variant": "baseline",
+    "amplitude": 1,
+    "trim_residual": 2.2368773500147654e-12,
+    "trim_command": [
+      0.45256198556287464,
+      0.1,
+      0.035844864221278146
+    ],
+    "early_rms_deg": 0.02677667680127545,
+    "late_rms_deg": 5.688500526051723e-07,
+    "ratio": 2.1244236423620585e-05,
+    "max_relative_angle_deg": 0.9999940697399214
+  },
+  {
+    "flight": "trout_lake",
+    "variant": "baseline",
+    "amplitude": 5,
+    "trim_residual": 2.2368773500147654e-12,
+    "trim_command": [
+      0.45256198556287464,
+      0.1,
+      0.035844864221278146
+    ],
+    "early_rms_deg": 0.13280511615029994,
+    "late_rms_deg": 2.799430660642829e-06,
+    "ratio": 2.1079238072986742e-05,
+    "max_relative_angle_deg": 4.999970328664971
+  },
+  {
+    "flight": "trout_lake",
+    "variant": "baseline",
+    "amplitude": 15,
+    "trim_residual": 2.2368773500147654e-12,
+    "trim_command": [
+      0.45256198556287464,
+      0.1,
+      0.035844864221278146
+    ],
+    "early_rms_deg": 0.39017420510553824,
+    "late_rms_deg": 8.108116911998304e-06,
+    "ratio": 2.0780761018799638e-05,
+    "max_relative_angle_deg": 14.999910708182519
+  },
+  {
+    "flight": "trout_lake",
+    "variant": "prop-0.1",
+    "amplitude": 0,
+    "trim_residual": 3.410605131648481e-13,
+    "trim_command": [
+      0.452306544311033,
+      0.1,
+      0.03647570207967583
+    ],
+    "early_rms_deg": 0.0,
+    "late_rms_deg": 0.0,
+    "ratio": 0.0,
+    "max_relative_angle_deg": 0.0
+  },
+  {
+    "flight": "trout_lake",
+    "variant": "prop-0.1",
+    "amplitude": 1,
+    "trim_residual": 3.410605131648481e-13,
+    "trim_command": [
+      0.452306544311033,
+      0.1,
+      0.03647570207967583
+    ],
+    "early_rms_deg": 0.026555238975975337,
+    "late_rms_deg": 5.68502042237666e-07,
+    "ratio": 2.1408281911979508e-05,
+    "max_relative_angle_deg": 0.9999949834477042
+  },
+  {
+    "flight": "trout_lake",
+    "variant": "prop-0.1",
+    "amplitude": 5,
+    "trim_residual": 3.410605131648481e-13,
+    "trim_command": [
+      0.452306544311033,
+      0.1,
+      0.03647570207967583
+    ],
+    "early_rms_deg": 0.13177905878216917,
+    "late_rms_deg": 2.801111515908303e-06,
+    "ratio": 2.1256120219666627e-05,
+    "max_relative_angle_deg": 4.999974900080064
+  },
+  {
+    "flight": "trout_lake",
+    "variant": "prop-0.1",
+    "amplitude": 15,
+    "trim_residual": 3.410605131648481e-13,
+    "trim_command": [
+      0.452306544311033,
+      0.1,
+      0.03647570207967583
+    ],
+    "early_rms_deg": 0.3876364204686904,
+    "late_rms_deg": 8.1427053607789e-06,
+    "ratio": 2.100603795415707e-05,
+    "max_relative_angle_deg": 14.999924463639399
+  },
+  {
+    "flight": "trout_lake",
+    "variant": "prop-0.3",
+    "amplitude": 0,
+    "trim_residual": 2.8421709430404007e-13,
+    "trim_command": [
+      0.4517971599712331,
+      0.1,
+      0.03766525031477951
+    ],
+    "early_rms_deg": 0.0,
+    "late_rms_deg": 0.0,
+    "ratio": 0.0,
+    "max_relative_angle_deg": 0.0
+  },
+  {
+    "flight": "trout_lake",
+    "variant": "prop-0.3",
+    "amplitude": 1,
+    "trim_residual": 2.8421709430404007e-13,
+    "trim_command": [
+      0.4517971599712331,
+      0.1,
+      0.03766525031477951
+    ],
+    "early_rms_deg": 0.026169543384147596,
+    "late_rms_deg": 5.732431520757381e-07,
+    "ratio": 2.190497341359745e-05,
+    "max_relative_angle_deg": 0.9999963363081981
+  },
+  {
+    "flight": "trout_lake",
+    "variant": "prop-0.3",
+    "amplitude": 5,
+    "trim_residual": 2.8421709430404007e-13,
+    "trim_command": [
+      0.4517971599712331,
+      0.1,
+      0.03766525031477951
+    ],
+    "early_rms_deg": 0.12999790262394037,
+    "late_rms_deg": 2.8331426395770804e-06,
+    "ratio": 2.1793756532925247e-05,
+    "max_relative_angle_deg": 4.999981668710607
+  },
+  {
+    "flight": "trout_lake",
+    "variant": "prop-0.3",
+    "amplitude": 15,
+    "trim_residual": 2.8421709430404007e-13,
+    "trim_command": [
+      0.4517971599712331,
+      0.1,
+      0.03766525031477951
+    ],
+    "early_rms_deg": 0.3832864041622626,
+    "late_rms_deg": 8.305484851791866e-06,
+    "ratio": 2.1669135042618877e-05,
+    "max_relative_angle_deg": 14.999944831075327
+  },
+  {
+    "flight": "trout_lake",
+    "variant": "prop-0.6",
+    "amplitude": 0,
+    "trim_residual": 7.105427357601002e-14,
+    "trim_command": [
+      0.4510392510414649,
+      0.1,
+      0.03929078966606207
+    ],
+    "early_rms_deg": 0.0,
+    "late_rms_deg": 0.0,
+    "ratio": 0.0,
+    "max_relative_angle_deg": 0.0
+  },
+  {
+    "flight": "trout_lake",
+    "variant": "prop-0.6",
+    "amplitude": 1,
+    "trim_residual": 7.105427357601002e-14,
+    "trim_command": [
+      0.4510392510414649,
+      0.1,
+      0.03929078966606207
+    ],
+    "early_rms_deg": 0.02570379795550747,
+    "late_rms_deg": 5.941453700499578e-07,
+    "ratio": 2.3115080933891802e-05,
+    "max_relative_angle_deg": 0.9999974219765675
+  },
+  {
+    "flight": "trout_lake",
+    "variant": "prop-0.6",
+    "amplitude": 5,
+    "trim_residual": 7.105427357601002e-14,
+    "trim_command": [
+      0.4510392510414649,
+      0.1,
+      0.03929078966606207
+    ],
+    "early_rms_deg": 0.12785884195003847,
+    "late_rms_deg": 2.952501036007655e-06,
+    "ratio": 2.309188000593155e-05,
+    "max_relative_angle_deg": 4.9999871005527385
+  },
+  {
+    "flight": "trout_lake",
+    "variant": "prop-0.6",
+    "amplitude": 15,
+    "trim_residual": 7.105427357601002e-14,
+    "trim_command": [
+      0.4510392510414649,
+      0.1,
+      0.03929078966606207
+    ],
+    "early_rms_deg": 0.3781737199551622,
+    "late_rms_deg": 8.772907345912192e-06,
+    "ratio": 2.3198088293793508e-05,
+    "max_relative_angle_deg": 14.999961176195244
+  },
+  {
+    "flight": "trout_lake",
+    "variant": "drag-x--1",
+    "amplitude": 0,
+    "trim_residual": 1.1368683772161603e-13,
+    "trim_command": [
+      0.45260120783929364,
+      0.1,
+      0.0362143109009329
+    ],
+    "early_rms_deg": 0.0,
+    "late_rms_deg": 0.0,
+    "ratio": 0.0,
+    "max_relative_angle_deg": 0.0
+  },
+  {
+    "flight": "trout_lake",
+    "variant": "drag-x--1",
+    "amplitude": 1,
+    "trim_residual": 1.1368683772161603e-13,
+    "trim_command": [
+      0.45260120783929364,
+      0.1,
+      0.0362143109009329
+    ],
+    "early_rms_deg": 0.026449466502914958,
+    "late_rms_deg": 5.5738654761158e-07,
+    "ratio": 2.107364046644008e-05,
+    "max_relative_angle_deg": 0.999994678439891
+  },
+  {
+    "flight": "trout_lake",
+    "variant": "drag-x--1",
+    "amplitude": 5,
+    "trim_residual": 1.1368683772161603e-13,
+    "trim_command": [
+      0.45260120783929364,
+      0.1,
+      0.0362143109009329
+    ],
+    "early_rms_deg": 0.1311707212397398,
+    "late_rms_deg": 2.7426499418500535e-06,
+    "ratio": 2.0909010150499452e-05,
+    "max_relative_angle_deg": 4.9999733740934
+  },
+  {
+    "flight": "trout_lake",
+    "variant": "drag-x--1",
+    "amplitude": 15,
+    "trim_residual": 1.1368683772161603e-13,
+    "trim_command": [
+      0.45260120783929364,
+      0.1,
+      0.0362143109009329
+    ],
+    "early_rms_deg": 0.38533333071146,
+    "late_rms_deg": 7.940751505705093e-06,
+    "ratio": 2.060748674671794e-05,
+    "max_relative_angle_deg": 14.999919872016811
+  },
+  {
+    "flight": "trout_lake",
+    "variant": "drag-x-1",
+    "amplitude": 0,
+    "trim_residual": 1.7053025658242404e-13,
+    "trim_command": [
+      0.4525221437376549,
+      0.1,
+      0.03546088396452541
+    ],
+    "early_rms_deg": 0.0,
+    "late_rms_deg": 0.0,
+    "ratio": 0.0,
+    "max_relative_angle_deg": 0.0
+  },
+  {
+    "flight": "trout_lake",
+    "variant": "drag-x-1",
+    "amplitude": 1,
+    "trim_residual": 1.7053025658242404e-13,
+    "trim_command": [
+      0.4525221437376549,
+      0.1,
+      0.03546088396452541
+    ],
+    "early_rms_deg": 0.027092228614310588,
+    "late_rms_deg": 5.80582725140441e-07,
+    "ratio": 2.1429862172127363e-05,
+    "max_relative_angle_deg": 0.999993352674359
+  },
+  {
+    "flight": "trout_lake",
+    "variant": "drag-x-1",
+    "amplitude": 5,
+    "trim_residual": 1.7053025658242404e-13,
+    "trim_command": [
+      0.4525221437376549,
+      0.1,
+      0.03546088396452541
+    ],
+    "early_rms_deg": 0.13437967456491776,
+    "late_rms_deg": 2.857509207257436e-06,
+    "ratio": 2.1264445062165973e-05,
+    "max_relative_angle_deg": 4.999966741075817
+  },
+  {
+    "flight": "trout_lake",
+    "variant": "drag-x-1",
+    "amplitude": 15,
+    "trim_residual": 1.7053025658242404e-13,
+    "trim_command": [
+      0.4525221437376549,
+      0.1,
+      0.03546088396452541
+    ],
+    "early_rms_deg": 0.3948286657700872,
+    "late_rms_deg": 8.278255895377272e-06,
+    "ratio": 2.0966704327891395e-05,
+    "max_relative_angle_deg": 14.999899913041375
+  },
+  {
+    "flight": "trout_lake",
+    "variant": "drag-z--1",
+    "amplitude": 0,
+    "trim_residual": 2.2737367544323206e-13,
+    "trim_command": [
+      0.45237059351792047,
+      0.1,
+      0.035480956580159734
+    ],
+    "early_rms_deg": 0.0,
+    "late_rms_deg": 0.0,
+    "ratio": 0.0,
+    "max_relative_angle_deg": 0.0
+  },
+  {
+    "flight": "trout_lake",
+    "variant": "drag-z--1",
+    "amplitude": 1,
+    "trim_residual": 2.2737367544323206e-13,
+    "trim_command": [
+      0.45237059351792047,
+      0.1,
+      0.035480956580159734
+    ],
+    "early_rms_deg": 0.027131182539005302,
+    "late_rms_deg": 5.828296091315209e-07,
+    "ratio": 2.1481909544252726e-05,
+    "max_relative_angle_deg": 0.9999939275664227
+  },
+  {
+    "flight": "trout_lake",
+    "variant": "drag-z--1",
+    "amplitude": 5,
+    "trim_residual": 2.2737367544323206e-13,
+    "trim_command": [
+      0.45237059351792047,
+      0.1,
+      0.035480956580159734
+    ],
+    "early_rms_deg": 0.1346281677851973,
+    "late_rms_deg": 2.8744564836541906e-06,
+    "ratio": 2.1351077794065057e-05,
+    "max_relative_angle_deg": 4.999969618397746
+  },
+  {
+    "flight": "trout_lake",
+    "variant": "drag-z--1",
+    "amplitude": 15,
+    "trim_residual": 2.2737367544323206e-13,
+    "trim_command": [
+      0.45237059351792047,
+      0.1,
+      0.035480956580159734
+    ],
+    "early_rms_deg": 0.39533998167775886,
+    "late_rms_deg": 8.35261397273444e-06,
+    "ratio": 2.112767329347085e-05,
+    "max_relative_angle_deg": 14.999908578887387
+  },
+  {
+    "flight": "trout_lake",
+    "variant": "drag-z-1",
+    "amplitude": 0,
+    "trim_residual": 5.684341886080802e-14,
+    "trim_command": [
+      0.45276011526427,
+      0.1,
+      0.036211611364962475
+    ],
+    "early_rms_deg": 0.0,
+    "late_rms_deg": 0.0,
+    "ratio": 0.0,
+    "max_relative_angle_deg": 0.0
+  },
+  {
+    "flight": "trout_lake",
+    "variant": "drag-z-1",
+    "amplitude": 1,
+    "trim_residual": 5.684341886080802e-14,
+    "trim_command": [
+      0.45276011526427,
+      0.1,
+      0.036211611364962475
+    ],
+    "early_rms_deg": 0.026385161699175128,
+    "late_rms_deg": 5.555421057564677e-07,
+    "ratio": 2.1055095742461774e-05,
+    "max_relative_angle_deg": 0.9999942091594587
+  },
+  {
+    "flight": "trout_lake",
+    "variant": "drag-z-1",
+    "amplitude": 5,
+    "trim_residual": 5.684341886080802e-14,
+    "trim_command": [
+      0.45276011526427,
+      0.1,
+      0.036211611364962475
+    ],
+    "early_rms_deg": 0.13079205948623407,
+    "late_rms_deg": 2.7308196196993675e-06,
+    "ratio": 2.0879093351892573e-05,
+    "max_relative_angle_deg": 4.999971025196485
+  },
+  {
+    "flight": "trout_lake",
+    "variant": "drag-z-1",
+    "amplitude": 15,
+    "trim_residual": 5.684341886080802e-14,
+    "trim_command": [
+      0.45276011526427,
+      0.1,
+      0.036211611364962475
+    ],
+    "early_rms_deg": 0.3844549156906967,
+    "late_rms_deg": 7.887196295208618e-06,
+    "ratio": 2.051526973205373e-05,
+    "max_relative_angle_deg": 14.999912796467841
+  },
+  {
+    "flight": "trout_lake",
+    "variant": "risers-500-0.5",
+    "error": "initial bridle lengths infeasible"
+  },
+  {
+    "flight": "trout_lake",
+    "variant": "risers-500-2",
+    "error": "initial bridle lengths infeasible"
+  },
+  {
+    "flight": "trout_lake",
+    "variant": "risers-2000-0.5",
+    "error": "initial bridle lengths infeasible"
+  },
+  {
+    "flight": "trout_lake",
+    "variant": "risers-2000-2",
+    "error": "initial bridle lengths infeasible"
+  }
+]

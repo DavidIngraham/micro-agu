@@ -1,0 +1,66 @@
+[
+  {
+    "name": "hood_river-438",
+    "variant": "prop-0.6",
+    "max_state_difference_first_2s": 6.155894807791107e-07,
+    "max_state_difference_full": 6.155894807791107e-07,
+    "yaw_band_rms_64": 1.8523104956141119,
+    "yaw_band_rms_32": 1.8523105007410925
+  },
+  {
+    "name": "hood_river-438",
+    "variant": "drag-z--1",
+    "max_state_difference_first_2s": 5.989326279376428e-07,
+    "max_state_difference_full": 5.989326279376428e-07,
+    "yaw_band_rms_64": 1.946900180555754,
+    "yaw_band_rms_32": 1.9469002022664523
+  },
+  {
+    "name": "hood_river-438",
+    "variant": "risers-500-2",
+    "max_state_difference_first_2s": 1.8957337587499623e-05,
+    "max_state_difference_full": 54.18909426581898,
+    "yaw_band_rms_64": 59.48428103764326,
+    "yaw_band_rms_32": 56.298046803005036
+  },
+  {
+    "name": "hood_river-438",
+    "variant": "risers-2000-2",
+    "max_state_difference_first_2s": 0.0015191424368034556,
+    "max_state_difference_full": 69.5876766982448,
+    "yaw_band_rms_64": 96.57379534100605,
+    "yaw_band_rms_32": 81.84754861629264
+  },
+  {
+    "name": "trout_lake-2100",
+    "variant": "prop-0.6",
+    "max_state_difference_first_2s": 1.3946032626499516e-06,
+    "max_state_difference_full": 3.598153529793535e-06,
+    "yaw_band_rms_64": 3.7977127536885256,
+    "yaw_band_rms_32": 3.7977127449651538
+  },
+  {
+    "name": "trout_lake-2100",
+    "variant": "drag-z--1",
+    "max_state_difference_first_2s": 2.1951287459964774e-06,
+    "max_state_difference_full": 7.826581773784369e-06,
+    "yaw_band_rms_64": 4.135221630785682,
+    "yaw_band_rms_32": 4.135221782410368
+  },
+  {
+    "name": "trout_lake-2100",
+    "variant": "risers-500-2",
+    "max_state_difference_first_2s": 0.0001123030914768064,
+    "max_state_difference_full": 47.8646361007756,
+    "yaw_band_rms_64": 113.98533317198236,
+    "yaw_band_rms_32": 126.09816030747969
+  },
+  {
+    "name": "trout_lake-2100",
+    "variant": "risers-2000-2",
+    "max_state_difference_first_2s": 9.66500197268072e-05,
+    "max_state_difference_full": 38.12674168300471,
+    "yaw_band_rms_64": 21.27128953388865,
+    "yaw_band_rms_32": 19.451553501200564
+  }
+]

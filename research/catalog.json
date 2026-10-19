@@ -206,6 +206,13 @@
       "execution_policy": "maintained for ongoing fidelity/pipeline work"
     },
     {
+      "study": "missing-physics-2026-10-18",
+      "status": "active",
+      "path": "research/active/missing-physics-2026-10-18",
+      "summary": "Propeller-force and drag-center hypotheses do not explain coupled oscillation; compliant suspension remains unqualified. No deployment.",
+      "execution_policy": "maintained for ongoing fidelity/pipeline work"
+    },
+    {
       "study": "native-mimo-2026-10-16",
       "status": "superseded",
       "path": "research/archive/native-mimo-2026-10-16",

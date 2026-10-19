@@ -1,0 +1,16 @@
+{
+  "id": "repeat-force-2-baseline",
+  "experiment": {
+    "kind": "forcing",
+    "hz": 1.6,
+    "amplitude": 0.03182846508363321,
+    "ratio": 0.6703361602193725,
+    "phase": -1.5428944161933575,
+    "damping": 0.1,
+    "gain": 0.0,
+    "target_ratio": 0.4,
+    "target_phase": -1.5707963267948966,
+    "target_yaw_rms": 20
+  },
+  "scheme": "baseline"
+}

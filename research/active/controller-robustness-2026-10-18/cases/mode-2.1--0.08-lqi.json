@@ -1,0 +1,13 @@
+{
+  "id": "mode-2.1--0.08-lqi",
+  "experiment": {
+    "kind": "mode",
+    "hz": 2.1,
+    "amplitude": 0.005,
+    "ratio": 0.4,
+    "phase": 0.0,
+    "damping": 0.05,
+    "gain": -0.08
+  },
+  "scheme": "lqi"
+}

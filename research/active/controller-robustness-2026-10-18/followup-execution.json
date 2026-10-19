@@ -1,0 +1,44 @@
+[
+  {
+    "id": "boundary--0.12-baseline",
+    "exit": 0,
+    "complete": true,
+    "failure": null,
+    "wall_s": 48.304301738739014
+  },
+  {
+    "id": "boundary--0.12-lqi",
+    "exit": 0,
+    "complete": true,
+    "failure": null,
+    "wall_s": 50.88660144805908
+  },
+  {
+    "id": "boundary--0.18-baseline",
+    "exit": 0,
+    "complete": true,
+    "failure": null,
+    "wall_s": 47.81311750411987
+  },
+  {
+    "id": "boundary--0.18-lqi",
+    "exit": 1,
+    "complete": false,
+    "failure": "Attitude guard",
+    "wall_s": 45.39851403236389
+  },
+  {
+    "id": "repeat-force-2-baseline",
+    "exit": 0,
+    "complete": true,
+    "failure": null,
+    "wall_s": 48.23890972137451
+  },
+  {
+    "id": "repeat-force-2-lqi",
+    "exit": 0,
+    "complete": true,
+    "failure": null,
+    "wall_s": 50.3561224937439
+  }
+]

@@ -1,0 +1,57 @@
+{
+  "reason": "Repeat responsive cases with divergent or sustained closed-loop motion, including a fixed-control stable case.",
+  "cases": [
+    {
+      "id": "confirm-boundary--0.18-baseline",
+      "scheme": "baseline",
+      "experiment": {
+        "kind": "mode",
+        "hz": 1.6,
+        "amplitude": 0.005,
+        "ratio": 0.4,
+        "phase": 0.0,
+        "damping": 0.05,
+        "gain": -0.18
+      }
+    },
+    {
+      "id": "confirm-boundary--0.18-lqi",
+      "scheme": "lqi",
+      "experiment": {
+        "kind": "mode",
+        "hz": 1.6,
+        "amplitude": 0.005,
+        "ratio": 0.4,
+        "phase": 0.0,
+        "damping": 0.05,
+        "gain": -0.18
+      }
+    },
+    {
+      "id": "confirm-mode-2.1-0.3-baseline",
+      "experiment": {
+        "kind": "mode",
+        "hz": 2.1,
+        "amplitude": 0.005,
+        "ratio": 0.4,
+        "phase": 0.0,
+        "damping": 0.05,
+        "gain": 0.3
+      },
+      "scheme": "baseline"
+    },
+    {
+      "id": "confirm-mode-2.1-0.3-lqi",
+      "experiment": {
+        "kind": "mode",
+        "hz": 2.1,
+        "amplitude": 0.005,
+        "ratio": 0.4,
+        "phase": 0.0,
+        "damping": 0.05,
+        "gain": 0.3
+      },
+      "scheme": "lqi"
+    }
+  ]
+}

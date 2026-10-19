@@ -1,0 +1,11 @@
+/target/
+/runtime/
+/physics/
+__pycache__/
+/runs/
+/calibration-basis.json
+/calibration-verified.json
+/fixed-mode.json
+/fixed-boundary.json
+/numerics.json
+/smoke.json

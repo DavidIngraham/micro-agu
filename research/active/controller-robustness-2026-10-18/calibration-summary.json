@@ -1,0 +1,138 @@
+[
+  {
+    "spec": {
+      "kind": "forcing",
+      "hz": 1,
+      "amplitude": 0.038338049335403315,
+      "ratio": 0.8818689014004234,
+      "phase": -1.8241178774054316,
+      "damping": 0.1,
+      "gain": 0,
+      "target_ratio": 0.4,
+      "target_phase": -1.5707963267948966,
+      "target_yaw_rms": 20
+    },
+    "yaw_rms": 20.00434408502029,
+    "pitch_yaw_ratio": 0.3995869287956365,
+    "phase": -90.15330977577482
+  },
+  {
+    "spec": {
+      "kind": "forcing",
+      "hz": 1,
+      "amplitude": 0.04456361080376088,
+      "ratio": 1.3031977985708847,
+      "phase": 0.9762318433798914,
+      "damping": 0.1,
+      "gain": 0,
+      "target_ratio": 0.4,
+      "target_phase": 1.5707963267948966,
+      "target_yaw_rms": 20
+    },
+    "yaw_rms": 19.97999724491797,
+    "pitch_yaw_ratio": 0.40034208764583196,
+    "phase": 89.91562803935962
+  },
+  {
+    "spec": {
+      "kind": "forcing",
+      "hz": 1.6,
+      "amplitude": 0.03182846508363321,
+      "ratio": 0.6703361602193725,
+      "phase": -1.5428944161933575,
+      "damping": 0.1,
+      "gain": 0,
+      "target_ratio": 0.4,
+      "target_phase": -1.5707963267948966,
+      "target_yaw_rms": 20
+    },
+    "yaw_rms": 19.99684003423898,
+    "pitch_yaw_ratio": 0.3998765219216083,
+    "phase": -90.09190276136067
+  },
+  {
+    "spec": {
+      "kind": "forcing",
+      "hz": 1.6,
+      "amplitude": 0.035128930760483824,
+      "ratio": 1.090480790502432,
+      "phase": 0.8687879334596171,
+      "damping": 0.1,
+      "gain": 0,
+      "target_ratio": 0.4,
+      "target_phase": 1.5707963267948966,
+      "target_yaw_rms": 20
+    },
+    "yaw_rms": 19.987810344005695,
+    "pitch_yaw_ratio": 0.40003311589628127,
+    "phase": 89.98008961733132
+  },
+  {
+    "spec": {
+      "kind": "forcing",
+      "hz": 2.1,
+      "amplitude": 0.031157602823526878,
+      "ratio": 0.6931307107652581,
+      "phase": -1.3714302571485502,
+      "damping": 0.1,
+      "gain": 0,
+      "target_ratio": 0.4,
+      "target_phase": -1.5707963267948966,
+      "target_yaw_rms": 20
+    },
+    "yaw_rms": 19.993989653032642,
+    "pitch_yaw_ratio": 0.40001365543332534,
+    "phase": -90.06636360228336
+  },
+  {
+    "spec": {
+      "kind": "forcing",
+      "hz": 2.1,
+      "amplitude": 0.03180245472865569,
+      "ratio": 0.9850894031188758,
+      "phase": 0.8144794125819732,
+      "damping": 0.1,
+      "gain": 0,
+      "target_ratio": 0.4,
+      "target_phase": 1.5707963267948966,
+      "target_yaw_rms": 20
+    },
+    "yaw_rms": 19.985727187173605,
+    "pitch_yaw_ratio": 0.4002372199608469,
+    "phase": 90.01902865169596
+  },
+  {
+    "spec": {
+      "kind": "forcing",
+      "hz": 3,
+      "amplitude": 0.033035400883568065,
+      "ratio": 0.7466749644435929,
+      "phase": -1.1804768556696859,
+      "damping": 0.1,
+      "gain": 0,
+      "target_ratio": 0.4,
+      "target_phase": -1.5707963267948966,
+      "target_yaw_rms": 20
+    },
+    "yaw_rms": 19.99196390745477,
+    "pitch_yaw_ratio": 0.40012747358521217,
+    "phase": -90.00945969008446
+  },
+  {
+    "spec": {
+      "kind": "forcing",
+      "hz": 3,
+      "amplitude": 0.02988352797705706,
+      "ratio": 0.7226920054707922,
+      "phase": 0.6868612050380662,
+      "damping": 0.1,
+      "gain": 0,
+      "target_ratio": 0.4,
+      "target_phase": 1.5707963267948966,
+      "target_yaw_rms": 20
+    },
+    "yaw_rms": 19.988914317584058,
+    "pitch_yaw_ratio": 0.4001420080554647,
+    "phase": 89.98196526332777
+  }
+]

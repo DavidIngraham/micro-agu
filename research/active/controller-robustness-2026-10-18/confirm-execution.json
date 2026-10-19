@@ -1,0 +1,30 @@
+[
+  {
+    "id": "confirm-boundary--0.18-baseline",
+    "exit": 0,
+    "complete": true,
+    "failure": null,
+    "wall_s": 47.60161995887756
+  },
+  {
+    "id": "confirm-boundary--0.18-lqi",
+    "exit": 1,
+    "complete": false,
+    "failure": "Attitude guard",
+    "wall_s": 45.137073040008545
+  },
+  {
+    "id": "confirm-mode-2.1-0.3-baseline",
+    "exit": 0,
+    "complete": true,
+    "failure": null,
+    "wall_s": 47.24435544013977
+  },
+  {
+    "id": "confirm-mode-2.1-0.3-lqi",
+    "exit": 0,
+    "complete": true,
+    "failure": null,
+    "wall_s": 49.9219012260437
+  }
+]

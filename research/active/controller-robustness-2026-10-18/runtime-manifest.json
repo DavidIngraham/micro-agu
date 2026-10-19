@@ -1,0 +1,18 @@
+{
+  "parent_commit": "871eda6b7d19eb7dd72ff78ad87e1d34fa495139",
+  "source_hashes": {
+    "research/active/controller-robustness-2026-10-18/src/lib.rs": "a2e6e42492410cdbb37ee8f30ece67d0b1a8117fcf408ddaad72ef4a819ce17b",
+    "research/active/controller-robustness-2026-10-18/case.mts": "f8f9a6d1ef7da474b7c488b6e659265f9953fcebf9c1f9407113ac5540279e56",
+    "research/active/controller-robustness-2026-10-18/wrapper.mjs": "14d20a1258c4a48ba417a4d8c7d497b5867e4ed8b057899862a448403d164300",
+    "research/active/controller-robustness-2026-10-18/Cargo.lock": "1854fa9ca8791453542b72ed95448afe34370f833df58e7de3a7d379a037adcf",
+    "viewer/packages/sim-browser/src/physics/physics.ts": "bfdcc025853bed18b55a95b58b2f42bc89ff01e443ab56396b2810ace14fea22",
+    "viewer/packages/sim-browser/src/session/runtime.ts": "e4b6ee69eb96ff7d6bb996a32809c6bd5fc2b977c6f77e8168f318c3ac9db5eb",
+    "simulation/crates/sim-core/src/dynamics.rs": "8dd55c811c7bd5fbebba6f2a569da49f9825cccafd39814503c876d78050f6f5",
+    "simulation/crates/sim-core/src/propulsion.rs": "497f595fea9bc17e52d3dc0abae0b1e0061a15a227a35766f9e12f38ffc18b60"
+  },
+  "firmware_sha256": "466d4d86263d973cc38e850b3a015146e9b98a2cd2ae369fbca7a32eeb9ab504",
+  "physics_wasm_sha256": "7de902c57a4ef00720d814a17d7b9e57610ab703fb02140d69432a5b9b26d976",
+  "production_physics_wasm_sha256": "ceae58a55b4585e85b86a142a15c1f5b9bcfbf3e51f21cddbdf741ac4a75c158",
+  "gains_sha256": "311876eabeb033e55c30c8d556d159495b76e8358cd25a1684c0c3b486ed97f0",
+  "configuration_sha256": "51120b5f2d21f0e5d00b0d009c6bb25c7e082a6bdb76d49a05524fec92ec34e4"
+}

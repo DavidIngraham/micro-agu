@@ -1,0 +1,2 @@
+import {run} from './calibrate.mjs';import fs from 'node:fs/promises';
+const protocol=JSON.parse(await fs.readFile(new URL('followup-protocol.json',import.meta.url)));const rows=[];for(const c of protocol.cases.filter(x=>x.experiment.kind==='mode')){try{rows.push({id:c.id,spec:c.experiment,rows:run(c.experiment,85)})}catch(e){rows.push({id:c.id,error:String(e)})}}await fs.writeFile(new URL('fixed-boundary.json',import.meta.url),JSON.stringify(rows));

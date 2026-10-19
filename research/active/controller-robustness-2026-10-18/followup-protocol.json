@@ -1,0 +1,89 @@
+{
+  "reason": "Bracket fixed-control stability difference between gain -0.08 and -0.3 at 1.6 Hz; repeat the observed-phase forcing pair.",
+  "cases": [
+    {
+      "id": "boundary--0.12-baseline",
+      "scheme": "baseline",
+      "experiment": {
+        "kind": "mode",
+        "hz": 1.6,
+        "amplitude": 0.005,
+        "ratio": 0.4,
+        "phase": 0.0,
+        "damping": 0.05,
+        "gain": -0.12
+      }
+    },
+    {
+      "id": "boundary--0.12-lqi",
+      "scheme": "lqi",
+      "experiment": {
+        "kind": "mode",
+        "hz": 1.6,
+        "amplitude": 0.005,
+        "ratio": 0.4,
+        "phase": 0.0,
+        "damping": 0.05,
+        "gain": -0.12
+      }
+    },
+    {
+      "id": "boundary--0.18-baseline",
+      "scheme": "baseline",
+      "experiment": {
+        "kind": "mode",
+        "hz": 1.6,
+        "amplitude": 0.005,
+        "ratio": 0.4,
+        "phase": 0.0,
+        "damping": 0.05,
+        "gain": -0.18
+      }
+    },
+    {
+      "id": "boundary--0.18-lqi",
+      "scheme": "lqi",
+      "experiment": {
+        "kind": "mode",
+        "hz": 1.6,
+        "amplitude": 0.005,
+        "ratio": 0.4,
+        "phase": 0.0,
+        "damping": 0.05,
+        "gain": -0.18
+      }
+    },
+    {
+      "id": "repeat-force-2-baseline",
+      "experiment": {
+        "kind": "forcing",
+        "hz": 1.6,
+        "amplitude": 0.03182846508363321,
+        "ratio": 0.6703361602193725,
+        "phase": -1.5428944161933575,
+        "damping": 0.1,
+        "gain": 0.0,
+        "target_ratio": 0.4,
+        "target_phase": -1.5707963267948966,
+        "target_yaw_rms": 20
+      },
+      "scheme": "baseline"
+    },
+    {
+      "id": "repeat-force-2-lqi",
+      "experiment": {
+        "kind": "forcing",
+        "hz": 1.6,
+        "amplitude": 0.03182846508363321,
+        "ratio": 0.6703361602193725,
+        "phase": -1.5428944161933575,
+        "damping": 0.1,
+        "gain": 0.0,
+        "target_ratio": 0.4,
+        "target_phase": -1.5707963267948966,
+        "target_yaw_rms": 20
+      },
+      "scheme": "lqi"
+    }
+  ]
+}

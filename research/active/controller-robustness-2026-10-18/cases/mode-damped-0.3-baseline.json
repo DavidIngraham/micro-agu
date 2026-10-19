@@ -1,0 +1,14 @@
+{
+  "id": "mode-damped-0.3-baseline",
+  "experiment": {
+    "kind": "mode",
+    "hz": 1.6,
+    "amplitude": 0.005,
+    "ratio": 0.4,
+    "phase": 0.0,
+    "damping": 0.2,
+    "gain": 0.3
+  },
+  "maneuver": true,
+  "scheme": "baseline"
+}

@@ -1,0 +1,18 @@
+{
+  "runs": 56,
+  "completed": 52,
+  "stopped": [
+    "boundary--0.18-lqi",
+    "confirm-boundary--0.18-lqi",
+    "mode-1.6--0.3-baseline",
+    "mode-1.6--0.3-lqi"
+  ],
+  "completed_with_large_late_motion": [
+    "boundary--0.18-baseline",
+    "confirm-boundary--0.18-baseline",
+    "confirm-mode-2.1-0.3-baseline",
+    "mode-2.1--0.3-baseline",
+    "mode-2.1-0.3-baseline"
+  ],
+  "classification_note": "Large late motion means at least one body-rate standard deviation exceeds 5 deg/s over 65-85 s in a non-maneuver case. Descriptive post-analysis flag, not a preregistered certification threshold."
+}

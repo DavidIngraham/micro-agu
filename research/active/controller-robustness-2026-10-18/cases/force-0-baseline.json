@@ -1,0 +1,16 @@
+{
+  "id": "force-0-baseline",
+  "experiment": {
+    "kind": "forcing",
+    "hz": 1,
+    "amplitude": 0.038338049335403315,
+    "ratio": 0.8818689014004234,
+    "phase": -1.8241178774054316,
+    "damping": 0.1,
+    "gain": 0.0,
+    "target_ratio": 0.4,
+    "target_phase": -1.5707963267948966,
+    "target_yaw_rms": 20
+  },
+  "scheme": "baseline"
+}

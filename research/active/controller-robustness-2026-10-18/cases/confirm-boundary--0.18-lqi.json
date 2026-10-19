@@ -1,0 +1,13 @@
+{
+  "id": "confirm-boundary--0.18-lqi",
+  "scheme": "lqi",
+  "experiment": {
+    "kind": "mode",
+    "hz": 1.6,
+    "amplitude": 0.005,
+    "ratio": 0.4,
+    "phase": 0.0,
+    "damping": 0.05,
+    "gain": -0.18
+  }
+}

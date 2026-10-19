@@ -1,0 +1,324 @@
+[
+  {
+    "id": "quiet-baseline",
+    "exit": 0,
+    "complete": true,
+    "failure": null,
+    "wall_s": 47.785057067871094
+  },
+  {
+    "id": "quiet-lqi",
+    "exit": 0,
+    "complete": true,
+    "failure": null,
+    "wall_s": 50.069539070129395
+  },
+  {
+    "id": "quiet-maneuver-baseline",
+    "exit": 0,
+    "complete": true,
+    "failure": null,
+    "wall_s": 47.78428292274475
+  },
+  {
+    "id": "quiet-maneuver-lqi",
+    "exit": 0,
+    "complete": true,
+    "failure": null,
+    "wall_s": 50.16710638999939
+  },
+  {
+    "id": "force-0-baseline",
+    "exit": 0,
+    "complete": true,
+    "failure": null,
+    "wall_s": 47.55301880836487
+  },
+  {
+    "id": "force-0-lqi",
+    "exit": 0,
+    "complete": true,
+    "failure": null,
+    "wall_s": 49.75948905944824
+  },
+  {
+    "id": "force-1-baseline",
+    "exit": 0,
+    "complete": true,
+    "failure": null,
+    "wall_s": 47.30142545700073
+  },
+  {
+    "id": "force-1-lqi",
+    "exit": 0,
+    "complete": true,
+    "failure": null,
+    "wall_s": 49.70915508270264
+  },
+  {
+    "id": "force-2-baseline",
+    "exit": 0,
+    "complete": true,
+    "failure": null,
+    "wall_s": 47.30311322212219
+  },
+  {
+    "id": "force-2-lqi",
+    "exit": 0,
+    "complete": true,
+    "failure": null,
+    "wall_s": 49.96074366569519
+  },
+  {
+    "id": "force-3-baseline",
+    "exit": 0,
+    "complete": true,
+    "failure": null,
+    "wall_s": 47.25048565864563
+  },
+  {
+    "id": "force-3-lqi",
+    "exit": 0,
+    "complete": true,
+    "failure": null,
+    "wall_s": 49.939889430999756
+  },
+  {
+    "id": "force-4-baseline",
+    "exit": 0,
+    "complete": true,
+    "failure": null,
+    "wall_s": 47.7077522277832
+  },
+  {
+    "id": "force-4-lqi",
+    "exit": 0,
+    "complete": true,
+    "failure": null,
+    "wall_s": 50.01728868484497
+  },
+  {
+    "id": "force-5-baseline",
+    "exit": 0,
+    "complete": true,
+    "failure": null,
+    "wall_s": 47.30436086654663
+  },
+  {
+    "id": "force-5-lqi",
+    "exit": 0,
+    "complete": true,
+    "failure": null,
+    "wall_s": 49.91521191596985
+  },
+  {
+    "id": "force-6-baseline",
+    "exit": 0,
+    "complete": true,
+    "failure": null,
+    "wall_s": 47.28930115699768
+  },
+  {
+    "id": "force-6-lqi",
+    "exit": 0,
+    "complete": true,
+    "failure": null,
+    "wall_s": 50.05832052230835
+  },
+  {
+    "id": "force-7-baseline",
+    "exit": 0,
+    "complete": true,
+    "failure": null,
+    "wall_s": 47.29192590713501
+  },
+  {
+    "id": "force-7-lqi",
+    "exit": 0,
+    "complete": true,
+    "failure": null,
+    "wall_s": 49.85461783409119
+  },
+  {
+    "id": "force-2-double-baseline",
+    "exit": 0,
+    "complete": true,
+    "failure": null,
+    "wall_s": 47.35021948814392
+  },
+  {
+    "id": "force-2-double-lqi",
+    "exit": 0,
+    "complete": true,
+    "failure": null,
+    "wall_s": 49.71078300476074
+  },
+  {
+    "id": "force-4-double-baseline",
+    "exit": 0,
+    "complete": true,
+    "failure": null,
+    "wall_s": 47.29817843437195
+  },
+  {
+    "id": "force-4-double-lqi",
+    "exit": 0,
+    "complete": true,
+    "failure": null,
+    "wall_s": 49.6592538356781
+  },
+  {
+    "id": "force-maneuver-baseline",
+    "exit": 0,
+    "complete": true,
+    "failure": null,
+    "wall_s": 47.30408811569214
+  },
+  {
+    "id": "force-maneuver-lqi",
+    "exit": 0,
+    "complete": true,
+    "failure": null,
+    "wall_s": 49.76697373390198
+  },
+  {
+    "id": "mode-1.6--0.3-baseline",
+    "exit": 1,
+    "complete": false,
+    "failure": "Attitude guard",
+    "wall_s": 46.49970483779907
+  },
+  {
+    "id": "mode-1.6--0.3-lqi",
+    "exit": 1,
+    "complete": false,
+    "failure": "Controller ownership",
+    "wall_s": 42.66718006134033
+  },
+  {
+    "id": "mode-1.6--0.08-baseline",
+    "exit": 0,
+    "complete": true,
+    "failure": null,
+    "wall_s": 47.6648108959198
+  },
+  {
+    "id": "mode-1.6--0.08-lqi",
+    "exit": 0,
+    "complete": true,
+    "failure": null,
+    "wall_s": 51.07500338554382
+  },
+  {
+    "id": "mode-1.6-0.08-baseline",
+    "exit": 0,
+    "complete": true,
+    "failure": null,
+    "wall_s": 48.16490697860718
+  },
+  {
+    "id": "mode-1.6-0.08-lqi",
+    "exit": 0,
+    "complete": true,
+    "failure": null,
+    "wall_s": 50.676106452941895
+  },
+  {
+    "id": "mode-1.6-0.3-baseline",
+    "exit": 0,
+    "complete": true,
+    "failure": null,
+    "wall_s": 47.97112154960632
+  },
+  {
+    "id": "mode-1.6-0.3-lqi",
+    "exit": 0,
+    "complete": true,
+    "failure": null,
+    "wall_s": 50.134804010391235
+  },
+  {
+    "id": "mode-2.1--0.3-baseline",
+    "exit": 0,
+    "complete": true,
+    "failure": null,
+    "wall_s": 47.651947259902954
+  },
+  {
+    "id": "mode-2.1--0.3-lqi",
+    "exit": 0,
+    "complete": true,
+    "failure": null,
+    "wall_s": 49.98361659049988
+  },
+  {
+    "id": "mode-2.1--0.08-baseline",
+    "exit": 0,
+    "complete": true,
+    "failure": null,
+    "wall_s": 47.83763074874878
+  },
+  {
+    "id": "mode-2.1--0.08-lqi",
+    "exit": 0,
+    "complete": true,
+    "failure": null,
+    "wall_s": 50.44261574745178
+  },
+  {
+    "id": "mode-2.1-0.08-baseline",
+    "exit": 0,
+    "complete": true,
+    "failure": null,
+    "wall_s": 48.27560830116272
+  },
+  {
+    "id": "mode-2.1-0.08-lqi",
+    "exit": 0,
+    "complete": true,
+    "failure": null,
+    "wall_s": 50.01517391204834
+  },
+  {
+    "id": "mode-2.1-0.3-baseline",
+    "exit": 0,
+    "complete": true,
+    "failure": null,
+    "wall_s": 48.070772886276245
+  },
+  {
+    "id": "mode-2.1-0.3-lqi",
+    "exit": 0,
+    "complete": true,
+    "failure": null,
+    "wall_s": 50.415775537490845
+  },
+  {
+    "id": "mode-damped--0.3-baseline",
+    "exit": 0,
+    "complete": true,
+    "failure": null,
+    "wall_s": 47.74267315864563
+  },
+  {
+    "id": "mode-damped--0.3-lqi",
+    "exit": 0,
+    "complete": true,
+    "failure": null,
+    "wall_s": 49.81154155731201
+  },
+  {
+    "id": "mode-damped-0.3-baseline",
+    "exit": 0,
+    "complete": true,
+    "failure": null,
+    "wall_s": 47.40684485435486
+  },
+  {
+    "id": "mode-damped-0.3-lqi",
+    "exit": 0,
+    "complete": true,
+    "failure": null,
+    "wall_s": 49.82113790512085
+  }
+]

@@ -1,0 +1,16 @@
+{
+  "id": "force-5-lqi",
+  "experiment": {
+    "kind": "forcing",
+    "hz": 2.1,
+    "amplitude": 0.03180245472865569,
+    "ratio": 0.9850894031188758,
+    "phase": 0.8144794125819732,
+    "damping": 0.1,
+    "gain": 0.0,
+    "target_ratio": 0.4,
+    "target_phase": 1.5707963267948966,
+    "target_yaw_rms": 20
+  },
+  "scheme": "lqi"
+}

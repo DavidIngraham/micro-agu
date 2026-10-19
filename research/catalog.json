@@ -47,6 +47,13 @@
       "execution_policy": "maintained for ongoing fidelity/pipeline work"
     },
     {
+      "study": "controller-robustness-2026-10-18",
+      "status": "active",
+      "path": "research/active/controller-robustness-2026-10-18",
+      "summary": "56 deployed-ArduPilot robustness runs: phase-sensitive forced rejection and responsive-mode stability tradeoffs; production unchanged.",
+      "execution_policy": "isolated research WASM and pinned release; raw evidence archived with checksums"
+    },
+    {
       "study": "controller-stability-2026-10-16",
       "status": "superseded",
       "path": "research/archive/controller-stability-2026-10-16",

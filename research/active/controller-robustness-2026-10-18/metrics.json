@@ -1,0 +1,3766 @@
+[
+  {
+    "id": "boundary--0.12-baseline",
+    "scheme": "baseline",
+    "case": "boundary--0.12",
+    "complete": true,
+    "failure": null,
+    "spec": {
+      "id": "boundary--0.12-baseline",
+      "scheme": "baseline",
+      "experiment": {
+        "kind": "mode",
+        "hz": 1.6,
+        "amplitude": 0.005,
+        "ratio": 0.4,
+        "phase": 0,
+        "damping": 0.05,
+        "gain": -0.12
+      }
+    },
+    "duration": 85.0049999999227,
+    "harmonic_rms": [
+      0.020746310425679895,
+      0.0676355689976941,
+      0.21107082872459668
+    ],
+    "rate_rms": [
+      0.3676435202259748,
+      1.0334865796913653,
+      2.747872696041166
+    ],
+    "rate_peak": [
+      1.238979655303147,
+      2.8975306671396397,
+      6.571377080333579
+    ],
+    "altitude_error_rms": 0.17388226802637474,
+    "yaw_tracking_rms": 2.747872696041166,
+    "late_altitude_error_rms": 0.20452797164755204,
+    "late_rate_rms": [
+      0.2532498323904714,
+      0.4646929974291461,
+      1.104262058299682
+    ],
+    "late_relative_pitch_rms": 0.03961580214655377,
+    "attitude_peak": [
+      2.6455916294137785,
+      7.896654449625683
+    ],
+    "brake_upper_fraction": 0.0,
+    "brake_rate_limit_fraction": 0.0,
+    "brake_travel_mm_per_s": 6.527146660545451,
+    "common_brake_mm": 0.0,
+    "shaft_W": 73.38012718699153,
+    "power_map_outside_fraction": 0.0,
+    "modal_peak": 0.07340906788469857,
+    "estimated_attitude_peak_deg": [
+      2.6840743791787203,
+      7.835873907368245
+    ],
+    "attitude_estimation_error_peak_deg": [
+      0.17707290837873302,
+      0.24448282712694436
+    ],
+    "gain_file_loaded": true,
+    "ekf_active": true
+  },
+  {
+    "id": "boundary--0.12-lqi",
+    "scheme": "lqi",
+    "case": "boundary--0.12",
+    "complete": true,
+    "failure": null,
+    "spec": {
+      "id": "boundary--0.12-lqi",
+      "scheme": "lqi",
+      "experiment": {
+        "kind": "mode",
+        "hz": 1.6,
+        "amplitude": 0.005,
+        "ratio": 0.4,
+        "phase": 0,
+        "damping": 0.05,
+        "gain": -0.12
+      }
+    },
+    "duration": 85.05499999992264,
+    "harmonic_rms": [
+      0.004104276611059901,
+      0.0066204478723768615,
+      0.07536778850218799
+    ],
+    "rate_rms": [
+      0.2938805897987311,
+      0.14068611564350533,
+      0.9952883353222896
+    ],
+    "rate_peak": [
+      1.636020565810727,
+      2.384892622382958,
+      8.251275087519424
+    ],
+    "altitude_error_rms": 0.1741475725672082,
+    "yaw_tracking_rms": 0.9952883353222896,
+    "late_altitude_error_rms": 0.15378063980455398,
+    "late_rate_rms": [
+      0.13542842300246,
+      0.08052053508498548,
+      0.06750004412197069
+    ],
+    "late_relative_pitch_rms": 0.039297185497588184,
+    "attitude_peak": [
+      2.5172264621726668,
+      7.857570049201722
+    ],
+    "brake_upper_fraction": 0.0,
+    "brake_rate_limit_fraction": 0.0,
+    "brake_travel_mm_per_s": 0.05386386869887194,
+    "common_brake_mm": 0.0,
+    "shaft_W": 73.78979139726836,
+    "power_map_outside_fraction": 0.0,
+    "modal_peak": 0.06534463093542157,
+    "estimated_attitude_peak_deg": [
+      2.488033008960545,
+      7.765213892857171
+    ],
+    "attitude_estimation_error_peak_deg": [
+      0.15038686373944188,
+      0.16645664363880996
+    ],
+    "gain_file_loaded": true,
+    "ekf_active": true
+  },
+  {
+    "id": "boundary--0.18-baseline",
+    "scheme": "baseline",
+    "case": "boundary--0.18",
+    "complete": true,
+    "failure": null,
+    "spec": {
+      "id": "boundary--0.18-baseline",
+      "scheme": "baseline",
+      "experiment": {
+        "kind": "mode",
+        "hz": 1.6,
+        "amplitude": 0.005,
+        "ratio": 0.4,
+        "phase": 0,
+        "damping": 0.05,
+        "gain": -0.18
+      }
+    },
+    "duration": 85.0049999999227,
+    "harmonic_rms": [
+      0.4783373422999624,
+      0.4955679697710871,
+      1.8107076501183976
+    ],
+    "rate_rms": [
+      17.875825825486345,
+      18.883417233398934,
+      79.81608953933002
+    ],
+    "rate_peak": [
+      39.633659488427874,
+      37.39656228977491,
+      124.1171022774025
+    ],
+    "altitude_error_rms": 0.7607505233295825,
+    "yaw_tracking_rms": 79.81608953933002,
+    "late_altitude_error_rms": 0.3304802257494879,
+    "late_rate_rms": [
+      18.083904080417405,
+      18.802856633649256,
+      80.14772164520664
+    ],
+    "late_relative_pitch_rms": 1.6374822002110005,
+    "attitude_peak": [
+      7.5490624787791445,
+      11.007775858314915
+    ],
+    "brake_upper_fraction": 0.0,
+    "brake_rate_limit_fraction": 0.6617647058823529,
+    "brake_travel_mm_per_s": 260.6121899276241,
+    "common_brake_mm": 1.5514849299232492,
+    "shaft_W": 86.86758144846665,
+    "power_map_outside_fraction": 0.0,
+    "modal_peak": 0.6687241447514224,
+    "estimated_attitude_peak_deg": [
+      7.494671807380258,
+      10.902193420144382
+    ],
+    "attitude_estimation_error_peak_deg": [
+      3.3232482617715107,
+      2.6729243880715785
+    ],
+    "gain_file_loaded": true,
+    "ekf_active": true
+  },
+  {
+    "id": "boundary--0.18-lqi",
+    "scheme": "lqi",
+    "case": "boundary--0.18",
+    "complete": false,
+    "failure": "Attitude guard",
+    "spec": {
+      "id": "boundary--0.18-lqi",
+      "scheme": "lqi",
+      "experiment": {
+        "kind": "mode",
+        "hz": 1.6,
+        "amplitude": 0.005,
+        "ratio": 0.4,
+        "phase": 0,
+        "damping": 0.05,
+        "gain": -0.18
+      }
+    },
+    "duration": 48.55499999995584,
+    "harmonic_rms": [
+      1.0653652267486156,
+      1.5157583286449507,
+      25.221056216779772
+    ],
+    "rate_rms": [
+      40.252798355566554,
+      34.826810634122445,
+      312.4061317115654
+    ],
+    "rate_peak": [
+      251.30815877223296,
+      311.08489448239146,
+      1387.443713784974
+    ],
+    "altitude_error_rms": 0.9738744987525402,
+    "yaw_tracking_rms": 312.4061317115654,
+    "late_altitude_error_rms": null,
+    "late_rate_rms": null,
+    "late_relative_pitch_rms": null,
+    "attitude_peak": [
+      30.1033804863447,
+      22.743262456737636
+    ],
+    "brake_upper_fraction": 0.0,
+    "brake_rate_limit_fraction": 0.0,
+    "brake_travel_mm_per_s": 13.262053957500841,
+    "common_brake_mm": 0.0323496776857149,
+    "shaft_W": 85.9329026406669,
+    "power_map_outside_fraction": 0.0,
+    "modal_peak": 10.122630524951644,
+    "estimated_attitude_peak_deg": [
+      39.931317869172624,
+      51.0390393654055
+    ],
+    "attitude_estimation_error_peak_deg": [
+      40.402854125172695,
+      49.06664172031597
+    ],
+    "gain_file_loaded": true,
+    "ekf_active": true
+  },
+  {
+    "id": "confirm-boundary--0.18-baseline",
+    "scheme": "baseline",
+    "case": "confirm-boundary--0.18",
+    "complete": true,
+    "failure": null,
+    "spec": {
+      "id": "confirm-boundary--0.18-baseline",
+      "scheme": "baseline",
+      "experiment": {
+        "kind": "mode",
+        "hz": 1.6,
+        "amplitude": 0.005,
+        "ratio": 0.4,
+        "phase": 0,
+        "damping": 0.05,
+        "gain": -0.18
+      }
+    },
+    "duration": 85.0049999999227,
+    "harmonic_rms": [
+      0.4436236063975093,
+      0.5267291768390182,
+      1.6961971295218534
+    ],
+    "rate_rms": [
+      17.771541828637584,
+      19.07089965121821,
+      79.3097469522379
+    ],
+    "rate_peak": [
+      42.727855651373694,
+      39.162776192374075,
+      125.48119793589758
+    ],
+    "altitude_error_rms": 0.7676073754986464,
+    "yaw_tracking_rms": 79.3097469522379,
+    "late_altitude_error_rms": 0.3349704924281543,
+    "late_rate_rms": [
+      17.95360873789075,
+      19.249515311514713,
+      79.06517096081888
+    ],
+    "late_relative_pitch_rms": 1.705442775705696,
+    "attitude_peak": [
+      7.577343320676311,
+      11.406813196644595
+    ],
+    "brake_upper_fraction": 0.0,
+    "brake_rate_limit_fraction": 0.6658823529411765,
+    "brake_travel_mm_per_s": 261.6937586537497,
+    "common_brake_mm": 1.5948295106201522,
+    "shaft_W": 86.99957111749478,
+    "power_map_outside_fraction": 0.0,
+    "modal_peak": 0.6590387201110716,
+    "estimated_attitude_peak_deg": [
+      7.48502075008303,
+      11.258022370239951
+    ],
+    "attitude_estimation_error_peak_deg": [
+      4.86036988335789,
+      3.738310512711365
+    ],
+    "gain_file_loaded": true,
+    "ekf_active": true
+  },
+  {
+    "id": "confirm-boundary--0.18-lqi",
+    "scheme": "lqi",
+    "case": "confirm-boundary--0.18",
+    "complete": false,
+    "failure": "Attitude guard",
+    "spec": {
+      "id": "confirm-boundary--0.18-lqi",
+      "scheme": "lqi",
+      "experiment": {
+        "kind": "mode",
+        "hz": 1.6,
+        "amplitude": 0.005,
+        "ratio": 0.4,
+        "phase": 0,
+        "damping": 0.05,
+        "gain": -0.18
+      }
+    },
+    "duration": 48.55499999995584,
+    "harmonic_rms": [
+      1.0035096952525753,
+      1.5405054141744507,
+      25.218325505257887
+    ],
+    "rate_rms": [
+      40.30606049315331,
+      34.86218719969859,
+      312.59397455673866
+    ],
+    "rate_peak": [
+      252.60997727784522,
+      311.3708797561434,
+      1387.5740560059185
+    ],
+    "altitude_error_rms": 0.9519458555698191,
+    "yaw_tracking_rms": 312.59397455673866,
+    "late_altitude_error_rms": null,
+    "late_rate_rms": null,
+    "late_relative_pitch_rms": null,
+    "attitude_peak": [
+      30.181017529056117,
+      23.02766878524261
+    ],
+    "brake_upper_fraction": 0.0,
+    "brake_rate_limit_fraction": 0.0,
+    "brake_travel_mm_per_s": 13.319765245392485,
+    "common_brake_mm": 0.03513347784264585,
+    "shaft_W": 85.95695465663097,
+    "power_map_outside_fraction": 0.0,
+    "modal_peak": 10.126774627388269,
+    "estimated_attitude_peak_deg": [
+      44.60789375236699,
+      49.02460484330447
+    ],
+    "attitude_estimation_error_peak_deg": [
+      45.158251815301185,
+      52.81557756533692
+    ],
+    "gain_file_loaded": true,
+    "ekf_active": true
+  },
+  {
+    "id": "confirm-mode-2.1-0.3-baseline",
+    "scheme": "baseline",
+    "case": "confirm-mode-2.1-0.3",
+    "complete": true,
+    "failure": null,
+    "spec": {
+      "id": "confirm-mode-2.1-0.3-baseline",
+      "experiment": {
+        "kind": "mode",
+        "hz": 2.1,
+        "amplitude": 0.005,
+        "ratio": 0.4,
+        "phase": 0,
+        "damping": 0.05,
+        "gain": 0.3
+      },
+      "scheme": "baseline"
+    },
+    "duration": 85.0049999999227,
+    "harmonic_rms": [
+      0.03806213986325167,
+      0.15144654169164437,
+      1.5319317817291729
+    ],
+    "rate_rms": [
+      2.348929498834239,
+      3.382127864459019,
+      73.73841809913856
+    ],
+    "rate_peak": [
+      6.206006369811655,
+      9.982348760749563,
+      152.39066059620131
+    ],
+    "altitude_error_rms": 0.24582163667345586,
+    "yaw_tracking_rms": 73.73841809913856,
+    "late_altitude_error_rms": 0.3101090057675922,
+    "late_rate_rms": [
+      2.669364281258138,
+      6.072924559448025,
+      106.63708237731865
+    ],
+    "late_relative_pitch_rms": 0.4835072673101666,
+    "attitude_peak": [
+      3.7692755770344517,
+      8.272234529329918
+    ],
+    "brake_upper_fraction": 0.0,
+    "brake_rate_limit_fraction": 0.29058823529411765,
+    "brake_travel_mm_per_s": 145.20160033530163,
+    "common_brake_mm": 0.08926620715561359,
+    "shaft_W": 74.93077812010416,
+    "power_map_outside_fraction": 0.0,
+    "modal_peak": 0.5206961385024252,
+    "estimated_attitude_peak_deg": [
+      3.6733167167678777,
+      8.249929366364526
+    ],
+    "attitude_estimation_error_peak_deg": [
+      2.1600043358882033,
+      0.34319021754365053
+    ],
+    "gain_file_loaded": true,
+    "ekf_active": true
+  },
+  {
+    "id": "confirm-mode-2.1-0.3-lqi",
+    "scheme": "lqi",
+    "case": "confirm-mode-2.1-0.3",
+    "complete": true,
+    "failure": null,
+    "spec": {
+      "id": "confirm-mode-2.1-0.3-lqi",
+      "experiment": {
+        "kind": "mode",
+        "hz": 2.1,
+        "amplitude": 0.005,
+        "ratio": 0.4,
+        "phase": 0,
+        "damping": 0.05,
+        "gain": 0.3
+      },
+      "scheme": "lqi"
+    },
+    "duration": 85.05499999992264,
+    "harmonic_rms": [
+      0.0018885136105134574,
+      0.0021247612689859986,
+      0.0011069850122378756
+    ],
+    "rate_rms": [
+      0.23043530024573045,
+      0.09159727395527552,
+      0.6372020308414105
+    ],
+    "rate_peak": [
+      1.4418522958749902,
+      1.420783341794641,
+      7.404842554692072
+    ],
+    "altitude_error_rms": 0.17385056884139452,
+    "yaw_tracking_rms": 0.6372020308414105,
+    "late_altitude_error_rms": 0.15696805655863993,
+    "late_rate_rms": [
+      0.13917197768055828,
+      0.08449337445601052,
+      0.059966898862447916
+    ],
+    "late_relative_pitch_rms": 0.04045414049765209,
+    "attitude_peak": [
+      2.6783687803115024,
+      7.772228310756763
+    ],
+    "brake_upper_fraction": 0.0,
+    "brake_rate_limit_fraction": 0.0,
+    "brake_travel_mm_per_s": 0.025008224753047717,
+    "common_brake_mm": 0.0,
+    "shaft_W": 73.85168344398257,
+    "power_map_outside_fraction": 0.0,
+    "modal_peak": 0.03399197239552407,
+    "estimated_attitude_peak_deg": [
+      2.6415340400371767,
+      7.726662597634326
+    ],
+    "attitude_estimation_error_peak_deg": [
+      0.15743745757805527,
+      0.17443904479330286
+    ],
+    "gain_file_loaded": true,
+    "ekf_active": true
+  },
+  {
+    "id": "force-0-baseline",
+    "scheme": "baseline",
+    "case": "force-0",
+    "complete": true,
+    "failure": null,
+    "spec": {
+      "id": "force-0-baseline",
+      "experiment": {
+        "kind": "forcing",
+        "hz": 1,
+        "amplitude": 0.038338049335403315,
+        "ratio": 0.8818689014004234,
+        "phase": -1.8241178774054316,
+        "damping": 0.1,
+        "gain": 0,
+        "target_ratio": 0.4,
+        "target_phase": -1.5707963267948966,
+        "target_yaw_rms": 20
+      },
+      "scheme": "baseline"
+    },
+    "duration": 85.0049999999227,
+    "harmonic_rms": [
+      1.7839336439760902,
+      13.129268541332555,
+      16.577108365153975
+    ],
+    "rate_rms": [
+      2.2788129082464144,
+      13.514695999427099,
+      16.782586544438082
+    ],
+    "rate_peak": [
+      5.05872581275522,
+      21.633684038268544,
+      27.921537244304854
+    ],
+    "altitude_error_rms": 0.21127288949076892,
+    "yaw_tracking_rms": 16.782586544438082,
+    "late_altitude_error_rms": 0.18034128693308227,
+    "late_rate_rms": [
+      0.11413338962477777,
+      0.16135985020233276,
+      0.08154361080212776
+    ],
+    "late_relative_pitch_rms": 0.028156530893864978,
+    "attitude_peak": [
+      3.555944955393127,
+      10.151446404731203
+    ],
+    "brake_upper_fraction": 0.0,
+    "brake_rate_limit_fraction": 0.0,
+    "brake_travel_mm_per_s": 34.23034058047208,
+    "common_brake_mm": 0.0,
+    "shaft_W": 74.38580610863849,
+    "power_map_outside_fraction": 0.0,
+    "modal_peak": 0.0,
+    "estimated_attitude_peak_deg": [
+      3.594864737074288,
+      10.069998902801796
+    ],
+    "attitude_estimation_error_peak_deg": [
+      0.6722165292969464,
+      1.971231287532106
+    ],
+    "gain_file_loaded": true,
+    "ekf_active": true
+  },
+  {
+    "id": "force-0-lqi",
+    "scheme": "lqi",
+    "case": "force-0",
+    "complete": true,
+    "failure": null,
+    "spec": {
+      "id": "force-0-lqi",
+      "experiment": {
+        "kind": "forcing",
+        "hz": 1,
+        "amplitude": 0.038338049335403315,
+        "ratio": 0.8818689014004234,
+        "phase": -1.8241178774054316,
+        "damping": 0.1,
+        "gain": 0,
+        "target_ratio": 0.4,
+        "target_phase": -1.5707963267948966,
+        "target_yaw_rms": 20
+      },
+      "scheme": "lqi"
+    },
+    "duration": 85.00499999992269,
+    "harmonic_rms": [
+      0.8437311529952163,
+      9.874297772408628,
+      21.446217587950088
+    ],
+    "rate_rms": [
+      1.0513355082776363,
+      9.96766823954203,
+      21.46631426782282
+    ],
+    "rate_peak": [
+      2.612403807199503,
+      15.458157763086863,
+      31.51461388113466
+    ],
+    "altitude_error_rms": 0.053614710573766114,
+    "yaw_tracking_rms": 21.46631426782282,
+    "late_altitude_error_rms": 0.14998595657800184,
+    "late_rate_rms": [
+      0.12104154799589961,
+      0.07189591953545675,
+      0.06355894578589633
+    ],
+    "late_relative_pitch_rms": 0.03942423968721195,
+    "attitude_peak": [
+      3.2098065229251604,
+      10.324064361305371
+    ],
+    "brake_upper_fraction": 0.0,
+    "brake_rate_limit_fraction": 0.0,
+    "brake_travel_mm_per_s": 1.096514469941323,
+    "common_brake_mm": 0.0,
+    "shaft_W": 73.97474888366288,
+    "power_map_outside_fraction": 0.0,
+    "modal_peak": 0.0,
+    "estimated_attitude_peak_deg": [
+      3.1498117451903727,
+      10.220356979643165
+    ],
+    "attitude_estimation_error_peak_deg": [
+      0.6562200859253551,
+      1.420178901542556
+    ],
+    "gain_file_loaded": true,
+    "ekf_active": true
+  },
+  {
+    "id": "force-1-baseline",
+    "scheme": "baseline",
+    "case": "force-1",
+    "complete": true,
+    "failure": null,
+    "spec": {
+      "id": "force-1-baseline",
+      "experiment": {
+        "kind": "forcing",
+        "hz": 1,
+        "amplitude": 0.04456361080376088,
+        "ratio": 1.3031977985708847,
+        "phase": 0.9762318433798914,
+        "damping": 0.1,
+        "gain": 0,
+        "target_ratio": 0.4,
+        "target_phase": 1.5707963267948966,
+        "target_yaw_rms": 20
+      },
+      "scheme": "baseline"
+    },
+    "duration": 85.05499999992266,
+    "harmonic_rms": [
+      1.4091265224928728,
+      16.434160749956046,
+      18.830157150815946
+    ],
+    "rate_rms": [
+      3.22634101626038,
+      16.57988536422395,
+      18.91000005641479
+    ],
+    "rate_peak": [
+      5.716433513527889,
+      26.568597716059262,
+      28.922612453963144
+    ],
+    "altitude_error_rms": 0.1772730342378493,
+    "yaw_tracking_rms": 18.91000005641479,
+    "late_altitude_error_rms": 0.18572891321116522,
+    "late_rate_rms": [
+      0.10080685668718033,
+      0.14784344194088622,
+      0.07116573149198059
+    ],
+    "late_relative_pitch_rms": 0.026768282522489643,
+    "attitude_peak": [
+      3.3387392750428395,
+      11.444940147977258
+    ],
+    "brake_upper_fraction": 0.0,
+    "brake_rate_limit_fraction": 0.0,
+    "brake_travel_mm_per_s": 29.109573612547536,
+    "common_brake_mm": 0.0,
+    "shaft_W": 74.27807588337446,
+    "power_map_outside_fraction": 0.0,
+    "modal_peak": 0.0,
+    "estimated_attitude_peak_deg": [
+      3.26699303191205,
+      11.416493858041648
+    ],
+    "attitude_estimation_error_peak_deg": [
+      0.6651155991590088,
+      2.5619984321646143
+    ],
+    "gain_file_loaded": true,
+    "ekf_active": true
+  },
+  {
+    "id": "force-1-lqi",
+    "scheme": "lqi",
+    "case": "force-1",
+    "complete": true,
+    "failure": null,
+    "spec": {
+      "id": "force-1-lqi",
+      "experiment": {
+        "kind": "forcing",
+        "hz": 1,
+        "amplitude": 0.04456361080376088,
+        "ratio": 1.3031977985708847,
+        "phase": 0.9762318433798914,
+        "damping": 0.1,
+        "gain": 0,
+        "target_ratio": 0.4,
+        "target_phase": 1.5707963267948966,
+        "target_yaw_rms": 20
+      },
+      "scheme": "lqi"
+    },
+    "duration": 85.05499999992264,
+    "harmonic_rms": [
+      1.0801261036128365,
+      11.336871403813195,
+      23.409960195526583
+    ],
+    "rate_rms": [
+      1.311139384329137,
+      11.419600862195022,
+      23.443046397544176
+    ],
+    "rate_peak": [
+      3.228753389928328,
+      18.423678915044523,
+      34.671024144234295
+    ],
+    "altitude_error_rms": 0.0427168228846568,
+    "yaw_tracking_rms": 23.443046397544176,
+    "late_altitude_error_rms": 0.1518892700697664,
+    "late_rate_rms": [
+      0.12629374584920344,
+      0.06990403713467422,
+      0.04665420418605475
+    ],
+    "late_relative_pitch_rms": 0.03557074767691066,
+    "attitude_peak": [
+      3.056127909715568,
+      10.451590663801444
+    ],
+    "brake_upper_fraction": 0.0,
+    "brake_rate_limit_fraction": 0.0,
+    "brake_travel_mm_per_s": 1.7775076670627756,
+    "common_brake_mm": 0.007199483164476609,
+    "shaft_W": 74.10061898215719,
+    "power_map_outside_fraction": 0.0,
+    "modal_peak": 0.0,
+    "estimated_attitude_peak_deg": [
+      2.998310678880085,
+      10.327557652440161
+    ],
+    "attitude_estimation_error_peak_deg": [
+      0.5435924446593958,
+      1.4234192492922944
+    ],
+    "gain_file_loaded": true,
+    "ekf_active": true
+  },
+  {
+    "id": "force-2-baseline",
+    "scheme": "baseline",
+    "case": "force-2",
+    "complete": true,
+    "failure": null,
+    "spec": {
+      "id": "force-2-baseline",
+      "experiment": {
+        "kind": "forcing",
+        "hz": 1.6,
+        "amplitude": 0.03182846508363321,
+        "ratio": 0.6703361602193725,
+        "phase": -1.5428944161933575,
+        "damping": 0.1,
+        "gain": 0,
+        "target_ratio": 0.4,
+        "target_phase": -1.5707963267948966,
+        "target_yaw_rms": 20
+      },
+      "scheme": "baseline"
+    },
+    "duration": 85.05499999992266,
+    "harmonic_rms": [
+      1.703924597873864,
+      3.6640536600218065,
+      21.027550727563423
+    ],
+    "rate_rms": [
+      1.8257948655513452,
+      3.7826629350964667,
+      21.03643837820888
+    ],
+    "rate_peak": [
+      4.0022441264910045,
+      6.8780209350297135,
+      30.236770197972508
+    ],
+    "altitude_error_rms": 0.19582384276028794,
+    "yaw_tracking_rms": 21.03643837820888,
+    "late_altitude_error_rms": 0.1937808610083788,
+    "late_rate_rms": [
+      0.07907019944231859,
+      0.11708768979380524,
+      0.05577011627705511
+    ],
+    "late_relative_pitch_rms": 0.022414423684567978,
+    "attitude_peak": [
+      3.020495505303357,
+      8.394508077399092
+    ],
+    "brake_upper_fraction": 0.0,
+    "brake_rate_limit_fraction": 0.0,
+    "brake_travel_mm_per_s": 47.47907654845927,
+    "common_brake_mm": 0.0,
+    "shaft_W": 73.92263724659928,
+    "power_map_outside_fraction": 0.0,
+    "modal_peak": 0.0,
+    "estimated_attitude_peak_deg": [
+      3.0503123241259775,
+      8.315655422973913
+    ],
+    "attitude_estimation_error_peak_deg": [
+      0.5544473587468985,
+      0.5588734355780502
+    ],
+    "gain_file_loaded": true,
+    "ekf_active": true
+  },
+  {
+    "id": "force-2-double-baseline",
+    "scheme": "baseline",
+    "case": "force-2-double",
+    "complete": true,
+    "failure": null,
+    "spec": {
+      "id": "force-2-double-baseline",
+      "experiment": {
+        "kind": "forcing",
+        "hz": 1.6,
+        "amplitude": 0.06365693016726642,
+        "ratio": 0.6703361602193725,
+        "phase": -1.5428944161933575,
+        "damping": 0.1,
+        "gain": 0,
+        "target_ratio": 0.4,
+        "target_phase": -1.5707963267948966,
+        "target_yaw_rms": 20
+      },
+      "scheme": "baseline"
+    },
+    "duration": 85.0049999999227,
+    "harmonic_rms": [
+      3.9435607644481627,
+      11.39712270923979,
+      42.579595728147105
+    ],
+    "rate_rms": [
+      4.69575685768568,
+      11.725997885351346,
+      42.62120793495142
+    ],
+    "rate_peak": [
+      10.174288617469374,
+      21.346841152276085,
+      61.44184292290428
+    ],
+    "altitude_error_rms": 0.27144804821239,
+    "yaw_tracking_rms": 42.62120793495142,
+    "late_altitude_error_rms": 0.13719858034863855,
+    "late_rate_rms": [
+      0.13540170904367735,
+      0.1943953904626257,
+      0.09240909969528872
+    ],
+    "late_relative_pitch_rms": 0.032589770619970926,
+    "attitude_peak": [
+      3.7027855247467096,
+      9.835879659653466
+    ],
+    "brake_upper_fraction": 0.0,
+    "brake_rate_limit_fraction": 0.0,
+    "brake_travel_mm_per_s": 98.73054761543597,
+    "common_brake_mm": 0.005471607205002223,
+    "shaft_W": 75.755572303965,
+    "power_map_outside_fraction": 0.0,
+    "modal_peak": 0.0,
+    "estimated_attitude_peak_deg": [
+      3.735623409924026,
+      9.776283693018323
+    ],
+    "attitude_estimation_error_peak_deg": [
+      0.7139922318971799,
+      1.4245655434930313
+    ],
+    "gain_file_loaded": true,
+    "ekf_active": true
+  },
+  {
+    "id": "force-2-double-lqi",
+    "scheme": "lqi",
+    "case": "force-2-double",
+    "complete": true,
+    "failure": null,
+    "spec": {
+      "id": "force-2-double-lqi",
+      "experiment": {
+        "kind": "forcing",
+        "hz": 1.6,
+        "amplitude": 0.06365693016726642,
+        "ratio": 0.6703361602193725,
+        "phase": -1.5428944161933575,
+        "damping": 0.1,
+        "gain": 0,
+        "target_ratio": 0.4,
+        "target_phase": -1.5707963267948966,
+        "target_yaw_rms": 20
+      },
+      "scheme": "lqi"
+    },
+    "duration": 85.00499999992269,
+    "harmonic_rms": [
+      1.5343419652872563,
+      19.149927658540012,
+      39.09291565474603
+    ],
+    "rate_rms": [
+      3.4197980469142832,
+      19.257152262638755,
+      39.111361080631305
+    ],
+    "rate_peak": [
+      7.138589995122354,
+      27.09811017903508,
+      56.14924453469996
+    ],
+    "altitude_error_rms": 0.06427469678658167,
+    "yaw_tracking_rms": 39.111361080631305,
+    "late_altitude_error_rms": 0.1542751806259487,
+    "late_rate_rms": [
+      0.11361335329203134,
+      0.07637554474365464,
+      0.07628819395144143
+    ],
+    "late_relative_pitch_rms": 0.03893243102788577,
+    "attitude_peak": [
+      3.516569747208595,
+      11.025653107317208
+    ],
+    "brake_upper_fraction": 0.0,
+    "brake_rate_limit_fraction": 0.0,
+    "brake_travel_mm_per_s": 2.1006908792560077,
+    "common_brake_mm": 0.0,
+    "shaft_W": 74.07399652646714,
+    "power_map_outside_fraction": 0.0,
+    "modal_peak": 0.0,
+    "estimated_attitude_peak_deg": [
+      3.4540001962924145,
+      10.695378707170981
+    ],
+    "attitude_estimation_error_peak_deg": [
+      1.0771106315381473,
+      2.0569156135956064
+    ],
+    "gain_file_loaded": true,
+    "ekf_active": true
+  },
+  {
+    "id": "force-2-lqi",
+    "scheme": "lqi",
+    "case": "force-2",
+    "complete": true,
+    "failure": null,
+    "spec": {
+      "id": "force-2-lqi",
+      "experiment": {
+        "kind": "forcing",
+        "hz": 1.6,
+        "amplitude": 0.03182846508363321,
+        "ratio": 0.6703361602193725,
+        "phase": -1.5428944161933575,
+        "damping": 0.1,
+        "gain": 0,
+        "target_ratio": 0.4,
+        "target_phase": -1.5707963267948966,
+        "target_yaw_rms": 20
+      },
+      "scheme": "lqi"
+    },
+    "duration": 85.00499999992269,
+    "harmonic_rms": [
+      0.8984180790145432,
+      10.914255362460562,
+      19.85948728817769
+    ],
+    "rate_rms": [
+      1.0962159157809195,
+      10.959511874383551,
+      19.87596973931055
+    ],
+    "rate_peak": [
+      2.857972431778548,
+      16.556541887085576,
+      29.90329231360367
+    ],
+    "altitude_error_rms": 0.06514828939069804,
+    "yaw_tracking_rms": 19.87596973931055,
+    "late_altitude_error_rms": 0.15387345765727667,
+    "late_rate_rms": [
+      0.10836000479046315,
+      0.07107552482407775,
+      0.06414936647279874
+    ],
+    "late_relative_pitch_rms": 0.03904914507938645,
+    "attitude_peak": [
+      2.901785779213402,
+      9.514932432366033
+    ],
+    "brake_upper_fraction": 0.0,
+    "brake_rate_limit_fraction": 0.0,
+    "brake_travel_mm_per_s": 0.8983723815133291,
+    "common_brake_mm": 0.0,
+    "shaft_W": 73.793601503026,
+    "power_map_outside_fraction": 0.0,
+    "modal_peak": 0.0,
+    "estimated_attitude_peak_deg": [
+      2.841330093308155,
+      9.449792966728898
+    ],
+    "attitude_estimation_error_peak_deg": [
+      0.6087997261802514,
+      1.447631884123041
+    ],
+    "gain_file_loaded": true,
+    "ekf_active": true
+  },
+  {
+    "id": "force-3-baseline",
+    "scheme": "baseline",
+    "case": "force-3",
+    "complete": true,
+    "failure": null,
+    "spec": {
+      "id": "force-3-baseline",
+      "experiment": {
+        "kind": "forcing",
+        "hz": 1.6,
+        "amplitude": 0.035128930760483824,
+        "ratio": 1.090480790502432,
+        "phase": 0.8687879334596171,
+        "damping": 0.1,
+        "gain": 0,
+        "target_ratio": 0.4,
+        "target_phase": 1.5707963267948966,
+        "target_yaw_rms": 20
+      },
+      "scheme": "baseline"
+    },
+    "duration": 85.0049999999227,
+    "harmonic_rms": [
+      1.4456753905311266,
+      10.778794405659772,
+      24.5371267560392
+    ],
+    "rate_rms": [
+      2.5639731446912446,
+      10.80076778696022,
+      24.543438993279196
+    ],
+    "rate_peak": [
+      5.464067095597441,
+      17.035999666984647,
+      36.516489118996454
+    ],
+    "altitude_error_rms": 0.17248335031765435,
+    "yaw_tracking_rms": 24.543438993279196,
+    "late_altitude_error_rms": 0.19233277440172586,
+    "late_rate_rms": [
+      0.09034448974380427,
+      0.11499719156402016,
+      0.05859256537389563
+    ],
+    "late_relative_pitch_rms": 0.022498954671089946,
+    "attitude_peak": [
+      3.0403362577394235,
+      9.415978027259031
+    ],
+    "brake_upper_fraction": 0.0,
+    "brake_rate_limit_fraction": 0.0,
+    "brake_travel_mm_per_s": 41.83106517346326,
+    "common_brake_mm": 0.0,
+    "shaft_W": 73.83327859503025,
+    "power_map_outside_fraction": 0.0,
+    "modal_peak": 0.0,
+    "estimated_attitude_peak_deg": [
+      2.9508368087236767,
+      9.310664574656677
+    ],
+    "attitude_estimation_error_peak_deg": [
+      0.5264528800971675,
+      1.280325168558761
+    ],
+    "gain_file_loaded": true,
+    "ekf_active": true
+  },
+  {
+    "id": "force-3-lqi",
+    "scheme": "lqi",
+    "case": "force-3",
+    "complete": true,
+    "failure": null,
+    "spec": {
+      "id": "force-3-lqi",
+      "experiment": {
+        "kind": "forcing",
+        "hz": 1.6,
+        "amplitude": 0.035128930760483824,
+        "ratio": 1.090480790502432,
+        "phase": 0.8687879334596171,
+        "damping": 0.1,
+        "gain": 0,
+        "target_ratio": 0.4,
+        "target_phase": 1.5707963267948966,
+        "target_yaw_rms": 20
+      },
+      "scheme": "lqi"
+    },
+    "duration": 85.00499999992269,
+    "harmonic_rms": [
+      1.2942913865899395,
+      2.0514408652721325,
+      22.428470616765715
+    ],
+    "rate_rms": [
+      1.5285410352130553,
+      2.3277532288968645,
+      22.449907802033902
+    ],
+    "rate_peak": [
+      3.8074283482404985,
+      4.937766896246954,
+      33.88460649897019
+    ],
+    "altitude_error_rms": 0.04623565750632322,
+    "yaw_tracking_rms": 22.449907802033902,
+    "late_altitude_error_rms": 0.15528309092984613,
+    "late_rate_rms": [
+      0.1131359946823698,
+      0.06810511986079122,
+      0.04211140015759574
+    ],
+    "late_relative_pitch_rms": 0.03915326163411245,
+    "attitude_peak": [
+      2.9073674598997794,
+      8.353779107656173
+    ],
+    "brake_upper_fraction": 0.0,
+    "brake_rate_limit_fraction": 0.0,
+    "brake_travel_mm_per_s": 1.2638772048271034,
+    "common_brake_mm": 0.0,
+    "shaft_W": 73.77497126799209,
+    "power_map_outside_fraction": 0.0,
+    "modal_peak": 0.0,
+    "estimated_attitude_peak_deg": [
+      2.8380498949592563,
+      8.271159301852219
+    ],
+    "attitude_estimation_error_peak_deg": [
+      0.5077082763462215,
+      0.4274737342433639
+    ],
+    "gain_file_loaded": true,
+    "ekf_active": true
+  },
+  {
+    "id": "force-4-baseline",
+    "scheme": "baseline",
+    "case": "force-4",
+    "complete": true,
+    "failure": null,
+    "spec": {
+      "id": "force-4-baseline",
+      "experiment": {
+        "kind": "forcing",
+        "hz": 2.1,
+        "amplitude": 0.031157602823526878,
+        "ratio": 0.6931307107652581,
+        "phase": -1.3714302571485502,
+        "damping": 0.1,
+        "gain": 0,
+        "target_ratio": 0.4,
+        "target_phase": -1.5707963267948966,
+        "target_yaw_rms": 20
+      },
+      "scheme": "baseline"
+    },
+    "duration": 85.05499999992266,
+    "harmonic_rms": [
+      2.6186190883735927,
+      5.687261484921474,
+      24.65496078214516
+    ],
+    "rate_rms": [
+      2.9638814188764697,
+      5.7102354504031565,
+      24.65876924633472
+    ],
+    "rate_peak": [
+      6.091989962132756,
+      9.310548183467773,
+      37.107607316398806
+    ],
+    "altitude_error_rms": 0.20027498431250856,
+    "yaw_tracking_rms": 24.65876924633472,
+    "late_altitude_error_rms": 0.17762711629556016,
+    "late_rate_rms": [
+      0.09979907445164707,
+      0.14842873951717392,
+      0.07414148123692921
+    ],
+    "late_relative_pitch_rms": 0.027262045843998484,
+    "attitude_peak": [
+      2.834571472686019,
+      8.600723338403444
+    ],
+    "brake_upper_fraction": 0.0,
+    "brake_rate_limit_fraction": 0.0,
+    "brake_travel_mm_per_s": 83.22929568773915,
+    "common_brake_mm": 0.008698452479795754,
+    "shaft_W": 74.38196846957746,
+    "power_map_outside_fraction": 0.0,
+    "modal_peak": 0.0,
+    "estimated_attitude_peak_deg": [
+      2.7516042460592245,
+      8.583789866768395
+    ],
+    "attitude_estimation_error_peak_deg": [
+      0.46508327428068696,
+      0.6778391699796202
+    ],
+    "gain_file_loaded": true,
+    "ekf_active": true
+  },
+  {
+    "id": "force-4-double-baseline",
+    "scheme": "baseline",
+    "case": "force-4-double",
+    "complete": true,
+    "failure": null,
+    "spec": {
+      "id": "force-4-double-baseline",
+      "experiment": {
+        "kind": "forcing",
+        "hz": 2.1,
+        "amplitude": 0.062315205647053756,
+        "ratio": 0.6931307107652581,
+        "phase": -1.3714302571485502,
+        "damping": 0.1,
+        "gain": 0,
+        "target_ratio": 0.4,
+        "target_phase": -1.5707963267948966,
+        "target_yaw_rms": 20
+      },
+      "scheme": "baseline"
+    },
+    "duration": 85.0049999999227,
+    "harmonic_rms": [
+      3.581780771156802,
+      11.521694460265412,
+      44.83050859980517
+    ],
+    "rate_rms": [
+      4.534495445269284,
+      11.551089651618097,
+      44.83354176883064
+    ],
+    "rate_peak": [
+      8.831605138068193,
+      18.338002696350532,
+      64.25264049540803
+    ],
+    "altitude_error_rms": 0.23808128459873018,
+    "yaw_tracking_rms": 44.83354176883064,
+    "late_altitude_error_rms": 0.16059119075911296,
+    "late_rate_rms": [
+      0.12747738213554616,
+      0.15771661774589277,
+      0.07725391914189565
+    ],
+    "late_relative_pitch_rms": 0.029396976624276122,
+    "attitude_peak": [
+      3.1741737466704354,
+      9.269689614614611
+    ],
+    "brake_upper_fraction": 0.0,
+    "brake_rate_limit_fraction": 0.0,
+    "brake_travel_mm_per_s": 105.03128845425188,
+    "common_brake_mm": 0.019405376160357788,
+    "shaft_W": 75.03866842107146,
+    "power_map_outside_fraction": 0.0,
+    "modal_peak": 0.0,
+    "estimated_attitude_peak_deg": [
+      3.1972015186426255,
+      9.218042086869426
+    ],
+    "attitude_estimation_error_peak_deg": [
+      0.9359571820027668,
+      1.4839892709065339
+    ],
+    "gain_file_loaded": true,
+    "ekf_active": true
+  },
+  {
+    "id": "force-4-double-lqi",
+    "scheme": "lqi",
+    "case": "force-4-double",
+    "complete": true,
+    "failure": null,
+    "spec": {
+      "id": "force-4-double-lqi",
+      "experiment": {
+        "kind": "forcing",
+        "hz": 2.1,
+        "amplitude": 0.062315205647053756,
+        "ratio": 0.6931307107652581,
+        "phase": -1.3714302571485502,
+        "damping": 0.1,
+        "gain": 0,
+        "target_ratio": 0.4,
+        "target_phase": -1.5707963267948966,
+        "target_yaw_rms": 20
+      },
+      "scheme": "lqi"
+    },
+    "duration": 85.00499999992269,
+    "harmonic_rms": [
+      1.4509334107007767,
+      16.625265840894954,
+      37.56255492164316
+    ],
+    "rate_rms": [
+      2.563961664867224,
+      16.776290938204433,
+      37.59017641299684
+    ],
+    "rate_peak": [
+      5.700132125052468,
+      25.740404281737902,
+      55.853155154979625
+    ],
+    "altitude_error_rms": 0.062255035124798186,
+    "yaw_tracking_rms": 37.59017641299684,
+    "late_altitude_error_rms": 0.1520511066408913,
+    "late_rate_rms": [
+      0.11294531770956663,
+      0.07571613647046369,
+      0.06420368727872314
+    ],
+    "late_relative_pitch_rms": 0.03973716033966486,
+    "attitude_peak": [
+      3.1140765179791825,
+      10.054846009891333
+    ],
+    "brake_upper_fraction": 0.0,
+    "brake_rate_limit_fraction": 0.0,
+    "brake_travel_mm_per_s": 2.464271992973394,
+    "common_brake_mm": 0.0,
+    "shaft_W": 73.89547363647445,
+    "power_map_outside_fraction": 0.0,
+    "modal_peak": 0.0,
+    "estimated_attitude_peak_deg": [
+      3.044304105533893,
+      9.705582697372229
+    ],
+    "attitude_estimation_error_peak_deg": [
+      0.8996401865667565,
+      1.6163068271758334
+    ],
+    "gain_file_loaded": true,
+    "ekf_active": true
+  },
+  {
+    "id": "force-4-lqi",
+    "scheme": "lqi",
+    "case": "force-4",
+    "complete": true,
+    "failure": null,
+    "spec": {
+      "id": "force-4-lqi",
+      "experiment": {
+        "kind": "forcing",
+        "hz": 2.1,
+        "amplitude": 0.031157602823526878,
+        "ratio": 0.6931307107652581,
+        "phase": -1.3714302571485502,
+        "damping": 0.1,
+        "gain": 0,
+        "target_ratio": 0.4,
+        "target_phase": -1.5707963267948966,
+        "target_yaw_rms": 20
+      },
+      "scheme": "lqi"
+    },
+    "duration": 85.00499999992269,
+    "harmonic_rms": [
+      0.8532498481037566,
+      9.290009536635973,
+      18.532913301913055
+    ],
+    "rate_rms": [
+      1.1045286378891788,
+      9.337126856058742,
+      18.55587813679013
+    ],
+    "rate_peak": [
+      2.5458023755642127,
+      14.779237205080934,
+      28.004657376371203
+    ],
+    "altitude_error_rms": 0.0749951039667262,
+    "yaw_tracking_rms": 18.55587813679013,
+    "late_altitude_error_rms": 0.1547752156102707,
+    "late_rate_rms": [
+      0.11253996249681571,
+      0.06905398300556029,
+      0.05682404565089686
+    ],
+    "late_relative_pitch_rms": 0.03940076205483088,
+    "attitude_peak": [
+      2.78094197653716,
+      8.926665783649893
+    ],
+    "brake_upper_fraction": 0.0,
+    "brake_rate_limit_fraction": 0.0,
+    "brake_travel_mm_per_s": 0.958007379001366,
+    "common_brake_mm": 0.0,
+    "shaft_W": 73.73861293149949,
+    "power_map_outside_fraction": 0.0,
+    "modal_peak": 0.0,
+    "estimated_attitude_peak_deg": [
+      2.7070577522924015,
+      8.74926827488488
+    ],
+    "attitude_estimation_error_peak_deg": [
+      0.5025119345562814,
+      1.0408917652594027
+    ],
+    "gain_file_loaded": true,
+    "ekf_active": true
+  },
+  {
+    "id": "force-5-baseline",
+    "scheme": "baseline",
+    "case": "force-5",
+    "complete": true,
+    "failure": null,
+    "spec": {
+      "id": "force-5-baseline",
+      "experiment": {
+        "kind": "forcing",
+        "hz": 2.1,
+        "amplitude": 0.03180245472865569,
+        "ratio": 0.9850894031188758,
+        "phase": 0.8144794125819732,
+        "damping": 0.1,
+        "gain": 0,
+        "target_ratio": 0.4,
+        "target_phase": 1.5707963267948966,
+        "target_yaw_rms": 20
+      },
+      "scheme": "baseline"
+    },
+    "duration": 85.05499999992266,
+    "harmonic_rms": [
+      1.1149591465048398,
+      7.44459179813377,
+      24.34460494683024
+    ],
+    "rate_rms": [
+      1.439274136921118,
+      7.4627676145263795,
+      24.34651101727279
+    ],
+    "rate_peak": [
+      3.802575582288138,
+      11.80122633859364,
+      35.81662211802009
+    ],
+    "altitude_error_rms": 0.16314204215093941,
+    "yaw_tracking_rms": 24.34651101727279,
+    "late_altitude_error_rms": 0.1990337621550029,
+    "late_rate_rms": [
+      0.09688478087219385,
+      0.1320332356175518,
+      0.06627770700759886
+    ],
+    "late_relative_pitch_rms": 0.02289680023711166,
+    "attitude_peak": [
+      2.8503898225675064,
+      8.642041106352774
+    ],
+    "brake_upper_fraction": 0.0,
+    "brake_rate_limit_fraction": 0.0,
+    "brake_travel_mm_per_s": 43.143035118200075,
+    "common_brake_mm": 0.0,
+    "shaft_W": 73.57820848977208,
+    "power_map_outside_fraction": 0.0,
+    "modal_peak": 0.0,
+    "estimated_attitude_peak_deg": [
+      2.7786861595617367,
+      8.611301868745207
+    ],
+    "attitude_estimation_error_peak_deg": [
+      0.5767353812246938,
+      1.105496018763887
+    ],
+    "gain_file_loaded": true,
+    "ekf_active": true
+  },
+  {
+    "id": "force-5-lqi",
+    "scheme": "lqi",
+    "case": "force-5",
+    "complete": true,
+    "failure": null,
+    "spec": {
+      "id": "force-5-lqi",
+      "experiment": {
+        "kind": "forcing",
+        "hz": 2.1,
+        "amplitude": 0.03180245472865569,
+        "ratio": 0.9850894031188758,
+        "phase": 0.8144794125819732,
+        "damping": 0.1,
+        "gain": 0,
+        "target_ratio": 0.4,
+        "target_phase": 1.5707963267948966,
+        "target_yaw_rms": 20
+      },
+      "scheme": "lqi"
+    },
+    "duration": 85.00499999992269,
+    "harmonic_rms": [
+      1.35925341905741,
+      2.6547797688078196,
+      19.27456698589098
+    ],
+    "rate_rms": [
+      1.640043513610164,
+      2.8310654553693624,
+      19.301810961309453
+    ],
+    "rate_peak": [
+      3.985494325904581,
+      5.3659628610353245,
+      28.943361008008118
+    ],
+    "altitude_error_rms": 0.06905235562713431,
+    "yaw_tracking_rms": 19.301810961309453,
+    "late_altitude_error_rms": 0.03230817762146138,
+    "late_rate_rms": [
+      0.11729362248419124,
+      0.07001144010293589,
+      0.046356752883685924
+    ],
+    "late_relative_pitch_rms": 0.03861067695717928,
+    "attitude_peak": [
+      2.804829227513836,
+      8.228897246467378
+    ],
+    "brake_upper_fraction": 0.0,
+    "brake_rate_limit_fraction": 0.0,
+    "brake_travel_mm_per_s": 1.0061001189110734,
+    "common_brake_mm": 0.0,
+    "shaft_W": 73.74325239437096,
+    "power_map_outside_fraction": 0.0,
+    "modal_peak": 0.0,
+    "estimated_attitude_peak_deg": [
+      2.7518699831066207,
+      8.154268298170267
+    ],
+    "attitude_estimation_error_peak_deg": [
+      0.6918537735628547,
+      0.4306336246149556
+    ],
+    "gain_file_loaded": true,
+    "ekf_active": true
+  },
+  {
+    "id": "force-6-baseline",
+    "scheme": "baseline",
+    "case": "force-6",
+    "complete": true,
+    "failure": null,
+    "spec": {
+      "id": "force-6-baseline",
+      "experiment": {
+        "kind": "forcing",
+        "hz": 3,
+        "amplitude": 0.033035400883568065,
+        "ratio": 0.7466749644435929,
+        "phase": -1.1804768556696859,
+        "damping": 0.1,
+        "gain": 0,
+        "target_ratio": 0.4,
+        "target_phase": -1.5707963267948966,
+        "target_yaw_rms": 20
+      },
+      "scheme": "baseline"
+    },
+    "duration": 85.0049999999227,
+    "harmonic_rms": [
+      2.0260073344300227,
+      7.4751681327734465,
+      21.59379180821802
+    ],
+    "rate_rms": [
+      2.626764396211223,
+      7.4850645412368895,
+      21.59681127405362
+    ],
+    "rate_peak": [
+      5.597441783917088,
+      11.315672892270651,
+      31.709360156686753
+    ],
+    "altitude_error_rms": 0.1575508156776739,
+    "yaw_tracking_rms": 21.59681127405362,
+    "late_altitude_error_rms": 0.20606965440567745,
+    "late_rate_rms": [
+      0.0982323953516167,
+      0.11635307807493397,
+      0.057488336789175
+    ],
+    "late_relative_pitch_rms": 0.02186848285295127,
+    "attitude_peak": [
+      2.6846076904053295,
+      8.270947078475084
+    ],
+    "brake_upper_fraction": 0.0,
+    "brake_rate_limit_fraction": 0.0,
+    "brake_travel_mm_per_s": 37.608670587052046,
+    "common_brake_mm": 0.0,
+    "shaft_W": 73.4278782962992,
+    "power_map_outside_fraction": 0.0,
+    "modal_peak": 0.0,
+    "estimated_attitude_peak_deg": [
+      2.6313512952017453,
+      8.238748346693216
+    ],
+    "attitude_estimation_error_peak_deg": [
+      0.347023864484413,
+      0.85979532825354
+    ],
+    "gain_file_loaded": true,
+    "ekf_active": true
+  },
+  {
+    "id": "force-6-lqi",
+    "scheme": "lqi",
+    "case": "force-6",
+    "complete": true,
+    "failure": null,
+    "spec": {
+      "id": "force-6-lqi",
+      "experiment": {
+        "kind": "forcing",
+        "hz": 3,
+        "amplitude": 0.033035400883568065,
+        "ratio": 0.7466749644435929,
+        "phase": -1.1804768556696859,
+        "damping": 0.1,
+        "gain": 0,
+        "target_ratio": 0.4,
+        "target_phase": -1.5707963267948966,
+        "target_yaw_rms": 20
+      },
+      "scheme": "lqi"
+    },
+    "duration": 85.00499999992269,
+    "harmonic_rms": [
+      1.076170731670863,
+      6.4312655001289825,
+      19.068182088792064
+    ],
+    "rate_rms": [
+      3.4922659847598725,
+      6.477575757660056,
+      19.09103040655644
+    ],
+    "rate_peak": [
+      6.738928463666158,
+      10.297604048444919,
+      28.236818904335507
+    ],
+    "altitude_error_rms": 0.07033418970348956,
+    "yaw_tracking_rms": 19.09103040655644,
+    "late_altitude_error_rms": 0.1552593898281355,
+    "late_rate_rms": [
+      0.11956873897443901,
+      0.0730373158513553,
+      0.051473937515733086
+    ],
+    "late_relative_pitch_rms": 0.03852127596915867,
+    "attitude_peak": [
+      2.7518504509098345,
+      8.402463326690336
+    ],
+    "brake_upper_fraction": 0.0,
+    "brake_rate_limit_fraction": 0.0,
+    "brake_travel_mm_per_s": 1.2542586568451621,
+    "common_brake_mm": 0.0,
+    "shaft_W": 73.6997277875077,
+    "power_map_outside_fraction": 0.0,
+    "modal_peak": 0.0,
+    "estimated_attitude_peak_deg": [
+      2.6774531511086277,
+      8.32605609353255
+    ],
+    "attitude_estimation_error_peak_deg": [
+      0.5500261187211493,
+      0.6829700436584005
+    ],
+    "gain_file_loaded": true,
+    "ekf_active": true
+  },
+  {
+    "id": "force-7-baseline",
+    "scheme": "baseline",
+    "case": "force-7",
+    "complete": true,
+    "failure": null,
+    "spec": {
+      "id": "force-7-baseline",
+      "experiment": {
+        "kind": "forcing",
+        "hz": 3,
+        "amplitude": 0.02988352797705706,
+        "ratio": 0.7226920054707922,
+        "phase": 0.6868612050380662,
+        "damping": 0.1,
+        "gain": 0,
+        "target_ratio": 0.4,
+        "target_phase": 1.5707963267948966,
+        "target_yaw_rms": 20
+      },
+      "scheme": "baseline"
+    },
+    "duration": 85.05499999992266,
+    "harmonic_rms": [
+      0.9560875088805525,
+      5.22243794634044,
+      20.399168349555243
+    ],
+    "rate_rms": [
+      1.3398248706333067,
+      5.236418827783457,
+      20.40067066234375
+    ],
+    "rate_peak": [
+      2.9261054088644785,
+      7.789319108803558,
+      29.76875039755153
+    ],
+    "altitude_error_rms": 0.1584077473171439,
+    "yaw_tracking_rms": 20.40067066234375,
+    "late_altitude_error_rms": 0.2032642159117834,
+    "late_rate_rms": [
+      0.07231311541086226,
+      0.09741624729016703,
+      0.04895911257054402
+    ],
+    "late_relative_pitch_rms": 0.016604592553777008,
+    "attitude_peak": [
+      2.6735175678134864,
+      8.07909964961316
+    ],
+    "brake_upper_fraction": 0.0,
+    "brake_rate_limit_fraction": 0.0,
+    "brake_travel_mm_per_s": 36.433136045997735,
+    "common_brake_mm": 0.0,
+    "shaft_W": 73.39385200744594,
+    "power_map_outside_fraction": 0.0,
+    "modal_peak": 0.0,
+    "estimated_attitude_peak_deg": [
+      2.6129072231217725,
+      8.068499051441478
+    ],
+    "attitude_estimation_error_peak_deg": [
+      0.3390463958177463,
+      0.5818428661067401
+    ],
+    "gain_file_loaded": true,
+    "ekf_active": true
+  },
+  {
+    "id": "force-7-lqi",
+    "scheme": "lqi",
+    "case": "force-7",
+    "complete": true,
+    "failure": null,
+    "spec": {
+      "id": "force-7-lqi",
+      "experiment": {
+        "kind": "forcing",
+        "hz": 3,
+        "amplitude": 0.02988352797705706,
+        "ratio": 0.7226920054707922,
+        "phase": 0.6868612050380662,
+        "damping": 0.1,
+        "gain": 0,
+        "target_ratio": 0.4,
+        "target_phase": 1.5707963267948966,
+        "target_yaw_rms": 20
+      },
+      "scheme": "lqi"
+    },
+    "duration": 85.00499999992269,
+    "harmonic_rms": [
+      1.5024430532244528,
+      6.644989932561628,
+      17.031119096100113
+    ],
+    "rate_rms": [
+      3.4570730633151903,
+      6.681621276460632,
+      17.058435507913753
+    ],
+    "rate_peak": [
+      6.822733580225689,
+      10.407387880846331,
+      25.175934700584776
+    ],
+    "altitude_error_rms": 0.08060533647482618,
+    "yaw_tracking_rms": 17.058435507913753,
+    "late_altitude_error_rms": 0.15238404341652878,
+    "late_rate_rms": [
+      0.11848155006617771,
+      0.07083790912383882,
+      0.04873501223382881
+    ],
+    "late_relative_pitch_rms": 0.034183506652169876,
+    "attitude_peak": [
+      2.766655916337547,
+      8.432967722474686
+    ],
+    "brake_upper_fraction": 0.0,
+    "brake_rate_limit_fraction": 0.0,
+    "brake_travel_mm_per_s": 0.9310754446519302,
+    "common_brake_mm": 0.0,
+    "shaft_W": 73.7198077466799,
+    "power_map_outside_fraction": 0.0,
+    "modal_peak": 0.0,
+    "estimated_attitude_peak_deg": [
+      2.692958320854791,
+      8.32443904624655
+    ],
+    "attitude_estimation_error_peak_deg": [
+      0.5095976994624607,
+      0.6578226590345082
+    ],
+    "gain_file_loaded": true,
+    "ekf_active": true
+  },
+  {
+    "id": "force-maneuver-baseline",
+    "scheme": "baseline",
+    "case": "force-maneuver",
+    "complete": true,
+    "failure": null,
+    "spec": {
+      "id": "force-maneuver-baseline",
+      "experiment": {
+        "kind": "forcing",
+        "hz": 1.6,
+        "amplitude": 0.03182846508363321,
+        "ratio": 0.6703361602193725,
+        "phase": -1.5428944161933575,
+        "damping": 0.1,
+        "gain": 0,
+        "target_ratio": 0.4,
+        "target_phase": -1.5707963267948966,
+        "target_yaw_rms": 20
+      },
+      "maneuver": true,
+      "scheme": "baseline"
+    },
+    "duration": 85.05499999992266,
+    "harmonic_rms": [
+      2.2275791535340694,
+      5.7345680379712896,
+      20.42365789068889
+    ],
+    "rate_rms": [
+      10.762505352619293,
+      21.179878294265876,
+      40.100895588588166
+    ],
+    "rate_peak": [
+      44.0617435709503,
+      74.13294197921226,
+      71.92829043798122
+    ],
+    "altitude_error_rms": 3.053153285987068,
+    "yaw_tracking_rms": 28.6746339787325,
+    "late_altitude_error_rms": 1.2560472165592678,
+    "late_rate_rms": [
+      0.9796674286180356,
+      4.349950264773422,
+      1.1404526886378763
+    ],
+    "late_relative_pitch_rms": 1.4965984204359395,
+    "attitude_peak": [
+      31.91152231263266,
+      29.409153404919763
+    ],
+    "brake_upper_fraction": 0.0,
+    "brake_rate_limit_fraction": 0.0,
+    "brake_travel_mm_per_s": 35.06345481336928,
+    "common_brake_mm": 0.0,
+    "shaft_W": null,
+    "power_map_outside_fraction": 0.31,
+    "modal_peak": 0.0,
+    "estimated_attitude_peak_deg": [
+      31.88380798905059,
+      29.36085905305294
+    ],
+    "attitude_estimation_error_peak_deg": [
+      2.575332734955907,
+      5.704835522393438
+    ],
+    "gain_file_loaded": true,
+    "ekf_active": true
+  },
+  {
+    "id": "force-maneuver-lqi",
+    "scheme": "lqi",
+    "case": "force-maneuver",
+    "complete": true,
+    "failure": null,
+    "spec": {
+      "id": "force-maneuver-lqi",
+      "experiment": {
+        "kind": "forcing",
+        "hz": 1.6,
+        "amplitude": 0.03182846508363321,
+        "ratio": 0.6703361602193725,
+        "phase": -1.5428944161933575,
+        "damping": 0.1,
+        "gain": 0,
+        "target_ratio": 0.4,
+        "target_phase": -1.5707963267948966,
+        "target_yaw_rms": 20
+      },
+      "maneuver": true,
+      "scheme": "lqi"
+    },
+    "duration": 85.00499999992269,
+    "harmonic_rms": [
+      1.362174183399448,
+      8.91969437966987,
+      18.614082188595887
+    ],
+    "rate_rms": [
+      11.24767875011184,
+      23.465646714082727,
+      40.29762910086652
+    ],
+    "rate_peak": [
+      26.057085512977224,
+      47.205458317847416,
+      70.52516420104443
+    ],
+    "altitude_error_rms": 4.832641126710456,
+    "yaw_tracking_rms": 29.159630325453566,
+    "late_altitude_error_rms": 0.22311448977684406,
+    "late_rate_rms": [
+      0.19495004266427665,
+      0.10808544954138266,
+      0.12397390416620188
+    ],
+    "late_relative_pitch_rms": 0.06382360158917474,
+    "attitude_peak": [
+      38.39741644038949,
+      19.0896256193944
+    ],
+    "brake_upper_fraction": 0.0,
+    "brake_rate_limit_fraction": 0.0,
+    "brake_travel_mm_per_s": 4.995873821820375,
+    "common_brake_mm": 1.7774084036459854,
+    "shaft_W": 98.65597480880766,
+    "power_map_outside_fraction": 0.0,
+    "modal_peak": 0.0,
+    "estimated_attitude_peak_deg": [
+      38.41871783595994,
+      19.01260678120129
+    ],
+    "attitude_estimation_error_peak_deg": [
+      1.759464535617866,
+      2.368563057067149
+    ],
+    "gain_file_loaded": true,
+    "ekf_active": true
+  },
+  {
+    "id": "mode-1.6--0.08-baseline",
+    "scheme": "baseline",
+    "case": "mode-1.6--0.08",
+    "complete": true,
+    "failure": null,
+    "spec": {
+      "id": "mode-1.6--0.08-baseline",
+      "experiment": {
+        "kind": "mode",
+        "hz": 1.6,
+        "amplitude": 0.005,
+        "ratio": 0.4,
+        "phase": 0,
+        "damping": 0.05,
+        "gain": -0.08
+      },
+      "scheme": "baseline"
+    },
+    "duration": 85.0049999999227,
+    "harmonic_rms": [
+      0.0013278347725946714,
+      0.019919546221369426,
+      0.02187039085961868
+    ],
+    "rate_rms": [
+      0.12221315049072776,
+      0.16040496890304962,
+      0.14420760029239327
+    ],
+    "rate_peak": [
+      1.1799613344453423,
+      1.289596963913708,
+      6.3960978495602685
+    ],
+    "altitude_error_rms": 0.15447298398482848,
+    "yaw_tracking_rms": 0.14420760029239327,
+    "late_altitude_error_rms": 0.20537023937563312,
+    "late_rate_rms": [
+      0.08915954423809752,
+      0.11135318705168822,
+      0.056886635432703184
+    ],
+    "late_relative_pitch_rms": 0.02017724051321878,
+    "attitude_peak": [
+      2.535377168392531,
+      7.733459452194016
+    ],
+    "brake_upper_fraction": 0.0,
+    "brake_rate_limit_fraction": 0.0,
+    "brake_travel_mm_per_s": 0.19044725004243981,
+    "common_brake_mm": 0.0,
+    "shaft_W": 73.36466848349679,
+    "power_map_outside_fraction": 0.0,
+    "modal_peak": 0.06415129805654592,
+    "estimated_attitude_peak_deg": [
+      2.4612428726016393,
+      7.70426043093033
+    ],
+    "attitude_estimation_error_peak_deg": [
+      0.18018289662038,
+      0.10624792160263041
+    ],
+    "gain_file_loaded": true,
+    "ekf_active": true
+  },
+  {
+    "id": "mode-1.6--0.08-lqi",
+    "scheme": "lqi",
+    "case": "mode-1.6--0.08",
+    "complete": true,
+    "failure": null,
+    "spec": {
+      "id": "mode-1.6--0.08-lqi",
+      "experiment": {
+        "kind": "mode",
+        "hz": 1.6,
+        "amplitude": 0.005,
+        "ratio": 0.4,
+        "phase": 0,
+        "damping": 0.05,
+        "gain": -0.08
+      },
+      "scheme": "lqi"
+    },
+    "duration": 85.00499999992269,
+    "harmonic_rms": [
+      0.002577790776878196,
+      0.0037402961169310666,
+      0.026207674294132413
+    ],
+    "rate_rms": [
+      0.2940910058466345,
+      0.11261640767931325,
+      0.7163725246479712
+    ],
+    "rate_peak": [
+      1.402815285194416,
+      1.8093421724385923,
+      7.065989916932532
+    ],
+    "altitude_error_rms": 0.17322108327712143,
+    "yaw_tracking_rms": 0.7163725246479712,
+    "late_altitude_error_rms": 0.15335116779900812,
+    "late_rate_rms": [
+      0.15925838607892262,
+      0.08182685199652474,
+      0.061671385947746515
+    ],
+    "late_relative_pitch_rms": 0.041263281602851413,
+    "attitude_peak": [
+      2.5432199772550486,
+      7.800569897134844
+    ],
+    "brake_upper_fraction": 0.0,
+    "brake_rate_limit_fraction": 0.0,
+    "brake_travel_mm_per_s": 0.0250082247530477,
+    "common_brake_mm": 0.0,
+    "shaft_W": 73.81199825137232,
+    "power_map_outside_fraction": 0.0,
+    "modal_peak": 0.05739255869075358,
+    "estimated_attitude_peak_deg": [
+      2.4999775157150164,
+      7.721714125580651
+    ],
+    "attitude_estimation_error_peak_deg": [
+      0.1477993591461768,
+      0.1790107881245433
+    ],
+    "gain_file_loaded": true,
+    "ekf_active": true
+  },
+  {
+    "id": "mode-1.6--0.3-baseline",
+    "scheme": "baseline",
+    "case": "mode-1.6--0.3",
+    "complete": false,
+    "failure": "Attitude guard",
+    "spec": {
+      "id": "mode-1.6--0.3-baseline",
+      "experiment": {
+        "kind": "mode",
+        "hz": 1.6,
+        "amplitude": 0.005,
+        "ratio": 0.4,
+        "phase": 0,
+        "damping": 0.05,
+        "gain": -0.3
+      },
+      "scheme": "baseline"
+    },
+    "duration": 77.3049999999297,
+    "harmonic_rms": [
+      0.6567985872835898,
+      0.5748277131391012,
+      3.288758083451645
+    ],
+    "rate_rms": [
+      30.284158911395583,
+      32.33933349089009,
+      147.58634491727722
+    ],
+    "rate_peak": [
+      584.8299484424585,
+      702.3289893057316,
+      1783.6092145964915
+    ],
+    "altitude_error_rms": 1.4316572750838046,
+    "yaw_tracking_rms": 147.58634491727722,
+    "late_altitude_error_rms": 4.340274698180704,
+    "late_rate_rms": [
+      130.1355613142394,
+      123.24250398026665,
+      600.0175834736715
+    ],
+    "late_relative_pitch_rms": 11.837324012093113,
+    "attitude_peak": [
+      45.67505947785369,
+      45.050941160303374
+    ],
+    "brake_upper_fraction": 0.128,
+    "brake_rate_limit_fraction": 0.6403622250970246,
+    "brake_travel_mm_per_s": 303.1141858176568,
+    "common_brake_mm": 6.059668374010147,
+    "shaft_W": 104.55152898609711,
+    "power_map_outside_fraction": 0.0,
+    "modal_peak": 6.55684749202591,
+    "estimated_attitude_peak_deg": [
+      46.873259179290535,
+      47.52126654660633
+    ],
+    "attitude_estimation_error_peak_deg": [
+      38.55719136792564,
+      30.98740490832489
+    ],
+    "gain_file_loaded": true,
+    "ekf_active": true
+  },
+  {
+    "id": "mode-1.6--0.3-lqi",
+    "scheme": "lqi",
+    "case": "mode-1.6--0.3",
+    "complete": false,
+    "failure": "Controller ownership",
+    "spec": {
+      "id": "mode-1.6--0.3-lqi",
+      "experiment": {
+        "kind": "mode",
+        "hz": 1.6,
+        "amplitude": 0.005,
+        "ratio": 0.4,
+        "phase": 0,
+        "damping": 0.05,
+        "gain": -0.3
+      },
+      "scheme": "lqi"
+    },
+    "duration": 27.704999999974802,
+    "harmonic_rms": [
+      30.795869586995362,
+      22.95605945161875,
+      86.37235066664313
+    ],
+    "rate_rms": [
+      178.98150655019873,
+      169.0558269218253,
+      977.9649013149791
+    ],
+    "rate_peak": [
+      738.4064800775994,
+      597.420768276783,
+      2429.933081918646
+    ],
+    "altitude_error_rms": 9.923233296375269,
+    "yaw_tracking_rms": 977.9649013149791,
+    "late_altitude_error_rms": null,
+    "late_rate_rms": null,
+    "late_relative_pitch_rms": null,
+    "attitude_peak": [
+      41.362710460599686,
+      49.34514019352622
+    ],
+    "brake_upper_fraction": 0.0,
+    "brake_rate_limit_fraction": 0.0018050541516245488,
+    "brake_travel_mm_per_s": 49.850727017092254,
+    "common_brake_mm": 0.4062437894794311,
+    "shaft_W": 148.29190560211882,
+    "power_map_outside_fraction": 0.0,
+    "modal_peak": 8.195141277142994,
+    "estimated_attitude_peak_deg": [
+      80.77732784180418,
+      70.70916455234182
+    ],
+    "attitude_estimation_error_peak_deg": [
+      75.39389871597672,
+      72.19791244148013
+    ],
+    "gain_file_loaded": true,
+    "ekf_active": true
+  },
+  {
+    "id": "mode-1.6-0.08-baseline",
+    "scheme": "baseline",
+    "case": "mode-1.6-0.08",
+    "complete": true,
+    "failure": null,
+    "spec": {
+      "id": "mode-1.6-0.08-baseline",
+      "experiment": {
+        "kind": "mode",
+        "hz": 1.6,
+        "amplitude": 0.005,
+        "ratio": 0.4,
+        "phase": 0,
+        "damping": 0.05,
+        "gain": 0.08
+      },
+      "scheme": "baseline"
+    },
+    "duration": 85.05499999992266,
+    "harmonic_rms": [
+      0.0018747276340145517,
+      0.01369139178353051,
+      0.006718739658111795
+    ],
+    "rate_rms": [
+      0.12285175059946264,
+      0.1731898282328131,
+      0.0836086817333999
+    ],
+    "rate_peak": [
+      0.7798277378165291,
+      1.549389964562641,
+      4.372870582801845
+    ],
+    "altitude_error_rms": 0.17432379763993563,
+    "yaw_tracking_rms": 0.0836086817333999,
+    "late_altitude_error_rms": 0.21049769041270547,
+    "late_rate_rms": [
+      0.10970598753913974,
+      0.13879349870508045,
+      0.07042271567009381
+    ],
+    "late_relative_pitch_rms": 0.021976650025519677,
+    "attitude_peak": [
+      2.703568486827037,
+      7.769789102377596
+    ],
+    "brake_upper_fraction": 0.0,
+    "brake_rate_limit_fraction": 0.0,
+    "brake_travel_mm_per_s": 0.26354821470519485,
+    "common_brake_mm": 0.0,
+    "shaft_W": 73.39915084662731,
+    "power_map_outside_fraction": 0.0,
+    "modal_peak": 0.05024090236467724,
+    "estimated_attitude_peak_deg": [
+      2.760638878783859,
+      7.710261605889833
+    ],
+    "attitude_estimation_error_peak_deg": [
+      0.08353641467826378,
+      0.14434829464744325
+    ],
+    "gain_file_loaded": true,
+    "ekf_active": true
+  },
+  {
+    "id": "mode-1.6-0.08-lqi",
+    "scheme": "lqi",
+    "case": "mode-1.6-0.08",
+    "complete": true,
+    "failure": null,
+    "spec": {
+      "id": "mode-1.6-0.08-lqi",
+      "experiment": {
+        "kind": "mode",
+        "hz": 1.6,
+        "amplitude": 0.005,
+        "ratio": 0.4,
+        "phase": 0,
+        "damping": 0.05,
+        "gain": 0.08
+      },
+      "scheme": "lqi"
+    },
+    "duration": 85.00499999992269,
+    "harmonic_rms": [
+      0.0014847277878011348,
+      0.002198060391264863,
+      0.004547917720743619
+    ],
+    "rate_rms": [
+      0.19883878340212205,
+      0.08156593103490348,
+      0.6824689142072415
+    ],
+    "rate_peak": [
+      1.5755068844669613,
+      1.2105259318578596,
+      5.684276722519689
+    ],
+    "altitude_error_rms": 0.1715544229950468,
+    "yaw_tracking_rms": 0.6824689142072415,
+    "late_altitude_error_rms": 0.15256747898249332,
+    "late_rate_rms": [
+      0.2882619859097404,
+      0.11533493033830408,
+      0.07587677886561153
+    ],
+    "late_relative_pitch_rms": 0.04273303682957968,
+    "attitude_peak": [
+      2.5929554576621117,
+      7.744571515057343
+    ],
+    "brake_upper_fraction": 0.0,
+    "brake_rate_limit_fraction": 0.0,
+    "brake_travel_mm_per_s": 0.02693193434943601,
+    "common_brake_mm": 0.0,
+    "shaft_W": 73.8206206361807,
+    "power_map_outside_fraction": 0.0,
+    "modal_peak": 0.04376471717210974,
+    "estimated_attitude_peak_deg": [
+      2.571371775561867,
+      7.683631552089599
+    ],
+    "attitude_estimation_error_peak_deg": [
+      0.10786221997048528,
+      0.14687462606772783
+    ],
+    "gain_file_loaded": true,
+    "ekf_active": true
+  },
+  {
+    "id": "mode-1.6-0.3-baseline",
+    "scheme": "baseline",
+    "case": "mode-1.6-0.3",
+    "complete": true,
+    "failure": null,
+    "spec": {
+      "id": "mode-1.6-0.3-baseline",
+      "experiment": {
+        "kind": "mode",
+        "hz": 1.6,
+        "amplitude": 0.005,
+        "ratio": 0.4,
+        "phase": 0,
+        "damping": 0.05,
+        "gain": 0.3
+      },
+      "scheme": "baseline"
+    },
+    "duration": 85.0049999999227,
+    "harmonic_rms": [
+      0.0013987293847775191,
+      0.007877625677276493,
+      0.001298296771339135
+    ],
+    "rate_rms": [
+      0.1326403104615177,
+      0.17277644295552425,
+      0.1287963625423707
+    ],
+    "rate_peak": [
+      1.3475310692728633,
+      1.4554425649952505,
+      5.354314233257255
+    ],
+    "altitude_error_rms": 0.15495025635917017,
+    "yaw_tracking_rms": 0.1287963625423707,
+    "late_altitude_error_rms": 0.20575490303198782,
+    "late_rate_rms": [
+      0.10897809430049944,
+      0.1484062689440818,
+      0.08843778416266533
+    ],
+    "late_relative_pitch_rms": 0.02609917775987164,
+    "attitude_peak": [
+      2.6824544919979756,
+      7.794887869500023
+    ],
+    "brake_upper_fraction": 0.0,
+    "brake_rate_limit_fraction": 0.0,
+    "brake_travel_mm_per_s": 0.20968434600632335,
+    "common_brake_mm": 0.0,
+    "shaft_W": 73.3904013910736,
+    "power_map_outside_fraction": 0.0,
+    "modal_peak": 0.03178945960688775,
+    "estimated_attitude_peak_deg": [
+      2.6114124789105975,
+      7.773066049081746
+    ],
+    "attitude_estimation_error_peak_deg": [
+      0.1273853159187297,
+      0.12526208595326693
+    ],
+    "gain_file_loaded": true,
+    "ekf_active": true
+  },
+  {
+    "id": "mode-1.6-0.3-lqi",
+    "scheme": "lqi",
+    "case": "mode-1.6-0.3",
+    "complete": true,
+    "failure": null,
+    "spec": {
+      "id": "mode-1.6-0.3-lqi",
+      "experiment": {
+        "kind": "mode",
+        "hz": 1.6,
+        "amplitude": 0.005,
+        "ratio": 0.4,
+        "phase": 0,
+        "damping": 0.05,
+        "gain": 0.3
+      },
+      "scheme": "lqi"
+    },
+    "duration": 85.00499999992269,
+    "harmonic_rms": [
+      0.0017374249493108647,
+      0.004554698958660371,
+      0.005304760241866196
+    ],
+    "rate_rms": [
+      0.1845099341252166,
+      0.07490343093720786,
+      0.638979066190576
+    ],
+    "rate_peak": [
+      1.361779628954773,
+      1.1168921926064093,
+      6.731318943712873
+    ],
+    "altitude_error_rms": 0.17286606135234497,
+    "yaw_tracking_rms": 0.638979066190576,
+    "late_altitude_error_rms": 0.15538944124697274,
+    "late_rate_rms": [
+      0.2919829900562777,
+      0.10753018140781312,
+      0.07448476872358585
+    ],
+    "late_relative_pitch_rms": 0.0407443941300341,
+    "attitude_peak": [
+      2.6833584960003978,
+      7.777369028012624
+    ],
+    "brake_upper_fraction": 0.0,
+    "brake_rate_limit_fraction": 0.0,
+    "brake_travel_mm_per_s": 0.025008224753047717,
+    "common_brake_mm": 0.0,
+    "shaft_W": 73.85295588625983,
+    "power_map_outside_fraction": 0.0,
+    "modal_peak": 0.03168792770957143,
+    "estimated_attitude_peak_deg": [
+      2.650887984105509,
+      7.727954357161105
+    ],
+    "attitude_estimation_error_peak_deg": [
+      0.11786536114658475,
+      0.16754020983660212
+    ],
+    "gain_file_loaded": true,
+    "ekf_active": true
+  },
+  {
+    "id": "mode-2.1--0.08-baseline",
+    "scheme": "baseline",
+    "case": "mode-2.1--0.08",
+    "complete": true,
+    "failure": null,
+    "spec": {
+      "id": "mode-2.1--0.08-baseline",
+      "experiment": {
+        "kind": "mode",
+        "hz": 2.1,
+        "amplitude": 0.005,
+        "ratio": 0.4,
+        "phase": 0,
+        "damping": 0.05,
+        "gain": -0.08
+      },
+      "scheme": "baseline"
+    },
+    "duration": 85.0049999999227,
+    "harmonic_rms": [
+      0.0018724832060094845,
+      0.020541393653740754,
+      0.009464450140282521
+    ],
+    "rate_rms": [
+      0.1296507324452935,
+      0.15900401976965886,
+      0.19860108164906498
+    ],
+    "rate_peak": [
+      1.2884765260509712,
+      2.2973214720824986,
+      7.043411166241192
+    ],
+    "altitude_error_rms": 0.16243791780026284,
+    "yaw_tracking_rms": 0.19860108164906498,
+    "late_altitude_error_rms": 0.2066630284391956,
+    "late_rate_rms": [
+      0.08826455691746707,
+      0.11470874160990727,
+      0.0559973778931034
+    ],
+    "late_relative_pitch_rms": 0.019180841198650107,
+    "attitude_peak": [
+      2.5200729382558458,
+      7.762806488570362
+    ],
+    "brake_upper_fraction": 0.0,
+    "brake_rate_limit_fraction": 0.0,
+    "brake_travel_mm_per_s": 0.31356466421129053,
+    "common_brake_mm": 0.0,
+    "shaft_W": 73.40872549447725,
+    "power_map_outside_fraction": 0.0,
+    "modal_peak": 0.07029294631158452,
+    "estimated_attitude_peak_deg": [
+      2.4557012413072314,
+      7.713101257037265
+    ],
+    "attitude_estimation_error_peak_deg": [
+      0.14423896520017365,
+      0.20119847767389842
+    ],
+    "gain_file_loaded": true,
+    "ekf_active": true
+  },
+  {
+    "id": "mode-2.1--0.08-lqi",
+    "scheme": "lqi",
+    "case": "mode-2.1--0.08",
+    "complete": true,
+    "failure": null,
+    "spec": {
+      "id": "mode-2.1--0.08-lqi",
+      "experiment": {
+        "kind": "mode",
+        "hz": 2.1,
+        "amplitude": 0.005,
+        "ratio": 0.4,
+        "phase": 0,
+        "damping": 0.05,
+        "gain": -0.08
+      },
+      "scheme": "lqi"
+    },
+    "duration": 85.05499999992264,
+    "harmonic_rms": [
+      0.0001971305303583298,
+      0.007574905350427329,
+      0.00041551266267957873
+    ],
+    "rate_rms": [
+      0.25557350963471853,
+      0.10606325698587817,
+      0.7065152518251148
+    ],
+    "rate_peak": [
+      1.358076682179906,
+      1.7133609499223073,
+      6.468916695736757
+    ],
+    "altitude_error_rms": 0.17279834376287118,
+    "yaw_tracking_rms": 0.7065152518251148,
+    "late_altitude_error_rms": 0.15330663423815438,
+    "late_rate_rms": [
+      0.1509078852677534,
+      0.07794375612597929,
+      0.06218694926373908
+    ],
+    "late_relative_pitch_rms": 0.04202676904284675,
+    "attitude_peak": [
+      2.53530340693844,
+      7.755804687356122
+    ],
+    "brake_upper_fraction": 0.0,
+    "brake_rate_limit_fraction": 0.0,
+    "brake_travel_mm_per_s": 0.0250082247530477,
+    "common_brake_mm": 0.0,
+    "shaft_W": 73.8135222049829,
+    "power_map_outside_fraction": 0.0,
+    "modal_peak": 0.048589686810966336,
+    "estimated_attitude_peak_deg": [
+      2.511324594360523,
+      7.677594518636954
+    ],
+    "attitude_estimation_error_peak_deg": [
+      0.1347581118936887,
+      0.18458503059665077
+    ],
+    "gain_file_loaded": true,
+    "ekf_active": true
+  },
+  {
+    "id": "mode-2.1--0.3-baseline",
+    "scheme": "baseline",
+    "case": "mode-2.1--0.3",
+    "complete": true,
+    "failure": null,
+    "spec": {
+      "id": "mode-2.1--0.3-baseline",
+      "experiment": {
+        "kind": "mode",
+        "hz": 2.1,
+        "amplitude": 0.005,
+        "ratio": 0.4,
+        "phase": 0,
+        "damping": 0.05,
+        "gain": -0.3
+      },
+      "scheme": "baseline"
+    },
+    "duration": 85.05499999992266,
+    "harmonic_rms": [
+      0.2158960691528507,
+      0.16778144768451772,
+      1.0102476459588237
+    ],
+    "rate_rms": [
+      16.85662455989153,
+      17.863355469630392,
+      73.01821425451742
+    ],
+    "rate_peak": [
+      38.26712357519225,
+      34.50665872485219,
+      115.44803430151916
+    ],
+    "altitude_error_rms": 0.7499768309014049,
+    "yaw_tracking_rms": 73.01821425451742,
+    "late_altitude_error_rms": 0.2978884893238961,
+    "late_rate_rms": [
+      16.80085579372809,
+      17.570132979132435,
+      72.59087085532435
+    ],
+    "late_relative_pitch_rms": 1.5322283702527377,
+    "attitude_peak": [
+      7.021934009129092,
+      10.775059228548104
+    ],
+    "brake_upper_fraction": 0.0,
+    "brake_rate_limit_fraction": 0.6754850088183422,
+    "brake_travel_mm_per_s": 257.2918671642529,
+    "common_brake_mm": 1.4668854646759564,
+    "shaft_W": 87.14784680132524,
+    "power_map_outside_fraction": 0.0,
+    "modal_peak": 0.3638895324778955,
+    "estimated_attitude_peak_deg": [
+      6.950091860231855,
+      10.804574648979267
+    ],
+    "attitude_estimation_error_peak_deg": [
+      3.569795369622284,
+      2.9541024941541423
+    ],
+    "gain_file_loaded": true,
+    "ekf_active": true
+  },
+  {
+    "id": "mode-2.1--0.3-lqi",
+    "scheme": "lqi",
+    "case": "mode-2.1--0.3",
+    "complete": true,
+    "failure": null,
+    "spec": {
+      "id": "mode-2.1--0.3-lqi",
+      "experiment": {
+        "kind": "mode",
+        "hz": 2.1,
+        "amplitude": 0.005,
+        "ratio": 0.4,
+        "phase": 0,
+        "damping": 0.05,
+        "gain": -0.3
+      },
+      "scheme": "lqi"
+    },
+    "duration": 85.05499999992264,
+    "harmonic_rms": [
+      0.009199073334588534,
+      0.01767349843437847,
+      0.11587791864462764
+    ],
+    "rate_rms": [
+      0.44728412988094396,
+      0.9927782988152529,
+      4.020260515995691
+    ],
+    "rate_peak": [
+      1.6545622347142102,
+      3.2952473162171905,
+      11.531157410478716
+    ],
+    "altitude_error_rms": 0.1582114725335803,
+    "yaw_tracking_rms": 4.020260515995691,
+    "late_altitude_error_rms": 0.15111438189059634,
+    "late_rate_rms": [
+      0.3334882461958871,
+      0.24114953187854626,
+      0.6745289559784712
+    ],
+    "late_relative_pitch_rms": 0.051044207878180696,
+    "attitude_peak": [
+      2.4843474366740517,
+      7.882071616726386
+    ],
+    "brake_upper_fraction": 0.0,
+    "brake_rate_limit_fraction": 0.0,
+    "brake_travel_mm_per_s": 0.2135317651990997,
+    "common_brake_mm": 0.0,
+    "shaft_W": 73.72743551984874,
+    "power_map_outside_fraction": 0.0,
+    "modal_peak": 0.05708750663879663,
+    "estimated_attitude_peak_deg": [
+      2.4645563681227416,
+      7.793525026966873
+    ],
+    "attitude_estimation_error_peak_deg": [
+      0.2432018239376248,
+      0.23857074882644724
+    ],
+    "gain_file_loaded": true,
+    "ekf_active": true
+  },
+  {
+    "id": "mode-2.1-0.08-baseline",
+    "scheme": "baseline",
+    "case": "mode-2.1-0.08",
+    "complete": true,
+    "failure": null,
+    "spec": {
+      "id": "mode-2.1-0.08-baseline",
+      "experiment": {
+        "kind": "mode",
+        "hz": 2.1,
+        "amplitude": 0.005,
+        "ratio": 0.4,
+        "phase": 0,
+        "damping": 0.05,
+        "gain": 0.08
+      },
+      "scheme": "baseline"
+    },
+    "duration": 85.0049999999227,
+    "harmonic_rms": [
+      0.013174692532812851,
+      0.04017842346556606,
+      0.12363731110356359
+    ],
+    "rate_rms": [
+      0.30342232694965227,
+      0.5148846929842344,
+      1.5478627806632728
+    ],
+    "rate_peak": [
+      1.8827616848084934,
+      2.5075998287803465,
+      9.17211337479932
+    ],
+    "altitude_error_rms": 0.1289029359930251,
+    "yaw_tracking_rms": 1.5478627806632728,
+    "late_altitude_error_rms": 0.17158286062478084,
+    "late_rate_rms": [
+      0.10028263452726487,
+      0.14317857052752803,
+      0.18564522738930614
+    ],
+    "late_relative_pitch_rms": 0.02301583845637512,
+    "attitude_peak": [
+      2.5966851098611805,
+      7.824451064791654
+    ],
+    "brake_upper_fraction": 0.0,
+    "brake_rate_limit_fraction": 0.0,
+    "brake_travel_mm_per_s": 5.613384602261017,
+    "common_brake_mm": 0.0,
+    "shaft_W": 73.4136219778873,
+    "power_map_outside_fraction": 0.0,
+    "modal_peak": 0.0861216203166952,
+    "estimated_attitude_peak_deg": [
+      2.5313910498117855,
+      7.762745633245857
+    ],
+    "attitude_estimation_error_peak_deg": [
+      0.17089930002080678,
+      0.2063195331957104
+    ],
+    "gain_file_loaded": true,
+    "ekf_active": true
+  },
+  {
+    "id": "mode-2.1-0.08-lqi",
+    "scheme": "lqi",
+    "case": "mode-2.1-0.08",
+    "complete": true,
+    "failure": null,
+    "spec": {
+      "id": "mode-2.1-0.08-lqi",
+      "experiment": {
+        "kind": "mode",
+        "hz": 2.1,
+        "amplitude": 0.005,
+        "ratio": 0.4,
+        "phase": 0,
+        "damping": 0.05,
+        "gain": 0.08
+      },
+      "scheme": "lqi"
+    },
+    "duration": 85.05499999992264,
+    "harmonic_rms": [
+      0.00177161448713044,
+      0.0025473848634532,
+      0.002659159892954428
+    ],
+    "rate_rms": [
+      0.26217811730244206,
+      0.099465608418968,
+      0.6825944302543074
+    ],
+    "rate_peak": [
+      1.4445542463045074,
+      1.5686479055722418,
+      5.757124745268655
+    ],
+    "altitude_error_rms": 0.17168713137059122,
+    "yaw_tracking_rms": 0.6825944302543074,
+    "late_altitude_error_rms": 0.15216467176706153,
+    "late_rate_rms": [
+      0.286128941529859,
+      0.11268510963789996,
+      0.07405430803650903
+    ],
+    "late_relative_pitch_rms": 0.04268558305819807,
+    "attitude_peak": [
+      2.58779461870432,
+      7.7400505091658225
+    ],
+    "brake_upper_fraction": 0.0,
+    "brake_rate_limit_fraction": 0.0,
+    "brake_travel_mm_per_s": 0.02693193434943601,
+    "common_brake_mm": 0.0,
+    "shaft_W": 73.81361584568812,
+    "power_map_outside_fraction": 0.0,
+    "modal_peak": 0.043306143775696956,
+    "estimated_attitude_peak_deg": [
+      2.5675788861383944,
+      7.688143745810039
+    ],
+    "attitude_estimation_error_peak_deg": [
+      0.12239935818573144,
+      0.1731113459036635
+    ],
+    "gain_file_loaded": true,
+    "ekf_active": true
+  },
+  {
+    "id": "mode-2.1-0.3-baseline",
+    "scheme": "baseline",
+    "case": "mode-2.1-0.3",
+    "complete": true,
+    "failure": null,
+    "spec": {
+      "id": "mode-2.1-0.3-baseline",
+      "experiment": {
+        "kind": "mode",
+        "hz": 2.1,
+        "amplitude": 0.005,
+        "ratio": 0.4,
+        "phase": 0,
+        "damping": 0.05,
+        "gain": 0.3
+      },
+      "scheme": "baseline"
+    },
+    "duration": 85.0049999999227,
+    "harmonic_rms": [
+      0.1382327238758378,
+      0.34755666332141333,
+      4.465189261228577
+    ],
+    "rate_rms": [
+      3.6424223364104042,
+      10.62480893633969,
+      118.66818721051634
+    ],
+    "rate_peak": [
+      8.647042147196018,
+      20.557110433736074,
+      171.3097272995883
+    ],
+    "altitude_error_rms": 0.6234603755674967,
+    "yaw_tracking_rms": 118.66818721051634,
+    "late_altitude_error_rms": 0.2955991722422202,
+    "late_rate_rms": [
+      3.3912161313068774,
+      10.66456924101649,
+      118.80362534354471
+    ],
+    "late_relative_pitch_rms": 0.9380062522473273,
+    "attitude_peak": [
+      3.976570399887737,
+      10.22477352897168
+    ],
+    "brake_upper_fraction": 0.0,
+    "brake_rate_limit_fraction": 0.6047058823529412,
+    "brake_travel_mm_per_s": 308.30731386112785,
+    "common_brake_mm": 3.3005901346149464,
+    "shaft_W": 83.12149136746852,
+    "power_map_outside_fraction": 0.0,
+    "modal_peak": 0.5866157801269578,
+    "estimated_attitude_peak_deg": [
+      3.894523918982965,
+      10.189645034040202
+    ],
+    "attitude_estimation_error_peak_deg": [
+      1.6376766552808988,
+      0.9172307550934136
+    ],
+    "gain_file_loaded": true,
+    "ekf_active": true
+  },
+  {
+    "id": "mode-2.1-0.3-lqi",
+    "scheme": "lqi",
+    "case": "mode-2.1-0.3",
+    "complete": true,
+    "failure": null,
+    "spec": {
+      "id": "mode-2.1-0.3-lqi",
+      "experiment": {
+        "kind": "mode",
+        "hz": 2.1,
+        "amplitude": 0.005,
+        "ratio": 0.4,
+        "phase": 0,
+        "damping": 0.05,
+        "gain": 0.3
+      },
+      "scheme": "lqi"
+    },
+    "duration": 85.00499999992269,
+    "harmonic_rms": [
+      0.002789800443316241,
+      0.002029777966884658,
+      0.0012664307731143508
+    ],
+    "rate_rms": [
+      0.26934184673091593,
+      0.09531234193099222,
+      0.6406021546971515
+    ],
+    "rate_peak": [
+      1.3787962658637924,
+      1.4816650918149987,
+      7.299428765407811
+    ],
+    "altitude_error_rms": 0.13734968363886838,
+    "yaw_tracking_rms": 0.6406021546971515,
+    "late_altitude_error_rms": 0.12179145105532847,
+    "late_rate_rms": [
+      0.1444820389248249,
+      0.08469838743841265,
+      0.05995676771167805
+    ],
+    "late_relative_pitch_rms": 0.038782640069935,
+    "attitude_peak": [
+      2.680519382763797,
+      7.774160207293706
+    ],
+    "brake_upper_fraction": 0.0,
+    "brake_rate_limit_fraction": 0.0,
+    "brake_travel_mm_per_s": 0.025008224753047717,
+    "common_brake_mm": 0.0,
+    "shaft_W": 73.84971057611784,
+    "power_map_outside_fraction": 0.0,
+    "modal_peak": 0.034000467744511195,
+    "estimated_attitude_peak_deg": [
+      2.6462630922637644,
+      7.730865725294822
+    ],
+    "attitude_estimation_error_peak_deg": [
+      0.13578756389003388,
+      0.17733126160948132
+    ],
+    "gain_file_loaded": true,
+    "ekf_active": true
+  },
+  {
+    "id": "mode-damped--0.3-baseline",
+    "scheme": "baseline",
+    "case": "mode-damped--0.3",
+    "complete": true,
+    "failure": null,
+    "spec": {
+      "id": "mode-damped--0.3-baseline",
+      "experiment": {
+        "kind": "mode",
+        "hz": 1.6,
+        "amplitude": 0.005,
+        "ratio": 0.4,
+        "phase": 0,
+        "damping": 0.2,
+        "gain": -0.3
+      },
+      "maneuver": true,
+      "scheme": "baseline"
+    },
+    "duration": 85.0049999999227,
+    "harmonic_rms": [
+      0.1260263677851652,
+      0.07209157609890113,
+      0.44687190873079313
+    ],
+    "rate_rms": [
+      10.67820295315327,
+      18.335600038408227,
+      34.61603026625889
+    ],
+    "rate_peak": [
+      37.2684661924079,
+      74.77705814018086,
+      54.85956986207974
+    ],
+    "altitude_error_rms": 3.1533098534804944,
+    "yaw_tracking_rms": 20.551707514781558,
+    "late_altitude_error_rms": 1.2309414190713552,
+    "late_rate_rms": [
+      0.9166817537665058,
+      4.45575000026271,
+      2.340043850072181
+    ],
+    "late_relative_pitch_rms": 2.024043596783112,
+    "attitude_peak": [
+      31.219209272879475,
+      24.029083471227768
+    ],
+    "brake_upper_fraction": 0.0,
+    "brake_rate_limit_fraction": 0.0,
+    "brake_travel_mm_per_s": 14.454753907261574,
+    "common_brake_mm": 0.0,
+    "shaft_W": null,
+    "power_map_outside_fraction": 0.322,
+    "modal_peak": 0.22752617227158,
+    "estimated_attitude_peak_deg": [
+      31.114605745102097,
+      23.937000710503938
+    ],
+    "attitude_estimation_error_peak_deg": [
+      2.7735088138952335,
+      5.803371931138429
+    ],
+    "gain_file_loaded": true,
+    "ekf_active": true
+  },
+  {
+    "id": "mode-damped--0.3-lqi",
+    "scheme": "lqi",
+    "case": "mode-damped--0.3",
+    "complete": true,
+    "failure": null,
+    "spec": {
+      "id": "mode-damped--0.3-lqi",
+      "experiment": {
+        "kind": "mode",
+        "hz": 1.6,
+        "amplitude": 0.005,
+        "ratio": 0.4,
+        "phase": 0,
+        "damping": 0.2,
+        "gain": -0.3
+      },
+      "maneuver": true,
+      "scheme": "lqi"
+    },
+    "duration": 85.00499999992269,
+    "harmonic_rms": [
+      0.021450785227415923,
+      0.07132156477800006,
+      0.188527212144955
+    ],
+    "rate_rms": [
+      13.248185447476638,
+      24.306404320370895,
+      36.62852054224523
+    ],
+    "rate_peak": [
+      28.240480771293914,
+      42.95824763722052,
+      48.072226396517536
+    ],
+    "altitude_error_rms": 4.907194042897082,
+    "yaw_tracking_rms": 23.67917989902081,
+    "late_altitude_error_rms": 0.2283901835564509,
+    "late_rate_rms": [
+      0.21658340077353505,
+      0.09689665841705855,
+      0.20296560073253742
+    ],
+    "late_relative_pitch_rms": 0.041789570405154096,
+    "attitude_peak": [
+      41.582354908730736,
+      19.45243577900515
+    ],
+    "brake_upper_fraction": 0.0,
+    "brake_rate_limit_fraction": 0.0,
+    "brake_travel_mm_per_s": 4.484167069181093,
+    "common_brake_mm": 1.6046208076985466,
+    "shaft_W": 102.61360367152258,
+    "power_map_outside_fraction": 0.0,
+    "modal_peak": 0.10122081952362284,
+    "estimated_attitude_peak_deg": [
+      41.591699290362286,
+      19.40317919605742
+    ],
+    "attitude_estimation_error_peak_deg": [
+      2.0017666558155156,
+      1.4507113959986384
+    ],
+    "gain_file_loaded": true,
+    "ekf_active": true
+  },
+  {
+    "id": "mode-damped-0.3-baseline",
+    "scheme": "baseline",
+    "case": "mode-damped-0.3",
+    "complete": true,
+    "failure": null,
+    "spec": {
+      "id": "mode-damped-0.3-baseline",
+      "experiment": {
+        "kind": "mode",
+        "hz": 1.6,
+        "amplitude": 0.005,
+        "ratio": 0.4,
+        "phase": 0,
+        "damping": 0.2,
+        "gain": 0.3
+      },
+      "maneuver": true,
+      "scheme": "baseline"
+    },
+    "duration": 85.0049999999227,
+    "harmonic_rms": [
+      0.0768653213552425,
+      0.2751427712248585,
+      0.15543553145074604
+    ],
+    "rate_rms": [
+      9.170287004612616,
+      17.85539023742529,
+      34.4474858322417
+    ],
+    "rate_peak": [
+      38.696767584862755,
+      62.24356538497381,
+      42.94495086144815
+    ],
+    "altitude_error_rms": 2.9791404699242934,
+    "yaw_tracking_rms": 19.30341186609127,
+    "late_altitude_error_rms": 1.373408358949699,
+    "late_rate_rms": [
+      0.3640428259075639,
+      3.911640837410629,
+      0.8215968555894312
+    ],
+    "late_relative_pitch_rms": 1.0679821361652766,
+    "attitude_peak": [
+      29.23255894065425,
+      26.696920090972085
+    ],
+    "brake_upper_fraction": 0.0,
+    "brake_rate_limit_fraction": 0.0,
+    "brake_travel_mm_per_s": 6.357860216063283,
+    "common_brake_mm": 0.0,
+    "shaft_W": null,
+    "power_map_outside_fraction": 0.314,
+    "modal_peak": 0.11056733406499766,
+    "estimated_attitude_peak_deg": [
+      29.262374555410528,
+      26.699648305234017
+    ],
+    "attitude_estimation_error_peak_deg": [
+      2.1340032336555055,
+      5.5396587262704315
+    ],
+    "gain_file_loaded": true,
+    "ekf_active": true
+  },
+  {
+    "id": "mode-damped-0.3-lqi",
+    "scheme": "lqi",
+    "case": "mode-damped-0.3",
+    "complete": true,
+    "failure": null,
+    "spec": {
+      "id": "mode-damped-0.3-lqi",
+      "experiment": {
+        "kind": "mode",
+        "hz": 1.6,
+        "amplitude": 0.005,
+        "ratio": 0.4,
+        "phase": 0,
+        "damping": 0.2,
+        "gain": 0.3
+      },
+      "maneuver": true,
+      "scheme": "lqi"
+    },
+    "duration": 85.00499999992269,
+    "harmonic_rms": [
+      0.035768710459835866,
+      0.05005241802858291,
+      0.21498825469488841
+    ],
+    "rate_rms": [
+      9.342480477111705,
+      18.85002228678128,
+      35.006098931880494
+    ],
+    "rate_peak": [
+      22.668307911585554,
+      31.405738361014947,
+      45.48863020872458
+    ],
+    "altitude_error_rms": 4.844665465655821,
+    "yaw_tracking_rms": 21.1432032110519,
+    "late_altitude_error_rms": 0.21746823575290317,
+    "late_rate_rms": [
+      0.25783352225458583,
+      0.12527617284065304,
+      0.07869842445628933
+    ],
+    "late_relative_pitch_rms": 0.0727670727923764,
+    "attitude_peak": [
+      34.15967936985662,
+      16.579702279007
+    ],
+    "brake_upper_fraction": 0.0,
+    "brake_rate_limit_fraction": 0.0,
+    "brake_travel_mm_per_s": 4.2821775615603235,
+    "common_brake_mm": 1.8816569198676063,
+    "shaft_W": 97.78432948331752,
+    "power_map_outside_fraction": 0.0,
+    "modal_peak": 0.08103536974269478,
+    "estimated_attitude_peak_deg": [
+      34.16726317199092,
+      16.539458461989494
+    ],
+    "attitude_estimation_error_peak_deg": [
+      1.1814654786860501,
+      1.1257015330553202
+    ],
+    "gain_file_loaded": true,
+    "ekf_active": true
+  },
+  {
+    "id": "quiet-baseline",
+    "scheme": "baseline",
+    "case": "quiet",
+    "complete": true,
+    "failure": null,
+    "spec": {
+      "id": "quiet-baseline",
+      "experiment": {
+        "kind": "forcing",
+        "hz": 1.6,
+        "amplitude": 0,
+        "ratio": 0.4,
+        "phase": -1.57079632679,
+        "damping": 0.1,
+        "gain": 0
+      },
+      "scheme": "baseline"
+    },
+    "duration": 85.0049999999227,
+    "harmonic_rms": [
+      0.0009417861355018815,
+      0.014569063808743782,
+      0.006587792495053019
+    ],
+    "rate_rms": [
+      0.11359436289609158,
+      0.16641936689844092,
+      0.07767095640980057
+    ],
+    "rate_peak": [
+      0.6988758829893604,
+      1.2113482832008347,
+      0.5889858641399949
+    ],
+    "altitude_error_rms": 0.17242902382937167,
+    "yaw_tracking_rms": 0.07767095640980057,
+    "late_altitude_error_rms": 0.21218939238289594,
+    "late_rate_rms": [
+      0.10984501627274162,
+      0.14709704674949287,
+      0.06891156724058291
+    ],
+    "late_relative_pitch_rms": 0.024693048900293765,
+    "attitude_peak": [
+      2.660207909592996,
+      7.769321847673418
+    ],
+    "brake_upper_fraction": 0.0,
+    "brake_rate_limit_fraction": 0.0,
+    "brake_travel_mm_per_s": 0.2962512778437951,
+    "common_brake_mm": 0.0,
+    "shaft_W": 73.38269308295412,
+    "power_map_outside_fraction": 0.0,
+    "modal_peak": 0.0,
+    "estimated_attitude_peak_deg": [
+      2.6976965511480757,
+      7.713185780628244
+    ],
+    "attitude_estimation_error_peak_deg": [
+      0.051791112243051884,
+      0.13798786162368515
+    ],
+    "gain_file_loaded": true,
+    "ekf_active": true
+  },
+  {
+    "id": "quiet-lqi",
+    "scheme": "lqi",
+    "case": "quiet",
+    "complete": true,
+    "failure": null,
+    "spec": {
+      "id": "quiet-lqi",
+      "experiment": {
+        "kind": "forcing",
+        "hz": 1.6,
+        "amplitude": 0,
+        "ratio": 0.4,
+        "phase": -1.57079632679,
+        "damping": 0.1,
+        "gain": 0
+      },
+      "scheme": "lqi"
+    },
+    "duration": 85.00499999992269,
+    "harmonic_rms": [
+      0.00043324685218662403,
+      0.0023002058180932178,
+      0.004317421061593325
+    ],
+    "rate_rms": [
+      0.20981289877442558,
+      0.08759929918751637,
+      0.6935301156992668
+    ],
+    "rate_peak": [
+      1.3951807748136034,
+      0.5342526011331251,
+      3.8010226692081956
+    ],
+    "altitude_error_rms": 0.1728782330477653,
+    "yaw_tracking_rms": 0.6935301156992668,
+    "late_altitude_error_rms": 0.15363791327327006,
+    "late_rate_rms": [
+      0.15850704865073684,
+      0.08378093066745984,
+      0.053943168664103855
+    ],
+    "late_relative_pitch_rms": 0.03896607722757154,
+    "attitude_peak": [
+      2.5458327434582237,
+      7.74394048511275
+    ],
+    "brake_upper_fraction": 0.0,
+    "brake_rate_limit_fraction": 0.0,
+    "brake_travel_mm_per_s": 0.0250082247530477,
+    "common_brake_mm": 0.0,
+    "shaft_W": 73.80397164192293,
+    "power_map_outside_fraction": 0.0,
+    "modal_peak": 0.0,
+    "estimated_attitude_peak_deg": [
+      2.517048933215228,
+      7.701638492062692
+    ],
+    "attitude_estimation_error_peak_deg": [
+      0.12430036775944586,
+      0.10988338700525446
+    ],
+    "gain_file_loaded": true,
+    "ekf_active": true
+  },
+  {
+    "id": "quiet-maneuver-baseline",
+    "scheme": "baseline",
+    "case": "quiet-maneuver",
+    "complete": true,
+    "failure": null,
+    "spec": {
+      "id": "quiet-maneuver-baseline",
+      "experiment": {
+        "kind": "forcing",
+        "hz": 1.6,
+        "amplitude": 0,
+        "ratio": 0.4,
+        "phase": -1.57079632679,
+        "damping": 0.1,
+        "gain": 0
+      },
+      "maneuver": true,
+      "scheme": "baseline"
+    },
+    "duration": 85.05499999992266,
+    "harmonic_rms": [
+      0.020899552791874575,
+      0.08472220528018844,
+      0.3725796460553946
+    ],
+    "rate_rms": [
+      9.859261632880177,
+      18.140228256502514,
+      34.44852229922856
+    ],
+    "rate_peak": [
+      29.651331420816962,
+      65.44472228298218,
+      44.379933878275224
+    ],
+    "altitude_error_rms": 3.1533429024508908,
+    "yaw_tracking_rms": 19.422104154312006,
+    "late_altitude_error_rms": 1.2758688397332785,
+    "late_rate_rms": [
+      0.5211041125618919,
+      3.5397390753928972,
+      1.1162478207388433
+    ],
+    "late_relative_pitch_rms": 0.9776843924053945,
+    "attitude_peak": [
+      30.93881434456734,
+      24.67841494640573
+    ],
+    "brake_upper_fraction": 0.0,
+    "brake_rate_limit_fraction": 0.0,
+    "brake_travel_mm_per_s": 6.3328519913102355,
+    "common_brake_mm": 9.599310885968814e-05,
+    "shaft_W": null,
+    "power_map_outside_fraction": 0.314,
+    "modal_peak": 0.0,
+    "estimated_attitude_peak_deg": [
+      31.002344755903767,
+      24.649271620173085
+    ],
+    "attitude_estimation_error_peak_deg": [
+      2.105561615423369,
+      5.486740833549817
+    ],
+    "gain_file_loaded": true,
+    "ekf_active": true
+  },
+  {
+    "id": "quiet-maneuver-lqi",
+    "scheme": "lqi",
+    "case": "quiet-maneuver",
+    "complete": true,
+    "failure": null,
+    "spec": {
+      "id": "quiet-maneuver-lqi",
+      "experiment": {
+        "kind": "forcing",
+        "hz": 1.6,
+        "amplitude": 0,
+        "ratio": 0.4,
+        "phase": -1.57079632679,
+        "damping": 0.1,
+        "gain": 0
+      },
+      "maneuver": true,
+      "scheme": "lqi"
+    },
+    "duration": 85.00499999992269,
+    "harmonic_rms": [
+      0.01211476075698935,
+      0.015500122834856758,
+      0.28969704909704197
+    ],
+    "rate_rms": [
+      11.124929298554274,
+      21.54198001613569,
+      35.920430499895545
+    ],
+    "rate_peak": [
+      25.14792517861236,
+      36.28158361266612,
+      46.60150952408389
+    ],
+    "altitude_error_rms": 4.8734758434391345,
+    "yaw_tracking_rms": 22.708554462557963,
+    "late_altitude_error_rms": 0.2240428652771592,
+    "late_rate_rms": [
+      0.27016036700867596,
+      0.1154541721135987,
+      0.08648419703473935
+    ],
+    "late_relative_pitch_rms": 0.04880334218032659,
+    "attitude_peak": [
+      37.6263635587028,
+      18.026211662650162
+    ],
+    "brake_upper_fraction": 0.0,
+    "brake_rate_limit_fraction": 0.0,
+    "brake_travel_mm_per_s": 4.361049655012242,
+    "common_brake_mm": 1.6647124938447118,
+    "shaft_W": 100.78020555494183,
+    "power_map_outside_fraction": 0.0,
+    "modal_peak": 0.0,
+    "estimated_attitude_peak_deg": [
+      37.6364972514534,
+      18.008748265675127
+    ],
+    "attitude_estimation_error_peak_deg": [
+      1.5418504616112045,
+      1.3445992833491687
+    ],
+    "gain_file_loaded": true,
+    "ekf_active": true
+  },
+  {
+    "id": "repeat-force-2-baseline",
+    "scheme": "baseline",
+    "case": "repeat-force-2",
+    "complete": true,
+    "failure": null,
+    "spec": {
+      "id": "repeat-force-2-baseline",
+      "experiment": {
+        "kind": "forcing",
+        "hz": 1.6,
+        "amplitude": 0.03182846508363321,
+        "ratio": 0.6703361602193725,
+        "phase": -1.5428944161933575,
+        "damping": 0.1,
+        "gain": 0,
+        "target_ratio": 0.4,
+        "target_phase": -1.5707963267948966,
+        "target_yaw_rms": 20
+      },
+      "scheme": "baseline"
+    },
+    "duration": 85.0049999999227,
+    "harmonic_rms": [
+      2.6454859574914624,
+      3.92536438679254,
+      22.751304217207686
+    ],
+    "rate_rms": [
+      2.832796553335967,
+      4.3007064847025696,
+      22.783881002903836
+    ],
+    "rate_peak": [
+      6.661886492814037,
+      8.264493726118392,
+      34.58202676313233
+    ],
+    "altitude_error_rms": 0.21649241738087568,
+    "yaw_tracking_rms": 22.783881002903836,
+    "late_altitude_error_rms": 0.1657293872431487,
+    "late_rate_rms": [
+      0.1151379389693956,
+      0.17245191776369018,
+      0.08730058498873189
+    ],
+    "late_relative_pitch_rms": 0.029822996138683854,
+    "attitude_peak": [
+      3.064240510070208,
+      8.464778473789695
+    ],
+    "brake_upper_fraction": 0.0,
+    "brake_rate_limit_fraction": 0.0,
+    "brake_travel_mm_per_s": 76.45206677966324,
+    "common_brake_mm": 0.0,
+    "shaft_W": 74.7364383439003,
+    "power_map_outside_fraction": 0.0,
+    "modal_peak": 0.0,
+    "estimated_attitude_peak_deg": [
+      2.953097174452128,
+      8.417146911398424
+    ],
+    "attitude_estimation_error_peak_deg": [
+      0.5905688982635411,
+      0.584946075698781
+    ],
+    "gain_file_loaded": true,
+    "ekf_active": true
+  },
+  {
+    "id": "repeat-force-2-lqi",
+    "scheme": "lqi",
+    "case": "repeat-force-2",
+    "complete": true,
+    "failure": null,
+    "spec": {
+      "id": "repeat-force-2-lqi",
+      "experiment": {
+        "kind": "forcing",
+        "hz": 1.6,
+        "amplitude": 0.03182846508363321,
+        "ratio": 0.6703361602193725,
+        "phase": -1.5428944161933575,
+        "damping": 0.1,
+        "gain": 0,
+        "target_ratio": 0.4,
+        "target_phase": -1.5707963267948966,
+        "target_yaw_rms": 20
+      },
+      "scheme": "lqi"
+    },
+    "duration": 85.00499999992269,
+    "harmonic_rms": [
+      0.899991733125934,
+      10.920975737234807,
+      19.85991759329488
+    ],
+    "rate_rms": [
+      1.0977801498808337,
+      10.965845232334024,
+      19.876484669109725
+    ],
+    "rate_peak": [
+      2.8284376087031498,
+      16.578782574882943,
+      30.004076261848354
+    ],
+    "altitude_error_rms": 0.06465199167948125,
+    "yaw_tracking_rms": 19.876484669109725,
+    "late_altitude_error_rms": 0.15322114390660602,
+    "late_rate_rms": [
+      0.1098164014637621,
+      0.0693786548944445,
+      0.06249486131513458
+    ],
+    "late_relative_pitch_rms": 0.03893310526560545,
+    "attitude_peak": [
+      2.9000801899176953,
+      9.531707576774405
+    ],
+    "brake_upper_fraction": 0.0,
+    "brake_rate_limit_fraction": 0.0,
+    "brake_travel_mm_per_s": 0.9079909294952706,
+    "common_brake_mm": 0.0,
+    "shaft_W": 73.80096102221053,
+    "power_map_outside_fraction": 0.0,
+    "modal_peak": 0.0,
+    "estimated_attitude_peak_deg": [
+      2.8380469067514946,
+      9.46838986429155
+    ],
+    "attitude_estimation_error_peak_deg": [
+      0.5502690635595116,
+      1.3099493838981573
+    ],
+    "gain_file_loaded": true,
+    "ekf_active": true
+  }
+]

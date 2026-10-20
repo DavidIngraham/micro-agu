@@ -3,7 +3,7 @@ import { test, expect } from "@playwright/test";
 test("native AUTO landing mission, cancellation and mobile display", async ({
   page,
 }) => {
-  test.setTimeout(600000);
+  test.setTimeout(700000);
   const errors: string[] = [];
   page.on("pageerror", (e) => errors.push(e.message));
   await page.goto("/simulator.html");
@@ -27,9 +27,10 @@ test("native AUTO landing mission, cancellation and mobile display", async ({
     timeout: 10000,
   });
   await expect(page.locator("#status")).toContainText("AUTO landing approach", {
-    timeout: 240000,
+    timeout: 300000,
   });
   await expect(page.locator("#controller-status")).toHaveText("LQI active");
+  await page.locator("#panel-toggle").click();
   await page.setViewportSize({ width: 390, height: 844 });
   await page.screenshot({ path: "test-results/landing-mobile.png" });
   await page.locator("#mode").selectOption("CRUISE");

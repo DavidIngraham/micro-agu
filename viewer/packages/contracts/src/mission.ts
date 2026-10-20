@@ -11,7 +11,7 @@ export interface Home {
   lon: number;
   alt: number;
 }
-const supported = new Set([16, 17, 18, 19, 20, 21, 22]);
+const supported = new Set([16, 17, 18, 19, 20, 21, 22, 31]);
 export function validateMission(items: Waypoint[]) {
   if (!items.length || items.length > 500)
     throw Error("Mission must contain 1–500 items.");

@@ -1,0 +1,10 @@
+{
+  "unit_tests_passed": 51,
+  "viewer_build_passed": true,
+  "browser_mission_cancellation_landing_mobile_passed": true,
+  "firmware_changed": false,
+  "flight_cases": [
+    "calm",
+    "crosswind"
+  ]
+}

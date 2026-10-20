@@ -88,8 +88,12 @@ The original raw-range comparison remains in
 ## Native AUTO landing
 
 Open the flight panel, choose **Landing mission**, then **Upload** and **Fly
-mission**. The example flies to a 60 m approach south of home and executes
-`MAV_CMD_NAV_LAND` at home. The mode display remains **AUTO** throughout.
+mission**. The example captures a clockwise 40 m orbit at 60 m, spirals to 30 m using
+`MAV_CMD_NAV_LOITER_TO_ALT`, then exits tangentially north onto a 200 m final
+approach and executes `MAV_CMD_NAV_LAND` at home. The circle centre is 280 m
+south and 40 m east of home; its western edge is tangent to the approach line.
+The loiter-to-altitude item sets param4=1 for cross-track tracking from the
+actual exit. Capture uses one full orbit before descent. The mode display remains **AUTO** throughout.
 Choose CRUISE or another mode to take over. Imported missions can also contain
 ordinary NAV_LAND items. There is no browser LAND mode or land-ahead command.
 

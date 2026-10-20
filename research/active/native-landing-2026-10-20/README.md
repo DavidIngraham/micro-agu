@@ -46,3 +46,8 @@ that display-only endpoint has a 0.6 m height tolerance, 0.3 m/s vertical and
 mission field elevation if EKF terrain height is unavailable. Canopy collapse
 and ground rollout remain unvalidated. Complete lidar loss only demonstrates
 the known-flat-field fallback, not arbitrary-terrain landing.
+
+The original three-item fixed landing mission in this evidence is pinned at
+micro-agu commit `872bd46`. The current example adds a tangential spiral; see
+[landing-spiral-2026-10-20](../landing-spiral-2026-10-20/README.md). Check out the
+pinned commit to reproduce the original mission exactly.

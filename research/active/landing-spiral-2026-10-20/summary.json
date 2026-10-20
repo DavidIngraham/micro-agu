@@ -1,0 +1,24 @@
+[
+  {
+    "case": "calm",
+    "spiral_start_alt_m": 60.027,
+    "spiral_exit_alt_m": 29.994,
+    "descending_orbit_deg": 272.3457766045386,
+    "exit_course_deg": -8.451454395850389,
+    "final_course_deg": 1.0658450275615836,
+    "final_cross_track_m": -0.05948916447385637,
+    "sink_at_contact_m_s": 0.8970545330755171,
+    "spot_error_m": 10.235686291516442
+  },
+  {
+    "case": "crosswind",
+    "spiral_start_alt_m": 59.652,
+    "spiral_exit_alt_m": 30.144,
+    "descending_orbit_deg": 272.80293524369057,
+    "exit_course_deg": -6.652087301525739,
+    "final_course_deg": 1.0006978778588334,
+    "final_cross_track_m": -0.14893615074658012,
+    "sink_at_contact_m_s": 0.8741961044762073,
+    "spot_error_m": 11.386217762511544
+  }
+]

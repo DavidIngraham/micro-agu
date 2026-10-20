@@ -68,7 +68,7 @@
   "study": "../../research/active/controller-pipeline-2026-10-18/RESULTS.md",
   "published": {
     "url": "https://davidingraham.github.io/assets/microagu-viewer/simulator.html",
-    "site_commit": "a710f08860ef0f97b2c416e4943be8581f6a1d87",
+    "site_commit": "8e0cd55443b3e4e7db14fb62450be20b99e13f3f",
     "firmware_sha256": "73459525151117187c759ca6b15411d010948795bd3ca2e79d313066ec718b21"
   },
   "sha256": {
@@ -83,5 +83,5 @@
     "controllers/lqi-gains.bin": "viewer/assets/runtime/lqi-gains.bin",
     "validation/controller-acceptance.json": "viewer/assets/runtime/lqi-pipeline-validation.json"
   },
-  "landing_validation": "../../research/active/native-landing-2026-10-20/README.md"
+  "landing_validation": "../../research/active/landing-spiral-2026-10-20/README.md"
 }

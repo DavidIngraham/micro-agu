@@ -1,3 +1,4 @@
+import { missionPreview } from "./missions/preview";
 import { ensureIsolation } from "@microagu/sim-browser/session/isolation";
 import {
   joystick,
@@ -501,12 +502,7 @@ export const applet = registerApplet(definition, async (scope) => {
     items = next;
     uploaded = false;
     view.routePoints(
-      items
-        .filter((w) => w.command !== 20)
-        .map((w) => {
-          const p = offset(w.lat, w.lon);
-          return [p.north, p.east, -(w.frame === 3 ? w.alt : w.alt - HOME.alt)];
-        }),
+      missionPreview(items, HOME).map((p) => [p.north, p.east, -p.alt]),
     );
     el("mission-info").textContent =
       `${label} · ${items.length} items. Upload before flying.`;
@@ -517,7 +513,7 @@ export const applet = registerApplet(definition, async (scope) => {
   scope.property(el("landing-example"), "onclick", () =>
     setMission(
       landingMission(),
-      "Native AUTO landing · 60 m approach, touchdown at home",
+      "Native AUTO landing · spiral 60→30 m, tangent approach to home",
     ),
   );
   scope.property(el("example"), "onclick", () =>
@@ -633,6 +629,7 @@ export const applet = registerApplet(definition, async (scope) => {
       { east: 0, north: 0 },
       craft,
       ...points,
+      ...missionPreview(items, HOME),
       ...(target ? [target] : []),
     ];
     const minE = Math.min(...all.map((p) => p.east)) - 40,
@@ -645,7 +642,7 @@ export const applet = registerApplet(definition, async (scope) => {
     ctx.strokeStyle = "#b7ee75";
     ctx.lineWidth = 1.4;
     ctx.beginPath();
-    points.forEach((p, i) =>
+    missionPreview(items, HOME).forEach((p, i) =>
       i ? ctx.lineTo(x(p.east), y(p.north)) : ctx.moveTo(x(p.east), y(p.north)),
     );
     ctx.stroke();

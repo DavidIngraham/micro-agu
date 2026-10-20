@@ -1,0 +1,38 @@
+[
+  {
+    "id": "calm-feedback",
+    "code": 0,
+    "stdout": "{\"id\":\"calm-feedback\",\"complete\":true,\"failure\":null}\n",
+    "stderr": ""
+  },
+  {
+    "id": "head-feedback",
+    "code": 0,
+    "stdout": "{\"id\":\"head-feedback\",\"complete\":true,\"failure\":null}\n",
+    "stderr": ""
+  },
+  {
+    "id": "cross-feedback",
+    "code": 0,
+    "stdout": "{\"id\":\"cross-feedback\",\"complete\":true,\"failure\":null}\n",
+    "stderr": ""
+  },
+  {
+    "id": "dropout-feedback",
+    "code": 0,
+    "stdout": "{\"id\":\"dropout-feedback\",\"complete\":true,\"failure\":null}\n",
+    "stderr": ""
+  },
+  {
+    "id": "failed-sensor",
+    "code": 1,
+    "stdout": "{\"id\":\"failed-sensor\",\"complete\":false,\"failure\":\"EKF terrain height unavailable \u00b7 select a mode or reset\"}\n",
+    "stderr": ""
+  },
+  {
+    "id": "slow-sensor",
+    "code": 0,
+    "stdout": "{\"id\":\"slow-sensor\",\"complete\":true,\"failure\":null}\n",
+    "stderr": ""
+  }
+]

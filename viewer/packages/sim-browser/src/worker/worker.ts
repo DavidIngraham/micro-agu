@@ -10,9 +10,10 @@ const send = <K extends keyof Events>(kind: K, data: Events[K]) =>
 function connect() {
   let lastUpdate = 0;
   sim.onUpdate = () => {
-    if (performance.now() - lastUpdate >= 40) {
+    if (sim.state.simulationEnded || performance.now() - lastUpdate >= 40) {
       lastUpdate = performance.now();
       send("state", sim.state);
+      if (sim.state.simulationEnded) self.close();
     }
   };
   sim.onTruth = (frame) => send("truth", frame);

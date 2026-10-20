@@ -1,0 +1,19 @@
+{
+  "unit_tests": {
+    "passed": 50,
+    "failed": 0
+  },
+  "browser_test": {
+    "passed": true,
+    "scenario": "Default AUTO launch, LAND selection above 45 m, cancellation to CRUISE, reselection, completed landing and pause at 390x844",
+    "duration_minutes": 2.3
+  },
+  "campaign": "Six cases: five completed landings and one correctly rejected failed sensor",
+  "ui_source_sha256": {
+    "viewer/packages/sim-browser/src/worker/worker.ts": "96041b31578a96f3726012f2b669fe354b06bc3775f77bd4b50fd06b1cfd5b5b",
+    "viewer/apps/simulator/main.ts": "e76b080e81b2629245789cf2f59e2729f65faa5720b4cde777b7fd8037453a30",
+    "viewer/apps/simulator/index.html": "78307a59eeb676f89b8c1eda6b2450a8e9a864fc75ecdd4a5a092ec5d55c275d",
+    "viewer/tests/browser/landing.spec.ts": "d7eb78679b86763050164c0b80fd7f8946f122e4254112abded2fcea2bd75ddf"
+  },
+  "build": "TypeScript, package boundaries, Vite and selected-release integrity passed"
+}

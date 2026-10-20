@@ -1,0 +1,62 @@
+{
+  "cases": [
+    {
+      "id": "calm-feedback",
+      "variant": "feedback"
+    },
+    {
+      "id": "head-feedback",
+      "variant": "feedback",
+      "along": -1.5,
+      "turbulence": 0.2
+    },
+    {
+      "id": "cross-feedback",
+      "variant": "feedback",
+      "across": 1.5,
+      "turbulence": 0.2
+    },
+    {
+      "id": "dropout-feedback",
+      "variant": "feedback",
+      "lidar": {
+        "dropout_probability": 0.2
+      }
+    },
+    {
+      "id": "failed-sensor",
+      "variant": "feedback",
+      "lidar": {
+        "dropout_probability": 1
+      }
+    },
+    {
+      "id": "slow-sensor",
+      "variant": "feedback",
+      "lidar": {
+        "latency_s": 0.1
+      }
+    }
+  ],
+  "hashes": {
+    "viewer/generated/ardupilot/arduplane.wasm": "d000742d8a9f1cb0fb1e9f7e6c8cc238ac78c444d6ab0a036b258845a0c98d2a",
+    "viewer/generated/physics/sim_wasm_bg.wasm": "ceae58a55b4585e85b86a142a15c1f5b9bcfbf3e51f21cddbdf741ac4a75c158",
+    "aircraft/microagu/controllers/lqi-gains.bin": "311876eabeb033e55c30c8d556d159495b76e8358cd25a1684c0c3b486ed97f0",
+    "aircraft/microagu/configurations/browser-physics.json": "130b82f0d63711ed739ce415e00c4137cb6be0e8ed15f614ccbe79523c3cf409",
+    "viewer/packages/sim-browser/src/session/runtime.ts": "c8c700a4f5eb70e9e0cdbe4c3b40bf43f21290353d0b862ff87dc1d77ec3ce32",
+    "viewer/packages/sim-browser/src/session/landing-height.ts": "1e68e7823bfdb109314ee7679c52855ac96a6c768de54516ed6b821102d9d7c8",
+    "viewer/packages/sim-browser/src/session/landing-guidance.ts": "20e980bf5d86b44513c8454ebf129cde5cb59541169a9561dbf22ae45e0bb299",
+    "viewer/packages/sim-browser/src/physics/physics.ts": "a4655aa00e0cc9f20c8143f16b992717239fab522cdfe5e5bc2df1bb1060ab56",
+    "viewer/packages/sim-browser/src/physics/lidar.ts": "1822833cab5ac458c9bdf16ef0f445a1965e2c01d593a059a38bf7967a661995"
+  },
+  "source_comment_correction": {
+    "path": "viewer/packages/sim-browser/src/session/runtime.ts",
+    "before_sha256": "72a20247c2349bfce8de04d822f8816599d91d4761f590150e8b7efac64c3f95",
+    "after_sha256": "c8c700a4f5eb70e9e0cdbe4c3b40bf43f21290353d0b862ff87dc1d77ec3ce32",
+    "description": "Corrected one comment: VFR_HUD can also use fused velocity; GLOBAL_POSITION_INT is now the single velocity source. No executable change."
+  },
+  "firmware_revision": "41a6badc3ee9ffc5125c1ab7b8225903a9d3fb25",
+  "firmware_source_sha256": {
+    "ArduPlane/Plane.cpp": "455d623850937347ba24d7c66361c958837beb891b68670ad8c6ca77172e1855"
+  }
+}

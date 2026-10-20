@@ -102,21 +102,33 @@ export const applet = registerApplet(definition, async (scope) => {
     buttons();
   };
 
+  const landingActive = () =>
+    !!sim.state.landing && sim.state.landing.phase !== "aborted";
+
   function buttons() {
     for (const id of ["mode", "apply-wind", "controller"])
-      (el(id) as HTMLButtonElement).disabled = !ready || operation;
+      (el(id) as HTMLButtonElement).disabled =
+        !ready || operation || !!sim.state.simulationEnded;
+    el<HTMLSelectElement>("controller").disabled =
+      !ready || operation || landingActive();
     el<HTMLButtonElement>("launch").disabled = !ready && !launched;
     el("launch").textContent = launched ? "Reset simulation" : "Launch";
     el<HTMLInputElement>("throttle").disabled =
       !ready ||
       operation ||
+      landingActive() ||
       !(manualPower(sim.state.mode) || altitudeLever(sim.state.mode));
-    el<HTMLButtonElement>("altitude-open").disabled = !ready || operation;
+    el<HTMLButtonElement>("altitude-open").disabled =
+      !ready || operation || landingActive();
     pilotShape();
     el<HTMLButtonElement>("upload").disabled =
-      !ready || operation || !items.length;
+      !ready || operation || !items.length || !!sim.state.simulationEnded;
     el<HTMLButtonElement>("execute").disabled =
-      !ready || operation || !uploaded || !launched;
+      !ready ||
+      operation ||
+      !uploaded ||
+      !launched ||
+      !!sim.state.simulationEnded;
     el<HTMLButtonElement>("example").disabled = operation;
     el<HTMLInputElement>("mission-file").disabled = operation;
   }
@@ -151,7 +163,8 @@ export const applet = registerApplet(definition, async (scope) => {
   }
   function paintThrottle() {
     const automatic =
-      !manualPower(sim.state.mode) && !altitudeLever(sim.state.mode);
+      landingActive() ||
+      (!manualPower(sim.state.mode) && !altitudeLever(sim.state.mode));
     const percent = automatic
       ? Math.max(
           0,
@@ -162,25 +175,37 @@ export const applet = registerApplet(definition, async (scope) => {
         )
       : Math.round(throttle * 100);
     el<HTMLInputElement>("throttle").value = String(percent);
-    el("throttle-value").textContent = altitudeLever(sim.state.mode)
-      ? percent === 50
-        ? "HOLD"
-        : `${percent > 50 ? "↑" : "↓"} ${Math.abs(percent - 50) * 2}%`
-      : `${percent}%`;
+    el("throttle-value").textContent =
+      !landingActive() && altitudeLever(sim.state.mode)
+        ? percent === 50
+          ? "HOLD"
+          : `${percent > 50 ? "↑" : "↓"} ${Math.abs(percent - 50) * 2}%`
+        : `${percent}%`;
   }
 
   sim.onUpdate = () => {
     el<HTMLSelectElement>("controller").value = sim.state.controllerSelected;
-    el("controller-status").textContent = sim.state.controllerActive
-      ? "LQI active"
-      : sim.state.controllerSelected === "lqi"
-        ? "Baseline · LQI waiting"
-        : "Baseline";
+    el("controller-status").textContent =
+      landingActive() && sim.state.landing!.phase !== "approach"
+        ? sim.state.landing!.phase === "landed"
+          ? "Power off"
+          : "Bounded flare"
+        : sim.state.controllerActive
+          ? "LQI active"
+          : sim.state.controllerSelected === "lqi"
+            ? "Baseline · LQI waiting"
+            : "Baseline";
     const s = sim.state;
     paintThrottle();
-    el("mode-label").textContent =
-      Object.keys(MODES).find((n) => MODES[n] === s.mode) ?? String(s.mode);
-    el("armed").textContent = s.armed ? "ARMED" : "DISARMED";
+    if (s.simulationEnded) el("connection").textContent = "Landing complete";
+    el("mode-label").textContent = landingActive()
+      ? "LAND"
+      : (Object.keys(MODES).find((n) => MODES[n] === s.mode) ?? String(s.mode));
+    el("armed").textContent = s.simulationEnded
+      ? "PAUSED"
+      : s.armed
+        ? "ARMED"
+        : "DISARMED";
     el("alt").textContent = s.alt.toFixed(1);
     el("speed").textContent = s.speed.toFixed(1);
     el("climb").textContent = s.climb.toFixed(1);
@@ -190,12 +215,18 @@ export const applet = registerApplet(definition, async (scope) => {
       ? `ITEM ${s.mission} / ${items.length}`
       : "NO MISSION";
     el("alt-target").textContent =
-      [MODES.FBWB, MODES.CRUISE, MODES.AUTO, MODES.LOITER].includes(s.mode) &&
-      s.targetAlt !== null
-        ? `TARGET ${s.targetAlt.toFixed(0)} m`
-        : "MANUAL HEIGHT";
-    el<HTMLSelectElement>("mode").value =
-      Object.keys(MODES).find((n) => MODES[n] === s.mode) ?? "";
+      landingActive() && s.landing!.agl !== null
+        ? `AGL ${s.landing!.agl!.toFixed(1)} m · EKF`
+        : [MODES.FBWB, MODES.CRUISE, MODES.AUTO, MODES.LOITER].includes(
+              s.mode,
+            ) && s.targetAlt !== null
+          ? `TARGET ${s.targetAlt.toFixed(0)} m`
+          : "MANUAL HEIGHT";
+    el<HTMLSelectElement>("mode").value = landingActive()
+      ? "LAND"
+      : (Object.keys(MODES).find((n) => MODES[n] === s.mode) ?? "");
+    if (s.landing) status(s.landing.message);
+    view.setLandingTarget(landingActive() ? s.landing!.target : null);
     buttons();
     drawMap();
   };
@@ -218,7 +249,8 @@ export const applet = registerApplet(definition, async (scope) => {
   function pilotShape() {
     const manual = sim.state.mode === MODES.MANUAL;
     el("stick").dataset.shape = manual ? "semicircle" : "line";
-    const active = ready && !operation && pilotSteering(sim.state.mode);
+    const active =
+      ready && !operation && !landingActive() && pilotSteering(sim.state.mode);
     el("stick").setAttribute("aria-disabled", String(!active));
     el("stick").setAttribute(
       "aria-label",
@@ -235,7 +267,7 @@ export const applet = registerApplet(definition, async (scope) => {
       else paintThrottle();
       el("knob").style.transform = "translate(0,0)";
     }
-    const height = altitudeLever(sim.state.mode);
+    const height = !landingActive() && altitudeLever(sim.state.mode);
     el("throttle-label").textContent = height ? "ALTITUDE" : "THROTTLE";
     el("throttle").setAttribute(
       "aria-label",
@@ -251,7 +283,11 @@ export const applet = registerApplet(definition, async (scope) => {
       roll = pitch = 0;
       controls();
       await sim.mode(next);
-      status(`${next} confirmed by ArduPlane.`);
+      status(
+        next === "LAND"
+          ? "LAND: LQI approach, then bounded flare. Select another mode to cancel."
+          : `${next} confirmed by ArduPlane.`,
+      );
     });
   });
   function closeAltitude() {
@@ -389,7 +425,8 @@ export const applet = registerApplet(definition, async (scope) => {
   const stick = joystick(
     scope,
     el("stick"),
-    () => ready && !operation && pilotSteering(sim.state.mode),
+    () =>
+      ready && !operation && !landingActive() && pilotSteering(sim.state.mode),
     (x, y) => {
       roll = x;
       pitch = y;
@@ -404,6 +441,7 @@ export const applet = registerApplet(definition, async (scope) => {
     if (
       !ready ||
       operation ||
+      landingActive() ||
       !pilotSteering(sim.state.mode) ||
       e.target instanceof HTMLInputElement ||
       e.target instanceof HTMLSelectElement ||
@@ -426,7 +464,7 @@ export const applet = registerApplet(definition, async (scope) => {
   scope.listen(window, "keyup", (e) => keys.delete(e.key.toLowerCase()));
 
   scope.interval(() => {
-    if (!keys.size || !ready || operation) return;
+    if (!keys.size || !ready || operation || landingActive()) return;
     roll = (keys.has("arrowright") ? 1 : 0) - (keys.has("arrowleft") ? 1 : 0);
     pitch = sim.state.mode === MODES.MANUAL && keys.has("arrowdown") ? 1 : 0;
     if ([MODES.MANUAL, MODES.FBWA].includes(sim.state.mode))
@@ -589,7 +627,13 @@ export const applet = registerApplet(definition, async (scope) => {
       points = items
         .filter((w) => w.command !== 20)
         .map((w) => offset(w.lat, w.lon));
-    const all = [{ east: 0, north: 0 }, craft, ...points];
+    const target = landingActive() ? sim.state.landing!.target : null;
+    const all = [
+      { east: 0, north: 0 },
+      craft,
+      ...points,
+      ...(target ? [target] : []),
+    ];
     const minE = Math.min(...all.map((p) => p.east)) - 40,
       maxE = Math.max(...all.map((p) => p.east)) + 40,
       minN = Math.min(...all.map((p) => p.north)) - 40,
@@ -612,6 +656,14 @@ export const applet = registerApplet(definition, async (scope) => {
       ctx.fill();
       ctx.fillText(String(i + 1), x(p.east) + 5, y(p.north) - 4);
     });
+    if (target) {
+      ctx.strokeStyle = "#ffbf70";
+      ctx.beginPath();
+      ctx.arc(x(target.east), y(target.north), 6, 0, Math.PI * 2);
+      ctx.stroke();
+      ctx.fillStyle = "#ffbf70";
+      ctx.fillText("LAND", x(target.east) + 8, y(target.north));
+    }
     ctx.fillStyle = "#91aeb9";
     ctx.fillText("H", x(0) - 3, y(0) + 3);
     ctx.fillText("N ↑", 9, 15);

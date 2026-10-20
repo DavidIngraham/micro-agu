@@ -80,9 +80,45 @@ tilt-correct slant range using estimated attitude. Received measurements are
 available as `Simulator.state.rangefinder`, including validity and reception
 time. `Physics.lidarReading` is
 diagnostic truth-side provenance, not a flight-controller sensor shortcut.
-The landing experiment in `research/active/landing-lidar-2026-10-20` exercises the
-full JSON → AP rangefinder → MAVLink path. The published configuration does not
-enable this sensor automatically.
+The browser configuration enables this sensor. `Simulator.start` configures the
+matching AP rangefinder limits and requests the telemetry stream automatically.
+The original raw-range comparison remains in
+`research/active/landing-lidar-2026-10-20`.
+
+## EKF landing demonstration
+
+Once flying above 15 m, click the main **MODE** display and choose **LAND · ahead**.
+The simulator marks a landing point ahead on the ground and map. This is not RTL:
+it does not return to the launch circle. Select any other mode to cancel.
+
+The worker runs shared `session/landing-guidance.ts`: existing LQI in CRUISE on
+approach, then an explicit MANUAL handoff at 3 m AGL to the bounded common-brake
+flare controller. The HUD distinguishes approach, final, flare and touchdown.
+Pilot sticks, altitude and controller changes are locked while landing owns the
+inputs; the mode picker remains available for cancellation.
+
+Height follows JSON lidar → AP rangefinder → EKF terrain estimate →
+`AP_AHRS::get_hagl` → `EKF_HAGL` named-float telemetry. Negative values invalidate
+the estimate. Guidance propagates only the short telemetry age using fused
+vertical velocity. It does not feed simulator height or canopy truth into the
+controller. Above 10 m, home-relative EKF altitude is a fallback on this flat
+simulated field. Below that, unavailable terrain height aborts the sequence.
+A pre-final abort stops the descent and requests a climb; after the manual
+handoff it keeps power off and releases control to the user. It is not a fully
+qualified autonomous go-around system.
+
+The generic sensor still has 50 ms latency while this AP EKF range path assumes
+25 ms; using EKF HAGL does not eliminate that mismatch or all measurement bias.
+The 10 Hz current-output HAGL stream and 20 Hz navigation stream are checked for
+freshness. LQI gains and observer parameters are unchanged.
+
+After near-ground, low-vertical-speed, slowed-horizontal-motion confirmation,
+the simulator pauses; reset starts another flight. This is a simulation endpoint,
+not confirmation that ArduPlane has disarmed. No force-disarm is sent. This endpoint avoids presenting the rigid
+canopy's unvalidated collapse/ground-roll dynamics as a credible rollout.
+See `research/active/landing-ekf-2026-10-20` for flight traces, failure cases and
+pre-contact landing metrics. This remains a browser experiment, not a new
+flight-qualified ArduPlane LAND mode.
 
 ## Adding an applet
 

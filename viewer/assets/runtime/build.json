@@ -1,7 +1,7 @@
 {
   "repository": "https://github.com/DavidIngraham/ardupilot",
-  "revision": "5e5bba8ee1b3575e04f45d56b8c53e5e6c48ab2f",
-  "source": "https://github.com/DavidIngraham/ardupilot/tree/5e5bba8ee1b3575e04f45d56b8c53e5e6c48ab2f",
+  "revision": "41a6badc3ee9ffc5125c1ab7b8225903a9d3fb25",
+  "source": "https://github.com/DavidIngraham/ardupilot/tree/41a6badc3ee9ffc5125c1ab7b8225903a9d3fb25",
   "license": "GPL-3.0-or-later",
   "board": "wasm",
   "vehicle": "ArduPlane",
@@ -9,12 +9,12 @@
   "transport": "Emscripten SOCKFS local UDP peer",
   "emscripten": "6.0.8",
   "sha256": {
-    "highdof.json": "51120b5f2d21f0e5d00b0d009c6bb25c7e082a6bdb76d49a05524fec92ec34e4",
+    "highdof.json": "130b82f0d63711ed739ce415e00c4137cb6be0e8ed15f614ccbe79523c3cf409",
     "sim_wasm_bg.wasm.d.ts": "98b5d976e3fdeafe277b6f98d5f95079fba5b6367533ddb4f7846b0f93ff9890",
     "sim_wasm.d.ts": "f123bfc6ec889cd120e526d7d3001395d45e44a97db671d791e14264a938c3be",
     "sim_wasm_bg.wasm": "ceae58a55b4585e85b86a142a15c1f5b9bcfbf3e51f21cddbdf741ac4a75c158",
     "sim_wasm.js": "65ffd575810f57b5793b1a61477d215e316267e40ced1eb29dfe7a59e5ce4f60",
-    "arduplane.wasm": "466d4d86263d973cc38e850b3a015146e9b98a2cd2ae369fbca7a32eeb9ab504",
+    "arduplane.wasm": "d000742d8a9f1cb0fb1e9f7e6c8cc238ac78c444d6ab0a036b258845a0c98d2a",
     "arduplane.js": "893b28e3cbea410e48736d7f7426928cbe8b56f22c1813914aa290172f1e8565",
     "lqi-gains.bin": "311876eabeb033e55c30c8d556d159495b76e8358cd25a1684c0c3b486ed97f0"
   },
@@ -115,5 +115,8 @@
     "selection": "Practical non-regression; no demonstrated overall improvement",
     "observer_changed": false,
     "physics_changed": false
+  },
+  "landing_telemetry_source_sha256": {
+    "ArduPlane/Plane.cpp": "455d623850937347ba24d7c66361c958837beb891b68670ad8c6ca77172e1855"
   }
 }

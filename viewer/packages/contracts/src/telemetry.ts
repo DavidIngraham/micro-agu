@@ -8,6 +8,24 @@ export const MODES: Record<string, number> = {
   TAKEOFF: 13,
 };
 export interface Telemetry {
+  /** The completed landing session is paused; reset creates a fresh session. */
+  simulationEnded?: boolean;
+  /** EKF terrain-relative current output; negative firmware sentinel is invalid. */
+  hagl?: {
+    metres: number;
+    valid: boolean;
+    timeBootMs: number;
+    receivedTimeS: number;
+  };
+  course?: number;
+  pitchRate?: number;
+  navigationTimeS?: number;
+  landing?: {
+    phase: "approach" | "final" | "flare" | "touchdown" | "landed" | "aborted";
+    target: { north: number; east: number };
+    agl: number | null;
+    message: string;
+  };
   /** Downward rangefinder telemetry; slant range, not tilt-corrected AGL.
    * Consumers must also reject stale receivedTimeS values.
    */

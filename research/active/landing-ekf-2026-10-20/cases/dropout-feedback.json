@@ -1,0 +1,1 @@
+{"id": "dropout-feedback", "variant": "feedback", "lidar": {"dropout_probability": 0.2}}

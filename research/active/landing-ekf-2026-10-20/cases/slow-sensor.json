@@ -1,0 +1,1 @@
+{"id": "slow-sensor", "variant": "feedback", "lidar": {"latency_s": 0.1}}

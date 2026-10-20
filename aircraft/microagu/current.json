@@ -53,8 +53,8 @@
     "selected": "refit_damped",
     "gain_file": "controllers/lqi-gains.bin",
     "gain_header": "controllers/AP_CustomControl_LQI_gains.h",
-    "firmware_revision": "5e5bba8ee1b3575e04f45d56b8c53e5e6c48ab2f",
-    "firmware_source": "https://github.com/DavidIngraham/ardupilot/tree/5e5bba8ee1b3575e04f45d56b8c53e5e6c48ab2f",
+    "firmware_revision": "41a6badc3ee9ffc5125c1ab7b8225903a9d3fb25",
+    "firmware_source": "https://github.com/DavidIngraham/ardupilot/tree/41a6badc3ee9ffc5125c1ab7b8225903a9d3fb25",
     "observer": "Compiled model/observer context unchanged; no canopy truth or pitot sensor",
     "format": "AGULQI01"
   },
@@ -68,13 +68,13 @@
   "study": "../../research/active/controller-pipeline-2026-10-18/RESULTS.md",
   "published": {
     "url": "https://davidingraham.github.io/assets/microagu-viewer/simulator.html",
-    "site_commit": "dad276c582d3a68e2652c731ae79fb6632302287",
-    "firmware_sha256": "466d4d86263d973cc38e850b3a015146e9b98a2cd2ae369fbca7a32eeb9ab504"
+    "site_commit": "77a8dcf7552475f2a651da42c05f34d50cc3ec6c",
+    "firmware_sha256": "d000742d8a9f1cb0fb1e9f7e6c8cc238ac78c444d6ab0a036b258845a0c98d2a"
   },
   "sha256": {
     "controllers/lqi-gains.bin": "311876eabeb033e55c30c8d556d159495b76e8358cd25a1684c0c3b486ed97f0",
     "controllers/AP_CustomControl_LQI_gains.h": "c36e2516e617ac03892a212c5af7f2835e5f7997f8cc14400611bf0a26867291",
-    "configurations/browser-physics.json": "51120b5f2d21f0e5d00b0d009c6bb25c7e082a6bdb76d49a05524fec92ec34e4",
+    "configurations/browser-physics.json": "130b82f0d63711ed739ce415e00c4137cb6be0e8ed15f614ccbe79523c3cf409",
     "configurations/measured.json": "98e000b40aeb559691ec97ac3e094c4825cf3752aeb0a7ab995b0836f6a309f0",
     "validation/controller-acceptance.json": "575e6e1378c65599b5501969934e3be1c6f8921f773996d9ca9bd949f788b319"
   },
@@ -82,5 +82,6 @@
     "configurations/browser-physics.json": "viewer/assets/runtime/highdof.json",
     "controllers/lqi-gains.bin": "viewer/assets/runtime/lqi-gains.bin",
     "validation/controller-acceptance.json": "viewer/assets/runtime/lqi-pipeline-validation.json"
-  }
+  },
+  "landing_validation": "../../research/active/landing-ekf-2026-10-20/README.md"
 }

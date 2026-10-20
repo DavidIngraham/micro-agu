@@ -24,6 +24,15 @@ import { RotorPhase } from "@microagu/rendering/aircraft/mechanisms";
 
 export class FlightView {
   private scene = new T.Scene();
+  private landingTarget = new T.Mesh(
+    new T.RingGeometry(2.5, 3, 64),
+    new T.MeshBasicMaterial({ color: 0xffbf70, side: T.DoubleSide }),
+  );
+  setLandingTarget(target: { north: number; east: number } | null) {
+    this.landingTarget.visible = target !== null;
+    if (target)
+      this.landingTarget.position.set(target.east, 0.04, -target.north);
+  }
   private thermal = new ThermalColumn();
   private trail = new FlightTrail();
   private renderer = new ManagedRenderer({
@@ -66,6 +75,9 @@ export class FlightView {
     sun.position.set(-100, 300, 100);
     this.scene.add(sun);
     this.scene.add(flightGround());
+    this.landingTarget.rotation.x = -Math.PI / 2;
+    this.landingTarget.visible = false;
+    this.scene.add(this.landingTarget);
     this.scene.add(this.thermal);
     this.scene.add(this.trail);
     // Deterministic distant tree line, leaving the launch area open.

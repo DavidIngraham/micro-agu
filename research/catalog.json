@@ -448,6 +448,13 @@
       "path": "research/active/landing-lidar-2026-10-20",
       "summary": "Optional simulated lidar through AP rangefinder and MAVLink; six landing cases expose delay and dropout sensitivity.",
       "execution_policy": "maintained sensor and landing research"
+    },
+    {
+      "study": "landing-ekf-2026-10-20",
+      "status": "active",
+      "path": "research/active/landing-ekf-2026-10-20",
+      "summary": "EKF terrain-height landing with LQI approach, bounded brake flare and browser LAND option.",
+      "execution_policy": "maintained shared guidance and simulator validation"
     }
   ]
 }

@@ -1,0 +1,397 @@
+{
+  "config_sha256": "51120b5f2d21f0e5d00b0d009c6bb25c7e082a6bdb76d49a05524fec92ec34e4",
+  "native_sha256": "55000fafb4c8836d3684376474402ccbac971c5faeb9badddce33319ba6afb7e",
+  "source_sha256": "5de084cb84996858bd75cc7b89123f6617f14595b20f094a1b567eebc2414c91",
+  "cases": [
+    {
+      "id": "flare-0-0",
+      "kind": "landing",
+      "height": 30,
+      "flare_height": 0,
+      "flare_brake": 0
+    },
+    {
+      "id": "flare-0-18",
+      "kind": "landing",
+      "height": 30,
+      "flare_height": 0,
+      "flare_brake": 18
+    },
+    {
+      "id": "flare-0-36",
+      "kind": "landing",
+      "height": 30,
+      "flare_height": 0,
+      "flare_brake": 36
+    },
+    {
+      "id": "flare-0-54",
+      "kind": "landing",
+      "height": 30,
+      "flare_height": 0,
+      "flare_brake": 54
+    },
+    {
+      "id": "flare-0-68",
+      "kind": "landing",
+      "height": 30,
+      "flare_height": 0,
+      "flare_brake": 68
+    },
+    {
+      "id": "flare-0.5-0",
+      "kind": "landing",
+      "height": 30,
+      "flare_height": 0.5,
+      "flare_brake": 0
+    },
+    {
+      "id": "flare-0.5-18",
+      "kind": "landing",
+      "height": 30,
+      "flare_height": 0.5,
+      "flare_brake": 18
+    },
+    {
+      "id": "flare-0.5-36",
+      "kind": "landing",
+      "height": 30,
+      "flare_height": 0.5,
+      "flare_brake": 36
+    },
+    {
+      "id": "flare-0.5-54",
+      "kind": "landing",
+      "height": 30,
+      "flare_height": 0.5,
+      "flare_brake": 54
+    },
+    {
+      "id": "flare-0.5-68",
+      "kind": "landing",
+      "height": 30,
+      "flare_height": 0.5,
+      "flare_brake": 68
+    },
+    {
+      "id": "flare-1-0",
+      "kind": "landing",
+      "height": 30,
+      "flare_height": 1,
+      "flare_brake": 0
+    },
+    {
+      "id": "flare-1-18",
+      "kind": "landing",
+      "height": 30,
+      "flare_height": 1,
+      "flare_brake": 18
+    },
+    {
+      "id": "flare-1-36",
+      "kind": "landing",
+      "height": 30,
+      "flare_height": 1,
+      "flare_brake": 36
+    },
+    {
+      "id": "flare-1-54",
+      "kind": "landing",
+      "height": 30,
+      "flare_height": 1,
+      "flare_brake": 54
+    },
+    {
+      "id": "flare-1-68",
+      "kind": "landing",
+      "height": 30,
+      "flare_height": 1,
+      "flare_brake": 68
+    },
+    {
+      "id": "flare-2-0",
+      "kind": "landing",
+      "height": 30,
+      "flare_height": 2,
+      "flare_brake": 0
+    },
+    {
+      "id": "flare-2-18",
+      "kind": "landing",
+      "height": 30,
+      "flare_height": 2,
+      "flare_brake": 18
+    },
+    {
+      "id": "flare-2-36",
+      "kind": "landing",
+      "height": 30,
+      "flare_height": 2,
+      "flare_brake": 36
+    },
+    {
+      "id": "flare-2-54",
+      "kind": "landing",
+      "height": 30,
+      "flare_height": 2,
+      "flare_brake": 54
+    },
+    {
+      "id": "flare-2-68",
+      "kind": "landing",
+      "height": 30,
+      "flare_height": 2,
+      "flare_brake": 68
+    },
+    {
+      "id": "flare-3-0",
+      "kind": "landing",
+      "height": 30,
+      "flare_height": 3,
+      "flare_brake": 0
+    },
+    {
+      "id": "flare-3-18",
+      "kind": "landing",
+      "height": 30,
+      "flare_height": 3,
+      "flare_brake": 18
+    },
+    {
+      "id": "flare-3-36",
+      "kind": "landing",
+      "height": 30,
+      "flare_height": 3,
+      "flare_brake": 36
+    },
+    {
+      "id": "flare-3-54",
+      "kind": "landing",
+      "height": 30,
+      "flare_height": 3,
+      "flare_brake": 54
+    },
+    {
+      "id": "flare-3-68",
+      "kind": "landing",
+      "height": 30,
+      "flare_height": 3,
+      "flare_brake": 68
+    },
+    {
+      "id": "flare-4-0",
+      "kind": "landing",
+      "height": 30,
+      "flare_height": 4,
+      "flare_brake": 0
+    },
+    {
+      "id": "flare-4-18",
+      "kind": "landing",
+      "height": 30,
+      "flare_height": 4,
+      "flare_brake": 18
+    },
+    {
+      "id": "flare-4-36",
+      "kind": "landing",
+      "height": 30,
+      "flare_height": 4,
+      "flare_brake": 36
+    },
+    {
+      "id": "flare-4-54",
+      "kind": "landing",
+      "height": 30,
+      "flare_height": 4,
+      "flare_brake": 54
+    },
+    {
+      "id": "flare-4-68",
+      "kind": "landing",
+      "height": 30,
+      "flare_height": 4,
+      "flare_brake": 68
+    },
+    {
+      "id": "recovery-0.5-18",
+      "kind": "swoop",
+      "height": 100,
+      "prebrake": 36,
+      "release_s": 0.5,
+      "recovery_brake": 18
+    },
+    {
+      "id": "recovery-0.5-36",
+      "kind": "swoop",
+      "height": 100,
+      "prebrake": 36,
+      "release_s": 0.5,
+      "recovery_brake": 36
+    },
+    {
+      "id": "recovery-0.5-54",
+      "kind": "swoop",
+      "height": 100,
+      "prebrake": 36,
+      "release_s": 0.5,
+      "recovery_brake": 54
+    },
+    {
+      "id": "recovery-1-18",
+      "kind": "swoop",
+      "height": 100,
+      "prebrake": 36,
+      "release_s": 1,
+      "recovery_brake": 18
+    },
+    {
+      "id": "recovery-1-36",
+      "kind": "swoop",
+      "height": 100,
+      "prebrake": 36,
+      "release_s": 1,
+      "recovery_brake": 36
+    },
+    {
+      "id": "recovery-1-54",
+      "kind": "swoop",
+      "height": 100,
+      "prebrake": 36,
+      "release_s": 1,
+      "recovery_brake": 54
+    },
+    {
+      "id": "recovery-2-18",
+      "kind": "swoop",
+      "height": 100,
+      "prebrake": 36,
+      "release_s": 2,
+      "recovery_brake": 18
+    },
+    {
+      "id": "recovery-2-36",
+      "kind": "swoop",
+      "height": 100,
+      "prebrake": 36,
+      "release_s": 2,
+      "recovery_brake": 36
+    },
+    {
+      "id": "recovery-2-54",
+      "kind": "swoop",
+      "height": 100,
+      "prebrake": 36,
+      "release_s": 2,
+      "recovery_brake": 54
+    },
+    {
+      "id": "recovery-3-18",
+      "kind": "swoop",
+      "height": 100,
+      "prebrake": 36,
+      "release_s": 3,
+      "recovery_brake": 18
+    },
+    {
+      "id": "recovery-3-36",
+      "kind": "swoop",
+      "height": 100,
+      "prebrake": 36,
+      "release_s": 3,
+      "recovery_brake": 36
+    },
+    {
+      "id": "recovery-3-54",
+      "kind": "swoop",
+      "height": 100,
+      "prebrake": 36,
+      "release_s": 3,
+      "recovery_brake": 54
+    },
+    {
+      "id": "wind--1.5-0-height",
+      "kind": "landing",
+      "height": 30,
+      "wind": [
+        -1.5,
+        0,
+        0
+      ],
+      "guidance": "height",
+      "flare_height": 1,
+      "flare_brake": 36,
+      "gust": 0.2
+    },
+    {
+      "id": "wind--1.5-0-sink",
+      "kind": "landing",
+      "height": 30,
+      "wind": [
+        -1.5,
+        0,
+        0
+      ],
+      "guidance": "sink",
+      "flare_height": 1,
+      "flare_brake": 36,
+      "gust": 0.2
+    },
+    {
+      "id": "wind-1.5-0-height",
+      "kind": "landing",
+      "height": 30,
+      "wind": [
+        1.5,
+        0,
+        0
+      ],
+      "guidance": "height",
+      "flare_height": 1,
+      "flare_brake": 36,
+      "gust": 0.2
+    },
+    {
+      "id": "wind-1.5-0-sink",
+      "kind": "landing",
+      "height": 30,
+      "wind": [
+        1.5,
+        0,
+        0
+      ],
+      "guidance": "sink",
+      "flare_height": 1,
+      "flare_brake": 36,
+      "gust": 0.2
+    },
+    {
+      "id": "wind-0-1.5-height",
+      "kind": "landing",
+      "height": 30,
+      "wind": [
+        0,
+        1.5,
+        0
+      ],
+      "guidance": "height",
+      "flare_height": 1,
+      "flare_brake": 36,
+      "gust": 0.2
+    },
+    {
+      "id": "wind-0-1.5-sink",
+      "kind": "landing",
+      "height": 30,
+      "wind": [
+        0,
+        1.5,
+        0
+      ],
+      "guidance": "sink",
+      "flare_height": 1,
+      "flare_brake": 36,
+      "gust": 0.2
+    }
+  ]
+}

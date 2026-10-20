@@ -1,0 +1,46 @@
+[
+  {
+    "id": "matched-baseline-0",
+    "kind": "recovery",
+    "scheme": "baseline",
+    "turnRate": 0,
+    "parameters": {
+      "TECS_SINK_MAX": 1,
+      "TECS_SINK_MIN": 1,
+      "TECS_CLMB_MAX": 0.75
+    }
+  },
+  {
+    "id": "matched-baseline-25",
+    "kind": "recovery",
+    "scheme": "baseline",
+    "turnRate": 25,
+    "parameters": {
+      "TECS_SINK_MAX": 1,
+      "TECS_SINK_MIN": 1,
+      "TECS_CLMB_MAX": 0.75
+    }
+  },
+  {
+    "id": "matched-lqi-0",
+    "kind": "recovery",
+    "scheme": "lqi",
+    "turnRate": 0,
+    "parameters": {
+      "TECS_SINK_MAX": 1,
+      "TECS_SINK_MIN": 1,
+      "TECS_CLMB_MAX": 0.75
+    }
+  },
+  {
+    "id": "matched-lqi-25",
+    "kind": "recovery",
+    "scheme": "lqi",
+    "turnRate": 25,
+    "parameters": {
+      "TECS_SINK_MAX": 1,
+      "TECS_SINK_MIN": 1,
+      "TECS_CLMB_MAX": 0.75
+    }
+  }
+]

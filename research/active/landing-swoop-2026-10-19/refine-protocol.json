@@ -1,0 +1,200 @@
+[
+  {
+    "id": "fine-0.75-36",
+    "kind": "landing",
+    "height": 30,
+    "flare_height": 0.75,
+    "flare_brake": 36
+  },
+  {
+    "id": "fine-0.75-54",
+    "kind": "landing",
+    "height": 30,
+    "flare_height": 0.75,
+    "flare_brake": 54
+  },
+  {
+    "id": "fine-0.75-68",
+    "kind": "landing",
+    "height": 30,
+    "flare_height": 0.75,
+    "flare_brake": 68
+  },
+  {
+    "id": "fine-1.25-36",
+    "kind": "landing",
+    "height": 30,
+    "flare_height": 1.25,
+    "flare_brake": 36
+  },
+  {
+    "id": "fine-1.25-54",
+    "kind": "landing",
+    "height": 30,
+    "flare_height": 1.25,
+    "flare_brake": 54
+  },
+  {
+    "id": "fine-1.25-68",
+    "kind": "landing",
+    "height": 30,
+    "flare_height": 1.25,
+    "flare_brake": 68
+  },
+  {
+    "id": "fine-1.5-36",
+    "kind": "landing",
+    "height": 30,
+    "flare_height": 1.5,
+    "flare_brake": 36
+  },
+  {
+    "id": "fine-1.5-54",
+    "kind": "landing",
+    "height": 30,
+    "flare_height": 1.5,
+    "flare_brake": 54
+  },
+  {
+    "id": "fine-1.5-68",
+    "kind": "landing",
+    "height": 30,
+    "flare_height": 1.5,
+    "flare_brake": 68
+  },
+  {
+    "id": "bias--0.5--0.3",
+    "kind": "landing",
+    "height": 30,
+    "flare_height": 1,
+    "flare_brake": 54,
+    "height_bias": -0.5,
+    "sink_perturbation": -0.3
+  },
+  {
+    "id": "bias--0.5-0",
+    "kind": "landing",
+    "height": 30,
+    "flare_height": 1,
+    "flare_brake": 54,
+    "height_bias": -0.5,
+    "sink_perturbation": 0
+  },
+  {
+    "id": "bias--0.5-0.3",
+    "kind": "landing",
+    "height": 30,
+    "flare_height": 1,
+    "flare_brake": 54,
+    "height_bias": -0.5,
+    "sink_perturbation": 0.3
+  },
+  {
+    "id": "bias--0.25--0.3",
+    "kind": "landing",
+    "height": 30,
+    "flare_height": 1,
+    "flare_brake": 54,
+    "height_bias": -0.25,
+    "sink_perturbation": -0.3
+  },
+  {
+    "id": "bias--0.25-0",
+    "kind": "landing",
+    "height": 30,
+    "flare_height": 1,
+    "flare_brake": 54,
+    "height_bias": -0.25,
+    "sink_perturbation": 0
+  },
+  {
+    "id": "bias--0.25-0.3",
+    "kind": "landing",
+    "height": 30,
+    "flare_height": 1,
+    "flare_brake": 54,
+    "height_bias": -0.25,
+    "sink_perturbation": 0.3
+  },
+  {
+    "id": "bias-0--0.3",
+    "kind": "landing",
+    "height": 30,
+    "flare_height": 1,
+    "flare_brake": 54,
+    "height_bias": 0,
+    "sink_perturbation": -0.3
+  },
+  {
+    "id": "bias-0-0",
+    "kind": "landing",
+    "height": 30,
+    "flare_height": 1,
+    "flare_brake": 54,
+    "height_bias": 0,
+    "sink_perturbation": 0
+  },
+  {
+    "id": "bias-0-0.3",
+    "kind": "landing",
+    "height": 30,
+    "flare_height": 1,
+    "flare_brake": 54,
+    "height_bias": 0,
+    "sink_perturbation": 0.3
+  },
+  {
+    "id": "bias-0.25--0.3",
+    "kind": "landing",
+    "height": 30,
+    "flare_height": 1,
+    "flare_brake": 54,
+    "height_bias": 0.25,
+    "sink_perturbation": -0.3
+  },
+  {
+    "id": "bias-0.25-0",
+    "kind": "landing",
+    "height": 30,
+    "flare_height": 1,
+    "flare_brake": 54,
+    "height_bias": 0.25,
+    "sink_perturbation": 0
+  },
+  {
+    "id": "bias-0.25-0.3",
+    "kind": "landing",
+    "height": 30,
+    "flare_height": 1,
+    "flare_brake": 54,
+    "height_bias": 0.25,
+    "sink_perturbation": 0.3
+  },
+  {
+    "id": "bias-0.5--0.3",
+    "kind": "landing",
+    "height": 30,
+    "flare_height": 1,
+    "flare_brake": 54,
+    "height_bias": 0.5,
+    "sink_perturbation": -0.3
+  },
+  {
+    "id": "bias-0.5-0",
+    "kind": "landing",
+    "height": 30,
+    "flare_height": 1,
+    "flare_brake": 54,
+    "height_bias": 0.5,
+    "sink_perturbation": 0
+  },
+  {
+    "id": "bias-0.5-0.3",
+    "kind": "landing",
+    "height": 30,
+    "flare_height": 1,
+    "flare_brake": 54,
+    "height_bias": 0.5,
+    "sink_perturbation": 0.3
+  }
+]

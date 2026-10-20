@@ -427,6 +427,13 @@
       "execution_policy": "evidence retained; original execution environment is in the pre-layout tag and local snapshot",
       "reason": "Older controller/design iteration; current selected configuration is aircraft/microagu/current.json.",
       "successor": "research/active/controller-pipeline-2026-10-18"
+    },
+    {
+      "study": "landing-swoop-2026-10-19",
+      "status": "active",
+      "path": "research/active/landing-swoop-2026-10-19",
+      "summary": "Spot-landing flare feasibility and altitude-only recovery: 72 native cases and 18 AP/EKF cases; no deployment.",
+      "execution_policy": "maintained for landing and recovery research"
     }
   ]
 }

@@ -1,0 +1,1712 @@
+[
+  {
+    "spec": {
+      "id": "flare-0-0",
+      "kind": "landing",
+      "height": 30,
+      "flare_height": 0,
+      "flare_brake": 0
+    },
+    "dt": 0.00125,
+    "metrics": {
+      "contact": {
+        "time": 21.875,
+        "position": [
+          58.257316472312255,
+          55.992756853338186,
+          -0.10123845012481075
+        ],
+        "sink": 1.3774848155598565,
+        "ground_speed": 4.194485013631671,
+        "roll_deg": 1.577697778429989,
+        "pitch_deg": 2.4128839570130167,
+        "speed": 4.414880400042412
+      },
+      "flare_time": null,
+      "preapproach_contact": false,
+      "peak_air_speed": 4.425481881191337,
+      "peak_specific_force_g": 1.0027910844259555,
+      "peak_relative_pitch_deg": 11.533482358348778,
+      "peak_sink": 1.3904547225898694,
+      "peak_roll_deg": 1.5829267188549132,
+      "peak_pitch_deg": 2.511924911599905,
+      "release_height": null,
+      "recovered": null,
+      "observation_height_loss": null,
+      "loss_to_recovery": null
+    }
+  },
+  {
+    "spec": {
+      "id": "flare-0-18",
+      "kind": "landing",
+      "height": 30,
+      "flare_height": 0,
+      "flare_brake": 18
+    },
+    "dt": 0.00125,
+    "metrics": {
+      "contact": {
+        "time": 21.875,
+        "position": [
+          58.257316472312255,
+          55.992756853338186,
+          -0.10123845012481075
+        ],
+        "sink": 1.3774848155598565,
+        "ground_speed": 4.194485013631671,
+        "roll_deg": 1.577697778429989,
+        "pitch_deg": 2.4128839570130167,
+        "speed": 4.414880400042412
+      },
+      "flare_time": null,
+      "preapproach_contact": false,
+      "peak_air_speed": 4.425481881191337,
+      "peak_specific_force_g": 1.0027910844259555,
+      "peak_relative_pitch_deg": 11.533482358348778,
+      "peak_sink": 1.3904547225898694,
+      "peak_roll_deg": 1.5829267188549132,
+      "peak_pitch_deg": 2.511924911599905,
+      "release_height": null,
+      "recovered": null,
+      "observation_height_loss": null,
+      "loss_to_recovery": null
+    }
+  },
+  {
+    "spec": {
+      "id": "flare-0-36",
+      "kind": "landing",
+      "height": 30,
+      "flare_height": 0,
+      "flare_brake": 36
+    },
+    "dt": 0.00125,
+    "metrics": {
+      "contact": {
+        "time": 21.875,
+        "position": [
+          58.257316472312255,
+          55.992756853338186,
+          -0.10123845012481075
+        ],
+        "sink": 1.3774848155598565,
+        "ground_speed": 4.194485013631671,
+        "roll_deg": 1.577697778429989,
+        "pitch_deg": 2.4128839570130167,
+        "speed": 4.414880400042412
+      },
+      "flare_time": null,
+      "preapproach_contact": false,
+      "peak_air_speed": 4.425481881191337,
+      "peak_specific_force_g": 1.0027910844259555,
+      "peak_relative_pitch_deg": 11.533482358348778,
+      "peak_sink": 1.3904547225898694,
+      "peak_roll_deg": 1.5829267188549132,
+      "peak_pitch_deg": 2.511924911599905,
+      "release_height": null,
+      "recovered": null,
+      "observation_height_loss": null,
+      "loss_to_recovery": null
+    }
+  },
+  {
+    "spec": {
+      "id": "flare-0-54",
+      "kind": "landing",
+      "height": 30,
+      "flare_height": 0,
+      "flare_brake": 54
+    },
+    "dt": 0.00125,
+    "metrics": {
+      "contact": {
+        "time": 21.875,
+        "position": [
+          58.257316472312255,
+          55.992756853338186,
+          -0.10123845012481075
+        ],
+        "sink": 1.3774848155598565,
+        "ground_speed": 4.194485013631671,
+        "roll_deg": 1.577697778429989,
+        "pitch_deg": 2.4128839570130167,
+        "speed": 4.414880400042412
+      },
+      "flare_time": null,
+      "preapproach_contact": false,
+      "peak_air_speed": 4.425481881191337,
+      "peak_specific_force_g": 1.0027910844259555,
+      "peak_relative_pitch_deg": 11.533482358348778,
+      "peak_sink": 1.3904547225898694,
+      "peak_roll_deg": 1.5829267188549132,
+      "peak_pitch_deg": 2.511924911599905,
+      "release_height": null,
+      "recovered": null,
+      "observation_height_loss": null,
+      "loss_to_recovery": null
+    }
+  },
+  {
+    "spec": {
+      "id": "flare-0-68",
+      "kind": "landing",
+      "height": 30,
+      "flare_height": 0,
+      "flare_brake": 68
+    },
+    "dt": 0.00125,
+    "metrics": {
+      "contact": {
+        "time": 21.875,
+        "position": [
+          58.257316472312255,
+          55.992756853338186,
+          -0.10123845012481075
+        ],
+        "sink": 1.3774848155598565,
+        "ground_speed": 4.194485013631671,
+        "roll_deg": 1.577697778429989,
+        "pitch_deg": 2.4128839570130167,
+        "speed": 4.414880400042412
+      },
+      "flare_time": null,
+      "preapproach_contact": false,
+      "peak_air_speed": 4.425481881191337,
+      "peak_specific_force_g": 1.0027910844259555,
+      "peak_relative_pitch_deg": 11.533482358348778,
+      "peak_sink": 1.3904547225898694,
+      "peak_roll_deg": 1.5829267188549132,
+      "peak_pitch_deg": 2.511924911599905,
+      "release_height": null,
+      "recovered": null,
+      "observation_height_loss": null,
+      "loss_to_recovery": null
+    }
+  },
+  {
+    "spec": {
+      "id": "flare-0.5-0",
+      "kind": "landing",
+      "height": 30,
+      "flare_height": 0.5,
+      "flare_brake": 0
+    },
+    "dt": 0.00125,
+    "metrics": {
+      "contact": {
+        "time": 21.875,
+        "position": [
+          58.257316472312255,
+          55.992756853338186,
+          -0.10123845012481075
+        ],
+        "sink": 1.3774848155598565,
+        "ground_speed": 4.194485013631671,
+        "roll_deg": 1.577697778429989,
+        "pitch_deg": 2.4128839570130167,
+        "speed": 4.414880400042412
+      },
+      "flare_time": 21.585,
+      "preapproach_contact": false,
+      "peak_air_speed": 4.425481881191337,
+      "peak_specific_force_g": 1.0027910844259555,
+      "peak_relative_pitch_deg": 11.533482358348778,
+      "peak_sink": 1.3904547225898694,
+      "peak_roll_deg": 1.5829267188549132,
+      "peak_pitch_deg": 2.511924911599905,
+      "release_height": null,
+      "recovered": null,
+      "observation_height_loss": null,
+      "loss_to_recovery": null
+    }
+  },
+  {
+    "spec": {
+      "id": "flare-0.5-18",
+      "kind": "landing",
+      "height": 30,
+      "flare_height": 0.5,
+      "flare_brake": 18
+    },
+    "dt": 0.00125,
+    "metrics": {
+      "contact": {
+        "time": 21.89,
+        "position": [
+          58.2556549506641,
+          56.04850162012442,
+          -0.10113797098712236
+        ],
+        "sink": 1.2212757740758364,
+        "ground_speed": 4.090643566375295,
+        "roll_deg": 1.674981666291632,
+        "pitch_deg": 8.039042181202992,
+        "speed": 4.269060705058213
+      },
+      "flare_time": 21.585,
+      "preapproach_contact": false,
+      "peak_air_speed": 4.425481881191337,
+      "peak_specific_force_g": 1.0855086339174473,
+      "peak_relative_pitch_deg": 12.815534125577315,
+      "peak_sink": 1.3904547225898694,
+      "peak_roll_deg": 1.674981666291632,
+      "peak_pitch_deg": 8.039042181202992,
+      "release_height": null,
+      "recovered": null,
+      "observation_height_loss": null,
+      "loss_to_recovery": null
+    }
+  },
+  {
+    "spec": {
+      "id": "flare-0.5-36",
+      "kind": "landing",
+      "height": 30,
+      "flare_height": 0.5,
+      "flare_brake": 36
+    },
+    "dt": 0.00125,
+    "metrics": {
+      "contact": {
+        "time": 21.89625,
+        "position": [
+          58.255027691706196,
+          56.070776860413915,
+          -0.1003958905419203
+        ],
+        "sink": 1.15771563557165,
+        "ground_speed": 4.021317146354632,
+        "roll_deg": 1.7396302711423757,
+        "pitch_deg": 11.944900500617559,
+        "speed": 4.184650174675636
+      },
+      "flare_time": 21.585,
+      "preapproach_contact": false,
+      "peak_air_speed": 4.425481881191337,
+      "peak_specific_force_g": 1.133569296446801,
+      "peak_relative_pitch_deg": 13.412828590003892,
+      "peak_sink": 1.3904547225898694,
+      "peak_roll_deg": 1.7396302711423757,
+      "peak_pitch_deg": 11.944900500617559,
+      "release_height": null,
+      "recovered": null,
+      "observation_height_loss": null,
+      "loss_to_recovery": null
+    }
+  },
+  {
+    "spec": {
+      "id": "flare-0.5-54",
+      "kind": "landing",
+      "height": 30,
+      "flare_height": 0.5,
+      "flare_brake": 54
+    },
+    "dt": 0.00125,
+    "metrics": {
+      "contact": {
+        "time": 21.8975,
+        "position": [
+          58.25489604263177,
+          56.07523495912941,
+          -0.10081546344403564
+        ],
+        "sink": 1.1401339289648593,
+        "ground_speed": 4.001373400950157,
+        "roll_deg": 1.738817392669046,
+        "pitch_deg": 13.073162740682458,
+        "speed": 4.160636305880181
+      },
+      "flare_time": 21.585,
+      "preapproach_contact": false,
+      "peak_air_speed": 4.425481881191337,
+      "peak_specific_force_g": 1.1281352256249209,
+      "peak_relative_pitch_deg": 12.963584109386936,
+      "peak_sink": 1.3904547225898694,
+      "peak_roll_deg": 1.738817392669046,
+      "peak_pitch_deg": 13.073162740682458,
+      "release_height": null,
+      "recovered": null,
+      "observation_height_loss": null,
+      "loss_to_recovery": null
+    }
+  },
+  {
+    "spec": {
+      "id": "flare-0.5-68",
+      "kind": "landing",
+      "height": 30,
+      "flare_height": 0.5,
+      "flare_brake": 68
+    },
+    "dt": 0.00125,
+    "metrics": {
+      "contact": {
+        "time": 21.8975,
+        "position": [
+          58.25489314526912,
+          56.07520448471719,
+          -0.10111007284403986
+        ],
+        "sink": 1.1301841534269859,
+        "ground_speed": 3.9997026521858206,
+        "roll_deg": 1.7335531079160968,
+        "pitch_deg": 13.100367177294792,
+        "speed": 4.156312972642912
+      },
+      "flare_time": 21.585,
+      "preapproach_contact": false,
+      "peak_air_speed": 4.425481881191337,
+      "peak_specific_force_g": 1.1395766857347078,
+      "peak_relative_pitch_deg": 12.772839765144496,
+      "peak_sink": 1.3904547225898694,
+      "peak_roll_deg": 1.7335531079160968,
+      "peak_pitch_deg": 13.100367177294792,
+      "release_height": null,
+      "recovered": null,
+      "observation_height_loss": null,
+      "loss_to_recovery": null
+    }
+  },
+  {
+    "spec": {
+      "id": "flare-1-0",
+      "kind": "landing",
+      "height": 30,
+      "flare_height": 1,
+      "flare_brake": 0
+    },
+    "dt": 0.00125,
+    "metrics": {
+      "contact": {
+        "time": 21.875,
+        "position": [
+          58.257316472312255,
+          55.992756853338186,
+          -0.10123845012481075
+        ],
+        "sink": 1.3774848155598565,
+        "ground_speed": 4.194485013631671,
+        "roll_deg": 1.577697778429989,
+        "pitch_deg": 2.4128839570130167,
+        "speed": 4.414880400042412
+      },
+      "flare_time": 21.2225,
+      "preapproach_contact": false,
+      "peak_air_speed": 4.425481881191337,
+      "peak_specific_force_g": 1.0027910844259555,
+      "peak_relative_pitch_deg": 11.533482358348778,
+      "peak_sink": 1.3904547225898694,
+      "peak_roll_deg": 1.5829267188549132,
+      "peak_pitch_deg": 2.511924911599905,
+      "release_height": null,
+      "recovered": null,
+      "observation_height_loss": null,
+      "loss_to_recovery": null
+    }
+  },
+  {
+    "spec": {
+      "id": "flare-1-18",
+      "kind": "landing",
+      "height": 30,
+      "flare_height": 1,
+      "flare_brake": 18
+    },
+    "dt": 0.00125,
+    "metrics": {
+      "contact": {
+        "time": 21.985,
+        "position": [
+          58.24131277363396,
+          56.29030860003567,
+          -0.10062259078656069
+        ],
+        "sink": 1.061865228083568,
+        "ground_speed": 3.6245442156322287,
+        "roll_deg": 2.0189011319841716,
+        "pitch_deg": 7.989184175853165,
+        "speed": 3.7768874134247126
+      },
+      "flare_time": 21.2225,
+      "preapproach_contact": false,
+      "peak_air_speed": 4.425481881191337,
+      "peak_specific_force_g": 1.0888369297071807,
+      "peak_relative_pitch_deg": 13.009762319718245,
+      "peak_sink": 1.3904547225898694,
+      "peak_roll_deg": 2.0189011319841716,
+      "peak_pitch_deg": 9.056736151366824,
+      "release_height": null,
+      "recovered": null,
+      "observation_height_loss": null,
+      "loss_to_recovery": null
+    }
+  },
+  {
+    "spec": {
+      "id": "flare-1-36",
+      "kind": "landing",
+      "height": 30,
+      "flare_height": 1,
+      "flare_brake": 36
+    },
+    "dt": 0.00125,
+    "metrics": {
+      "contact": {
+        "time": 22.0575,
+        "position": [
+          58.235153889318994,
+          56.38179617831369,
+          -0.10085817166865263
+        ],
+        "sink": 0.9630157005350299,
+        "ground_speed": 3.0266334795254015,
+        "roll_deg": 2.0846537402281173,
+        "pitch_deg": 11.926651699334013,
+        "speed": 3.1761469517106753
+      },
+      "flare_time": 21.2225,
+      "preapproach_contact": false,
+      "peak_air_speed": 4.425481881191337,
+      "peak_specific_force_g": 1.1565546516096457,
+      "peak_relative_pitch_deg": 14.600106465976646,
+      "peak_sink": 1.3904547225898694,
+      "peak_roll_deg": 2.0882699554949067,
+      "peak_pitch_deg": 15.137624339007811,
+      "release_height": null,
+      "recovered": null,
+      "observation_height_loss": null,
+      "loss_to_recovery": null
+    }
+  },
+  {
+    "spec": {
+      "id": "flare-1-54",
+      "kind": "landing",
+      "height": 30,
+      "flare_height": 1,
+      "flare_brake": 54
+    },
+    "dt": 0.00125,
+    "metrics": {
+      "contact": {
+        "time": 22.08,
+        "position": [
+          58.23748496287736,
+          56.33316005159358,
+          -0.10084462068562268
+        ],
+        "sink": 0.9591138544351238,
+        "ground_speed": 2.606798104152738,
+        "roll_deg": 2.0102674611583007,
+        "pitch_deg": 14.82058518703106,
+        "speed": 2.7776421190613645
+      },
+      "flare_time": 21.2225,
+      "preapproach_contact": false,
+      "peak_air_speed": 4.425481881191337,
+      "peak_specific_force_g": 1.1911723595216221,
+      "peak_relative_pitch_deg": 15.660865292802166,
+      "peak_sink": 1.3904547225898694,
+      "peak_roll_deg": 2.053711606748817,
+      "peak_pitch_deg": 19.61015982130879,
+      "release_height": null,
+      "recovered": null,
+      "observation_height_loss": null,
+      "loss_to_recovery": null
+    }
+  },
+  {
+    "spec": {
+      "id": "flare-1-68",
+      "kind": "landing",
+      "height": 30,
+      "flare_height": 1,
+      "flare_brake": 68
+    },
+    "dt": 0.00125,
+    "metrics": {
+      "contact": {
+        "time": 22.0775,
+        "position": [
+          58.24085824014829,
+          56.27068253334892,
+          -0.10105120086434274
+        ],
+        "sink": 0.9721296051688125,
+        "ground_speed": 2.3992593397697877,
+        "roll_deg": 1.9730135296497027,
+        "pitch_deg": 16.91845848545819,
+        "speed": 2.5887219527632217
+      },
+      "flare_time": 21.2225,
+      "preapproach_contact": false,
+      "peak_air_speed": 4.425481881191337,
+      "peak_specific_force_g": 1.1938835945749908,
+      "peak_relative_pitch_deg": 16.073174681991443,
+      "peak_sink": 1.3904547225898694,
+      "peak_roll_deg": 2.0621391419712425,
+      "peak_pitch_deg": 22.30328041780216,
+      "release_height": null,
+      "recovered": null,
+      "observation_height_loss": null,
+      "loss_to_recovery": null
+    }
+  },
+  {
+    "spec": {
+      "id": "flare-2-0",
+      "kind": "landing",
+      "height": 30,
+      "flare_height": 2,
+      "flare_brake": 0
+    },
+    "dt": 0.00125,
+    "metrics": {
+      "contact": {
+        "time": 21.875,
+        "position": [
+          58.257316472312255,
+          55.992756853338186,
+          -0.10123845012481075
+        ],
+        "sink": 1.3774848155598565,
+        "ground_speed": 4.194485013631671,
+        "roll_deg": 1.577697778429989,
+        "pitch_deg": 2.4128839570130167,
+        "speed": 4.414880400042412
+      },
+      "flare_time": 20.49625,
+      "preapproach_contact": false,
+      "peak_air_speed": 4.425481881191337,
+      "peak_specific_force_g": 1.0027910844259555,
+      "peak_relative_pitch_deg": 11.533482358348778,
+      "peak_sink": 1.3904547225898694,
+      "peak_roll_deg": 1.5829267188549132,
+      "peak_pitch_deg": 2.511924911599905,
+      "release_height": null,
+      "recovered": null,
+      "observation_height_loss": null,
+      "loss_to_recovery": null
+    }
+  },
+  {
+    "spec": {
+      "id": "flare-2-18",
+      "kind": "landing",
+      "height": 30,
+      "flare_height": 2,
+      "flare_brake": 18
+    },
+    "dt": 0.00125,
+    "metrics": {
+      "contact": {
+        "time": 22.06,
+        "position": [
+          58.20378880661845,
+          55.995674488109536,
+          -0.10144305376310628
+        ],
+        "sink": 1.4665407084525437,
+        "ground_speed": 3.4220406547397793,
+        "roll_deg": 1.831211737964834,
+        "pitch_deg": 0.35659248828691026,
+        "speed": 3.723050347798206
+      },
+      "flare_time": 20.49625,
+      "preapproach_contact": false,
+      "peak_air_speed": 4.425481881191337,
+      "peak_specific_force_g": 1.0898518860858042,
+      "peak_relative_pitch_deg": 13.058363519804253,
+      "peak_sink": 1.4665407084525437,
+      "peak_roll_deg": 2.0545062569117714,
+      "peak_pitch_deg": 9.073483337000342,
+      "release_height": null,
+      "recovered": null,
+      "observation_height_loss": null,
+      "loss_to_recovery": null
+    }
+  },
+  {
+    "spec": {
+      "id": "flare-2-36",
+      "kind": "landing",
+      "height": 30,
+      "flare_height": 2,
+      "flare_brake": 36
+    },
+    "dt": 0.00125,
+    "metrics": {
+      "contact": {
+        "time": 22.107499999999998,
+        "position": [
+          58.2133638171506,
+          55.507402683215915,
+          -0.10132897375698946
+        ],
+        "sink": 1.6197438342852832,
+        "ground_speed": 2.8709806277703995,
+        "roll_deg": 1.4732269502632205,
+        "pitch_deg": -2.2805601243076654,
+        "speed": 3.296376776665269
+      },
+      "flare_time": 20.49625,
+      "preapproach_contact": false,
+      "peak_air_speed": 4.425481881191337,
+      "peak_specific_force_g": 1.1545546466329062,
+      "peak_relative_pitch_deg": 14.482548159765134,
+      "peak_sink": 1.6197438342852832,
+      "peak_roll_deg": 2.087933125991769,
+      "peak_pitch_deg": 15.128324538392505,
+      "release_height": null,
+      "recovered": null,
+      "observation_height_loss": null,
+      "loss_to_recovery": null
+    }
+  },
+  {
+    "spec": {
+      "id": "flare-2-54",
+      "kind": "landing",
+      "height": 30,
+      "flare_height": 2,
+      "flare_brake": 54
+    },
+    "dt": 0.00125,
+    "metrics": {
+      "contact": {
+        "time": 22.1025,
+        "position": [
+          58.231173433229046,
+          55.044464518703954,
+          -0.10211078483953753
+        ],
+        "sink": 1.7063223857833505,
+        "ground_speed": 2.4580487549724386,
+        "roll_deg": 1.162824625636085,
+        "pitch_deg": -3.7797384533919893,
+        "speed": 2.992246608494517
+      },
+      "flare_time": 20.49625,
+      "preapproach_contact": false,
+      "peak_air_speed": 4.425481881191337,
+      "peak_specific_force_g": 1.1915000507340676,
+      "peak_relative_pitch_deg": 15.663043047155103,
+      "peak_sink": 1.7063223857833505,
+      "peak_roll_deg": 2.0526247998135196,
+      "peak_pitch_deg": 19.709888253732935,
+      "release_height": null,
+      "recovered": null,
+      "observation_height_loss": null,
+      "loss_to_recovery": null
+    }
+  },
+  {
+    "spec": {
+      "id": "flare-2-68",
+      "kind": "landing",
+      "height": 30,
+      "flare_height": 2,
+      "flare_brake": 68
+    },
+    "dt": 0.00125,
+    "metrics": {
+      "contact": {
+        "time": 22.0875,
+        "position": [
+          58.24072629762179,
+          54.76532721359794,
+          -0.10054842146790084
+        ],
+        "sink": 1.7429101933434623,
+        "ground_speed": 2.2003472245634526,
+        "roll_deg": 1.0039395423401607,
+        "pitch_deg": -4.389377993517943,
+        "speed": 2.8070026452970493
+      },
+      "flare_time": 20.49625,
+      "preapproach_contact": false,
+      "peak_air_speed": 4.425481881191337,
+      "peak_specific_force_g": 1.1948736082876377,
+      "peak_relative_pitch_deg": 16.117173601156225,
+      "peak_sink": 1.7429101933434623,
+      "peak_roll_deg": 2.057265724630161,
+      "peak_pitch_deg": 22.132477124750014,
+      "release_height": null,
+      "recovered": null,
+      "observation_height_loss": null,
+      "loss_to_recovery": null
+    }
+  },
+  {
+    "spec": {
+      "id": "flare-3-0",
+      "kind": "landing",
+      "height": 30,
+      "flare_height": 3,
+      "flare_brake": 0
+    },
+    "dt": 0.00125,
+    "metrics": {
+      "contact": {
+        "time": 21.875,
+        "position": [
+          58.257316472312255,
+          55.992756853338186,
+          -0.10123845012481075
+        ],
+        "sink": 1.3774848155598565,
+        "ground_speed": 4.194485013631671,
+        "roll_deg": 1.577697778429989,
+        "pitch_deg": 2.4128839570130167,
+        "speed": 4.414880400042412
+      },
+      "flare_time": 19.77,
+      "preapproach_contact": false,
+      "peak_air_speed": 4.425481881191337,
+      "peak_specific_force_g": 1.0027910844259555,
+      "peak_relative_pitch_deg": 11.533482358348778,
+      "peak_sink": 1.3904547225898694,
+      "peak_roll_deg": 1.5829267188549132,
+      "peak_pitch_deg": 2.511924911599905,
+      "release_height": null,
+      "recovered": null,
+      "observation_height_loss": null,
+      "loss_to_recovery": null
+    }
+  },
+  {
+    "spec": {
+      "id": "flare-3-18",
+      "kind": "landing",
+      "height": 30,
+      "flare_height": 3,
+      "flare_brake": 18
+    },
+    "dt": 0.00125,
+    "metrics": {
+      "contact": {
+        "time": 21.978749999999998,
+        "position": [
+          58.14770286038401,
+          55.25266047507848,
+          -0.10063077308170983
+        ],
+        "sink": 1.5642594985948046,
+        "ground_speed": 3.713368976212611,
+        "roll_deg": 1.6714042067019548,
+        "pitch_deg": 0.42193089938297573,
+        "speed": 4.0293941148071335
+      },
+      "flare_time": 19.77,
+      "preapproach_contact": false,
+      "peak_air_speed": 4.425481881191337,
+      "peak_specific_force_g": 1.0890276758327493,
+      "peak_relative_pitch_deg": 13.021801995795824,
+      "peak_sink": 1.5814781913625324,
+      "peak_roll_deg": 2.0544021253379134,
+      "peak_pitch_deg": 9.066357627705855,
+      "release_height": null,
+      "recovered": null,
+      "observation_height_loss": null,
+      "loss_to_recovery": null
+    }
+  },
+  {
+    "spec": {
+      "id": "flare-3-36",
+      "kind": "landing",
+      "height": 30,
+      "flare_height": 3,
+      "flare_brake": 36
+    },
+    "dt": 0.00125,
+    "metrics": {
+      "contact": {
+        "time": 21.96625,
+        "position": [
+          58.16094282930086,
+          54.28398232333889,
+          -0.10005843781032704
+        ],
+        "sink": 1.69895613703289,
+        "ground_speed": 3.3231443060704002,
+        "roll_deg": 1.2695326828988147,
+        "pitch_deg": -0.29368994671855175,
+        "speed": 3.732256694619201
+      },
+      "flare_time": 19.77,
+      "preapproach_contact": false,
+      "peak_air_speed": 4.425481881191337,
+      "peak_specific_force_g": 1.1565961481892537,
+      "peak_relative_pitch_deg": 14.602534770567358,
+      "peak_sink": 1.7433702326650418,
+      "peak_roll_deg": 2.0884526839158393,
+      "peak_pitch_deg": 15.12712951004344,
+      "release_height": null,
+      "recovered": null,
+      "observation_height_loss": null,
+      "loss_to_recovery": null
+    }
+  },
+  {
+    "spec": {
+      "id": "flare-3-54",
+      "kind": "landing",
+      "height": 30,
+      "flare_height": 3,
+      "flare_brake": 54
+    },
+    "dt": 0.00125,
+    "metrics": {
+      "contact": {
+        "time": 21.92875,
+        "position": [
+          58.180394175404075,
+          53.51573649157764,
+          -0.10068535573339649
+        ],
+        "sink": 1.8026779426471515,
+        "ground_speed": 2.9857294106300145,
+        "roll_deg": 0.9185521928242505,
+        "pitch_deg": -0.7812970132191522,
+        "speed": 3.4877253157907404
+      },
+      "flare_time": 19.77,
+      "preapproach_contact": false,
+      "peak_air_speed": 4.425481881191337,
+      "peak_specific_force_g": 1.1906288554923647,
+      "peak_relative_pitch_deg": 15.640387629797411,
+      "peak_sink": 1.8487270341835298,
+      "peak_roll_deg": 2.0538074459387805,
+      "peak_pitch_deg": 19.64181668032157,
+      "release_height": null,
+      "recovered": null,
+      "observation_height_loss": null,
+      "loss_to_recovery": null
+    }
+  },
+  {
+    "spec": {
+      "id": "flare-3-68",
+      "kind": "landing",
+      "height": 30,
+      "flare_height": 3,
+      "flare_brake": 68
+    },
+    "dt": 0.00125,
+    "metrics": {
+      "contact": {
+        "time": 21.89625,
+        "position": [
+          58.18710404672203,
+          53.059325654553,
+          -0.10183628175809586
+        ],
+        "sink": 1.872688916343628,
+        "ground_speed": 2.760620215780014,
+        "roll_deg": 0.7284422960403965,
+        "pitch_deg": -1.2019614050737852,
+        "speed": 3.335863869100411
+      },
+      "flare_time": 19.77,
+      "preapproach_contact": false,
+      "peak_air_speed": 4.425481881191337,
+      "peak_specific_force_g": 1.1944696095523115,
+      "peak_relative_pitch_deg": 16.095005155033824,
+      "peak_sink": 1.9086489105584408,
+      "peak_roll_deg": 2.062213733327328,
+      "peak_pitch_deg": 22.30120808500781,
+      "release_height": null,
+      "recovered": null,
+      "observation_height_loss": null,
+      "loss_to_recovery": null
+    }
+  },
+  {
+    "spec": {
+      "id": "flare-4-0",
+      "kind": "landing",
+      "height": 30,
+      "flare_height": 4,
+      "flare_brake": 0
+    },
+    "dt": 0.00125,
+    "metrics": {
+      "contact": {
+        "time": 21.875,
+        "position": [
+          58.257316472312255,
+          55.992756853338186,
+          -0.10123845012481075
+        ],
+        "sink": 1.3774848155598565,
+        "ground_speed": 4.194485013631671,
+        "roll_deg": 1.577697778429989,
+        "pitch_deg": 2.4128839570130167,
+        "speed": 4.414880400042412
+      },
+      "flare_time": 19.04375,
+      "preapproach_contact": false,
+      "peak_air_speed": 4.425481881191337,
+      "peak_specific_force_g": 1.0027910844259555,
+      "peak_relative_pitch_deg": 11.533482358348778,
+      "peak_sink": 1.3904547225898694,
+      "peak_roll_deg": 1.5829267188549132,
+      "peak_pitch_deg": 2.511924911599905,
+      "release_height": null,
+      "recovered": null,
+      "observation_height_loss": null,
+      "loss_to_recovery": null
+    }
+  },
+  {
+    "spec": {
+      "id": "flare-4-18",
+      "kind": "landing",
+      "height": 30,
+      "flare_height": 4,
+      "flare_brake": 18
+    },
+    "dt": 0.00125,
+    "metrics": {
+      "contact": {
+        "time": 21.9325,
+        "position": [
+          58.04053497538714,
+          54.776719951862546,
+          -0.10002546406241511
+        ],
+        "sink": 1.3746849163161419,
+        "ground_speed": 3.76525600115174,
+        "roll_deg": 1.828500714424931,
+        "pitch_deg": 3.550357565003677,
+        "speed": 4.008355195508042
+      },
+      "flare_time": 19.04375,
+      "preapproach_contact": false,
+      "peak_air_speed": 4.425481881191337,
+      "peak_specific_force_g": 1.0898760789271842,
+      "peak_relative_pitch_deg": 13.054701681589728,
+      "peak_sink": 1.5814291055431156,
+      "peak_roll_deg": 2.054606086647075,
+      "peak_pitch_deg": 9.070484566522564,
+      "release_height": null,
+      "recovered": null,
+      "observation_height_loss": null,
+      "loss_to_recovery": null
+    }
+  },
+  {
+    "spec": {
+      "id": "flare-4-36",
+      "kind": "landing",
+      "height": 30,
+      "flare_height": 4,
+      "flare_brake": 36
+    },
+    "dt": 0.00125,
+    "metrics": {
+      "contact": {
+        "time": 21.88375,
+        "position": [
+          58.056014420640935,
+          53.422623089656106,
+          -0.10133403925817383
+        ],
+        "sink": 1.4146959800737704,
+        "ground_speed": 3.345824662318851,
+        "roll_deg": 1.4533105196540124,
+        "pitch_deg": 4.5635962427104095,
+        "speed": 3.6326171539288223
+      },
+      "flare_time": 19.04375,
+      "preapproach_contact": false,
+      "peak_air_speed": 4.425481881191337,
+      "peak_specific_force_g": 1.154122021349231,
+      "peak_relative_pitch_deg": 14.456256384219685,
+      "peak_sink": 1.7434951595965573,
+      "peak_roll_deg": 2.0878665794880944,
+      "peak_pitch_deg": 15.143215480131449,
+      "release_height": null,
+      "recovered": null,
+      "observation_height_loss": null,
+      "loss_to_recovery": null
+    }
+  },
+  {
+    "spec": {
+      "id": "flare-4-54",
+      "kind": "landing",
+      "height": 30,
+      "flare_height": 4,
+      "flare_brake": 54
+    },
+    "dt": 0.00125,
+    "metrics": {
+      "contact": {
+        "time": 21.81,
+        "position": [
+          58.082516141790286,
+          52.332526142341436,
+          -0.10147665763757646
+        ],
+        "sink": 1.4983373233957304,
+        "ground_speed": 3.016963666024748,
+        "roll_deg": 1.0453623971207866,
+        "pitch_deg": 4.88449397625371,
+        "speed": 3.3685433790874906
+      },
+      "flare_time": 19.04375,
+      "preapproach_contact": false,
+      "peak_air_speed": 4.425481881191337,
+      "peak_specific_force_g": 1.1919210555566295,
+      "peak_relative_pitch_deg": 15.679920391007462,
+      "peak_sink": 1.849007622137821,
+      "peak_roll_deg": 2.0528871804037427,
+      "peak_pitch_deg": 19.699200883806963,
+      "release_height": null,
+      "recovered": null,
+      "observation_height_loss": null,
+      "loss_to_recovery": null
+    }
+  },
+  {
+    "spec": {
+      "id": "flare-4-68",
+      "kind": "landing",
+      "height": 30,
+      "flare_height": 4,
+      "flare_brake": 68
+    },
+    "dt": 0.00125,
+    "metrics": {
+      "contact": {
+        "time": 21.75125,
+        "position": [
+          58.08602112571999,
+          51.673648966378614,
+          -0.10102030013398575
+        ],
+        "sink": 1.575703877951542,
+        "ground_speed": 2.81978095705205,
+        "roll_deg": 0.8141850868404747,
+        "pitch_deg": 4.834157548481418,
+        "speed": 3.2301714129044146
+      },
+      "flare_time": 19.04375,
+      "preapproach_contact": false,
+      "peak_air_speed": 4.425481881191337,
+      "peak_specific_force_g": 1.1943975714176827,
+      "peak_relative_pitch_deg": 16.1002046917181,
+      "peak_sink": 1.9088952029005646,
+      "peak_roll_deg": 2.0567989248682133,
+      "peak_pitch_deg": 22.171439572057462,
+      "release_height": null,
+      "recovered": null,
+      "observation_height_loss": null,
+      "loss_to_recovery": null
+    }
+  },
+  {
+    "spec": {
+      "id": "recovery-0.5-18",
+      "kind": "swoop",
+      "height": 100,
+      "prebrake": 36,
+      "release_s": 0.5,
+      "recovery_brake": 18
+    },
+    "dt": 0.00125,
+    "metrics": {
+      "contact": null,
+      "flare_time": null,
+      "preapproach_contact": false,
+      "peak_air_speed": 4.531607635741105,
+      "peak_specific_force_g": 1.162816751159625,
+      "peak_relative_pitch_deg": 13.0556847781931,
+      "peak_sink": 2.025337359625159,
+      "peak_roll_deg": 2.0709738705750795,
+      "peak_pitch_deg": 10.21670199491301,
+      "release_height": 85.84897783508684,
+      "recovered": {
+        "time": 15.50625,
+        "height": 77.91359014212556
+      },
+      "observation_height_loss": 35.29519008838937,
+      "loss_to_recovery": 7.935387692961285
+    }
+  },
+  {
+    "spec": {
+      "id": "recovery-0.5-36",
+      "kind": "swoop",
+      "height": 100,
+      "prebrake": 36,
+      "release_s": 0.5,
+      "recovery_brake": 36
+    },
+    "dt": 0.00125,
+    "metrics": {
+      "contact": null,
+      "flare_time": null,
+      "preapproach_contact": false,
+      "peak_air_speed": 4.464768207758316,
+      "peak_specific_force_g": 1.2451777669743427,
+      "peak_relative_pitch_deg": 14.508386331697508,
+      "peak_sink": 2.006845271874068,
+      "peak_roll_deg": 1.8108370139761942,
+      "peak_pitch_deg": 11.442528195932763,
+      "release_height": 85.84897783508684,
+      "recovered": {
+        "time": 17.64125,
+        "height": 74.55146137621918
+      },
+      "observation_height_loss": 36.85201159698321,
+      "loss_to_recovery": 11.297516458867662
+    }
+  },
+  {
+    "spec": {
+      "id": "recovery-0.5-54",
+      "kind": "swoop",
+      "height": 100,
+      "prebrake": 36,
+      "release_s": 0.5,
+      "recovery_brake": 54
+    },
+    "dt": 0.00125,
+    "metrics": {
+      "contact": null,
+      "flare_time": null,
+      "preapproach_contact": false,
+      "peak_air_speed": 4.457188245698104,
+      "peak_specific_force_g": 1.2963032831624262,
+      "peak_relative_pitch_deg": 15.62955432108722,
+      "peak_sink": 2.006845271874068,
+      "peak_roll_deg": 1.6275881242440131,
+      "peak_pitch_deg": 15.088113236556257,
+      "release_height": 85.84897783508684,
+      "recovered": null,
+      "observation_height_loss": 38.5922323409914,
+      "loss_to_recovery": null
+    }
+  },
+  {
+    "spec": {
+      "id": "recovery-1-18",
+      "kind": "swoop",
+      "height": 100,
+      "prebrake": 36,
+      "release_s": 1,
+      "recovery_brake": 18
+    },
+    "dt": 0.00125,
+    "metrics": {
+      "contact": null,
+      "flare_time": null,
+      "preapproach_contact": false,
+      "peak_air_speed": 4.951827252668464,
+      "peak_specific_force_g": 1.2433502123426485,
+      "peak_relative_pitch_deg": 13.482472960234578,
+      "peak_sink": 2.1247906450806253,
+      "peak_roll_deg": 2.271770379511984,
+      "peak_pitch_deg": 12.448177350141025,
+      "release_height": 85.84897783508684,
+      "recovered": {
+        "time": 15.922500000000001,
+        "height": 77.28944924766301
+      },
+      "observation_height_loss": 35.32838901466452,
+      "loss_to_recovery": 8.559528587423827
+    }
+  },
+  {
+    "spec": {
+      "id": "recovery-1-36",
+      "kind": "swoop",
+      "height": 100,
+      "prebrake": 36,
+      "release_s": 1,
+      "recovery_brake": 36
+    },
+    "dt": 0.00125,
+    "metrics": {
+      "contact": null,
+      "flare_time": null,
+      "preapproach_contact": false,
+      "peak_air_speed": 4.946317358759094,
+      "peak_specific_force_g": 1.3252133447737064,
+      "peak_relative_pitch_deg": 14.979556958788807,
+      "peak_sink": 2.1247906450806253,
+      "peak_roll_deg": 2.124311884317314,
+      "peak_pitch_deg": 17.44650285393006,
+      "release_height": 85.84897783508684,
+      "recovered": {
+        "time": 18.1025,
+        "height": 73.84156924162899
+      },
+      "observation_height_loss": 36.88085472616858,
+      "loss_to_recovery": 12.007408593457853
+    }
+  },
+  {
+    "spec": {
+      "id": "recovery-1-54",
+      "kind": "swoop",
+      "height": 100,
+      "prebrake": 36,
+      "release_s": 1,
+      "recovery_brake": 54
+    },
+    "dt": 0.00125,
+    "metrics": {
+      "contact": null,
+      "flare_time": null,
+      "preapproach_contact": false,
+      "peak_air_speed": 4.946317358759094,
+      "peak_specific_force_g": 1.362588975815188,
+      "peak_relative_pitch_deg": 16.040010054382314,
+      "peak_sink": 2.1247906450806253,
+      "peak_roll_deg": 1.9633940895358235,
+      "peak_pitch_deg": 21.368197998114255,
+      "release_height": 85.84897783508684,
+      "recovered": null,
+      "observation_height_loss": 38.59865362696982,
+      "loss_to_recovery": null
+    }
+  },
+  {
+    "spec": {
+      "id": "recovery-2-18",
+      "kind": "swoop",
+      "height": 100,
+      "prebrake": 36,
+      "release_s": 2,
+      "recovery_brake": 18
+    },
+    "dt": 0.00125,
+    "metrics": {
+      "contact": null,
+      "flare_time": null,
+      "preapproach_contact": false,
+      "peak_air_speed": 5.00262722418876,
+      "peak_specific_force_g": 1.136069418547865,
+      "peak_relative_pitch_deg": 13.061011032357387,
+      "peak_sink": 2.1247906450806253,
+      "peak_roll_deg": 2.2182875954149153,
+      "peak_pitch_deg": 13.167539509927096,
+      "release_height": 85.84897783508684,
+      "recovered": {
+        "time": 16.47875,
+        "height": 76.55165193537107
+      },
+      "observation_height_loss": 35.285029211645295,
+      "loss_to_recovery": 9.297325899715773
+    }
+  },
+  {
+    "spec": {
+      "id": "recovery-2-36",
+      "kind": "swoop",
+      "height": 100,
+      "prebrake": 36,
+      "release_s": 2,
+      "recovery_brake": 36
+    },
+    "dt": 0.00125,
+    "metrics": {
+      "contact": null,
+      "flare_time": null,
+      "preapproach_contact": false,
+      "peak_air_speed": 5.00262722418876,
+      "peak_specific_force_g": 1.136069418547865,
+      "peak_relative_pitch_deg": 14.502968956463173,
+      "peak_sink": 2.1247906450806253,
+      "peak_roll_deg": 2.3076217096349168,
+      "peak_pitch_deg": 18.999799748794892,
+      "release_height": 85.84897783508684,
+      "recovered": {
+        "time": 18.84875,
+        "height": 72.87515533179123
+      },
+      "observation_height_loss": 36.74553700872563,
+      "loss_to_recovery": 12.973822503295608
+    }
+  },
+  {
+    "spec": {
+      "id": "recovery-2-54",
+      "kind": "swoop",
+      "height": 100,
+      "prebrake": 36,
+      "release_s": 2,
+      "recovery_brake": 54
+    },
+    "dt": 0.00125,
+    "metrics": {
+      "contact": null,
+      "flare_time": null,
+      "preapproach_contact": false,
+      "peak_air_speed": 5.00262722418876,
+      "peak_specific_force_g": 1.136069418547865,
+      "peak_relative_pitch_deg": 15.58520553551297,
+      "peak_sink": 2.1247906450806253,
+      "peak_roll_deg": 2.3367160856223532,
+      "peak_pitch_deg": 23.19135388596833,
+      "release_height": 85.84897783508684,
+      "recovered": null,
+      "observation_height_loss": 38.367106200926614,
+      "loss_to_recovery": null
+    }
+  },
+  {
+    "spec": {
+      "id": "recovery-3-18",
+      "kind": "swoop",
+      "height": 100,
+      "prebrake": 36,
+      "release_s": 3,
+      "recovery_brake": 18
+    },
+    "dt": 0.00125,
+    "metrics": {
+      "contact": null,
+      "flare_time": null,
+      "preapproach_contact": false,
+      "peak_air_speed": 5.00262722418876,
+      "peak_specific_force_g": 1.136069418547865,
+      "peak_relative_pitch_deg": 12.86784626277208,
+      "peak_sink": 2.1247906450806253,
+      "peak_roll_deg": 1.9237118110527789,
+      "peak_pitch_deg": 10.21670199491301,
+      "release_height": 85.84897783508684,
+      "recovered": {
+        "time": 17.21625,
+        "height": 75.56771904019014
+      },
+      "observation_height_loss": 35.23385883962,
+      "loss_to_recovery": 10.2812587948967
+    }
+  },
+  {
+    "spec": {
+      "id": "recovery-3-36",
+      "kind": "swoop",
+      "height": 100,
+      "prebrake": 36,
+      "release_s": 3,
+      "recovery_brake": 36
+    },
+    "dt": 0.00125,
+    "metrics": {
+      "contact": null,
+      "flare_time": null,
+      "preapproach_contact": false,
+      "peak_air_speed": 5.00262722418876,
+      "peak_specific_force_g": 1.1367358938236845,
+      "peak_relative_pitch_deg": 14.401229804161074,
+      "peak_sink": 2.1247906450806253,
+      "peak_roll_deg": 1.94355331529427,
+      "peak_pitch_deg": 12.265754723833158,
+      "release_height": 85.84897783508684,
+      "recovered": {
+        "time": 19.86625,
+        "height": 71.50272428962722
+      },
+      "observation_height_loss": 36.61584176779838,
+      "loss_to_recovery": 14.346253545459618
+    }
+  },
+  {
+    "spec": {
+      "id": "recovery-3-54",
+      "kind": "swoop",
+      "height": 100,
+      "prebrake": 36,
+      "release_s": 3,
+      "recovery_brake": 54
+    },
+    "dt": 0.00125,
+    "metrics": {
+      "contact": null,
+      "flare_time": null,
+      "preapproach_contact": false,
+      "peak_air_speed": 5.00262722418876,
+      "peak_specific_force_g": 1.1756477156334337,
+      "peak_relative_pitch_deg": 15.442826556195131,
+      "peak_sink": 2.1247906450806253,
+      "peak_roll_deg": 1.9150794532572146,
+      "peak_pitch_deg": 16.97140530294119,
+      "release_height": 85.84897783508684,
+      "recovered": null,
+      "observation_height_loss": 38.16194639851737,
+      "loss_to_recovery": null
+    }
+  },
+  {
+    "spec": {
+      "id": "wind--1.5-0-height",
+      "kind": "landing",
+      "height": 30,
+      "wind": [
+        -1.5,
+        0,
+        0
+      ],
+      "guidance": "height",
+      "flare_height": 1,
+      "flare_brake": 36,
+      "gust": 0.2
+    },
+    "dt": 0.00125,
+    "metrics": {
+      "contact": {
+        "time": 22.08625,
+        "position": [
+          26.571929723485887,
+          55.21113084096527,
+          -0.10064946584798365
+        ],
+        "sink": 1.1813120851769816,
+        "ground_speed": 3.4033248927129427,
+        "roll_deg": 1.80429121332945,
+        "pitch_deg": 8.232272826481635,
+        "speed": 3.6025155888552027
+      },
+      "flare_time": 21.26625,
+      "preapproach_contact": false,
+      "peak_air_speed": 4.760640175662487,
+      "peak_specific_force_g": 1.0775966150507639,
+      "peak_relative_pitch_deg": 14.356018098680579,
+      "peak_sink": 1.6795695848106698,
+      "peak_roll_deg": 2.829416660270578,
+      "peak_pitch_deg": 14.703642149543754,
+      "release_height": null,
+      "recovered": null,
+      "observation_height_loss": null,
+      "loss_to_recovery": null
+    }
+  },
+  {
+    "spec": {
+      "id": "wind--1.5-0-sink",
+      "kind": "landing",
+      "height": 30,
+      "wind": [
+        -1.5,
+        0,
+        0
+      ],
+      "guidance": "sink",
+      "flare_height": 1,
+      "flare_brake": 36,
+      "gust": 0.2
+    },
+    "dt": 0.00125,
+    "metrics": {
+      "contact": {
+        "time": 22.145,
+        "position": [
+          26.443715519198125,
+          54.82738990070605,
+          -0.10128978552398442
+        ],
+        "sink": 1.556703058654645,
+        "ground_speed": 3.158435487309708,
+        "roll_deg": 1.2359746676263996,
+        "pitch_deg": -2.113636838531763,
+        "speed": 3.521226936782411
+      },
+      "flare_time": 20.8675,
+      "preapproach_contact": false,
+      "peak_air_speed": 4.760640175662487,
+      "peak_specific_force_g": 1.1086915280761251,
+      "peak_relative_pitch_deg": 14.614476176660423,
+      "peak_sink": 1.6795695848106698,
+      "peak_roll_deg": 3.190343395393327,
+      "peak_pitch_deg": 18.180162903808498,
+      "release_height": null,
+      "recovered": null,
+      "observation_height_loss": null,
+      "loss_to_recovery": null
+    }
+  },
+  {
+    "spec": {
+      "id": "wind-1.5-0-height",
+      "kind": "landing",
+      "height": 30,
+      "wind": [
+        1.5,
+        0,
+        0
+      ],
+      "guidance": "height",
+      "flare_height": 1,
+      "flare_brake": 36,
+      "gust": 0.2
+    },
+    "dt": 0.00125,
+    "metrics": {
+      "contact": {
+        "time": 22.08625,
+        "position": [
+          92.82692972348718,
+          55.211130840965176,
+          -0.10064946584793091
+        ],
+        "sink": 1.1813120851769872,
+        "ground_speed": 3.2119390318230825,
+        "roll_deg": 1.8042912133294247,
+        "pitch_deg": 8.232272826481687,
+        "speed": 3.422287332579455
+      },
+      "flare_time": 21.26625,
+      "preapproach_contact": false,
+      "peak_air_speed": 4.7606401756625365,
+      "peak_specific_force_g": 1.0775966150507639,
+      "peak_relative_pitch_deg": 14.356018098680575,
+      "peak_sink": 1.6795695848106815,
+      "peak_roll_deg": 2.829416660270559,
+      "peak_pitch_deg": 14.703642149543803,
+      "release_height": null,
+      "recovered": null,
+      "observation_height_loss": null,
+      "loss_to_recovery": null
+    }
+  },
+  {
+    "spec": {
+      "id": "wind-1.5-0-sink",
+      "kind": "landing",
+      "height": 30,
+      "wind": [
+        1.5,
+        0,
+        0
+      ],
+      "guidance": "sink",
+      "flare_height": 1,
+      "flare_brake": 36,
+      "gust": 0.2
+    },
+    "dt": 0.00125,
+    "metrics": {
+      "contact": {
+        "time": 22.145,
+        "position": [
+          92.87496551919934,
+          54.82738990070594,
+          -0.10128978552392924
+        ],
+        "sink": 1.5567030586546509,
+        "ground_speed": 2.938416615911086,
+        "roll_deg": 1.2359746676263805,
+        "pitch_deg": -2.113636838531763,
+        "speed": 3.325299478466128
+      },
+      "flare_time": 20.8675,
+      "preapproach_contact": false,
+      "peak_air_speed": 4.7606401756625365,
+      "peak_specific_force_g": 1.1086915280761251,
+      "peak_relative_pitch_deg": 14.614476176660407,
+      "peak_sink": 1.6795695848106815,
+      "peak_roll_deg": 3.190343395393327,
+      "peak_pitch_deg": 18.18016290380846,
+      "release_height": null,
+      "recovered": null,
+      "observation_height_loss": null,
+      "loss_to_recovery": null
+    }
+  },
+  {
+    "spec": {
+      "id": "wind-0-1.5-height",
+      "kind": "landing",
+      "height": 30,
+      "wind": [
+        0,
+        1.5,
+        0
+      ],
+      "guidance": "height",
+      "flare_height": 1,
+      "flare_brake": 36,
+      "gust": 0.2
+    },
+    "dt": 0.00125,
+    "metrics": {
+      "contact": {
+        "time": 22.08625,
+        "position": [
+          59.69942972348666,
+          88.33863084096498,
+          -0.10064946584797559
+        ],
+        "sink": 1.181312085176983,
+        "ground_speed": 4.446957568820624,
+        "roll_deg": 1.8042912133294247,
+        "pitch_deg": 8.232272826481559,
+        "speed": 4.601187875046641
+      },
+      "flare_time": 21.26625,
+      "preapproach_contact": false,
+      "peak_air_speed": 4.760640175662506,
+      "peak_specific_force_g": 1.0775966150507639,
+      "peak_relative_pitch_deg": 14.356018098680583,
+      "peak_sink": 1.6795695848106749,
+      "peak_roll_deg": 2.829416660270565,
+      "peak_pitch_deg": 14.703642149543754,
+      "release_height": null,
+      "recovered": null,
+      "observation_height_loss": null,
+      "loss_to_recovery": null
+    }
+  },
+  {
+    "spec": {
+      "id": "wind-0-1.5-sink",
+      "kind": "landing",
+      "height": 30,
+      "wind": [
+        0,
+        1.5,
+        0
+      ],
+      "guidance": "sink",
+      "flare_height": 1,
+      "flare_brake": 36,
+      "gust": 0.2
+    },
+    "dt": 0.00125,
+    "metrics": {
+      "contact": {
+        "time": 22.145,
+        "position": [
+          59.65934051919885,
+          88.04301490070581,
+          -0.10128978552397254
+        ],
+        "sink": 1.5567030586546464,
+        "ground_speed": 4.15272233766668,
+        "roll_deg": 1.235974667626387,
+        "pitch_deg": -2.113636838531916,
+        "speed": 4.43491005845446
+      },
+      "flare_time": 20.8675,
+      "preapproach_contact": false,
+      "peak_air_speed": 4.760640175662506,
+      "peak_specific_force_g": 1.1086915280761163,
+      "peak_relative_pitch_deg": 14.614476176660403,
+      "peak_sink": 1.6795695848106749,
+      "peak_roll_deg": 3.1903433953933145,
+      "peak_pitch_deg": 18.180162903808483,
+      "release_height": null,
+      "recovered": null,
+      "observation_height_loss": null,
+      "loss_to_recovery": null
+    }
+  }
+]

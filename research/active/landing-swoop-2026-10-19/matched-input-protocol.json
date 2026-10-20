@@ -1,0 +1,34 @@
+[
+  {
+    "id": "matched-input-baseline-0",
+    "kind": "recovery",
+    "scheme": "baseline",
+    "turnRate": 0,
+    "descentLever": 0.25,
+    "climbLever": 0.6875
+  },
+  {
+    "id": "matched-input-baseline-25",
+    "kind": "recovery",
+    "scheme": "baseline",
+    "turnRate": 25,
+    "descentLever": 0.25,
+    "climbLever": 0.6875
+  },
+  {
+    "id": "matched-input-lqi-0",
+    "kind": "recovery",
+    "scheme": "lqi",
+    "turnRate": 0,
+    "descentLever": 0.25,
+    "climbLever": 0.6875
+  },
+  {
+    "id": "matched-input-lqi-25",
+    "kind": "recovery",
+    "scheme": "lqi",
+    "turnRate": 25,
+    "descentLever": 0.25,
+    "climbLever": 0.6875
+  }
+]

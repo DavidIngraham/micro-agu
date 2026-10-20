@@ -1,0 +1,46 @@
+{
+  "cases": [
+    {
+      "id": "calm-feedforward",
+      "variant": "feedforward"
+    },
+    {
+      "id": "calm-feedback",
+      "variant": "feedback"
+    },
+    {
+      "id": "head-feedback",
+      "variant": "feedback",
+      "along": -1.5,
+      "turbulence": 0.2
+    },
+    {
+      "id": "cross-feedback",
+      "variant": "feedback",
+      "across": 1.5,
+      "turbulence": 0.2
+    },
+    {
+      "id": "dropout-feedback",
+      "variant": "feedback",
+      "lidar": {
+        "dropout_probability": 0.2
+      }
+    },
+    {
+      "id": "failed-sensor",
+      "variant": "feedback",
+      "lidar": {
+        "dropout_probability": 1
+      }
+    }
+  ],
+  "hashes": {
+    "viewer/generated/ardupilot/arduplane.wasm": "466d4d86263d973cc38e850b3a015146e9b98a2cd2ae369fbca7a32eeb9ab504",
+    "viewer/generated/physics/sim_wasm_bg.wasm": "ceae58a55b4585e85b86a142a15c1f5b9bcfbf3e51f21cddbdf741ac4a75c158",
+    "aircraft/microagu/controllers/lqi-gains.bin": "311876eabeb033e55c30c8d556d159495b76e8358cd25a1684c0c3b486ed97f0",
+    "aircraft/microagu/configurations/browser-physics.json": "51120b5f2d21f0e5d00b0d009c6bb25c7e082a6bdb76d49a05524fec92ec34e4",
+    "viewer/packages/sim-browser/src/physics/physics.ts": "a4655aa00e0cc9f20c8143f16b992717239fab522cdfe5e5bc2df1bb1060ab56",
+    "viewer/packages/sim-browser/src/physics/lidar.ts": "1822833cab5ac458c9bdf16ef0f445a1965e2c01d593a059a38bf7967a661995"
+  }
+}

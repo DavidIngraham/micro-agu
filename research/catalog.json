@@ -441,6 +441,13 @@
       "path": "research/active/landing-guidance-2026-10-20",
       "summary": "Existing LQI approach with external landing guidance and bounded brake flare; 13 final AP/EKF cases, research only.",
       "execution_policy": "maintained for landing guidance research"
+    },
+    {
+      "study": "landing-lidar-2026-10-20",
+      "status": "active",
+      "path": "research/active/landing-lidar-2026-10-20",
+      "summary": "Optional simulated lidar through AP rangefinder and MAVLink; six landing cases expose delay and dropout sensitivity.",
+      "execution_policy": "maintained sensor and landing research"
     }
   ]
 }

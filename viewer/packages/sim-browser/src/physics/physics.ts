@@ -1,6 +1,7 @@
 import { RuntimeAssets } from "../assets/runtime";
 import { Atmosphere } from "./atmosphere";
 import { equivalentAirspeed } from "./airspeed";
+import { Lidar, type LidarConfig, type LidarReading } from "./lidar";
 import type { Weather } from "@microagu/contracts/weather";
 import { Quaternion, Vector3 } from "@microagu/contracts/math";
 import type { Frame } from "@microagu/contracts/recordings";
@@ -25,6 +26,8 @@ export interface PhysicsConfig {
   defaults: string;
   trim_residual: number;
   launch_settings?: number[];
+  /** Opt-in generic downward lidar; rng_1 feeds the existing AP JSON backend. */
+  lidar?: LidarConfig;
 }
 export class Physics {
   state: number[];
@@ -38,6 +41,8 @@ export class Physics {
   private cached = "";
   private windNED = [0, 0, 0];
   private atmosphere = new Atmosphere();
+  private lidar?: Lidar;
+  lidarReading?: LidarReading;
   private surfaceEnv: Float64Array | null = null;
   launchPhase = 2;
   inflation = 1;
@@ -95,6 +100,7 @@ export class Physics {
     private readonly homeAltitudeM = 0,
     atmosphere?: Atmosphere,
   ) {
+    if (config.lidar) this.lidar = new Lidar(config.lidar);
     if (atmosphere) this.atmosphere = atmosphere;
     if (
       config.schema !== "microagu.physics.v1" ||
@@ -315,6 +321,7 @@ export class Physics {
         .sub(new Vector3(0, 0, 9.80665))
         .applyQuaternion(obs.inverse);
     this.time += dt;
+    this.lidarReading = this.lidar?.sample(this.time, this.state);
     const message = {
       timestamp: this.time,
       battery: { voltage: this.config.voltage },
@@ -330,6 +337,9 @@ export class Physics {
         this.homeAltitudeM - obs.position.z,
       ),
       velocity_wind: this.windNED.slice(),
+      // JSON cannot represent NaN. Invalid/no-return is explicitly above the
+      // configured maximum, so AP rejects it instead of retaining old terrain.
+      ...(this.lidarReading ? { rng_1: this.lidarReading.range_m } : {}),
     };
     this.frame = frame;
     this.cached = "\n" + JSON.stringify(message) + "\n";

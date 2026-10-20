@@ -353,6 +353,25 @@
       ["lon_int", "int32_t", 88, 1]
     ]
   },
+  "DISTANCE_SENSOR": {
+    "id": 132,
+    "crc": 85,
+    "length": 39,
+    "fields": [
+      ["time_boot_ms", "uint32_t", 0, 1],
+      ["min_distance", "uint16_t", 4, 1],
+      ["max_distance", "uint16_t", 6, 1],
+      ["current_distance", "uint16_t", 8, 1],
+      ["type", "uint8_t", 10, 1],
+      ["id", "uint8_t", 11, 1],
+      ["orientation", "uint8_t", 12, 1],
+      ["covariance", "uint8_t", 13, 1],
+      ["horizontal_fov", "float", 14, 1],
+      ["vertical_fov", "float", 18, 1],
+      ["quaternion", "float", 22, 4],
+      ["signal_quality", "uint8_t", 38, 1]
+    ]
+  },
   "HOME_POSITION": {
     "id": 242,
     "crc": 104,

@@ -8,6 +8,7 @@ Maintained software lives in [simulation](../simulation/README.md), [control](..
 
 | Study | Location |
 |---|---|
+| landing-lidar-2026-10-20 | [landing-lidar-2026-10-20](active/landing-lidar-2026-10-20/) |
 | landing-guidance-2026-10-20 | [landing-guidance-2026-10-20](active/landing-guidance-2026-10-20/) |
 | landing-swoop-2026-10-19 | [landing-swoop-2026-10-19](active/landing-swoop-2026-10-19/) |
 | lqi-wind-startup-2026-10-19 | [lqi-wind-startup-2026-10-19](active/lqi-wind-startup-2026-10-19/) |

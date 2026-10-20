@@ -276,6 +276,19 @@ export class Simulator {
           case "VFR_HUD":
             Object.assign(this.state, { speed: v.groundspeed, climb: v.climb });
             break;
+          case "DISTANCE_SENSOR":
+            if (v.id === 0 && v.orientation === 25) {
+              this.state.rangefinder = {
+                distanceM: v.current_distance / 100,
+                minM: v.min_distance / 100,
+                maxM: v.max_distance / 100,
+                valid: v.current_distance >= v.min_distance &&
+                  v.current_distance <= v.max_distance && v.signal_quality !== 1,
+                receivedTimeS: this.physics.time,
+                timeBootMs: v.time_boot_ms,
+              };
+            }
+            break;
           case "SERVO_OUTPUT_RAW":
             if (v.port === 0)
               this.state.servos = [v.servo1_raw, v.servo2_raw, v.servo3_raw];

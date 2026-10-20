@@ -57,6 +57,33 @@ After intentionally regenerating and reviewing research exports, run
 `npm run assets:inventory` to update the recording hashes. Builds do not rewrite
 these expected hashes or regenerate experiments.
 
+## Optional simulated lidar
+
+`PhysicsConfig.lidar` enables the generic downward lidar in
+`packages/sim-browser/src/physics/lidar.ts`; omitting it preserves existing
+behavior. Start from `defaultLidar` (0.1–40 m, 20 Hz, 50 ms latency, 2 cm Gaussian
+noise, 1% independent no-return probability). Mount offset is in payload FRD
+metres. The beam intersects flat ground using payload attitude; output is slant
+range, with 1 cm quantization and a 60° tilt limit. This is not a measured model
+of a particular device, terrain reflectivity or vegetation.
+
+Configure the existing ArduPilot SITL driver with `RNGFND1_TYPE=100`,
+`RNGFND1_ORIENT=25`, and matching `RNGFND1_MIN/MAX` in metres. JSON `rng_1`
+carries the result. Invalid returns are encoded above the configured maximum;
+**the AP and sensor limits must match**. Missing samples are not represented as
+zero distance or silently retained valid readings. The SITL backend identifies
+its MAVLink sensor type as unknown even though the simulated modality is lidar.
+
+Request MAVLink `DISTANCE_SENSOR` at the desired rate; it is included in the
+generated browser dialect. Consumers must handle invalid/stale returns and
+tilt-correct slant range using estimated attitude. Received measurements are
+available as `Simulator.state.rangefinder`, including validity and reception
+time. `Physics.lidarReading` is
+diagnostic truth-side provenance, not a flight-controller sensor shortcut.
+The landing experiment in `research/active/landing-lidar-2026-10-20` exercises the
+full JSON → AP rangefinder → MAVLink path. The published configuration does not
+enable this sensor automatically.
+
 ## Adding an applet
 
 Create `apps/applets/NAME/index.html`, `definition.ts` and `applet.ts` together.

@@ -8,6 +8,17 @@ export const MODES: Record<string, number> = {
   TAKEOFF: 13,
 };
 export interface Telemetry {
+  /** Downward rangefinder telemetry; slant range, not tilt-corrected AGL.
+   * Consumers must also reject stale receivedTimeS values.
+   */
+  rangefinder?: {
+    distanceM: number;
+    minM: number;
+    maxM: number;
+    valid: boolean;
+    receivedTimeS: number;
+    timeBootMs: number;
+  };
   controllerSelected: "baseline" | "lqi";
   controllerActive: boolean;
   mode: number;

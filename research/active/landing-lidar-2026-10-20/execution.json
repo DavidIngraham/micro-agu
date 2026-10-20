@@ -1,0 +1,38 @@
+[
+  {
+    "id": "calm-feedforward",
+    "code": 0,
+    "stdout": "{\"id\":\"calm-feedforward\",\"complete\":true,\"failure\":null}\n",
+    "stderr": ""
+  },
+  {
+    "id": "calm-feedback",
+    "code": 0,
+    "stdout": "{\"id\":\"calm-feedback\",\"complete\":true,\"failure\":null}\n",
+    "stderr": ""
+  },
+  {
+    "id": "head-feedback",
+    "code": 0,
+    "stdout": "{\"id\":\"head-feedback\",\"complete\":true,\"failure\":null}\n",
+    "stderr": ""
+  },
+  {
+    "id": "cross-feedback",
+    "code": 0,
+    "stdout": "{\"id\":\"cross-feedback\",\"complete\":true,\"failure\":null}\n",
+    "stderr": ""
+  },
+  {
+    "id": "dropout-feedback",
+    "code": 1,
+    "stdout": "{\"id\":\"dropout-feedback\",\"complete\":false,\"failure\":\"Lidar unavailable near ground\"}\n",
+    "stderr": ""
+  },
+  {
+    "id": "failed-sensor",
+    "code": 1,
+    "stdout": "{\"id\":\"failed-sensor\",\"complete\":false,\"failure\":\"Lidar unavailable near ground\"}\n",
+    "stderr": ""
+  }
+]

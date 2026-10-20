@@ -1,0 +1,20 @@
+[
+  {
+    "id": "calm-stock",
+    "code": 0,
+    "stdout": "{\"id\":\"calm-stock\",\"complete\":true,\"failure\":null}\n",
+    "stderr": ""
+  },
+  {
+    "id": "calm-feedforward",
+    "code": 0,
+    "stdout": "{\"id\":\"calm-feedforward\",\"complete\":true,\"failure\":null}\n",
+    "stderr": ""
+  },
+  {
+    "id": "calm-feedback",
+    "code": 0,
+    "stdout": "{\"id\":\"calm-feedback\",\"complete\":true,\"failure\":null}\n",
+    "stderr": ""
+  }
+]

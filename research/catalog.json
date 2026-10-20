@@ -434,6 +434,13 @@
       "path": "research/active/landing-swoop-2026-10-19",
       "summary": "Spot-landing flare feasibility and altitude-only recovery: 72 native cases and 18 AP/EKF cases; no deployment.",
       "execution_policy": "maintained for landing and recovery research"
+    },
+    {
+      "study": "landing-guidance-2026-10-20",
+      "status": "active",
+      "path": "research/active/landing-guidance-2026-10-20",
+      "summary": "Existing LQI approach with external landing guidance and bounded brake flare; 13 final AP/EKF cases, research only.",
+      "execution_policy": "maintained for landing guidance research"
     }
   ]
 }

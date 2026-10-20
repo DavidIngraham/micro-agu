@@ -1,0 +1,25 @@
+import assert from 'node:assert/strict';
+import {LandingGuidance,wrap} from './guidance';
+const target={north:300,east:0,heading:0,speed:4};
+const options={feedback:false,flareHeight:.85,commonMm:54};
+const m={north:0,east:0,agl:60,speed:4,sink:1,yaw:0,pitch:0,course:0};
+let g=new LandingGuidance(target,options);
+const approach=g.update(m,.05,false,0);
+assert(approach.throttle>=.255&&approach.throttle<=.5);
+assert.equal(approach.common,0);
+assert(g.update({...m,east:20},.05,false,1).roll<0,'right-of-line correction turns left');
+assert(g.update({...m,east:-20},.05,false,2).roll>0);
+assert.equal(g.update({...m,agl:1},.05,true,3).common,0);
+const flare=g.update({...m,agl:.8},.05,true,4);
+// AP mixer inversion must preserve equal physical brake travel.
+const left=(flare.pitch+Math.max(-flare.roll,0))*62.3955;
+const right=(flare.pitch+Math.max(flare.roll,0))*71.9948;
+assert(Math.abs(left-54)<1e-10&&Math.abs(right-54)<1e-10);
+assert.equal(g.update({...m,agl:1},.05,true,5).common,54,'flare latch survives brief height rise');
+g=new LandingGuidance(target,{...options,feedback:true});
+const initial=g.update({...m,agl:.8,sink:3},.05,true,0);
+assert.equal(initial.common,58,'bounded brake reserve');
+const pitched=g.update({...m,agl:.7,sink:1.38,pitch:.4,pitchRate:2},.05,true,.05);
+assert(pitched.common<54,'pitch-up rate reduces common brake');
+assert(Math.abs(wrap(Math.PI+.1)+Math.PI-.1)<1e-12);
+console.log('PASS: guidance signs, bounds, flare latch, mixer inversion, feedback and angle wrap');

@@ -16,3 +16,19 @@ export function exampleMission(): Waypoint[] {
     alt: 60,
   }));
 }
+
+/** Native ArduPlane AUTO approach and NAV_LAND at home. */
+export function landingMission(): Waypoint[] {
+  return [
+    [-500, 60],
+    [-400, 60],
+    [0, 0],
+  ].map(([north, alt], i) => ({
+    command: i === 2 ? 21 : 16,
+    frame: 3,
+    params: [0, i === 2 ? 0 : 15, 0, 0],
+    lat: HOME.lat + north / 111319.49,
+    lon: HOME.lon,
+    alt,
+  }));
+}

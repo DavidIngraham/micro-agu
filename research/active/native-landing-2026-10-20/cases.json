@@ -1,0 +1,42 @@
+[
+  {
+    "id": "calm"
+  },
+  {
+    "id": "headwind",
+    "along": -1.5,
+    "turbulence": 0.2
+  },
+  {
+    "id": "crosswind",
+    "across": 1.5,
+    "turbulence": 0.2
+  },
+  {
+    "id": "dropout",
+    "lidar": {
+      "dropout_probability": 0.2
+    }
+  },
+  {
+    "id": "failed",
+    "lidar": {
+      "dropout_probability": 1
+    }
+  },
+  {
+    "id": "slow",
+    "lidar": {
+      "latency_s": 0.1
+    }
+  },
+  {
+    "id": "mission",
+    "fixedMission": true,
+    "turbulence": 0.2
+  },
+  {
+    "id": "baseline",
+    "scheme": "baseline"
+  }
+]

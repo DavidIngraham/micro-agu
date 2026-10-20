@@ -1,7 +1,7 @@
 {
   "repository": "https://github.com/DavidIngraham/ardupilot",
-  "revision": "41a6badc3ee9ffc5125c1ab7b8225903a9d3fb25",
-  "source": "https://github.com/DavidIngraham/ardupilot/tree/41a6badc3ee9ffc5125c1ab7b8225903a9d3fb25",
+  "revision": "97c479ab36f08b826723125691cde6994768e680",
+  "source": "https://github.com/DavidIngraham/ardupilot/tree/97c479ab36f08b826723125691cde6994768e680",
   "license": "GPL-3.0-or-later",
   "board": "wasm",
   "vehicle": "ArduPlane",
@@ -9,12 +9,12 @@
   "transport": "Emscripten SOCKFS local UDP peer",
   "emscripten": "6.0.8",
   "sha256": {
-    "highdof.json": "130b82f0d63711ed739ce415e00c4137cb6be0e8ed15f614ccbe79523c3cf409",
+    "highdof.json": "b0d85fd31f68eeb4ba224034c82aa3e671e44777c550603eeac0f6eb82e736a2",
     "sim_wasm_bg.wasm.d.ts": "98b5d976e3fdeafe277b6f98d5f95079fba5b6367533ddb4f7846b0f93ff9890",
     "sim_wasm.d.ts": "f123bfc6ec889cd120e526d7d3001395d45e44a97db671d791e14264a938c3be",
     "sim_wasm_bg.wasm": "ceae58a55b4585e85b86a142a15c1f5b9bcfbf3e51f21cddbdf741ac4a75c158",
     "sim_wasm.js": "65ffd575810f57b5793b1a61477d215e316267e40ced1eb29dfe7a59e5ce4f60",
-    "arduplane.wasm": "d000742d8a9f1cb0fb1e9f7e6c8cc238ac78c444d6ab0a036b258845a0c98d2a",
+    "arduplane.wasm": "73459525151117187c759ca6b15411d010948795bd3ca2e79d313066ec718b21",
     "arduplane.js": "893b28e3cbea410e48736d7f7426928cbe8b56f22c1813914aa290172f1e8565",
     "lqi-gains.bin": "311876eabeb033e55c30c8d556d159495b76e8358cd25a1684c0c3b486ed97f0"
   },
@@ -66,8 +66,8 @@
     "libraries/AP_CustomControl/AP_CustomControl_LQI.cpp": "537dba53b412eed45661d5ee9e3a65f2d0c93b09281ed86701ae723aeb97853e",
     "libraries/AP_CustomControl/AP_CustomControl_LQI.h": "c3d766291afe8ab7d0fcd40520f9dff8efd3c6f090c7cd6aa585f99e91f3bc55",
     "libraries/AP_CustomControl/AP_CustomControl_LQI_gains.h": "870cbf6b7bf3b03e465217bc29ce66a67a2c5d46578ddebbed4d7a070dd09c72",
-    "ArduPlane/Parameters.h": "5d1de054aa52d33d90ff72811fbe4e58db2f0e1d0c6027e5bdf693f258a0b016",
-    "ArduPlane/servos.cpp": "58b97f9a1be93a27995b07fb559bfdefb9af01e8b0fbff78fe78ba70c15d2673",
+    "ArduPlane/Parameters.h": "761d0ba31cda6738577fa80d7f66e0d3b77850b5381307e3db48aa5c4ae86709",
+    "ArduPlane/servos.cpp": "568c0abd86f7859d77072c4f17fdd6100c1a7279632c4bc300524124f5319902",
     "libraries/AP_CustomControl/AP_CustomControl_LQI_File.h": "fcd17fd9c1d43013858381da30f77b5de403759dcb05cc4262cec1bb663e87e1"
   },
   "controller_source_patch": {
@@ -117,6 +117,14 @@
     "physics_changed": false
   },
   "landing_telemetry_source_sha256": {
-    "ArduPlane/Plane.cpp": "455d623850937347ba24d7c66361c958837beb891b68670ad8c6ca77172e1855"
+    "ArduPlane/Plane.cpp": "656dc400135d92923bbf6a4b678e04b816479f5f1abce8e613dccb089da4ae24"
+  },
+  "native_landing_source_sha256": {
+    "ArduPlane/Plane.cpp": "656dc400135d92923bbf6a4b678e04b816479f5f1abce8e613dccb089da4ae24",
+    "ArduPlane/Plane.h": "c33f6602b44da11f8635d075402f8c8197e8cfb658669fb42ad7e4e45ec601a9",
+    "ArduPlane/Parameters.cpp": "515b3458ee70617c35fbbde20e8894529fe66223bc1b0fd1f1a1d6d6b68980a1",
+    "ArduPlane/Parameters.h": "761d0ba31cda6738577fa80d7f66e0d3b77850b5381307e3db48aa5c4ae86709",
+    "ArduPlane/servos.cpp": "568c0abd86f7859d77072c4f17fdd6100c1a7279632c4bc300524124f5319902",
+    "ArduPlane/altitude.cpp": "c67186ec5814577f2972884c2a24f0b2603c666e8ce7d78f3918bbf26a0a9ef8"
   }
 }

@@ -6,7 +6,7 @@ import {
 import { registerApplet } from "@microagu/applet-ui/shell/mount";
 import { TruthBuffer } from "@microagu/playback/live-buffer";
 import { truthPose } from "@microagu/playback/pose";
-import { HOME, exampleMission } from "./missions/default";
+import { HOME, exampleMission, landingMission } from "./missions/default";
 import { defaultWeather, windTruthLabel } from "./weather";
 import { FlightPlots } from "./flight-plots";
 const offset = (lat: number, lon: number) => homeOffset(lat, lon, HOME);
@@ -130,6 +130,7 @@ export const applet = registerApplet(definition, async (scope) => {
       !launched ||
       !!sim.state.simulationEnded;
     el<HTMLButtonElement>("example").disabled = operation;
+    el<HTMLButtonElement>("landing-example").disabled = operation;
     el<HTMLInputElement>("mission-file").disabled = operation;
   }
 
@@ -198,9 +199,8 @@ export const applet = registerApplet(definition, async (scope) => {
     const s = sim.state;
     paintThrottle();
     if (s.simulationEnded) el("connection").textContent = "Landing complete";
-    el("mode-label").textContent = landingActive()
-      ? "LAND"
-      : (Object.keys(MODES).find((n) => MODES[n] === s.mode) ?? String(s.mode));
+    el("mode-label").textContent =
+      Object.keys(MODES).find((n) => MODES[n] === s.mode) ?? String(s.mode);
     el("armed").textContent = s.simulationEnded
       ? "PAUSED"
       : s.armed
@@ -222,9 +222,8 @@ export const applet = registerApplet(definition, async (scope) => {
             ) && s.targetAlt !== null
           ? `TARGET ${s.targetAlt.toFixed(0)} m`
           : "MANUAL HEIGHT";
-    el<HTMLSelectElement>("mode").value = landingActive()
-      ? "LAND"
-      : (Object.keys(MODES).find((n) => MODES[n] === s.mode) ?? "");
+    el<HTMLSelectElement>("mode").value =
+      Object.keys(MODES).find((n) => MODES[n] === s.mode) ?? "";
     if (s.landing) status(s.landing.message);
     view.setLandingTarget(landingActive() ? s.landing!.target : null);
     buttons();
@@ -283,11 +282,7 @@ export const applet = registerApplet(definition, async (scope) => {
       roll = pitch = 0;
       controls();
       await sim.mode(next);
-      status(
-        next === "LAND"
-          ? "LAND: LQI approach, then bounded flare. Select another mode to cancel."
-          : `${next} confirmed by ArduPlane.`,
-      );
+      status(`${next} confirmed by ArduPlane.`);
     });
   });
   function closeAltitude() {
@@ -519,6 +514,12 @@ export const applet = registerApplet(definition, async (scope) => {
     drawMap();
   }
 
+  scope.property(el("landing-example"), "onclick", () =>
+    setMission(
+      landingMission(),
+      "Native AUTO landing · 60 m approach, touchdown at home",
+    ),
+  );
   scope.property(el("example"), "onclick", () =>
     setMission(exampleMission(), "Trout Lake circuit · 60 m, ends in loiter"),
   );

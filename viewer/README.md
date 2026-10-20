@@ -85,40 +85,47 @@ matching AP rangefinder limits and requests the telemetry stream automatically.
 The original raw-range comparison remains in
 `research/active/landing-lidar-2026-10-20`.
 
-## EKF landing demonstration
+## Native AUTO landing
 
-Once flying above 15 m, click the main **MODE** display and choose **LAND · ahead**.
-The simulator marks a landing point ahead on the ground and map. This is not RTL:
-it does not return to the launch circle. Select any other mode to cancel.
+Open the flight panel, choose **Landing mission**, then **Upload** and **Fly
+mission**. The example flies to a 60 m approach south of home and executes
+`MAV_CMD_NAV_LAND` at home. The mode display remains **AUTO** throughout.
+Choose CRUISE or another mode to take over. Imported missions can also contain
+ordinary NAV_LAND items. There is no browser LAND mode or land-ahead command.
 
-The worker runs shared `session/landing-guidance.ts`: existing LQI in CRUISE on
-approach, then an explicit MANUAL handoff at 3 m AGL to the bounded common-brake
-flare controller. The HUD distinguishes approach, final, flare and touchdown.
-Pilot sticks, altitude and controller changes are locked while landing owns the
-inputs; the mode picker remains available for cancellation.
+ArduPlane owns navigation, the glide slope, LQI approach, power-off final and
+brake flare. LQI remains eligible during AUTO landing approach, then hands back
+to the native paraglider turn controller and brake mixer when AP_Landing enters
+final. The browser never generates landing RC commands or switches to MANUAL.
+The existing LQI gains and observer are unchanged.
 
-Height follows JSON lidar → AP rangefinder → EKF terrain estimate →
-`AP_AHRS::get_hagl` → `EKF_HAGL` named-float telemetry. Negative values invalidate
-the estimate. Guidance propagates only the short telemetry age using fused
-vertical velocity. It does not feed simulator height or canopy truth into the
-controller. Above 10 m, home-relative EKF altitude is a fallback on this flat
-simulated field. Below that, unavailable terrain height aborts the sequence.
-A pre-final abort stops the descent and requests a climb; after the manual
-handoff it keeps power off and releases control to the user. It is not a fully
-qualified autonomous go-around system.
+The selected browser configuration enables an experimental native brake flare:
+`LAND_FLARE_ALT=3` starts the power-off final; `PG_FLARE_HGT=1.3` starts latched
+common-brake application. `PG_FLARE_PCT`, `PG_FLARE_RATE`, and `PG_FLARE_RES`
+set nominal travel, application rate and remaining differential travel.
+`PG_FLARE_GAIN` supplies bounded sink feedback around `PG_FLARE_SINK`.
+Defaults in firmware leave these additional features disabled. This is still
+simulation validation, not a flight-qualified landing tune.
 
-The generic sensor still has 50 ms latency while this AP EKF range path assumes
-25 ms; using EKF HAGL does not eliminate that mismatch or all measurement bias.
-The 10 Hz current-output HAGL stream and 20 Hz navigation stream are checked for
-freshness. LQI gains and observer parameters are unchanged.
+Height follows JSON lidar → AP rangefinder → EKF terrain estimate → AHRS,
+consumed directly in firmware. A valid terrain estimate is preferred for the
+opted-in paraglider landing; unavailable terrain retains ArduPlane's normal
+landing-height fallback, rather than assuming zero height. That fallback
+requires a correct landing altitude and does not establish performance over
+unknown terrain. No physics truth enters the controller. The browser uses
+`PG_LAND` and `EKF_HAGL` telemetry only for display and the playback endpoint.
+The generic lidar has 50 ms latency; this EKF range path assumes 25 ms, so
+using fused HAGL does not eliminate every timing or bias error.
 
-After near-ground, low-vertical-speed, slowed-horizontal-motion confirmation,
-the simulator pauses; reset starts another flight. This is a simulation endpoint,
-not confirmation that ArduPlane has disarmed. No force-disarm is sent. This endpoint avoids presenting the rigid
-canopy's unvalidated collapse/ground-roll dynamics as a credible rollout.
-See `research/active/landing-ekf-2026-10-20` for flight traces, failure cases and
-pre-contact landing metrics. This remains a browser experiment, not a new
-flight-qualified ArduPlane LAND mode.
+After estimator-confirmed near-ground, low-vertical-speed and slow-horizontal
+motion, playback pauses. This avoids extending the rigid-canopy model into
+unvalidated collapse/ground-roll dynamics. It does not force disarm. Reset
+starts a new session. When HAGL is unavailable, the presentation endpoint uses fused altitude above
+the mission landing elevation; this assumes the simulated flat landing field.
+
+See `research/active/native-landing-2026-10-20` for the native mission tests.
+The earlier `landing-ekf-2026-10-20` results describe the superseded browser
+controller and are reproducible at micro-agu commit `55e5097`.
 
 ## Adding an applet
 

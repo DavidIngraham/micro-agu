@@ -8,6 +8,7 @@ Maintained software lives in [simulation](../simulation/README.md), [control](..
 
 | Study | Location |
 |---|---|
+| native-landing-2026-10-20 | [native-landing-2026-10-20](active/native-landing-2026-10-20/) |
 | landing-ekf-2026-10-20 | [landing-ekf-2026-10-20](active/landing-ekf-2026-10-20/) |
 | landing-lidar-2026-10-20 | [landing-lidar-2026-10-20](active/landing-lidar-2026-10-20/) |
 | landing-guidance-2026-10-20 | [landing-guidance-2026-10-20](active/landing-guidance-2026-10-20/) |

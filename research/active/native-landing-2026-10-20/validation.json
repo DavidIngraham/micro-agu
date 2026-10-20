@@ -1,0 +1,42 @@
+{
+  "unit_tests": {
+    "passed": 50,
+    "failed": 0
+  },
+  "browser": {
+    "passed": true,
+    "test": "viewer/tests/browser/landing.spec.ts",
+    "coverage": [
+      "native mission upload",
+      "AUTO approach with LQI",
+      "CRUISE cancellation and AUTO resumption",
+      "no LAND mode option",
+      "mobile 390x844",
+      "AUTO through completed landing"
+    ],
+    "screenshots": {
+      "landing-mobile.png": "2cf83ec331ec5001b8ee04bc0ba3f655e06496b6c7fb1c5dc5a2ab298ec01f14",
+      "landed-mobile.png": "687b35a6097b7b1a1927293754612cafe53898a9d4ff163a885992d74544c2a9"
+    }
+  },
+  "wasm_build": true,
+  "MatekH743_default_build": true,
+  "MatekH743_LQI_build": {
+    "passed": true,
+    "defines": {
+      "AP_PLANE_CUSTOMCONTROL_ENABLED": 1,
+      "AP_PLANE_CUSTOMCONTROL_LQI_ENABLED": 1
+    },
+    "flash_used_bytes": 1585896,
+    "flash_free_bytes": 118032
+  },
+  "campaign_cases": 8,
+  "release_binary_smoke": {
+    "firmware_sha256": "73459525151117187c759ca6b15411d010948795bd3ca2e79d313066ec718b21",
+    "complete": true,
+    "mode": "AUTO throughout",
+    "contact_sink_m_s": 0.9695688863918237,
+    "contact_ground_speed_m_s": 2.6141101078729325,
+    "final_phase": "landed"
+  }
+}

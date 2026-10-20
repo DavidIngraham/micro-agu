@@ -1,0 +1,122 @@
+[
+  {
+    "id": "calm",
+    "failure": null,
+    "sink_m_s": 0.9571699447187612,
+    "ground_speed_m_s": 2.646833845778366,
+    "spot_error_m": 4.879468313786431,
+    "approach_lqi_fraction": 1.0,
+    "modes": [
+      10
+    ],
+    "flare_max_throttle": 0,
+    "flare_onset_truth_height_m": 1.0675694517424776,
+    "final_phase": "landed",
+    "flight_seconds": 81.26999999992609
+  },
+  {
+    "id": "headwind",
+    "failure": null,
+    "sink_m_s": 0.9507519383570785,
+    "ground_speed_m_s": 1.0196768091266597,
+    "spot_error_m": 3.002857332502191,
+    "approach_lqi_fraction": 1.0,
+    "modes": [
+      10
+    ],
+    "flare_max_throttle": 0,
+    "flare_onset_truth_height_m": 1.0788356730001565,
+    "final_phase": "landed",
+    "flight_seconds": 82.87999999992462
+  },
+  {
+    "id": "crosswind",
+    "failure": null,
+    "sink_m_s": 0.9268148901194864,
+    "ground_speed_m_s": 2.70052585554246,
+    "spot_error_m": 5.136492165399545,
+    "approach_lqi_fraction": 1.0,
+    "modes": [
+      10
+    ],
+    "flare_max_throttle": 0,
+    "flare_onset_truth_height_m": 1.0458807958892717,
+    "final_phase": "landed",
+    "flight_seconds": 82.08999999992534
+  },
+  {
+    "id": "dropout",
+    "failure": null,
+    "sink_m_s": 0.961016587464509,
+    "ground_speed_m_s": 2.6255745747695203,
+    "spot_error_m": 5.602603795411931,
+    "approach_lqi_fraction": 1.0,
+    "modes": [
+      10
+    ],
+    "flare_max_throttle": 0,
+    "flare_onset_truth_height_m": 0.9884898762049007,
+    "final_phase": "landed",
+    "flight_seconds": 81.27999999992608
+  },
+  {
+    "id": "failed",
+    "failure": null,
+    "sink_m_s": 1.0863858586211719,
+    "ground_speed_m_s": 2.3595798418407217,
+    "spot_error_m": 4.215867382409755,
+    "approach_lqi_fraction": 1.0,
+    "modes": [
+      10
+    ],
+    "flare_max_throttle": 0,
+    "flare_onset_truth_height_m": 1.1234133665930446,
+    "final_phase": "landed",
+    "flight_seconds": 81.51999999992586
+  },
+  {
+    "id": "slow",
+    "failure": null,
+    "sink_m_s": 0.9154852330637301,
+    "ground_speed_m_s": 2.751628522544188,
+    "spot_error_m": 3.2255142858164647,
+    "approach_lqi_fraction": 1.0,
+    "modes": [
+      10
+    ],
+    "flare_max_throttle": 0,
+    "flare_onset_truth_height_m": 0.9313969148158788,
+    "final_phase": "landed",
+    "flight_seconds": 81.76999999992563
+  },
+  {
+    "id": "mission",
+    "failure": null,
+    "sink_m_s": 0.9963209752405764,
+    "ground_speed_m_s": 2.856062048219782,
+    "spot_error_m": 12.193602924330504,
+    "approach_lqi_fraction": 1.0,
+    "modes": [
+      10
+    ],
+    "flare_max_throttle": 0,
+    "flare_onset_truth_height_m": 1.0554871753077957,
+    "final_phase": "landed",
+    "flight_seconds": 338.80999999969185
+  },
+  {
+    "id": "baseline",
+    "failure": null,
+    "sink_m_s": 0.9685421789620173,
+    "ground_speed_m_s": 2.6022195584004066,
+    "spot_error_m": 15.205765836722478,
+    "approach_lqi_fraction": 0.0,
+    "modes": [
+      10
+    ],
+    "flare_max_throttle": 0,
+    "flare_onset_truth_height_m": 0.9959832543541766,
+    "final_phase": "landed",
+    "flight_seconds": 78.58999999992852
+  }
+]

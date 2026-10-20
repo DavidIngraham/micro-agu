@@ -455,6 +455,12 @@
       "path": "research/active/landing-ekf-2026-10-20",
       "summary": "EKF terrain-height landing with LQI approach, bounded brake flare and browser LAND option.",
       "execution_policy": "maintained shared guidance and simulator validation"
+    },
+    {
+      "study": "native-landing-2026-10-20",
+      "status": "active",
+      "path": "research/active/native-landing-2026-10-20",
+      "summary": "Native AUTO NAV_LAND with LQI approach, EKF-height brake flare and eight real-firmware landing cases; replaces browser land-ahead guidance."
     }
   ]
 }

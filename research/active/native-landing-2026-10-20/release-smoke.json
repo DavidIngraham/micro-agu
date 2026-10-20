@@ -1,0 +1,8 @@
+{
+  "firmware_sha256": "73459525151117187c759ca6b15411d010948795bd3ca2e79d313066ec718b21",
+  "complete": true,
+  "mode": "AUTO throughout",
+  "contact_sink_m_s": 0.9695688863918237,
+  "contact_ground_speed_m_s": 2.6141101078729325,
+  "final_phase": "landed"
+}

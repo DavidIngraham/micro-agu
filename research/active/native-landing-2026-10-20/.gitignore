@@ -1,0 +1,4 @@
+runs/
+preliminary/
+*.log
+__pycache__/

@@ -1,20 +1,28 @@
 import type { Waypoint } from "@microagu/contracts/mission";
 export const HOME = { lat: 45.997, lon: -121.536, alt: 600 };
 export function exampleMission(): Waypoint[] {
-  return [
+  const circuit: Waypoint[] = [
     [200, 0],
     [400, 0],
     [400, 200],
     [0, 200],
     [0, 0],
-  ].map(([n, e], i) => ({
-    command: i === 4 ? 17 : 16,
+  ].map(([n, e]) => ({
+    command: 16,
     frame: 3,
-    params: [0, 22, i === 4 ? 35 : 0, 0],
+    params: [0, 22, 0, 0],
     lat: HOME.lat + n / 111319.49,
     lon: HOME.lon + e / (111319.49 * Math.cos((HOME.lat * Math.PI) / 180)),
     alt: 60,
   }));
+  return [
+    ...circuit,
+    // Uploaded sequence zero is home; repeat from the first flight waypoint.
+    { command: 177, frame: 2, params: [1, -1, 0, 0], lat: 0, lon: 0, alt: 0 },
+    // RTL_AUTOLAND enters here, bypassing the infinite circuit.
+    { command: 189, frame: 2, params: [0, 0, 0, 0], lat: 0, lon: 0, alt: 0 },
+    ...landingMission(),
+  ];
 }
 
 /** Clockwise capture/descending orbit, tangent northbound final, NAV_LAND home.

@@ -50,7 +50,7 @@ test("QGC accepts null yaw but rejects complex and terrain-relative items", () =
   assert.throws(() => parseMission(JSON.stringify(data)), /SimpleItem/);
 });
 test("example is valid and unsupported mission commands are rejected", () => {
-  assert.equal(validateMission(exampleMission()).length, 5);
+  assert.equal(validateMission(exampleMission()).length, 11);
   assert.throws(
     () => validateMission([{ ...exampleMission()[0], command: 999 }]),
     /unsupported/,

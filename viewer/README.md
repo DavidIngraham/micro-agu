@@ -87,6 +87,12 @@ The original raw-range comparison remains in
 
 ## Native AUTO landing
 
+The default circuit repeats at 60 m using `DO_JUMP`. Select **RTL · land** in
+the flight-mode menu to leave the loop and enter its `DO_LAND_START` sequence.
+The browser sets `RTL_AUTOLAND=2`, so ArduPlane proceeds directly to the landing
+approach and switches back to AUTO. Imported missions without a landing-start
+marker retain RTL's return-and-loiter behavior.
+
 Open the flight panel, choose **Landing mission**, then **Upload** and **Fly
 mission**. The example captures a clockwise 40 m orbit at 60 m, spirals to 30 m using
 `MAV_CMD_NAV_LOITER_TO_ALT`, then exits tangentially north onto a 200 m final

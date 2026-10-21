@@ -23,6 +23,7 @@ import { SimulatorClient } from "@microagu/sim-browser/worker/client";
 import { FlightView } from "@microagu/rendering/scene/flight-view";
 import {
   parseMission,
+  missionHasLocation,
   offset as homeOffset,
   type Waypoint,
 } from "@microagu/contracts/mission";
@@ -303,7 +304,11 @@ export const applet = registerApplet(definition, async (scope) => {
       roll = pitch = 0;
       controls();
       await sim.mode(next);
-      status(`${next} confirmed by ArduPlane.`);
+      status(
+        next === "RTL" && sim.state.mode === MODES.AUTO
+          ? "RTL accepted. ArduPlane is flying the AUTO landing sequence."
+          : `${next} confirmed by ArduPlane.`,
+      );
     });
   });
   function closeAltitude() {
@@ -537,7 +542,10 @@ export const applet = registerApplet(definition, async (scope) => {
     ),
   );
   scope.property(el("example"), "onclick", () =>
-    setMission(exampleMission(), "Trout Lake circuit · 60 m, ends in loiter"),
+    setMission(
+      exampleMission(),
+      "Trout Lake circuit · repeats at 60 m · RTL to land",
+    ),
   );
 
   scope.property(
@@ -642,8 +650,8 @@ export const applet = registerApplet(definition, async (scope) => {
     ctx.clearRect(0, 0, w, h);
     const craft = offset(sim.state.lat, sim.state.lon),
       points = items
-        .filter((w) => w.command !== 20)
-        .map((w) => offset(w.lat, w.lon));
+        .map((w, i) => ({ ...offset(w.lat, w.lon), sequence: i + 1, item: w }))
+        .filter((p) => missionHasLocation(p.item));
     const target = landingActive() ? sim.state.landing!.target : null;
     const all = [
       { east: 0, north: 0 },
@@ -667,12 +675,12 @@ export const applet = registerApplet(definition, async (scope) => {
     );
     ctx.stroke();
     ctx.font = "9px system-ui";
-    points.forEach((p, i) => {
+    points.forEach((p) => {
       ctx.fillStyle = "#b7ee75";
       ctx.beginPath();
       ctx.arc(x(p.east), y(p.north), 3, 0, 7);
       ctx.fill();
-      ctx.fillText(String(i + 1), x(p.east) + 5, y(p.north) - 4);
+      ctx.fillText(String(p.sequence), x(p.east) + 5, y(p.north) - 4);
     });
     if (target) {
       ctx.strokeStyle = "#ffbf70";
@@ -717,7 +725,10 @@ export const applet = registerApplet(definition, async (scope) => {
     buttons();
     el("connection").textContent = "SITL online";
     await action(async () => {
-      setMission(exampleMission(), "Trout Lake circuit · 60 m, ends in loiter");
+      setMission(
+        exampleMission(),
+        "Trout Lake circuit · repeats at 60 m · RTL to land",
+      );
       status("Uploading the default mission…");
       await sim.upload(items, (n) =>
         status(`Uploading mission item ${n} / ${items.length}…`),

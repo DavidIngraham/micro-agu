@@ -3,8 +3,35 @@ import test from "node:test";
 import assert from "node:assert/strict";
 import { initialTelemetry } from "../../packages/contracts/src/telemetry";
 import { landingHeight } from "../../packages/sim-browser/src/session/landing-height";
-import { landingMission, HOME } from "../../apps/simulator/missions/default";
+import {
+  exampleMission,
+  landingMission,
+  HOME,
+} from "../../apps/simulator/missions/default";
 import { validateMission, offset } from "../../packages/contracts/src/mission";
+
+test("default circuit repeats before the RTL landing sequence", () => {
+  const items = validateMission(exampleMission());
+  assert.deepEqual(
+    items.map((w) => w.command),
+    [16, 16, 16, 16, 16, 177, 189, 18, 31, 16, 21],
+  );
+  assert.deepEqual(items[5].params, [1, -1, 0, 0]);
+  assert.deepEqual(items.slice(7), landingMission());
+  const path = missionPreview(items, HOME);
+  assert.equal(path.length, 137);
+  assert(path.every((p) => Math.abs(p.north) < 500 && Math.abs(p.east) < 250));
+  for (const params of [
+    [0, -1, 0, 0],
+    [12, -1, 0, 0],
+    [1.5, -1, 0, 0],
+    [1, -2, 0, 0],
+  ]) {
+    const invalid = structuredClone(items);
+    invalid[5].params = params;
+    assert.throws(() => validateMission(invalid), /invalid jump/);
+  }
+});
 
 test("EKF HAGL propagates telemetry age, without applying a second sensor delay", () => {
   const s = initialTelemetry({ lat: 0, lon: 0 });

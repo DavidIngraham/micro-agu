@@ -4,6 +4,7 @@ export const MODES: Record<string, number> = {
   FBWB: 6,
   CRUISE: 7,
   AUTO: 10,
+  RTL: 11,
   LOITER: 12,
   TAKEOFF: 13,
 };

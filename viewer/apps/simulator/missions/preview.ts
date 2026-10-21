@@ -1,10 +1,15 @@
-import { offset, type Home, type Waypoint } from "@microagu/contracts/mission";
+import {
+  offset,
+  missionHasLocation,
+  type Home,
+  type Waypoint,
+} from "@microagu/contracts/mission";
 
 /** Planned geometry only: AP chooses the actual capture and exit points. */
 export function missionPreview(items: Waypoint[], home: Home) {
   const path: { north: number; east: number; alt: number }[] = [];
   items.forEach((item, i) => {
-    if (item.command === 20) return;
+    if (!missionHasLocation(item)) return;
     const centre = offset(item.lat, item.lon, home);
     const alt = item.frame === 3 ? item.alt : item.alt - home.alt;
     const signedRadius = [17, 18, 19, 31].includes(item.command)
@@ -18,7 +23,10 @@ export function missionPreview(items: Waypoint[], home: Home) {
     const direction = Math.sign(signedRadius);
     const next = items
       .slice(i + 1)
-      .find((w) => w.lat !== item.lat || w.lon !== item.lon);
+      .find(
+        (w) =>
+          missionHasLocation(w) && (w.lat !== item.lat || w.lon !== item.lon),
+      );
     let exitAngle = 0;
     if (next) {
       const target = offset(next.lat, next.lon, home);

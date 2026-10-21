@@ -11,16 +11,20 @@ export interface Home {
   lon: number;
   alt: number;
 }
-const supported = new Set([16, 17, 18, 19, 20, 21, 22, 31]);
+const supported = new Set([16, 17, 18, 19, 20, 21, 22, 31, 177, 189]);
+export const missionHasLocation = (item: Waypoint) =>
+  ![20, 177, 189].includes(item.command);
 export function validateMission(items: Waypoint[]) {
   if (!items.length || items.length > 500)
     throw Error("Mission must contain 1–500 items.");
   for (const [i, w] of items.entries()) {
     if (!supported.has(w.command))
       throw Error(
-        `Item ${i + 1}: unsupported command ${w.command}. Use simple waypoints, takeoff, land, loiter or RTL.`,
+        `Item ${i + 1}: unsupported command ${w.command}. Use simple waypoints, takeoff, land, loiter, RTL, DO_JUMP or DO_LAND_START.`,
       );
-    if (![0, 3].includes(w.frame))
+    if (
+      !([177, 189].includes(w.command) ? [0, 2, 3] : [0, 3]).includes(w.frame)
+    )
       throw Error(
         `Item ${i + 1}: only absolute or relative-to-home altitude is supported.`,
       );
@@ -31,8 +35,18 @@ export function validateMission(items: Waypoint[]) {
       Math.abs(w.lon) > 180
     )
       throw Error(`Item ${i + 1}: invalid coordinates or parameters.`);
-    if (w.command !== 20 && (w.lat === 0 || w.lon === 0))
+    if (missionHasLocation(w) && (w.lat === 0 || w.lon === 0))
       throw Error(`Item ${i + 1}: supply explicit coordinates.`);
+    if (
+      w.command === 177 &&
+      (!Number.isInteger(w.params[0]) ||
+        w.params[0] < 1 ||
+        w.params[0] > items.length ||
+        !Number.isInteger(w.params[1]) ||
+        w.params[1] < -1 ||
+        w.params[1] > 32767)
+    )
+      throw Error(`Item ${i + 1}: invalid jump target or repeat count.`);
   }
   return items;
 }

@@ -35,6 +35,7 @@
           <option>FBWB</option>
           <option>CRUISE</option>
           <option>AUTO</option>
+          <option value="RTL">RTL · land</option>
           <option>LOITER</option>
           <option>TAKEOFF</option>
         </select>
@@ -308,8 +309,10 @@
         <p>
           Starts held on the ground while sensors initialize. The default
           circuit uploads and starts automatically in AUTO when sensors are
-          ready. Click the mode display to take over. Reset starts a fresh
-          session.
+          ready and repeats until you take over. Select RTL in the mode display
+          to fly the landing approach; ArduPlane switches to AUTO for landing.
+          Imported missions need a landing-start marker for RTL to land;
+          otherwise RTL returns home and loiters. Reset starts a fresh session.
         </p>
         <p>
           Full 9-DOF canopy–payload research model, compiled from Rust. Both

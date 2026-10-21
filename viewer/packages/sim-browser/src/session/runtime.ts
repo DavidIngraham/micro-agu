@@ -116,7 +116,7 @@ RC1_DZ 0
 RC2_DZ 0
 `
         : "") +
-      "\nCP_TYPE 3\nRC6_OPTION 109\n" +
+      "\nCP_TYPE 3\nRC6_OPTION 109\nRTL_AUTOLAND 2\n" +
       (gainFile ? "\nCP3_FILE 1\n" : "") +
       // Browser hand launch: release upright at 4.5 m/s; AP owns throttle and climb.
       "\nTKOFF_ALT 15\nTKOFF_DIST 200\nTKOFF_LVL_ALT 5\nTKOFF_LVL_PITCH 5\nTKOFF_THR_MINACC 0\nTKOFF_THR_MINSPD 2\nTKOFF_THR_DELAY 0\nTKOFF_THR_MAX 60\n" +
@@ -425,8 +425,17 @@ RC2_DZ 0
     // Never carry a manual brake pull or climb command across a mode switch.
     this.channels[0] = this.channels[1] = 1500;
     this.sendRC();
+    const landingStart = this.missionItems.findIndex((w) => w.command === 189);
     const confirmed = this.wait(
-      (m) => m.name === "HEARTBEAT" && m.values.custom_mode === mode,
+      (m) =>
+        (m.name === "HEARTBEAT" && m.values.custom_mode === mode) ||
+        // RTL can hand off to AUTO before the next heartbeat. Confirm the
+        // native landing mission entry as well, rather than timing out.
+        (name === "RTL" &&
+          landingStart >= 0 &&
+          ["HEARTBEAT", "MISSION_CURRENT"].includes(m.name) &&
+          this.state.mode === MODES.AUTO &&
+          this.state.mission >= landingStart + 1),
     );
     this.send("SET_MODE", { base_mode: 1, custom_mode: mode });
     await confirmed;
@@ -677,7 +686,13 @@ RC2_DZ 0
           last = () =>
             this.send(integer ? "MISSION_ITEM_INT" : "MISSION_ITEM", {
               seq,
-              frame: integer ? (w.frame === 3 ? 6 : 5) : w.frame,
+              frame: integer
+                ? w.frame === 3
+                  ? 6
+                  : w.frame === 0
+                    ? 5
+                    : w.frame
+                : w.frame,
               command: w.command,
               current: 0,
               autocontinue: 1,

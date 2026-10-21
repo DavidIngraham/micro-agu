@@ -7,6 +7,7 @@ export interface Calls {
   mode: [name: string];
   controller: [scheme: "baseline" | "lqi"];
   altitude: [metres: number];
+  speedup: [factor: number];
   wind: [speed: number, from: number, up: number, weather?: Weather];
   launch: [mode: string];
   upload: [items: Waypoint[]];

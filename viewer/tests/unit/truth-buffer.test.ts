@@ -76,3 +76,22 @@ test("clearing warm-up history starts presentation at the next live frame", () =
   buffer.push(frame(20), 2);
   assert.equal(buffer.advance(0.016)!.time_s, 20);
 });
+
+for (const speed of [2, 4, 8]) {
+  test(`truth playback keeps up with ${speed}× simulation speed`, () => {
+    const buffer = new TruthBuffer();
+    let previous = 0;
+    for (let tick = 0; tick <= 1200; tick++) {
+      const wall = tick / 120;
+      if (tick % 5 === 0) buffer.push(frame(wall * speed), wall);
+      const rendered = buffer.advance(1 / 120)!;
+      assert.ok(rendered.time_s >= previous, "playback never rewinds");
+      assert.ok(rendered.time_s <= wall * speed, "never extrapolate");
+      previous = rendered.time_s;
+    }
+    assert.ok(
+      10 * speed - previous < 0.5 * speed,
+      "less than 0.5 s wall-clock lag",
+    );
+  });
+}

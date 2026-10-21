@@ -23,7 +23,7 @@ export class TruthBuffer {
       this.rate = Math.max(
         0.01,
         Math.min(
-          2,
+          8,
           (frame.time_s - this.anchor.sim) / (wall - this.anchor.wall),
         ),
       );

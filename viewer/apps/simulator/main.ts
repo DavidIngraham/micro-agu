@@ -57,6 +57,24 @@ export const applet = registerApplet(definition, async (scope) => {
 
   const view = scope.own(new FlightView(el("scene"), log));
   const truth = new TruthBuffer();
+  let simulationSpeed = 1;
+  const speedSelect = el<HTMLSelectElement>("sim-speed");
+  speedSelect.value = "1";
+  scope.property(speedSelect, "onchange", () => {
+    const factor = Number(speedSelect.value);
+    void action(async () => {
+      try {
+        await sim.speedup(factor);
+        simulationSpeed = factor;
+        truth.clear();
+        const text = `Simulation speed ${factor}× confirmed.`;
+        status(text);
+        log(text);
+      } finally {
+        if (!scope.disposed) speedSelect.value = String(simulationSpeed);
+      }
+    });
+  });
   const plots = new FlightPlots(el("flight-plots"));
   el("flight-plots").hidden = true;
   el("plot-toggle").setAttribute("aria-pressed", "false");
@@ -112,6 +130,8 @@ export const applet = registerApplet(definition, async (scope) => {
         !ready || operation || !!sim.state.simulationEnded;
     el<HTMLSelectElement>("controller").disabled =
       !ready || operation || landingActive();
+    speedSelect.disabled =
+      !ready || operation || !launched || !!sim.state.simulationEnded;
     el<HTMLButtonElement>("launch").disabled = !ready && !launched;
     el("launch").textContent = launched ? "Reset simulation" : "Launch";
     el<HTMLInputElement>("throttle").disabled =

@@ -122,6 +122,9 @@ export class SimulatorClient {
   altitude(metres: number) {
     return this.call("altitude", metres);
   }
+  speedup(factor: number) {
+    return this.call("speedup", factor);
+  }
   launch(mode: string) {
     return this.call("launch", mode);
   }

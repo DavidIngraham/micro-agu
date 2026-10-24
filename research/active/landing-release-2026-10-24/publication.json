@@ -1,5 +1,5 @@
 {
-  "status": "prepared",
+  "status": "published and public bytes verified",
   "site_base": "af28a855660ca8983121799f507f0442375cda9e",
   "site_commit": "db2f17fde59cb7c4858f062d00787767f22de9a9",
   "url": "https://davidingraham.github.io/assets/microagu-viewer/simulator.html",
@@ -34,5 +34,18 @@
     "wasm/lqi-pipeline-validation.json": "575e6e1378c65599b5501969934e3be1c6f8921f773996d9ca9bd949f788b319",
     "wasm/sim_wasm.js": "65ffd575810f57b5793b1a61477d215e316267e40ced1eb29dfe7a59e5ce4f60",
     "wasm/sim_wasm_bg.wasm": "ceae58a55b4585e85b86a142a15c1f5b9bcfbf3e51f21cddbdf741ac4a75c158"
+  },
+  "live_verified_sha256": {
+    "wasm/build.json": "719b68642d70fdded4059065fa6aacbe462dc7bfdaa6bf186f5a7d8493fbb41b",
+    "wasm/highdof.json": "131ab3155f15f921fcd3e3f4ce688ef5f6ad91cef7d137f24606cc24f9225aee",
+    "wasm/arduplane.wasm": "66e7adf6ff5f6b7dd781229850f7f0065832cf37014b395e171795f6024d371d",
+    "wasm/landing-validation.json": "b18d073af774804e12b1f37e18b3a01e1781748dc56b0fb72117cbcb8a5f6941",
+    "simulator.html": "90caf1ce1aaed49ecaf3c8ee2b69be513f378c3cc9bdea4db7cb731dfbc83be3"
+  },
+  "live_ui_startup": {
+    "observed_status": "SITL ONLINE",
+    "mode": "AUTO",
+    "message": "AUTO confirmed. Flying the default circuit.",
+    "url": "https://davidingraham.github.io/assets/microagu-viewer/simulator.html?release=db2f17f"
   }
 }

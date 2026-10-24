@@ -1,4 +1,5 @@
 import { landingHeight } from "./landing-height";
+import { landingTarget } from "./landing-target";
 import { RuntimeAssets } from "../assets/runtime";
 import { delay } from "./delay";
 import { connectPhysicsSocket } from "../ardupilot/socket-physics";
@@ -425,6 +426,16 @@ RC2_DZ 0
     // Never carry a manual brake pull or climb command across a mode switch.
     this.channels[0] = this.channels[1] = 1500;
     this.sendRC();
+    if (name === "AUTOLAND") {
+      // AUTOLAND may reject entry before a takeoff direction is captured.
+      // Request an ACK so that rejection reaches the UI immediately.
+      await this.command(176, [1, mode]);
+      if (this.state.mode !== mode)
+        await this.wait(
+          (m) => m.name === "HEARTBEAT" && m.values.custom_mode === mode,
+        );
+      return;
+    }
     const landingStart = this.missionItems.findIndex((w) => w.command === 189);
     const confirmed = this.wait(
       (m) =>
@@ -453,15 +464,14 @@ RC2_DZ 0
     );
     this.channels.splice(0, 3, ...channels);
   }
-  /** Observe native AUTO landing telemetry. This never generates pilot inputs,
+  /** Observe native AUTO/AUTOLAND telemetry. This never generates pilot inputs,
    * switches modes, or uses physics truth to control the landing.
    */
   private updateLanding() {
-    const item = this.missionItems[this.state.mission - 1];
+    const item = landingTarget(this.state, this.missionItems, this.home);
     if (
-      this.state.mode !== MODES.AUTO ||
-      item?.command !== 21 ||
-      !this.nativeLandingPhase
+      !item ||
+      (!this.nativeLandingPhase && this.state.mode !== MODES.AUTOLAND)
     ) {
       this.state.landing = undefined;
       this.landingGroundSince = null;
@@ -483,6 +493,7 @@ RC2_DZ 0
         : this.nativeLandingPhase === 2
           ? "final"
           : "approach";
+    const mode = this.state.mode === MODES.AUTOLAND ? "AUTOLAND" : "AUTO";
     this.state.landing = {
       phase,
       target: {
@@ -495,10 +506,10 @@ RC2_DZ 0
       agl,
       message:
         phase === "approach"
-          ? "AUTO landing approach"
+          ? `${mode} landing approach`
           : phase === "final"
-            ? "AUTO power-off final"
-            : "AUTO brake flare",
+            ? `${mode} power-off final`
+            : `${mode} brake flare`,
     };
     // The rigid-canopy model does not represent collapse/rollout. End playback
     // after an estimator-confirmed stop; do not force disarm or alter AP outputs.

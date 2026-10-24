@@ -1,0 +1,85 @@
+
+> microagu-viewer@0.1.0 test:mimo
+> tsx tests/integration/mimo.ts
+
+Setting SIM_RATE_HZ=200.000000
+Setting SIM_SPEEDUP=4.000000
+Starting SITL: JSON
+Home: 45.997000 -121.536000 alt=600.000000m hdg=0.000000
+JSON control interface set to 127.0.0.1:9002
+Starting sketch 'ArduPlane'
+Starting SITL input
+Using Irlock at port : 9005
+Using \clock topic for DDS timing: disabled
+Loaded defaults from @ROMFS/default_params/paraglider.parm,/browser.parm
+
+JSON received:
+	timestamp
+	imu: gyro
+	imu: accel_body
+	position
+	quaternion
+	velocity
+	rng_1
+	velocity_wind
+	airspeed
+	battery: voltage
+
+Skipping port (null)
+Skipping port (null)
+Loaded defaults from @ROMFS/default_params/paraglider.parm,/browser.parm
+validate_structures:536: Validating structures
+Loaded defaults from @ROMFS/default_params/paraglider.parm,/browser.parm
+Loaded defaults from @ROMFS/default_params/paraglider.parm,/browser.parm
+Skipping port (null)
+Skipping port (null)
+Loaded defaults from @ROMFS/default_params/paraglider.parm,/browser.parm
+Skipping port (null)
+Skipping port (null)
+Reboot to enable selected custom controller
+Loaded defaults from @ROMFS/default_params/paraglider.parm,/browser.parm
+Ground start
+Skipping INS calibration
+Calibrating barometer
+Loaded defaults from @ROMFS/default_params/paraglider.parm,/browser.parm
+Barometer 1 calibration complete
+Barometer 2 calibration complete
+No airspeed sensor
+ArduPilot Ready
+Throttle failsafe off
+GPS 1: probing for u-blox at 230400 baud
+GPS 1: detected u-blox
+EKF3 IMU0 initialised
+EKF3 IMU1 initialised
+EKF3 IMU0 tilt alignment complete
+EKF3 IMU1 tilt alignment complete
+EKF3 IMU0 MAG0 initial yaw alignment complete
+EKF3 IMU1 MAG0 initial yaw alignment complete
+EKF3 IMU0 origin set
+EKF3 IMU1 origin set
+EKF3 IMU0 is using GPS
+EKF3 IMU1 is using GPS
+AHRS: EKF3 active
+Field Elevation Set: 600m
+EKF ready; simulation speed restored to 1× before launch.
+got MISSION_ITEM; GCS should send MISSION_ITEM_INT
+Flight plan received
+Throttle armed
+Autoland direction= 0
+TAKEOFF confirmed; ArduPlane controls the climb to 15 m.
+Armed AUTO, xaccel = 0.0 m/s/s, waiting 0.0 sec
+Triggered AUTO. GPS speed = 4.3
+Takeoff to 15m for 200.0m heading 359.7 deg
+Takeoff level-off starting at 2m
+Mission: 1 WP
+Custom controller enabled, not yet running
+Custom controller is ON
+HANDOVER lqi { maxThrottleStep: 0.0020000000000000018 }
+Custom controller is OFF
+HANDOVER baseline { maxThrottleStep: 0.0030000000000000027 }
+Custom controller enabled, not yet running
+Custom controller enabled, not yet running
+Custom controller is ON
+Custom controller is OFF
+HANDOVER baseline { maxThrottleStep: 0.0040000000000000036 }
+MIMO PASS {"startAltitude":15.604,"endAltitude":37.223,"maxRoll":0.1251581460237503,"maxPitch":0.20293810963630676}

@@ -66,7 +66,7 @@ index 5ad5e448ec..367d23f29f 100644
          AP_Float batt_voltage_min;
          AP_Float batt_voltage_throttle_cutoff;
 diff --git a/ArduPlane/Plane.cpp b/ArduPlane/Plane.cpp
-index 90a55df1c6..930a295d03 100644
+index 90a55df1c6..090b7c169f 100644
 --- a/ArduPlane/Plane.cpp
 +++ b/ArduPlane/Plane.cpp
 @@ -613,6 +613,17 @@ void Plane::update_alt()
@@ -80,7 +80,7 @@ index 90a55df1c6..930a295d03 100644
 +#endif
 +#if AP_TECS_PARAGLIDER_ENABLED
 +    // Native landing phase for GCS presentation only; never an external command.
-+    const bool pg_land = control_mode == &mode_auto &&
++    const bool pg_land = control_mode->is_landing() &&
 +        flight_stage == AP_FixedWing::FlightStage::LAND;
 +    gcs().send_named_float("PG_LAND", !pg_land ? 0 :
 +        (pg_flare_started_ms != 0 ? 3 : (landing.is_flaring() ? 2 : 1)));
@@ -93,7 +93,7 @@ index 90a55df1c6..930a295d03 100644
          ahrs.healthy() &&
 -        flight_stage == AP_FixedWing::FlightStage::NORMAL &&
 +        (flight_stage == AP_FixedWing::FlightStage::NORMAL ||
-+         (control_mode == &mode_auto && flight_stage == AP_FixedWing::FlightStage::LAND &&
++         (control_mode->is_landing() && flight_stage == AP_FixedWing::FlightStage::LAND &&
 +          !landing.is_flaring() && !landing.is_commanded_go_around())) &&
          arming.is_armed_and_safety_off() && !throttle_suppressed &&
          !failsafe.rc_failsafe && failsafe.throttle_counter == 0;
@@ -131,8 +131,79 @@ index de6106dac4..c1ae4c4b7c 100644
  
  #if AP_MAVLINK_MAV_CMD_SET_HAGL_ENABLED
      // if external HAGL is active use that
+diff --git a/ArduPlane/commands_logic.cpp b/ArduPlane/commands_logic.cpp
+index 73bed449d9..3ff40f51aa 100644
+--- a/ArduPlane/commands_logic.cpp
++++ b/ArduPlane/commands_logic.cpp
+@@ -585,7 +585,7 @@ bool Plane::verify_takeoff()
+         // rotate, and also allows us to cope with arbitrary
+         // compass errors for auto takeoff
+         if (gps.status() >= AP_GPS_FixType::FIX_3D && 
+-            gps.ground_speed() > GPS_GND_CRS_MIN_SPD &&
++            gps.ground_speed() > ahrs.get_min_speed() &&
+             hal.util->safety_switch_state() != AP_HAL::Util::SAFETY_DISARMED) {
+             float takeoff_course = wrap_PI(radians(gps.ground_course())) - steer_state.locked_course_err;
+             takeoff_course = wrap_PI(takeoff_course);
+diff --git a/ArduPlane/defines.h b/ArduPlane/defines.h
+index 9619834067..4a15601078 100644
+--- a/ArduPlane/defines.h
++++ b/ArduPlane/defines.h
+@@ -10,7 +10,6 @@
+ 
+ #define TAKEOFF_RUDDER_WARNING_TIMEOUT 3000 //ms that GCS warning about not returning arming rudder to neutral repeats
+ 
+-#define GPS_GND_CRS_MIN_SPD 5 // m/s, used to set when intial_direction.heading is captured,deciding to heading lock in cruise mode, or steer_state.hold_course_cd
+ 
+ // failsafe
+ // ----------------------
+diff --git a/ArduPlane/mode_autoland.cpp b/ArduPlane/mode_autoland.cpp
+index 107e5bc82c..9770345344 100644
+--- a/ArduPlane/mode_autoland.cpp
++++ b/ArduPlane/mode_autoland.cpp
+@@ -274,7 +274,7 @@ void ModeAutoLand::check_takeoff_direction()
+     if (plane.control_mode->allows_autoland_direction_capture() &&
+         plane.is_flying() &&
+         hal.util->get_soft_armed() &&
+-        plane.gps.ground_speed() > GPS_GND_CRS_MIN_SPD) {
++        plane.gps.ground_speed() > plane.ahrs.get_min_speed()) {
+         set_autoland_direction(plane.gps.ground_course() + landing_dir_off);
+     }
+ }
+diff --git a/ArduPlane/mode_cruise.cpp b/ArduPlane/mode_cruise.cpp
+index 33bb57c016..07dec5ae8c 100644
+--- a/ArduPlane/mode_cruise.cpp
++++ b/ArduPlane/mode_cruise.cpp
+@@ -67,7 +67,7 @@ void ModeCruise::navigate()
+         plane.channel_roll->get_control_in() == 0 &&
+         plane.rudder_input() == 0 &&
+         plane.gps.status() >= AP_GPS_FixType::FIX_2D &&
+-        plane.gps.ground_speed() >= GPS_GND_CRS_MIN_SPD &&
++        plane.gps.ground_speed() >= plane.ahrs.get_min_speed() &&
+         moving_forwards &&
+         lock_timer_ms == 0) {
+         // user wants to lock the heading - start the timer
+diff --git a/ArduPlane/mode_takeoff.cpp b/ArduPlane/mode_takeoff.cpp
+index 8b0a9aefc2..05edaa33ca 100644
+--- a/ArduPlane/mode_takeoff.cpp
++++ b/ArduPlane/mode_takeoff.cpp
+@@ -120,13 +120,13 @@ void ModeTakeoff::update()
+ 
+             /*
+               don't lock in the takeoff loiter location until we reach
+-              a ground speed of GPS_GND_CRS_MIN_SPD to cope with aircraft
++              a ground speed of AHRS_MIN_SPEED to cope with aircraft
+               with no compass or poor compass. If flying in a very
+               strong headwind then the is_flying() check above will
+               eventually trigger
+              */
+             if (!plane.throttle_suppressed &&
+-                groundspeed > GPS_GND_CRS_MIN_SPD) {
++                groundspeed > plane.ahrs.get_min_speed()) {
+                 gcs().send_text(MAV_SEVERITY_INFO, "Takeoff to %.0fm for %.1fm heading %.1f deg",
+                                 alt, dist, direction);
+                 plane.takeoff_state.start_time_ms = millis();
 diff --git a/ArduPlane/servos.cpp b/ArduPlane/servos.cpp
-index 3e42466ef5..ff84d3ee86 100644
+index 3e42466ef5..978e4e7b16 100644
 --- a/ArduPlane/servos.cpp
 +++ b/ArduPlane/servos.cpp
 @@ -203,6 +203,13 @@ void Plane::channel_function_mixer(SRV_Channel::Function func1_in, SRV_Channel::
@@ -140,7 +211,7 @@ index 3e42466ef5..ff84d3ee86 100644
  void Plane::paraglider_brake_mixer(void)
  {
 +#if AP_TECS_PARAGLIDER_ENABLED
-+    if (control_mode != &mode_auto || flight_stage != AP_FixedWing::FlightStage::LAND ||
++    if (!control_mode->is_landing() || flight_stage != AP_FixedWing::FlightStage::LAND ||
 +        !landing.is_flaring() || !arming.is_armed_and_safety_off()) {
 +        pg_flare_pct = 0;
 +        pg_flare_started_ms = 0;
@@ -149,7 +220,14 @@ index 3e42466ef5..ff84d3ee86 100644
  #if AP_PLANE_CUSTOMCONTROL_ENABLED && AP_TECS_PARAGLIDER_ENABLED
      if (custom_control.mimo_running()) {
          const auto &applied = custom_control.mimo_allocation().applied;
-@@ -245,15 +252,38 @@ void Plane::paraglider_brake_mixer(void)
+@@ -239,21 +246,44 @@ void Plane::paraglider_brake_mixer(void)
+         }
+     }
+     common_brake_pct = MAX(common_brake_pct, pg_custom_common_pct);
+-    const bool automatic_flare = control_mode == &mode_auto &&
++    const bool automatic_flare = control_mode->is_landing() &&
+         flight_stage == AP_FixedWing::FlightStage::LAND && landing.is_flaring() &&
+         arming.is_armed_and_safety_off() && is_positive(g2.pg_flare_pct.get()) &&
          SRV_Channels::function_assigned(SRV_Channel::k_pg_brake_left) &&
          SRV_Channels::function_assigned(SRV_Channel::k_pg_brake_right);
      if (automatic_flare) {
@@ -223,6 +301,50 @@ index 3e42466ef5..ff84d3ee86 100644
      if (custom_control.mimo_running()) {
          if (fabsf(allocation.applied.throttle-allocation.requested.throttle) > 0.001f) {
              allocation.limits |= AP_CustomControl_MIMO::VEHICLE_OVERRIDE;
+diff --git a/libraries/AP_AHRS/AP_AHRS.cpp b/libraries/AP_AHRS/AP_AHRS.cpp
+index 4cf185902c..7ea4ed80ed 100644
+--- a/libraries/AP_AHRS/AP_AHRS.cpp
++++ b/libraries/AP_AHRS/AP_AHRS.cpp
+@@ -209,6 +209,15 @@ const AP_Param::GroupInfo AP_AHRS::var_info[] = {
+     // @User: Advanced
+     AP_GROUPINFO("ORIGIN_ALT", 21, AP_AHRS, _origin_alt, 0),
+ 
++    // @Param: MIN_SPEED
++    // @DisplayName: Minimum speed for course capture and sideslip fusion
++    // @Description: Minimum GPS ground speed for Plane takeoff, cruise and AUTOLAND course capture, and minimum forward air-relative speed for EKF2/EKF3 synthetic sideslip fusion. These checks use different velocity references but share this threshold. Lower values support slow aircraft but require reliable GPS course and a valid zero-sideslip assumption. Does not change wind-state initialization or other navigation speed limits.
++    // @Range: 1 20
++    // @Increment: 1
++    // @Units: m/s
++    // @User: Advanced
++    AP_GROUPINFO("MIN_SPEED", 22, AP_AHRS, _min_speed, 5),
++
+     AP_GROUPEND
+ };
+ 
+diff --git a/libraries/AP_AHRS/AP_AHRS.h b/libraries/AP_AHRS/AP_AHRS.h
+index 1d551ab612..2ab9475e13 100644
+--- a/libraries/AP_AHRS/AP_AHRS.h
++++ b/libraries/AP_AHRS/AP_AHRS.h
+@@ -145,6 +145,11 @@ public:
+         return _wind_max;
+     }
+ 
++    // Shared speed threshold; callers retain their ground/air velocity reference.
++    float get_min_speed() const {
++        return constrain_int16(_min_speed, 1, 20);
++    }
++
+     /*
+      * airspeed support
+      */
+@@ -786,6 +791,7 @@ private:
+      * Parameters
+      */
+     AP_Int8 _wind_max;
++    AP_Int8 _min_speed;
+     AP_Int8 _board_orientation;
+     AP_Enum<EKFType> _ekf_type;
+ 
 diff --git a/libraries/AP_CustomControl/AP_CustomControl.cpp b/libraries/AP_CustomControl/AP_CustomControl.cpp
 index eacfa34031..f5b9e727ed 100644
 --- a/libraries/AP_CustomControl/AP_CustomControl.cpp
@@ -858,8 +980,78 @@ index 0000000000..5c143a6b55
 +    EXPECT_FALSE(decode(data, sizeof(data), context, scales, output));
 +}
 +AP_GTEST_MAIN()
+diff --git a/libraries/AP_DAL/AP_DAL.cpp b/libraries/AP_DAL/AP_DAL.cpp
+index bd9ef72d6c..8379bc86d1 100644
+--- a/libraries/AP_DAL/AP_DAL.cpp
++++ b/libraries/AP_DAL/AP_DAL.cpp
+@@ -83,6 +83,7 @@ void AP_DAL::start_frame(AP_DAL::FrameType frametype)
+ #endif
+     _RFRN.wheelencoder_enabled = AP::wheelencoder() && (AP::wheelencoder()->num_sensors() > 0);
+     _RFRN.ekf_type = int8_t(ahrs.configured_ekf_type());
++    _RFRN.min_speed = ahrs.get_min_speed();
+     WRITE_REPLAY_BLOCK_IFCHANGED(RFRN, _RFRN, old);
+ 
+     // update body conversion
+diff --git a/libraries/AP_DAL/AP_DAL.h b/libraries/AP_DAL/AP_DAL.h
+index ac67e1dbf6..d0ea3526a3 100644
+--- a/libraries/AP_DAL/AP_DAL.h
++++ b/libraries/AP_DAL/AP_DAL.h
+@@ -190,6 +190,11 @@ public:
+         return _RFRN.fly_forward;
+     }
+ 
++    float get_min_speed(void) const {
++        // Older replay logs do not contain this appended field.
++        return _RFRN.min_speed == 0 ? 5 : constrain_int16(_RFRN.min_speed, 1, 20);
++    }
++
+     bool get_takeoff_expected(void) const {
+         return _RFRN.takeoff_expected;
+     }
+diff --git a/libraries/AP_DAL/LogStructure.h b/libraries/AP_DAL/LogStructure.h
+index bbc9a6b6d8..55ee31b213 100644
+--- a/libraries/AP_DAL/LogStructure.h
++++ b/libraries/AP_DAL/LogStructure.h
+@@ -92,6 +92,7 @@ struct log_RFRF {
+ // @FieldValueEnum: EKT: AP_DAL::EKFType
+ // @Field: Flags: bitmask of boolean state
+ // @FieldBitmaskEnum: Flags: AP_DAL::RFRNFlags
++// @Field: MinSpeed: minimum course-capture and sideslip-fusion speed
+ struct log_RFRN {
+     int32_t lat;
+     int32_t lng;
+@@ -109,6 +110,7 @@ struct log_RFRN {
+     uint8_t wheelencoder_enabled:1;
+     uint8_t takeoff_expected:1;
+     uint8_t touchdown_expected:1;
++    uint8_t min_speed;
+     uint8_t _end;
+ };
+ 
+@@ -646,7 +648,7 @@ struct log_RTER {
+     { LOG_RFRF_MSG, RLOG_SIZE(RFRF),                          \
+       "RFRF", "BB", "FTypes,Slow", "--", "--" }, \
+     { LOG_RFRN_MSG, RLOG_SIZE(RFRN),                            \
+-      "RFRN", "IIIfIfffBBB", "HLat,HLon,HAlt,E2T,AM,TX,TY,TZ,VC,EKT,Flags", "DUm-bddd---", "GGB--------" }, \
++      "RFRN", "IIIfIfffBBBB", "HLat,HLon,HAlt,E2T,AM,TX,TY,TZ,VC,EKT,Flags,MinSpeed", "DUm-bddd---n", "GGB--------0" }, \
+     { LOG_REV2_MSG, RLOG_SIZE(REV2),                                   \
+       "REV2", "B", "Event", "-", "-" }, \
+     { LOG_RSO2_MSG, RLOG_SIZE(RSO2),                         \
+diff --git a/libraries/AP_NavEKF2/AP_NavEKF2_AirDataFusion.cpp b/libraries/AP_NavEKF2/AP_NavEKF2_AirDataFusion.cpp
+index 929c0edd37..66df040442 100644
+--- a/libraries/AP_NavEKF2/AP_NavEKF2_AirDataFusion.cpp
++++ b/libraries/AP_NavEKF2/AP_NavEKF2_AirDataFusion.cpp
+@@ -279,7 +279,7 @@ void NavEKF2_core::FuseSideslip()
+     vel_rel_wind = prevTnb * vel_rel_wind;
+ 
+     // perform fusion of assumed sideslip  = 0
+-    if (vel_rel_wind.x > 5.0f)
++    if (vel_rel_wind.x > dal.get_min_speed())
+     {
+         // Calculate observation jacobians
+         SH_BETA[0] = (vn - vwn)*(sq(q0) + sq(q1) - sq(q2) - sq(q3)) - vd*(2*q0*q2 - 2*q1*q3) + (ve - vwe)*(2*q0*q3 + 2*q1*q2);
 diff --git a/libraries/AP_NavEKF3/AP_NavEKF3_AirDataFusion.cpp b/libraries/AP_NavEKF3/AP_NavEKF3_AirDataFusion.cpp
-index 7bbf429b91..ef80be9cd8 100644
+index 7bbf429b91..1cabeb9039 100644
 --- a/libraries/AP_NavEKF3/AP_NavEKF3_AirDataFusion.cpp
 +++ b/libraries/AP_NavEKF3/AP_NavEKF3_AirDataFusion.cpp
 @@ -253,7 +253,7 @@ void NavEKF3_core::FuseSideslip()
@@ -867,7 +1059,7 @@ index 7bbf429b91..ef80be9cd8 100644
  
      // perform fusion of assumed sideslip  = 0
 -    if (vel_rel_wind.x > 5.0f)
-+    if (vel_rel_wind.x > 3.0f)
++    if (vel_rel_wind.x > dal.get_min_speed())
      {
          // Calculate observation jacobians
          SH_BETA[0] = (vn - vwn)*(sq(q0) + sq(q1) - sq(q2) - sq(q3)) - vd*(2*q0*q2 - 2*q1*q3) + (ve - vwe)*(2*q0*q3 + 2*q1*q2);

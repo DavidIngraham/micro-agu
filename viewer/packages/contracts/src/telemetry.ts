@@ -7,6 +7,7 @@ export const MODES: Record<string, number> = {
   RTL: 11,
   LOITER: 12,
   TAKEOFF: 13,
+  AUTOLAND: 26,
 };
 export interface Telemetry {
   /** The completed landing session is paused; reset creates a fresh session. */

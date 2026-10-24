@@ -1,0 +1,107 @@
+
+> microagu-viewer@0.1.0 test:sitl
+> tsx tests/integration/sitl.ts
+
+Setting SIM_RATE_HZ=200.000000
+Setting SIM_SPEEDUP=4.000000
+Starting SITL: JSON
+Home: 45.997000 -121.536000 alt=600.000000m hdg=0.000000
+JSON control interface set to 127.0.0.1:9002
+Starting sketch 'ArduPlane'
+Starting SITL input
+Using Irlock at port : 9005
+Using \clock topic for DDS timing: disabled
+Loaded defaults from @ROMFS/default_params/paraglider.parm,/browser.parm
+
+JSON received:
+	timestamp
+	imu: gyro
+	imu: accel_body
+	position
+	quaternion
+	velocity
+	rng_1
+	velocity_wind
+	airspeed
+	battery: voltage
+
+Skipping port (null)
+Skipping port (null)
+Loaded defaults from @ROMFS/default_params/paraglider.parm,/browser.parm
+validate_structures:536: Validating structures
+Loaded defaults from @ROMFS/default_params/paraglider.parm,/browser.parm
+Loaded defaults from @ROMFS/default_params/paraglider.parm,/browser.parm
+Skipping port (null)
+Skipping port (null)
+Loaded defaults from @ROMFS/default_params/paraglider.parm,/browser.parm
+Skipping port (null)
+Skipping port (null)
+Reboot to enable selected custom controller
+Loaded defaults from @ROMFS/default_params/paraglider.parm,/browser.parm
+Ground start
+Skipping INS calibration
+Calibrating barometer
+Loaded defaults from @ROMFS/default_params/paraglider.parm,/browser.parm
+Barometer 1 calibration complete
+Barometer 2 calibration complete
+No airspeed sensor
+ArduPilot Ready
+Throttle failsafe off
+GPS 1: probing for u-blox at 230400 baud
+GPS 1: detected u-blox
+EKF3 IMU0 initialised
+EKF3 IMU1 initialised
+EKF3 IMU0 tilt alignment complete
+EKF3 IMU1 tilt alignment complete
+EKF3 IMU0 MAG0 initial yaw alignment complete
+EKF3 IMU1 MAG0 initial yaw alignment complete
+EKF3 IMU0 origin set
+EKF3 IMU1 origin set
+EKF3 IMU0 is using GPS
+EKF3 IMU1 is using GPS
+AHRS: EKF3 active
+Field Elevation Set: 600m
+EKF ready; simulation speed restored to 1× before launch.
+BOOT OK
+MODE OK MANUAL
+MODE OK FBWA
+MODE OK FBWB
+MODE OK CRUISE
+MISSION REQUEST 0
+MISSION REQUEST 1
+got MISSION_ITEM; GCS should send MISSION_ITEM_INT
+MISSION REQUEST 2
+MISSION REQUEST 3
+MISSION REQUEST 4
+MISSION REQUEST 5
+MISSION REQUEST 6
+MISSION REQUEST 7
+MISSION REQUEST 8
+MISSION REQUEST 9
+MISSION REQUEST 10
+MISSION REQUEST 11
+Flight plan received
+UPLOAD OK
+Throttle armed
+Autoland direction= 0
+TAKEOFF confirmed; ArduPlane controls the climb to 15 m.
+Armed AUTO, xaccel = -0.0 m/s/s, waiting 0.0 sec
+Triggered AUTO. GPS speed = 4.3
+Takeoff to 15m for 200.0m heading 359.7 deg
+Takeoff level-off starting at 2m
+Mission: 1 WP
+GROUND LAUNCH OK {"controllerSelected":"baseline","controllerActive":false,"mode":10,"armed":true,"lat":45.9975633,"lon":-121.536054,"alt":15.128,"targetAlt":59.94299725341797,"targetRoll":1.2200000286102295,"crossTrack":115.4322738647461,"speed":4.020609406545232,"climb":1.08,"roll":-0.06345939636230469,"pitch":0.2612546384334564,"yaw":0.04351283982396126,"servos":[1569,0,800],"mission":0,"lastHeartbeat":29343.888624,"hagl":{"metres":14.850170135498047,"valid":true,"timeBootMs":43244,"receivedTimeS":43.25467816135617},"pitchRate":0.02540559694170952,"course":-0.017411175716279967,"navigationTimeS":43.25467816135617,"rangefinder":{"distanceM":15.34,"minM":0.1,"maxM":40,"valid":true,"receivedTimeS":43.25467816135617,"timeBootMs":43244}}
+Mission: 1 WP
+AUTO OK
+FLIGHT OK {"controllerSelected":"baseline","controllerActive":false,"mode":10,"armed":true,"lat":45.9979891,"lon":-121.5360485,"alt":27.496,"targetAlt":30.546999895095826,"targetRoll":0.5299999713897705,"crossTrack":0,"speed":3.9510251834175905,"climb":0.97,"roll":-0.06979142874479294,"pitch":0.18892653286457062,"yaw":-0.2939199209213257,"servos":[1567,0,800],"mission":1,"lastHeartbeat":41154.275318,"hagl":{"metres":27.22780418395996,"valid":true,"timeBootMs":55244,"receivedTimeS":55.249678161362304},"pitchRate":-0.0029149309266358614,"course":0.022780868461337287,"navigationTimeS":55.249678161362304,"rangefinder":{"distanceM":27.77,"minM":0.1,"maxM":40,"valid":true,"receivedTimeS":55.249678161362304,"timeBootMs":55244}}
+AUTOPILOT NUDGE OK AUTO
+AUTOPILOT NUDGE OK LOITER
+STEERING OK -1.8637300655245783
+MANUAL TAKEOVER AND CRUISE OK
+ALTITUDE LEVER OK FBWB
+ALTITUDE LEVER OK CRUISE
+9-DOF TRUTH OK {
+  truthFrames: 1756,
+  maxJoint: 3.1327538019400563,
+  simTime: 89.74467816134337
+}

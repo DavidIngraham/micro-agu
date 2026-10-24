@@ -18,6 +18,7 @@ export const definition = {
     "wasm/lqi-file-pipeline.patch",
     "wasm/lqi-pipeline-validation.json",
     "wasm/landing-validation.json",
+    "wasm/autoland-validation.json",
     "wasm/lqi-longitudinal.patch",
     "wasm/lqi-longitudinal-validation.json",
     "wasm/COPYING.txt",

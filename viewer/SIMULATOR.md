@@ -38,7 +38,22 @@ depend on the device; download/compilation and the launch sequence still take ti
 * **FBWB**: steering with automatic altitude and power control.
 * **CRUISE**: centered steering holds heading and altitude.
 * **AUTO**: follow the mission, with left/right steering nudges.
+* **RTL · mission landing**: enter the stored landing sequence; without a
+  landing-start marker, return to home or an eligible rally point and loiter.
+* **AUTOLAND · home**: generate a native approach to home using the takeoff
+  direction. This works without an uploaded landing mission. The browser uses
+  a final waypoint 200 m behind home at 30 m above home. It does not choose a
+  new approach heading from the current wind or use rally points. Select another
+  mode to leave AUTOLAND; the uploaded mission remains available.
 * **LOITER**: orbit the current position.
+
+`AHRS_MIN_SPEED=3` m/s lets this slow aircraft capture its takeoff direction.
+It also sets the minimum GPS course-capture speed for TAKEOFF, AUTO takeoff and
+CRUISE, and the minimum forward **air-relative** speed for EKF2/EKF3 synthetic
+sideslip fusion. Firmware's generic default is 5 m/s; the integer range is 1–20.
+AUTOLAND entry is rejected if the aircraft is not flying or has not captured a
+direction. Its landing status and pause use native phase and estimator telemetry,
+including the same paraglider brake flare as the mission landing.
 
 The right control moves left/right in assisted modes. MANUAL exposes a lower
 semicircle: pull backward/down for symmetric brakes; forward has no brake command.

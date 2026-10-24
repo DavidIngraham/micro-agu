@@ -1,0 +1,614 @@
+{
+  "scope": "Experimental browser simulation only; no physical flight acceptance",
+  "study": "research/active/autoland-shared-speed-2026-10-24/RESULTS.md",
+  "firmware_revision": "d15e11f227677fda550f57913060ddcb67d8c53f",
+  "firmware_sha256": "c6c4442bfd5dfa37110ecccbe1fc88c8782456edf05d1fd02947fff775958051",
+  "configuration_sha256": "794398707c5425fff7bd8bc9554990fec1d93e8ad84dba843b643a34933326a5",
+  "settings": {
+    "mode": 26,
+    "target": "AHRS home",
+    "AHRS_MIN_SPEED": 3,
+    "firmware_default_min_speed_m_s": 5,
+    "AUTOLAND_WP_DIST": 200,
+    "AUTOLAND_WP_ALT": 30,
+    "validation": "autoland-validation.json"
+  },
+  "previous_landing_accuracy_study": "research/active/landing-release-2026-10-24/RESULTS.md",
+  "status": "native integration tested; see report for browser and regression checks",
+  "integration": {
+    "firmware_sha256": "c6c4442bfd5dfa37110ecccbe1fc88c8782456edf05d1fd02947fff775958051",
+    "configuration_sha256": "794398707c5425fff7bd8bc9554990fec1d93e8ad84dba843b643a34933326a5",
+    "checks": {
+      "parameter_readback": true,
+      "ground_entry_rejected": true,
+      "missing_direction_rejected": true,
+      "runtime_threshold_change": true,
+      "capture_below_5_m_s": true,
+      "no_uploaded_mission": true,
+      "home_target": true,
+      "mode_exit_and_reentry": true,
+      "native_autoland_only": true,
+      "lqi_handover": true,
+      "automatic_brake_flare": true,
+      "estimator_confirmed_pause": true
+    },
+    "capture": {
+      "time": 49.94967816135959,
+      "speed": 4.044762044916857,
+      "text": "Autoland direction= 252"
+    },
+    "phases": [
+      "approach",
+      "final",
+      "flare",
+      "landed"
+    ],
+    "contact": {
+      "miss": 0.47022621171565476,
+      "sink": 0.8860234256076978,
+      "groundSpeed": 2.8003923265166133
+    },
+    "maxFlareBrake": 71.9948316447661,
+    "final": {
+      "controllerSelected": "lqi",
+      "controllerActive": false,
+      "mode": 26,
+      "armed": true,
+      "lat": 45.9969993,
+      "lon": -121.5360166,
+      "alt": -0.094,
+      "targetAlt": 0.010999996125698089,
+      "targetRoll": -1.6999999284744263,
+      "crossTrack": -0.12511062622070312,
+      "speed": 0.8028075734570521,
+      "climb": -0.01,
+      "roll": -3.110708713531494,
+      "pitch": -0.7290266156196594,
+      "yaw": 1.354091763496399,
+      "servos": [
+        1000,
+        0,
+        1651
+      ],
+      "mission": 0,
+      "lastHeartbeat": 43601.707298,
+      "landing": {
+        "phase": "landed",
+        "target": {
+          "north": 0,
+          "east": 0
+        },
+        "agl": 0.11681645191182553,
+        "message": "Landed \u00b7 simulation paused \u00b7 reset to fly again"
+      },
+      "hagl": {
+        "metres": 0.11778323352336884,
+        "valid": true,
+        "timeBootMs": 297543,
+        "receivedTimeS": 297.5496781611544
+      },
+      "pitchRate": -5.75106954574585,
+      "course": -1.8097327673810601,
+      "navigationTimeS": 297.63967816115434,
+      "rangefinder": {
+        "distanceM": 41,
+        "minM": 0.1,
+        "maxM": 40,
+        "valid": false,
+        "receivedTimeS": 297.63967816115434,
+        "timeBootMs": 297623
+      },
+      "simulationEnded": true
+    },
+    "logs": [
+      {
+        "time": 0,
+        "speed": 0,
+        "text": "Setting SIM_RATE_HZ=200.000000"
+      },
+      {
+        "time": 0,
+        "speed": 0,
+        "text": "Setting SIM_SPEEDUP=4.000000"
+      },
+      {
+        "time": 0,
+        "speed": 0,
+        "text": "Starting SITL: JSON"
+      },
+      {
+        "time": 0,
+        "speed": 0,
+        "text": "Home: 45.997000 -121.536000 alt=600.000000m hdg=0.000000"
+      },
+      {
+        "time": 0,
+        "speed": 0,
+        "text": "JSON control interface set to 127.0.0.1:9002"
+      },
+      {
+        "time": 0,
+        "speed": 0,
+        "text": "Starting sketch 'ArduPlane'"
+      },
+      {
+        "time": 0,
+        "speed": 0,
+        "text": "Starting SITL input"
+      },
+      {
+        "time": 0,
+        "speed": 0,
+        "text": "Using Irlock at port : 9005"
+      },
+      {
+        "time": 0,
+        "speed": 0,
+        "text": "Using \\clock topic for DDS timing: disabled"
+      },
+      {
+        "time": 0,
+        "speed": 0,
+        "text": "Loaded defaults from @ROMFS/default_params/paraglider.parm,/browser.parm"
+      },
+      {
+        "time": 0.0008333333333333334,
+        "speed": 0,
+        "text": ""
+      },
+      {
+        "time": 0.0008333333333333334,
+        "speed": 0,
+        "text": "JSON received:"
+      },
+      {
+        "time": 0.0008333333333333334,
+        "speed": 0,
+        "text": "\ttimestamp"
+      },
+      {
+        "time": 0.0008333333333333334,
+        "speed": 0,
+        "text": "\timu: gyro"
+      },
+      {
+        "time": 0.0008333333333333334,
+        "speed": 0,
+        "text": "\timu: accel_body"
+      },
+      {
+        "time": 0.0008333333333333334,
+        "speed": 0,
+        "text": "\tposition"
+      },
+      {
+        "time": 0.0008333333333333334,
+        "speed": 0,
+        "text": "\tquaternion"
+      },
+      {
+        "time": 0.0008333333333333334,
+        "speed": 0,
+        "text": "\tvelocity"
+      },
+      {
+        "time": 0.0008333333333333334,
+        "speed": 0,
+        "text": "\trng_1"
+      },
+      {
+        "time": 0.0008333333333333334,
+        "speed": 0,
+        "text": "\tvelocity_wind"
+      },
+      {
+        "time": 0.0008333333333333334,
+        "speed": 0,
+        "text": "\tairspeed"
+      },
+      {
+        "time": 0.0008333333333333334,
+        "speed": 0,
+        "text": "\tbattery: voltage"
+      },
+      {
+        "time": 0.0008333333333333334,
+        "speed": 0,
+        "text": ""
+      },
+      {
+        "time": 0.010046128274295452,
+        "speed": 0,
+        "text": "Skipping port (null)"
+      },
+      {
+        "time": 0.010046128274295452,
+        "speed": 0,
+        "text": "Skipping port (null)"
+      },
+      {
+        "time": 0.010046128274295452,
+        "speed": 0,
+        "text": "Loaded defaults from @ROMFS/default_params/paraglider.parm,/browser.parm"
+      },
+      {
+        "time": 0.016800058147820412,
+        "speed": 0,
+        "text": "validate_structures:536: Validating structures"
+      },
+      {
+        "time": 0.019344588630269537,
+        "speed": 0,
+        "text": "Loaded defaults from @ROMFS/default_params/paraglider.parm,/browser.parm"
+      },
+      {
+        "time": 0.019344588630269537,
+        "speed": 0,
+        "text": "Loaded defaults from @ROMFS/default_params/paraglider.parm,/browser.parm"
+      },
+      {
+        "time": 0.019344588630269537,
+        "speed": 0,
+        "text": "Skipping port (null)"
+      },
+      {
+        "time": 0.026161828084065426,
+        "speed": 0,
+        "text": "Skipping port (null)"
+      },
+      {
+        "time": 0.026161828084065426,
+        "speed": 0,
+        "text": "Loaded defaults from @ROMFS/default_params/paraglider.parm,/browser.parm"
+      },
+      {
+        "time": 0.026161828084065426,
+        "speed": 0,
+        "text": "Skipping port (null)"
+      },
+      {
+        "time": 0.03302586147673843,
+        "speed": 0,
+        "text": "Skipping port (null)"
+      },
+      {
+        "time": 0.037339931748073714,
+        "speed": 0,
+        "text": "Reboot to enable selected custom controller"
+      },
+      {
+        "time": 0.14592415375849185,
+        "speed": 0,
+        "text": "Loaded defaults from @ROMFS/default_params/paraglider.parm,/browser.parm"
+      },
+      {
+        "time": 0.16538948700990824,
+        "speed": 0,
+        "text": "Ground start"
+      },
+      {
+        "time": 0.16538948700990824,
+        "speed": 0,
+        "text": "Skipping INS calibration"
+      },
+      {
+        "time": 0.16538948700990824,
+        "speed": 0,
+        "text": "Calibrating barometer"
+      },
+      {
+        "time": 1.76019205505364,
+        "speed": 0,
+        "text": "Loaded defaults from @ROMFS/default_params/paraglider.parm,/browser.parm"
+      },
+      {
+        "time": 1.7699244727661667,
+        "speed": 0,
+        "text": "Barometer 1 calibration complete"
+      },
+      {
+        "time": 1.7699244727661667,
+        "speed": 0,
+        "text": "Barometer 2 calibration complete"
+      },
+      {
+        "time": 1.7699244727661667,
+        "speed": 0,
+        "text": "LQI gain file loaded"
+      },
+      {
+        "time": 1.7699244727661667,
+        "speed": 0,
+        "text": "No airspeed sensor"
+      },
+      {
+        "time": 1.7699244727661667,
+        "speed": 0,
+        "text": "ArduPilot Ready"
+      },
+      {
+        "time": 1.7896781613524793,
+        "speed": 0,
+        "text": "Throttle failsafe off"
+      },
+      {
+        "time": 9.094678161352517,
+        "speed": 0,
+        "text": "GPS 1: probing for u-blox at 230400 baud"
+      },
+      {
+        "time": 9.129678161352523,
+        "speed": 0,
+        "text": "GPS 1: detected u-blox"
+      },
+      {
+        "time": 10.309678161352707,
+        "speed": 0,
+        "text": "EKF3 IMU0 initialised"
+      },
+      {
+        "time": 10.309678161352707,
+        "speed": 0,
+        "text": "EKF3 IMU1 initialised"
+      },
+      {
+        "time": 12.189678161353001,
+        "speed": 0,
+        "text": "EKF3 IMU0 tilt alignment complete"
+      },
+      {
+        "time": 12.189678161353001,
+        "speed": 0,
+        "text": "EKF3 IMU1 tilt alignment complete"
+      },
+      {
+        "time": 12.269678161353013,
+        "speed": 0,
+        "text": "EKF3 IMU0 MAG0 initial yaw alignment complete"
+      },
+      {
+        "time": 12.269678161353013,
+        "speed": 0,
+        "text": "EKF3 IMU1 MAG0 initial yaw alignment complete"
+      },
+      {
+        "time": 20.5146781613527,
+        "speed": 0,
+        "text": "EKF3 IMU0 origin set"
+      },
+      {
+        "time": 20.5146781613527,
+        "speed": 0,
+        "text": "EKF3 IMU1 origin set"
+      },
+      {
+        "time": 20.539678161352693,
+        "speed": 0,
+        "text": "EKF3 IMU0 is using GPS"
+      },
+      {
+        "time": 20.539678161352693,
+        "speed": 0,
+        "text": "EKF3 IMU1 is using GPS"
+      },
+      {
+        "time": 20.539678161352693,
+        "speed": 0,
+        "text": "AHRS: EKF3 active"
+      },
+      {
+        "time": 20.569678161352687,
+        "speed": 0,
+        "text": "Field Elevation Set: 600m"
+      },
+      {
+        "time": 20.594678161352682,
+        "speed": 0,
+        "text": "EKF ready; simulation speed restored to 1\u00d7 before launch."
+      },
+      {
+        "time": 20.974678161352607,
+        "speed": 0,
+        "text": "Must already be flying!"
+      },
+      {
+        "time": 20.974678161352607,
+        "speed": 0,
+        "text": "Flight mode change failed"
+      },
+      {
+        "time": 20.994678161352603,
+        "speed": 0,
+        "text": "Custom controller enabled, not yet running"
+      },
+      {
+        "time": 21.229678161352556,
+        "speed": 0,
+        "text": "Throttle armed"
+      },
+      {
+        "time": 21.269678161352548,
+        "speed": 0,
+        "text": "Custom controller enabled, not yet running"
+      },
+      {
+        "time": 35.214678161352055,
+        "speed": 4.1801076541161,
+        "text": "TAKEOFF confirmed; ArduPlane controls the climb to 15 m."
+      },
+      {
+        "time": 35.234678161352065,
+        "speed": 4.1801076541161,
+        "text": "Armed AUTO, xaccel = 0.0 m/s/s, waiting 0.0 sec"
+      },
+      {
+        "time": 35.234678161352065,
+        "speed": 4.1801076541161,
+        "text": "Triggered AUTO. GPS speed = 4.3"
+      },
+      {
+        "time": 44.57467816135684,
+        "speed": 4.106701839676214,
+        "text": "Climbing to TKOFF alt then loitering"
+      },
+      {
+        "time": 47.549678161358365,
+        "speed": 4.136725758374611,
+        "text": "Takeoff level-off starting at 1m"
+      },
+      {
+        "time": 49.58967816135941,
+        "speed": 4.009600977653512,
+        "text": "Custom controller is ON"
+      },
+      {
+        "time": 49.699678161359465,
+        "speed": 3.9960605601016606,
+        "text": "Custom controller suspended"
+      },
+      {
+        "time": 49.699678161359465,
+        "speed": 3.9960605601016606,
+        "text": "Custom controller is ON"
+      },
+      {
+        "time": 49.73467816135948,
+        "speed": 4.001812089541437,
+        "text": "Takeoff initial direction not set"
+      },
+      {
+        "time": 49.73467816135948,
+        "speed": 4.001812089541437,
+        "text": "Flight mode change failed"
+      },
+      {
+        "time": 49.94967816135959,
+        "speed": 4.044762044916857,
+        "text": "Autoland direction= 252"
+      },
+      {
+        "time": 49.94967816135959,
+        "speed": 4.044762044916857,
+        "text": "Custom controller suspended"
+      },
+      {
+        "time": 50.17967816135971,
+        "speed": 3.780542289143186,
+        "text": "Custom controller is ON"
+      },
+      {
+        "time": 108.11467816132667,
+        "speed": 4.212671361499731,
+        "text": "Custom controller suspended"
+      },
+      {
+        "time": 108.15467816132663,
+        "speed": 4.212671361499731,
+        "text": "Custom controller is ON"
+      },
+      {
+        "time": 108.15467816132663,
+        "speed": 4.212671361499731,
+        "text": "Custom controller suspended"
+      },
+      {
+        "time": 108.16967816132662,
+        "speed": 4.216740447312355,
+        "text": "Custom controller is ON"
+      },
+      {
+        "time": 108.20967816132658,
+        "speed": 4.216740447312355,
+        "text": "Custom controller suspended"
+      },
+      {
+        "time": 108.22967816132656,
+        "speed": 4.221812407011946,
+        "text": "Custom controller is ON"
+      },
+      {
+        "time": 248.88967816119865,
+        "speed": 4.289172414347551,
+        "text": "Loiter to alt complete"
+      },
+      {
+        "time": 248.88967816119865,
+        "speed": 4.289172414347551,
+        "text": "Landing approach start at 30.0m"
+      },
+      {
+        "time": 250.0496781611976,
+        "speed": 4.297731959999367,
+        "text": "Landing glide slope 8.5 degrees"
+      },
+      {
+        "time": 294.86467816115686,
+        "speed": 4.245138395859433,
+        "text": "Flare 2.9m sink=0.63 speed=4.3 dist=8.3"
+      },
+      {
+        "time": 294.9046781611568,
+        "speed": 4.245138395859433,
+        "text": "Custom controller suspended"
+      }
+    ]
+  },
+  "verification": {
+    "checks": {
+      "firmware-build": true,
+      "unit": true,
+      "viewer-build": true,
+      "integration": true,
+      "sitl": true,
+      "mimo": true,
+      "browser": true,
+      "physics_and_gain_hashes_unchanged": true,
+      "reconstructable_firmware_patch": true
+    },
+    "logs": {
+      "firmware-build": {
+        "path": "autoland-firmware-build.log",
+        "sha256": "01f87683b6688e3d3dfcde06e79f769ff5f33799d537830a91c14f55489f790e"
+      },
+      "unit": {
+        "path": "autoland-unit.log",
+        "sha256": "3e1b063cde3a85673faa9220e7e07f5ffed87c4472e1e15a835161cf2d7003d0"
+      },
+      "viewer-build": {
+        "path": "autoland-viewer-build.log",
+        "sha256": "7b7a0139d29b6373470de6f517958f76bb3768573db159bccdc42bd9443b005b"
+      },
+      "integration": {
+        "path": "autoland-integration.log",
+        "sha256": "5fb821a3a7e782574ef751c374d1ab62052985eee51da45227b184a491ffcd8c"
+      },
+      "sitl": {
+        "path": "autoland-sitl.log",
+        "sha256": "dc7a655a9fd76418dcf2dc6525ec21f183137bdb50a137ed45c33749281bf02a"
+      },
+      "mimo": {
+        "path": "autoland-mimo.log",
+        "sha256": "fac260f1102eb3bb869a76ee0e7d953b3c4d84217cf29060d5a22c7717f9c0db"
+      },
+      "browser": {
+        "path": "autoland-browser.log",
+        "sha256": "5b661e3f32857e57f501ea810b634a4ce2692528074365f7f582df8dd5cbdac2"
+      }
+    },
+    "source_sha256": {
+      "viewer/tests/integration/autoland.ts": "bb5acb791981eec10670c73c8fbd12469ccb1d3592e83b8b048713455c85e843",
+      "viewer/tests/browser/autoland.spec.ts": "76ee38be4a571c7e8fbf3c38afe3fdc2cba32e3aecd9f14e81c2b7faa81cb85c",
+      "viewer/tests/browser/rtl.spec.ts": "904f0d7d24cc10c78bfb54f66c2053d23dc1c8fcf7086c2ce3de7a5572f755b9",
+      "viewer/tests/integration/sitl.ts": "96f3f98d54f37d8d60828a09165d044387320984c2e15617618771597642d4ab",
+      "viewer/tests/integration/mimo.ts": "288b97b4e630535828d1628847b7456516ed77d02966d69f93df18e6c5e91776",
+      "viewer/packages/sim-browser/src/session/runtime.ts": "217135bad6f629e6e4a94a8990d1ce3077c7a0be3fba6b459da17c3519b702fa",
+      "viewer/packages/sim-browser/src/session/landing-target.ts": "54261b857d491d35043627a1fb0246d3accfc3a86b50889c7b0e03d76d89863a",
+      "viewer/apps/simulator/main.ts": "c29e7f59078fab7d26abb774345a4aaedb4dedde42c573afb3aece2fe921c392",
+      "viewer/apps/simulator/index.html": "10b7ef1d3f26ea37f83a610c147718fb199a4c22ec121980e233fe1db8daccd7"
+    },
+    "firmware_revision": "d15e11f227677fda550f57913060ddcb67d8c53f",
+    "firmware_sha256": "c6c4442bfd5dfa37110ecccbe1fc88c8782456edf05d1fd02947fff775958051",
+    "configuration_sha256": "794398707c5425fff7bd8bc9554990fec1d93e8ad84dba843b643a34933326a5",
+    "qualification": "Current workspace SITL/MIMO tests include pre-existing local test edits; fingerprints are retained."
+  }
+}

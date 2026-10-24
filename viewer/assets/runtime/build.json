@@ -1,7 +1,7 @@
 {
   "repository": "https://github.com/DavidIngraham/ardupilot",
-  "revision": "3b72ab243e685d37238b2b51d17aecfdb24c8d81",
-  "source": "https://github.com/DavidIngraham/ardupilot/tree/3b72ab243e685d37238b2b51d17aecfdb24c8d81",
+  "revision": "d15e11f227677fda550f57913060ddcb67d8c53f",
+  "source": "https://github.com/DavidIngraham/ardupilot/tree/d15e11f227677fda550f57913060ddcb67d8c53f",
   "license": "GPL-3.0-or-later",
   "board": "wasm",
   "vehicle": "ArduPlane",
@@ -9,12 +9,12 @@
   "transport": "Emscripten SOCKFS local UDP peer",
   "emscripten": "6.0.8",
   "sha256": {
-    "highdof.json": "131ab3155f15f921fcd3e3f4ce688ef5f6ad91cef7d137f24606cc24f9225aee",
+    "highdof.json": "794398707c5425fff7bd8bc9554990fec1d93e8ad84dba843b643a34933326a5",
     "sim_wasm_bg.wasm.d.ts": "98b5d976e3fdeafe277b6f98d5f95079fba5b6367533ddb4f7846b0f93ff9890",
     "sim_wasm.d.ts": "f123bfc6ec889cd120e526d7d3001395d45e44a97db671d791e14264a938c3be",
     "sim_wasm_bg.wasm": "ceae58a55b4585e85b86a142a15c1f5b9bcfbf3e51f21cddbdf741ac4a75c158",
     "sim_wasm.js": "65ffd575810f57b5793b1a61477d215e316267e40ced1eb29dfe7a59e5ce4f60",
-    "arduplane.wasm": "66e7adf6ff5f6b7dd781229850f7f0065832cf37014b395e171795f6024d371d",
+    "arduplane.wasm": "c6c4442bfd5dfa37110ecccbe1fc88c8782456edf05d1fd02947fff775958051",
     "arduplane.js": "893b28e3cbea410e48736d7f7426928cbe8b56f22c1813914aa290172f1e8565",
     "lqi-gains.bin": "311876eabeb033e55c30c8d556d159495b76e8358cd25a1684c0c3b486ed97f0"
   },
@@ -67,14 +67,14 @@
     "libraries/AP_CustomControl/AP_CustomControl_LQI.h": "c3d766291afe8ab7d0fcd40520f9dff8efd3c6f090c7cd6aa585f99e91f3bc55",
     "libraries/AP_CustomControl/AP_CustomControl_LQI_gains.h": "870cbf6b7bf3b03e465217bc29ce66a67a2c5d46578ddebbed4d7a070dd09c72",
     "ArduPlane/Parameters.h": "761d0ba31cda6738577fa80d7f66e0d3b77850b5381307e3db48aa5c4ae86709",
-    "ArduPlane/servos.cpp": "568c0abd86f7859d77072c4f17fdd6100c1a7279632c4bc300524124f5319902",
+    "ArduPlane/servos.cpp": "d9cd740ca6f30d645bd20dcc437a43570b9ccbdea569fd7115bf0df0ab2394a3",
     "libraries/AP_CustomControl/AP_CustomControl_LQI_File.h": "fcd17fd9c1d43013858381da30f77b5de403759dcb05cc4262cec1bb663e87e1"
   },
   "controller_source_patch": {
     "path": "lqi-file-pipeline.patch",
-    "sha256": "077081ee9bf5bcda47e7a5e404bd81daeb62a8e04e133ec6ca32c0fdc555d988",
+    "sha256": "9812105e78d9d1ba30c77423172cdd45c384b33baee95ed23770d9225d4832fb",
     "base_revision": "010ada6a4f0b26910fc18ecca176d2e65c5ed9d7",
-    "description": "Published file-loaded LQI, native AUTO landing and 3 m/s sideslip wind-update gate."
+    "description": "File-loaded LQI, native paraglider AUTO/AUTOLAND and shared AHRS_MIN_SPEED gate."
   },
   "controller_reference_filter": {
     "CP3_HRTC": 0.7,
@@ -117,18 +117,24 @@
     "physics_changed": false
   },
   "landing_telemetry_source_sha256": {
-    "ArduPlane/Plane.cpp": "656dc400135d92923bbf6a4b678e04b816479f5f1abce8e613dccb089da4ae24"
+    "ArduPlane/Plane.cpp": "6649dfc0e54672fd63b463fe89cc84b9b6456db1758bd53ed0bafae3568e651d"
   },
   "native_landing_source_sha256": {
-    "ArduPlane/Plane.cpp": "656dc400135d92923bbf6a4b678e04b816479f5f1abce8e613dccb089da4ae24",
+    "ArduPlane/Plane.cpp": "6649dfc0e54672fd63b463fe89cc84b9b6456db1758bd53ed0bafae3568e651d",
     "ArduPlane/Plane.h": "c33f6602b44da11f8635d075402f8c8197e8cfb658669fb42ad7e4e45ec601a9",
     "ArduPlane/Parameters.cpp": "515b3458ee70617c35fbbde20e8894529fe66223bc1b0fd1f1a1d6d6b68980a1",
     "ArduPlane/Parameters.h": "761d0ba31cda6738577fa80d7f66e0d3b77850b5381307e3db48aa5c4ae86709",
-    "ArduPlane/servos.cpp": "568c0abd86f7859d77072c4f17fdd6100c1a7279632c4bc300524124f5319902",
+    "ArduPlane/servos.cpp": "d9cd740ca6f30d645bd20dcc437a43570b9ccbdea569fd7115bf0df0ab2394a3",
     "ArduPlane/altitude.cpp": "c67186ec5814577f2972884c2a24f0b2603c666e8ce7d78f3918bbf26a0a9ef8"
   },
   "wind_estimator_source_sha256": {
-    "libraries/AP_NavEKF3/AP_NavEKF3_AirDataFusion.cpp": "bee65897294a17ba82e2628ac90698385091cf4d2c5391f37aec754814c12ad5"
+    "libraries/AP_AHRS/AP_AHRS.cpp": "70f1611e62d9348235093e2e808376d15137f4b97f22f5b1edf0c7c20bdb5a88",
+    "libraries/AP_AHRS/AP_AHRS.h": "a6ce4bf999ac72093d9e7e0b6f0c65e7b0fa37b3530b7773891a6716b30b67a8",
+    "libraries/AP_DAL/AP_DAL.cpp": "914cc27382a6c3746e77a645d8ac4a03e7bf7f9db3c5b41e7fe8336c2688b82f",
+    "libraries/AP_DAL/AP_DAL.h": "bd5334122b94e910c49b8814ba96048629da5b5da6259da7f05b2b639572017d",
+    "libraries/AP_DAL/LogStructure.h": "4979b4f5c12a2e64a254c20d164105e69ef1004f3e198e985f2b48f8da1244d5",
+    "libraries/AP_NavEKF2/AP_NavEKF2_AirDataFusion.cpp": "12331b5719771c70f595f03f2b7e46d4259ebe1f43573260124a32eaf1e4807c",
+    "libraries/AP_NavEKF3/AP_NavEKF3_AirDataFusion.cpp": "6b4d9d61e5fa486417a150337bb524ceec1b9aa22f6f620acb5b97c2e47a7f9a"
   },
   "landing_calibration": {
     "LAND_FLARE_AIM": 0,
@@ -136,5 +142,21 @@
     "PG_FLARE_HGT": 1.3,
     "sideslip_update_minimum_forward_tas_m_s": 3,
     "validation": "landing-validation.json"
+  },
+  "autoland": {
+    "mode": 26,
+    "target": "AHRS home",
+    "AHRS_MIN_SPEED": 3,
+    "firmware_default_min_speed_m_s": 5,
+    "AUTOLAND_WP_DIST": 200,
+    "AUTOLAND_WP_ALT": 30,
+    "validation": "autoland-validation.json"
+  },
+  "autoland_source_sha256": {
+    "ArduPlane/mode_autoland.cpp": "3418971e5bc518e05c141ea9acca45bfebe4ce49f98b68db52feab52ccf9189f",
+    "ArduPlane/mode_takeoff.cpp": "b051e2fafe62fd9a8c2fba77249c8fa1dc62d3dd440d20a80f6235b0365dd6fd",
+    "ArduPlane/mode_cruise.cpp": "7b2e1264a1964c6929be75f95ad9c9679ebcb8344d4b95e0a2ba5042d294d3b0",
+    "ArduPlane/commands_logic.cpp": "dc31be58f5eaf0fb5dcd5b1cc19202430a00bd8cdf0541fc5c891368cf19e6d0",
+    "ArduPlane/defines.h": "81037e820830d2a32bf199d3d7f145f7edc9996384d8a05d141549700980c431"
   }
 }

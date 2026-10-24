@@ -3,12 +3,32 @@ import test from "node:test";
 import assert from "node:assert/strict";
 import { initialTelemetry } from "../../packages/contracts/src/telemetry";
 import { landingHeight } from "../../packages/sim-browser/src/session/landing-height";
+import { landingTarget } from "../../packages/sim-browser/src/session/landing-target";
+import { MODES } from "../../packages/contracts/src/telemetry";
 import {
   exampleMission,
   landingMission,
   HOME,
 } from "../../apps/simulator/missions/default";
 import { validateMission, offset } from "../../packages/contracts/src/mission";
+
+test("AUTOLAND presents home independently of the stored landing mission", () => {
+  const items = landingMission();
+  items[3] = { ...items[3], lat: HOME.lat + 0.01, alt: 12 };
+  const state = { mode: MODES.AUTOLAND, mission: 4 };
+  const target = landingTarget(state, items, HOME)!;
+  assert.equal(target.lat, HOME.lat);
+  assert.equal(target.lon, HOME.lon);
+  assert.equal(target.alt, 0);
+  assert.equal(target.frame, 3);
+  assert.deepEqual(landingTarget(state, [], HOME), target);
+  state.mode = MODES.AUTO;
+  assert.equal(landingTarget(state, items, HOME), items[3]);
+  state.mission = 1;
+  assert.equal(landingTarget(state, items, HOME), undefined);
+  state.mode = MODES.CRUISE;
+  assert.equal(landingTarget(state, items, HOME), undefined);
+});
 
 test("default circuit repeats before the RTL landing sequence", () => {
   const items = validateMission(exampleMission());

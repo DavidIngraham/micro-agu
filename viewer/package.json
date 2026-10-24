@@ -14,6 +14,7 @@
     "test:browser": "playwright test",
     "test:physics": "tsx tests/integration/physics.ts",
     "test:sitl": "tsx tests/integration/sitl.ts",
+    "test:autoland": "tsx tests/integration/autoland.ts",
     "test:mimo": "tsx tests/integration/mimo.ts",
     "test:launch": "tsx tests/integration/launch.ts",
     "assets:fetch": "tsx tools/convert/fetch-recordings.ts",

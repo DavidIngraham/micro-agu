@@ -233,9 +233,12 @@ export const applet = registerApplet(definition, async (scope) => {
     el("climb").textContent = s.climb.toFixed(1);
     el("heading").textContent =
       `${String(Math.round(((s.yaw * 180) / Math.PI + 360) % 360)).padStart(3, "0")}°`;
-    el("mission-current").textContent = uploaded
-      ? `ITEM ${s.mission} / ${items.length}`
-      : "NO MISSION";
+    el("mission-current").textContent =
+      s.mode === MODES.AUTOLAND
+        ? "HOME · AUTOLAND"
+        : uploaded
+          ? `ITEM ${s.mission} / ${items.length}`
+          : "NO MISSION";
     el("alt-target").textContent =
       landingActive() && s.landing!.agl !== null
         ? `AGL ${s.landing!.agl!.toFixed(1)} m · EKF`
@@ -649,7 +652,8 @@ export const applet = registerApplet(definition, async (scope) => {
     ctx.scale(devicePixelRatio, devicePixelRatio);
     ctx.clearRect(0, 0, w, h);
     const craft = offset(sim.state.lat, sim.state.lon),
-      points = items
+      mapItems = sim.state.mode === MODES.AUTOLAND ? [] : items,
+      points = mapItems
         .map((w, i) => ({ ...offset(w.lat, w.lon), sequence: i + 1, item: w }))
         .filter((p) => missionHasLocation(p.item));
     const target = landingActive() ? sim.state.landing!.target : null;
@@ -657,7 +661,7 @@ export const applet = registerApplet(definition, async (scope) => {
       { east: 0, north: 0 },
       craft,
       ...points,
-      ...missionPreview(items, HOME),
+      ...missionPreview(mapItems, HOME),
       ...(target ? [target] : []),
     ];
     const minE = Math.min(...all.map((p) => p.east)) - 40,
@@ -670,7 +674,7 @@ export const applet = registerApplet(definition, async (scope) => {
     ctx.strokeStyle = "#b7ee75";
     ctx.lineWidth = 1.4;
     ctx.beginPath();
-    missionPreview(items, HOME).forEach((p, i) =>
+    missionPreview(mapItems, HOME).forEach((p, i) =>
       i ? ctx.lineTo(x(p.east), y(p.north)) : ctx.moveTo(x(p.east), y(p.north)),
     );
     ctx.stroke();

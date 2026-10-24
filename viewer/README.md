@@ -120,11 +120,28 @@ simulation validation, not a flight-qualified landing tune.
 The browser sets `LAND_FLARE_AIM=0`: the path planner retains approach sink
 instead of assuming the fixed-wing reduction toward `TECS_LAND_SINK`. The
 power-off and brake trigger heights remain 3 m and 1.3 m. The packaged EKF's
-sideslip wind-update threshold is 3 m/s to admit this aircraft's approach speed;
-wind-state initialization and observation noise are unchanged. See the
+sideslip wind-update threshold is configured by `AHRS_MIN_SPEED=3` to admit this
+aircraft's approach speed. Firmware defaults to 5 m/s. This integer parameter
+also controls Plane GPS course capture in TAKEOFF, AUTO takeoff, CRUISE and
+AUTOLAND; EKF2/EKF3 retain their forward air-relative speed check, while course
+capture retains GPS groundspeed. The effective range is 1–20 m/s. Replay records
+the effective threshold; older logs without it use 5 m/s. Wind-state
+initialization and observation noise are unchanged. See the
 [landing calibration comparison](../research/active/landing-release-2026-10-24/RESULTS.md)
 for the measured accuracy improvement, per-condition regressions and remaining
 wind/contact-model limitations.
+
+The mode selector offers both **RTL · mission landing**, which executes the
+stored `DO_LAND_START` sequence, and **AUTOLAND · home** (native mode 26), which
+generates its own loiter-to-altitude and final approach. AUTOLAND targets AHRS
+home, captures takeoff ground course plus `AUTOLAND_DIR_OFF`, and does not select
+a rally point or continuously update its direction from wind. Its browser
+defaults are `AUTOLAND_WP_DIST=200` m and `AUTOLAND_WP_ALT=30` m, matching the
+stored mission's nominal final geometry. It uses the same native paraglider
+brake flare and LQI-to-final handover. Changing mode leaves AUTOLAND; the uploaded
+mission remains available. The map hides the inactive mission during AUTOLAND
+and marks home as the target; it does not invent the firmware's generated path.
+See the [shared-speed and AUTOLAND checks](../research/active/autoland-shared-speed-2026-10-24/RESULTS.md).
 
 Height follows JSON lidar → AP rangefinder → EKF terrain estimate → AHRS,
 consumed directly in firmware. A valid terrain estimate is preferred for the

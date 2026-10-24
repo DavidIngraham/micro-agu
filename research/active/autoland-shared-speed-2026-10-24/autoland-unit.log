@@ -1,0 +1,68 @@
+
+> microagu-viewer@0.1.0 test
+> tsx --test tests/unit/*.test.ts
+
+✔ JSON equivalent airspeed follows ArduPilot atmosphere reference densities (1.235559ms)
+✔ camera and aircraft remain coincident during constant-speed travel at off-grid replay times, including endpoints (4.230166ms)
+✔ boxcar reference suppresses oscillation rather than using two phase-dependent endpoints (30.572111ms)
+✔ real-flight interpolation preserves discrete modes and servo outputs (1.505815ms)
+✔ flight replay rejects invalid samples and flags gaps (0.58308ms)
+✔ flight replay validates calibration and normalized commands (0.511065ms)
+✔ AUTOLAND presents home independently of the stored landing mission (1.969186ms)
+✔ default circuit repeats before the RTL landing sequence (9.904402ms)
+✔ EKF HAGL propagates telemetry age, without applying a second sensor delay (0.398244ms)
+✔ landing spiral exits tangent to the final approach (0.277318ms)
+✔ preview shows descending orbit and a tangent exit rather than a centre-to-final diagonal (0.240269ms)
+✔ lidar reports slant range, not vertical truth height (3.323757ms)
+✔ lidar enforces latency and sample hold (0.43883ms)
+✔ inverted, oblique, too near and too far returns are invalid (0.409495ms)
+✔ dropout invalidates rather than holds the previous measurement (0.261889ms)
+✔ offset, deterministic noise and bad configuration (3.365676ms)
+✔ rangefinder telemetry survives the browser MAVLink decoder (0.799825ms)
+✔ scope removes listeners, cancels frames and disposes resources exactly once (1.643171ms)
+✔ disposing a simulator rejects pending RPCs and terminates its worker (1.989468ms)
+✔ measured flight poses never invent canopy truth or rotor measurements (0.291295ms)
+✔ RPM integration and arbitrary-time phase are independent of playback sampling (1.642179ms)
+✔ actual CAD rig preserves rest placement and rotates around fixed shafts (46.203983ms)
+✔ development serves every public page and redirects source links with queries (415.885813ms)
+✔ effective span, reflection symmetry and finite normals survive geometry variants (117.194869ms)
+✔ suspension follows rigid bodies and reuses its buffer while changing spacing (3.055581ms)
+✔ brakes smoothly curl only the aft fabric, with correct left/right mapping (0.649223ms)
+✔ GPU skin morph and line endpoints share the same deformation; ghost stays independent (15.314825ms)
+✔ assisted-mode steering ignores vertical travel without reducing horizontal authority (1.389397ms)
+✔ manual stick has only pull-brake travel and retains a semicircular boundary (0.492875ms)
+✔ height lever drives AP pitch with fixed power input only in FBWB/CRUISE (2.148035ms)
+✔ autopilot nudges preserve roll and never mix pitch or manual throttle (0.428732ms)
+✔ side profile unwraps a closed ground track and uses NED altitude (1.473364ms)
+✔ asset declarations include nested poses and reject traversal (2.462643ms)
+✔ publisher rejects changed artifacts before creating destination files (121.916324ms)
+✔ MAVLink streams survive fragmentation, truncation and corrupt CRC (2.096178ms)
+✔ WPL home is excluded and relative waypoints retain order (1.045564ms)
+✔ QGC accepts null yaw but rejects complex and terrain-relative items (0.494023ms)
+✔ example is valid and unsupported mission commands are rejected (2.091504ms)
+✔ local physics socket preserves datagrams and delegates other traffic (1.770929ms)
+✔ missing socket runtime fails explicitly (0.519771ms)
+✔ native mission annotations remain discrete during replay interpolation (1.046626ms)
+✔ NED to render transform is right handed and preserves physical axes (0.398244ms)
+✔ interpolation uses quaternion shortest path, handles bounds and missing channels (0.169236ms)
+✔ reject malformed, nonfinite and out of order recordings (0.444341ms)
+✔ thermal marker follows NED settings and animates only with simulation time (4.920937ms)
+✔ trail retains chronological bounded history while hidden (1.596834ms)
+✔ trail skips stationary and over-frequent samples and clears on rewind (0.211675ms)
+✔ jittered truth delivery never rewinds aircraft or rotor time (18.491585ms)
+✔ clearing warm-up history starts presentation at the next live frame (0.374109ms)
+✔ truth playback keeps up with 2× simulation speed (8.648058ms)
+✔ truth playback keeps up with 4× simulation speed (18.627109ms)
+✔ truth playback keeps up with 8× simulation speed (10.187161ms)
+✔ explicit gust seeds reproduce sequences and reset accumulated gust state (2.918805ms)
+✔ wind bearing, thermal centre and radius use NED consistently (0.478104ms)
+✔ gusts are repeatable, correlated, zero-mean and turn off completely (88.372014ms)
+✔ wind truth displays from-bearing and NED vertical sign (0.98974ms)
+ℹ tests 56
+ℹ suites 0
+ℹ pass 56
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1990.729027

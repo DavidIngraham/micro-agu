@@ -1,0 +1,75 @@
+
+> microagu-viewer@0.1.0 build
+> npm run check:boundaries && tsc --noEmit && vite build
+
+
+> microagu-viewer@0.1.0 check:boundaries
+> tsx tools/build/check-boundaries.ts
+
+Workspace dependency boundaries verified
+vite v6.4.4 building for production...
+transforming...
+✓ 110 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/lqi-explainer.html                  0.77 kB │ gzip:   0.40 kB
+dist/pitch-fbd.html                      1.18 kB │ gzip:   0.50 kB
+dist/pitch-comparison.html               1.64 kB │ gzip:   0.71 kB
+dist/altitude-comparison.html            1.65 kB │ gzip:   0.71 kB
+dist/simulation-replay.html              1.67 kB │ gzip:   0.66 kB
+dist/flight-replay.html                  1.82 kB │ gzip:   0.73 kB
+dist/landing.html                        2.41 kB │ gzip:   0.96 kB
+dist/trim-launch.html                    3.19 kB │ gzip:   1.18 kB
+dist/lqi-development.html                3.28 kB │ gzip:   1.39 kB
+dist/rigging-comparison.html             3.75 kB │ gzip:   1.76 kB
+dist/controller-comparison.html          3.91 kB │ gzip:   1.80 kB
+dist/canopy-panels.html                  4.19 kB │ gzip:   1.68 kB
+dist/joint-tour.html                     4.45 kB │ gzip:   1.61 kB
+dist/index.html                          5.33 kB │ gzip:   1.77 kB
+dist/joint-mechanics.html                5.54 kB │ gzip:   1.96 kB
+dist/.vite/manifest.json                 9.75 kB │ gzip:   1.16 kB
+dist/simulator.html                     15.12 kB │ gzip:   4.45 kB
+dist/assets/worker-Cr4e5ClN.js          40.31 kB
+dist/assets/index-SxPVPUhV.css           1.12 kB │ gzip:   0.56 kB
+dist/assets/index-OJUuwWe7.css           1.92 kB │ gzip:   0.88 kB
+dist/assets/index-smnZ1u14.css           2.00 kB │ gzip:   0.93 kB
+dist/assets/index-CY2J6cW6.css           2.70 kB │ gzip:   1.06 kB
+dist/assets/index-BwZ4ANLs.css           2.77 kB │ gzip:   1.10 kB
+dist/assets/index-CP7ewW92.css          12.82 kB │ gzip:   3.55 kB
+dist/assets/resources-CLT38jrK.js        0.56 kB │ gzip:   0.36 kB
+dist/assets/recordings-DzXGklQC.js       0.89 kB │ gzip:   0.45 kB
+dist/assets/playback-AjlpAjXB.js         1.17 kB │ gzip:   0.59 kB
+dist/assets/recordings-Be7AWOl4.js       1.33 kB │ gzip:   0.71 kB
+dist/assets/layout-CEejV_Yp.js           1.42 kB │ gzip:   0.83 kB
+dist/assets/profile-C2GNkWIb.js          1.66 kB │ gzip:   0.82 kB
+dist/assets/math-P8kuyxM6.js             1.73 kB │ gzip:   0.68 kB
+dist/assets/index-f6ihNNI-.js            2.07 kB │ gzip:   1.09 kB
+dist/assets/controls-BQMtqnA1.js         2.71 kB │ gzip:   1.27 kB
+dist/assets/mechanisms-DIAw-O97.js       2.86 kB │ gzip:   1.34 kB
+dist/assets/mount-BvcLTPXR.js            2.92 kB │ gzip:   1.21 kB
+dist/assets/index-DnMSDhk6.js            4.22 kB │ gzip:   1.71 kB
+dist/assets/paraglider-C2jvmhs1.js       4.40 kB │ gzip:   2.10 kB
+dist/assets/index-8tE3aBUu.js            5.41 kB │ gzip:   2.53 kB
+dist/assets/index-8Zs23Z4k.js            6.03 kB │ gzip:   2.88 kB
+dist/assets/index-Czyv49cU.js            6.35 kB │ gzip:   2.99 kB
+dist/assets/index-BDGoCZ5m.js            6.95 kB │ gzip:   3.27 kB
+dist/assets/flight-view-B4PXprLS.js      8.47 kB │ gzip:   3.43 kB
+dist/assets/index-DQ3coS1T.js            8.56 kB │ gzip:   3.79 kB
+dist/assets/index-Bgfzi1kh.js            9.08 kB │ gzip:   4.01 kB
+dist/assets/index-B6_o2TPh.js           10.37 kB │ gzip:   4.73 kB
+dist/assets/index-C-JMIO2h.js           10.90 kB │ gzip:   4.40 kB
+dist/assets/index-DiWwyf1x.js           11.81 kB │ gzip:   5.23 kB
+dist/assets/index-CbGgJ3HI.js           12.24 kB │ gzip:   5.15 kB
+dist/assets/index-CN-Wre4c.js           13.49 kB │ gzip:   5.93 kB
+dist/assets/OrbitControls-C-hK4gJv.js   19.10 kB │ gzip:   4.33 kB
+dist/assets/index-D6uaWpsD.js           27.73 kB │ gzip:  10.37 kB
+dist/assets/models-3k0QNuOt.js          45.66 kB │ gzip:  13.52 kB
+dist/assets/index-CQZofxyv.js           84.73 kB │ gzip:  32.12 kB
+dist/assets/index-Daa2crIM.js          175.12 kB │ gzip:  34.41 kB
+dist/assets/three-DuzGcQra.js          538.05 kB │ gzip: 136.84 kB
+
+(!) Some chunks are larger than 500 kB after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+✓ built in 1.76s

@@ -117,6 +117,15 @@ set nominal travel, application rate and remaining differential travel.
 Defaults in firmware leave these additional features disabled. This is still
 simulation validation, not a flight-qualified landing tune.
 
+The browser sets `LAND_FLARE_AIM=0`: the path planner retains approach sink
+instead of assuming the fixed-wing reduction toward `TECS_LAND_SINK`. The
+power-off and brake trigger heights remain 3 m and 1.3 m. The packaged EKF's
+sideslip wind-update threshold is 3 m/s to admit this aircraft's approach speed;
+wind-state initialization and observation noise are unchanged. See the
+[landing calibration comparison](../research/active/landing-release-2026-10-24/RESULTS.md)
+for the measured accuracy improvement, per-condition regressions and remaining
+wind/contact-model limitations.
+
 Height follows JSON lidar → AP rangefinder → EKF terrain estimate → AHRS,
 consumed directly in firmware. A valid terrain estimate is preferred for the
 opted-in paraglider landing; unavailable terrain retains ArduPlane's normal

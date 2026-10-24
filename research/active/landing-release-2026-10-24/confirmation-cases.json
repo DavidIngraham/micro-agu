@@ -1,0 +1,64 @@
+[
+  {
+    "windNED": [
+      1.5,
+      0,
+      0
+    ],
+    "fixedMission": true,
+    "name": "tail",
+    "id": "published-tail-seed173",
+    "firmware": "./firmware/published/arduplane.js",
+    "lidar": {
+      "seed": 173
+    }
+  },
+  {
+    "windNED": [
+      1.5,
+      0,
+      0
+    ],
+    "fixedMission": true,
+    "name": "tail",
+    "id": "candidate-tail-seed173",
+    "firmware": "./firmware/candidate/arduplane.js",
+    "parameters": {
+      "LAND_FLARE_AIM": 0
+    },
+    "lidar": {
+      "seed": 173
+    }
+  },
+  {
+    "windNED": [
+      1.5,
+      0,
+      0
+    ],
+    "fixedMission": true,
+    "name": "tail",
+    "id": "published-tail-seed273",
+    "firmware": "./firmware/published/arduplane.js",
+    "lidar": {
+      "seed": 273
+    }
+  },
+  {
+    "windNED": [
+      1.5,
+      0,
+      0
+    ],
+    "fixedMission": true,
+    "name": "tail",
+    "id": "candidate-tail-seed273",
+    "firmware": "./firmware/candidate/arduplane.js",
+    "parameters": {
+      "LAND_FLARE_AIM": 0
+    },
+    "lidar": {
+      "seed": 273
+    }
+  }
+]

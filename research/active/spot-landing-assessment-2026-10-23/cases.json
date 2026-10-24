@@ -1,0 +1,81 @@
+[
+  {
+    "id": "mission-calm",
+    "fixedMission": true
+  },
+  {
+    "id": "mission-default-weather",
+    "fixedMission": true,
+    "turbulence": 0.2,
+    "weather": {
+      "turbulenceModel": "dryden",
+      "gustLength": 20,
+      "verticalRatio": 0.5,
+      "thermalStrength": 1.5,
+      "thermalRadius": 60,
+      "thermalNorth": 300,
+      "thermalEast": 0
+    }
+  },
+  {
+    "id": "mission-lower-final",
+    "fixedMission": true,
+    "parameters": {
+      "LAND_FLARE_ALT": 1.5
+    }
+  },
+  {
+    "id": "mission-lower-brake",
+    "fixedMission": true,
+    "parameters": {
+      "PG_FLARE_HGT": 0.8
+    }
+  },
+  {
+    "id": "mission-sink-plan",
+    "fixedMission": true,
+    "parameters": {
+      "TECS_LAND_SINK": 1.4
+    }
+  },
+  {
+    "id": "mission-no-aim-offset",
+    "fixedMission": true,
+    "parameters": {
+      "LAND_FLARE_AIM": 0
+    }
+  },
+  {
+    "id": "mission-no-aim-repeat",
+    "fixedMission": true,
+    "parameters": {
+      "LAND_FLARE_AIM": 0
+    }
+  },
+  {
+    "id": "mission-no-aim-weather",
+    "fixedMission": true,
+    "turbulence": 0.2,
+    "weather": {
+      "thermalStrength": 1.5,
+      "thermalRadius": 60,
+      "thermalNorth": 300,
+      "turbulenceModel": "dryden",
+      "gustLength": 20,
+      "verticalRatio": 0.5,
+      "thermalEast": 0
+    },
+    "parameters": {
+      "LAND_FLARE_AIM": 0
+    }
+  },
+  {
+    "id": "straight-default"
+  },
+  {
+    "id": "straight-no-aim",
+    "parameters": {
+      "LAND_FLARE_AIM": 0
+    }
+  }
+]

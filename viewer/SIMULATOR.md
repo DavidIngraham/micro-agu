@@ -168,6 +168,11 @@ The simulator is a development aid, not a validated flight-training model.
 ## Build and verify
 
 The exact source revision and SHA-256 hashes are in `assets/runtime/build.json`.
+For the current landing release, that manifest's `controller_source_patch`
+identifies the complete `lqi-file-pipeline.patch` and its base revision. It
+supersedes the historical longitudinal/filter patch recipes below. The selected
+aircraft bundle and staged runtime are checked together by
+`python3 tools/check_repository.py` from the repository root.
 Firmware source is public in the ArduPilot fork; the external physics source is
 in this repository's `simulation/` directory. Project binaries and source
 are GPL-3.0-or-later; Rust dependencies retain their own licenses. `assets/runtime/COPYING.txt` accompanies the deployed build.

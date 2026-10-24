@@ -1,0 +1,571 @@
+[
+  {
+    "id": "mission-calm",
+    "spec": {
+      "id": "mission-calm",
+      "fixedMission": true
+    },
+    "spot_error_m": 10.505047321464454,
+    "along_error_m": -10.503982275391483,
+    "cross_error_m": 0.1495847066684044,
+    "sink_m_s": 0.8838973781667167,
+    "ground_speed_m_s": 2.785001780435627,
+    "contact_height_m": 0.1200876318766261,
+    "transitions": {
+      "approach": {
+        "time_s": 292.10499999973433,
+        "truth_height_m": 29.782290199529417,
+        "north_m": -208.38426521709474,
+        "east_m": -0.054731007887480566,
+        "sink_m_s": 0.005773680350256423,
+        "hagl_m": 29.791807174682617,
+        "time_to_contact_s": 47.284999999956995
+      },
+      "final": {
+        "time_s": 337.15499999969336,
+        "truth_height_m": 2.883150021406898,
+        "north_m": -18.995272367086375,
+        "east_m": 0.06382940300701787,
+        "sink_m_s": 0.6592542306575543,
+        "hagl_m": 2.965811014175415,
+        "time_to_contact_s": 2.2349999999979673
+      },
+      "flare": {
+        "time_s": 338.654999999692,
+        "truth_height_m": 0.9744749766103167,
+        "north_m": -13.232117664217762,
+        "east_m": 0.10149257803542226,
+        "sink_m_s": 1.7515673361224817,
+        "hagl_m": 1.1717904806137085,
+        "time_to_contact_s": 0.7349999999993315
+      }
+    },
+    "modes": [
+      10
+    ],
+    "final_phase": "landed",
+    "flare_logs": [
+      {
+        "time": 475.6596781609924,
+        "text": "Flare 3.0m sink=0.65 speed=4.2 dist=19.3"
+      }
+    ],
+    "result_sha256": "291e69e600298b38e185a54dd9a813aa3ae0662c4ec3f3bc469129e87063f43d"
+  },
+  {
+    "id": "mission-default-weather",
+    "spec": {
+      "id": "mission-default-weather",
+      "fixedMission": true,
+      "turbulence": 0.2,
+      "weather": {
+        "turbulenceModel": "dryden",
+        "gustLength": 20,
+        "verticalRatio": 0.5,
+        "thermalStrength": 1.5,
+        "thermalRadius": 60,
+        "thermalNorth": 300,
+        "thermalEast": 0
+      }
+    },
+    "spot_error_m": 10.009945334707115,
+    "along_error_m": -10.002053292210999,
+    "cross_error_m": 0.39741105117481285,
+    "sink_m_s": 0.922841314168082,
+    "ground_speed_m_s": 2.556637117795865,
+    "contact_height_m": 0.12341666123129827,
+    "transitions": {
+      "approach": {
+        "time_s": 292.9049999997336,
+        "truth_height_m": 29.807202920047608,
+        "north_m": -208.13909427285296,
+        "east_m": 0.25914716234887936,
+        "sink_m_s": 0.26068834319957473,
+        "hagl_m": 29.863874435424805,
+        "time_to_contact_s": 47.19999999995707
+      },
+      "final": {
+        "time_s": 337.80499999969277,
+        "truth_height_m": 2.8820628245555695,
+        "north_m": -18.571367907330025,
+        "east_m": 0.2102528108832972,
+        "sink_m_s": 0.7810444692100065,
+        "hagl_m": 2.976198196411133,
+        "time_to_contact_s": 2.299999999997908
+      },
+      "flare": {
+        "time_s": 339.3049999996914,
+        "truth_height_m": 1.0124911489585093,
+        "north_m": -12.820403527498797,
+        "east_m": 0.28020123336651725,
+        "sink_m_s": 1.6685375462299827,
+        "hagl_m": 1.1892489194869995,
+        "time_to_contact_s": 0.7999999999992724
+      }
+    },
+    "modes": [
+      10
+    ],
+    "final_phase": "landed",
+    "flare_logs": [
+      {
+        "time": 476.5796781609916,
+        "text": "Flare 3.0m sink=0.82 speed=4.3 dist=18.8"
+      }
+    ],
+    "result_sha256": "de4528de7cf71793015e49e774a25d873be81bc42d8f707bdca8cd3d3a7dd018"
+  },
+  {
+    "id": "mission-lower-final",
+    "spec": {
+      "id": "mission-lower-final",
+      "fixedMission": true,
+      "parameters": {
+        "LAND_FLARE_ALT": 1.5
+      }
+    },
+    "spot_error_m": 0.24578511955861404,
+    "along_error_m": -0.23199086352985765,
+    "cross_error_m": 0.08118229015686337,
+    "sink_m_s": 1.3960626910778833,
+    "ground_speed_m_s": 2.232030673194556,
+    "contact_height_m": 0.12060608096087813,
+    "transitions": {
+      "approach": {
+        "time_s": 292.2549999997342,
+        "truth_height_m": 29.813952282179102,
+        "north_m": -208.4569836333839,
+        "east_m": -0.046483648152773456,
+        "sink_m_s": 0.0007116474978116124,
+        "hagl_m": 29.822891235351562,
+        "time_to_contact_s": 50.03499999995449
+      },
+      "final": {
+        "time_s": 340.90499999968995,
+        "truth_height_m": 1.4143761834255812,
+        "north_m": -4.622961855848376,
+        "east_m": 0.03985485048801947,
+        "sink_m_s": 0.6377821935796554,
+        "hagl_m": 1.4652955532073975,
+        "time_to_contact_s": 1.3849999999987403
+      },
+      "flare": {
+        "time_s": 341.2049999996897,
+        "truth_height_m": 1.2108559618127177,
+        "north_m": -3.4059638511966055,
+        "east_m": 0.037489656653487656,
+        "sink_m_s": 0.7548480989177935,
+        "hagl_m": 1.2726584672927856,
+        "time_to_contact_s": 1.0849999999990132
+      }
+    },
+    "modes": [
+      10
+    ],
+    "final_phase": "landed",
+    "flare_logs": [
+      {
+        "time": 479.26467816098915,
+        "text": "Flare 1.5m sink=0.63 speed=4.2 dist=4.8"
+      }
+    ],
+    "result_sha256": "8f7a3b19c984a9eea26d524d54025d0042d7a2a636b8adaf57e7f852fb553040"
+  },
+  {
+    "id": "mission-lower-brake",
+    "spec": {
+      "id": "mission-lower-brake",
+      "fixedMission": true,
+      "parameters": {
+        "PG_FLARE_HGT": 0.8
+      }
+    },
+    "spot_error_m": 10.610281269884814,
+    "along_error_m": -10.609619980383211,
+    "cross_error_m": 0.11845884484430358,
+    "sink_m_s": 1.1924691128986304,
+    "ground_speed_m_s": 4.258899100767668,
+    "contact_height_m": 0.12477320250166596,
+    "transitions": {
+      "approach": {
+        "time_s": 292.50499999973397,
+        "truth_height_m": 29.81566046167689,
+        "north_m": -207.50921064796827,
+        "east_m": -0.03033720594214878,
+        "sink_m_s": 0.009358161281040386,
+        "hagl_m": 29.823867797851562,
+        "time_to_contact_s": 46.92499999995732
+      },
+      "final": {
+        "time_s": 337.40499999969313,
+        "truth_height_m": 2.868902122373724,
+        "north_m": -18.67596567425112,
+        "east_m": 0.051056753543198906,
+        "sink_m_s": 0.6591767287647672,
+        "hagl_m": 2.941574811935425,
+        "time_to_contact_s": 2.0249999999981583
+      },
+      "flare": {
+        "time_s": 339.2049999996915,
+        "truth_height_m": 0.4463373126893924,
+        "north_m": -11.605014663748378,
+        "east_m": 0.10518520644892596,
+        "sink_m_s": 1.6362933217521662,
+        "hagl_m": 0.6454935073852539,
+        "time_to_contact_s": 0.22499999999979536
+      }
+    },
+    "modes": [
+      10
+    ],
+    "final_phase": "landed",
+    "flare_logs": [
+      {
+        "time": 475.94967816099216,
+        "text": "Flare 2.9m sink=0.65 speed=4.2 dist=18.9"
+      }
+    ],
+    "result_sha256": "9727d006e3f2978983d4fa43902fd029ef7c462b7f8450a8901d66b8f6973f92"
+  },
+  {
+    "id": "mission-sink-plan",
+    "spec": {
+      "id": "mission-sink-plan",
+      "fixedMission": true,
+      "parameters": {
+        "TECS_LAND_SINK": 1.4
+      }
+    },
+    "spot_error_m": 5.748620106435682,
+    "along_error_m": 5.7471588842757155,
+    "cross_error_m": 0.12960666266557075,
+    "sink_m_s": 0.8763493512105016,
+    "ground_speed_m_s": 2.7988208071209084,
+    "contact_height_m": 0.12227620704342004,
+    "transitions": {
+      "approach": {
+        "time_s": 292.20499999973424,
+        "truth_height_m": 29.81164187392417,
+        "north_m": -207.99885820917714,
+        "east_m": -0.04172197240636723,
+        "sink_m_s": -0.00034041293917853464,
+        "hagl_m": 29.821075439453125,
+        "time_to_contact_s": 51.15999999995347
+      },
+      "final": {
+        "time_s": 341.10499999968977,
+        "truth_height_m": 2.906445272695194,
+        "north_m": -2.8236179525642697,
+        "east_m": 0.044309111593463124,
+        "sink_m_s": 0.6033386063154998,
+        "hagl_m": 2.9775125980377197,
+        "time_to_contact_s": 2.2599999999979445
+      },
+      "flare": {
+        "time_s": 342.6049999996884,
+        "truth_height_m": 1.0275803267586632,
+        "north_m": 2.8998802529131003,
+        "east_m": 0.0769429988483284,
+        "sink_m_s": 1.8031569500681142,
+        "hagl_m": 1.2164188623428345,
+        "time_to_contact_s": 0.7599999999993088
+      }
+    },
+    "modes": [
+      10
+    ],
+    "final_phase": "landed",
+    "flare_logs": [
+      {
+        "time": 479.459678160989,
+        "text": "Flare 3.0m sink=0.60 speed=4.2 dist=3.1"
+      }
+    ],
+    "result_sha256": "12e2f131193e30c090e48e6d67da9558f1ef52f950b41a3fd377387240e5bd86"
+  },
+  {
+    "id": "mission-no-aim-offset",
+    "spec": {
+      "id": "mission-no-aim-offset",
+      "fixedMission": true,
+      "parameters": {
+        "LAND_FLARE_AIM": 0
+      }
+    },
+    "spot_error_m": 0.2870132769093152,
+    "along_error_m": 0.2593461549275267,
+    "cross_error_m": 0.12294792819128984,
+    "sink_m_s": 0.8889821639711243,
+    "ground_speed_m_s": 2.7743014670907518,
+    "contact_height_m": 0.12217758901680642,
+    "transitions": {
+      "approach": {
+        "time_s": 292.3549999997341,
+        "truth_height_m": 30.106090602031202,
+        "north_m": -208.33673217772915,
+        "east_m": -0.04618673615055302,
+        "sink_m_s": 0.0035305718960362002,
+        "hagl_m": 30.114871978759766,
+        "time_to_contact_s": 50.05999999995447
+      },
+      "final": {
+        "time_s": 340.15499999969063,
+        "truth_height_m": 2.8987630116048906,
+        "north_m": -8.30570492541043,
+        "east_m": 0.02401090455169446,
+        "sink_m_s": 0.6255100225894319,
+        "hagl_m": 2.9676883220672607,
+        "time_to_contact_s": 2.2599999999979445
+      },
+      "flare": {
+        "time_s": 341.65499999968927,
+        "truth_height_m": 1.0198581900895012,
+        "north_m": -2.5666740615759256,
+        "east_m": 0.062483662379955916,
+        "sink_m_s": 1.7854347397479504,
+        "hagl_m": 1.1845800876617432,
+        "time_to_contact_s": 0.7599999999993088
+      }
+    },
+    "modes": [
+      10
+    ],
+    "final_phase": "landed",
+    "flare_logs": [
+      {
+        "time": 478.8496781609895,
+        "text": "Flare 3.0m sink=0.62 speed=4.2 dist=8.6"
+      }
+    ],
+    "result_sha256": "1976df3138f00a41c94515f42319bd8a764ed19a4f52421a095a3a52afbbc8de"
+  },
+  {
+    "id": "mission-no-aim-repeat",
+    "spec": {
+      "id": "mission-no-aim-repeat",
+      "fixedMission": true,
+      "parameters": {
+        "LAND_FLARE_AIM": 0
+      }
+    },
+    "spot_error_m": 1.8440069687327338,
+    "along_error_m": -1.8384861567312984,
+    "cross_error_m": 0.14258454419138428,
+    "sink_m_s": 0.8784013394982791,
+    "ground_speed_m_s": 2.8169771872881353,
+    "contact_height_m": 0.12225244022606963,
+    "transitions": {
+      "approach": {
+        "time_s": 292.1549999997343,
+        "truth_height_m": 29.780310080014715,
+        "north_m": -208.1140801552494,
+        "east_m": -0.04644038316918282,
+        "sink_m_s": 0.003732963410133618,
+        "hagl_m": 29.7884464263916,
+        "time_to_contact_s": 49.18999999995526
+      },
+      "final": {
+        "time_s": 339.1049999996916,
+        "truth_height_m": 2.8744582918881187,
+        "north_m": -10.350383042327316,
+        "east_m": 0.06454252424837088,
+        "sink_m_s": 0.6271977241308907,
+        "hagl_m": 2.9564433097839355,
+        "time_to_contact_s": 2.2399999999979627
+      },
+      "flare": {
+        "time_s": 340.6049999996902,
+        "truth_height_m": 1.0026104328471344,
+        "north_m": -4.604330131892819,
+        "east_m": 0.09409251403349506,
+        "sink_m_s": 1.7795147052078497,
+        "hagl_m": 1.1646422147750854,
+        "time_to_contact_s": 0.739999999999327
+      }
+    },
+    "modes": [
+      10
+    ],
+    "final_phase": "landed",
+    "flare_logs": [
+      {
+        "time": 477.5646781609907,
+        "text": "Flare 3.0m sink=0.62 speed=4.2 dist=10.6"
+      }
+    ],
+    "result_sha256": "3d0278acddc34af5982bad48bc9f163a5203ffb98520073ae9a25d68ff79ef8f"
+  },
+  {
+    "id": "mission-no-aim-weather",
+    "spec": {
+      "id": "mission-no-aim-weather",
+      "fixedMission": true,
+      "turbulence": 0.2,
+      "weather": {
+        "thermalStrength": 1.5,
+        "thermalRadius": 60,
+        "thermalNorth": 300,
+        "turbulenceModel": "dryden",
+        "gustLength": 20,
+        "verticalRatio": 0.5,
+        "thermalEast": 0
+      },
+      "parameters": {
+        "LAND_FLARE_AIM": 0
+      }
+    },
+    "spot_error_m": 2.2545362271896487,
+    "along_error_m": -2.2216505275529914,
+    "cross_error_m": 0.38366982306933045,
+    "sink_m_s": 0.9727162483291485,
+    "ground_speed_m_s": 3.1969190586624996,
+    "contact_height_m": 0.12083592700323052,
+    "transitions": {
+      "approach": {
+        "time_s": 292.65499999973383,
+        "truth_height_m": 29.90379891731857,
+        "north_m": -208.98900402362372,
+        "east_m": 0.2599688574040826,
+        "sink_m_s": 0.15340549450663157,
+        "hagl_m": 29.909616470336914,
+        "time_to_contact_s": 49.16999999995528
+      },
+      "final": {
+        "time_s": 339.70499999969104,
+        "truth_height_m": 2.885602827574348,
+        "north_m": -10.391782150456029,
+        "east_m": 0.18957879199653757,
+        "sink_m_s": 0.6062924275855781,
+        "hagl_m": 2.982837200164795,
+        "time_to_contact_s": 2.119999999998072
+      },
+      "flare": {
+        "time_s": 341.2049999996897,
+        "truth_height_m": 0.9611183077377672,
+        "north_m": -4.674528050992367,
+        "east_m": 0.3083118688748451,
+        "sink_m_s": 1.8404256329788888,
+        "hagl_m": 1.176867127418518,
+        "time_to_contact_s": 0.6199999999994361
+      }
+    },
+    "modes": [
+      10
+    ],
+    "final_phase": "landed",
+    "flare_logs": [
+      {
+        "time": 478.16467816099015,
+        "text": "Flare 3.0m sink=0.62 speed=4.1 dist=10.7"
+      }
+    ],
+    "result_sha256": "16000837653d108ee445837c398f92a55ca6291f3c2d3df89b0d47cfb3b25b8a"
+  },
+  {
+    "id": "straight-default",
+    "spec": {
+      "id": "straight-default"
+    },
+    "spot_error_m": 5.451449196688066,
+    "along_error_m": -5.444643923976072,
+    "cross_error_m": 0.2723066014282389,
+    "sink_m_s": 0.9590478890993324,
+    "ground_speed_m_s": 2.614143340284757,
+    "contact_height_m": 0.12156368004191706,
+    "transitions": {
+      "approach": {
+        "time_s": 6.054999999994493,
+        "truth_height_m": 60.0624255707819,
+        "north_m": 450.4358826513137,
+        "east_m": -127.86605072485004,
+        "sink_m_s": -0.0017661204705401222,
+        "hagl_m": -1,
+        "time_to_contact_s": 75.23999999993157
+      },
+      "final": {
+        "time_s": 79.00499999992815,
+        "truth_height_m": 2.8719546606672615,
+        "north_m": 751.5580062212156,
+        "east_m": -221.50777161517541,
+        "sink_m_s": 0.8144108246876312,
+        "hagl_m": 2.979313611984253,
+        "time_to_contact_s": 2.2899999999979173
+      },
+      "flare": {
+        "time_s": 80.50499999992678,
+        "truth_height_m": 1.004818533819502,
+        "north_m": 757.2696801277054,
+        "east_m": -223.24395866702025,
+        "sink_m_s": 1.615969848553592,
+        "hagl_m": 1.1979573965072632,
+        "time_to_contact_s": 0.7899999999992815
+      }
+    },
+    "modes": [
+      10
+    ],
+    "final_phase": "landed",
+    "flare_logs": [
+      {
+        "time": 217.06967816122759,
+        "text": "Flare 3.0m sink=0.81 speed=4.3 dist=14.2"
+      }
+    ],
+    "result_sha256": "b4988262312dc0d909dffc8e9650b06313cb47e7b7d082eaf5f8fd3da62255d8"
+  },
+  {
+    "id": "straight-no-aim",
+    "spec": {
+      "id": "straight-no-aim",
+      "parameters": {
+        "LAND_FLARE_AIM": 0
+      }
+    },
+    "spot_error_m": 3.375220560767257,
+    "along_error_m": 3.3374101026467446,
+    "cross_error_m": 0.5037932518181281,
+    "sink_m_s": 0.952786426763366,
+    "ground_speed_m_s": 2.637133506758532,
+    "contact_height_m": 0.12212154872754657,
+    "transitions": {
+      "approach": {
+        "time_s": 5.854999999994675,
+        "truth_height_m": 60.07533396181971,
+        "north_m": 454.7452687848264,
+        "east_m": -114.01197774202126,
+        "sink_m_s": 0.002059861327696754,
+        "hagl_m": -1,
+        "time_to_contact_s": 77.41499999992959
+      },
+      "final": {
+        "time_s": 80.95499999992637,
+        "truth_height_m": 2.8857488355614485,
+        "north_m": 768.0254479339959,
+        "east_m": -200.41034397424156,
+        "sink_m_s": 0.7994620569511712,
+        "hagl_m": 2.9532511234283447,
+        "time_to_contact_s": 2.3149999999978945
+      },
+      "flare": {
+        "time_s": 82.50499999992496,
+        "truth_height_m": 0.9763071842162437,
+        "north_m": 773.9853617003146,
+        "east_m": -202.01837067576423,
+        "sink_m_s": 1.6107576033361486,
+        "hagl_m": 1.1899665594100952,
+        "time_to_contact_s": 0.7649999999993042
+      }
+    },
+    "modes": [
+      10
+    ],
+    "final_phase": "landed",
+    "flare_logs": [
+      {
+        "time": 219.2496781612256,
+        "text": "Flare 3.0m sink=0.79 speed=4.3 dist=5.7"
+      }
+    ],
+    "result_sha256": "7f246a9d0740bfb609792b3e5b649220bd662c5a86e322b105b1815662490a7e"
+  }
+]

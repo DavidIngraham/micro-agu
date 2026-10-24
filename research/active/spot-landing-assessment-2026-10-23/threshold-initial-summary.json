@@ -1,0 +1,774 @@
+[
+  {
+    "id": "threshold-5m-calm",
+    "spec": {
+      "id": "threshold-5m-calm",
+      "fixedMission": true,
+      "firmware": "./threshold-firmware/5m/arduplane.js"
+    },
+    "window_s": 20,
+    "failure": null,
+    "final_phase": "landed",
+    "modes": [
+      10
+    ],
+    "truth_mean_ned_m_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "estimate_mean_ned_m_s": [
+      -0.377765246244104,
+      0.40980820645529653,
+      0.0
+    ],
+    "wind_bias_ned_m_s": [
+      -0.377765246244104,
+      0.40980820645529653,
+      0.0
+    ],
+    "estimate_span_ned_m_s": [
+      0.0004953742666380379,
+      2.36758166452522e-05,
+      0
+    ],
+    "reconstructed_forward_airspeed_range_m_s": [
+      4.485323846315801,
+      4.507756276724077
+    ],
+    "horizontal_wind_rmse_m_s": 0.5573592813368298,
+    "north_wind_rmse_m_s": 0.3777652741700053,
+    "east_wind_rmse_m_s": 0.4098082065107629,
+    "vertical_wind_rmse_m_s": 0.0,
+    "ground_speed_rmse_m_s": 0.015293904033050644,
+    "max_ground_speed_error_m_s": 0.01989778260155539,
+    "approach_lqi_fraction": 1.0,
+    "along_contact_error_m": -10.485341677321143,
+    "cross_contact_error_m": 0.15169949079091558,
+    "contact_sink_m_s": 0.900888378252392,
+    "contact_ground_speed_m_s": 2.7547882177515683,
+    "brake_flare_observed_before_contact": true,
+    "seconds_from_final_to_contact": 2.2499999999979536,
+    "remaining_travel_m": 8.528427159066766,
+    "final_ground_speed_m_s": 4.174155090372889,
+    "parameters": {
+      "ARSPD_TYPE": 0,
+      "ARSPD_USE": 0,
+      "AHRS_EKF_TYPE": 3,
+      "EK3_WIND_P_NSE": 0.10000000149011612,
+      "EK3_BETA_MASK": 0,
+      "EK3_EAS_I_GATE": 400
+    },
+    "result_sha256": "2bb5a2079b7ba9e9657955e7585924792e2ac143552dc0acbfbbbb13d1457008"
+  },
+  {
+    "id": "threshold-3m-calm",
+    "spec": {
+      "id": "threshold-3m-calm",
+      "fixedMission": true,
+      "firmware": "./threshold-firmware/3m/arduplane.js"
+    },
+    "window_s": 20,
+    "failure": null,
+    "final_phase": "landed",
+    "modes": [
+      10
+    ],
+    "truth_mean_ned_m_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "estimate_mean_ned_m_s": [
+      -0.05088382432452846,
+      -0.022229408232399,
+      0.0
+    ],
+    "wind_bias_ned_m_s": [
+      -0.05088382432452846,
+      -0.022229408232399,
+      0.0
+    ],
+    "estimate_span_ned_m_s": [
+      0.0003133493714056121,
+      0.0027768724848175295,
+      0
+    ],
+    "reconstructed_forward_airspeed_range_m_s": [
+      4.163377674509722,
+      4.175112360294426
+    ],
+    "horizontal_wind_rmse_m_s": 0.05553307303163318,
+    "north_wind_rmse_m_s": 0.05088390834500315,
+    "east_wind_rmse_m_s": 0.022242978035191763,
+    "vertical_wind_rmse_m_s": 0.0,
+    "ground_speed_rmse_m_s": 0.014895117980358539,
+    "max_ground_speed_error_m_s": 0.020744971984018257,
+    "approach_lqi_fraction": 1.0,
+    "along_contact_error_m": -10.297287197374963,
+    "cross_contact_error_m": 0.1376528263473684,
+    "contact_sink_m_s": 0.8815782682485707,
+    "contact_ground_speed_m_s": 2.8229645307791604,
+    "brake_flare_observed_before_contact": true,
+    "seconds_from_final_to_contact": 2.2499999999979536,
+    "remaining_travel_m": 8.569335014741986,
+    "final_ground_speed_m_s": 4.182204572102141,
+    "parameters": {
+      "ARSPD_TYPE": 0,
+      "ARSPD_USE": 0,
+      "AHRS_EKF_TYPE": 3,
+      "EK3_WIND_P_NSE": 0.10000000149011612,
+      "EK3_BETA_MASK": 0,
+      "EK3_EAS_I_GATE": 400
+    },
+    "result_sha256": "612d8c66cd84cba4011ff5856e5d1300834e31e21ef9e94c43d66b6cbcee3c65"
+  },
+  {
+    "id": "threshold-5m-weather",
+    "spec": {
+      "id": "threshold-5m-weather",
+      "fixedMission": true,
+      "turbulence": 0.2,
+      "weather": {
+        "turbulenceModel": "dryden",
+        "gustLength": 20,
+        "verticalRatio": 0.5,
+        "thermalStrength": 1.5,
+        "thermalRadius": 60,
+        "thermalNorth": 300,
+        "thermalEast": 0
+      },
+      "firmware": "./threshold-firmware/5m/arduplane.js"
+    },
+    "window_s": 20,
+    "failure": null,
+    "final_phase": "landed",
+    "modes": [
+      10
+    ],
+    "truth_mean_ned_m_s": [
+      -0.1017447130606842,
+      -0.04785029661742777,
+      -0.05555003787866303
+    ],
+    "estimate_mean_ned_m_s": [
+      -0.18865834636028747,
+      -0.10500853739762443,
+      0.0
+    ],
+    "wind_bias_ned_m_s": [
+      -0.08691363329960328,
+      -0.057158240780196656,
+      0.05555003787866303
+    ],
+    "estimate_span_ned_m_s": [
+      0.003263536054732258,
+      0.0066915858369791525,
+      0
+    ],
+    "reconstructed_forward_airspeed_range_m_s": [
+      3.775963064604831,
+      4.686096309673183
+    ],
+    "horizontal_wind_rmse_m_s": 0.4089723602804205,
+    "north_wind_rmse_m_s": 0.2333005937601086,
+    "east_wind_rmse_m_s": 0.33590061688618383,
+    "vertical_wind_rmse_m_s": 0.09317188574840504,
+    "ground_speed_rmse_m_s": 0.018360623934131452,
+    "max_ground_speed_error_m_s": 0.07184729144357771,
+    "approach_lqi_fraction": 1.0,
+    "along_contact_error_m": -9.635988569808664,
+    "cross_contact_error_m": 0.39175104502245234,
+    "contact_sink_m_s": 0.9392170026636015,
+    "contact_ground_speed_m_s": 2.8486031945523798,
+    "brake_flare_observed_before_contact": true,
+    "seconds_from_final_to_contact": 2.2499999999979536,
+    "remaining_travel_m": 8.446014584185889,
+    "final_ground_speed_m_s": 4.14766116870236,
+    "parameters": {
+      "ARSPD_TYPE": 0,
+      "ARSPD_USE": 0,
+      "AHRS_EKF_TYPE": 3,
+      "EK3_WIND_P_NSE": 0.10000000149011612,
+      "EK3_BETA_MASK": 0,
+      "EK3_EAS_I_GATE": 400
+    },
+    "result_sha256": "47ce9684d7372f6098c7ad98f7e77d55bd9f6aac2b8901075f24d42ff849b4ab"
+  },
+  {
+    "id": "threshold-3m-weather",
+    "spec": {
+      "id": "threshold-3m-weather",
+      "fixedMission": true,
+      "turbulence": 0.2,
+      "weather": {
+        "turbulenceModel": "dryden",
+        "gustLength": 20,
+        "verticalRatio": 0.5,
+        "thermalStrength": 1.5,
+        "thermalRadius": 60,
+        "thermalNorth": 300,
+        "thermalEast": 0
+      },
+      "firmware": "./threshold-firmware/3m/arduplane.js"
+    },
+    "window_s": 20,
+    "failure": null,
+    "final_phase": "landed",
+    "modes": [
+      10
+    ],
+    "truth_mean_ned_m_s": [
+      -0.12269623022422843,
+      -0.11650912260867471,
+      -0.023143582154896133
+    ],
+    "estimate_mean_ned_m_s": [
+      0.10019330565912403,
+      -0.08212517863582962,
+      0.0
+    ],
+    "wind_bias_ned_m_s": [
+      0.22288953588335247,
+      0.034383943972845096,
+      0.023143582154896133
+    ],
+    "estimate_span_ned_m_s": [
+      0.2579381168797953,
+      0.6133698933190213,
+      0
+    ],
+    "reconstructed_forward_airspeed_range_m_s": [
+      3.555628977072507,
+      4.3801867543643676
+    ],
+    "horizontal_wind_rmse_m_s": 0.36514385917757597,
+    "north_wind_rmse_m_s": 0.2838230404481092,
+    "east_wind_rmse_m_s": 0.22972705457974343,
+    "vertical_wind_rmse_m_s": 0.0839783155304788,
+    "ground_speed_rmse_m_s": 0.01773084729705357,
+    "max_ground_speed_error_m_s": 0.05419122950605981,
+    "approach_lqi_fraction": 1.0,
+    "along_contact_error_m": -12.506903510124722,
+    "cross_contact_error_m": 0.166518151014172,
+    "contact_sink_m_s": 0.7971143894661644,
+    "contact_ground_speed_m_s": 2.8195844638863288,
+    "brake_flare_observed_before_contact": true,
+    "seconds_from_final_to_contact": 2.164999999998031,
+    "remaining_travel_m": 8.465141355801215,
+    "final_ground_speed_m_s": 4.313067380951885,
+    "parameters": {
+      "ARSPD_TYPE": 0,
+      "ARSPD_USE": 0,
+      "AHRS_EKF_TYPE": 3,
+      "EK3_WIND_P_NSE": 0.10000000149011612,
+      "EK3_BETA_MASK": 0,
+      "EK3_EAS_I_GATE": 400
+    },
+    "result_sha256": "d3612c66239feaf8ec427d79f24d7e63ca5664dbec4db0a320cbc0cfe5384284"
+  },
+  {
+    "id": "threshold-5m-head",
+    "spec": {
+      "id": "threshold-5m-head",
+      "fixedMission": true,
+      "along": -1.5,
+      "firmware": "./threshold-firmware/5m/arduplane.js"
+    },
+    "window_s": 20,
+    "failure": null,
+    "final_phase": "landed",
+    "modes": [
+      10
+    ],
+    "truth_mean_ned_m_s": [
+      -1.4317114242080289,
+      0.44743982588971476,
+      0.0
+    ],
+    "estimate_mean_ned_m_s": [
+      -0.9461880494012472,
+      0.3006231920483144,
+      0.0
+    ],
+    "wind_bias_ned_m_s": [
+      0.4855233748067814,
+      -0.14681663384140037,
+      0.0
+    ],
+    "estimate_span_ned_m_s": [
+      3.3967267783374666e-05,
+      4.9824447888646706e-05,
+      0
+    ],
+    "reconstructed_forward_airspeed_range_m_s": [
+      3.81505717897577,
+      3.825412057219769
+    ],
+    "horizontal_wind_rmse_m_s": 0.5072357161759478,
+    "north_wind_rmse_m_s": 0.48552337490833397,
+    "east_wind_rmse_m_s": 0.14681663455531208,
+    "vertical_wind_rmse_m_s": 0.0,
+    "ground_speed_rmse_m_s": 0.012785796435586347,
+    "max_ground_speed_error_m_s": 0.01683332014826311,
+    "approach_lqi_fraction": 1.0,
+    "along_contact_error_m": -14.016752766143085,
+    "cross_contact_error_m": 0.2432495554229754,
+    "contact_sink_m_s": 0.8595362867618493,
+    "contact_ground_speed_m_s": 1.4239316372692146,
+    "brake_flare_observed_before_contact": true,
+    "seconds_from_final_to_contact": 2.3699999999978445,
+    "remaining_travel_m": 5.624292409024383,
+    "final_ground_speed_m_s": 2.916495469058017,
+    "parameters": {
+      "ARSPD_TYPE": 0,
+      "ARSPD_USE": 0,
+      "AHRS_EKF_TYPE": 3,
+      "EK3_WIND_P_NSE": 0.10000000149011612,
+      "EK3_BETA_MASK": 0,
+      "EK3_EAS_I_GATE": 400
+    },
+    "result_sha256": "5472254d672dc35be8b1c3d7f5464263ae7a8f924187eef2098c867ab67bd0ab"
+  },
+  {
+    "id": "threshold-3m-head",
+    "spec": {
+      "id": "threshold-3m-head",
+      "fixedMission": true,
+      "along": -1.5,
+      "firmware": "./threshold-firmware/3m/arduplane.js"
+    },
+    "window_s": 20,
+    "failure": "No landing confirmation after contact",
+    "final_phase": "flare",
+    "modes": [
+      10
+    ],
+    "truth_mean_ned_m_s": [
+      1.2725810619380398,
+      0.7940638770254259,
+      0.0
+    ],
+    "estimate_mean_ned_m_s": [
+      1.1614542258395706,
+      0.7633413065053485,
+      0.0
+    ],
+    "wind_bias_ned_m_s": [
+      -0.11112683609846923,
+      -0.03072257052007743,
+      0.0
+    ],
+    "estimate_span_ned_m_s": [
+      0.0028843376102922758,
+      0.011177797390363398,
+      0
+    ],
+    "reconstructed_forward_airspeed_range_m_s": [
+      4.223668335933331,
+      4.244551143642295
+    ],
+    "horizontal_wind_rmse_m_s": 0.11532901792368634,
+    "north_wind_rmse_m_s": 0.11112893826586558,
+    "east_wind_rmse_m_s": 0.030840581303590932,
+    "vertical_wind_rmse_m_s": 0.0,
+    "ground_speed_rmse_m_s": 0.009687160778025774,
+    "max_ground_speed_error_m_s": 0.01599872814182124,
+    "approach_lqi_fraction": 1.0,
+    "along_contact_error_m": -5.123849353754216,
+    "cross_contact_error_m": 0.16096764955123533,
+    "contact_sink_m_s": 1.6764048577917803,
+    "contact_ground_speed_m_s": 5.4791817855614,
+    "brake_flare_observed_before_contact": false,
+    "seconds_from_final_to_contact": 1.5899999999985255,
+    "remaining_travel_m": 8.217075672799327,
+    "final_ground_speed_m_s": 5.381572944073007,
+    "parameters": {
+      "ARSPD_TYPE": 0,
+      "ARSPD_USE": 0,
+      "AHRS_EKF_TYPE": 3,
+      "EK3_WIND_P_NSE": 0.10000000149011612,
+      "EK3_BETA_MASK": 0,
+      "EK3_EAS_I_GATE": 400
+    },
+    "result_sha256": "1aa9d0844e3e16af1cc890d5ed659c046b3df11df2946a9f1079fff35689d07c"
+  },
+  {
+    "id": "threshold-5m-cross",
+    "spec": {
+      "id": "threshold-5m-cross",
+      "fixedMission": true,
+      "across": 1.5,
+      "firmware": "./threshold-firmware/5m/arduplane.js"
+    },
+    "window_s": 20,
+    "failure": null,
+    "final_phase": "landed",
+    "modes": [
+      10
+    ],
+    "truth_mean_ned_m_s": [
+      0.4198493878058144,
+      1.440043920010457,
+      0.0
+    ],
+    "estimate_mean_ned_m_s": [
+      0.6291364335092253,
+      2.1505728865908322,
+      0.0
+    ],
+    "wind_bias_ned_m_s": [
+      0.20928704570341097,
+      0.7105289665803756,
+      0.0
+    ],
+    "estimate_span_ned_m_s": [
+      0.0019739527623739983,
+      3.5464215851988e-05,
+      0
+    ],
+    "reconstructed_forward_airspeed_range_m_s": [
+      4.142041298645324,
+      4.156093078844095
+    ],
+    "horizontal_wind_rmse_m_s": 0.7407110212607718,
+    "north_wind_rmse_m_s": 0.20928785096458075,
+    "east_wind_rmse_m_s": 0.7105289666549865,
+    "vertical_wind_rmse_m_s": 0.0,
+    "ground_speed_rmse_m_s": 0.008178234002356125,
+    "max_ground_speed_error_m_s": 0.01141569254642505,
+    "approach_lqi_fraction": 1.0,
+    "along_contact_error_m": -9.830284310622906,
+    "cross_contact_error_m": 0.3079219735737586,
+    "contact_sink_m_s": 0.8930718095271443,
+    "contact_ground_speed_m_s": 3.087082894954762,
+    "brake_flare_observed_before_contact": true,
+    "seconds_from_final_to_contact": 2.2249999999979764,
+    "remaining_travel_m": 8.841350129843189,
+    "final_ground_speed_m_s": 4.326697321908814,
+    "parameters": {
+      "ARSPD_TYPE": 0,
+      "ARSPD_USE": 0,
+      "AHRS_EKF_TYPE": 3,
+      "EK3_WIND_P_NSE": 0.10000000149011612,
+      "EK3_BETA_MASK": 0,
+      "EK3_EAS_I_GATE": 400
+    },
+    "result_sha256": "720147664bfe59f2ed3e97eb4e74da65705f0bd1eef8a6d77c1f32f37e2f01f0"
+  },
+  {
+    "id": "threshold-3m-cross",
+    "spec": {
+      "id": "threshold-3m-cross",
+      "fixedMission": true,
+      "across": 1.5,
+      "firmware": "./threshold-firmware/3m/arduplane.js"
+    },
+    "window_s": 20,
+    "failure": null,
+    "final_phase": "landed",
+    "modes": [
+      10
+    ],
+    "truth_mean_ned_m_s": [
+      0.38094197266606267,
+      1.4508215649973257,
+      0.0
+    ],
+    "estimate_mean_ned_m_s": [
+      0.2760375491789006,
+      1.4192053154160735,
+      0.0
+    ],
+    "wind_bias_ned_m_s": [
+      -0.10490442348716206,
+      -0.03161624958125218,
+      0.0
+    ],
+    "estimate_span_ned_m_s": [
+      0.001450446982733944,
+      0.003597521036735829,
+      0
+    ],
+    "reconstructed_forward_airspeed_range_m_s": [
+      4.185975097313127,
+      4.200927903296661
+    ],
+    "horizontal_wind_rmse_m_s": 0.10957235933202727,
+    "north_wind_rmse_m_s": 0.10490503081561972,
+    "east_wind_rmse_m_s": 0.03163915989973158,
+    "vertical_wind_rmse_m_s": 0.0,
+    "ground_speed_rmse_m_s": 0.008809516104916166,
+    "max_ground_speed_error_m_s": 0.011648162691568764,
+    "approach_lqi_fraction": 1.0,
+    "along_contact_error_m": -9.678917950905104,
+    "cross_contact_error_m": 0.3114760835965335,
+    "contact_sink_m_s": 0.903493461136012,
+    "contact_ground_speed_m_s": 3.0361637535460795,
+    "brake_flare_observed_before_contact": true,
+    "seconds_from_final_to_contact": 2.2399999999979627,
+    "remaining_travel_m": 8.788203580554859,
+    "final_ground_speed_m_s": 4.286740160611672,
+    "parameters": {
+      "ARSPD_TYPE": 0,
+      "ARSPD_USE": 0,
+      "AHRS_EKF_TYPE": 3,
+      "EK3_WIND_P_NSE": 0.10000000149011612,
+      "EK3_BETA_MASK": 0,
+      "EK3_EAS_I_GATE": 400
+    },
+    "result_sha256": "fea4cd6e2e90c871843b2646da464028a4af2f78ecd9c9281b3cb442b8372a4d"
+  },
+  {
+    "id": "threshold-5m-tail",
+    "spec": {
+      "id": "threshold-5m-tail",
+      "fixedMission": true,
+      "along": 1.5,
+      "firmware": "./threshold-firmware/5m/arduplane.js"
+    },
+    "window_s": 20,
+    "failure": null,
+    "final_phase": "landed",
+    "modes": [
+      10
+    ],
+    "truth_mean_ned_m_s": [
+      1.4484880466669892,
+      -0.38972089841686525,
+      0.0
+    ],
+    "estimate_mean_ned_m_s": [
+      0.8914017495275663,
+      0.0398199936143673,
+      0.0
+    ],
+    "wind_bias_ned_m_s": [
+      -0.557086297139423,
+      0.4295408920312325,
+      0.0
+    ],
+    "estimate_span_ned_m_s": [
+      0.0006197503219120826,
+      0.00024008687499822018,
+      0
+    ],
+    "reconstructed_forward_airspeed_range_m_s": [
+      4.570068551719245,
+      4.613059734767063
+    ],
+    "horizontal_wind_rmse_m_s": 0.7034561525281073,
+    "north_wind_rmse_m_s": 0.557086327036827,
+    "east_wind_rmse_m_s": 0.42954089765500236,
+    "vertical_wind_rmse_m_s": 0.0,
+    "ground_speed_rmse_m_s": 0.01660101794184327,
+    "max_ground_speed_error_m_s": 0.02286886685627998,
+    "approach_lqi_fraction": 1.0,
+    "along_contact_error_m": -5.848754470687147,
+    "cross_contact_error_m": 0.08688075745336314,
+    "contact_sink_m_s": 1.5852036030125627,
+    "contact_ground_speed_m_s": 5.865532372049197,
+    "brake_flare_observed_before_contact": false,
+    "seconds_from_final_to_contact": 1.8249999999983402,
+    "remaining_travel_m": 9.932589967615968,
+    "final_ground_speed_m_s": 5.555992289355623,
+    "parameters": {
+      "ARSPD_TYPE": 0,
+      "ARSPD_USE": 0,
+      "AHRS_EKF_TYPE": 3,
+      "EK3_WIND_P_NSE": 0.10000000149011612,
+      "EK3_BETA_MASK": 0,
+      "EK3_EAS_I_GATE": 400
+    },
+    "result_sha256": "92f881c213cc283ac770b6a2b7d028222632a125d213e1a86ec8409dc4ec823a"
+  },
+  {
+    "id": "threshold-3m-tail",
+    "spec": {
+      "id": "threshold-3m-tail",
+      "fixedMission": true,
+      "along": 1.5,
+      "firmware": "./threshold-firmware/3m/arduplane.js"
+    },
+    "window_s": 20,
+    "failure": "No landing confirmation after contact",
+    "final_phase": "flare",
+    "modes": [
+      10
+    ],
+    "truth_mean_ned_m_s": [
+      1.43673181449224,
+      -0.43104720533351626,
+      0.0
+    ],
+    "estimate_mean_ned_m_s": [
+      1.3820177794940216,
+      -0.4834096434711096,
+      0.0
+    ],
+    "wind_bias_ned_m_s": [
+      -0.05471403499821844,
+      -0.05236243813759338,
+      0.0
+    ],
+    "estimate_span_ned_m_s": [
+      0.002814133634891247,
+      0.015151549606565562,
+      0
+    ],
+    "reconstructed_forward_airspeed_range_m_s": [
+      4.1757192141102495,
+      4.187758222633406
+    ],
+    "horizontal_wind_rmse_m_s": 0.07583114224680564,
+    "north_wind_rmse_m_s": 0.05471920221393045,
+    "east_wind_rmse_m_s": 0.052499248028198074,
+    "vertical_wind_rmse_m_s": 0.0,
+    "ground_speed_rmse_m_s": 0.01859864727240667,
+    "max_ground_speed_error_m_s": 0.022279388197581795,
+    "approach_lqi_fraction": 1.0,
+    "along_contact_error_m": -5.622472472319456,
+    "cross_contact_error_m": 0.099479210977303,
+    "contact_sink_m_s": 1.581605190388173,
+    "contact_ground_speed_m_s": 5.819581157364486,
+    "brake_flare_observed_before_contact": false,
+    "seconds_from_final_to_contact": 1.7949999999983675,
+    "remaining_travel_m": 9.770404924265646,
+    "final_ground_speed_m_s": 5.593208907198379,
+    "parameters": {
+      "ARSPD_TYPE": 0,
+      "ARSPD_USE": 0,
+      "AHRS_EKF_TYPE": 3,
+      "EK3_WIND_P_NSE": 0.10000000149011612,
+      "EK3_BETA_MASK": 0,
+      "EK3_EAS_I_GATE": 400
+    },
+    "result_sha256": "d88095879f3ece8d7e97670eb800d9c337c62af73e3b052de9471b44046c5e8e"
+  },
+  {
+    "id": "threshold-5m-head-repeat",
+    "spec": {
+      "id": "threshold-5m-head-repeat",
+      "fixedMission": true,
+      "along": -1.5,
+      "firmware": "./threshold-firmware/5m/arduplane.js"
+    },
+    "window_s": 20,
+    "failure": null,
+    "final_phase": "landed",
+    "modes": [
+      10
+    ],
+    "truth_mean_ned_m_s": [
+      -1.4294711419500543,
+      0.4545462070373133,
+      0.0
+    ],
+    "estimate_mean_ned_m_s": [
+      -0.9642262611162886,
+      0.30793740301986505,
+      0.0
+    ],
+    "wind_bias_ned_m_s": [
+      0.46524488083376575,
+      -0.14660880401744827,
+      0.0
+    ],
+    "estimate_span_ned_m_s": [
+      3.9507179127595826e-05,
+      4.243620527699665e-05,
+      0
+    ],
+    "reconstructed_forward_airspeed_range_m_s": [
+      3.8423308280260398,
+      3.853584185501503
+    ],
+    "horizontal_wind_rmse_m_s": 0.48779805333312504,
+    "north_wind_rmse_m_s": 0.46524488097171596,
+    "east_wind_rmse_m_s": 0.1466088045282417,
+    "vertical_wind_rmse_m_s": 0.0,
+    "ground_speed_rmse_m_s": 0.011533013455648514,
+    "max_ground_speed_error_m_s": 0.018323418403540348,
+    "approach_lqi_fraction": 1.0,
+    "along_contact_error_m": -13.994341205209547,
+    "cross_contact_error_m": 0.2460285841392575,
+    "contact_sink_m_s": 0.8532111997611769,
+    "contact_ground_speed_m_s": 1.449264472843345,
+    "brake_flare_observed_before_contact": true,
+    "seconds_from_final_to_contact": 2.384999999997831,
+    "remaining_travel_m": 5.685376472812183,
+    "final_ground_speed_m_s": 2.9226748984572373,
+    "parameters": {
+      "ARSPD_TYPE": 0,
+      "ARSPD_USE": 0,
+      "AHRS_EKF_TYPE": 3,
+      "EK3_WIND_P_NSE": 0.10000000149011612,
+      "EK3_BETA_MASK": 0,
+      "EK3_EAS_I_GATE": 400
+    },
+    "result_sha256": "8671f1f4169dcaf9da75ffa294cd370995b06d9ff60f5c3a1ec0f482b16c0246"
+  },
+  {
+    "id": "threshold-3m-head-repeat",
+    "spec": {
+      "id": "threshold-3m-head-repeat",
+      "fixedMission": true,
+      "along": -1.5,
+      "firmware": "./threshold-firmware/3m/arduplane.js"
+    },
+    "window_s": 20,
+    "failure": null,
+    "final_phase": "landed",
+    "modes": [
+      10
+    ],
+    "truth_mean_ned_m_s": [
+      -1.4503196466629753,
+      0.3828484328077928,
+      0.0
+    ],
+    "estimate_mean_ned_m_s": [
+      -1.5266855318377843,
+      0.2872591817334147,
+      0.0
+    ],
+    "wind_bias_ned_m_s": [
+      -0.07636588517480916,
+      -0.09558925107437811,
+      0.0
+    ],
+    "estimate_span_ned_m_s": [
+      0.00034212820937273847,
+      0.003123810684395989,
+      0
+    ],
+    "reconstructed_forward_airspeed_range_m_s": [
+      4.218263963735554,
+      4.220219036317677
+    ],
+    "horizontal_wind_rmse_m_s": 0.12235219905544005,
+    "north_wind_rmse_m_s": 0.07636592244137226,
+    "east_wind_rmse_m_s": 0.09559448992164947,
+    "vertical_wind_rmse_m_s": 0.0,
+    "ground_speed_rmse_m_s": 0.013107118588590769,
+    "max_ground_speed_error_m_s": 0.01706642650333068,
+    "approach_lqi_fraction": 1.0,
+    "along_contact_error_m": -13.80714987965097,
+    "cross_contact_error_m": 0.19120064518004967,
+    "contact_sink_m_s": 0.8385531667341297,
+    "contact_ground_speed_m_s": 1.461756682031368,
+    "brake_flare_observed_before_contact": true,
+    "seconds_from_final_to_contact": 2.329999999997881,
+    "remaining_travel_m": 5.398441925981558,
+    "final_ground_speed_m_s": 2.7406842747012288,
+    "parameters": {
+      "ARSPD_TYPE": 0,
+      "ARSPD_USE": 0,
+      "AHRS_EKF_TYPE": 3,
+      "EK3_WIND_P_NSE": 0.10000000149011612,
+      "EK3_BETA_MASK": 0,
+      "EK3_EAS_I_GATE": 400
+    },
+    "result_sha256": "abf5b0e0e97aa0c44f83d92dcb4df140350c291843e3d8d08e1fb78ae2fa58c6"
+  }
+]

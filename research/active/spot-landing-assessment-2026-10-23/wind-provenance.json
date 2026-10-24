@@ -1,0 +1,27 @@
+{
+  "firmware_revision": "97c479ab36f08b826723125691cde6994768e680",
+  "files": {
+    "case-wind.mts": "5a541916cd74b2243873bb016a45fc7e076449d6b6702fa431fc1ec1c28c8009",
+    "run-wind.py": "b5ad100abbd513f8cb9428bad4d7e2adcc8608c1e4813fbec2311c015cb1b7f1",
+    "wind-cases.json": "a20c7638a061a4379ffe0a76b0814cba6a3d8274e639bfc6c861b8e056242c9c",
+    "assess-wind.py": "2cba5092d7eca5851673136ced71a75ebe7cbca834c6388424a3635efb8ea802"
+  },
+  "note": "Same runtime inputs as provenance.json; WIND added only to research decoder, requested at 10 Hz. WIND has no validity bit; LQI activity independently requires wind_valid.",
+  "pinned_source_sha256": {
+    "libraries/AP_Landing/AP_Landing_Slope.cpp": "994bdc4adb2bfc9508d9a537395923d448bec019ca768478c763c8ed64ad98a3",
+    "ArduPlane/GCS_MAVLink_Plane.cpp": "653b4c6fb5080f914a96bfeffa2bae843138d6e2f95f63641496eb7f415fcd96",
+    "ArduPlane/Plane.cpp": "656dc400135d92923bbf6a4b678e04b816479f5f1abce8e613dccb089da4ae24",
+    "libraries/AP_AHRS/AP_AHRS_NavEKF3.cpp": "a0a1288a20396e0c27129602a0d10ef7de5e7a335880bb8456ede94793ee0ba2",
+    "libraries/AP_NavEKF3/AP_NavEKF3_Outputs.cpp": "f2214b959f986c39cf0ccf12def9601f169b33a6ba75c80802a4ca1787e62ca3",
+    "libraries/AP_NavEKF3/AP_NavEKF3_Control.cpp": "fefacc517bd1f1744cbb1f07f045e526291106e8dc68bc815b08ca1f5219db93",
+    "libraries/AP_NavEKF3/AP_NavEKF3_AirDataFusion.cpp": "bf1800c1b4de30f92f0d96e111d8fec272b04037b0889fa47a330da0dfe3a950",
+    "libraries/AP_CustomControl/AP_CustomControl_LQI.cpp": "537dba53b412eed45661d5ee9e3a65f2d0c93b09281ed86701ae723aeb97853e",
+    "libraries/SITL/SIM_JSON.cpp": "9d61150869b2df651b96d7735523693bcaaefa3ef1496144bacd3b8b121118cc"
+  },
+  "runtime_sha256": {
+    "arduplane.wasm": "73459525151117187c759ca6b15411d010948795bd3ca2e79d313066ec718b21",
+    "sim_wasm_bg.wasm": "ceae58a55b4585e85b86a142a15c1f5b9bcfbf3e51f21cddbdf741ac4a75c158",
+    "highdof.json": "b0d85fd31f68eeb4ba224034c82aa3e671e44777c550603eeac0f6eb82e736a2",
+    "lqi-gains.bin": "311876eabeb033e55c30c8d556d159495b76e8358cd25a1684c0c3b486ed97f0"
+  }
+}

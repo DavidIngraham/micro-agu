@@ -1,0 +1,24 @@
+{
+  "files": {
+    "case.mts": "e3b66b7b33f07a2a85adac19b549fad7d2cacf682555c58dd730066ed6662221",
+    "run.py": "62a4a39b6a3c2705d7e4c552d25af43364ad8287602a6a17c8b03d2b775ff6f7",
+    "cases.json": "b3f8e1a06fa656d2e4de4ca6e4d03ae2cfd4000bc899bcaff6f3e0aff4c8750f",
+    "confirmation-cases.json": "2b6a9d51f82d835a54a6fb959e5c82405d2c59b641285cf0a7c03fed4141dbd2",
+    "plan.json": "f6b8c5d8c55518b60425a03de36b89b5386f2b204df4218dc8e4847afc74ff53",
+    "configuration.json": "b0d85fd31f68eeb4ba224034c82aa3e671e44777c550603eeac0f6eb82e736a2",
+    "published-build.json": "417149687e31c38a917592c9b884af84d6488a51edae1b1b35fe2c76366ce7ca",
+    "assess.py": "556ed5024b250577c4abb5e82b6fe04b4aa61f18cab378927dfce9c85d439a54"
+  },
+  "firmware": {
+    "firmware/package.json": "1239d4d885dcad42201a27ed9324f8f0f760b78700d8db9ced39a511cffe7eae",
+    "firmware/published/arduplane.wasm": "73459525151117187c759ca6b15411d010948795bd3ca2e79d313066ec718b21",
+    "firmware/published/arduplane.js": "893b28e3cbea410e48736d7f7426928cbe8b56f22c1813914aa290172f1e8565",
+    "firmware/candidate/arduplane.wasm": "60f7412e3b2aaa78215d429210bf22cde0bf9d01199dfbcd93cb7d6d89cee1a5",
+    "firmware/candidate/arduplane.js": "893b28e3cbea410e48736d7f7426928cbe8b56f22c1813914aa290172f1e8565"
+  },
+  "runtime_inputs": {
+    "viewer/generated/physics/sim_wasm_bg.wasm": "ceae58a55b4585e85b86a142a15c1f5b9bcfbf3e51f21cddbdf741ac4a75c158",
+    "aircraft/microagu/controllers/lqi-gains.bin": "311876eabeb033e55c30c8d556d159495b76e8358cd25a1684c0c3b486ed97f0"
+  },
+  "note": "Truth is evaluation only. Full local traces are ignored and bound by per-result hashes. Published endpoint failures retained."
+}

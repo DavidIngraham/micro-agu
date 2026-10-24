@@ -1,0 +1,16 @@
+{
+  "firmware_revision": "3b72ab243e685d37238b2b51d17aecfdb24c8d81",
+  "sha256": {
+    "highdof.json": "131ab3155f15f921fcd3e3f4ce688ef5f6ad91cef7d137f24606cc24f9225aee",
+    "sim_wasm_bg.wasm.d.ts": "98b5d976e3fdeafe277b6f98d5f95079fba5b6367533ddb4f7846b0f93ff9890",
+    "sim_wasm.d.ts": "f123bfc6ec889cd120e526d7d3001395d45e44a97db671d791e14264a938c3be",
+    "sim_wasm_bg.wasm": "ceae58a55b4585e85b86a142a15c1f5b9bcfbf3e51f21cddbdf741ac4a75c158",
+    "sim_wasm.js": "65ffd575810f57b5793b1a61477d215e316267e40ced1eb29dfe7a59e5ce4f60",
+    "arduplane.wasm": "66e7adf6ff5f6b7dd781229850f7f0065832cf37014b395e171795f6024d371d",
+    "arduplane.js": "893b28e3cbea410e48736d7f7426928cbe8b56f22c1813914aa290172f1e8565",
+    "lqi-gains.bin": "311876eabeb033e55c30c8d556d159495b76e8358cd25a1684c0c3b486ed97f0"
+  },
+  "tested_driver_sha256": "e3b66b7b33f07a2a85adac19b549fad7d2cacf682555c58dd730066ed6662221",
+  "replay_driver_sha256": "2505b1b09caf8ea9ce537e284a3dab513e269b75d6c802e2b61376b5165e5686",
+  "configuration_sha256": "131ab3155f15f921fcd3e3f4ce688ef5f6ad91cef7d137f24606cc24f9225aee"
+}

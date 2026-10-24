@@ -1,0 +1,86 @@
+{
+  "scope": "Experimental browser landing calibration; no physical-flight acceptance",
+  "study": "research/active/landing-release-2026-10-24/RESULTS.md",
+  "firmware_revision": "3b72ab243e685d37238b2b51d17aecfdb24c8d81",
+  "settings": {
+    "LAND_FLARE_AIM": 0,
+    "LAND_FLARE_ALT": 3,
+    "PG_FLARE_HGT": 1.3,
+    "sideslip_update_minimum_forward_tas_m_s": 3
+  },
+  "statistics": {
+    "published": {
+      "primary_cases": 9,
+      "total_runs": 11,
+      "completed": 9,
+      "median_miss_m": 9.609127667544344,
+      "worst_miss_m": 13.750122926801685,
+      "rms_miss_m": 9.375580654454453,
+      "median_sink_m_s": 0.9064972600060266,
+      "worst_sink_m_s": 1.504707458357582,
+      "worst_ground_speed_m_s": 5.945217494033261,
+      "tail_median_sink_m_s": 1.4901518549752562,
+      "tail_sink_range_m_s": [
+        0.9687866289568531,
+        1.504707458357582
+      ]
+    },
+    "candidate": {
+      "primary_cases": 9,
+      "total_runs": 11,
+      "completed": 11,
+      "median_miss_m": 2.7939833354009416,
+      "worst_miss_m": 9.092898309451558,
+      "rms_miss_m": 4.57263672665539,
+      "median_sink_m_s": 0.8941810617562204,
+      "worst_sink_m_s": 1.5331134641142443,
+      "worst_ground_speed_m_s": 5.9572573565648375,
+      "tail_median_sink_m_s": 0.9416879379728902,
+      "tail_sink_range_m_s": [
+        0.9395738137739973,
+        1.5331134641142443
+      ]
+    }
+  },
+  "checks": {
+    "all_candidate_runs_complete": true,
+    "candidate_modes_auto_only": true,
+    "median_miss_reduced": true,
+    "worst_miss_reduced": true,
+    "raw_peak_sink_not_increased": false,
+    "raw_peak_ground_speed_not_increased": false,
+    "existing_native_regression_sink_limit": true
+  },
+  "decision": {
+    "deploy": true,
+    "scope": "Experimental web simulator accuracy improvement",
+    "basis": "Median spot miss 9.61 to 2.79 m; worst 13.75 to 9.09 m; 11/11 candidate landing confirmations versus 9/11 published; unchanged physics, gains and flare trigger heights.",
+    "strict_sample_peak_checks_met": false,
+    "peak_review": "Worst sampled sink increases 0.0284 m/s (1.5047 to 1.5331); worst ground speed increases 0.0120 m/s (5.9452 to 5.9573). These small sample-maximum differences are retained, not reported as passing strict non-increase. Tailwind sink spans 0.969-1.505 m/s published and 0.940-1.533 m/s candidate across three fixed seed cases; candidate median improves from 1.490 to 0.942 m/s. This supports practical accuracy promotion, not a statistical claim of equivalent impact performance.",
+    "remaining_limitations": "Headwind miss remains 9.09 m; steep approach miss rises from 3.89 to 6.19 m. Contact model, high-brake aerodynamics and ground rollout remain unvalidated."
+  },
+  "result_sha256": {
+    "published-calm": "5a753678a183ab0813a8b192db73dc787e6297755b84db0e3a300d007a7468f6",
+    "candidate-calm": "f06dbd6104885a8cb9bfde85296d0433d88755c82c40f43028ed8ad74b6ab968",
+    "published-weather": "3d9c05a90970a9c3e0aeb60037495cae6b2cb96b555a5911419cb12a416e0291",
+    "candidate-weather": "0698599fec2af94b8bbe01d1a0c27f6f999679f97d5c0e7ef6f035f2c6d3159e",
+    "published-head": "1ad7089063bb9be901beb8e61b77ee064f93e4d7c38581a68500dfbbbaf2a889",
+    "candidate-head": "e6d55c2f886680fe6e1587c7b2b824901852eef0801fb0064f10a60d89807e0f",
+    "published-cross": "0c7105bedc7a0e03949e7c39b52b50bde9464c297333ffe817f35bfc38596bc4",
+    "candidate-cross": "9ab90f74031c9628d9076c787d317896d5a436ce7a6a0e364b9a9a202d4e16c5",
+    "published-tail": "097fea75663d335ded5a5acda11a51f820a1c9e15538bda3d7ca929a828747a7",
+    "candidate-tail": "cb36f9c90437bfd38512e54ff0c6602b8ed2cd121c9fb19764ddbd3e7b4e8f3f",
+    "published-gust-cross": "0a1e1b427eb1eb74cd2496a1c47f28ead293c4ff1eca5d4ece0fa4bfa401eb8a",
+    "candidate-gust-cross": "75d3c84b8910943a5a65414731af13b753bb58ef29f3afe210bb693be63effa8",
+    "published-straight": "c4f55f79fcc350615e2ec601f469c07090a57f24859411643f2cc16e277219ac",
+    "candidate-straight": "1adcce54320e938a26c162e2f246cb80db0dab09ebcc08126b5d8b25f34b3813",
+    "published-shallow": "f284917f3ca5c8e7ea197eea18841378773927c09fcc23c1deb78969e69c90f5",
+    "candidate-shallow": "01a4afdda5c909a9e7bfdbc49d8d1c688c3c8031a12f51e18b38005e9e06d9c2",
+    "published-steep": "221205b901bf2005d137a91c645acaee0eb55c8dca86a8d6e2d461116ea0ec71",
+    "candidate-steep": "91cb71c1756f298d38fc886e22ca844a04fa16faa8799d3c38cc19cadf237520",
+    "published-tail-seed173": "fc21e503f34ffd2ff0ebb31675c97a7b3c3ed5befde516fe5fdb8c60818a8083",
+    "candidate-tail-seed173": "3166a9a9e2adfcc0a8d350183b1f15915c0a29c0277325d4ba7faff701725890",
+    "published-tail-seed273": "65f915b5793ee36b1d35cc7c25d02183c3464870121c2b3d9f8c6fd1f3f21a3e",
+    "candidate-tail-seed273": "d14430887182687ea4fa02a0004ab192e8576d950f62f54d44d68c66ff6b8887"
+  }
+}

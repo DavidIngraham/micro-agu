@@ -1,0 +1,68 @@
+{
+  "firmware_revision": "97c479ab36f08b826723125691cde6994768e680",
+  "files": {
+    "case-threshold.mts": "14ea8f85cc132170837a8323895482b221f51ae1ac9f732731a498728220586f",
+    "run-threshold.py": "e34de3e987955f351d0da2c064896dfb6f919b1647556dc77a47b91f4083bd4b",
+    "threshold-cases.json": "f4a901873846a6394b2933938cdf69359cd23ac538329b9a6fa772079f005914",
+    "assess-threshold.py": "e14dcc74aeaf74034ab01e703067768816dc3898234772f3152e221ef491a551",
+    "THRESHOLD.md": "072dd78702943af69d2919040c79b538c31bc040b4995f133da51d2d6f148138"
+  },
+  "note": "Fresh paired 5 m/s and 3 m/s gate runs; only FuseSideslip forward-speed gate changes. WIND has no validity bit; LQI activity independently requires wind_valid.",
+  "threshold_change": {
+    "baseline_m_s": 5,
+    "test_m_s": 3,
+    "source_path": "libraries/AP_NavEKF3/AP_NavEKF3_AirDataFusion.cpp",
+    "base_source_sha256": "bf1800c1b4de30f92f0d96e111d8fec272b04037b0889fa47a330da0dfe3a950",
+    "test_source_sha256": "bee65897294a17ba82e2628ac90698385091cf4d2c5391f37aec754814c12ad5",
+    "patch_sha256": "32ee094de405833f69fdfba14ae8baed0186b5e18a392ccbed85127980339bc4",
+    "git_diff": "diff --git a/libraries/AP_NavEKF3/AP_NavEKF3_AirDataFusion.cpp b/libraries/AP_NavEKF3/AP_NavEKF3_AirDataFusion.cpp\nindex 7bbf429b91..ef80be9cd8 100644\n--- a/libraries/AP_NavEKF3/AP_NavEKF3_AirDataFusion.cpp\n+++ b/libraries/AP_NavEKF3/AP_NavEKF3_AirDataFusion.cpp\n@@ -253,7 +253,7 @@ void NavEKF3_core::FuseSideslip()\n     vel_rel_wind = prevTnb * vel_rel_wind;\n \n     // perform fusion of assumed sideslip  = 0\n-    if (vel_rel_wind.x > 5.0f)\n+    if (vel_rel_wind.x > 3.0f)\n     {\n         // Calculate observation jacobians\n         SH_BETA[0] = (vn - vwn)*(sq(q0) + sq(q1) - sq(q2) - sq(q3)) - vd*(2*q0*q2 - 2*q1*q3) + (ve - vwe)*(2*q0*q3 + 2*q1*q2);\n"
+  },
+  "driver_versions": {
+    "case-threshold-initial.mts": {
+      "sha256": "e2fca558f79192585c9d41cc73cc0bd89edb7cb43d99d16fad46357d5c60083a",
+      "primary_cases": [
+        "threshold-5m-calm",
+        "threshold-3m-calm",
+        "threshold-5m-weather",
+        "threshold-3m-weather"
+      ],
+      "note": "Calm and default weather remain valid; preliminary course-relative steady-wind comparisons are retained in threshold-initial-* files but excluded from primary results."
+    },
+    "case-threshold.mts": {
+      "sha256": "14ea8f85cc132170837a8323895482b221f51ae1ac9f732731a498728220586f",
+      "primary_cases": [
+        "threshold-earth-5m-head",
+        "threshold-earth-3m-head",
+        "threshold-earth-5m-cross",
+        "threshold-earth-3m-cross",
+        "threshold-earth-5m-tail",
+        "threshold-earth-3m-tail"
+      ],
+      "note": "Steady winds fixed in earth NED axes, identical per condition across both firmware versions."
+    }
+  },
+  "test_firmware_sha256": {
+    "threshold-firmware/package.json": "1239d4d885dcad42201a27ed9324f8f0f760b78700d8db9ced39a511cffe7eae",
+    "threshold-firmware/5m/arduplane.wasm": "73459525151117187c759ca6b15411d010948795bd3ca2e79d313066ec718b21",
+    "threshold-firmware/5m/arduplane.js": "893b28e3cbea410e48736d7f7426928cbe8b56f22c1813914aa290172f1e8565",
+    "threshold-firmware/3m/arduplane.wasm": "60f7412e3b2aaa78215d429210bf22cde0bf9d01199dfbcd93cb7d6d89cee1a5",
+    "threshold-firmware/3m/arduplane.js": "893b28e3cbea410e48736d7f7426928cbe8b56f22c1813914aa290172f1e8565"
+  },
+  "pinned_source_sha256": {
+    "libraries/AP_Landing/AP_Landing_Slope.cpp": "994bdc4adb2bfc9508d9a537395923d448bec019ca768478c763c8ed64ad98a3",
+    "ArduPlane/GCS_MAVLink_Plane.cpp": "653b4c6fb5080f914a96bfeffa2bae843138d6e2f95f63641496eb7f415fcd96",
+    "ArduPlane/Plane.cpp": "656dc400135d92923bbf6a4b678e04b816479f5f1abce8e613dccb089da4ae24",
+    "libraries/AP_AHRS/AP_AHRS_NavEKF3.cpp": "a0a1288a20396e0c27129602a0d10ef7de5e7a335880bb8456ede94793ee0ba2",
+    "libraries/AP_NavEKF3/AP_NavEKF3_Outputs.cpp": "f2214b959f986c39cf0ccf12def9601f169b33a6ba75c80802a4ca1787e62ca3",
+    "libraries/AP_NavEKF3/AP_NavEKF3_Control.cpp": "fefacc517bd1f1744cbb1f07f045e526291106e8dc68bc815b08ca1f5219db93",
+    "libraries/AP_NavEKF3/AP_NavEKF3_AirDataFusion.cpp": "bf1800c1b4de30f92f0d96e111d8fec272b04037b0889fa47a330da0dfe3a950",
+    "libraries/AP_CustomControl/AP_CustomControl_LQI.cpp": "537dba53b412eed45661d5ee9e3a65f2d0c93b09281ed86701ae723aeb97853e",
+    "libraries/SITL/SIM_JSON.cpp": "9d61150869b2df651b96d7735523693bcaaefa3ef1496144bacd3b8b121118cc"
+  },
+  "runtime_sha256": {
+    "arduplane.wasm": "73459525151117187c759ca6b15411d010948795bd3ca2e79d313066ec718b21",
+    "sim_wasm_bg.wasm": "ceae58a55b4585e85b86a142a15c1f5b9bcfbf3e51f21cddbdf741ac4a75c158",
+    "highdof.json": "b0d85fd31f68eeb4ba224034c82aa3e671e44777c550603eeac0f6eb82e736a2",
+    "lqi-gains.bin": "311876eabeb033e55c30c8d556d159495b76e8358cd25a1684c0c3b486ed97f0"
+  }
+}

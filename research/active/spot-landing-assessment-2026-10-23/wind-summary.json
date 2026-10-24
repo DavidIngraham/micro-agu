@@ -1,0 +1,285 @@
+[
+  {
+    "id": "wind-calm",
+    "spec": {
+      "id": "wind-calm",
+      "fixedMission": true
+    },
+    "window_s": 20,
+    "truth_mean_ned_m_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "estimate_mean_ned_m_s": [
+      -0.35767639899870746,
+      0.422116491120269,
+      0.0
+    ],
+    "wind_bias_ned_m_s": [
+      -0.35767639899870746,
+      0.422116491120269,
+      0.0
+    ],
+    "estimate_span_ned_m_s": [
+      0.0005038863651841141,
+      1.9864628656773853e-05,
+      0
+    ],
+    "reconstructed_forward_airspeed_range_m_s": [
+      4.4665227113378885,
+      4.4977573425323625
+    ],
+    "horizontal_wind_rmse_m_s": 0.5532763868534384,
+    "north_wind_rmse_m_s": 0.35767642939447575,
+    "east_wind_rmse_m_s": 0.4221164911552429,
+    "vertical_wind_rmse_m_s": 0.0,
+    "ground_speed_rmse_m_s": 0.01499650326060819,
+    "max_ground_speed_error_m_s": 0.020368702613209777,
+    "approach_lqi_fraction": 1.0,
+    "along_contact_error_m": -10.223142335011154,
+    "cross_contact_error_m": 0.14431170095486934,
+    "contact_sink_m_s": 0.8935895696986919,
+    "seconds_from_final_to_contact": 2.26499999999794,
+    "remaining_travel_m": 8.606261749671921,
+    "final_ground_speed_m_s": 4.179085071730012,
+    "parameters": {
+      "ARSPD_TYPE": 0,
+      "ARSPD_USE": 0,
+      "AHRS_EKF_TYPE": 3,
+      "EK3_WIND_P_NSE": 0.10000000149011612,
+      "EK3_BETA_MASK": 0,
+      "EK3_EAS_I_GATE": 400
+    },
+    "result_sha256": "8a75b2d5ff994d716dcf86d572aa08b0f37dda67be9fd7e44040863836258544"
+  },
+  {
+    "id": "wind-weather",
+    "spec": {
+      "id": "wind-weather",
+      "fixedMission": true,
+      "turbulence": 0.2,
+      "weather": {
+        "turbulenceModel": "dryden",
+        "gustLength": 20,
+        "verticalRatio": 0.5,
+        "thermalStrength": 1.5,
+        "thermalRadius": 60,
+        "thermalNorth": 300,
+        "thermalEast": 0
+      }
+    },
+    "window_s": 20,
+    "truth_mean_ned_m_s": [
+      -0.08966295631590632,
+      -0.04146771011561788,
+      -0.05632922536893607
+    ],
+    "estimate_mean_ned_m_s": [
+      -0.09439163081883978,
+      -0.022144008022504758,
+      0.0
+    ],
+    "wind_bias_ned_m_s": [
+      -0.004728674502933475,
+      0.01932370209311312,
+      0.05632922536893607
+    ],
+    "estimate_span_ned_m_s": [
+      0.0016370570479598279,
+      0.005032913708667465,
+      0
+    ],
+    "reconstructed_forward_airspeed_range_m_s": [
+      3.71377492780371,
+      4.6213821840520275
+    ],
+    "horizontal_wind_rmse_m_s": 0.4019578930430702,
+    "north_wind_rmse_m_s": 0.22580570365304364,
+    "east_wind_rmse_m_s": 0.3325386172723073,
+    "vertical_wind_rmse_m_s": 0.0961312756357861,
+    "ground_speed_rmse_m_s": 0.01748151494474019,
+    "max_ground_speed_error_m_s": 0.046380462641896436,
+    "approach_lqi_fraction": 1.0,
+    "along_contact_error_m": -9.726867814662153,
+    "cross_contact_error_m": 0.3406002512510849,
+    "contact_sink_m_s": 0.8976922749448744,
+    "seconds_from_final_to_contact": 2.26499999999794,
+    "remaining_travel_m": 8.49953842278467,
+    "final_ground_speed_m_s": 4.290156342190524,
+    "parameters": {
+      "ARSPD_TYPE": 0,
+      "ARSPD_USE": 0,
+      "AHRS_EKF_TYPE": 3,
+      "EK3_WIND_P_NSE": 0.10000000149011612,
+      "EK3_BETA_MASK": 0,
+      "EK3_EAS_I_GATE": 400
+    },
+    "result_sha256": "a769314b7acac516d47a62a96b2b697506c30d9edc67870650718e91a5439e8b"
+  },
+  {
+    "id": "wind-head",
+    "spec": {
+      "id": "wind-head",
+      "fixedMission": true,
+      "along": -1.5
+    },
+    "window_s": 20,
+    "truth_mean_ned_m_s": [
+      -1.4370191930631906,
+      0.43008817557335477,
+      0.0
+    ],
+    "estimate_mean_ned_m_s": [
+      -0.9379047977735223,
+      0.30193083440005913,
+      0.0
+    ],
+    "wind_bias_ned_m_s": [
+      0.4991143952896685,
+      -0.12815734117329564,
+      0.0
+    ],
+    "estimate_span_ned_m_s": [
+      3.5170335118017704e-05,
+      4.798008038436885e-05,
+      0
+    ],
+    "reconstructed_forward_airspeed_range_m_s": [
+      3.8058955982365283,
+      3.8171629656258417
+    ],
+    "horizontal_wind_rmse_m_s": 0.5153052337971297,
+    "north_wind_rmse_m_s": 0.4991143953936312,
+    "east_wind_rmse_m_s": 0.12815734192610428,
+    "vertical_wind_rmse_m_s": 0.0,
+    "ground_speed_rmse_m_s": 0.01458468161784681,
+    "max_ground_speed_error_m_s": 0.018214325697908595,
+    "approach_lqi_fraction": 1.0,
+    "along_contact_error_m": -13.5441973704332,
+    "cross_contact_error_m": 0.23040431079075505,
+    "contact_sink_m_s": 0.8531955148905382,
+    "seconds_from_final_to_contact": 2.3499999999978627,
+    "remaining_travel_m": 5.583806804242264,
+    "final_ground_speed_m_s": 2.914144796907312,
+    "parameters": {
+      "ARSPD_TYPE": 0,
+      "ARSPD_USE": 0,
+      "AHRS_EKF_TYPE": 3,
+      "EK3_WIND_P_NSE": 0.10000000149011612,
+      "EK3_BETA_MASK": 0,
+      "EK3_EAS_I_GATE": 400
+    },
+    "result_sha256": "97050c395ef4d0c0a0bed7104b6cb559a92a6ecc4dec01950805a8c3ac8117da"
+  },
+  {
+    "id": "wind-cross",
+    "spec": {
+      "id": "wind-cross",
+      "fixedMission": true,
+      "across": 1.5
+    },
+    "window_s": 20,
+    "truth_mean_ned_m_s": [
+      0.43102410153295656,
+      1.4367387458747356,
+      0.0
+    ],
+    "estimate_mean_ned_m_s": [
+      0.7461636523211135,
+      2.095612928696603,
+      0.0
+    ],
+    "wind_bias_ned_m_s": [
+      0.31513955078815686,
+      0.6588741828218676,
+      0.0
+    ],
+    "estimate_span_ned_m_s": [
+      0.0010343539749514408,
+      0.00011596999051155521,
+      0
+    ],
+    "reconstructed_forward_airspeed_range_m_s": [
+      4.038321689141912,
+      4.053778380034952
+    ],
+    "horizontal_wind_rmse_m_s": 0.7303617025973698,
+    "north_wind_rmse_m_s": 0.3151396938782634,
+    "east_wind_rmse_m_s": 0.6588741837128262,
+    "vertical_wind_rmse_m_s": 0.0,
+    "ground_speed_rmse_m_s": 0.006640024761277689,
+    "max_ground_speed_error_m_s": 0.012289999884220748,
+    "approach_lqi_fraction": 1.0,
+    "along_contact_error_m": -9.890863186362028,
+    "cross_contact_error_m": 0.3004096833019866,
+    "contact_sink_m_s": 0.9005934808064249,
+    "seconds_from_final_to_contact": 2.2899999999979173,
+    "remaining_travel_m": 9.132708681695544,
+    "final_ground_speed_m_s": 4.35759354932343,
+    "parameters": {
+      "ARSPD_TYPE": 0,
+      "ARSPD_USE": 0,
+      "AHRS_EKF_TYPE": 3,
+      "EK3_WIND_P_NSE": 0.10000000149011612,
+      "EK3_BETA_MASK": 0,
+      "EK3_EAS_I_GATE": 400
+    },
+    "result_sha256": "90dafbbf8ed4c0f4d3ec8ec9ee0d43bc4ce63b35bae3a7cd84f450ca18eaf21f"
+  },
+  {
+    "id": "wind-tail",
+    "spec": {
+      "id": "wind-tail",
+      "fixedMission": true,
+      "along": 1.5
+    },
+    "window_s": 20,
+    "truth_mean_ned_m_s": [
+      1.4409467000517144,
+      -0.41674045593159503,
+      0.0
+    ],
+    "estimate_mean_ned_m_s": [
+      1.0633643318953983,
+      -0.35545589344214,
+      0.0
+    ],
+    "wind_bias_ned_m_s": [
+      -0.3775823681563164,
+      0.06128456248945499,
+      0.0
+    ],
+    "estimate_span_ned_m_s": [
+      0.0015390840490978608,
+      0.00039077477997412347,
+      0
+    ],
+    "reconstructed_forward_airspeed_range_m_s": [
+      4.457159717639393,
+      4.491401779403308
+    ],
+    "horizontal_wind_rmse_m_s": 0.38252380637419553,
+    "north_wind_rmse_m_s": 0.37758264151047943,
+    "east_wind_rmse_m_s": 0.061284674046385955,
+    "vertical_wind_rmse_m_s": 0.0,
+    "ground_speed_rmse_m_s": 0.017930395042608425,
+    "max_ground_speed_error_m_s": 0.02399244436001524,
+    "approach_lqi_fraction": 1.0,
+    "along_contact_error_m": -5.793960537300271,
+    "cross_contact_error_m": 0.09806446213190895,
+    "contact_sink_m_s": 1.5714471400833583,
+    "seconds_from_final_to_contact": 1.844999999998322,
+    "remaining_travel_m": 10.050440403321492,
+    "final_ground_speed_m_s": 5.574667201801322,
+    "parameters": {
+      "ARSPD_TYPE": 0,
+      "ARSPD_USE": 0,
+      "AHRS_EKF_TYPE": 3,
+      "EK3_WIND_P_NSE": 0.10000000149011612,
+      "EK3_BETA_MASK": 0,
+      "EK3_EAS_I_GATE": 400
+    },
+    "result_sha256": "ca423ddd0c30800879660d9b62fdc4dfab1b36d06392b96ccf3c808c4e30ad09"
+  }
+]

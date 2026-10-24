@@ -1,8 +1,61 @@
+diff --git a/ArduPlane/Parameters.cpp b/ArduPlane/Parameters.cpp
+index d8f094d7d2..e7e964ba3d 100644
+--- a/ArduPlane/Parameters.cpp
++++ b/ArduPlane/Parameters.cpp
+@@ -1314,7 +1314,7 @@ const AP_Param::GroupInfo ParametersG2::var_info[] = {
+     // @Param: PG_FLARE_RATE
+     // @DisplayName: Paraglider flare brake application rate
+     // @Description: Maximum increase of symmetric brake demand per second after AP_Landing enters flare. Brake demand resets immediately on abort, mode exit or disarm.
+-    // @Range: 1 100
++    // @Range: 1 400
+     // @Units: %/s
+     // @User: Advanced
+     AP_GROUPINFO("PG_FLARE_RATE", 44, ParametersG2, pg_flare_rate, 30),
+@@ -1327,6 +1327,29 @@ const AP_Param::GroupInfo ParametersG2::var_info[] = {
+     // @User: Advanced
+     AP_GROUPINFO("PG_FLARE_RES", 45, ParametersG2, pg_flare_reserve, 20),
+ 
++    // @Param: PG_FLARE_HGT
++    // @DisplayName: Paraglider brake flare height
++    // @Description: When positive, use valid EKF terrain height to delay brake application until this height during the native AUTO final. LAND_FLARE_ALT still starts the power-off final. Zero retains immediate brake application at native flare. If EKF terrain is unavailable, use the normal landing height fallback. Experimental.
++    // @Range: 0 10
++    // @Units: m
++    // @User: Advanced
++    AP_GROUPINFO("PG_FLARE_HGT", 46, ParametersG2, pg_flare_height, 0),
++
++    // @Param: PG_FLARE_SINK
++    // @DisplayName: Paraglider flare sink target
++    // @Description: Target downward velocity for bounded brake feedback during flare. Uses AHRS fused velocity. Does not change approach guidance or the native flare trigger.
++    // @Range: 0.2 3
++    // @Units: m/s
++    // @User: Advanced
++    AP_GROUPINFO("PG_FLARE_SINK", 47, ParametersG2, pg_flare_sink, 0.65),
++
++    // @Param: PG_FLARE_GAIN
++    // @DisplayName: Paraglider flare sink feedback gain
++    // @Description: Common brake percentage correction per m/s sink error, bounded to plus or minus 15 percentage points and by steering reserve. Zero disables feedback. No integral term. Experimental.
++    // @Range: 0 50
++    // @User: Advanced
++    AP_GROUPINFO("PG_FLARE_GAIN", 48, ParametersG2, pg_flare_gain, 0),
++
+ #endif
+ 
+     AP_GROUPEND
 diff --git a/ArduPlane/Parameters.h b/ArduPlane/Parameters.h
-index 5ad5e448ec..adebcd7892 100644
+index 5ad5e448ec..367d23f29f 100644
 --- a/ArduPlane/Parameters.h
 +++ b/ArduPlane/Parameters.h
-@@ -556,6 +556,9 @@ public:
+@@ -488,6 +488,9 @@ public:
+     AP_Float pg_flare_pct;
+     AP_Float pg_flare_rate;
+     AP_Float pg_flare_reserve;
++    AP_Float pg_flare_height;
++    AP_Float pg_flare_sink;
++    AP_Float pg_flare_gain;
+ #endif
+ 
+     // just to make compilation easier when all things are compiled out...
+@@ -556,6 +559,9 @@ public:
          // Apply throttle scale to throttle demand
          float apply_throttle(float throttle) const;
  
@@ -12,11 +65,136 @@ index 5ad5e448ec..adebcd7892 100644
          AP_Float batt_voltage_max;
          AP_Float batt_voltage_min;
          AP_Float batt_voltage_throttle_cutoff;
+diff --git a/ArduPlane/Plane.cpp b/ArduPlane/Plane.cpp
+index 90a55df1c6..930a295d03 100644
+--- a/ArduPlane/Plane.cpp
++++ b/ArduPlane/Plane.cpp
+@@ -613,6 +613,17 @@ void Plane::update_alt()
+ #if AP_PLANE_CUSTOMCONTROL_ENABLED
+     custom_control.mimo_input.reference.valid = false;
+     gcs().send_named_float("MIMO", custom_control.mimo_running() ? 1.0f : 0.0f);
++    // Current EKF height above ground for telemetry; landing consumes AHRS directly.
++    // A negative value explicitly invalidates an unavailable terrain estimate.
++    float hagl;
++    gcs().send_named_float("EKF_HAGL", ahrs.get_hagl(hagl) ? hagl : -1.0f);
++#endif
++#if AP_TECS_PARAGLIDER_ENABLED
++    // Native landing phase for GCS presentation only; never an external command.
++    const bool pg_land = control_mode == &mode_auto &&
++        flight_stage == AP_FixedWing::FlightStage::LAND;
++    gcs().send_named_float("PG_LAND", !pg_land ? 0 :
++        (pg_flare_started_ms != 0 ? 3 : (landing.is_flaring() ? 2 : 1)));
+ #endif
+     barometer.update();
+ 
+@@ -1160,7 +1171,9 @@ void Plane::run_custom_controller()
+     input.reference.heading_rate_rads = radians(pg_heading_rate_target_dps);
+     input.eligible = pg_heading_rate_valid && control_mode->does_auto_throttle() &&
+         ahrs.healthy() &&
+-        flight_stage == AP_FixedWing::FlightStage::NORMAL &&
++        (flight_stage == AP_FixedWing::FlightStage::NORMAL ||
++         (control_mode == &mode_auto && flight_stage == AP_FixedWing::FlightStage::LAND &&
++          !landing.is_flaring() && !landing.is_commanded_go_around())) &&
+         arming.is_armed_and_safety_off() && !throttle_suppressed &&
+         !failsafe.rc_failsafe && failsafe.throttle_counter == 0;
+ #endif
+diff --git a/ArduPlane/Plane.h b/ArduPlane/Plane.h
+index 5f3c4794ba..e6e21eb2cf 100644
+--- a/ArduPlane/Plane.h
++++ b/ArduPlane/Plane.h
+@@ -1206,6 +1206,7 @@ private:
+     void paraglider_brake_mixer(void);
+ #if AP_TECS_PARAGLIDER_ENABLED
+     float pg_flare_pct = 0;
++    uint32_t pg_flare_started_ms = 0;
+     float pg_common_brake_pct = 0;
+     float pg_custom_common_pct = 0;
+     float pg_heading_rate_target_dps = 0;
+diff --git a/ArduPlane/altitude.cpp b/ArduPlane/altitude.cpp
+index de6106dac4..c1ae4c4b7c 100644
+--- a/ArduPlane/altitude.cpp
++++ b/ArduPlane/altitude.cpp
+@@ -955,6 +955,16 @@ bool Plane::get_external_HAGL(float &height_agl)
+ float Plane::get_landing_height(bool &rangefinder_active)
+ {
+     float height;
++#if AP_TECS_PARAGLIDER_ENABLED
++    if (g2.pg_flare_height > 0 && g2.pg_flare_pct > 0 &&
++        SRV_Channels::function_assigned(SRV_Channel::k_pg_brake_left) &&
++        SRV_Channels::function_assigned(SRV_Channel::k_pg_brake_right) &&
++        ahrs.get_hagl(height)) {
++        auto_state.terrain_correction = 0;
++        rangefinder_active = true;
++        return height;
++    }
++#endif
+ 
+ #if AP_MAVLINK_MAV_CMD_SET_HAGL_ENABLED
+     // if external HAGL is active use that
 diff --git a/ArduPlane/servos.cpp b/ArduPlane/servos.cpp
-index 3e42466ef5..20b9155674 100644
+index 3e42466ef5..ff84d3ee86 100644
 --- a/ArduPlane/servos.cpp
 +++ b/ArduPlane/servos.cpp
-@@ -571,6 +571,11 @@ float ParametersG2::FWD_BATT_CMP::apply_throttle(float throttle) const
+@@ -203,6 +203,13 @@ void Plane::channel_function_mixer(SRV_Channel::Function func1_in, SRV_Channel::
+ */
+ void Plane::paraglider_brake_mixer(void)
+ {
++#if AP_TECS_PARAGLIDER_ENABLED
++    if (control_mode != &mode_auto || flight_stage != AP_FixedWing::FlightStage::LAND ||
++        !landing.is_flaring() || !arming.is_armed_and_safety_off()) {
++        pg_flare_pct = 0;
++        pg_flare_started_ms = 0;
++    }
++#endif
+ #if AP_PLANE_CUSTOMCONTROL_ENABLED && AP_TECS_PARAGLIDER_ENABLED
+     if (custom_control.mimo_running()) {
+         const auto &applied = custom_control.mimo_allocation().applied;
+@@ -245,15 +252,38 @@ void Plane::paraglider_brake_mixer(void)
+         SRV_Channels::function_assigned(SRV_Channel::k_pg_brake_left) &&
+         SRV_Channels::function_assigned(SRV_Channel::k_pg_brake_right);
+     if (automatic_flare) {
+-        const float target = MIN(constrain_float(g2.pg_flare_pct, 0, 100),
+-                                 100 - constrain_float(g2.pg_flare_reserve, 0, 100));
+-        pg_flare_pct = MIN(target, pg_flare_pct +
+-            constrain_float(g2.pg_flare_rate, 1, 100) * scheduler.get_loop_period_s());
+-        common_brake_pct = MIN(MAX(common_brake_pct, pg_flare_pct),
+-                               100 - constrain_float(g2.pg_flare_reserve, 0, 100));
++        float height;
++        bool unused_rangefinder;
++        if (!ahrs.get_hagl(height)) {
++            // Keep the standard AP_Landing height fallback; never assume zero
++            // height or command an airborne mode switch on sensor loss.
++            height = get_landing_height(unused_rangefinder);
++        }
++        if (pg_flare_started_ms == 0 &&
++            (g2.pg_flare_height <= 0 || height <= g2.pg_flare_height)) {
++            pg_flare_started_ms = AP_HAL::millis();
++        }
++        float target = 0;
++        if (pg_flare_started_ms != 0) {
++            target = constrain_float(g2.pg_flare_pct, 0, 100);
++            Vector3f velocity;
++            if (g2.pg_flare_gain > 0 && ahrs.get_velocity_NED(velocity)) {
++                const float age = (AP_HAL::millis() - pg_flare_started_ms) * 0.001f;
++                const float sink_target = MAX(constrain_float(g2.pg_flare_sink, 0.2f, 3.0f), 1.38f - age);
++                const float damping = ahrs.get_pitch_rad() > 0.35f ?
++                    12.0f * MAX(0.0f, ahrs.get_gyro().y) : 0;
++                target += constrain_float(g2.pg_flare_gain * (velocity.z - sink_target) - damping, -15, 15);
++            }
++        }
++        const float limit = 100 - constrain_float(g2.pg_flare_reserve, 0, 100);
++        target = constrain_float(target, 0, limit);
++        const float step = constrain_float(g2.pg_flare_rate, 1, 400) * scheduler.get_loop_period_s();
++        pg_flare_pct += constrain_float(target - pg_flare_pct, -step, step);
++        common_brake_pct = MIN(MAX(common_brake_pct, pg_flare_pct), limit);
+     } else {
+         // Do not retain a flare command into a go-around or manual takeover.
+         pg_flare_pct = 0;
++        pg_flare_started_ms = 0;
+     }
+     pg_common_brake_pct = common_brake_pct;
+ #endif
+@@ -571,6 +601,11 @@ float ParametersG2::FWD_BATT_CMP::apply_throttle(float throttle) const
  
  }
  
@@ -28,7 +206,7 @@ index 3e42466ef5..20b9155674 100644
  /*
    calculate any throttle limits based on the watt limiter
   */
-@@ -1165,8 +1170,15 @@ void Plane::servos_output(void)
+@@ -1165,8 +1200,15 @@ void Plane::servos_output(void)
      allocation.time_ms = AP_HAL::millis();
      const float left = SRV_Channels::get_output_scaled(SRV_Channel::k_pg_brake_left)*0.01f;
      const float right = SRV_Channels::get_output_scaled(SRV_Channel::k_pg_brake_right)*0.01f;
@@ -557,6 +735,51 @@ index d6485c7e90..d59593ff70 100644
  static constexpr float EULER[3] = {-4.080025584e-02f, 1.379008433e-01f, 6.938893904e-18f};
  static constexpr float VELOCITY[3] = {4.173860676e+00f, -1.487010832e-01f, 5.736674570e-01f};
  static constexpr float RATES[3] = {1.259928497e-14f, -5.494629921e-14f, -1.087828075e-15f};
+diff --git a/libraries/AP_CustomControl/MIMO.md b/libraries/AP_CustomControl/MIMO.md
+index 40e95d8f45..ac217d2909 100644
+--- a/libraries/AP_CustomControl/MIMO.md
++++ b/libraries/AP_CustomControl/MIMO.md
+@@ -53,9 +53,9 @@ not a flight-identified sensor covariance. It is enabled by default only in SITL
+ (including WASM), and is not a flight-qualified tune. No superiority claim follows
+ from local eigenvalue or smoke checks.
+ 
+-Eligibility requires armed normal flight, automatic throttle, valid heading
++Eligibility requires armed normal flight or native AUTO landing approach, automatic throttle, valid heading
+ guidance, valid attitude/navigation/wind/airspeed estimates, and no RC failsafe or
+-throttle suppression. Launch, landing, MANUAL and FBWA retain baseline control.
++throttle suppression. Launch, landing final/flare, MANUAL and FBWA retain baseline control.
+ Stale inputs, estimator resets, scheduling stalls or invalid output cause return
+ to baseline; valid conditions allow re-engagement with output matching. The
+ `MIMO` named telemetry value reports actual ownership separately from selection.
+@@ -78,3 +78,28 @@ Native validation uses `tests/test_mimo` plus Plane's `ParagliderMIMO`,
+ Rust physics, ownership and mode changes. `control-comparison.ts` runs a paired
+ AUTO weather scenario and records metrics and samples; it is a diagnostic
+ comparison, not statistical flight evidence.
++
++## Native paraglider AUTO landing
++
++AUTO `MAV_CMD_NAV_LAND` retains LQI on approach using the ordinary navigation
++height/heading references. `AP_Landing::is_flaring()` ends LQI ownership; the
++normal landing throttle suppression and paraglider turn/brake mixer then own
++final. A go-around, mode exit, disarm or disabled flare resets brake-flare state.
++No external RC guidance or MANUAL handoff is required.
++
++`PG_FLARE_HGT>0` with `PG_FLARE_PCT>0` and both brake outputs opts into EKF
++terrain height for the landing trigger, with normal landing-height fallback.
++Within native final, brake application latches at `PG_FLARE_HGT`; zero retains
++the original immediate brake application. `PG_FLARE_RATE` bounds application
++and release, and `PG_FLARE_RES` preserves differential travel. Optional
++`PG_FLARE_GAIN` adds sink feedback bounded to ±15 percentage points. The sink
++reference ramps from 1.38 m/s toward `PG_FLARE_SINK` at 1 m/s²; nose-up rate
++above 0.35 rad pitch reduces the correction. These experimental constants
++come from the microAGU flare study, not a generic airframe characterization.
++Feedback is disabled by default and skips unavailable fused velocity.
++
++`PG_LAND` telemetry encodes inactive=0, approach=1, power-off final=2 and
++brake flare=3. It is informational, not an external control interface.
++Real EKF + Rust 9-DOF WASM tests and evidence live in micro-agu's
++`research/active/native-landing-2026-10-20`; the native rigid-model landing
++autotest still exercises default flare behavior without enabling this feedback.
 diff --git a/libraries/AP_CustomControl/README_LQI_FILE.md b/libraries/AP_CustomControl/README_LQI_FILE.md
 new file mode 100644
 index 0000000000..91f4df3222
@@ -635,3 +858,16 @@ index 0000000000..5c143a6b55
 +    EXPECT_FALSE(decode(data, sizeof(data), context, scales, output));
 +}
 +AP_GTEST_MAIN()
+diff --git a/libraries/AP_NavEKF3/AP_NavEKF3_AirDataFusion.cpp b/libraries/AP_NavEKF3/AP_NavEKF3_AirDataFusion.cpp
+index 7bbf429b91..ef80be9cd8 100644
+--- a/libraries/AP_NavEKF3/AP_NavEKF3_AirDataFusion.cpp
++++ b/libraries/AP_NavEKF3/AP_NavEKF3_AirDataFusion.cpp
+@@ -253,7 +253,7 @@ void NavEKF3_core::FuseSideslip()
+     vel_rel_wind = prevTnb * vel_rel_wind;
+ 
+     // perform fusion of assumed sideslip  = 0
+-    if (vel_rel_wind.x > 5.0f)
++    if (vel_rel_wind.x > 3.0f)
+     {
+         // Calculate observation jacobians
+         SH_BETA[0] = (vn - vwn)*(sq(q0) + sq(q1) - sq(q2) - sq(q3)) - vd*(2*q0*q2 - 2*q1*q3) + (ve - vwe)*(2*q0*q3 + 2*q1*q2);

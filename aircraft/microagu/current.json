@@ -53,8 +53,8 @@
     "selected": "refit_damped",
     "gain_file": "controllers/lqi-gains.bin",
     "gain_header": "controllers/AP_CustomControl_LQI_gains.h",
-    "firmware_revision": "97c479ab36f08b826723125691cde6994768e680",
-    "firmware_source": "https://github.com/DavidIngraham/ardupilot/tree/97c479ab36f08b826723125691cde6994768e680",
+    "firmware_revision": "3b72ab243e685d37238b2b51d17aecfdb24c8d81",
+    "firmware_source": "https://github.com/DavidIngraham/ardupilot/tree/3b72ab243e685d37238b2b51d17aecfdb24c8d81",
     "observer": "Compiled model/observer context unchanged; no canopy truth or pitot sensor",
     "format": "AGULQI01"
   },
@@ -68,20 +68,23 @@
   "study": "../../research/active/controller-pipeline-2026-10-18/RESULTS.md",
   "published": {
     "url": "https://davidingraham.github.io/assets/microagu-viewer/simulator.html",
-    "site_commit": "8e0cd55443b3e4e7db14fb62450be20b99e13f3f",
-    "firmware_sha256": "73459525151117187c759ca6b15411d010948795bd3ca2e79d313066ec718b21"
+    "site_commit": "db2f17fde59cb7c4858f062d00787767f22de9a9",
+    "firmware_sha256": "66e7adf6ff5f6b7dd781229850f7f0065832cf37014b395e171795f6024d371d",
+    "status": "deployment prepared; awaiting public verification"
   },
   "sha256": {
     "controllers/lqi-gains.bin": "311876eabeb033e55c30c8d556d159495b76e8358cd25a1684c0c3b486ed97f0",
     "controllers/AP_CustomControl_LQI_gains.h": "c36e2516e617ac03892a212c5af7f2835e5f7997f8cc14400611bf0a26867291",
-    "configurations/browser-physics.json": "b0d85fd31f68eeb4ba224034c82aa3e671e44777c550603eeac0f6eb82e736a2",
+    "configurations/browser-physics.json": "131ab3155f15f921fcd3e3f4ce688ef5f6ad91cef7d137f24606cc24f9225aee",
     "configurations/measured.json": "98e000b40aeb559691ec97ac3e094c4825cf3752aeb0a7ab995b0836f6a309f0",
-    "validation/controller-acceptance.json": "575e6e1378c65599b5501969934e3be1c6f8921f773996d9ca9bd949f788b319"
+    "validation/controller-acceptance.json": "575e6e1378c65599b5501969934e3be1c6f8921f773996d9ca9bd949f788b319",
+    "validation/landing-acceptance.json": "b18d073af774804e12b1f37e18b3a01e1781748dc56b0fb72117cbcb8a5f6941"
   },
   "staged_runtime": {
     "configurations/browser-physics.json": "viewer/assets/runtime/highdof.json",
     "controllers/lqi-gains.bin": "viewer/assets/runtime/lqi-gains.bin",
-    "validation/controller-acceptance.json": "viewer/assets/runtime/lqi-pipeline-validation.json"
+    "validation/controller-acceptance.json": "viewer/assets/runtime/lqi-pipeline-validation.json",
+    "validation/landing-acceptance.json": "viewer/assets/runtime/landing-validation.json"
   },
-  "landing_validation": "../../research/active/landing-spiral-2026-10-20/README.md"
+  "landing_validation": "validation/landing-acceptance.json"
 }

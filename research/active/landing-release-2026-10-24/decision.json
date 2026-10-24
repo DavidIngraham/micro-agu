@@ -1,0 +1,8 @@
+{
+  "deploy": true,
+  "scope": "Experimental web simulator accuracy improvement",
+  "basis": "Median spot miss 9.61 to 2.79 m; worst 13.75 to 9.09 m; 11/11 candidate landing confirmations versus 9/11 published; unchanged physics, gains and flare trigger heights.",
+  "strict_sample_peak_checks_met": false,
+  "peak_review": "Worst sampled sink increases 0.0284 m/s (1.5047 to 1.5331); worst ground speed increases 0.0120 m/s (5.9452 to 5.9573). These small sample-maximum differences are retained, not reported as passing strict non-increase. Tailwind sink spans 0.969-1.505 m/s published and 0.940-1.533 m/s candidate across three fixed seed cases; candidate median improves from 1.490 to 0.942 m/s. This supports practical accuracy promotion, not a statistical claim of equivalent impact performance.",
+  "remaining_limitations": "Headwind miss remains 9.09 m; steep approach miss rises from 3.89 to 6.19 m. Contact model, high-brake aerodynamics and ground rollout remain unvalidated."
+}

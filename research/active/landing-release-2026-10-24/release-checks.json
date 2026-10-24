@@ -1,0 +1,84 @@
+{
+  "firmware_revision": "3b72ab243e685d37238b2b51d17aecfdb24c8d81",
+  "runtime_sha256": {
+    "highdof.json": "131ab3155f15f921fcd3e3f4ce688ef5f6ad91cef7d137f24606cc24f9225aee",
+    "sim_wasm_bg.wasm.d.ts": "98b5d976e3fdeafe277b6f98d5f95079fba5b6367533ddb4f7846b0f93ff9890",
+    "sim_wasm.d.ts": "f123bfc6ec889cd120e526d7d3001395d45e44a97db671d791e14264a938c3be",
+    "sim_wasm_bg.wasm": "ceae58a55b4585e85b86a142a15c1f5b9bcfbf3e51f21cddbdf741ac4a75c158",
+    "sim_wasm.js": "65ffd575810f57b5793b1a61477d215e316267e40ced1eb29dfe7a59e5ce4f60",
+    "arduplane.wasm": "66e7adf6ff5f6b7dd781229850f7f0065832cf37014b395e171795f6024d371d",
+    "arduplane.js": "893b28e3cbea410e48736d7f7426928cbe8b56f22c1813914aa290172f1e8565",
+    "lqi-gains.bin": "311876eabeb033e55c30c8d556d159495b76e8358cd25a1684c0c3b486ed97f0"
+  },
+  "checks": {
+    "unit": {
+      "command": "npm test",
+      "exit_code": 0,
+      "log_sha256": "b871d3293025faf555b754a40db0a72fafebaea70886cc51a415d48adcab50de"
+    },
+    "physics": {
+      "command": "npm run test:physics",
+      "exit_code": 0,
+      "log_sha256": "5c5ad6e29c950aa4854e2992c7771112ec57f49f82ef701e12696b1596e6120a"
+    },
+    "viewer-build": {
+      "command": "npm run build",
+      "exit_code": 0,
+      "log_sha256": "18370df83888649ef8e7650e8011590295c3b50387fe9357e8753ba4b4667c4e"
+    },
+    "sitl": {
+      "command": "npm run test:sitl",
+      "exit_code": 0,
+      "log_sha256": "19e0cd8aaf1ccc495ea6f25b3e1f5342a53861bb56f36c61ae7759dd8578919c"
+    },
+    "mimo": {
+      "command": "npm run test:mimo",
+      "exit_code": 0,
+      "log_sha256": "3dac9598925a76bc2123dc76761451ae0b3de22d1420e6c59afa8177c460d6b6"
+    },
+    "browser": {
+      "command": "npx playwright test tests/browser/rtl.spec.ts",
+      "exit_code": 0,
+      "log_sha256": "8e95ba4af0bd84a29ad573b2d6f2cc49b52a87518970882236b18821708c37bd"
+    }
+  },
+  "smoke": [
+    {
+      "id": "release-calm",
+      "miss_m": 0.3751215947607428,
+      "sink_m_s": 0.8581623074215325,
+      "complete": true,
+      "result_sha256": "ae78a43c0ced52d90d5846f527cf2603c2621576d5c68285315a373c8d49aafa"
+    },
+    {
+      "id": "release-weather",
+      "miss_m": 2.3827970442556694,
+      "sink_m_s": 1.0245307304171145,
+      "complete": true,
+      "result_sha256": "89996792302c6b52cd788ed5275a926d8c7ae265dbe83c4e75ce31f8ad63fec4"
+    },
+    {
+      "id": "release-head",
+      "miss_m": 8.949953295559446,
+      "sink_m_s": 0.8484287782937815,
+      "complete": true,
+      "result_sha256": "9d87e9d0d2b874e6f6c4750d0702c3720177174cf4be718022e45b40fd631ebe"
+    },
+    {
+      "id": "release-tail",
+      "miss_m": 5.915810795523455,
+      "sink_m_s": 0.9422894238748772,
+      "complete": true,
+      "result_sha256": "6a5f251300221b464ba98250ec27239bf4fe2278185ad3e25cfda9c8f31a3f2a"
+    },
+    {
+      "id": "release-steep",
+      "miss_m": 6.629059725697131,
+      "sink_m_s": 1.0115442320114587,
+      "complete": true,
+      "result_sha256": "df0d1f0530ce6115765dc0699f35a19c7fd4f27e0498a54dbd10072f76532aa3"
+    }
+  ],
+  "executed_campaign_driver_sha256": "e3b66b7b33f07a2a85adac19b549fad7d2cacf682555c58dd730066ed6662221",
+  "replay_and_smoke_driver_sha256": "2505b1b09caf8ea9ce537e284a3dab513e269b75d6c802e2b61376b5165e5686"
+}

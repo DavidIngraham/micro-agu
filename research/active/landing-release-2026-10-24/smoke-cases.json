@@ -1,0 +1,72 @@
+[
+  {
+    "windNED": [
+      0,
+      0,
+      0
+    ],
+    "fixedMission": true,
+    "name": "calm",
+    "id": "release-calm",
+    "firmware": "./firmware/release/arduplane.js",
+    "configuration": "./release-configuration.json"
+  },
+  {
+    "windNED": [
+      0,
+      0,
+      0
+    ],
+    "turbulence": 0.2,
+    "fixedMission": true,
+    "weather": {
+      "gustLength": 20,
+      "thermalStrength": 1.5,
+      "thermalRadius": 60,
+      "turbulenceModel": "dryden",
+      "verticalRatio": 0.5,
+      "thermalNorth": 300,
+      "thermalEast": 0
+    },
+    "name": "weather",
+    "id": "release-weather",
+    "firmware": "./firmware/release/arduplane.js",
+    "configuration": "./release-configuration.json"
+  },
+  {
+    "windNED": [
+      -1.5,
+      0,
+      0
+    ],
+    "fixedMission": true,
+    "name": "head",
+    "id": "release-head",
+    "firmware": "./firmware/release/arduplane.js",
+    "configuration": "./release-configuration.json"
+  },
+  {
+    "windNED": [
+      1.5,
+      0,
+      0
+    ],
+    "fixedMission": true,
+    "name": "tail",
+    "id": "release-tail",
+    "firmware": "./firmware/release/arduplane.js",
+    "configuration": "./release-configuration.json"
+  },
+  {
+    "windNED": [
+      0,
+      0,
+      0
+    ],
+    "approachSink": 1.0,
+    "name": "steep",
+    "id": "release-steep",
+    "firmware": "./firmware/release/arduplane.js",
+    "configuration": "./release-configuration.json"
+  }
+]

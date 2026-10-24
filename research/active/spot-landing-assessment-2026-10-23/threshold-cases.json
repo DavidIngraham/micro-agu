@@ -1,0 +1,108 @@
+[
+  {
+    "id": "threshold-5m-calm",
+    "fixedMission": true,
+    "firmware": "./threshold-firmware/5m/arduplane.js"
+  },
+  {
+    "id": "threshold-3m-calm",
+    "fixedMission": true,
+    "firmware": "./threshold-firmware/3m/arduplane.js"
+  },
+  {
+    "id": "threshold-5m-weather",
+    "fixedMission": true,
+    "turbulence": 0.2,
+    "weather": {
+      "turbulenceModel": "dryden",
+      "gustLength": 20,
+      "verticalRatio": 0.5,
+      "thermalStrength": 1.5,
+      "thermalRadius": 60,
+      "thermalNorth": 300,
+      "thermalEast": 0
+    },
+    "firmware": "./threshold-firmware/5m/arduplane.js"
+  },
+  {
+    "id": "threshold-3m-weather",
+    "fixedMission": true,
+    "turbulence": 0.2,
+    "weather": {
+      "turbulenceModel": "dryden",
+      "gustLength": 20,
+      "verticalRatio": 0.5,
+      "thermalStrength": 1.5,
+      "thermalRadius": 60,
+      "thermalNorth": 300,
+      "thermalEast": 0
+    },
+    "firmware": "./threshold-firmware/3m/arduplane.js"
+  },
+  {
+    "id": "threshold-earth-5m-head",
+    "fixedMission": true,
+    "along": -1.5,
+    "firmware": "./threshold-firmware/5m/arduplane.js",
+    "windNED": [
+      -1.5,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "threshold-earth-3m-head",
+    "fixedMission": true,
+    "along": -1.5,
+    "firmware": "./threshold-firmware/3m/arduplane.js",
+    "windNED": [
+      -1.5,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "threshold-earth-5m-cross",
+    "fixedMission": true,
+    "across": 1.5,
+    "firmware": "./threshold-firmware/5m/arduplane.js",
+    "windNED": [
+      0,
+      1.5,
+      0
+    ]
+  },
+  {
+    "id": "threshold-earth-3m-cross",
+    "fixedMission": true,
+    "across": 1.5,
+    "firmware": "./threshold-firmware/3m/arduplane.js",
+    "windNED": [
+      0,
+      1.5,
+      0
+    ]
+  },
+  {
+    "id": "threshold-earth-5m-tail",
+    "fixedMission": true,
+    "along": 1.5,
+    "firmware": "./threshold-firmware/5m/arduplane.js",
+    "windNED": [
+      1.5,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "threshold-earth-3m-tail",
+    "fixedMission": true,
+    "along": 1.5,
+    "firmware": "./threshold-firmware/3m/arduplane.js",
+    "windNED": [
+      1.5,
+      0,
+      0
+    ]
+  }
+]

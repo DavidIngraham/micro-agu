@@ -1,0 +1,261 @@
+[
+  {
+    "windNED": [
+      0,
+      0,
+      0
+    ],
+    "fixedMission": true,
+    "name": "calm",
+    "id": "published-calm",
+    "firmware": "./firmware/published/arduplane.js"
+  },
+  {
+    "windNED": [
+      0,
+      0,
+      0
+    ],
+    "fixedMission": true,
+    "name": "calm",
+    "id": "candidate-calm",
+    "firmware": "./firmware/candidate/arduplane.js",
+    "parameters": {
+      "LAND_FLARE_AIM": 0
+    }
+  },
+  {
+    "windNED": [
+      0,
+      0,
+      0
+    ],
+    "turbulence": 0.2,
+    "fixedMission": true,
+    "weather": {
+      "gustLength": 20,
+      "thermalStrength": 1.5,
+      "thermalRadius": 60,
+      "turbulenceModel": "dryden",
+      "verticalRatio": 0.5,
+      "thermalNorth": 300,
+      "thermalEast": 0
+    },
+    "name": "weather",
+    "id": "published-weather",
+    "firmware": "./firmware/published/arduplane.js"
+  },
+  {
+    "windNED": [
+      0,
+      0,
+      0
+    ],
+    "turbulence": 0.2,
+    "fixedMission": true,
+    "weather": {
+      "gustLength": 20,
+      "thermalStrength": 1.5,
+      "thermalRadius": 60,
+      "turbulenceModel": "dryden",
+      "verticalRatio": 0.5,
+      "thermalNorth": 300,
+      "thermalEast": 0
+    },
+    "name": "weather",
+    "id": "candidate-weather",
+    "firmware": "./firmware/candidate/arduplane.js",
+    "parameters": {
+      "LAND_FLARE_AIM": 0
+    }
+  },
+  {
+    "windNED": [
+      -1.5,
+      0,
+      0
+    ],
+    "fixedMission": true,
+    "name": "head",
+    "id": "published-head",
+    "firmware": "./firmware/published/arduplane.js"
+  },
+  {
+    "windNED": [
+      -1.5,
+      0,
+      0
+    ],
+    "fixedMission": true,
+    "name": "head",
+    "id": "candidate-head",
+    "firmware": "./firmware/candidate/arduplane.js",
+    "parameters": {
+      "LAND_FLARE_AIM": 0
+    }
+  },
+  {
+    "windNED": [
+      0,
+      1.5,
+      0
+    ],
+    "fixedMission": true,
+    "name": "cross",
+    "id": "published-cross",
+    "firmware": "./firmware/published/arduplane.js"
+  },
+  {
+    "windNED": [
+      0,
+      1.5,
+      0
+    ],
+    "fixedMission": true,
+    "name": "cross",
+    "id": "candidate-cross",
+    "firmware": "./firmware/candidate/arduplane.js",
+    "parameters": {
+      "LAND_FLARE_AIM": 0
+    }
+  },
+  {
+    "windNED": [
+      1.5,
+      0,
+      0
+    ],
+    "fixedMission": true,
+    "name": "tail",
+    "id": "published-tail",
+    "firmware": "./firmware/published/arduplane.js"
+  },
+  {
+    "windNED": [
+      1.5,
+      0,
+      0
+    ],
+    "fixedMission": true,
+    "name": "tail",
+    "id": "candidate-tail",
+    "firmware": "./firmware/candidate/arduplane.js",
+    "parameters": {
+      "LAND_FLARE_AIM": 0
+    }
+  },
+  {
+    "turbulence": 0.4,
+    "windNED": [
+      0,
+      1.5,
+      0
+    ],
+    "fixedMission": true,
+    "weather": {
+      "gustLength": 20,
+      "verticalRatio": 0.5,
+      "turbulenceModel": "dryden"
+    },
+    "name": "gust-cross",
+    "seed": 174,
+    "id": "published-gust-cross",
+    "firmware": "./firmware/published/arduplane.js"
+  },
+  {
+    "turbulence": 0.4,
+    "windNED": [
+      0,
+      1.5,
+      0
+    ],
+    "fixedMission": true,
+    "weather": {
+      "gustLength": 20,
+      "verticalRatio": 0.5,
+      "turbulenceModel": "dryden"
+    },
+    "name": "gust-cross",
+    "seed": 174,
+    "id": "candidate-gust-cross",
+    "firmware": "./firmware/candidate/arduplane.js",
+    "parameters": {
+      "LAND_FLARE_AIM": 0
+    }
+  },
+  {
+    "windNED": [
+      0,
+      0,
+      0
+    ],
+    "approachSink": 0.8,
+    "name": "straight",
+    "id": "published-straight",
+    "firmware": "./firmware/published/arduplane.js"
+  },
+  {
+    "windNED": [
+      0,
+      0,
+      0
+    ],
+    "approachSink": 0.8,
+    "name": "straight",
+    "id": "candidate-straight",
+    "firmware": "./firmware/candidate/arduplane.js",
+    "parameters": {
+      "LAND_FLARE_AIM": 0
+    }
+  },
+  {
+    "windNED": [
+      0,
+      0,
+      0
+    ],
+    "approachSink": 0.55,
+    "name": "shallow",
+    "id": "published-shallow",
+    "firmware": "./firmware/published/arduplane.js"
+  },
+  {
+    "windNED": [
+      0,
+      0,
+      0
+    ],
+    "approachSink": 0.55,
+    "name": "shallow",
+    "id": "candidate-shallow",
+    "firmware": "./firmware/candidate/arduplane.js",
+    "parameters": {
+      "LAND_FLARE_AIM": 0
+    }
+  },
+  {
+    "windNED": [
+      0,
+      0,
+      0
+    ],
+    "approachSink": 1.0,
+    "name": "steep",
+    "id": "published-steep",
+    "firmware": "./firmware/published/arduplane.js"
+  },
+  {
+    "windNED": [
+      0,
+      0,
+      0
+    ],
+    "approachSink": 1.0,
+    "name": "steep",
+    "id": "candidate-steep",
+    "firmware": "./firmware/candidate/arduplane.js",
+    "parameters": {
+      "LAND_FLARE_AIM": 0
+    }
+  }
+]

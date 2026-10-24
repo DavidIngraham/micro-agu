@@ -1,0 +1,45 @@
+{
+  "microagu_revision": "cb41e864bb2a3a3f67d0b65a260c067d727fd094",
+  "working_tree_status": " M research/README.md\n M research/catalog.json\n M simulation/data/control/mimo/AP_CustomControl_LQI_gains.h\n M simulation/data/control/mimo/design.json\n M simulation/mission-controller-candidate.parm\n M viewer/tests/integration/mimo.ts\n M viewer/tools/build/build_sitl_wasm.sh\n?? research/active/canopy-nllt-2026-10-21/\n?? research/active/spot-landing-assessment-2026-10-23/\n?? research/active/stochastic-excitation-2026-10-18/\n",
+  "firmware_revision": "97c479ab36f08b826723125691cde6994768e680",
+  "live_manifest_identical": true,
+  "runtime_inputs_match_live": {
+    "arduplane.wasm": true,
+    "arduplane.js": true,
+    "sim_wasm_bg.wasm": true,
+    "sim_wasm.js": true,
+    "highdof.json": true,
+    "lqi-gains.bin": true
+  },
+  "live_manifest_url": "https://davidingraham.github.io/assets/microagu-viewer/wasm/build.json",
+  "files": {
+    "viewer/generated/ardupilot/arduplane.js": "893b28e3cbea410e48736d7f7426928cbe8b56f22c1813914aa290172f1e8565",
+    "viewer/generated/ardupilot/arduplane.wasm": "73459525151117187c759ca6b15411d010948795bd3ca2e79d313066ec718b21",
+    "viewer/generated/physics/sim_wasm.js": "65ffd575810f57b5793b1a61477d215e316267e40ced1eb29dfe7a59e5ce4f60",
+    "viewer/generated/physics/sim_wasm_bg.wasm": "ceae58a55b4585e85b86a142a15c1f5b9bcfbf3e51f21cddbdf741ac4a75c158",
+    "aircraft/microagu/configurations/browser-physics.json": "b0d85fd31f68eeb4ba224034c82aa3e671e44777c550603eeac0f6eb82e736a2",
+    "aircraft/microagu/controllers/lqi-gains.bin": "311876eabeb033e55c30c8d556d159495b76e8358cd25a1684c0c3b486ed97f0",
+    "viewer/assets/runtime/build.json": "417149687e31c38a917592c9b884af84d6488a51edae1b1b35fe2c76366ce7ca",
+    "viewer/packages/sim-browser/src/session/runtime.ts": "64cec03b212c857497f0c9b02a8758652d08cb7a1426e6040c23041b74c0786a",
+    "viewer/packages/sim-browser/src/physics/physics.ts": "a4655aa00e0cc9f20c8143f16b992717239fab522cdfe5e5bc2df1bb1060ab56",
+    "viewer/packages/sim-browser/src/physics/lidar.ts": "1822833cab5ac458c9bdf16ef0f445a1965e2c01d593a059a38bf7967a661995",
+    "viewer/apps/simulator/missions/default.ts": "14326a41b33c709db4175acaddccb86a7871166a14b50b5e257493c60a2372b5",
+    "viewer/apps/simulator/weather.ts": "3c06477fff18c4304227b60096deb4ab193bd27f66944598f955059d902da831",
+    "research/active/native-landing-2026-10-20/case.mts": "11b8880a682d413ea8584494c6b1c3c9b978fb99aa763533c6a77b7b0b344805"
+  },
+  "study_files": {
+    "case.mts": "0565a5819bfef4afa8641f6be874c1ef8b7fbb93bf477e17e1f3a60f7187e29a",
+    "case-v1.mts": "111aca1051f0880d9f690e0ecfc0d018588b437c3e1b0ddb2aedda5060f26d8d",
+    "run.py": "c93ae47b8c9358ea6d422d94cb5298eacca95509664feb33af3344a9e2fd4e8d",
+    "cases.json": "7d7b46f8721cd9adbe5ae85ce0ef36b198ff019df9d5449bc4a8e579b580bbfc",
+    "assess.py": "7b7d8ac1612677a38a098d8baa1dae3791c7120301e0cd9100aa1e8b4aa0f668",
+    "probe.mts": "02437510329653d5051b2dc6906a07475f5218f403544a20574bb054ce7d30d0",
+    "parameters.json": "a190e1c1eed0ce2d4a375d3e3a68dafcc35116dc11fe14b8148927db39449edc",
+    "RESULTS.md": "47e52de883ae41e8c2d99e6b7ceb5b64195f2f8a729a79e75c48867ef72f6fc6"
+  },
+  "driver_versions": {
+    "case-v1.mts": "First six cases; cases.json order. Same driver with parameter/weather overrides.",
+    "case.mts": "Last four cases; adds passive PARAM_VALUE recording. No parameter request or control change."
+  },
+  "evaluation": "Last sample before payload CG <= 0.12 m or canopy CG <= 0.05 m; not impact or rollout."
+}

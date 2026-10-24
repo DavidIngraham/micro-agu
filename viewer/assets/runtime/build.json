@@ -1,7 +1,7 @@
 {
   "repository": "https://github.com/DavidIngraham/ardupilot",
-  "revision": "97c479ab36f08b826723125691cde6994768e680",
-  "source": "https://github.com/DavidIngraham/ardupilot/tree/97c479ab36f08b826723125691cde6994768e680",
+  "revision": "3b72ab243e685d37238b2b51d17aecfdb24c8d81",
+  "source": "https://github.com/DavidIngraham/ardupilot/tree/3b72ab243e685d37238b2b51d17aecfdb24c8d81",
   "license": "GPL-3.0-or-later",
   "board": "wasm",
   "vehicle": "ArduPlane",
@@ -9,12 +9,12 @@
   "transport": "Emscripten SOCKFS local UDP peer",
   "emscripten": "6.0.8",
   "sha256": {
-    "highdof.json": "b0d85fd31f68eeb4ba224034c82aa3e671e44777c550603eeac0f6eb82e736a2",
+    "highdof.json": "131ab3155f15f921fcd3e3f4ce688ef5f6ad91cef7d137f24606cc24f9225aee",
     "sim_wasm_bg.wasm.d.ts": "98b5d976e3fdeafe277b6f98d5f95079fba5b6367533ddb4f7846b0f93ff9890",
     "sim_wasm.d.ts": "f123bfc6ec889cd120e526d7d3001395d45e44a97db671d791e14264a938c3be",
     "sim_wasm_bg.wasm": "ceae58a55b4585e85b86a142a15c1f5b9bcfbf3e51f21cddbdf741ac4a75c158",
     "sim_wasm.js": "65ffd575810f57b5793b1a61477d215e316267e40ced1eb29dfe7a59e5ce4f60",
-    "arduplane.wasm": "73459525151117187c759ca6b15411d010948795bd3ca2e79d313066ec718b21",
+    "arduplane.wasm": "66e7adf6ff5f6b7dd781229850f7f0065832cf37014b395e171795f6024d371d",
     "arduplane.js": "893b28e3cbea410e48736d7f7426928cbe8b56f22c1813914aa290172f1e8565",
     "lqi-gains.bin": "311876eabeb033e55c30c8d556d159495b76e8358cd25a1684c0c3b486ed97f0"
   },
@@ -72,9 +72,9 @@
   },
   "controller_source_patch": {
     "path": "lqi-file-pipeline.patch",
-    "sha256": "e123801caef232e42950427f35b2b490ad06f6bc75fc97687e24284c6cea6277",
+    "sha256": "077081ee9bf5bcda47e7a5e404bd81daeb62a8e04e133ec6ca32c0fdc555d988",
     "base_revision": "010ada6a4f0b26910fc18ecca176d2e65c5ed9d7",
-    "description": "Published controller plus boot-time compatible gain-file loader."
+    "description": "Published file-loaded LQI, native AUTO landing and 3 m/s sideslip wind-update gate."
   },
   "controller_reference_filter": {
     "CP3_HRTC": 0.7,
@@ -126,5 +126,15 @@
     "ArduPlane/Parameters.h": "761d0ba31cda6738577fa80d7f66e0d3b77850b5381307e3db48aa5c4ae86709",
     "ArduPlane/servos.cpp": "568c0abd86f7859d77072c4f17fdd6100c1a7279632c4bc300524124f5319902",
     "ArduPlane/altitude.cpp": "c67186ec5814577f2972884c2a24f0b2603c666e8ce7d78f3918bbf26a0a9ef8"
+  },
+  "wind_estimator_source_sha256": {
+    "libraries/AP_NavEKF3/AP_NavEKF3_AirDataFusion.cpp": "bee65897294a17ba82e2628ac90698385091cf4d2c5391f37aec754814c12ad5"
+  },
+  "landing_calibration": {
+    "LAND_FLARE_AIM": 0,
+    "LAND_FLARE_ALT": 3,
+    "PG_FLARE_HGT": 1.3,
+    "sideslip_update_minimum_forward_tas_m_s": 3,
+    "validation": "landing-validation.json"
   }
 }

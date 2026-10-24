@@ -1,5 +1,5 @@
 {
-  "status": "prepared",
+  "status": "published and public bytes verified",
   "site_base": "db2f17fde59cb7c4858f062d00787767f22de9a9",
   "site_commit": "dd5a054c7509069052bd561ca1b8f2c729deb661",
   "url": "https://davidingraham.github.io/assets/microagu-viewer/simulator.html",
@@ -35,5 +35,12 @@
     "wasm/lqi-pipeline-validation.json": "575e6e1378c65599b5501969934e3be1c6f8921f773996d9ca9bd949f788b319",
     "wasm/sim_wasm.js": "65ffd575810f57b5793b1a61477d215e316267e40ced1eb29dfe7a59e5ce4f60",
     "wasm/sim_wasm_bg.wasm": "ceae58a55b4585e85b86a142a15c1f5b9bcfbf3e51f21cddbdf741ac4a75c158"
+  },
+  "live_verified_sha256": {
+    "wasm/build.json": "7e9c38c2c271395670ad302d5813f7adedd3ef6f640fe6522b424428828c64f8",
+    "wasm/highdof.json": "794398707c5425fff7bd8bc9554990fec1d93e8ad84dba843b643a34933326a5",
+    "wasm/arduplane.wasm": "c6c4442bfd5dfa37110ecccbe1fc88c8782456edf05d1fd02947fff775958051",
+    "wasm/autoland-validation.json": "724b95f25217bd8a4c7e464415b31b48352db0ae964f0a9e35d0aaa82d68dc70",
+    "simulator.html": "34b29fbd71c8babb6ce13cfcb1aeb92e215254c88556c860b08247adb6a0739b"
   }
 }

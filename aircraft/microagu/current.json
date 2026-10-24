@@ -70,7 +70,7 @@
     "url": "https://davidingraham.github.io/assets/microagu-viewer/simulator.html",
     "site_commit": "dd5a054c7509069052bd561ca1b8f2c729deb661",
     "firmware_sha256": "c6c4442bfd5dfa37110ecccbe1fc88c8782456edf05d1fd02947fff775958051",
-    "status": "deployment prepared; awaiting public verification"
+    "status": "published; shared speed, native AUTOLAND, configuration and evidence verified over HTTPS"
   },
   "sha256": {
     "controllers/lqi-gains.bin": "311876eabeb033e55c30c8d556d159495b76e8358cd25a1684c0c3b486ed97f0",
